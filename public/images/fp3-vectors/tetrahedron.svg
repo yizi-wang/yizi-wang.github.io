@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350" width="350" height="350">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Faces -->
+  <polygon points="175,280 300,220 200,100" fill="rgba(100,150,255,0.1)" stroke="black" stroke-width="1"/>
+  <polygon points="175,280 80,200 200,100" fill="rgba(100,200,100,0.1)" stroke="black" stroke-width="1"/>
+  <polygon points="175,280 300,220 80,200" fill="rgba(255,150,100,0.08)" stroke="black" stroke-width="1" stroke-dasharray="4,3"/>
+  <polygon points="300,220 80,200 200,100" fill="rgba(200,200,100,0.1)" stroke="black" stroke-width="1"/>
+  
+  <!-- Vectors -->
+  <line x1="175" y1="280" x2="300" y2="220" stroke="blue" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="175" y1="280" x2="80" y2="200" stroke="red" stroke-width="2.5" marker-end="url(#aR)"/>
+  <line x1="175" y1="280" x2="200" y2="100" stroke="rgb(0,140,0)" stroke-width="2.5" marker-end="url(#aG)"/>
+  
+  <text x="245" y="260" font-size="14" fill="blue" font-style="italic" font-weight="bold">a</text>
+  <text x="110" y="250" font-size="14" fill="red" font-style="italic" font-weight="bold">b</text>
+  <text x="195" y="190" font-size="14" fill="rgb(0,140,0)" font-style="italic" font-weight="bold">c</text>
+  <text x="165" y="298" font-size="14" font-weight="bold">O</text>
+  
+  <defs>
+    <marker id="aB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="blue"/></marker>
+    <marker id="aR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="red"/></marker>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="rgb(0,140,0)"/></marker>
+  </defs>
+</svg>

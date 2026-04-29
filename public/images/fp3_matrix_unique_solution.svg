@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Left: Unique solution -->
+  <g transform="translate(0,20)">
+    <line x1="30" y1="250" x2="250" y2="250" stroke="black" stroke-width="1.5" marker-end="url(#arrowB)"/>
+    <line x1="30" y1="250" x2="30" y2="10" stroke="black" stroke-width="1.5" marker-end="url(#arrowB)"/>
+    <text x="255" y="255" font-size="14" font-style="italic">x</text>
+    <text x="22" y="8" font-size="14" font-style="italic">y</text>
+    <!-- Line 1: blue -->
+    <line x1="20" y1="230" x2="220" y2="30" stroke="blue" stroke-width="2.5"/>
+    <text x="180" y="20" font-size="12" fill="blue">a₁₁x + a₁₂y = b₁</text>
+    <!-- Line 2: red -->
+    <line x1="20" y1="30" x2="220" y2="230" stroke="red" stroke-width="2.5"/>
+    <text x="180" y="245" font-size="12" fill="red">a₂₁x + a₂₂y = b₂</text>
+    <!-- Intersection point -->
+    <circle cx="120" cy="130" r="4" fill="black"/>
+    <text x="128" y="128" font-size="13">Unique solution</text>
+    <text x="100" y="280" font-size="13">det(A) ≠ 0</text>
+  </g>
+  <!-- Right: Parallel lines (no solution) -->
+  <g transform="translate(300,20)">
+    <line x1="30" y1="250" x2="250" y2="250" stroke="black" stroke-width="1.5" marker-end="url(#arrowB)"/>
+    <line x1="30" y1="250" x2="30" y2="10" stroke="black" stroke-width="1.5" marker-end="url(#arrowB)"/>
+    <text x="255" y="255" font-size="14" font-style="italic">x</text>
+    <text x="22" y="8" font-size="14" font-style="italic">y</text>
+    <!-- Parallel lines -->
+    <line x1="20" y1="200" x2="240" y2="80" stroke="blue" stroke-width="2.5"/>
+    <line x1="20" y1="170" x2="240" y2="50" stroke="red" stroke-width="2.5" stroke-dasharray="8,4"/>
+    <text x="80" y="280" font-size="13">det(A) = 0, inconsistent</text>
+  </g>
+  <defs>
+    <marker id="arrowB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>

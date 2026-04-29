@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Left diagram: a × b (upward) -->
+  <text x="150" y="25" font-size="14" font-weight="bold" text-anchor="middle">a × b</text>
+  <line x1="80" y1="200" x2="230" y2="200" stroke="blue" stroke-width="2.5" marker-end="url(#arrB)"/>
+  <text x="155" y="220" font-size="14" fill="blue" font-style="italic" font-weight="bold">a</text>
+  <line x1="80" y1="200" x2="130" y2="100" stroke="red" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="95" y="145" font-size="14" fill="red" font-style="italic" font-weight="bold">b</text>
+  <line x1="80" y1="200" x2="80" y2="60" stroke="rgb(0,140,0)" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="85" y="75" font-size="14" fill="rgb(0,140,0)" font-style="italic" font-weight="bold">a × b</text>
+  <path d="M 160,195 A 60 60 0 0 1 110,130" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrK)"/>
+  
+  <!-- Arrow in middle -->
+  <text x="340" y="160" font-size="24" text-anchor="middle">⟹</text>
+  
+  <!-- Right diagram: b × a (downward) -->
+  <text x="540" y="25" font-size="14" font-weight="bold" text-anchor="middle">b × a</text>
+  <line x1="470" y1="200" x2="520" y2="100" stroke="red" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="480" y="145" font-size="14" fill="red" font-style="italic" font-weight="bold">b</text>
+  <line x1="470" y1="200" x2="620" y2="200" stroke="blue" stroke-width="2.5" marker-end="url(#arrB)"/>
+  <text x="545" y="220" font-size="14" fill="blue" font-style="italic" font-weight="bold">a</text>
+  <line x1="470" y1="200" x2="470" y2="310" stroke="rgb(0,140,0)" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="475" y="300" font-size="14" fill="rgb(0,140,0)" font-style="italic" font-weight="bold">b × a</text>
+  <path d="M 500,130 A 60 60 0 0 0 540,195" fill="none" stroke="black" stroke-width="1" marker-end="url(#arrK)"/>
+  
+  <defs>
+    <marker id="arrK" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="black"/></marker>
+    <marker id="arrB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="blue"/></marker>
+    <marker id="arrR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="red"/></marker>
+    <marker id="arrG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="rgb(0,140,0)"/></marker>
+  </defs>
+</svg>

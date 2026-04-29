@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 280" width="350" height="280">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Plane -->
+  <polygon points="20,180 330,180 310,130 50,130" fill="rgba(100,150,255,0.12)" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Point P -->
+  <circle cx="175" cy="50" r="4" fill="rgb(0,140,0)"/>
+  <text x="180" y="48" font-size="13" font-weight="bold">P</text>
+  
+  <!-- Foot of perpendicular L -->
+  <circle cx="175" cy="155" r="4" fill="blue"/>
+  <text x="180" y="153" font-size="13" font-weight="bold">L</text>
+  
+  <!-- p-r vector (P to L) -->
+  <line x1="175" y1="55" x2="175" y2="150" stroke="blue" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="180" y="105" font-size="12" font-weight="bold">Distance</text>
+  
+  <!-- Normal vector n -->
+  <line x1="175" y1="155" x2="175" y2="90" stroke="rgb(0,140,0)" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="140" y="95" font-size="13" fill="rgb(0,140,0)" font-style="italic" font-weight="bold">n</text>
+  
+  <!-- Right angle mark -->
+  <rect x="175" y="145" width="8" height="8" fill="none" stroke="black" stroke-width="0.8"/>
+  
+  <defs>
+    <marker id="aB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="blue"/></marker>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="rgb(0,140,0)"/></marker>
+  </defs>
+</svg>

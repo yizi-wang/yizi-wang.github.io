@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" width="400" height="350">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Plane 1 (blue) -->
+  <polygon points="50,280 200,200 350,250 200,330" fill="rgba(100,150,255,0.2)" stroke="blue" stroke-width="1"/>
+  <!-- Plane 2 (red) -->
+  <polygon points="50,200 200,120 350,200 200,280" fill="rgba(255,100,100,0.2)" stroke="red" stroke-width="1"/>
+  
+  <!-- Line of intersection -->
+  <line x1="125" y1="240" x2="275" y2="240" stroke="rgb(0,140,0)" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="280" y="245" font-size="12" fill="rgb(0,140,0)">Line of intersection</text>
+  
+  <!-- Normal 1 -->
+  <line x1="200" y1="265" x2="270" y2="180" stroke="blue" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="275" y="185" font-size="13" fill="blue" font-style="italic" font-weight="bold">n₁</text>
+  
+  <!-- Normal 2 -->
+  <line x1="200" y1="265" x2="280" y2="290" stroke="red" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="285" y="295" font-size="13" fill="red" font-style="italic" font-weight="bold">n₂</text>
+  
+  <!-- n1 × n2 direction -->
+  <line x1="200" y1="265" x2="200" y2="200" stroke="orange" stroke-width="2" marker-end="url(#aO)"/>
+  <text x="168" y="195" font-size="11" fill="orange" font-style="italic">n₁ × n₂</text>
+  
+  <defs>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="rgb(0,140,0)"/></marker>
+    <marker id="aB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="blue"/></marker>
+    <marker id="aR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="red"/></marker>
+    <marker id="aO" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="orange"/></marker>
+  </defs>
+</svg>

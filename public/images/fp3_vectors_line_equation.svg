@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Axes -->
+  <line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-width="1" marker-end="url(#a5)"/>
+  <line x1="50" y1="250" x2="50" y2="30" stroke="black" stroke-width="1" marker-end="url(#a5)"/>
+  <text x="355" y="255" font-size="13" font-style="italic">x</text>
+  <text x="42" y="25" font-size="13" font-style="italic">y</text>
+  
+  <!-- Line -->
+  <line x1="20" y1="220" x2="350" y2="120" stroke="blue" stroke-width="2"/>
+  
+  <!-- Point A -->
+  <circle cx="120" cy="190" r="4" fill="blue"/>
+  <text x="110" y="185" font-size="13" fill="blue" font-weight="bold">A</text>
+  
+  <!-- Position vector a to A -->
+  <line x1="50" y1="250" x2="120" y2="190" stroke="#8b5cf6" stroke-width="2"/>
+  <polygon points="120,190 112,194 115,186" fill="#8b5cf6"/>
+  <text x="75" y="228" font-size="13" fill="#8b5cf6" font-weight="bold">a</text>
+  
+  <!-- Point P on line -->
+  <circle cx="250" cy="150" r="4" fill="#2d8a2d"/>
+  <text x="255" y="145" font-size="13" fill="#2d8a2d" font-weight="bold">P</text>
+  
+  <!-- Position vector r to P -->
+  <line x1="50" y1="250" x2="250" y2="150" stroke="#2d8a2d" stroke-width="2"/>
+  <polygon points="250,150 240,153 244,145" fill="#2d8a2d"/>
+  <text x="140" y="215" font-size="13" fill="#2d8a2d" font-weight="bold">r</text>
+  
+  <!-- Vector from A to P (λb) -->
+  <line x1="120" y1="190" x2="250" y2="150" stroke="orange" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="250,150 240,153 244,145" fill="orange"/>
+  <text x="180" y="175" font-size="13" fill="orange" font-weight="bold">λb</text>
+  
+  <!-- Direction vector b -->
+  <line x1="120" y1="190" x2="190" y2="170" stroke="red" stroke-width="2"/>
+  <polygon points="190,170 182,174 185,166" fill="red"/>
+  <text x="150" y="172" font-size="13" fill="red" font-weight="bold">b</text>
+  
+  <!-- Equation label -->
+  <text x="280" y="110" font-size="13" fill="blue" font-weight="bold">r = a + λb</text>
+  
+  <defs>
+    <marker id="a5" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Triangle OAB -->
+  <polygon points="30,160 130,140 90,60" fill="#d4e6ff" opacity="0.5" stroke="black" stroke-width="1.5"/>
+  <text x="15" y="175" font-size="12">O</text>
+  <text x="135" y="145" font-size="12">A</text>
+  <text x="80" y="55" font-size="12">B</text>
+  <text x="35" y="185" font-size="11" fill="#555">½|a × b|</text>
+  
+  <!-- Triangle ABC -->
+  <polygon points="230,160 330,140 290,60" fill="#ffe0e0" opacity="0.5" stroke="black" stroke-width="1.5"/>
+  <text x="225" y="175" font-size="12">A</text>
+  <text x="335" y="145" font-size="12">B</text>
+  <text x="280" y="55" font-size="12">C</text>
+  <text x="235" y="185" font-size="11" fill="#555">½|(b-a) × (c-a)|</text>
+  
+  <!-- Parallelogram -->
+  <polygon points="440,160 540,160 570,80 470,80" fill="#d4ffd4" opacity="0.5" stroke="black" stroke-width="1.5"/>
+  <text x="430" y="175" font-size="12">O</text>
+  <text x="545" y="175" font-size="12">A</text>
+  <text x="570" y="75" font-size="12">C</text>
+  <text x="460" y="75" font-size="12">B</text>
+  <text x="445" y="185" font-size="11" fill="#555">|a × b|</text>
+</svg>

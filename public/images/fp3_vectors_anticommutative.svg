@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="250" viewBox="0 0 500 250">
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Left: a×b -->
+  <text x="100" y="20" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">a × b</text>
+  <line x1="50" y1="150" x2="180" y2="150" stroke="blue" stroke-width="2.5"/>
+  <polygon points="180,150 173,145 173,155" fill="blue"/>
+  <text x="110" y="170" font-size="14" fill="blue" font-weight="bold">a</text>
+  
+  <line x1="50" y1="150" x2="130" y2="60" stroke="red" stroke-width="2.5"/>
+  <polygon points="130,60 123,68 131,68" fill="red"/>
+  <text x="80" y="100" font-size="14" fill="red" font-weight="bold">b</text>
+  
+  <line x1="50" y1="150" x2="50" y2="30" stroke="#2d8a2d" stroke-width="2.5"/>
+  <polygon points="50,30 45,40 55,40" fill="#2d8a2d"/>
+  <text x="55" y="85" font-size="14" fill="#2d8a2d" font-weight="bold">a × b</text>
+  
+  <path d="M 130,130 A 60 60 0 0 0 100,90" fill="none" stroke="#666" stroke-width="1" marker-end="url(#arr2)"/>
+  
+  <!-- Arrow -->
+  <text x="240" y="130" font-size="20" fill="#666">⟹</text>
+  
+  <!-- Right: b×a -->
+  <text x="390" y="20" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">b × a</text>
+  <line x1="340" y1="150" x2="470" y2="150" stroke="blue" stroke-width="2.5"/>
+  <polygon points="470,150 463,145 463,155" fill="blue"/>
+  <text x="400" y="170" font-size="14" fill="blue" font-weight="bold">a</text>
+  
+  <line x1="340" y1="150" x2="420" y2="60" stroke="red" stroke-width="2.5"/>
+  <polygon points="420,60 413,68 421,68" fill="red"/>
+  <text x="370" y="100" font-size="14" fill="red" font-weight="bold">b</text>
+  
+  <line x1="340" y1="150" x2="340" y2="230" stroke="#2d8a2d" stroke-width="2.5"/>
+  <polygon points="340,230 335,220 345,220" fill="#2d8a2d"/>
+  <text x="345" y="200" font-size="14" fill="#2d8a2d" font-weight="bold">b × a</text>
+  
+  <path d="M 420,130 A 60 60 0 0 1 390,90" fill="none" stroke="#666" stroke-width="1" marker-end="url(#arr2)"/>
+  
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

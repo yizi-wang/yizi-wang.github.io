@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Coordinate axes -->
+  <line x1="50" y1="280" x2="320" y2="280" stroke="black" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="50" y1="280" x2="50" y2="30" stroke="black" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="325" y="285" font-size="14" font-style="italic">x</text>
+  <text x="38" y="22" font-size="14" font-style="italic">y</text>
+  <!-- Vector v1 (blue) - 30 degrees -->
+  <line x1="50" y1="280" x2="286" y2="144" stroke="blue" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="270" y="138" font-size="14" fill="blue" font-weight="bold">v₁</text>
+  <!-- Vector v2 (red) - 120 degrees (perpendicular) -->
+  <line x1="50" y1="280" x2="-86" y2="144" stroke="red" stroke-width="3" marker-end="url(#arr)" transform="translate(136,0)"/>
+  <text x="60" y="140" font-size="14" fill="red" font-weight="bold">v₂</text>
+  <!-- Dashed projections -->
+  <line x1="286" y1="144" x2="286" y2="280" stroke="blue" stroke-width="1" stroke-dasharray="6,3"/>
+  <line x1="50" y1="144" x2="50" y2="144" stroke="red" stroke-width="1"/>
+  <!-- Right angle marker -->
+  <rect x="50" y="144" width="15" height="15" fill="none" stroke="gray" stroke-width="1.5"/>
+  <!-- Label -->
+  <text x="70" y="320" font-size="15" font-weight="bold">Orthogonal vectors: v₁ · v₂ = 0</text>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>

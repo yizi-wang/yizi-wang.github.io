@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="350" viewBox="0 0 400 350">
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Two planes -->
+  <polygon points="50,180 350,180 350,100 50,100" fill="#ffe0e0" opacity="0.4" stroke="black" stroke-width="1.5"/>
+  <polygon points="50,180 350,180 350,260 50,260" fill="#d4e6ff" opacity="0.4" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Normal to plane 1 -->
+  <line x1="200" y1="140" x2="200" y2="60" stroke="red" stroke-width="2.5"/>
+  <polygon points="200,60 195,70 205,70" fill="red"/>
+  <text x="205" y="55" font-size="14" fill="red" font-weight="bold">n₁</text>
+  
+  <!-- Normal to plane 2 -->
+  <line x1="200" y1="220" x2="200" y2="300" stroke="blue" stroke-width="2.5"/>
+  <polygon points="200,300 195,290 205,290" fill="blue"/>
+  <text x="205" y="315" font-size="14" fill="blue" font-weight="bold">n₂</text>
+  
+  <!-- Angle between planes -->
+  <path d="M 200,180 A 30 30 0 0 0 175,160" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="175" y="175" font-size="14" fill="#333" font-style="italic">θ</text>
+  
+  <!-- Angle between normals -->
+  <path d="M 200,180 A 40 40 0 0 1 230,200" fill="none" stroke="#888" stroke-width="1"/>
+  <text x="230" y="190" font-size="13" fill="#888" font-style="italic">π-θ</text>
+  
+  <!-- Right angle marks -->
+  <rect x="195" y="175" width="8" height="8" fill="none" stroke="black" stroke-width="1"/>
+  <rect x="195" y="177" width="8" height="8" fill="none" stroke="black" stroke-width="1"/>
+  
+  <!-- Dashed lines for plane normals -->
+  <line x1="200" y1="180" x2="150" y2="180" stroke="red" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="200" y1="180" x2="250" y2="180" stroke="blue" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>

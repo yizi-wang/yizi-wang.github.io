@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="350" viewBox="0 0 400 350">
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Two planes -->
+  <polygon points="50,280 300,280 350,150 100,150" fill="#d4e6ff" opacity="0.4" stroke="black" stroke-width="1.5"/>
+  <polygon points="50,100 300,100 350,230 100,230" fill="#ffe0e0" opacity="0.4" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Line of intersection -->
+  <line x1="175" y1="100" x2="175" y2="280" stroke="#2d8a2d" stroke-width="2.5"/>
+  <polygon points="175,100 170,110 180,110" fill="#2d8a2d"/>
+  <text x="180" y="190" font-size="12" fill="#2d8a2d" font-weight="bold">Line of intersection</text>
+  
+  <!-- Normal to plane 1 -->
+  <line x1="200" y1="200" x2="260" y2="140" stroke="blue" stroke-width="2"/>
+  <polygon points="260,140 252,148 260,148" fill="blue"/>
+  <text x="265" y="145" font-size="13" fill="blue" font-weight="bold">n₁</text>
+  
+  <!-- Normal to plane 2 -->
+  <line x1="200" y1="200" x2="260" y2="250" stroke="red" stroke-width="2"/>
+  <polygon points="260,250 252,242 260,242" fill="red"/>
+  <text x="265" y="255" font-size="13" fill="red" font-weight="bold">n₂</text>
+  
+  <!-- n1 × n2 direction -->
+  <line x1="200" y1="200" x2="200" y2="130" stroke="orange" stroke-width="2"/>
+  <polygon points="200,130 195,140 205,140" fill="orange"/>
+  <text x="205" y="160" font-size="12" fill="orange" font-weight="bold">n₁ × n₂</text>
+</svg>

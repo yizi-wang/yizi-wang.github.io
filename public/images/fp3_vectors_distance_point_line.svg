@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Axes -->
+  <line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-width="1" marker-end="url(#a7)"/>
+  <line x1="50" y1="250" x2="50" y2="30" stroke="black" stroke-width="1" marker-end="url(#a7)"/>
+  <text x="355" y="255" font-size="13" font-style="italic">x</text>
+  <text x="42" y="25" font-size="13" font-style="italic">y</text>
+  
+  <!-- Line -->
+  <line x1="20" y1="220" x2="350" y2="120" stroke="blue" stroke-width="2"/>
+  
+  <!-- Point A on line -->
+  <circle cx="120" cy="190" r="4" fill="blue"/>
+  <text x="110" y="185" font-size="13" fill="blue" font-weight="bold">A</text>
+  
+  <!-- Position vector a -->
+  <line x1="50" y1="250" x2="120" y2="190" stroke="#8b5cf6" stroke-width="2"/>
+  <polygon points="120,190 112,194 115,186" fill="#8b5cf6"/>
+  <text x="75" y="228" font-size="13" fill="#8b5cf6" font-weight="bold">a</text>
+  
+  <!-- Point P -->
+  <circle cx="280" cy="100" r="4" fill="#2d8a2d"/>
+  <text x="285" y="95" font-size="13" fill="#2d8a2d" font-weight="bold">P</text>
+  
+  <!-- Position vector p -->
+  <line x1="50" y1="250" x2="280" y2="100" stroke="#2d8a2d" stroke-width="2"/>
+  <polygon points="280,100 270,103 274,95" fill="#2d8a2d"/>
+  <text x="150" y="190" font-size="13" fill="#2d8a2d" font-weight="bold">p</text>
+  
+  <!-- p-a vector -->
+  <line x1="120" y1="190" x2="280" y2="100" stroke="black" stroke-width="2"/>
+  <polygon points="280,100 270,103 274,95" fill="black"/>
+  <text x="195" y="155" font-size="13" fill="black" font-weight="bold">p-a</text>
+  
+  <!-- Direction vector b -->
+  <line x1="120" y1="190" x2="190" y2="165" stroke="red" stroke-width="2.5"/>
+  <polygon points="190,165 182,170 185,162" fill="red"/>
+  <text x="150" y="170" font-size="13" fill="red" font-weight="bold">b</text>
+  
+  <!-- Perpendicular distance -->
+  <line x1="280" y1="100" x2="220" y2="155" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="255" y="120" font-size="12" fill="#cc0000">Distance</text>
+  
+  <!-- Angle -->
+  <path d="M 160,185 A 30 30 0 0 0 150,170" fill="none" stroke="#666" stroke-width="1"/>
+  <text x="155" y="180" font-size="12" fill="#666" font-style="italic">θ</text>
+  
+  <!-- Right angle mark -->
+  <rect x="216" y="151" width="6" height="6" fill="none" stroke="black" stroke-width="1" transform="rotate(-35,219,154)"/>
+  
+  <defs>
+    <marker id="a7" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300" width="450" height="300">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Axes -->
+  <line x1="50" y1="250" x2="420" y2="250" stroke="black" stroke-width="1" marker-end="url(#a)"/>
+  <line x1="50" y1="250" x2="50" y2="20" stroke="black" stroke-width="1" marker-end="url(#a)"/>
+  <text x="415" y="268" font-size="13" font-style="italic">x</text>
+  <text x="42" y="18" font-size="13" font-style="italic">y</text>
+  
+  <!-- Line -->
+  <line x1="20" y1="200" x2="420" y2="100" stroke="blue" stroke-width="1.5"/>
+  <text x="390" y="90" font-size="12" fill="blue">Line</text>
+  
+  <!-- Point A -->
+  <circle cx="120" cy="180" r="3" fill="blue"/>
+  <text x="112" y="173" font-size="13" font-weight="bold">A</text>
+  
+  <!-- Position vector a -->
+  <line x1="50" y1="250" x2="120" y2="180" stroke="purple" stroke-width="2" marker-end="url(#aP)"/>
+  <text x="75" y="225" font-size="13" fill="purple" font-style="italic" font-weight="bold">a</text>
+  
+  <!-- Point P -->
+  <circle cx="270" cy="140" r="3" fill="rgb(0,140,0)"/>
+  <text x="272" y="133" font-size="13" font-weight="bold">P</text>
+  
+  <!-- Position vector r -->
+  <line x1="50" y1="250" x2="270" y2="140" stroke="rgb(0,140,0)" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="160" y="210" font-size="13" fill="rgb(0,140,0)" font-style="italic" font-weight="bold">r</text>
+  
+  <!-- r - a = λb -->
+  <line x1="120" y1="180" x2="270" y2="140" stroke="orange" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#aO)"/>
+  <text x="185" y="152" font-size="13" fill="orange" font-style="italic">λb</text>
+  
+  <!-- Direction vector b -->
+  <line x1="120" y1="180" x2="190" y2="155" stroke="red" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="150" y="172" font-size="13" fill="red" font-style="italic" font-weight="bold">b</text>
+  
+  <!-- Equation label -->
+  <text x="310" y="130" font-size="13" fill="blue" font-style="italic">r = a + λb</text>
+  
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="black"/></marker>
+    <marker id="aP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="purple"/></marker>
+    <marker id="aG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="rgb(0,140,0)"/></marker>
+    <marker id="aO" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="orange"/></marker>
+    <marker id="aR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="red"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Axes -->
+  <line x1="150" y1="280" x2="150" y2="20" stroke="black" stroke-width="1"/>
+  <line x1="20" y1="150" x2="280" y2="150" stroke="black" stroke-width="1"/>
+  <line x1="80" y1="280" x2="280" y2="80" stroke="black" stroke-width="0.5" stroke-dasharray="4,4" stroke="#999"/>
+  
+  <!-- Labels -->
+  <text x="280" y="145" font-size="14" font-style="italic" fill="#333">j</text>
+  <text x="155" y="25" font-size="14" font-style="italic" fill="#333">k</text>
+  <text x="275" y="75" font-size="14" font-style="italic" fill="#333">i</text>
+  
+  <!-- j×k=i arrow -->
+  <line x1="150" y1="150" x2="250" y2="150" stroke="red" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="250,150 243,145 243,155" fill="red"/>
+  <line x1="150" y1="150" x2="150" y2="50" stroke="red" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="150,50 145,57 155,57" fill="red"/>
+  <line x1="150" y1="150" x2="250" y2="50" stroke="red" stroke-width="2.5"/>
+  <polygon points="250,50 240,53 245,60" fill="red"/>
+  <text x="255" y="95" font-size="12" fill="red">j × k = i</text>
+  
+  <!-- Rotation arc -->
+  <path d="M 200,150 A 50 50 0 0 0 150,100" fill="none" stroke="#666" stroke-width="1" marker-end="url(#arr3)"/>
+  
+  <defs>
+    <marker id="arr3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

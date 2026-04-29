@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="350" viewBox="0 0 700 350">
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Left diagram: r·n = p -->
+  <text x="175" y="25" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">r · n = p</text>
+  
+  <!-- Axes -->
+  <line x1="40" y1="300" x2="310" y2="300" stroke="#ccc" stroke-width="0.5"/>
+  <line x1="40" y1="300" x2="40" y2="50" stroke="#ccc" stroke-width="0.5"/>
+  
+  <!-- Plane (tilted rectangle) -->
+  <polygon points="60,250 280,200 300,120 80,170" fill="#d4e6ff" opacity="0.4" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Point A on plane -->
+  <circle cx="160" cy="200" r="4" fill="blue"/>
+  <text x="165" y="210" font-size="13" fill="blue" font-weight="bold">A</text>
+  
+  <!-- Position vector a -->
+  <line x1="40" y1="300" x2="160" y2="200" stroke="blue" stroke-width="2"/>
+  <polygon points="160,200 152,205 155,197" fill="blue"/>
+  <text x="90" y="260" font-size="13" fill="blue" font-weight="bold">a</text>
+  
+  <!-- Normal vector n -->
+  <line x1="160" y1="200" x2="230" y2="110" stroke="red" stroke-width="2.5"/>
+  <polygon points="230,110 222,118 230,118" fill="red"/>
+  <text x="200" y="145" font-size="14" fill="red" font-weight="bold">n</text>
+  
+  <!-- Point P on plane -->
+  <circle cx="240" cy="170" r="4" fill="#2d8a2d"/>
+  <text x="245" y="175" font-size="13" fill="#2d8a2d" font-weight="bold">P</text>
+  
+  <!-- Position vector r -->
+  <line x1="40" y1="300" x2="240" y2="170" stroke="#2d8a2d" stroke-width="2"/>
+  <polygon points="240,170 230,173 234,165" fill="#2d8a2d"/>
+  <text x="130" y="250" font-size="13" fill="#2d8a2d" font-weight="bold">r</text>
+  
+  <!-- r-a vector -->
+  <line x1="160" y1="200" x2="240" y2="170" stroke="orange" stroke-width="2"/>
+  <polygon points="240,170 230,173 234,165" fill="orange"/>
+  <text x="195" y="180" font-size="13" fill="orange" font-weight="bold">r-a</text>
+  
+  <!-- Right diagram: r = a + λb + μc -->
+  <text x="525" y="25" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">r = a + λb + μc</text>
+  
+  <!-- Axes -->
+  <line x1="400" y1="300" x2="670" y2="300" stroke="#ccc" stroke-width="0.5"/>
+  <line x1="400" y1="300" x2="400" y2="50" stroke="#ccc" stroke-width="0.5"/>
+  
+  <!-- Plane -->
+  <polygon points="420,250 640,200 660,120 440,170" fill="#d4e6ff" opacity="0.4" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Point A on plane -->
+  <circle cx="520" cy="200" r="4" fill="blue"/>
+  <text x="525" y="210" font-size="13" fill="blue" font-weight="bold">A</text>
+  
+  <!-- Position vector a -->
+  <line x1="400" y1="300" x2="520" y2="200" stroke="blue" stroke-width="2"/>
+  <polygon points="520,200 512,205 515,197" fill="blue"/>
+  <text x="450" y="260" font-size="13" fill="blue" font-weight="bold">a</text>
+  
+  <!-- Vector b in plane -->
+  <line x1="520" y1="200" x2="600" y2="190" stroke="#8b5cf6" stroke-width="2"/>
+  <polygon points="600,190 592,194 595,186" fill="#8b5cf6"/>
+  <text x="560" y="195" font-size="13" fill="#8b5cf6" font-weight="bold">b</text>
+  
+  <!-- Vector c in plane -->
+  <line x1="520" y1="200" x2="540" y2="140" stroke="#8b5cf6" stroke-width="2"/>
+  <polygon points="540,140 535,148 543,148" fill="#8b5cf6"/>
+  <text x="530" y="165" font-size="13" fill="#8b5cf6" font-weight="bold">c</text>
+</svg>
