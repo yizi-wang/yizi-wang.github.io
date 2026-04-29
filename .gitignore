@@ -1,7 +1,6 @@
 
 # Ignore subdirectories
 TMUA-Practice/
-skills/
 node_modules/
 dist/
 

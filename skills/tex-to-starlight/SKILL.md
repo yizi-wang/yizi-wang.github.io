@@ -1,35 +1,95 @@
 ---
 name: tex-to-starlight
 description: >
-  Convert LaTeX (.tex) teaching materials to Starlight-ready Markdown for the TMUA personal website.
-  Handles arbitrary TeX formats, bilingual content, image extraction, and generates paired
-  English/Chinese Markdown files. Use when the user provides a .tex file and asks to publish it
-  to the website, or mentions "导入讲义", "TeX 转 Markdown", "文章转换".
+  Convert LaTeX (.tex) teaching materials to Starlight-ready MDX for the personal website.
+  Handles arbitrary TeX formats, bilingual content, tcolorbox→Aside conversion, SVG diagram
+  generation, and multi-modal image verification. Use when the user provides a .tex file
+  and asks to publish it to the website, or mentions "导入讲义", "TeX 转 Markdown".
 ---
 
-# TeX → Starlight Markdown Converter
+# TeX → Starlight MDX Converter
 
-Converts LaTeX teaching materials into bilingual Markdown for the Astro + Starlight website at `/home/admin/.openclaw/workspace-academic/yizi-wang.github.io/`.
+Converts LaTeX teaching materials into bilingual MDX for the Astro + Starlight website at
+`/home/admin/.openclaw/workspace-academic/yizi-wang.github.io/`.
+
+## Output Paths
+
+| Content Type | English Path | Chinese Path |
+|---|---|---|
+| TMUA Handouts | `src/content/docs/tmua/<name>.md` | `src/content/docs/zh/tmua/<name>.md` |
+| S2 / Teaching Notes | `src/content/docs/teaching-notes/s2/<name>.mdx` | `src/content/docs/zh/teaching-notes/s2/<name>.mdx` |
+| History of Math | `src/content/docs/history-of-math/<name>.md` | `src/content/docs/zh/history-of-math/<name>.md` |
+
+**Filename MUST be identical for EN and ZH.** English only, no Chinese characters, use underscores.
 
 ## Core Rules
 
 ### 1. Bilingual Split (MANDATORY)
 
-Starlight i18n requires separate files for English and Chinese. Even if input TeX mixes both, output must be split:
+Starlight i18n requires separate files. Even if input TeX is mixed, output must be split into EN + ZH.
+Chinese version is AI-translated (natural translation, not word-for-word).
 
-| Output Path | Content |
+### 2. File Extension: `.md` vs `.mdx`
+
+- **Use `.mdx`** when the file contains `<Aside>` components (requires JSX import)
+- **Use `.md`** when the file has NO `<Aside>` components (pure markdown)
+- When in doubt, use `.mdx` — it supports both markdown and JSX
+
+### 3. Frontmatter (CRITICAL — frequent failure point)
+
+```yaml
+---
+title: "Page Title Here"
+---
+```
+
+**Rules:**
+- Opening `---` on line 1, closing `---` after title
+- **NO extra `---` after the closing delimiter** — this breaks the build
+- **NO blank lines inside the frontmatter block**
+- Title must be quoted if it contains special characters (`:`, `-`, etc.)
+- After conversion scripts, **always verify the frontmatter is intact** — scripts often corrupt it
+
+### 4. Aside Components (CRITICAL — repeated failures)
+
+**Import statement (required for .mdx files):**
+```jsx
+import { Aside } from '@astrojs/starlight/components';
+```
+
+**Valid type values — ONLY 4:**
+- `note` — exercises, neutral information, definitions
+- `tip` — key insights, beautiful symmetry, helpful hints
+- `caution` — constraints, important warnings, central challenges
+- `danger` — common pitfalls, critical errors
+
+**❌ NEVER use `type="success"`** — it does NOT exist in Starlight!
+
+**tcolorbox → Aside mapping:**
+
+| TeX tcolorbox | Aside type |
 |---|---|
-| `src/content/docs/tmua/<filename>.md` | English version |
-| `src/content/docs/zh/tmua/<filename>.md` | Chinese version |
+| Exercise, problem, classification | `note` |
+| Key insight, beautiful symmetry, reframed question | `tip` |
+| Central challenge, constraint, memoryless property | `caution` |
+| Warning, common pitfall, critical error | `danger` |
 
-**The `<filename>` MUST be identical for both files.** AI generates the name (e.g. `A1_Algebra_Basics.md`). Never use Chinese characters in filenames.
+**Correct format:**
+```jsx
+<Aside type="caution" title="The Central Question">
+Content here with **bold** and $math$.
+</Aside>
+```
 
-### 2. KaTeX Syntax (CRITICAL — known failures)
+**❌ Never use `:::` markdown syntax** — it does NOT render in `.md` files and is unreliable in `.mdx`.
+Always use `<Aside>` components with import.
 
-- **Inline math**: `$...$` or `\( ... \)`
-- **Display math**: `$$...$$` on its own line
-- **Multi-line environments**: `\begin{aligned}` and `\end{aligned}` **must each be on a separate line** from `$$`:
+### 5. KaTeX Syntax (CRITICAL — known failures)
 
+**Inline math:** `$...$`
+**Display math:** `$$...$$` on its own line
+
+**Multi-line environments — `$$` and `\begin{aligned}` MUST be on separate lines:**
 ```
 $$
 \begin{aligned}
@@ -39,74 +99,93 @@ $$
 $$
 ```
 
-❌ **Never write**: `$$\begin{aligned}...` (single line) — this breaks remark-math
+❌ **Never write**: `$$\begin{aligned}...` (single line) — breaks remark-math
 
-- **No `\begin{equation}` or `\begin{displaymath}`** — use `$$...$$` instead
-- Convert `\frac{a}{b}` → `$\frac{a}{b}$` (wrap in delimiters)
-- Convert `\text{...}` inside math to plain text where possible
+**Chinese characters in math mode (CRITICAL):**
+- KaTeX strict mode **does NOT allow Chinese characters** even inside `\text{}`
+- **Move all Chinese text OUTSIDE the `$$...$$` block**
+- Example: `$$P(X=k) = \frac{\lambda^k}{k!}$$，其中 $k = 0, 1, 2, ...$`
+- NOT: `$$P(X=k) = \frac{\lambda^k}{k!} \text{ 其中 } k = 0, 1, 2, ...$$`
 
-### 3. Markdown Structure
+**`\underline{\hspace{}}` in MDX (CRITICAL):**
+- Curly braces `{}` in MDX are interpreted as JSX expressions
+- `\underline{\hspace{3cm}}` causes `acorn` parse errors
+- **Replace with `___`** (three underscores) or a descriptive placeholder
 
-```markdown
----
-title: "Module Title"
----
+**Other rules:**
+- No `\begin{equation}` or `\begin{displaymath}` — use `$$...$$` instead
+- No `\vspace{}`, `\hspace{}`, `\clearpage` — remove them
+- Convert `\begin{enumerate}[label=(\alph*)]` to numbered lists
 
-# Module Heading
+### 6. TikZ / Diagrams
 
-> **Syllabus**: MM1.1, ...
-> **Paper**: P1/P2 ...
+TikZ cannot render in web browsers. Options:
 
-## Section Heading
+**Option A: SVG (preferred for important diagrams)**
+1. Write SVG using Python string concatenation (no dependencies needed)
+2. Save to `public/images/<name>.svg`
+3. **Add white background**: `<rect width="100%" height="100%" fill="white"/>`
+4. Reference as `![Diagram](/images/<name>.svg)`
+5. **Verify with multi-modal model**: convert SVG → PNG (sharp), then use image tool
 
-Content with `$inline$` and `$$display$$` math.
+**Option B: Descriptive text (for simple diagrams)**
+Replace with a text description or markdown table.
+
+**SVG generation workflow:**
+```bash
+# Write SVG as Python string (no dependencies)
+python3 -c "
+svg = '''<svg>...</svg>'''
+with open('public/images/diagram.svg', 'w') as f:
+    f.write(svg)
+"
+
+# Convert to PNG for verification
+cd /tmp && npm install sharp
+node -e "
+const sharp = require('sharp');
+const fs = require('fs');
+sharp(fs.readFileSync('public/images/diagram.svg')).png().toFile('/tmp/diagram.png');
+"
+
+# Then use image tool to verify: no overlaps, readable text, white background
 ```
 
-- Use `##` for sections, `###` for subsections
-- Tables use standard GFM syntax
-- Remove LaTeX-only commands (`\newpage`, `\vspace`, `\hspace`, etc.)
-- Keep `\\` line breaks in `aligned` environments only
+### 7. Content Preservation
 
-### 4. Image Handling
+- Keep ALL examples, exercises, homework questions exactly as-is
+- Keep ALL math formulas exactly as-is from source
+- Tables: convert to markdown GFM format
+- Remove `\vspace{}`, `\clearpage`, `\newpage`
+- Convert `\begin{itemize}`/`\begin{enumerate}` to markdown lists
+- Solution blocks with `\vspace{}` → keep the label, remove the vspace
 
-- Extract images referenced via `\includegraphics{path}` from the TeX
-- Copy image files to `src/assets/images/`
-- Reference in Markdown as `![alt](../../assets/images/filename.png)`
-- If image is embedded in TeX (TikZ, PSTricks), describe it as text or flag for manual creation
+## Conversion Checklist
 
-### 5. Conversion Notes
+Before declaring conversion complete, verify ALL of:
 
-After conversion, provide a brief summary:
+- [ ] Frontmatter: `---` open AND close present, no extra `---`
+- [ ] File extension: `.mdx` if has Aside, `.md` otherwise
+- [ ] Import: `import { Aside } from '@astrojs/starlight/components';` (if .mdx)
+- [ ] Aside types: only note/tip/caution/danger (NO success)
+- [ ] Aside tags: every `<Aside>` has matching `</Aside>`
+- [ ] No `:::` syntax anywhere
+- [ ] No Chinese in `$$...$$` blocks
+- [ ] No `\underline{\hspace{}}` (use `___` instead)
+- [ ] No `\vspace{}`, `\clearpage`
+- [ ] `$$` and `\begin{aligned}` on separate lines
+- [ ] EN and ZH filenames match exactly
+- [ ] SVG diagrams have white background
 
-```
-## 转换备注
-- 源文件: xxx.tex
-- 生成文件: A1_Algebra_Basics.md (EN) + zh/A1_Algebra_Basics.md (ZH)
-- 图片: N 张 → src/assets/images/
-- ⚠️ 需注意: [列出转换中不确定或有风险的地方]
-```
+## Common Failure Patterns
 
-## Workflow
-
-1. Read the .tex file
-2. Analyze structure: sections, subsections, math environments, images
-3. Generate a matching filename (English, no spaces/special chars, e.g. `A1_Algebra_Basics.md`)
-4. Create English version → `src/content/docs/tmua/<filename>.md`
-5. Create Chinese version → `src/content/docs/zh/tmua/<filename>.md`
-6. Extract images if any
-7. Run `npm run build` to verify no KaTeX errors
-8. Report conversion notes
-
-## Input Variations
-
-TeX format is not fixed. Common patterns include:
-
-- `\section{}`, `\subsection{}`, `\subsubsection{}`
-- `\begin{itemize}`, `\begin{enumerate}`, `\begin{description}`
-- `\begin{align}`, `\begin{align*}`, `\begin{aligned}`
-- `\begin{tabular}`, `\begin{array}`
-- `\begin{proof}`, `\begin{theorem}`, `\begin{example}`
-- Inline math: `$...$`, `\( ... \)`
-- Display math: `$$...$$`, `\[ ... \]`
-
-Map each appropriately to Markdown + KaTeX. When uncertain, prefer readability.
+| Pattern | Symptom | Fix |
+|---|---|---|
+| `$$\begin{aligned}` same line | KaTeX parse error | Separate onto own lines |
+| `\text{中文}` in math | KaTeX unicode error | Move Chinese outside `$$` |
+| `\underline{\hspace{3cm}}` | MDX acorn parse error | Replace with `___` |
+| `<Aside type="success">` | Component not found | Use `tip` instead |
+| `:::note` in `.md` | Renders as plain text | Use `<Aside>` in `.mdx` |
+| Missing frontmatter `---` | `title: Required` error | Add closing `---` |
+| Extra `---` after frontmatter | Build failure | Remove extra `---` |
+| EN/CN filename mismatch | Sidebar duplication | Rename to match |

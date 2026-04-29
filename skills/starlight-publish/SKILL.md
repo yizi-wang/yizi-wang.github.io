@@ -1,10 +1,10 @@
 ---
 name: starlight-publish
 description: >
-  Validate, build-test, and publish changes to the TMUA Starlight website. Checks KaTeX rendering,
-  bilingual filename matching, frontmatter completeness, then runs build, git commit, and push.
-  Use when the user asks to "发布文章", "检查并推送", "deploy website", or after converting
-  TeX files and ready to go live.
+  Validate, build-test, and publish changes to the Starlight website. Checks MDX/Markdown
+  integrity, Aside components, KaTeX rendering, bilingual filename matching, then runs build,
+  git commit, and push. Use when the user asks to "发布", "检查并推送", "deploy website",
+  or after converting TeX files and ready to go live.
 ---
 
 # Starlight Website Publish Checklist
@@ -13,51 +13,110 @@ Validates and publishes changes to `/home/admin/.openclaw/workspace-academic/yiz
 
 ## Pre-flight Checks
 
-### 1. KaTeX Rendering
+Run ALL checks before attempting build. Fix issues in order.
+
+### 1. Frontmatter Integrity
+
+Every `.md`/`.mdx` file must have valid frontmatter:
 
 ```bash
 cd /home/admin/.openclaw/workspace-academic/yizi-wang.github.io
-npm run build 2>&1 | grep -i "katex\|error"
+
+# Check all new/modified files have frontmatter
+for f in src/content/docs/teaching-notes/s2/*.mdx src/content/docs/zh/teaching-notes/s2/*.mdx; do
+  first_line=$(head -1 "$f")
+  if [ "$first_line" != "---" ]; then
+    echo "BROKEN: $f (first line: $first_line)"
+  fi
+done
 ```
 
-After build, check HTML output for errors:
+**Common corruption patterns:**
+- Missing closing `---` → `title: Required` error
+- Extra `---` after frontmatter → build failure
+- Blank lines inside frontmatter → parsing error
+- Python scripts that process content often corrupt `---` delimiters
+
+### 2. Aside Component Validation (MDX files only)
 
 ```bash
-grep -c 'katex-error' dist/<path>/index.html
+# Check for invalid Aside types
+grep -rn 'type="success"' src/content/docs/ --include="*.mdx"
+# Must return NOTHING — 'success' is not a valid Aside type
+
+# Check for ::: syntax (should use <Aside> instead)
+grep -rn '^:::' src/content/docs/ --include="*.mdx" --include="*.md"
+# Must return NOTHING
+
+# Check Aside tags are balanced
+for f in src/content/docs/teaching-notes/s2/*.mdx; do
+  open=$(grep -c '<Aside' "$f")
+  close=$(grep -c '</Aside>' "$f")
+  if [ "$open" != "$close" ]; then
+    echo "MISMATCH: $f (open: $open, close: $close)"
+  fi
+done
 ```
 
-**Must be 0.** If errors exist, check:
-- `$$` and `\begin{...}` on separate lines
-- No `\begin{equation}` (use `$$` instead)
-- All `$` pairs are balanced
-
-### 2. Bilingual Filename Matching
+### 3. KaTeX / Math Validation
 
 ```bash
-# English files
-ls src/content/docs/tmua/
-# Chinese files
-ls src/content/docs/zh/tmua/
+# Check for Chinese characters inside display math blocks
+python3 << 'EOF'
+import re, glob
+for f in glob.glob('src/content/docs/zh/**/*.mdx', recursive=True):
+    with open(f) as fh:
+        content = fh.read()
+    for m in re.finditer(r'\$\$(.*?)\$\$', content, re.DOTALL):
+        block = m.group(1)
+        if re.search(r'[\u4e00-\u9fff]', block):
+            parts = re.split(r'(\\text\{[^}]*\})', block)
+            for j, part in enumerate(parts):
+                if j % 2 == 0 and re.search(r'[\u4e00-\u9fff]', part):
+                    print(f"ISSUE: {f} has Chinese in display math")
+                    break
+EOF
+
+# Check for \underline{\hspace{}} (causes MDX parse errors)
+grep -rn '\\underline{\\hspace' src/content/docs/ --include="*.mdx"
+# Must return NOTHING
+
+# Check $$ and \begin{aligned} are on separate lines
+grep -n '^\$\$\\begin{aligned}' src/content/docs/ --include="*.mdx" -r
+# Must return NOTHING
 ```
 
-Every file in `zh/tmua/` must have an exact match in `tmua/` (same filename). Mismatched names cause sidebar duplication.
-
-### 3. Frontmatter Check
-
-Every `.md` file must have valid frontmatter:
-
-```yaml
----
-title: "Page Title"
----
-```
-
-Missing or malformed frontmatter causes build failures.
-
-### 4. No Dead Links
+### 4. Bilingual Filename Matching
 
 ```bash
-npm run build 2>&1 | grep -i "broken\|404\|not found"
+# Check EN/ZH filenames match for teaching-notes
+for f in src/content/docs/teaching-notes/s2/*.mdx; do
+  base=$(basename "$f")
+  zh="src/content/docs/zh/teaching-notes/s2/$base"
+  if [ ! -f "$zh" ]; then
+    echo "MISSING ZH: $zh"
+  fi
+done
+
+# Same check for tmua/
+for f in src/content/docs/tmua/*.md; do
+  base=$(basename "$f")
+  zh="src/content/docs/zh/tmua/$base"
+  if [ ! -f "$zh" ]; then
+    echo "MISSING ZH: $zh"
+  fi
+done
+```
+
+### 5. SVG Image Check
+
+```bash
+# Verify SVG files have white background (for dark mode)
+for f in public/images/*.svg; do
+  if ! grep -q 'fill="white"' "$f"; then
+    echo "NO WHITE BG: $f"
+  fi
+done
 ```
 
 ## Build & Publish
@@ -69,27 +128,42 @@ cd /home/admin/.openclaw/workspace-academic/yizi-wang.github.io
 npm run build
 ```
 
-Expected output: `43 page(s) built in XX.XXs` followed by `Complete!`.
+Expected: `XX page(s) built in XX.XXs` → `Complete!`
+
+**If build fails:**
+1. Read the error message carefully — it usually points to the exact file and line
+2. Common errors:
+   - `title: Required` → check frontmatter
+   - `Expected component 'Aside' to be defined` → check import statement
+   - `Could not parse expression with acorn` → check for `{}` in math blocks
+   - `katex-error` → check math syntax
+3. Fix and rebuild
 
 ### Step 2: Verify Output
 
 ```bash
-# Check page count (should be ~43+, not doubled)
+# Page count (should match expected, not doubled)
 find dist -name "index.html" | wc -l
-# Check no KaTeX errors
+
+# No KaTeX errors in rendered HTML
 grep -r 'katex-error' dist/ | wc -l
+# Must be 0
 ```
 
 ### Step 3: Git Commit
 
 ```bash
-cd /home/admin/.openclaw/workspace-academic/yizi-wang.github.io
 git add -A
-git status  # Show user what will be committed
-git commit -m "<describe change>"
+git status  # Review what will be committed
+git commit -m "feat: <description>"
 ```
 
-⚠️ **Do NOT merge to main without user confirmation** if on a feature branch.
+**Commit message conventions:**
+- `feat:` — new content
+- `fix:` — bug fixes
+- `chore:` — maintenance
+
+**⚠️ Do NOT merge to main without user confirmation.**
 
 ### Step 4: Push
 
@@ -101,14 +175,28 @@ git push origin master
 
 Tell user:
 - Commit hash
-- Files changed
-- Expected deployment time (~2-3 min via GitHub Actions)
+- Files changed (count)
+- GitHub Actions deployment time (~2-3 min)
+- Ask user to verify on the live site
 
-## Known Pitfalls
+## Server Constraints
+
+- **RAM**: Only 2GB — `npm install` of large projects gets OOM killed
+- **Python**: 3.6 — too old for matplotlib/pillow
+- **Node**: v24 — sharp available for SVG→PNG conversion
+- **Build**: GitHub Actions (7GB RAM) handles builds fine; local builds may OOM
+
+## Known Pitfalls Quick Reference
 
 | Issue | Symptom | Fix |
 |---|---|---|
-| `$$\begin{aligned}` same line | KaTeX parse error | Separate `$$` and `\begin{aligned}` |
-| EN/CN filename mismatch | Sidebar shows both languages | Rename to match |
-| Missing `title` in frontmatter | Build fails | Add frontmatter |
-| OOM during build | Process killed (exit 137) | Server has 2GB RAM — avoid `npm install` on server |
+| Missing frontmatter `---` | `title: Required` | Add closing `---` |
+| Extra `---` in frontmatter | Build failure | Remove extra delimiters |
+| `<Aside type="success">` | Component not found | Change to `tip` |
+| `:::note` in `.md` | Renders as plain text | Use `<Aside>` in `.mdx` |
+| Chinese in `$$...$$` | KaTeX unicode error | Move Chinese outside |
+| `\underline{\hspace{}}` | MDX acorn parse error | Replace with `___` |
+| `$$\begin{aligned}` same line | KaTeX parse error | Separate lines |
+| EN/CN filename mismatch | Sidebar duplication | Rename to match |
+| SVG no white background | Dark mode text invisible | Add `<rect fill="white"/>` |
+| `{}` in display math | MDX JSX parse error | Escape or restructure |
