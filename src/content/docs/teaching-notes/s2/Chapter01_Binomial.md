@@ -1,7 +1,6 @@
 ---
 title: "S2 Chapter 1: The Binomial Distribution"
-
-
+---
 
 # S2 Statistics: Chapter 1 — The Binomial Distribution
 
