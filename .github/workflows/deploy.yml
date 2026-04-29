@@ -23,15 +23,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "24"
+          node-version: "22"
           cache: "npm"
-      - name: Install sharp dependencies (libvips)
-        run: sudo apt-get update && sudo apt-get install -y libvips-dev
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci
-      - name: Build
+      - name: Build with Astro
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
