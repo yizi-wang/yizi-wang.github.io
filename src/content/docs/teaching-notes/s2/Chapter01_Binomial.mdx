@@ -1,183 +1,184 @@
 ---
-title: "S2 第一章：二项分布"
+title: "S2 Chapter 1: The Binomial Distribution"
 ---
 
 import { Aside } from '@astrojs/starlight/components';
 
+# S2 Statistics: Chapter 1 — The Binomial Distribution
 
-## 前言：穿越 1654 年的法国
+## Preface: Journey to 1654 France
 
-欢迎来到数学侦探的世界！今天，我们将穿越回 1654 年的法国，化身当时的数学家，去解决一个困扰了那个时代最聪明头脑的谜题。这个挑战不仅催生了数学的一个全新分支，也直接引出了我们本章的核心主题：**二项分布（The Binomial Distribution）**。
+Welcome, fellow mathematical detectives! Today, we embark on a journey back to 1654 France, where we'll step into the shoes of mathematicians to solve a puzzle that baffled the brightest minds of the era. This challenge not only gave birth to an entirely new branch of mathematics but directly leads us to our chapter's central topic: **The Binomial Distribution**.
 
-故事的主角是两位实力相当的骑士，他们正在进行一场比赛，却突然被迫中断，由此产生的问题将彻底改变数学思维的发展轨迹。
+The story unfolds with two equally skilled knights engaged in a contest that was abruptly interrupted, creating a problem that would revolutionize mathematical thinking forever.
 
-## 第一幕：中断的比赛 — 历史的难题
+## Act I: The Interrupted Game — A Historical Dilemma
 
-### 背景：点数分配问题（The Problem of Points）
+### Setting the Stage: The Problem of Points
 
-想象一下：两位实力相当的骑士——**安托万（Antoine）**和**布莱士（Blaise）**——在法国王宫中正在进行掷骰子比赛。规则非常简单：
+Picture this: Two equally skilled knights, **Antoine** and **Blaise**, are engaged in a dice-throwing competition in the royal court of France. The rules are elegantly simple:
 
-- 先赢得 **3 局**的骑士获得全部 **64 枚金币**
-- 每局比赛双方获胜概率相等
-- 各局之间相互独立
+- The first knight to win **3 rounds** claims the entire prize of **64 gold coins**
+- Each round has an equal probability of being won by either knight
+- The rounds are independent of each other
 
-**当前比分：** 安托万以 **2:1** 领先。
+**Current situation:** Antoine leads with a score of **2:1**.
 
-突然，国王的召唤到了！两位骑士必须立刻觐见，比赛必须马上终止。这就产生了一个核心难题：
+Suddenly, a royal summons arrives! The King requires their immediate presence, and the game must be terminated at once. This creates our central dilemma:
 
-<Aside type="caution" title="核心问题">
+<Aside type="caution" title="The Central Question">
 
-**64 枚金币应该如何公平分配给安托万和布莱士？**
-
-</Aside>
-
-### 学生投票：直觉方法
-
-在深入数学解答之前，我们先来看看几种直觉上的方法：
-
-<Aside type="note" title="投票练习：哪种方式最公平？">
-
-- **(A)** 按已赢比例分配：安托万获得 $\frac{2}{3}$（42 枚），布莱士获得 $\frac{1}{3}$（22 枚）
-- **(B)** 赢家全拿：既然安托万领先，他应该拿走全部 64 枚
-- **(C)** 平均分配：既然比赛未完成，各分 32 枚
-- **(D)** 以上都不是：一定有更严谨的数学方法…
+**How should the 64 gold coins be fairly distributed between Antoine and Blaise?**
 
 </Aside>
 
-## 第二幕：天才的解答 — 数学巨人之间的通信
+### Student Voting: Intuitive Approaches
 
-### 革命性的洞察
+Before we dive into the mathematical solution, let's consider some intuitive approaches:
 
-骑士布莱士（他恰好就是数学家布莱士·帕斯卡）写信给他的朋友皮埃尔·德·费马寻求解答。他们的通信揭示了一个革命性的洞察：
+<Aside type="note" title="Voting Exercise: Which approach seems most fair?">
 
-<Aside type="tip" title="关键洞察">
-
-**不要关注过去（已经发生了什么），而要关注未来（所有可能发生的结果）！**
-
-公平的分配应该基于每位骑士**最终赢得比赛的概率**。
-
-</Aside>
-
-### 重新表述问题
-
-要应用这个洞察，我们需要确定每位骑士还需要赢多少：
-
-- 安托万还需要赢 **1 局**就能达到 3 局总胜场
-- 布莱士还需要赢 **2 局**才能达到 3 局总胜场
-
-由于双方实力相当（$p = 0.5$），且各局独立，我们可以重新表述问题：
-
-<Aside type="success" title="重新表述的问题">
-
-在最多 2 局额外比赛中，以下概率分别是多少：
-
-- 安托万至少赢 1 局？
-- 布莱士两局全赢？
+- **(A)** Proportional to current wins: Antoine receives $\frac{2}{3}$ (42 coins), Blaise receives $\frac{1}{3}$ (22 coins)
+- **(B)** Winner takes all: Since Antoine is leading, he should receive all 64 coins
+- **(C)** Equal split: Since the game wasn't completed, split equally (32 coins each)
+- **(D)** None of the above: There must be a more mathematically rigorous approach...
 
 </Aside>
 
-## 数学解答
+## Act II: The Genius Solution — Letters Between Mathematical Giants
 
-### 穷举分析
+### The Revolutionary Insight
 
-比赛最多在 2 局内就会结束。让我们列出所有可能的序列：
+The knight Blaise (who happened to be the mathematician Blaise Pascal) wrote to his friend Pierre de Fermat seeking a solution. Their correspondence revealed a revolutionary insight:
 
-**树形图（文字表示）：**
+<Aside type="tip" title="Key Insight">
+
+**Don't focus on the past (what has already happened), but on the future (all possible outcomes that could occur)!**
+
+A fair distribution should be based on each knight's **probability of ultimately winning** the complete game.
+
+</Aside>
+
+### Reframing the Problem
+
+To apply this insight, we need to determine what each knight needs to win:
+
+- Antoine needs to win **1 more round** to reach 3 total wins
+- Blaise needs to win **2 more rounds** to reach 3 total wins
+
+Since each knight has equal skill ($p = 0.5$ for each round), and rounds are independent, we can reframe our question:
+
+<Aside type="success" title="Reframed Question">
+
+In at most 2 additional rounds, what is the probability that:
+
+- Antoine wins at least 1 round?
+- Blaise wins both rounds?
+
+</Aside>
+
+## The Mathematical Solution
+
+### Exhaustive Case Analysis
+
+The game will end within 2 rounds maximum. Let's enumerate all possible sequences:
+
+**Tree Diagram (textual representation):**
 
 ```
-        开始
+        Start
        /     \
    0.5 /       \ 0.5
      /         \
-    A           B         ← 第 1 局
-(安托万      (布莱士
-  赢得         赢得)
-  比赛)      /    \
+    A           B         ← Round 1
+(Antoine    (Blaise
+  wins        wins)
+  game)       /    \
           0.5 /      \ 0.5
              /        \
-            A          B     ← 第 2 局
-      (安托万      (布莱士
-        赢得)        赢得
-                    比赛)
+            A          B     ← Round 2
+      (Antoine    (Blaise
+        wins)       wins
+                    game)
 ```
 
-**序列分析：**
+**Sequence Analysis:**
 
-- **A：** 安托万在第 1 局获胜 → 比赛结束，安托万赢（$P = 0.5$）
-- **BA：** 布莱士赢第 1 局，安托万赢第 2 局 → 安托万赢（$P = 0.5 \times 0.5 = 0.25$）
-- **BB：** 布莱士两局全赢 → 布莱士赢（$P = 0.5 \times 0.5 = 0.25$）
+- **A:** Antoine wins in round 1 → Game over, Antoine wins ($P = 0.5$)
+- **BA:** Blaise wins round 1, Antoine wins round 2 → Antoine wins ($P = 0.5 \times 0.5 = 0.25$)
+- **BB:** Blaise wins both rounds → Blaise wins ($P = 0.5 \times 0.5 = 0.25$)
 
-### 概率计算
+### Probability Calculations
 
-$$P(\text{安托万最终获胜}) = P(A) + P(BA) = 0.5 + (0.5 \times 0.5) = 0.75$$
+$$P(\text{Antoine wins ultimately}) = P(A) + P(BA) = 0.5 + (0.5 \times 0.5) = 0.75$$
 
-$$P(\text{布莱士最终获胜}) = P(BB) = 0.5 \times 0.5 = 0.25$$
+$$P(\text{Blaise wins ultimately}) = P(BB) = 0.5 \times 0.5 = 0.25$$
 
-**公平分配：** 64 枚金币应按 $0.75 : 0.25 = 3:1$ 的比例分配
+**Fair Distribution:** The 64 coins should be divided in the ratio $0.75 : 0.25 = 3:1$
 
-- 安托万获得：$64 \times 0.75 = 48$ 枚
-- 布莱士获得：$64 \times 0.25 = 16$ 枚
+- Antoine receives: $64 \times 0.75 = 48$ coins
+- Blaise receives: $64 \times 0.25 = 16$ coins
 
-## 深入探索：发现二项模式
+## Deep Dive: Uncovering the Binomial Pattern
 
-### 引导式思考题
+### Guided Discovery Questions
 
-<Aside type="note" title="批判性思维练习">
+<Aside type="note" title="Critical Thinking Exercise">
 
-1. **我们的计算依赖了哪些基本假设？**
-   - 固定概率：每局 $p = 0.5$
-   - 独立性：每局结果互不影响
-   - 这些正是我们所说的**伯努利试验（Bernoulli trials）**的基础条件！
+1. **What fundamental assumptions did our calculation rely upon?**
+   - Fixed probability: $p = 0.5$ for each round
+   - Independence: Each round's outcome doesn't affect others
+   - These are the foundational conditions for what we call **Bernoulli trials**!
 
-2. **拓展挑战：** 如果比赛需要赢 5 局，比分是 4-3 时中断怎么办？
+2. **Extension Challenge:** What if the game required 5 wins, and the score was 4-3 when interrupted?
 
-   列出所有可能序列变得极其复杂。有没有更优雅的方法？
+   Listing all possible sequences becomes incredibly complex. Is there a more elegant approach?
 
 </Aside>
 
-## 二项分布：正式框架
+## The Binomial Distribution: Formal Framework
 
-### 历史背景
+### Historical Context
 
-雅各布·伯努利（Jacob Bernoulli）将这种"固定次数、独立试验、恒定成功概率"的模型推广，创造出了我们现在所说的**二项分布**。卡尔·弗里德里希·高斯后来发现，这个概率序列恰好对应二项展开式 $(p + q)^n$ 中的各项（其中 $q = 1-p$），因此得名。
+Jacob Bernoulli generalized this "fixed number of independent trials with constant success probability" model, creating what we now call the **Binomial Distribution**. Carl Friedrich Gauss later discovered that the probability sequence corresponds exactly to the terms in the binomial expansion $(p + q)^n$ where $q = 1-p$, hence the name.
 
-**定义：二项分布**
+**Definition: Binomial Distribution**
 
-随机变量 $X$ 服从二项分布，记作 $X \sim B(n,p)$，如果它满足 **BINS** 条件：
+A random variable $X$ follows a binomial distribution, denoted $X \sim B(n,p)$, if it satisfies the **BINS** conditions:
 
-1. **B**inary（二项结果）：每次试验恰好有两种可能结果（成功/失败）
-2. **I**ndependence（独立性）：各试验相互独立
-3. **N**umber fixed（次数固定）：试验次数 $n$ 是预先确定的
-4. **S**ame probability（概率相同）：每次试验的成功概率 $p$ 保持不变
+1. **B**inary outcomes: Each trial has exactly two possible outcomes (success/failure)
+2. **I**ndependence: Trials are mutually independent
+3. **N**umber fixed: The number of trials $n$ is predetermined
+4. **S**ame probability: The probability of success $p$ remains constant across trials
 
-其中：
+Where:
 
-- $n$ = 试验次数
-- $p$ = 每次试验的成功概率
-- $X$ = $n$ 次试验中的成功次数
+- $n$ = number of trials
+- $p$ = probability of success on each trial
+- $X$ = number of successes in $n$ trials
 
-**定理：二项概率质量函数**
+**Theorem: Binomial Probability Mass Function**
 
-对于 $X \sim B(n,p)$，恰好 $r$ 次成功的概率为：
+For $X \sim B(n,p)$, the probability of exactly $r$ successes is:
 
 $$P(X = r) = \binom{n}{r}p^r(1-p)^{n-r}$$
 
-其中 $r = 0, 1, 2, \ldots, n$，且 $\binom{n}{r} = \frac{n!}{r!(n-r)!}$。
+where $r = 0, 1, 2, \ldots, n$ and $\binom{n}{r} = \frac{n!}{r!(n-r)!}$.
 
-**定理：期望与方差**
+**Theorem: Expectation and Variance**
 
-对于 $X \sim B(n,p)$：
+For $X \sim B(n,p)$:
 
-- 期望值：$E(X) = np$
-- 方差：$\text{Var}(X) = np(1-p)$
+- Expected value: $E(X) = np$
+- Variance: $\text{Var}(X) = np(1-p)$
 
-### 二项公式的诞生
+### The Emergence of the Binomial Formula
 
-**模式识别：** 在我们的开篇问题中，安托万获胜等价于他在接下来的 2 局可能比赛中**至少赢 1 局**。
+**Pattern Recognition:** In our opening problem, Antoine winning is equivalent to him winning **at least 1 round** out of the next 2 possible rounds.
 
-如果我们设 $X$ = 安托万在接下来的 2 局中赢的局数，则 $X \sim B(2, 0.5)$。
+If we let $X$ = number of rounds Antoine wins in the next 2 rounds, then $X \sim B(2, 0.5)$.
 
-使用二项概率公式：
+Using the binomial probability formula:
 
 $$
 \begin{aligned}
@@ -188,25 +189,25 @@ P(X \geq 1) &= 0.5 + 0.25 = 0.75 \quad \checkmark
 \end{aligned}
 $$
 
-这与我们穷举计算的结果完全一致，自然地引出了二项分布！
+This matches our exhaustive calculation and naturally leads us to the binomial distribution!
 
-## 引导练习：建立理解
+## Guided Practice: Building Understanding
 
-<Aside type="note" title="练习 1：识别二项分布">
+<Aside type="note" title="Exercise 1: Identifying Binomial Distributions">
 
-对于以下每种情境，判断是否服从二项分布。如果是，指出 $n$ 和 $p$。如果不是，说明违反了哪个 BINS 条件。
+For each scenario, determine whether it follows a binomial distribution. If yes, identify $n$ and $p$. If no, explain which BINS condition is violated.
 
-1. 从一副标准扑克牌中不放回地抽取 5 张，其中 A 的数量
-2. 掷公平骰子 20 次，出现 6 点的次数
-3. 已知平均到达率为每小时 10 位顾客，一小时内到达商店的顾客数量
+1. The number of aces in a hand of 5 cards drawn from a standard deck without replacement
+2. The number of 6s in 20 rolls of a fair die
+3. The number of customers arriving at a store in one hour, given that the average arrival rate is 10 customers per hour
 
-**解答：** *(留给学生作答)*
+**Solutions:** *(space for student work)*
 
 </Aside>
 
-### 二项累积分布表（节选）
+### Binomial Cumulative Distribution Table (Extract)
 
-**表中数值为 $P(X \leq x)$，其中 $X$ 服从参数为 $n$ 和 $p$ 的二项分布。**
+**The tabulated value is $P(X \leq x)$, where $X$ has a binomial distribution with index $n$ and parameter $p$.**
 
 | **p =** | **0.05** | **0.10** | **0.15** | **0.20** | **0.25** | **0.30** | **0.35** | **0.40** | **0.45** | **0.50** |
 |---------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
@@ -219,22 +220,22 @@ $$
 | **x=6** | 1.0000 | 1.0000 | 1.0000 | 0.9999 | 0.9996 | 0.9987 | 0.9964 | 0.9915 | 0.9819 | 0.9648 |
 | **x=7** | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9999 | 0.9998 | 0.9993 | 0.9983 | 0.9961 |
 
-<Aside type="note" title="练习 2：掌握二项累积分布表">
+<Aside type="note" title="Exercise 2: Mastering the Binomial Cumulative Distribution Table">
 
-二项累积分布表给出 $P(X \leq x)$ 的值，其中 $X \sim B(n,p)$。我们来练习如何有效使用它。
+The binomial cumulative distribution table gives values of $P(X \leq x)$ where $X \sim B(n,p)$. Let's practice using it effectively.
 
-**情境：** 一名质检员测试 8 个元件，每个元件有 0.15 的概率为次品。设 $X$ 为发现的次品数。
+**Scenario:** A quality control inspector tests 8 components, where each component has a 0.15 probability of being defective. Let $X$ be the number of defective components found.
 
-1. $P(X \leq 2)$ 是多少？（直接从表中读取）
-2. 求 $P(X > 2)$。**提示：** 使用 $P(X > 2) = 1 - P(X \leq 2)$
-3. 求 $P(X \geq 3)$。它与 $P(X > 2)$ 有什么关系？
-4. 求 $P(X = 2)$。**提示：** $P(X = 2) = P(X \leq 2) - P(X \leq 1)$
-5. 求 $P(1 \leq X \leq 3)$。**策略：** $P(1 \leq X \leq 3) = P(X \leq 3) - P(X \leq 0)$
-6. 求 $P(2 < X < 5)$。注意不等号！
+1. What is $P(X \leq 2)$? *(Read directly from the table)*
+2. Find $P(X > 2)$. **Hint:** Use $P(X > 2) = 1 - P(X \leq 2)$
+3. Find $P(X \geq 3)$. How is this related to $P(X > 2)$?
+4. Find $P(X = 2)$. **Hint:** $P(X = 2) = P(X \leq 2) - P(X \leq 1)$
+5. Find $P(1 \leq X \leq 3)$. **Strategy:** $P(1 \leq X \leq 3) = P(X \leq 3) - P(X \leq 0)$
+6. Find $P(2 < X < 5)$. Be careful with the inequalities!
 
-**解答：** *(留给学生作答)*
+**Solutions:** *(space for student work)*
 
-**关键公式：**
+**Key Formulas:**
 
 - $P(X = r) = P(X \leq r) - P(X \leq r-1)$
 - $P(X > r) = 1 - P(X \leq r)$
@@ -243,175 +244,175 @@ $$
 
 </Aside>
 
-<Aside type="note" title="练习 3：回到骑士问题">
+<Aside type="note" title="Exercise 3: Back to the Knights">
 
-假设中断比赛的比分不同。计算以下各种情境下的公平分配方案：
+Suppose the interrupted game had different scores. Calculate the fair distribution for each scenario:
 
-1. 比分：2-0（安托万领先），先赢 3 局者胜
-2. 比分：2-1（安托万领先），先赢 4 局者胜
+1. Score: 2-0 (Antoine leads), first to 3 wins
+2. Score: 2-1 (Antoine leads), first to 4 wins
 
-**解答：** *(留给学生作答)*
+**Solutions:** *(space for student work)*
 
 </Aside>
 
-## 应用
+## Applications
 
-**例题：CATL 电池生产**
+**Example: CATL Battery Production**
 
-**背景：** 宁德时代（CATL）为电动汽车生产锂离子电池。根据历史数据，其生产流程的成功率为 95%，即每个电池独立地有 95% 的概率达到质量标准。
+**Background:** CATL produces lithium-ion batteries for electric vehicles. Based on historical data, their production process has a 95% success rate, meaning each battery independently has a 95% probability of meeting quality standards.
 
-**情境：** 一批 50 个电池刚刚生产完成。
+**Scenario:** A batch of 50 batteries has just been produced.
 
-**A 部分：基本概率问题**
+**Part A: Basic Probability Questions**
 
-1. 恰好有 48 个合格电池的概率是多少？
-2. 这批电池中次品的期望数量是多少？
-3. 次品数量的标准差是多少？
+1. What's the probability of exactly 48 working batteries?
+2. What's the expected number of defective batteries in this batch?
+3. What's the standard deviation of the number of defective batteries?
 
-**B 部分：质量控制决策**
+**Part B: Quality Control Decisions**
 
-1. 公司的政策是：如果一批产品中含有 4 个或更多次品元件，则拒绝该批次。这批被拒绝的概率是多少？
-2. 如果该批次被接受，其中最多含有 1 个次品的概率是多少？
+1. The company's policy is to reject a batch if it contains 4 or more defective components. What's the probability that this batch will be rejected?
+2. If the batch is accepted, what's the probability that it contains at most 1 defective component?
 
-**C 部分：成本分析**
+**Part C: Cost Analysis**
 
-1. 每个次品元件的保修更换成本为 \$20。这批的期望保修成本是多少？
-2. 如果公司希望有 90% 的把握保证这批的保修成本不超过 \$100，当前的质量水平是否足够？
+1. Each defective component costs \$20 to replace under warranty. What's the expected warranty cost for this batch?
+2. If the company wants to be 90% confident that warranty costs won't exceed \$100 for this batch, is the current quality level sufficient?
 
-## 历年真题
+## Past Paper Questions
 
-**例题（June 05 Q1）：**
+**Example (June 05 Q1):**
 
-据估计，$4\%$ 的人有绿眼睛。在一个大小为 $n$ 的随机样本中，绿眼睛人数的期望值为 $5$。
+It is estimated that $4\%$ of people have green eyes. In a random sample of size $n$, the expected number of people with green eyes is $5$.
 
-1. 计算 $n$ 的值。
+1. Calculate the value of $n$.
 
-第二个随机样本中绿眼睛人数的期望值为 3。
+The expected number of people with green eyes in a second random sample is 3.
 
-1. 求第二个样本中绿眼睛人数的标准差。
+1. Find the standard deviation of the number of people with green eyes in this second sample.
 
-**例题（WST02/01/Jan17/1）：**
+**Example (WST02/01/Jan17/1):**
 
-随机变量 $X$ 服从二项分布 $B(20, 0.45)$。
+The random variable $X$ has the binomial distribution $B(20, 0.45)$.
 
-1. 求 $P(X= 8)$。
-2. 求 $X$ 落在其均值一个标准差范围内的概率。
+1. Find $P(X= 8)$.
+2. Find the probability that $X$ lies within one standard deviation of its mean.
 
-**例题：基孔肯雅热检测**
+**Example: Chikungunya Fever Testing**
 
-广东碧桂园学校 AL 高中决定对全校 1000 名学生进行基孔肯雅热检测。检测时，基孔肯雅热的患病率为 0.5%（即 0.005）。
+The AL High school of Guangdong Country Garden School decides to implement a Chikungunya fever testing for all 1000 students. At the time of testing, the prevalence of Chikungunya fever is 0.5% (i.e., 0.005).
 
-**检测特性：**
+**Test Characteristics:**
 
-- **灵敏度：** 95% — 如果学生患有基孔肯雅热，检测有 95% 的概率正确识别
-- **特异性：** 98% — 如果学生没有患病，检测有 98% 的概率正确判定为阴性
+- **Sensitivity:** 95% — If a student has Chikungunya fever, the test correctly identifies them 95% of the time
+- **Specificity:** 98% — If a student doesn't have Chikungunya fever, the test correctly identifies them as negative 98% of the time
 
-1. 设 $X$ 为实际患病学生人数。$X$ 服从什么分布？计算期望患病人数。
+1. Let $X$ be the number of students who actually have Chikungunya fever. What distribution does $X$ follow? Calculate the expected number of infected students.
 
-已知实际患病人数为 6：
+Given that the number of infected students is 6:
 
-1. 在患病学生中，设 $Y$ 为检测呈阳性的人数（真阳性）。$Y$ 服从什么分布？计算 $P(Y \geq 5)$。
-2. 在未患病学生中，设 $Z$ 为检测呈阳性的人数（假阳性）。$Z$ 服从什么分布？计算期望假阳性人数。
-3. **悖论：** 如果随机选一名学生检测结果为阳性，其实际患病的概率是多少？利用之前的结果解释为什么会出现这种看似令人惊讶的结果。
-4. 学校决定对所有阳性病例进行第二次独立检测（相同灵敏度和特异性）。如果一名学生两次检测均为阳性，其实际患病的概率是多少？
+1. Among the infected students, let $Y$ be the number who test positive (true positives). What distribution does $Y$ follow? Calculate $P(Y \geq 5)$.
+2. Among the non-infected students, let $Z$ be the number who test positive (false positives). What distribution does $Z$ follow? Calculate the expected number of false positives.
+3. **The Paradox:** If a randomly selected student tests positive, what is the probability they actually have Chikungunya fever? Use your previous results to explain why such seemingly surprising results can occur.
+4. The school decides to retest all positive cases with a second, independent test (same sensitivity and specificity). If a student tests positive on both tests, what is the probability they actually have Chikungunya fever?
 
-## 挑战任务：概率生成函数
+## Challenge Tasks: Probability Generating Function
 
-正如帕斯卡和费马使用穷举法，伯努利为我们提供了强大的公式，现在我们追求最优雅、最统一的表达：**概率生成函数（PGF）**。这个非凡的工具可以从一个函数中"生成"所有概率、期望和方差，正如高斯发现二项展开时所做的那样。
+Just as Pascal and Fermat used exhaustive enumeration, and Bernoulli provided us with a powerful formula, we now seek the most elegant and unified expression: the **Probability Generating Function (PGF)**. This remarkable tool can 'generate' all probabilities, expectations, and variances from a single function, like Gauss discovered with the binomial expansion.
 
-<Aside type="note" title="PGF 简介">
+<Aside type="note" title="Introduction to PGFs">
 
-**动机：** 想象一下，如果有一个函数包含了概率分布的全部信息——每个概率、均值、方差等等。这正是概率生成函数所提供的！
+**Motivation:** Imagine having one function that contains all the information about a probability distribution — every probability, the mean, the variance, and more. That's exactly what a Probability Generating Function provides!
 
-对于取值为 $0, 1, 2, \ldots$ 的离散随机变量 $X$，其 PGF 定义为：
+For any discrete random variable $X$ taking values $0, 1, 2, \ldots$, its PGF is defined as:
 
 $$G_X(t) = E(t^X) = \sum_{k=0}^{\infty} t^k P(X = k)$$
 
-这看起来很抽象，但通过下面的挑战，它的力量将变得清晰。
+This might seem abstract, but the power becomes clear through our challenges below.
 
 </Aside>
 
-<Aside type="note" title="挑战 1：推导 PGF">
+<Aside type="note" title="Challenge 1: Derive the PGF">
 
-对于 $X \sim B(n, p)$，证明 $G_X(t) = (q + pt)^n$，其中 $q = 1-p$。
+For $X \sim B(n, p)$, prove that $G_X(t) = (q + pt)^n$ where $q = 1-p$.
 
-**方法：** 从定义出发 $G_X(t) = E(t^X) = \sum_{r=0}^n t^r P(X = r)$
+**Method:** Start from the definition $G_X(t) = E(t^X) = \sum_{r=0}^n t^r P(X = r)$
 
-**完成步骤：**
+**Steps to complete:**
 
-1. 代入二项概率公式：$P(X = r) = \binom{n}{r}p^r(1-p)^{n-r}$
-2. 识别其为 $(q + pt)^n$ 的二项展开
-3. 使用二项定理：$(a + b)^n = \sum_{r=0}^n \binom{n}{r}a^{n-r}b^r$
+1. Substitute the binomial probability formula: $P(X = r) = \binom{n}{r}p^r(1-p)^{n-r}$
+2. Recognize this as the binomial expansion of $(q + pt)^n$
+3. Use the binomial theorem: $(a + b)^n = \sum_{r=0}^n \binom{n}{r}a^{n-r}b^r$
 
-**你的推导：** *(留给学生作答)*
-
-</Aside>
-
-<Aside type="note" title="挑战 2：发现矩公式">
-
-PGF $G_X(t) = E(t^X) = \sum_{k=0}^{\infty} t^k P(X = k)$ 包含了我们分布的全部信息。你的任务：发现如何提取期望和方差！
-
-**A 部分：求期望**
-
-1. **任务 1：** 对 $G_X(t)$ 关于 $t$ 求导。你得到了什么？
-2. **任务 2：** 在 $t = 1$ 处求值。
-3. **任务 3：** 观察你得到的求和式。$\sum_{k=0}^{\infty} k P(X = k)$ 代表什么统计量？
-4. **结论：** 完成公式：$E(X) = G'_X( ? )$
-
-**B 部分：求方差**
-
-回忆 $\text{Var}(X) = E(X^2) - [E(X)]^2$。我们需要找到 $E(X^2)$。
-
-1. **任务 4：** 求二阶导数 $G''_X(t)$ 并在 $t = 1$ 处求值。
-2. **任务 5：** 你应该得到 $G''_X(1) = \sum_{k=0}^{\infty} k(k-1) P(X = k)$。展开 $k(k-1)$ 并将这个求和式用 $E(X^2)$ 和 $E(X)$ 表示。
-3. **任务 6：** 利用你的结果，用 $G'_X(1)$ 和 $G''_X(1)$ 表示 $E(X^2)$。
-4. **最终任务：** 使用 $\text{Var}(X) = E(X^2) - [E(X)]^2$ 推导方差公式。
+**Your work:** *(space for student work)*
 
 </Aside>
 
-<Aside type="note" title="挑战 3：应用矩公式">
+<Aside type="note" title="Challenge 2: Discovering the Moment Formulas">
 
-从 PGF 中提取矩的**神奇公式**是：
+The PGF $G_X(t) = E(t^X) = \sum_{k=0}^{\infty} t^k P(X = k)$ contains all the information about our distribution. Your mission: discover how to extract the expectation and variance!
 
-- $E(X) = G'_X(1)$（在 $t = 1$ 处的一阶导数）
+**Part A: Finding the Expectation**
+
+1. **Task 1:** Differentiate $G_X(t)$ with respect to $t$. What do you get?
+2. **Task 2:** Evaluate your result at $t = 1$.
+3. **Task 3:** Look at the sum you obtained. What statistical quantity does $\sum_{k=0}^{\infty} k P(X = k)$ represent?
+4. **Conclusion:** Complete this formula: $E(X) = G'_X( ? )$
+
+**Part B: Finding the Variance**
+
+Recall that $\text{Var}(X) = E(X^2) - [E(X)]^2$. We need to find $E(X^2)$.
+
+1. **Task 4:** Take the second derivative $G''_X(t)$ and evaluate at $t = 1$.
+2. **Task 5:** You should get $G''_X(1) = \sum_{k=0}^{\infty} k(k-1) P(X = k)$. Expand $k(k-1)$ and rewrite this sum in terms of $E(X^2)$ and $E(X)$.
+3. **Task 6:** Use your results to express $E(X^2)$ in terms of $G'_X(1)$ and $G''_X(1)$.
+4. **Final Task:** Derive the variance formula using $\text{Var}(X) = E(X^2) - [E(X)]^2$.
+
+</Aside>
+
+<Aside type="note" title="Challenge 3: Applying the Moment Formulas">
+
+The **magical formulas** for extracting moments from PGFs are:
+
+- $E(X) = G'_X(1)$ (first derivative at $t = 1$)
 - $\text{Var}(X) = G''_X(1) + G'_X(1) - [G'_X(1)]^2$
 
-使用 $G_X(t) = (q + pt)^n$：
+Using $G_X(t) = (q + pt)^n$:
 
-1. 计算 $G'_X(t)$ 并在 $t = 1$ 处求值得到 $E(X)$
-2. 计算 $G''_X(t)$ 并使用方差公式得到 $\text{Var}(X)$
-3. 验证你的结果与 $E(X) = np$ 和 $\text{Var}(X) = npq$ 一致
+1. Calculate $G'_X(t)$ and evaluate at $t = 1$ to find $E(X)$
+2. Calculate $G''_X(t)$ and use the variance formula to find $\text{Var}(X)$
+3. Verify your results match $E(X) = np$ and $\text{Var}(X) = npq$
 
-**你的计算：** *(留给学生作答)*
+**Your calculations:** *(space for student work)*
 
 </Aside>
 
-<Aside type="note" title="挑战 4：终极应用">
+<Aside type="note" title="Challenge 4: The Ultimate Application">
 
-**关键性质：** 如果 $X$ 和 $Y$ 是独立的随机变量，则：
+**Key Property:** If $X$ and $Y$ are independent random variables, then:
 
 $$G_{X+Y}(t) = G_X(t) \cdot G_Y(t)$$
 
-**应用：** 设 $X \sim B(n_1, p)$ 和 $Y \sim B(n_2, p)$ 独立。求 $Z = X + Y$ 的分布。
+**Application:** Let $X \sim B(n_1, p)$ and $Y \sim B(n_2, p)$ be independent. Find the distribution of $Z = X + Y$.
 
-1. 写出 $G_X(t)$ 和 $G_Y(t)$
-2. 计算 $G_Z(t) = G_X(t) \cdot G_Y(t)$
-3. 从 $G_Z(t)$ 的形式，$Z$ 服从什么分布？
+1. Write down $G_X(t)$ and $G_Y(t)$
+2. Calculate $G_Z(t) = G_X(t) \cdot G_Y(t)$
+3. From the form of $G_Z(t)$, what distribution does $Z$ follow?
 
-**你的解答：** *(留给学生作答)*
+**Your solution:** *(space for student work)*
 
-**现实应用：** 这个结果意味着，如果我们有多个具有相同成功概率的独立二项过程，它们的和也是二项分布。这对于建模以下场景至关重要：
+**Real-world application:** This result means that if we have multiple independent binomial processes with the same success probability, their sum is also binomial. This is crucial for modeling scenarios like:
 
-- 合并不同团队的成功率
-- 聚合多个实验的结果
-- 将最初的骑士问题扩展到锦标赛
+- Combining success rates from different teams
+- Aggregating results from multiple experiments
+- Scaling up the original knights' problem to tournaments
 
 </Aside>
 
-<Aside type="note" title="最终挑战：锦标赛问题">
+<Aside type="note" title="Final Challenge: The Tournament Problem">
 
-考虑一场锦标赛，三位实力相当的选手参赛。先赢 5 局者获胜。如果当前比分是 4-3-2 时比赛中断，奖金应如何分配？
+Consider a tournament where three equally skilled players compete. The first to win 5 games wins the tournament. If the scores are currently 4-3-2 when interrupted, how should the prize be distributed?
 
-**解答：** *(留给学生作答)*
+**Solution:** *(space for student work)*
 
 </Aside>
