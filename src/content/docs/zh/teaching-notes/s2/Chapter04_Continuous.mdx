@@ -68,8 +68,8 @@ $$P(a < X < b) = f(x) \text{ 在 } a \text{ 与 } b \text{ 之间的曲线下面
 考虑一个随机变量 $X$，其概率密度函数为：
 
 $$f(x) = \begin{cases}
-\frac{2x}{9} & \text{若 } 0 \leq x \leq 3 \\
-0 & \text{其他}
+\frac{2x}{9} & \text{if } 0 \leq x \leq 3 \\
+0 & \text{otherwise}
 \end{cases}$$
 
 ---
@@ -150,7 +150,7 @@ $$F(x) = \begin{cases}
 
 因此：
 
-$$\boxed{f(x) = \begin{cases} \frac{3x^2}{8} & 0 \leq x \leq 2 \\ 0 & \text{其他} \end{cases}}$$
+$$\boxed{f(x) = \begin{cases} \frac{3x^2}{8} & 0 \leq x \leq 2 \\ 0 & \text{otherwise} \end{cases}}$$
 
 **（b）部分：验证这是一个有效的PDF**
 
@@ -249,7 +249,7 @@ $$E[g(X)] = \int_{-\infty}^{\infty} g(x) f(x) \, dx$$
 
 $$f(x) = \begin{cases}
 6x(1-x) & 0 \leq x \leq 1 \\
-0 & \text{其他}
+0 & \text{otherwise}
 \end{cases}$$
 
 ---
@@ -311,7 +311,9 @@ $$P(X \leq q_p) = F(q_p) = \frac{p}{100}$$
 
 连续分布的众数是使 PDF $f(x)$ 取最大值的 $x$ 值。可以通过求解以下条件找到：
 
-$$\frac{d}{dx} f(x) = 0 \text{ 且 } \frac{d^2}{dx^2} f(x) < 0$$
+$$\frac{d}{dx} f(x) = 0, \quad \frac{d^2}{dx^2} f(x) < 0$$
+
+且
 
 众数代表分布中最"密集"的点——概率最集中的地方。
 
@@ -387,7 +389,7 @@ $$F(x) = \begin{cases}
 $$f(x) = \begin{cases}
 k(x^2 + a) & -1 < x \leq 2 \\
 3k & 2 < x \leq 3 \\
-0 & \text{其他}
+0 & \text{otherwise}
 \end{cases}$$
 
 其中 $k$ 和 $a$ 是常数。
@@ -425,7 +427,9 @@ $$F(x) = \begin{cases}
 
 当满足这些条件时，固定时间区间内发生的事件数 $X$ 服从泊松分布：
 
-$$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} \quad \text{其中 } k = 0, 1, 2, 3, \ldots$$
+$$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad k = 0, 1, 2, 3, \ldots$$
+
+其中：
 
 其中：
 - $\lambda$ 是每个时间区间内事件的平均发生次数
@@ -468,7 +472,7 @@ $$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} \quad \text{其中 } k = 0, 1, 2,
 
 对 $t \geq 0$，
 
-$$F_T(t) = P(T \leq t) = 1 - P(N(t) = 0) = \underline{\hspace{8cm}}$$
+$$F_T(t) = P(T \leq t) = 1 - P(N(t) = 0) = \_\_\_$$
 
 **第二步：求概率密度函数**
 
@@ -476,13 +480,13 @@ $$F_T(t) = P(T \leq t) = 1 - P(N(t) = 0) = \underline{\hspace{8cm}}$$
 
 **轮到你了：** 对第一步中求得的 CDF 求导得到 PDF。
 
-$$f_T(t) = \frac{d}{dt} F_T(t) = \underline{\hspace{8cm}} \quad \text{其中 } t \geq 0$$
+$$f_T(t) = \frac{d}{dt} F_T(t) = \_\_\_ \quad t \geq 0$$
 
 **第三步：计算期望值**
 
 **轮到你了：** 用第二步中求得的 PDF 计算 $E(T)$。
 
-$$E(T) = \int_0^{\infty} t \cdot f_T(t) \, dt = \underline{\hspace{8cm}}$$
+$$E(T) = \int_0^{\infty} t \cdot f_T(t) \, dt = \_\_\_$$
 
 **提示：** 使用分部积分法。
 
