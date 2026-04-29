@@ -103,13 +103,15 @@ $$\frac{1}{\sqrt{a} + \sqrt{b}} = \frac{\sqrt{a} - \sqrt{b}}{a - b}$$
 
 **常用展开式**（熟记）：
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 (a + b)^2 &= a^2 + 2ab + b^2 \\
 (a + b)^3 &= a^3 + 3a^2b + 3ab^2 + b^3 \\
 (a - b)^3 &= a^3 - 3a^2b + 3ab^2 - b^3 \\
 (a + b)^4 &= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4 \\
 (a + b)^5 &= a^5 + 5a^4b + 10a^3b^2 + 10a^2b^3 + 5ab^4 + b^5
-\end{aligned}$$
+\end{aligned}
+$$
 
 ### 1.3.2 因式分解方法
 
