@@ -33,7 +33,7 @@ export default defineConfig({
 				{
 					label: 'Teaching Notes',
 					translations: { zh: '教学笔记' },
-					autogenerate: { directory: 'notes' },
+					link: '/notes',
 				},
 			],
 			customCss: ['./src/styles/custom.css'],
