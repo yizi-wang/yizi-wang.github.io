@@ -29,13 +29,43 @@ Converts LaTeX teaching materials into bilingual MDX for the Astro + Starlight w
 Starlight i18n requires separate files. Even if input TeX is mixed, output must be split into EN + ZH.
 Chinese version is AI-translated (natural translation, not word-for-word).
 
-### 2. File Extension: `.md` vs `.mdx`
+### 2. File Extension: ALWAYS use `.md`
 
-- **Use `.mdx`** when the file contains `<Aside>` components (requires JSX import)
-- **Use `.md`** when the file has NO `<Aside>` components (pure markdown)
-- When in doubt, use `.mdx` — it supports both markdown and JSX
+**ALWAYS use `.md`** (not `.mdx`). The MDX JSX parser runs before remark-math and treats LaTeX `{}` (like `\text{}`, `\frac{}`) as JSX expressions, causing build failures.
 
-### 3. Frontmatter (CRITICAL — frequent failure point)
+`.md` files skip JSX parsing entirely, so remark-math can handle LaTeX normally.
+
+### 3. Aside Components: Use `:::` Syntax (NOT `<Aside>`)
+
+Since we use `.md` files, we cannot use JSX components. Use Starlight's native `:::` directive syntax:
+
+```
+:::note[Title]
+Content here with **bold** and $math$.
+:::
+
+:::tip[Key Insight]
+Content here.
+:::
+
+:::caution[Warning]
+Content here.
+:::
+
+:::danger[Critical]
+Content here.
+:::
+```
+
+**Valid type values — ONLY 4:**
+- `note` — exercises, neutral information, definitions
+- `tip` — key insights, beautiful symmetry, helpful hints
+- `caution` — constraints, important warnings, central challenges
+- `danger` — common pitfalls, critical errors
+
+**❌ NEVER use `success`** — it does NOT exist in Starlight!
+**❌ NEVER use `<Aside>` components** — they require `.mdx` which breaks LaTeX!
+**❌ NEVER use `.mdx` extension** — JSX parser will break `\text{}`, `\frac{}`, etc.
 
 ```yaml
 ---
@@ -50,41 +80,7 @@ title: "Page Title Here"
 - Title must be quoted if it contains special characters (`:`, `-`, etc.)
 - After conversion scripts, **always verify the frontmatter is intact** — scripts often corrupt it
 
-### 4. Aside Components (CRITICAL — repeated failures)
-
-**Import statement (required for .mdx files):**
-```jsx
-import { Aside } from '@astrojs/starlight/components';
-```
-
-**Valid type values — ONLY 4:**
-- `note` — exercises, neutral information, definitions
-- `tip` — key insights, beautiful symmetry, helpful hints
-- `caution` — constraints, important warnings, central challenges
-- `danger` — common pitfalls, critical errors
-
-**❌ NEVER use `type="success"`** — it does NOT exist in Starlight!
-
-**tcolorbox → Aside mapping:**
-
-| TeX tcolorbox | Aside type |
-|---|---|
-| Exercise, problem, classification | `note` |
-| Key insight, beautiful symmetry, reframed question | `tip` |
-| Central challenge, constraint, memoryless property | `caution` |
-| Warning, common pitfall, critical error | `danger` |
-
-**Correct format:**
-```jsx
-<Aside type="caution" title="The Central Question">
-Content here with **bold** and $math$.
-</Aside>
-```
-
-**❌ Never use `:::` markdown syntax** — it does NOT render in `.md` files and is unreliable in `.mdx`.
-Always use `<Aside>` components with import.
-
-### 5. KaTeX Syntax (CRITICAL — known failures)
+### 4. Frontmatter (CRITICAL — frequent failure point)
 
 **Inline math:** `$...$`
 **Display math:** `$$...$$` on its own line
@@ -164,12 +160,9 @@ sharp(fs.readFileSync('public/images/diagram.svg')).png().toFile('/tmp/diagram.p
 
 Before declaring conversion complete, verify ALL of:
 
+- [ ] File extension: `.md` (NEVER `.mdx`)
 - [ ] Frontmatter: `---` open AND close present, no extra `---`
-- [ ] File extension: `.mdx` if has Aside, `.md` otherwise
-- [ ] Import: `import { Aside } from '@astrojs/starlight/components';` (if .mdx)
-- [ ] Aside types: only note/tip/caution/danger (NO success)
-- [ ] Aside tags: every `<Aside>` has matching `</Aside>`
-- [ ] No `:::` syntax anywhere
+- [ ] Aside syntax: `:::type[title]` (NEVER `<Aside>`, NEVER `success`)
 - [ ] No Chinese in `$$...$$` blocks
 - [ ] No `\underline{\hspace{}}` (use `___` instead)
 - [ ] No `\vspace{}`, `\clearpage`
@@ -185,7 +178,8 @@ Before declaring conversion complete, verify ALL of:
 | `\text{中文}` in math | KaTeX unicode error | Move Chinese outside `$$` |
 | `\underline{\hspace{3cm}}` | MDX acorn parse error | Replace with `___` |
 | `<Aside type="success">` | Component not found | Use `tip` instead |
-| `:::note` in `.md` | Renders as plain text | Use `<Aside>` in `.mdx` |
+| `<Aside>` in `.mdx` | JSX breaks LaTeX | Use `:::` in `.md` |
+| `.mdx` extension | JSX parser breaks `\text{}`, `\frac{}` | Use `.md` |
 | Missing frontmatter `---` | `title: Required` error | Add closing `---` |
 | Extra `---` after frontmatter | Build failure | Remove extra `---` |
 | EN/CN filename mismatch | Sidebar duplication | Rename to match |

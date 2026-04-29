@@ -37,24 +37,21 @@ done
 - Blank lines inside frontmatter → parsing error
 - Python scripts that process content often corrupt `---` delimiters
 
-### 2. Aside Component Validation (MDX files only)
+### 2. Aside Component Validation (Markdown files)
 
 ```bash
 # Check for invalid Aside types
-grep -rn 'type="success"' src/content/docs/ --include="*.mdx"
+grep -rn ':::success' src/content/docs/ --include="*.md"
 # Must return NOTHING — 'success' is not a valid Aside type
 
-# Check for ::: syntax (should use <Aside> instead)
-grep -rn '^:::' src/content/docs/ --include="*.mdx" --include="*.md"
-# Must return NOTHING
+# Check for <Aside> JSX components (should use ::: syntax instead)
+grep -rn '<Aside' src/content/docs/ --include="*.md"
+# Must return NOTHING — use ::: syntax in .md files
 
-# Check Aside tags are balanced
-for f in src/content/docs/teaching-notes/s2/*.mdx; do
-  open=$(grep -c '<Aside' "$f")
-  close=$(grep -c '</Aside>' "$f")
-  if [ "$open" != "$close" ]; then
-    echo "MISMATCH: $f (open: $open, close: $close)"
-  fi
+# Check ::: syntax is properly closed
+for f in src/content/docs/teaching-notes/**/*.md; do
+  open=$(grep -c '^:::' "$f" | head -1)
+  # Each :::type should have a matching ::: closer
 done
 ```
 
@@ -185,11 +182,11 @@ Tell user:
 |---|---|---|
 | Missing frontmatter `---` | `title: Required` | Add closing `---` |
 | Extra `---` in frontmatter | Build failure | Remove extra delimiters |
-| `<Aside type="success">` | Component not found | Change to `tip` |
-| `:::note` in `.md` | Renders as plain text | Use `<Aside>` in `.mdx` |
+| `:::success` | Invalid Aside type | Use `tip` instead |
+| `<Aside>` in `.md` | Not recognized | Use `:::` syntax |
+| `.mdx` extension | JSX breaks LaTeX | Use `.md` |
 | Chinese in `$$...$$` | KaTeX unicode error | Move Chinese outside |
-| `\underline{\hspace{}}` | MDX acorn parse error | Replace with `___` |
+| `\underline{\hspace{}}` | Parse error | Replace with `___` |
 | `$$\begin{aligned}` same line | KaTeX parse error | Separate lines |
 | EN/CN filename mismatch | Sidebar duplication | Rename to match |
 | SVG no white background | Dark mode text invisible | Add `<rect fill="white"/>` |
-| `{}` in display math | MDX JSX parse error | Escape or restructure |
