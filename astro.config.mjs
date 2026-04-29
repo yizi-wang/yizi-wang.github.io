@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import mdx from '@astrojs/mdx';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -46,6 +47,7 @@ export default defineConfig({
 				},
 			],
 		}),
+		mdx(),
 	],
 	markdown: {
 		remarkPlugins: [remarkMath],
