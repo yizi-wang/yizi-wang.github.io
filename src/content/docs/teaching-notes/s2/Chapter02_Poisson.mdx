@@ -1,0 +1,455 @@
+---
+title: "S2 Chapter 2: The Poisson Distribution"
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## Preface: From Battlefield Statistics to Modern Modeling
+
+Welcome, mathematical explorers! Today we embark on a fascinating journey through time, where we'll discover how the study of rare events — from deadly horse kicks in the Prussian army to cosmic phenomena — led to one of the most powerful tools in modern statistics: **The Poisson Distribution**.
+
+Our story begins with a French mathematician whose name became synonymous with rare events, and whose work continues to illuminate patterns in everything from traffic flow to radioactive decay.
+
+## 1. The Quest for Modeling Events in Continuous Time
+
+### Setting the Stage: The Baozi Shop Dilemma
+
+Imagine you're the proud owner of a breakfast shop in Guangdong Country Garden School. Through careful observation over many weeks, you've discovered that on average, you sell exactly **10 baozi during the morning hour** (7:00–8:00 AM).
+
+<Aside type="caution" title="The Business Challenge">
+**How many baozi should you prepare each morning to ensure that 80% of the time, customers don't walk away empty-handed?**
+
+**The Dilemma:** Too few baozi = disappointed customers. Too many = wasted food and lost profit.
+</Aside>
+
+### First Instinct: "This Sounds Like Binomial!"
+
+Your first thought might be: "I'll use the binomial distribution!" But then you pause and ask yourself:
+
+**What exactly are my 'trials'?**
+
+Let's think about dividing the hour into smaller time intervals:
+
+![Time Interval Division](/images/poisson-time-intervals.svg)
+
+**The Pattern:**
+- As we divide the hour into smaller intervals, $n$ increases
+- The probability $p$ of selling a baozi in each tiny interval decreases
+- But their product $np$ remains constant at 10 (our average sales rate)
+
+**The Mathematical Insight:** We're witnessing the transition from discrete binomial trials to a continuous process!
+
+<Aside type="note" title="The Central Challenge">
+**How do we model events (like baozi sales) that occur randomly in continuous time, where the number of potential "moments of sale" is essentially infinite?**
+</Aside>
+
+### Why This Matters for Your Business
+
+This isn't just a mathematical curiosity — it has real implications for your baozi shop:
+
+- **Customer arrivals are unpredictable:** You can't pinpoint exactly when each customer will arrive
+- **Sales happen continuously:** A customer could arrive at any moment during the hour
+- **Rate is consistent:** While individual sales are random, the average rate (10 per hour) is stable
+
+This is exactly the situation where the **Poisson distribution** becomes our perfect tool!
+
+### Historical Context: From Battlefield to Breakfast Shop
+
+Your baozi shop problem isn't unique — mathematicians have been tackling similar "rare event" challenges for centuries. Let's briefly explore how this powerful distribution was discovered:
+
+**Abraham de Moivre (1711):** First discovered the mathematical pattern, though it remained largely unnoticed.
+
+**Siméon Denis Poisson (1837):** Rediscovered and popularized the distribution in his work on legal statistics, modeling wrongful convictions.
+
+**Ladislaus Bortkiewicz (1898):** Applied it to model Prussian cavalry deaths from horse kicks — rare, unpredictable events occurring at a steady average rate, just like your baozi sales!
+
+<Aside type="tip" title="The Connection">
+Whether it's horse kick fatalities, wrongful convictions, or baozi sales, the mathematical pattern is identical:
+- Events occur randomly in time/space
+- Average rate is constant and known
+- Individual occurrences are unpredictable
+- We need to plan for uncertainty
+</Aside>
+
+## 2. The Mathematical Framework — Definition and Conditions
+
+### The Poisson Distribution Revealed
+
+**Definition (Poisson Distribution):** A discrete random variable $X$ follows a Poisson distribution with parameter $\lambda > 0$, denoted $X \sim \text{Po}(\lambda)$, if its probability mass function is:
+
+$$
+P(X = x) = \frac{e^{-\lambda}\lambda^x}{x!} \quad \text{for } x = 0, 1, 2, 3, \ldots
+$$
+
+Where:
+- $\lambda$ represents the average rate of occurrence
+- $e \approx 2.71828$ is Euler's constant
+- $x!$ is the factorial of $x$
+
+### The Conditions: When Poisson Applies
+
+The Poisson distribution is not universal — it requires three fundamental conditions that directly determine the model's accuracy:
+
+<Aside type="note" title="The Three Pillars of Poisson">
+
+**1. Independence:** Events occur independently of one another. The arrival of one car doesn't influence the arrival of another.
+
+<Aside type="tip" title="The Memoryless Property">
+**Key Insight:** Independence in Poisson processes leads to a fascinating property called **memorylessness**.
+
+**What this means:** If no baozi has been sold in the last 30 minutes, this *doesn't* increase the probability of selling one in the next 30 minutes. The process "forgets" its history.
+
+**Mathematical Statement:** For a Poisson process, the probability of an event occurring in the next time interval is independent of how long we've already been waiting.
+
+**Business Implication:** Even if you've had no customers for a while, don't expect a sudden rush — each moment is statistically independent!
+</Aside>
+
+**2. Singly:** In any infinitesimally small interval of time or space, at most one event can occur. The probability of two cars arriving at exactly the same microsecond is negligible.
+
+**3. Constant Rate:** The average rate $\lambda$ of occurrence remains constant over time. The rate doesn't change between morning and afternoon (if we're modeling a period with consistent conditions).
+
+</Aside>
+
+<Aside type="note" title="Classification Exercise: Poisson or Not?">
+Determine whether each scenario follows a Poisson distribution:
+
+1. Number of radioactive particles emitted by a certain source in one minute
+2. Number of rolls until a fair die hits six
+3. Number of lottery jackpot winners in Guangdong over one year
+4. Number of phone calls received at a call center during a specific hour
+5. Number of phone calls from one person to a call center during a specific hour
+</Aside>
+
+### Solving the Baozi Shop Problem
+
+Now let's return to our opening challenge and solve it using the Poisson distribution!
+
+<Aside type="note" title="Business Application: Optimal Inventory Planning">
+**Recall the Problem:** You sell an average of 10 baozi per hour. How many should you prepare to ensure 80% of the time customers don't walk away empty-handed?
+
+**Mathematical Translation:** Let $X$ = number of baozi sold per hour. We model $X \sim \text{Po}(10)$.
+
+We want to find the minimum number $k$ such that $P(X \leq k) = 0.80$.
+
+**Solution Strategy:** We need the 80th percentile of the Poisson distribution Po(10).
+</Aside>
+
+<Aside type="note" title="Step-by-Step Solution">
+Using Poisson tables for $\lambda = 10$, we find cumulative probabilities:
+
+| $k$ | $P(X \leq k)$ | Interpretation |
+|-----|---------------|----------------|
+| 10 | 0.583 | Only 58.3% service level |
+| 11 | 0.697 | Only 69.7% service level |
+| 12 | 0.792 | Only 79.2% service level |
+| 13 | 0.864 | **86.4% service level** |
+
+**Business Decision:** Prepare **13 baozi** each morning.
+
+**Business Impact:**
+- 86.4% of days: All customers satisfied (exceeds 80% target)
+- 13.6% of days: Some customers disappointed (but this is acceptable)
+- Expected daily waste: $13 - 10 = 3$ baozi on average
+</Aside>
+
+### Fundamental Properties
+
+**Theorem (Expectation and Variance of Poisson):** For $X \sim \text{Po}(\lambda)$:
+- Expected value: $E(X) = \lambda$
+- Variance: $\text{Var}(X) = \lambda$
+- Standard deviation: $\sigma = \sqrt{\lambda}$
+
+<Aside type="tip" title="The Beautiful Symmetry">
+**Key Insight:** In a Poisson distribution, the mean equals the variance!
+
+**Practical Application:** If you have a dataset where the sample mean approximately equals the sample variance, this suggests the data might follow a Poisson distribution.
+
+**Example:** If the average number of emails received per hour is 12, then $\lambda = 12$, and the variance is also 12.
+</Aside>
+
+### The Additivity Property: A Powerful Tool
+
+**Theorem (Additivity of Independent Poisson Variables):** If $X \sim \text{Po}(\lambda)$ and $Y \sim \text{Po}(\mu)$ are independent, then:
+
+$$
+Z = X + Y \sim \text{Po}(\lambda + \mu)
+$$
+
+**Example (Real-World Additivity):**
+
+**Scenario:** A website receives an average of 15 visitors per hour from search engines ($X \sim \text{Po}(15)$) and 8 visitors per hour from social media ($Y \sim \text{Po}(8)$).
+
+**Total Traffic:** The total number of visitors per hour follows $Z = X + Y \sim \text{Po}(23)$.
+
+**Interpretation:** Combining independent Poisson processes creates another Poisson process with the sum of their rates.
+
+**Remark:** The proof of properties above will be given in the **Challenge Exercise** where we will derive the **probability generating function** of the Poisson distribution and prove various properties of the Poisson distribution.
+
+## 3. Guided Practice: Mastering Poisson Calculations
+
+### Poisson Cumulative Distribution Table
+
+**The tabulated value is $P(X \leq x)$, where $X$ has a Poisson distribution with parameter $\lambda$.**
+
+| | | **0.5** | **1.0** | **1.5** | **2.0** | **2.5** | **3.0** | **3.5** | **4.0** | **4.5** | **5.0** |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| $x =$ | **0** | 0.6065 | 0.3679 | 0.2231 | 0.1353 | 0.0821 | 0.0498 | 0.0302 | 0.0183 | 0.0111 | 0.0067 |
+| | **1** | 0.9098 | 0.7358 | 0.5578 | 0.4060 | 0.2873 | 0.1991 | 0.1359 | 0.0916 | 0.0611 | 0.0404 |
+| | **2** | 0.9856 | 0.9197 | 0.8088 | 0.6767 | 0.5438 | 0.4232 | 0.3208 | 0.2381 | 0.1736 | 0.1247 |
+| | **3** | 0.9982 | 0.9810 | 0.9344 | 0.8571 | 0.7576 | 0.6472 | 0.5366 | 0.4335 | 0.3423 | 0.2650 |
+| | **4** | 0.9998 | 0.9963 | 0.9814 | 0.9473 | 0.8912 | 0.8153 | 0.7254 | 0.6288 | 0.5321 | 0.4405 |
+| | **5** | 1.0000 | 0.9994 | 0.9955 | 0.9834 | 0.9580 | 0.9161 | 0.8576 | 0.7851 | 0.7029 | 0.6160 |
+| | **6** | 1.0000 | 0.9999 | 0.9991 | 0.9955 | 0.9858 | 0.9665 | 0.9347 | 0.8893 | 0.8311 | 0.7622 |
+| | **7** | 1.0000 | 1.0000 | 0.9998 | 0.9989 | 0.9958 | 0.9881 | 0.9733 | 0.9489 | 0.9134 | 0.8666 |
+| | **8** | 1.0000 | 1.0000 | 1.0000 | 0.9998 | 0.9989 | 0.9962 | 0.9901 | 0.9786 | 0.9597 | 0.9319 |
+| | **9** | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9997 | 0.9989 | 0.9967 | 0.9919 | 0.9829 | 0.9682 |
+| | **10** | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9999 | 0.9997 | 0.9990 | 0.9972 | 0.9933 | 0.9863 |
+
+<Aside type="note" title="Exercise 1: Using Poisson Tables">
+A call center receives calls at an average rate of 3 per hour. Let $X$ be the number of calls in one hour.
+
+**Given:** $X \sim \text{Po}(3)$
+
+Use the Poisson distribution table to find:
+1. $P(X = 2)$
+2. $P(X \leq 4)$
+3. $P(X > 5)$
+4. $P(2 \leq X \leq 5)$
+5. The probability of receiving exactly the expected number of calls
+
+**Key Formulas:**
+- $P(X = r)$ = table value at $P(X \leq r) -$ table value at $P(X \leq r-1)$
+- $P(X > r) = 1 - P(X \leq r)$
+- $P(a \leq X \leq b) = P(X \leq b) - P(X \leq a-1)$
+</Aside>
+
+## 4. Real-World Applications
+
+**Example (Cybersecurity):**
+
+**Background:** A cybersecurity team monitors attempted intrusions on their network. Historical data shows that intrusion attempts occur at an average rate of 2.5 per day, and these attempts appear to be independent and random.
+
+**Modeling Decision:** Let $X$ = number of intrusion attempts per day. We model $X \sim \text{Po}(2.5)$.
+
+1. What's the probability of no intrusion attempts on a given day?
+2. What's the probability of more than $5$ attempts in one day?
+3. What's the expected number of intrusion attempts in a week?
+4. The security team can handle up to 5 attempts per day effectively. Calculate the probability that in a week of 7 days, the intrusion attempts are handled effectively everyday.
+5. If they want to be adequately prepared 95% of the time, what should be their daily capacity?
+
+**Example (Quality Control in Manufacturing):**
+
+**Context:** A textile manufacturer produces large rolls of fabric. Quality control data shows that defects appear randomly at an average rate of 0.3 defects per square meter.
+
+**Question Series:**
+1. In a 5 square meter section, what's the probability of finding exactly 2 defects?
+2. What's the probability that a 10 square meter section has no defects?
+3. If defects cost \$15 each to repair, what's the expected repair cost for a 20 square meter section?
+4. Two independent fabric sections of 3 square meters each are inspected. What's the distribution of the total number of defects?
+
+## Homework Exercises
+
+**Example (June 07 Q3):**
+An engineering company manufactures an electronic component. At the end of the manufacturing process, each component is checked to see if it is faulty. Faulty components are detected at a rate of 1.5 per hour.
+
+1. Suggest a suitable model for the number of faulty components detected per hour. (1)
+2. Describe, in the context of this question, two assumptions you have made in part (a) for this model to be suitable. (2)
+3. Find the probability of 2 faulty components being detected in a 1 hour period. (2)
+4. Find the probability of at least one faulty component being detected in a 3 hour period. (3)
+
+**Example (Jan 10 Q3):**
+A robot is programmed to build cars on a production line. The robot breaks down at random at a rate of once every 20 hours.
+
+1. Find the probability that it will work continuously for 5 hours without a breakdown. (3)
+
+Find the probability that, in an 8 hour period,
+2. the robot will break down at least once, (3)
+3. there are exactly 2 breakdowns. (2)
+
+In a particular 8 hour period, the robot broke down twice.
+4. Write down the probability that the robot will break down in the following 8 hour period. Give a reason for your answer. (2)
+
+**Example (Jan 09 Q1):**
+A botanist is studying the distribution of daisies in a field. The field is divided into a number of equal sized squares. The mean number of daisies per square is assumed to be 3. The daisies are distributed randomly throughout the field.
+
+Find the probability that, in a randomly chosen square there will be
+1. more than 2 daisies, (3)
+2. either 5 or 6 daisies. (2)
+
+The botanist decides to count the number of daisies, $x$, in each of 80 randomly selected squares within the field. The results are summarised below
+
+$$
+\sum x = 295 \qquad \sum x^2 = 1386
+$$
+
+3. Calculate the mean and the variance of the number of daisies per square for the 80 squares. Give your answers to 2 decimal places. (3)
+4. Explain how the answers from part (c) support the choice of a Poisson distribution as a model. (1)
+5. Using your mean from part (c), estimate the probability that exactly 4 daisies will be found in a randomly selected square. (2)
+
+**Example (Jan 08 Q3):**
+
+1. State two conditions under which a Poisson distribution is a suitable model to use in statistical work. (2)
+
+The number of cars passing an observation point in a 10 minute interval is modelled by a Poisson distribution with mean 1.
+
+2. Find the probability that in a randomly chosen 60 minute period there will be
+   - (i) exactly 4 cars passing the observation point,
+   - (ii) at least 5 cars passing the observation point. (5)
+
+The number of other vehicles, other than cars, passing the observation point in a 60 minute interval is modelled by a Poisson distribution with mean 12.
+
+3. Find the probability that exactly 1 vehicle, of any type, passes the observation point in a 10 minute period. (4)
+
+## (Optional) The Binomial–Poisson Connection
+
+### The Great Revelation
+
+The Poisson distribution emerges naturally as a limiting case of the binomial distribution under specific conditions.
+
+<Aside type="note" title="The Bridge Between Discrete and Continuous">
+**The Setup:** Consider a binomial distribution $B(n,p)$ where:
+- $n$ becomes very large ($n \to \infty$)
+- $p$ becomes very small ($p \to 0$)
+- The product $np = \lambda$ remains constant
+
+**The Result:** Under these conditions, $B(n,p) \to \text{Po}(\lambda)$
+</Aside>
+
+<Aside type="caution" title="Challenge Problem: Derive the Poisson Limit">
+**Setup:** Let $X_n \sim B(n, \frac{\lambda}{n})$ where $\lambda$ is constant. Prove that as $n \to \infty$:
+
+$$
+\lim_{n \to \infty} P(X_n = x) = \frac{e^{-\lambda}\lambda^x}{x!}
+$$
+
+**Step 1:** Write the binomial probability:
+
+$$
+P(X_n = x) = \binom{n}{x}\left(\frac{\lambda}{n}\right)^x\left(1-\frac{\lambda}{n}\right)^{n-x}
+$$
+
+**Step 2:** Rewrite as:
+
+$$
+P(X_n = x) = \frac{\lambda^x}{x!} \cdot \frac{n(n-1)(n-2)\cdots(n-x+1)}{n^x} \cdot \left(1-\frac{\lambda}{n}\right)^n \cdot \left(1-\frac{\lambda}{n}\right)^{-x}
+$$
+
+**Step 3:** Evaluate the limit of each component:
+1. $\frac{n(n-1)(n-2)\cdots(n-x+1)}{n^x} \to$ ? as $n \to \infty$
+2. $\left(1-\frac{\lambda}{n}\right)^{-x} \to$ ? as $n \to \infty$
+3. $\left(1-\frac{\lambda}{n}\right)^n \to$ ? as $n \to \infty$ (Hint: Use $\lim_{n \to \infty}(1+\frac{a}{n})^n = e^a$)
+</Aside>
+
+<Aside type="note" title="Consequence: The Poisson Approximation to Binomial">
+In practice, when $n$ is large and $p$ is small, we can approximate $B(n,p)$ with $\text{Po}(np)$.
+
+**Problem:** A quality inspector examines 200 items where each has a 2% probability of being defective.
+
+1. Calculate the exact probability of finding exactly 3 defective items using the binomial distribution
+2. Approximate this probability using the Poisson distribution
+3. Compare your results and comment on the accuracy
+</Aside>
+
+## Challenge Extension: Probability Generating Functions for Poisson
+
+<Aside type="note" title="Recall: PGF Fundamentals">
+**Definition:** The Probability Generating Function of a discrete random variable $X$ is:
+
+$$
+G_X(t) = E(t^X) = \sum_{k=0}^{\infty} t^k P(X = k)
+$$
+
+**From Binomial Chapter:** You learned that for $X \sim B(n,p)$:
+
+$$
+G_X(t) = (q + pt)^n \quad \text{where } q = 1-p
+$$
+
+And the magical moment formulas:
+- $E(X) = G'_X(1)$
+- $\text{Var}(X) = G''_X(1) + G'_X(1) - [G'_X(1)]^2$
+</Aside>
+
+### Part I: Deriving the Poisson PGF — Two Approaches
+
+<Aside type="caution" title="Method 1: Direct Computation">
+**Challenge 1:** For $X \sim \text{Po}(\lambda)$, derive $G_X(t)$ directly from the definition.
+
+**Setup:** We know $P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}$
+
+**Step 1:** Write out the PGF definition:
+
+$$
+G_X(t) = \sum_{k=0}^{\infty} t^k P(X = k) = \sum_{k=0}^{\infty} t^k \cdot \frac{e^{-\lambda}\lambda^k}{k!}
+$$
+
+**Step 2:** Factor out $e^{-\lambda}$:
+
+$$
+G_X(t) = e^{-\lambda} \sum_{k=0}^{\infty} \frac{(t\lambda)^k}{k!}
+$$
+
+**Step 3:** Recognize the series! What famous expansion is $\sum_{k=0}^{\infty} \frac{x^k}{k!}$?
+
+**Step 4:** Complete the derivation to show $G_X(t) = e^{\lambda(t-1)}$
+</Aside>
+
+<Aside type="caution" title="Method 2: Limit from Binomial PGF">
+**Challenge 2:** Derive the Poisson PGF as a limit of the binomial PGF.
+
+**Recall the Setup:** $X_n \sim B(n, \frac{\lambda}{n})$ converges to $\text{Po}(\lambda)$ as $n \to \infty$
+
+**Step 1:** Write the binomial PGF with $p = \frac{\lambda}{n}$:
+
+$$
+G_{X_n}(t) = \left(1 - \frac{\lambda}{n} + \frac{\lambda}{n}t\right)^n
+$$
+
+**Step 2:** Rewrite this as:
+
+$$
+G_{X_n}(t) = \left(1 + \frac{\lambda(t-1)}{n}\right)^n
+$$
+
+**Step 3:** Apply the fundamental limit $\lim_{n \to \infty}(1 + \frac{a}{n})^n = e^a$:
+
+$$
+\lim_{n \to \infty} G_{X_n}(t) = \lim_{n \to \infty}\left(1 + \frac{\lambda(t-1)}{n}\right)^n = \text{?}
+$$
+
+**Beautiful Result:** Both methods give us $G_X(t) = e^{\lambda(t-1)}$!
+</Aside>
+
+### Part II: Extracting Properties Using PGF Magic
+
+<Aside type="caution" title="Challenge 3: Computing Moments">
+**Given:** $G_X(t) = e^{\lambda(t-1)}$ for $X \sim \text{Po}(\lambda)$
+
+- Evaluate $G'_X(1)$ to find $E(X)$
+- Use the variance formula: $\text{Var}(X) = G''_X(1) + G'_X(1) - [G'_X(1)]^2$ to verify that $\text{Var}(X) = E(X)$.
+</Aside>
+
+<Aside type="caution" title="Challenge 4: Proving Additivity">
+**Recall from Binomial Chapter:** If $X$ and $Y$ are independent, then:
+
+$$
+G_{X+Y}(t) = G_X(t) \cdot G_Y(t)
+$$
+
+**Application:** Let $X \sim \text{Po}(\lambda)$ and $Y \sim \text{Po}(\mu)$ be independent.
+
+By computing $G_{X+Y}(t) = G_X(t) \cdot G_Y(t)$, show the additivity property of the Poisson distribution that
+
+$$
+X + Y \sim \text{Po}(\lambda + \mu).
+$$
+</Aside>
+
+<Aside type="tip" title="The Power of PGFs: Reflection">
+**What we've accomplished:**
+- **Derived** the Poisson PGF using two different approaches
+- **Computed** expectation and variance using differentiation
+- **Proved** the additivity property using PGF multiplication
+
+**The Bigger Picture:** PGFs provide a unified framework for understanding discrete distributions.
+</Aside>
