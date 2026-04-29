@@ -14,9 +14,9 @@ export default defineConfig({
 				root: { label: 'English', lang: 'en' },
 				zh: { label: '中文', lang: 'zh-CN' },
 			},
-			social: {
-				github: 'https://github.com/yizi-wang',
-			},
+			social: [
+				{ icon: 'github', href: 'https://github.com/yizi-wang', label: 'GitHub' },
+			],
 			sidebar: [
 				{ label: 'About', link: '/about' },
 				{
