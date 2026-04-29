@@ -10,31 +10,27 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-      - name: Debug environment
-        run: |
-          node --version
-          npm --version
-          echo "Disk space:"
-          df -h .
-          echo "Memory:"
-          free -m
+          node-version: "24"
+          cache: "npm"
+      - name: Install sharp dependencies (libvips)
+        run: sudo apt-get update && sudo apt-get install -y libvips-dev
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: |
-          npm install --no-audit --no-fund 2>&1 || {
-            echo "npm install failed, showing error log:"
-            cat /home/runner/.npm/_logs/*-debug-0.log 2>/dev/null || echo "No debug log found"
-            exit 1
-          }
+        run: npm ci
       - name: Build
         run: npm run build
       - name: Upload artifact
