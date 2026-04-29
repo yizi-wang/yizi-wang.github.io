@@ -31,6 +31,11 @@ export default defineConfig({
 					autogenerate: { directory: 'tmua' },
 				},
 				{
+					label: 'History of Math',
+					translations: { zh: '数学史' },
+					autogenerate: { directory: 'history-of-math' },
+				},
+				{
 					label: 'Teaching Notes',
 					translations: { zh: '教学笔记' },
 					link: '/notes',
