@@ -2,16 +2,13 @@
 title: "S2 Chapter 5: The Uniform Distribution"
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 ## The Purest Form of Randomness: A World of Equal Possibilities
 
 We have seen that the exponential distribution describes the patient mathematics of "waiting," what if we need to model something fundamentally different - **complete ignorance**?
 
-<Aside type="tip" title="A Philosophical Question">
+:::tip[A Philosophical Question]
 If you know a number lies between 0 and 10, but have absolutely no other information, what's the most fair assumption you can make about its value?
-</Aside>
-
+:::
 The principle of **maximum ignorance** suggests: treat every equal-length interval as equally likely. This leads us naturally to the **uniform distribution** - the mathematics of "pure randomness."
 
 ## 1 The Language of Uniform Distributions
@@ -39,7 +36,7 @@ $$\int_{-\infty}^{\infty} f(x) \, dx = \int_a^b k \, dx = k(b - a) = 1$$
 
 Therefore: $k = \frac{1}{b - a}$
 
-<Aside type="note" title="The Uniform PDF">
+:::note[The Uniform PDF]
 For $X \sim \text{Uniform}(a, b)$:
 
 $$f(x) = \begin{cases} 
@@ -48,8 +45,7 @@ $$f(x) = \begin{cases}
 \end{cases}$$
 
 **Geometric Interpretation:** This creates a rectangle with width $(b-a)$ and height $\frac{1}{b-a}$, giving area = 1.
-</Aside>
-
+:::
 **Example 1:**
 
 Consider $X \sim \text{Uniform}(1, 5)$.
@@ -95,7 +91,7 @@ $$F(x) = \int_a^x \frac{1}{b-a} dt = \frac{x-a}{b-a} \text{ (Linear accumulation
 
 $$F(x) = 1 \text{ (All probability accumulated)}$$
 
-<Aside type="note" title="The Uniform CDF">
+:::note[The Uniform CDF]
 For $X \sim \text{Uniform}(a, b)$:
 
 $$F(x) = \begin{cases} 
@@ -107,8 +103,7 @@ $$F(x) = \begin{cases}
 **Key Properties:**
 
 - $F(\frac{a+b}{2}) = 0.5$ (median always at center)
-</Aside>
-
+:::
 **Example 2: CDF Applications**
 
 For $X \sim \text{Uniform}(-2, 6)$:
@@ -174,7 +169,7 @@ $$E(X^2) = \int_a^b x^2 \cdot \frac{1}{b - a} \, dx = \frac{1}{b - a} \cdot \fra
 
 $$\text{Var}(X) = \frac{a^2 + ab + b^2}{3} - \left(\frac{a + b}{2}\right)^2 = \frac{(b - a)^2}{12}$$
 
-<Aside type="tip" title="Uniform Distribution: Key Properties">
+:::tip[Uniform Distribution: Key Properties]
 For $X \sim \text{Uniform}(a, b)$:
 
 $$E(X) = \frac{a + b}{2} \quad \text{(always the midpoint)}$$
@@ -185,8 +180,7 @@ $$\text{Var}(X) = \frac{(b - a)^2}{12} \quad \text{(depends only on interval wid
 
 - Mean = Median = Midpoint (perfect symmetry)
 - Variance depends only on interval width, not location
-</Aside>
-
+:::
 **Example 4: Parameter Relationships**
 
 The continuous random variable $X$ is uniformly distributed over the interval $[a, \beta]$ where $\beta > a$.
@@ -270,7 +264,7 @@ Now we'll tackle one of the most famous problems in probability theory - one tha
 
 In 1777, French mathematician Georges-Louis Leclerc, Comte de Buffon, posed this challenge: "What's the probability that a randomly dropped needle will cross a line on lined paper?"
 
-<Aside type="note" title="Buffon's Needle Setup">
+:::note[Buffon's Needle Setup]
 **Materials:**
 
 - Paper with parallel lines spaced distance $1$ apart
@@ -281,11 +275,10 @@ In 1777, French mathematician Georges-Louis Leclerc, Comte de Buffon, posed this
 **Question:** What's $P(\text{needle crosses a line})$?
 
 **Amazing Discovery:** The answer involves $\pi$!
-</Aside>
-
+:::
 ### Step 1: Identify the Random Variables
 
-<Aside type="note" title="Your Task">
+:::note[Your Task]
 **Question:** What random variables should we use to model this problem?
 
 Think about:
@@ -293,8 +286,7 @@ Think about:
 - What determines whether the needle crosses a line?
 - What aspects of the needle's position are random?
 - What distributions would naturally model these random aspects?
-</Aside>
-
+:::
 **Hint 1:** Consider the needle's position relative to the lines.
 
 Let $X$ be the perpendicular distance from the needle's center to the nearest line.

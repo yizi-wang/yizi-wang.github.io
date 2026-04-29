@@ -2,16 +2,13 @@
 title: "S2 Chapter 6: Sampling Distributions"
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 ## From Single Numbers to Patterns: Understanding the Nature of Statistical Investigation
 
 Imagine you're the quality control manager at a smartphone factory producing 10,000 phones daily. How do you ensure quality without testing every single phone? Or consider a political poll predicting election results from just 1,500 voters out of millions. How can such small samples reveal meaningful truths about vast populations?
 
-<Aside type="note" title="The Central Question of Statistics">
+:::note[The Central Question of Statistics]
 How can we draw reliable conclusions about large groups (populations) by studying only small subsets (samples)?
-</Aside>
-
+:::
 This chapter explores the mathematical foundation that makes statistical inference possible — the theory of **sampling distributions**.
 
 ## 1. The Language of Sampling
@@ -20,7 +17,7 @@ This chapter explores the mathematical foundation that makes statistical inferen
 
 Before diving into formal definitions, let's explore these concepts through a scenario that might be very familiar to you.
 
-<Aside type="note" title="Example: The SSR Card Drop Rate Investigation">
+:::note[Example: The SSR Card Drop Rate Investigation]
 **The Setup:** Your favorite mobile game claims that the legendary SSR cards have a 1% drop rate. But you and your classmates suspect the game company might be lying — the drop rates seem lower than advertised.
 
 **The Investigation:**
@@ -33,37 +30,35 @@ Before diving into formal definitions, let's explore these concepts through a sc
 **The Key Question:** Since $\hat{p} = 0 < 0.01$, does this prove the game company is deceiving players? Or could this difference be just random luck?
 
 **The Statistical Challenge:** To answer this question, we need to understand how $\hat{p}$ varies from sample to sample — this is the heart of **sampling distribution** theory!
-</Aside>
-
+:::
 This investigation perfectly illustrates why we need to study sampling distributions. Let's now build the formal vocabulary to analyze such problems systematically.
 
 ### 1.2 Building Our Vocabulary — The Five Fundamental Concepts
 
 Now that we've seen these concepts in action, let's define them precisely:
 
-<Aside type="tip" title="Definition: Population">
+:::tip[Definition: Population]
 A **population** is the complete collection of all individual items, objects, or measurements that are the focus of a statistical investigation.
-</Aside>
+:::
 
-<Aside type="tip" title="Definition: Sample">
+:::tip[Definition: Sample]
 A **sample** is a selection of individual members or items chosen from a population for the purpose of statistical analysis.
-</Aside>
+:::
 
-<Aside type="tip" title="Definition: Sampling Unit">
+:::tip[Definition: Sampling Unit]
 A **sampling unit** is an individual member of a population that can be selected for inclusion in a sample.
-</Aside>
+:::
 
-<Aside type="tip" title="Definition: Sampling Frame">
+:::tip[Definition: Sampling Frame]
 A **sampling frame** is a practical list of sampling units used to represent a population. It serves as the actual source from which samples are drawn.
-</Aside>
+:::
 
-<Aside type="tip" title="Definition: Statistic">
+:::tip[Definition: Statistic]
 A **statistic** is any quantity calculated exclusively from observations in a sample. It is a function of the sample data.
-</Aside>
-
+:::
 ### 1.3 Real-World Examples: Connecting Concepts to Life
 
-<Aside type="note" title="Example: Student Life at University">
+:::note[Example: Student Life at University]
 **Scenario:** The university wants to study students' daily screen time.
 
 - **Population:** All 25,000 students enrolled at the university
@@ -76,9 +71,9 @@ A **statistic** is any quantity calculated exclusively from observations in a sa
     - Sample median: $m = 6.0$ hours
 
 **Key Insight:** Notice that the sampling frame (24,800) is smaller than the population (25,000) due to missing contact information. This is common in practice!
-</Aside>
+:::
 
-<Aside type="note" title="Example: In-Class Exercise">
+:::note[Example: In-Class Exercise]
 Identify the five key concepts for the following scenario:
 
 **Scenario:** GCGS canteen wants to determine whether the food served by the new window is popular among students.
@@ -89,24 +84,22 @@ Identify:
 3. A realistic sampling frame: \_\_\_\_\_\_\_\_\_\_\_\_
 4. A practical sample size: \_\_\_\_\_\_\_\_\_\_\_\_
 5. Relevant statistics: \_\_\_\_\_\_\_\_\_\_\_\_
-</Aside>
-
+:::
 ### 1.4 Statistics: The Bridge Between Sample and Population
 
 Now let's focus on the most crucial concept: what exactly makes something a "statistic"?
 
-<Aside type="tip" title="The Golden Rule of Statistics">
+:::tip[The Golden Rule of Statistics]
 **A statistic is ONLY a number calculated from sample data.**
 
 **Key Requirements:**
 1. Must be calculated using **only** observed sample values
 2. Cannot involve any unknown population parameters
 3. Different samples will produce different statistic values
-</Aside>
-
+:::
 **Let's test your understanding with concrete examples:**
 
-<Aside type="note" title="Example: What Is and Isn't a Statistic — Practice Problems">
+:::note[Example: What Is and Isn't a Statistic — Practice Problems]
 Suppose we have a sample of 5 students' heights: $X_1 = 160, X_2 = 165, X_3 = 170, X_4 = 155, X_5 = 175$ (all in cm). The population mean height $\mu$ and variance $\sigma^2$ are unknown.
 
 **Identify which of the following are statistics:**
@@ -124,9 +117,9 @@ Suppose we have a sample of 5 students' heights: $X_1 = 160, X_2 = 165, X_3 = 17
 6. $2\bar{X} + 10 = 2(165) + 10 = 340$ — **Answer:** \_\_\_\_\_
 
 7. $\sum_{i=1}^5 (X_i - \mu)^2$ (sum of squared deviations from population mean) — **Answer:** \_\_\_\_\_
-</Aside>
+:::
 
-<Aside type="note" title="Example: Real-World Statistics in Action">
+:::note[Example: Real-World Statistics in Action]
 Let's revisit our mobile game investigation with this new understanding:
 
 **Scenario:** 10 students perform 200 card draws total, observing 3 SSR cards.
@@ -137,8 +130,7 @@ Let's revisit our mobile game investigation with this new understanding:
 3. The true population SSR rate: $p = 0.01$
 4. The difference between our estimate and the claimed rate: $\hat{p} - 0.01 = 0.005$
 5. The probability of getting exactly 3 SSRs if $p = 0.01$
-</Aside>
-
+:::
 **The Critical Insight:** Statistics are our "messengers" — they carry information from the sample to help us learn about the unknown population. But they're imperfect messengers because they vary from sample to sample!
 
 ## 2. The Revolutionary Concept: Sampling Distributions
@@ -149,7 +141,7 @@ Remember our SSR investigation? We observed $\hat{p} = 0.015$ from 200 draws, wh
 
 ### 2.2 Discovering Sampling Distributions Through Simulation
 
-<Aside type="note" title="Example: Class Activity — Simulating the SSR Drop Rate">
+:::note[Example: Class Activity — Simulating the SSR Drop Rate]
 **The Setup:**
 
 We'll assume the game company is telling the truth: $p = 0.01$ (1% SSR rate).
@@ -180,24 +172,21 @@ Count frequencies and create a histogram:
 Draw your conclusion based on the distribution you created. How suspicious is the announced rate by the game company?
 
 **The Statistical Revelation:** Sampling distributions allow us to quantify sampling error and determine whether an observed statistic represents a rare event or normal variation.
-</Aside>
-
+:::
 ### 2.3 From Intuition to Theory
 
 This experiment demonstrates the revolutionary insight: instead of thinking of $\hat{p}$ (or any statistic) as just a number, we recognize it as a **random variable** with its own distribution.
 
-<Aside type="tip" title="Definition: Sampling Distribution">
+:::tip[Definition: Sampling Distribution]
 The **sampling distribution** of a statistic is the probability distribution that specifies all possible values the statistic can take and the probability of each value occurring, across all possible samples of the same size from the same population.
-</Aside>
-
+:::
 **The Key Insight:** Every time you take a sample, your statistic will be different. The sampling distribution tells you how these different values are distributed and helps you distinguish between "normal variation" and "something unusual is happening."
 
 ### 2.4 Mathematical Analysis: From Simulation to Theory
 
 Now that we've experienced sampling distributions through simulation, let's see how to construct them mathematically. We'll use a different discrete example to build our theoretical understanding.
 
-<Aside type="note" title="Example: The Mystery Treasure Box — Advanced Statistical Construction">
-
+:::note[Example: The Mystery Treasure Box — Advanced Statistical Construction]
 **Gaming Scenario:** You're playing an adventure game where treasure boxes contain different valuable coins. Market research shows the treasure drop rates, and you want to understand the risk patterns when opening multiple boxes.
 
 **Population:** A vast collection of treasure boxes with the following contents:
@@ -243,9 +232,9 @@ For 2 boxes, we have $3^2 = 9$ possible combinations:
 - $E(M) = 10 \times 0.36 + 50 \times 0.45 + 100 \times 0.19 = 45.1$ coins
 
 **Gaming Strategy Implication:** Even though gold has 10% individual drop rate, there's only 19% chance of getting gold as your best item in 2 boxes. This shows why maximum statistics behave very differently from means!
-</Aside>
+:::
 
-<Aside type="note" title="Example: In-Class Exercise — Card Game Five-Draw Pity System">
+:::note[Example: In-Class Exercise — Card Game Five-Draw Pity System]
 A popular card game uses the classic "Five-Draw Pity System": if you don't get a legendary card in your first 4 draws, the 5th draw is guaranteed to be legendary!
 
 **Normal Draw Rates:**
@@ -283,9 +272,9 @@ A popular card game uses the classic "Five-Draw Pity System": if you don't get a
 1. What's the probability of needing the pity system?
 2. What's the expected position of the first legendary?
 3. How does this compare to 5 independent draws with no pity system?
-</Aside>
+:::
 
-<Aside type="note" title="Example: In-Class Exercise — Package Delivery Service">
+:::note[Example: In-Class Exercise — Package Delivery Service]
 A delivery company has two types of packages: small (containing 100 items) and large (containing 200 items). The company maintains a 4:3 ratio of small to large packages in their warehouse.
 
 Let $Z$ represent the number of items in a randomly selected package.
@@ -297,9 +286,9 @@ Now consider selecting a random sample of 3 packages with item counts $Z_1, Z_2,
 
 3. List all possible combinations of package types in your sample.
 4. Find the sampling distribution of the sample mean $\bar{Z}$.
-</Aside>
+:::
 
-<Aside type="note" title="Example: In-Class Exercise — Grading System">
+:::note[Example: In-Class Exercise — Grading System]
 A teacher uses a mixed grading system where homework counts for 50% and quiz scores count for 50% of the final grade, therefore the score is calculated as:
 
 $$Y = \frac{H + Q}{2}$$
@@ -317,9 +306,9 @@ where $H$ is the homework score and $Q$ is the quiz score of the student.
 The teacher randomly selects $3$ students and records their scores as $Y_1, Y_2, Y_3$.
 
 3. Calculate the sampling distribution of the sample range.
-</Aside>
+:::
 
-<Aside type="caution" title="Example: In-Class Exercise — HeyTea Market Research">
+:::caution[Example: In-Class Exercise — HeyTea Market Research]
 **Real-World Scenario:** HeyTea is considering opening a new store near our school. They hired you as student consultants to conduct market research!
 
 **Question:** "What percentage of students would buy milk tea at least once a week if we opened here?"
@@ -337,25 +326,22 @@ The teacher randomly selects $3$ students and records their scores as $Y_1, Y_2,
 2. What does sampling variability tell us about making business decisions from limited data?
 
 **Statistical Challenge:** If the true population proportion is actually $p = 0.4$ (above the profitability threshold), what's the probability that a sample of 50 students would give $\hat{p} \leq 0.36$, potentially leading HeyTea to make the wrong business decision?
-</Aside>
-
+:::
 ## 3. Solving Our Mobile Game Mystery
 
 Now we can return to our original question with the proper theoretical framework!
 
-<Aside type="note" title="Example: SSR Drop Rate — Final Analysis">
+:::note[Example: SSR Drop Rate — Final Analysis]
 **Recall our findings:**
 - Claimed parameter: $p = 0.01$
 - Our sample: $n = 200$ draws, $0$ SSR cards
 - Our statistic: $\hat{p} = 0$
-</Aside>
-
+:::
 ### 3.1 Deeper Analysis: Using the Right Distribution
 
 Now let's approach this problem with the most appropriate statistical model. Since we're dealing with rare events (low probability, large sample), the Poisson distribution is perfect!
 
-<Aside type="note" title="Example: Understanding the SSR Count Distribution">
-
+:::note[Example: Understanding the SSR Count Distribution]
 **The Smarter Approach:** Instead of analyzing proportions, let's directly study the count of SSR cards!
 
 **Our Statistic:** $X = $ number of SSR cards in 200 draws
@@ -393,8 +379,7 @@ $$P(|X - 2| \geq 2) = P(X = 0 \text{ or } X \geq 4) = 0.135 + 0.090 = 0.225$$
 About 22.5% of samples would deviate this much from the expected value of 2!
 
 **Conclusion:** Our observation of 0 SSR cards provides **weak evidence** against the company's claim. It's well within the realm of random variation.
-</Aside>
-
+:::
 ## 4. Preview: The World of Hypothesis Testing
 
 What we've just done is the foundation of **statistical hypothesis testing** — the subject of our next chapter!
@@ -425,7 +410,7 @@ What we've just done is the foundation of **statistical hypothesis testing** —
 
 ## Homework Exercises
 
-<Aside type="note" title="Example: WST02/01/June18/4">
+:::note[Example: WST02/01/June18/4]
 The volume of milk, M litres, in cartons produced by a dairy, has distribution $N(\mu, \sigma^2)$, where $\mu$ and $\sigma$ are unknown. A random sample of 12 cartons is taken and the volume of milk in each carton is measured ($M_1$, $M_2$, ..., $M_{12}$). A statistic X is based on this sample.
 
 1. Explain what is meant by "a random sample" in this case. \hfill (1)
@@ -442,9 +427,9 @@ The volume of milk, M litres, in cartons produced by a dairy, has distribution $
    3. $\displaystyle \sum_{i=1}^{12}(2M_i - 3)$
 
    \hfill (2)
-</Aside>
+:::
 
-<Aside type="note" title="Example: WST02/01/Jan15/3">
+:::note[Example: WST02/01/Jan15/3]
 Explain what you understand by
 
 1. a statistic, \hfill (1)
@@ -458,9 +443,9 @@ A random sample of 3 packets is taken from the factory and $Y_1$, $Y_2$ and $Y_3
 
 4. List all the possible samples \hfill (2)
 5. Find the sampling distribution of $\bar{Y}$ \hfill (4)
-</Aside>
+:::
 
-<Aside type="note" title="Example: WST02/01/June15/5">
+:::note[Example: WST02/01/June15/5]
 A bag contains a large number of counters with 35% of the counters having a value of 6 and 65% of the counters having a value of 9.
 
 A random sample of size 2 is taken from the bag and the value of each counter is recorded as $X_1$ and $X_2$ respectively.
@@ -472,4 +457,4 @@ $$Y = \frac{2X_1 + X_2}{3}$$
 1. List all the possible values of Y. \hfill (2)
 2. Find the sampling distribution of Y. \hfill (5)
 3. Find E(Y). \hfill (2)
-</Aside>
+:::

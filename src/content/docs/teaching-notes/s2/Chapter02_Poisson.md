@@ -2,8 +2,6 @@
 title: "S2 Chapter 2: The Poisson Distribution"
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 ## Preface: From Battlefield Statistics to Modern Modeling
 
 Welcome, mathematical explorers! Today we embark on a fascinating journey through time, where we'll discover how the study of rare events — from deadly horse kicks in the Prussian army to cosmic phenomena — led to one of the most powerful tools in modern statistics: **The Poisson Distribution**.
@@ -16,12 +14,11 @@ Our story begins with a French mathematician whose name became synonymous with r
 
 Imagine you're the proud owner of a breakfast shop in Guangdong Country Garden School. Through careful observation over many weeks, you've discovered that on average, you sell exactly **10 baozi during the morning hour** (7:00–8:00 AM).
 
-<Aside type="caution" title="The Business Challenge">
+:::caution[The Business Challenge]
 **How many baozi should you prepare each morning to ensure that 80% of the time, customers don't walk away empty-handed?**
 
 **The Dilemma:** Too few baozi = disappointed customers. Too many = wasted food and lost profit.
-</Aside>
-
+:::
 ### First Instinct: "This Sounds Like Binomial!"
 
 Your first thought might be: "I'll use the binomial distribution!" But then you pause and ask yourself:
@@ -39,10 +36,9 @@ Let's think about dividing the hour into smaller time intervals:
 
 **The Mathematical Insight:** We're witnessing the transition from discrete binomial trials to a continuous process!
 
-<Aside type="note" title="The Central Challenge">
+:::note[The Central Challenge]
 **How do we model events (like baozi sales) that occur randomly in continuous time, where the number of potential "moments of sale" is essentially infinite?**
-</Aside>
-
+:::
 ### Why This Matters for Your Business
 
 This isn't just a mathematical curiosity — it has real implications for your baozi shop:
@@ -63,14 +59,13 @@ Your baozi shop problem isn't unique — mathematicians have been tackling simil
 
 **Ladislaus Bortkiewicz (1898):** Applied it to model Prussian cavalry deaths from horse kicks — rare, unpredictable events occurring at a steady average rate, just like your baozi sales!
 
-<Aside type="tip" title="The Connection">
+:::tip[The Connection]
 Whether it's horse kick fatalities, wrongful convictions, or baozi sales, the mathematical pattern is identical:
 - Events occur randomly in time/space
 - Average rate is constant and known
 - Individual occurrences are unpredictable
 - We need to plan for uncertainty
-</Aside>
-
+:::
 ## 2. The Mathematical Framework — Definition and Conditions
 
 ### The Poisson Distribution Revealed
@@ -90,8 +85,7 @@ Where:
 
 The Poisson distribution is not universal — it requires three fundamental conditions that directly determine the model's accuracy:
 
-<Aside type="note" title="The Three Pillars of Poisson">
-
+:::note[The Three Pillars of Poisson]
 **1. Independence:** Events occur independently of one another. The arrival of one car doesn't influence the arrival of another.
 
 <Aside type="tip" title="The Memoryless Property">
@@ -102,15 +96,24 @@ The Poisson distribution is not universal — it requires three fundamental cond
 **Mathematical Statement:** For a Poisson process, the probability of an event occurring in the next time interval is independent of how long we've already been waiting.
 
 **Business Implication:** Even if you've had no customers for a while, don't expect a sudden rush — each moment is statistically independent!
-</Aside>
+:::
 
+:::tip[The Memoryless Property]
+**Key Insight:** Independence in Poisson processes leads to a fascinating property called **memorylessness**.
+
+**What this means:** If no baozi has been sold in the last 30 minutes, this *doesn't* increase the probability of selling one in the next 30 minutes. The process "forgets" its history.
+
+**Mathematical Statement:** For a Poisson process, the probability of an event occurring in the next time interval is independent of how long we've already been waiting.
+
+**Business Implication:** Even if you've had no customers for a while, don't expect a sudden rush — each moment is statistically independent!
+:::
 **2. Singly:** In any infinitesimally small interval of time or space, at most one event can occur. The probability of two cars arriving at exactly the same microsecond is negligible.
 
 **3. Constant Rate:** The average rate $\lambda$ of occurrence remains constant over time. The rate doesn't change between morning and afternoon (if we're modeling a period with consistent conditions).
 
 </Aside>
 
-<Aside type="note" title="Classification Exercise: Poisson or Not?">
+:::note[Classification Exercise: Poisson or Not?]
 Determine whether each scenario follows a Poisson distribution:
 
 1. Number of radioactive particles emitted by a certain source in one minute
@@ -118,13 +121,12 @@ Determine whether each scenario follows a Poisson distribution:
 3. Number of lottery jackpot winners in Guangdong over one year
 4. Number of phone calls received at a call center during a specific hour
 5. Number of phone calls from one person to a call center during a specific hour
-</Aside>
-
+:::
 ### Solving the Baozi Shop Problem
 
 Now let's return to our opening challenge and solve it using the Poisson distribution!
 
-<Aside type="note" title="Business Application: Optimal Inventory Planning">
+:::note[Business Application: Optimal Inventory Planning]
 **Recall the Problem:** You sell an average of 10 baozi per hour. How many should you prepare to ensure 80% of the time customers don't walk away empty-handed?
 
 **Mathematical Translation:** Let $X$ = number of baozi sold per hour. We model $X \sim \text{Po}(10)$.
@@ -132,9 +134,9 @@ Now let's return to our opening challenge and solve it using the Poisson distrib
 We want to find the minimum number $k$ such that $P(X \leq k) = 0.80$.
 
 **Solution Strategy:** We need the 80th percentile of the Poisson distribution Po(10).
-</Aside>
+:::
 
-<Aside type="note" title="Step-by-Step Solution">
+:::note[Step-by-Step Solution]
 Using Poisson tables for $\lambda = 10$, we find cumulative probabilities:
 
 | $k$ | $P(X \leq k)$ | Interpretation |
@@ -150,8 +152,7 @@ Using Poisson tables for $\lambda = 10$, we find cumulative probabilities:
 - 86.4% of days: All customers satisfied (exceeds 80% target)
 - 13.6% of days: Some customers disappointed (but this is acceptable)
 - Expected daily waste: $13 - 10 = 3$ baozi on average
-</Aside>
-
+:::
 ### Fundamental Properties
 
 **Theorem (Expectation and Variance of Poisson):** For $X \sim \text{Po}(\lambda)$:
@@ -159,14 +160,13 @@ Using Poisson tables for $\lambda = 10$, we find cumulative probabilities:
 - Variance: $\text{Var}(X) = \lambda$
 - Standard deviation: $\sigma = \sqrt{\lambda}$
 
-<Aside type="tip" title="The Beautiful Symmetry">
+:::tip[The Beautiful Symmetry]
 **Key Insight:** In a Poisson distribution, the mean equals the variance!
 
 **Practical Application:** If you have a dataset where the sample mean approximately equals the sample variance, this suggests the data might follow a Poisson distribution.
 
 **Example:** If the average number of emails received per hour is 12, then $\lambda = 12$, and the variance is also 12.
-</Aside>
-
+:::
 ### The Additivity Property: A Powerful Tool
 
 **Theorem (Additivity of Independent Poisson Variables):** If $X \sim \text{Po}(\lambda)$ and $Y \sim \text{Po}(\mu)$ are independent, then:
@@ -205,7 +205,7 @@ $$
 | | **9** | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9997 | 0.9989 | 0.9967 | 0.9919 | 0.9829 | 0.9682 |
 | | **10** | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9999 | 0.9997 | 0.9990 | 0.9972 | 0.9933 | 0.9863 |
 
-<Aside type="note" title="Exercise 1: Using Poisson Tables">
+:::note[Exercise 1: Using Poisson Tables]
 A call center receives calls at an average rate of 3 per hour. Let $X$ be the number of calls in one hour.
 
 **Given:** $X \sim \text{Po}(3)$
@@ -221,8 +221,7 @@ Use the Poisson distribution table to find:
 - $P(X = r)$ = table value at $P(X \leq r) -$ table value at $P(X \leq r-1)$
 - $P(X > r) = 1 - P(X \leq r)$
 - $P(a \leq X \leq b) = P(X \leq b) - P(X \leq a-1)$
-</Aside>
-
+:::
 ## 4. Real-World Applications
 
 **Example (Cybersecurity):**
@@ -306,16 +305,16 @@ The number of other vehicles, other than cars, passing the observation point in 
 
 The Poisson distribution emerges naturally as a limiting case of the binomial distribution under specific conditions.
 
-<Aside type="note" title="The Bridge Between Discrete and Continuous">
+:::note[The Bridge Between Discrete and Continuous]
 **The Setup:** Consider a binomial distribution $B(n,p)$ where:
 - $n$ becomes very large ($n \to \infty$)
 - $p$ becomes very small ($p \to 0$)
 - The product $np = \lambda$ remains constant
 
 **The Result:** Under these conditions, $B(n,p) \to \text{Po}(\lambda)$
-</Aside>
+:::
 
-<Aside type="caution" title="Challenge Problem: Derive the Poisson Limit">
+:::caution[Challenge Problem: Derive the Poisson Limit]
 **Setup:** Let $X_n \sim B(n, \frac{\lambda}{n})$ where $\lambda$ is constant. Prove that as $n \to \infty$:
 
 $$
@@ -338,9 +337,9 @@ $$
 1. $\frac{n(n-1)(n-2)\cdots(n-x+1)}{n^x} \to$ ? as $n \to \infty$
 2. $\left(1-\frac{\lambda}{n}\right)^{-x} \to$ ? as $n \to \infty$
 3. $\left(1-\frac{\lambda}{n}\right)^n \to$ ? as $n \to \infty$ (Hint: Use $\lim_{n \to \infty}(1+\frac{a}{n})^n = e^a$)
-</Aside>
+:::
 
-<Aside type="note" title="Consequence: The Poisson Approximation to Binomial">
+:::note[Consequence: The Poisson Approximation to Binomial]
 In practice, when $n$ is large and $p$ is small, we can approximate $B(n,p)$ with $\text{Po}(np)$.
 
 **Problem:** A quality inspector examines 200 items where each has a 2% probability of being defective.
@@ -348,11 +347,10 @@ In practice, when $n$ is large and $p$ is small, we can approximate $B(n,p)$ wit
 1. Calculate the exact probability of finding exactly 3 defective items using the binomial distribution
 2. Approximate this probability using the Poisson distribution
 3. Compare your results and comment on the accuracy
-</Aside>
-
+:::
 ## Challenge Extension: Probability Generating Functions for Poisson
 
-<Aside type="note" title="Recall: PGF Fundamentals">
+:::note[Recall: PGF Fundamentals]
 **Definition:** The Probability Generating Function of a discrete random variable $X$ is:
 
 $$
@@ -368,11 +366,10 @@ $$
 And the magical moment formulas:
 - $E(X) = G'_X(1)$
 - $\text{Var}(X) = G''_X(1) + G'_X(1) - [G'_X(1)]^2$
-</Aside>
-
+:::
 ### Part I: Deriving the Poisson PGF — Two Approaches
 
-<Aside type="caution" title="Method 1: Direct Computation">
+:::caution[Method 1: Direct Computation]
 **Challenge 1:** For $X \sim \text{Po}(\lambda)$, derive $G_X(t)$ directly from the definition.
 
 **Setup:** We know $P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}$
@@ -392,9 +389,9 @@ $$
 **Step 3:** Recognize the series! What famous expansion is $\sum_{k=0}^{\infty} \frac{x^k}{k!}$?
 
 **Step 4:** Complete the derivation to show $G_X(t) = e^{\lambda(t-1)}$
-</Aside>
+:::
 
-<Aside type="caution" title="Method 2: Limit from Binomial PGF">
+:::caution[Method 2: Limit from Binomial PGF]
 **Challenge 2:** Derive the Poisson PGF as a limit of the binomial PGF.
 
 **Recall the Setup:** $X_n \sim B(n, \frac{\lambda}{n})$ converges to $\text{Po}(\lambda)$ as $n \to \infty$
@@ -418,18 +415,17 @@ $$
 $$
 
 **Beautiful Result:** Both methods give us $G_X(t) = e^{\lambda(t-1)}$!
-</Aside>
-
+:::
 ### Part II: Extracting Properties Using PGF Magic
 
-<Aside type="caution" title="Challenge 3: Computing Moments">
+:::caution[Challenge 3: Computing Moments]
 **Given:** $G_X(t) = e^{\lambda(t-1)}$ for $X \sim \text{Po}(\lambda)$
 
 - Evaluate $G'_X(1)$ to find $E(X)$
 - Use the variance formula: $\text{Var}(X) = G''_X(1) + G'_X(1) - [G'_X(1)]^2$ to verify that $\text{Var}(X) = E(X)$.
-</Aside>
+:::
 
-<Aside type="caution" title="Challenge 4: Proving Additivity">
+:::caution[Challenge 4: Proving Additivity]
 **Recall from Binomial Chapter:** If $X$ and $Y$ are independent, then:
 
 $$
@@ -443,13 +439,13 @@ By computing $G_{X+Y}(t) = G_X(t) \cdot G_Y(t)$, show the additivity property of
 $$
 X + Y \sim \text{Po}(\lambda + \mu).
 $$
-</Aside>
+:::
 
-<Aside type="tip" title="The Power of PGFs: Reflection">
+:::tip[The Power of PGFs: Reflection]
 **What we've accomplished:**
 - **Derived** the Poisson PGF using two different approaches
 - **Computed** expectation and variance using differentiation
 - **Proved** the additivity property using PGF multiplication
 
 **The Bigger Picture:** PGFs provide a unified framework for understanding discrete distributions.
-</Aside>
+:::

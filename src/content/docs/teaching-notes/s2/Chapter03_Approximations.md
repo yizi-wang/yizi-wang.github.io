@@ -2,8 +2,6 @@
 title: "S2 Chapter 3: Approximations and the Central Limit Theorem"
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 # S2 Statistics: Chapter 3 — Approximations and the Central Limit Theorem
 
 ## Preface: The Quest for Computational Simplicity
@@ -18,8 +16,7 @@ Our story begins in an era before computers, when calculating even simple probab
 
 Imagine you're a 19th-century insurance actuary, tasked with calculating risk probabilities to set fair premiums. You need to compute probabilities from distributions like $B(1000, 0.01)$ or $\text{Po}(25)$.
 
-<Aside type="caution" title="The Computational Challenge">
-
+:::caution[The Computational Challenge]
 **Binomial Nightmare:** To find $P(X = 50)$ where $X \sim B(1000, 0.01)$:
 
 $$
@@ -38,17 +35,13 @@ P(X \leq 30) = \sum_{k=0}^{30} \frac{e^{-25} \times 25^k}{k!}
 $$
 
 This requires computing 31 terms, each involving factorials and powers of 25!
+:::
 
-</Aside>
-
-<Aside type="tip" title="The Great Insight">
-
+:::tip[The Great Insight]
 **Why calculate exactly when you can approximate accurately?**
 
 Instead of wrestling with complex discrete distributions, mathematicians found that simple, continuous distributions could provide remarkably accurate approximations under the right conditions.
-
-</Aside>
-
+:::
 ## 2. Poisson Approximation: The Lightweight Solution
 
 ### Recalling the Theoretical Foundation
@@ -63,17 +56,14 @@ $$
 
 ### Practical Application Guidelines
 
-<Aside type="note" title="When to Use Poisson Approximation">
-
+:::note[When to Use Poisson Approximation]
 Use $X \sim \text{Po}(np)$ to approximate $X \sim B(n,p)$ when:
 - $n$ is large
 - $p$ is small
 - $np$ is moderate (typically $np \leq 10$)
 
 **Computational Advantage:** Reduces calculation from two parameters $(n,p)$ to one parameter $\lambda = np$, with readily available Poisson tables.
-
-</Aside>
-
+:::
 **Example 1 (Quality Control Application):**
 
 A factory produces 1000 components per day with a defect rate of 0.005. What's the probability of exactly 5 defective components?
@@ -112,14 +102,11 @@ In a certain region, $95\%$ of the population has lactose intolerance. A medical
 
 ### The Discovery of Universal Convergence
 
-<Aside type="tip" title="Historical Breakthrough">
-
+:::tip[Historical Breakthrough]
 **Abraham de Moivre (1733)** and **Pierre-Simon Laplace (1812)** made a stunning observation:
 
 When $n$ becomes large, the histogram of a binomial distribution $B(n,p)$ begins to look remarkably like a bell-shaped curve — the normal distribution!
-
-</Aside>
-
+:::
 ### Normal Approximation to Binomial Distribution
 
 **Theorem (De Moivre-Laplace Theorem):** If $X \sim B(n,p)$ where $n$ is large and $p$ is not too close to 0 or 1, then:
@@ -164,16 +151,13 @@ Mean = Variance = 12
 
 When we approximate a discrete distribution with a continuous one, we face a conceptual problem:
 
-<Aside type="caution" title="The Discrete-Continuous Paradox">
-
+:::caution[The Discrete-Continuous Paradox]
 **Discrete:** $P(X = 5)$ has a definite value
 
 **Continuous:** $P(Y = 5) = 0$ for any continuous random variable $Y$
 
 **Solution:** We must think of the discrete value 5 as representing the interval $[4.5, 5.5)$ in the continuous approximation.
-
-</Aside>
-
+:::
 ### Continuity Correction Rules
 
 **Theorem (Continuity Correction):** When approximating a discrete distribution with a continuous distribution, use these transformations:
@@ -299,14 +283,11 @@ $$
 Z_n = \frac{S_n - n\mu}{\sigma\sqrt{n}} \stackrel{\text{approx}}{\sim} N(0,1)
 $$
 
-<Aside type="tip" title="Why is CLT so important?">
-
+:::tip[Why is CLT so important?]
 The Central Limit Theorem explains why the normal distribution appears everywhere in nature and statistics — it's the natural destination when we add many independent random effects together.
 
 **Key Insight:** No matter what the original distribution looks like, sums of many independent copies always converge to the same bell-shaped curve!
-
-</Aside>
-
+:::
 ### Discovering CLT Through Dice: A Visual Journey
 
 Let's see the magic of CLT in action using the simple example of rolling dice.
@@ -354,16 +335,13 @@ $\text{Var}(S_2) = \text{Var}(X_1) + \text{Var}(X_2) =$ \_\_\_\_\_\_
 - *n = 2: Triangular shape — the peak emerges, Mean = 7.0*
 - *n large: Beautiful bell curve — exactly the normal distribution, Mean = 3.5n*
 
-<Aside type="tip" title="The Amazing Pattern">
-
+:::tip[The Amazing Pattern]
 - **n = 1:** Perfectly uniform distribution — flat and rectangular
 - **n = 2:** Triangular shape appears — the peak emerges
 - **n large:** Beautiful bell curve — exactly normal distribution!
 
 **The Universal Truth:** This same pattern occurs no matter what the original distribution is — uniform, exponential, discrete, continuous, or any other shape. The sum always becomes normal!
-
-</Aside>
-
+:::
 ### Connecting CLT to Our Earlier Work
 
 Now we can understand why our approximation methods work so well:
@@ -400,8 +378,7 @@ This explains our normal approximation to Poisson distribution!
 
 ### The Power of CLT: Real-World Applications
 
-<Aside type="note" title="Where CLT Appears in Nature">
-
+:::note[Where CLT Appears in Nature]
 The Central Limit Theorem explains why normal distributions are everywhere:
 
 - **Human Heights:** Sum of many genetic and environmental factors
@@ -411,9 +388,7 @@ The Central Limit Theorem explains why normal distributions are everywhere:
 - **Manufacturing Quality:** Sum of many production variations
 
 **The Universal Pattern:** Whenever a quantity results from the addition of many independent factors, it tends to follow a normal distribution!
-
-</Aside>
-
+:::
 **Example 9 (CLT in Action: Quality Control):**
 
 A factory produces items where the final weight is affected by:
@@ -430,8 +405,7 @@ This is why quality control charts always assume normal distributions!
 
 ### Looking Forward: The Mathematical Foundation
 
-<Aside type="note" title="A Glimpse into Advanced Mathematics">
-
+:::note[A Glimpse into Advanced Mathematics]
 The Central Limit Theorem is one of the most profound results in mathematics, but its complete proof requires advanced tools we haven't developed yet:
 
 - **Moment Generating Functions** — to analyze the behavior of sums
@@ -439,7 +413,5 @@ The Central Limit Theorem is one of the most profound results in mathematics, bu
 - **Taylor Series and Limits** — to handle the asymptotic behavior
 
 **Coming in S3:** In your further studies, you'll encounter the mathematical machinery needed to prove CLT rigorously. For now, we focus on understanding *why* it works and *how* to apply it.
-
-</Aside>
-
+:::
 **The Mathematical Beauty:** The Central Limit Theorem reveals a fundamental harmony in randomness — no matter how chaotic individual components might be, their collective behavior gravitates toward the same universal pattern: the normal distribution serves as nature's "attractor" for randomness.

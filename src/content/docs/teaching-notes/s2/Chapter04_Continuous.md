@@ -2,13 +2,11 @@
 title: "S2 Chapter 4: Continuous Random Variables"
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 ## Two Different Kinds of Randomness
 
 Imagine you're working at a customer service call center. Throughout our previous chapters, we've mastered the art of describing "counts" - binomial distributions and Poisson distributions tell us **how many times events occur**. But now, we want to ask a fundamentally different question: **How long do we need to wait until the first event occurs?**
 
-<Aside type="note" title="Contrasting Two Types of Problems">
+:::note[Contrasting Two Types of Problems]
 **Discrete Problems (Already Solved):**
 - "How many customer calls do we receive in one day?" → Answer: An integer (0, 1, 2, 3, ...), described by **Poisson distribution**
 - "How many defective products in a batch of 100?" → Answer: An integer (0 to 100), described by **binomial distribution**
@@ -16,8 +14,7 @@ Imagine you're working at a customer service call center. Throughout our previou
 **Continuous Problems (New Challenge):**
 - "Starting from this moment, how long must we wait until the next customer call?" → Answer: A positive real number (like 5.2 minutes)
 - "What is the exact weight of a randomly selected product?" → Answer: A real number with potentially infinite precision
-</Aside>
-
+:::
 ## The Language of Continuous Random Variables
 
 ### Probability Density Function (PDF) - Continuous "Probability Mass"
@@ -36,15 +33,14 @@ Let's understand this concept by observing what happens as we increase the numbe
 
 $$P(a < X < b) = \text{Area under } f(x) \text{ between } a \text{ and } b$$
 
-<Aside type="tip" title="Key Insight: The Evolution from Mass to Density">
+:::tip[Key Insight: The Evolution from Mass to Density]
 **Observe the pattern:**
 - **Few discrete values:** Each individual probability is substantial (like 0.3, 0.2, 0.15...)
 - **Many discrete values:** Each individual probability becomes smaller (like 0.05, 0.03, 0.02...)
 - **Infinite continuous values:** Each individual probability becomes zero, but the **density** $f(x)$ tells us how "concentrated" the probability is near each point
 
 **The fundamental shift:** We move from asking "What's $P(X = 5)$?" to asking "What's $P(4.9 < X < 5.1)$?"
-</Aside>
-
+:::
 This visualization shows us why we need a new mathematical framework for continuous random variables. The "height" of the curve at any point represents the probability density, and the area under the curve between two points gives us the actual probability.
 
 **Definition (Probability Density Function):**
@@ -55,14 +51,13 @@ For a continuous random variable $X$, we describe its probability distribution u
 2. $P(a < X < b) = \int_a^b f(x) \, dx$ (probability is the area under the curve)
 3. $\int_{-\infty}^{\infty} f(x) \, dx = 1$ (total area represents total probability = 1)
 
-<Aside type="tip" title="Key Understanding: Density vs Probability">
+:::tip[Key Understanding: Density vs Probability]
 **Crucial Point:** $f(x)$ is *not* a probability - it's a probability *density*.
 
 - A large value of $f(x)$ means $X$ is likely to take values near $x$
 - For any specific point $a$: $P(X = a) = 0$
 - This aligns with geometric intuition - the probability of hitting an exact point on a line is zero
-</Aside>
-
+:::
 **Example:**
 
 Consider a random variable $X$ with probability density function:
@@ -102,7 +97,7 @@ $$F(x) = P(X \leq x) = \int_{-\infty}^{x} f(t) \, dt$$
 
 This represents the probability that the random variable takes a value less than or equal to $x$.
 
-<Aside type="tip" title="Key Properties of CDF">
+:::tip[Key Properties of CDF]
 For any continuous random variable with CDF $F(x)$:
 
 **1. Non-decreasing:** If $x_1 < x_2$, then $F(x_1) \leq F(x_2)$
@@ -114,8 +109,7 @@ For any continuous random variable with CDF $F(x)$:
 - *Interpretation:* CDF represents cumulative probability, which must be between 0 and 1
 
 **4. Probability calculation:** $P(a < X < b) = P(a \leq X \leq b) = P(a < X \leq b) = F(b) - F(a)$
-</Aside>
-
+:::
 **Theorem (Fundamental Relationship between PDF and CDF):**
 
 For continuous random variables:
@@ -201,7 +195,7 @@ $$E(X) = \sum_{i} x_i \cdot P(X = x_i)$$
 
 But what happens when we transition to continuous variables where $P(X = x_i) = 0$ for any specific value? The answer lies in a beautiful mathematical evolution: **sums become integrals**.
 
-<Aside type="tip" title="The Intuitive Bridge: From Sum to Integral">
+:::tip[The Intuitive Bridge: From Sum to Integral]
 **Discrete Case:** $E(X) = \sum_i x_i \cdot P(X = x_i)$
 - Each value $x_i$ is weighted by its probability $P(X = x_i)$
 - We sum over all possible discrete values
@@ -212,8 +206,7 @@ But what happens when we transition to continuous variables where $P(X = x_i) = 
 - The integral represents the "limit of increasingly fine sums"
 
 **Physical Interpretation:** Think of $f(x)$ as the "mass density" along a rod. The expected value is the center of mass - the balance point where the rod would perfectly balance on a fulcrum.
-</Aside>
-
+:::
 **Definition (Expected Value and Variance for Continuous Random Variables):**
 
 For a continuous random variable $X$ with PDF $f(x)$:
@@ -323,7 +316,7 @@ The mode represents the most "dense" point of the distribution - where the proba
 
 Look at these three distributions. Roughly denote the mode, median, and mean, and identify their skewness:
 
-<Aside type="tip" title="The Mean-Median-Mode Relationship">
+:::tip[The Mean-Median-Mode Relationship]
 This is the most practical method for determining skewness:
 
 | Distribution Type | Relationship | Interpretation |
@@ -333,8 +326,7 @@ This is the most practical method for determining skewness:
 | Left-skewed | Mean $<$ Median $<$ Mode | Negative skew |
 
 **Why this works:** The mean is "pulled" toward the tail because it's sensitive to extreme values, while the median and mode are more resistant to outliers.
-</Aside>
-
+:::
 **Distribution A:** Right-skewed (long right tail)
 
 **Distribution B:** Symmetric (bell-shaped)
@@ -364,7 +356,7 @@ where $c$ is a positive constant.
 
 ## Homework Exercises
 
-<Aside type="note" title="Jan15/2">
+:::note[Jan15/2]
 A continuous random variable $X$ has cumulative distribution function
 
 $$F(x) = \begin{cases}
@@ -379,9 +371,9 @@ $$F(x) = \begin{cases}
 4. Write down the value of E($X$)
 5. Find Var($X$)
 6. Hence or otherwise find E($3X^2 + 1$)
-</Aside>
+:::
 
-<Aside type="note" title="Jan15/5">
+:::note[Jan15/5]
 The random variable $X$ has probability density function $f(x)$ given by
 
 $$f(x) = \begin{cases}
@@ -396,9 +388,9 @@ Given that E($X$) = $\frac{17}{12}$
 
 1. Find the value of $k$ and the value of $a$
 2. Write down the mode of $X$
-</Aside>
+:::
 
-<Aside type="note" title="June14/2">
+:::note[June14/2]
 A random variable $X$ has cumulative distribution function F($x$) given by
 
 $$F(x) = \begin{cases}
@@ -411,11 +403,10 @@ $$F(x) = \begin{cases}
 2. Specify fully the probability density function $f(x)$
 3. Find the mode of $X$
 4. Describe the skewness of this distribution. Justify your answer.
-</Aside>
-
+:::
 ## (Optional) From Poisson to Exponential Distribution
 
-<Aside type="tip" title="Background Review and Setup">
+:::tip[Background Review and Setup]
 **Recall the Three Conditions of a Poisson Process:**
 1. Events occur **independently**
 2. Events occur **singly** (no simultaneous events)
@@ -430,8 +421,7 @@ $$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} \quad \text{for } k = 0, 1, 2, 3,
 where:
 - $\lambda$ is the average number of events per time interval
 - $k$ is the actual number of events observed
-</Aside>
-
+:::
 **Key Insight:** We know how to count events, but what about waiting times between events?
 
 **Scenario:** Suppose a process (like calls to a customer service center) is a Poisson process with rate $\lambda$.
@@ -488,7 +478,7 @@ $$E(T) = \int_0^{\infty} t \cdot f_T(t) \, dt = \_\_\_$$
 
 ---
 
-<Aside type="tip" title="The Exponential Distribution">
+:::tip[The Exponential Distribution]
 We have successfully derived that in a Poisson process, the waiting time $T$ follows an **Exponential Distribution** with parameter $\lambda$, denoted $T \sim \text{Exp}(\lambda)$.
 
 **Key Properties:**
@@ -497,11 +487,11 @@ We have successfully derived that in a Poisson process, the waiting time $T$ fol
 - Mean: $E(T) = \frac{1}{\lambda}$
 
 **Interpretation:** If events occur at rate $\lambda$ per unit time, the average waiting time until the first event is $\frac{1}{\lambda}$ time units.
-</Aside>
+:::
 
-<Aside type="note" title="Applications of Exponential Distribution">
+:::note[Applications of Exponential Distribution]
 1. If customers arrive at a bank at a rate of 3 per hour, what's the probability that the next customer arrives within 15 minutes?
 2. If the average lifetime of a light bulb is 1000 hours, what's the probability it lasts more than 1200 hours? (Assume exponential distribution)
 
 **Your solutions:**
-</Aside>
+:::

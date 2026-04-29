@@ -2,16 +2,13 @@
 title: "S2 Chapter 7: Hypothesis Testing"
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 # From Suspicion to Scientific Proof: The Art of Statistical Decision-Making
 
 Remember our mobile game investigation from the previous chapter? We observed 0 SSR cards in 200 draws when the company claimed a 1% drop rate. We calculated that this had a 13.5% probability of occurring by random chance. But how do we decide: is 13.5% "small enough" to conclude the company is lying?
 
-<Aside type="tip" title="The Central Challenge">
+:::tip[The Central Challenge]
 How do we transform probability calculations into definitive decisions about population parameters?
-</Aside>
-
+:::
 This chapter introduces **hypothesis testing** — the systematic framework that converts statistical evidence into rational, defensible conclusions about the real world.
 
 ## 1. The Architecture of Scientific Proof
@@ -54,15 +51,14 @@ The **alternative hypothesis** is a statement that contradicts the null hypothes
 
 **The Logic:** We assume the company is innocent ($H_0$) unless we have strong enough evidence to conclude they're lying ($H_1$).
 
-<Aside type="tip" title="The Burden of Proof Principle">
+:::tip[The Burden of Proof Principle]
 Just like in a courtroom, the burden of proof lies with the alternative hypothesis. We:
 
 1. Start by assuming $H_0$ is true
 2. Collect evidence (sample data)
 3. Ask: "If $H_0$ were true, how unlikely is this evidence?"
 4. If the evidence is sufficiently unlikely, we reject $H_0$ in favor of $H_1$
-</Aside>
-
+:::
 ### 1.3 The Three Types of Alternative Hypotheses
 
 Alternative hypotheses come in three forms, each leading to different testing approaches:
@@ -104,14 +100,13 @@ $H_0$: \_\_\_ \quad $H_1$: \_\_\_ \quad Test type: \_\_\_
 
 A **test statistic** is the observed value from the sample that we use to assess whether the data aligns with the null hypothesis.
 
-<Aside type="tip" title="Test Statistics for Common Distributions">
+:::tip[Test Statistics for Common Distributions]
 **For Binomial Distribution:** Test statistic = observed number of successes ($X$)
 
 **For Poisson Distribution:** Test statistic = observed count of events ($X$)
 
 The key insight: We don't just look at the test statistic value — we examine its **probability under $H_0$**.
-</Aside>
-
+:::
 **Example 2.1: Test Statistic for SSR Investigation**
 
 **Our Setup:**
@@ -207,12 +202,11 @@ $$\text{p-value} = P(X \leq 0) = P(X = 0) = e^{-2} \cdot \frac{2^0}{0!} = e^{-2}
 
 The **significance level** is the threshold probability below which we consider evidence "strong enough" to reject the null hypothesis. Common values are $\alpha = 0.05$, $0.01$, or $0.10$.
 
-<Aside type="tip" title="Decision Rule">
+:::tip[Decision Rule]
 **If p-value $\leq \alpha$:** Reject $H_0$ (evidence is "statistically significant")
 
 **If p-value $> \alpha$:** Fail to reject $H_0$ (insufficient evidence against $H_0$)
-</Aside>
-
+:::
 **Example 2.5: SSR Investigation — Final Decision**
 
 **Our Results:**
@@ -444,7 +438,7 @@ Using a 5% level of significance, test whether or not the proportion of people e
 
 Hypothesis testing transforms uncertain observations into confident decisions by:
 
-<Aside type="tip" title="The Hypothesis Testing Process">
+:::tip[The Hypothesis Testing Process]
 **1. Formulate Hypotheses:** Set up $H_0$ (status quo) vs. $H_1$ (what you're trying to prove)
 
 **2. Choose Significance Level:** Decide how much Type I error risk you're willing to accept
@@ -456,8 +450,7 @@ Hypothesis testing transforms uncertain observations into confident decisions by
 **5. Make Decision:** Compare p-value to $\alpha$ and draw conclusions
 
 **6. Interpret in Context:** Translate statistical results into practical implications
-</Aside>
-
+:::
 **Key Insights for Different Distributions:**
 - **Binomial:** Use when counting successes in fixed trials
 - **Poisson:** Use for rare events or large $n$, small $p$ scenarios
