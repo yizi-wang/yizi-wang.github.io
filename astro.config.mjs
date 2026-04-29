@@ -1,8 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://yizi-wang.github.io',
 	integrations: [
@@ -18,16 +19,36 @@ export default defineConfig({
 				{ icon: 'github', href: 'https://github.com/yizi-wang', label: 'GitHub' },
 			],
 			sidebar: [
-				{ label: 'About', link: '/about' },
+				{
+					label: 'About',
+					translations: { zh: '关于我' },
+					link: '/about',
+				},
 				{
 					label: 'TMUA Handouts',
+					translations: { zh: 'TMUA 讲义' },
 					autogenerate: { directory: 'tmua' },
 				},
 				{
 					label: 'Teaching Notes',
+					translations: { zh: '教学笔记' },
 					autogenerate: { directory: 'notes' },
+				},
+			],
+			customCss: ['./src/styles/custom.css'],
+			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'stylesheet',
+						href: 'https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css',
+					},
 				},
 			],
 		}),
 	],
+	markdown: {
+		remarkPlugins: [remarkMath],
+		rehypePlugins: [rehypeKatex],
+	},
 });

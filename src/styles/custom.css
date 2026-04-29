@@ -1,0 +1,4 @@
+/* Content width wider for better readability */
+:root {
+  --sl-content-width: 55rem;
+}
