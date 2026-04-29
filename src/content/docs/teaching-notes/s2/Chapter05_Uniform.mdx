@@ -1,0 +1,384 @@
+---
+title: "S2 Chapter 5: The Uniform Distribution"
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## The Purest Form of Randomness: A World of Equal Possibilities
+
+We have seen that the exponential distribution describes the patient mathematics of "waiting," what if we need to model something fundamentally different - **complete ignorance**?
+
+<Aside type="tip" title="A Philosophical Question">
+If you know a number lies between 0 and 10, but have absolutely no other information, what's the most fair assumption you can make about its value?
+</Aside>
+
+The principle of **maximum ignorance** suggests: treat every equal-length interval as equally likely. This leads us naturally to the **uniform distribution** - the mathematics of "pure randomness."
+
+## 1 The Language of Uniform Distributions
+
+### 1.1 Definition and Probability Density Function - The Rectangle of Certainty
+
+**Definition (Continuous Uniform Distribution):** A continuous random variable $X$ follows a uniform distribution on the interval $[a, b]$ if it has constant probability density over that interval. We write:
+
+$$X \sim \text{Uniform}(a, b) \quad \text{or} \quad X \sim U(a, b)$$
+
+The key insight is that "uniform" means **constant density** - imagine a perfectly flat rectangle where height never changes.
+
+**Deriving the PDF through logical necessity:**
+
+Since the distribution is "uniform," the PDF must be some constant $k$ over $[a, b]$:
+
+$$f(x) = \begin{cases} 
+k & \text{if } a \leq x \leq b \\
+0 & \text{otherwise}
+\end{cases}$$
+
+But what is this constant $k$? We use the fundamental requirement: total probability equals 1.
+
+$$\int_{-\infty}^{\infty} f(x) \, dx = \int_a^b k \, dx = k(b - a) = 1$$
+
+Therefore: $k = \frac{1}{b - a}$
+
+<Aside type="note" title="The Uniform PDF">
+For $X \sim \text{Uniform}(a, b)$:
+
+$$f(x) = \begin{cases} 
+\frac{1}{b - a} & \text{if } a \leq x \leq b \\
+0 & \text{otherwise}
+\end{cases}$$
+
+**Geometric Interpretation:** This creates a rectangle with width $(b-a)$ and height $\frac{1}{b-a}$, giving area = 1.
+</Aside>
+
+**Example 1:**
+
+Consider $X \sim \text{Uniform}(1, 5)$.
+
+**(a) Write down the PDF and sketch it**
+
+$$f(x) = \begin{cases} 
+\frac{1}{5-1} = \frac{1}{4} & \text{if } 1 \leq x \leq 5 \\
+0 & \text{otherwise}
+\end{cases}$$
+
+This creates a rectangle from $x = 1$ to $x = 5$ with height $\frac{1}{4}$.
+
+**(b) Find $P(2 < X < 3.5)$**
+
+Using the "rectangular property":
+
+$$P(2 < X < 3.5) = \frac{\text{interval length}}{\text{total length}} = \frac{3.5 - 2}{5 - 1} = \frac{1.5}{4} = 0.375$$
+
+**(c) Find $P(X = 3)$**
+
+For any continuous distribution: $P(X = 3) = 0$. Individual points have zero probability.
+
+**(d) Find $P(X > 4.5)$**
+
+$$P(X > 4.5) = \frac{5 - 4.5}{5 - 1} = \frac{0.5}{4} = 0.125$$
+
+### 1.2 Cumulative Distribution Function - The Linear Climb
+
+**Building the CDF step by step:**
+
+For $X \sim \text{Uniform}(a, b)$, we calculate $F(x) = P(X \leq x)$:
+
+**Case 1:** $x < a$
+
+$$F(x) = 0 \text{ (No probability accumulated yet)}$$
+
+**Case 2:** $a \leq x \leq b$
+
+$$F(x) = \int_a^x \frac{1}{b-a} dt = \frac{x-a}{b-a} \text{ (Linear accumulation)}$$
+
+**Case 3:** $x > b$
+
+$$F(x) = 1 \text{ (All probability accumulated)}$$
+
+<Aside type="note" title="The Uniform CDF">
+For $X \sim \text{Uniform}(a, b)$:
+
+$$F(x) = \begin{cases} 
+0 & \text{if } x < a \\
+\frac{x - a}{b - a} & \text{if } a \leq x \leq b \\
+1 & \text{if } x > b
+\end{cases}$$
+
+**Key Properties:**
+
+- $F(\frac{a+b}{2}) = 0.5$ (median always at center)
+</Aside>
+
+**Example 2: CDF Applications**
+
+For $X \sim \text{Uniform}(-2, 6)$:
+
+**(a) Write down the CDF**
+
+$$F(x) = \begin{cases} 
+0 & \text{if } x < -2 \\
+\frac{x - (-2)}{6 - (-2)} = \frac{x + 2}{8} & \text{if } -2 \leq x \leq 6 \\
+1 & \text{if } x > 6
+\end{cases}$$
+
+**(b) Find $P(0 < X \leq 4)$**
+
+$$P(0 < X \leq 4) = F(4) - F(0) = \frac{4 + 2}{8} - \frac{0 + 2}{8} = \frac{6}{8} - \frac{2}{8} = \frac{1}{2}$$
+
+**(c) Find the first quartile**
+
+$Q_1$ satisfies $F(Q_1) = 0.25$:
+
+$$\frac{Q_1 + 2}{8} = 0.25 \Rightarrow Q_1 + 2 = 2 \Rightarrow Q_1 = 0$$
+
+**Example 3: Airport Waiting Times**
+
+The waiting times, in minutes, between flight take-offs at an airport are modelled by the continuous random variable $X$ with probability density function
+
+$$f(x) = \begin{cases}
+\frac{1}{5} & 2 \leq x \leq 7 \\
+0 & \text{otherwise}
+\end{cases}$$
+
+1. Write down the name of this distribution.
+2. A randomly selected flight takes off at 9 am. Find the probability that the next flight takes off before 9:05 am.
+3. Find the probability that at least 1 of the next 5 flights has a waiting time of more than 6 minutes.
+4. Find the cumulative distribution function of $X$, for all $x$.
+5. Sketch the cumulative distribution function of $X$ for $2 \leq x \leq 7$.
+
+### 1.3 Numerical Characteristics - Mean, Variance, and Transformations
+
+#### From Rectangle to Balance Point: The Natural Center
+
+For continuous random variables, we learned that expected value is the "center of gravity." For uniform distributions, where does this balance point lie?
+
+For $X \sim \text{Uniform}(a, b)$:
+
+$$
+\begin{aligned}
+E(X) &= \int_a^b x \cdot \frac{1}{b - a} \, dx = \frac{1}{b - a} \int_a^b x \, dx = \frac{1}{b - a} \cdot \frac{x^2}{2}\Big|_a^b = \frac{b^2 - a^2}{2(b - a)} = \frac{(b - a)(b + a)}{2(b - a)} = \frac{a + b}{2}
+\end{aligned}
+$$
+
+**Beautiful symmetry:** The expected value is exactly the midpoint of the interval!
+
+#### Variance: How Wide is "Wide"?
+
+Using $\text{Var}(X) = E(X^2) - [E(X)]^2$:
+
+**Step 1: Calculate $E(X^2)$**
+
+$$E(X^2) = \int_a^b x^2 \cdot \frac{1}{b - a} \, dx = \frac{1}{b - a} \cdot \frac{x^3}{3}\Big|_a^b = \frac{b^3 - a^3}{3(b - a)} = \frac{a^2 + ab + b^2}{3}$$
+
+**Step 2: Apply the variance formula**
+
+$$\text{Var}(X) = \frac{a^2 + ab + b^2}{3} - \left(\frac{a + b}{2}\right)^2 = \frac{(b - a)^2}{12}$$
+
+<Aside type="tip" title="Uniform Distribution: Key Properties">
+For $X \sim \text{Uniform}(a, b)$:
+
+$$E(X) = \frac{a + b}{2} \quad \text{(always the midpoint)}$$
+
+$$\text{Var}(X) = \frac{(b - a)^2}{12} \quad \text{(depends only on interval width)}$$
+
+**Key Insights:**
+
+- Mean = Median = Midpoint (perfect symmetry)
+- Variance depends only on interval width, not location
+</Aside>
+
+**Example 4: Parameter Relationships**
+
+The continuous random variable $X$ is uniformly distributed over the interval $[a, \beta]$ where $\beta > a$.
+
+Given that $E(X) = 8$:
+
+1. Write down an equation involving $a$ and $\beta$.
+
+Given also that $P(X \leq 13) = 0.7$:
+
+2. Find the value of $a$ and the value of $\beta$.
+3. Find $\text{Var}(X)$.
+4. Find $P(5 \leq X \leq 35)$.
+
+**Example 5: Kitchen Weighing Scales**
+
+Albert uses scales in his kitchen to weigh some fruit. The random variable $D$ represents, in grams, the weight of the fruit given by the scales minus the true weight of the fruit. The random variable $D$ is uniformly distributed over the interval $[-2.5, 2.5]$.
+
+1. Specify the probability density function of $D$.
+2. Find the standard deviation of $D$.
+3. Albert weighs a banana on the scales. Write down the probability that the weight given by the scales equals the true weight of the banana.
+4. Find the probability that the weight given by the scales is within 1 gram of the banana's true weight.
+5. Albert weighs 10 bananas on the scales, one at a time. Find the probability that the weight given by the scales is within 1 gram of the true weight for at least 6 of the bananas.
+
+## Homework Exercises
+
+**Exercise 1: WST02/01/June17/7**
+
+The continuous random variable $X$ is uniformly distributed over the interval $[a, b]$
+
+1. Find an expression, in terms of $a$ and $b$, for $E(3 - 2X)$ (2)
+2. Find $P(X > \frac{1}{3}b + \frac{2}{3}a)$ (2)
+
+Given that $E(X) = 0$
+
+3. find an expression, in terms of $b$ only, for $E(3X^2)$ (3)
+
+Given also that the range of $X$ is $18$
+
+4. find $\text{Var}(X)$ (2)
+
+**Exercise 2: WST02/01/June15/3**
+
+A piece of spaghetti has length $2c$, where $c$ is a positive constant. It is cut into two pieces at a random point. The continuous random variable $X$ represents the length of the longer piece and is uniformly distributed over the interval $[c, 2c]$.
+
+1. Sketch the graph of the probability density function of $X$ (2)
+2. Use integration to prove that $\text{Var}(X) = \frac{c^2}{12}$ (6)
+3. Find the probability that the longer piece is more than twice the length of the shorter piece. (3)
+
+**Exercise 3: 6684/01/June15/4**
+
+The continuous random variable $L$ represents the error, in metres, made when a machine cuts poles to a target length. The distribution of $L$ is a continuous uniform distribution over the interval $[0, 0.5]$
+
+1. Find $P(L < 0.4)$. (1)
+2. Write down $E(L)$. (1)
+3. Calculate $\text{Var}(L)$. (2)
+
+A random sample of $30$ poles cut by this machine is taken.
+
+4. Find the probability that fewer than $4$ poles have an error of more than $0.4$ metres from the target length. (3)
+
+When a new machine cuts poles to a target length, the error, $X$ metres, is modelled by the cumulative distribution function $F(x)$ where
+
+$$F(x) = \begin{cases} 
+0 & x < 0 \\
+4x - 4x^2 & 0 \leq x \leq 0.5 \\
+1 & \text{otherwise}
+\end{cases}$$
+
+5. Using this model, find $P(X > 0.4)$ (2)
+
+A random sample of $100$ poles cut by this new machine is taken.
+
+6. Using a suitable approximation, find the probability that at least $8$ of these poles have an error of more than $0.4$ metres. (3)
+
+## 2 Challenge: Buffon's Needle Experiment
+
+### The Ultimate Test of Uniform Distribution Theory
+
+Now we'll tackle one of the most famous problems in probability theory - one that beautifully demonstrates how uniform distributions can unlock the secrets of $\pi$ itself.
+
+In 1777, French mathematician Georges-Louis Leclerc, Comte de Buffon, posed this challenge: "What's the probability that a randomly dropped needle will cross a line on lined paper?"
+
+<Aside type="note" title="Buffon's Needle Setup">
+**Materials:**
+
+- Paper with parallel lines spaced distance $1$ apart
+- Needle of length $1$
+
+**Experiment:** Drop the needle randomly onto the paper.
+
+**Question:** What's $P(\text{needle crosses a line})$?
+
+**Amazing Discovery:** The answer involves $\pi$!
+</Aside>
+
+### Step 1: Identify the Random Variables
+
+<Aside type="note" title="Your Task">
+**Question:** What random variables should we use to model this problem?
+
+Think about:
+
+- What determines whether the needle crosses a line?
+- What aspects of the needle's position are random?
+- What distributions would naturally model these random aspects?
+</Aside>
+
+**Hint 1:** Consider the needle's position relative to the lines.
+
+Let $X$ be the perpendicular distance from the needle's center to the nearest line.
+
+**Question 1a:** The lines are spaced 1 unit apart. What is the range of possible values for $X$ (the distance from needle center to nearest line)?
+
+Answer: $X$ can range from \_\_\_\_ to \_\_\_\_
+
+**Question 1b:** If the needle is dropped "randomly," what distribution should $X$ follow?
+
+**Hint:** Since the needle is dropped randomly, it's equally likely to land anywhere. This means $X$ should be \_\_\_\_ distributed over its range.
+
+**Question 1c:** Now consider the needle's orientation. Let $\Theta$ be the acute angle between the needle and the parallel lines. What is the range of possible values for $\Theta$?
+
+Answer: $\Theta$ can range from \_\_\_\_ to \_\_\_\_
+
+**Question 1d:** What distribution should $\Theta$ follow?
+
+**Hint:** Due to rotational symmetry, the needle is equally likely to point in any direction. So $\Theta$ should be \_\_\_\_ distributed over its range.
+
+**Question 1e:** Are $X$ and $\Theta$ independent?
+
+**Think about it:** Does the position where the needle lands affect its angle? Does the angle affect where it lands? Your answer: \_\_\_\_
+
+### Step 2: Determine the Crossing Condition
+
+**Geometric Analysis:** When does the needle cross a line?
+
+**Question 2:** Look at the diagram. The needle extends $\frac{1}{2}$ unit from its center in each direction. When does the needle cross the nearest line? **Find the function $f(\Theta)$ such that the needle crosses a line if and only if $X \leq f(\Theta)$.**
+
+### Step 3: Calculate the Probability Using "Averaging"
+
+Since we have two random aspects (position $X$ and angle $\Theta$), we need a clever approach. Let's think step by step:
+
+**The Key Insight:** For each specific angle $\theta$, we can easily find the probability that the needle crosses a line. Then we "average" over all possible angles.
+
+**Question 3a:** Suppose the needle is oriented at a specific angle $\theta$ (where $0 \leq \theta \leq \frac{\pi}{2}$).
+
+- From Step 2, the needle crosses a line when $X \leq$ \_\_\_\_
+- Since $X$ is uniformly distributed on $[0, \frac{1}{2}]$, what is $P(\text{needle crosses} \mid \text{angle} = \theta)$?
+
+**Let's work through an example:** If $\theta = 30^{\circ} = \frac{\pi}{6}$, then:
+
+- The needle crosses when $X \leq \frac{1}{2}\sin(\frac{\pi}{6}) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$
+- Since $X$ is uniform on $[0, \frac{1}{2}]$: $P(\text{needle crosses} \mid \theta = 30^{\circ}) = \frac{\frac{1}{4}}{\frac{1}{2}} = \frac{1}{2}$
+
+**General formula:** $P(\text{needle crosses} \mid \text{angle} = \theta) = $ \_\_\_\_
+
+**Question 3b:** Now we need to find the overall probability. Since the angle $\Theta$ is also random and uniform on $[0, \frac{\pi}{2}]$, we need to "average" the conditional probabilities from Question 3a over all possible angles.
+
+**Mathematical Averaging:** When we have a continuous range of values, "averaging" becomes integration:
+
+$$P(\text{needle crosses}) = \frac{1}{\frac{\pi}{2} - 0} \int_0^{\pi/2} P(\text{needle crosses} \mid \text{angle} = \theta) \, d\theta$$
+
+Substitute your answer from Question 3a into this formula and evaluate the integral.
+
+**Step-by-step guidance:**
+
+$$
+\begin{aligned}
+P(\text{needle crosses}) &= \frac{1}{\frac{\pi}{2}} \int_0^{\pi/2} \underline{\hspace{3cm}} \, d\theta \\
+&= \frac{2}{\pi} \int_0^{\pi/2} \underline{\hspace{3cm}} \, d\theta \\
+&= \underline{\hspace{3cm}}
+\end{aligned}
+$$
+
+### Step 4: Discover the Amazing Result
+
+**Question 4a:** Complete the calculation from Step 3. You should get:
+
+$$P(\text{needle crosses a line}) = \underline{\hspace{3cm}}$$
+
+**Question 4b:** Look at your answer! What famous mathematical constant appears? This is the amazing discovery that made Buffon's needle experiment so famous.
+
+**Question 4c:** Rearrange your probability formula to express $\pi$ in terms of the crossing probability:
+
+$$\pi = \underline{\hspace{3cm}}$$
+
+**Question 4d:** How could you use this experiment to estimate $\pi$? If you performed the experiment 1000 times and observed 637 crossings, what would be your estimate for $\pi$?
+
+$$\text{Your calculation: } \underline{\hspace{5cm}}.$$
+
+**Extension Challenge:**
+
+1. What happens if the needle length is not equal to the line spacing? Derive the general formula for probability when needle length is $\ell$ and line spacing is $d$.
+2. If $\ell > d$ (needle longer than line spacing), how would you modify the analysis?
+3. Design a classroom experiment using readily available materials (toothpicks, paper, etc.) to estimate $\pi$.
