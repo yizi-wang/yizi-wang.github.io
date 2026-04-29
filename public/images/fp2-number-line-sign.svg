@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="80" viewBox="0 0 500 80">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Number line -->
+  <line x1="30" y1="40" x2="470" y2="40" stroke="black" stroke-width="2"/>
+  <polygon points="470,40 460,35 460,45" fill="black"/>
+  <!-- Tick marks -->
+  <line x1="130" y1="35" x2="130" y2="45" stroke="blue" stroke-width="2"/>
+  <line x1="320" y1="35" x2="320" y2="45" stroke="blue" stroke-width="2"/>
+  <!-- Labels -->
+  <text x="130" y="65" text-anchor="middle" font-size="14" font-family="serif">-3</text>
+  <text x="320" y="65" text-anchor="middle" font-size="14" font-family="serif">2</text>
+  <text x="130" y="25" text-anchor="middle" font-size="12" fill="blue">x = -3 (Undefined)</text>
+  <text x="320" y="25" text-anchor="middle" font-size="12" fill="blue">x = 2 (Zero)</text>
+  <!-- Signs -->
+  <text x="80" y="35" text-anchor="middle" font-size="18" fill="red" font-weight="bold">+</text>
+  <text x="225" y="35" text-anchor="middle" font-size="18" fill="red" font-weight="bold">-</text>
+  <text x="400" y="35" text-anchor="middle" font-size="18" fill="red" font-weight="bold">+</text>
+</svg>

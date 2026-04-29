@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="80" viewBox="0 0 550 80">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Number line -->
+  <line x1="30" y1="40" x2="520" y2="40" stroke="black" stroke-width="2"/>
+  <polygon points="520,40 510,35 510,45" fill="black"/>
+  <!-- Tick marks -->
+  <line x1="100" y1="35" x2="100" y2="45" stroke="black" stroke-width="2"/>
+  <line x1="170" y1="35" x2="170" y2="45" stroke="black" stroke-width="2"/>
+  <line x1="240" y1="35" x2="240" y2="45" stroke="black" stroke-width="2"/>
+  <line x1="400" y1="35" x2="400" y2="45" stroke="black" stroke-width="2"/>
+  <!-- Labels -->
+  <text x="100" y="65" text-anchor="middle" font-size="14" font-family="serif">-4/3</text>
+  <text x="170" y="65" text-anchor="middle" font-size="14" font-family="serif">-1</text>
+  <text x="240" y="65" text-anchor="middle" font-size="14" font-family="serif">0</text>
+  <text x="400" y="65" text-anchor="middle" font-size="14" font-family="serif">4</text>
+  <!-- Signs -->
+  <text x="65" y="35" text-anchor="middle" font-size="16" fill="red" font-weight="bold">+</text>
+  <text x="135" y="35" text-anchor="middle" font-size="16" fill="red" font-weight="bold">-</text>
+  <text x="205" y="35" text-anchor="middle" font-size="16" fill="red" font-weight="bold">+</text>
+  <text x="320" y="35" text-anchor="middle" font-size="16" fill="red" font-weight="bold">-</text>
+  <text x="460" y="35" text-anchor="middle" font-size="16" fill="red" font-weight="bold">+</text>
+</svg>

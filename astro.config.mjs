@@ -40,6 +40,11 @@ export default defineConfig({
 					translations: { zh: '教学笔记' },
 					autogenerate: { directory: 'teaching-notes' },
 				},
+				{
+					label: 'Further Math',
+					translations: { zh: '进阶数学' },
+					autogenerate: { directory: 'further-math' },
+				},
 			],
 			customCss: ['./src/styles/custom.css'],
 			head: [
