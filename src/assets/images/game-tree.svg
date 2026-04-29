@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" width="700" height="520" font-family="Georgia, serif">
+  <style>
+    text { font-size: 14px; fill: #1a1a2e; }
+    .label { font-size: 12px; fill: #666; }
+    .winner { font-size: 11px; fill: #888; font-style: italic; }
+    .prob { font-size: 12px; fill: #e74c3c; font-weight: bold; }
+    .node { fill: #4a90d9; stroke: #2c5f8a; stroke-width: 2; }
+    .leaf { fill: #27ae60; stroke: #1a7a42; stroke-width: 2; }
+    .title { font-size: 16px; font-weight: bold; fill: #1a1a2e; }
+  </style>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" class="title">Antoine vs Blaise — Game Tree</text>
+
+  <!-- Root node -->
+  <circle cx="350" cy="70" r="20" class="node"/>
+  <text x="350" y="75" text-anchor="middle" fill="white" font-size="13">Start</text>
+
+  <!-- Level 1 edges -->
+  <line x1="350" y1="90" x2="200" y2="170" stroke="#666" stroke-width="2"/>
+  <line x1="350" y1="90" x2="500" y2="170" stroke="#666" stroke-width="2"/>
+  <text x="255" y="125" class="prob">0.5</text>
+  <text x="435" y="125" class="prob">0.5</text>
+
+  <!-- Level 1 nodes -->
+  <circle cx="200" cy="170" r="20" class="node"/>
+  <text x="200" y="175" text-anchor="middle" fill="white" font-size="13">A</text>
+  <text x="200" y="200" text-anchor="middle" class="label">Round 1: Antoine wins</text>
+
+  <circle cx="500" cy="170" r="20" class="node"/>
+  <text x="500" y="175" text-anchor="middle" fill="white" font-size="13">B</text>
+  <text x="500" y="200" text-anchor="middle" class="label">Round 1: Blaise wins</text>
+
+  <!-- Level 2 edges from A -->
+  <line x1="200" y1="190" x2="110" y2="280" stroke="#666" stroke-width="2"/>
+  <line x1="200" y1="190" x2="290" y2="280" stroke="#666" stroke-width="2"/>
+  <text x="140" y="230" class="prob">0.5</text>
+  <text x="255" y="230" class="prob">0.5</text>
+
+  <!-- Level 2 nodes from A -->
+  <circle cx="110" cy="280" r="18" class="leaf"/>
+  <text x="110" y="285" text-anchor="middle" fill="white" font-size="11">AA</text>
+  <text x="110" y="310" text-anchor="middle" class="winner">Antoine wins 3-1</text>
+  <text x="110" y="325" text-anchor="middle" class="label">P = 0.25</text>
+
+  <circle cx="290" cy="280" r="18" class="node"/>
+  <text x="290" y="285" text-anchor="middle" fill="white" font-size="11">AB</text>
+  <text x="290" y="310" text-anchor="middle" class="label">Round 2: Blaise wins</text>
+
+  <!-- Level 3 from AB -->
+  <line x1="290" y1="298" x2="220" y2="380" stroke="#666" stroke-width="2"/>
+  <line x1="290" y1="298" x2="360" y2="380" stroke="#666" stroke-width="2"/>
+  <text x="240" y="335" class="prob">0.5</text>
+  <text x="335" y="335" class="prob">0.5</text>
+
+  <circle cx="220" cy="380" r="18" class="leaf"/>
+  <text x="220" y="385" text-anchor="middle" fill="white" font-size="11">ABA</text>
+  <text x="220" y="410" text-anchor="middle" class="winner">Antoine wins 3-2</text>
+  <text x="220" y="425" text-anchor="middle" class="label">P = 0.125</text>
+
+  <circle cx="360" cy="380" r="18" class="leaf"/>
+  <text x="360" y="385" text-anchor="middle" fill="white" font-size="11">ABB</text>
+  <text x="360" y="410" text-anchor="middle" class="winner">Blaise wins 3-2</text>
+  <text x="360" y="425" text-anchor="middle" class="label">P = 0.125</text>
+
+  <!-- Level 2 edges from B -->
+  <line x1="500" y1="190" x2="410" y2="280" stroke="#666" stroke-width="2"/>
+  <line x1="500" y1="190" x2="590" y2="280" stroke="#666" stroke-width="2"/>
+  <text x="440" y="230" class="prob">0.5</text>
+  <text x="560" y="230" class="prob">0.5</text>
+
+  <!-- Level 2 nodes from B -->
+  <circle cx="410" cy="280" r="18" class="node"/>
+  <text x="410" y="285" text-anchor="middle" fill="white" font-size="11">BA</text>
+  <text x="410" y="310" text-anchor="middle" class="label">Round 2: Antoine wins</text>
+
+  <circle cx="590" cy="280" r="18" class="leaf"/>
+  <text x="590" y="285" text-anchor="middle" fill="white" font-size="11">BB</text>
+  <text x="590" y="310" text-anchor="middle" class="winner">Blaise wins 3-1</text>
+  <text x="590" y="325" text-anchor="middle" class="label">P = 0.25</text>
+
+  <!-- Level 3 from BA -->
+  <line x1="410" y1="298" x2="340" y2="380" stroke="#666" stroke-width="2"/>
+  <line x1="410" y1="298" x2="480" y2="380" stroke="#666" stroke-width="2"/>
+  <text x="360" y="335" class="prob">0.5</text>
+  <text x="460" y="335" class="prob">0.5</text>
+
+  <circle cx="340" cy="380" r="18" class="leaf"/>
+  <text x="340" y="385" text-anchor="middle" fill="white" font-size="11">BAA</text>
+  <text x="340" y="410" text-anchor="middle" class="winner">Antoine wins 3-2</text>
+  <text x="340" y="425" text-anchor="middle" class="label">P = 0.125</text>
+
+  <circle cx="480" cy="380" r="18" class="leaf"/>
+  <text x="480" y="385" text-anchor="middle" fill="white" font-size="11">BAB</text>
+  <text x="480" y="410" text-anchor="middle" class="winner">Blaise wins 3-2</text>
+  <text x="480" y="425" text-anchor="middle" class="label">P = 0.125</text>
+
+  <!-- Legend -->
+  <rect x="50" y="450" width="12" height="12" rx="2" class="node"/>
+  <text x="70" y="462" class="label">Decision node</text>
+  <rect x="200" y="450" width="12" height="12" rx="2" class="leaf"/>
+  <text x="220" y="462" class="label">Terminal node (winner determined)</text>
+
+  <!-- Total -->
+  <text x="350" y="500" text-anchor="middle" class="title" style="font-size:14px">P(Antoine wins) = 0.25+0.125+0.125 = 0.5 | P(Blaise wins) = 0.25+0.125+0.125 = 0.5</text>
+</svg>
