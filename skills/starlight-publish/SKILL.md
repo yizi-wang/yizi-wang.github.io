@@ -179,13 +179,6 @@ Tell user:
 - GitHub Actions deployment time (~2-3 min)
 - Ask user to verify on the live site
 
-## Server Constraints
-
-- **RAM**: Only 2GB — `npm install` of large projects gets OOM killed
-- **Python**: 3.6 — too old for matplotlib/pillow
-- **Node**: v24 — sharp available for SVG→PNG conversion
-- **Build**: GitHub Actions (7GB RAM) handles builds fine; local builds may OOM
-
 ## Known Pitfalls Quick Reference
 
 | Issue | Symptom | Fix |
