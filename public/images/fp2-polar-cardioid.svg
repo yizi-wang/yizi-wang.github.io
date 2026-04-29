@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Grid circles -->
+  <circle cx="200" cy="200" r="60" fill="none" stroke="#eee" stroke-width="0.8"/>
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#eee" stroke-width="0.8"/>
+  <!-- Axes -->
+  <line x1="30" y1="200" x2="370" y2="200" stroke="black" stroke-width="1.2"/>
+  <line x1="200" y1="30" x2="200" y2="370" stroke="black" stroke-width="1.2"/>
+  <text x="372" y="205" font-size="12" font-style="italic">x</text>
+  <text x="205" y="25" font-size="12" font-style="italic">y</text>
+  <!-- Cardioid r = a(1+cosθ), a=60, plotted as x=r*cosθ, y=r*sinθ -->
+  <!-- Parametric: x = a(1+cosθ)cosθ, y = a(1+cosθ)sinθ -->
+  <!-- θ=0: r=120, (320,200); θ=π/2: r=60, (200,140); θ=π: r=0, (200,200); θ=3π/2: r=60, (200,260) -->
+  <path d="M320,200 C330,170 310,130 270,110 C240,95 215,100 200,140 C185,100 160,95 130,110 C90,130 70,170 80,200 C70,230 90,270 130,290 C160,305 185,300 200,260 C215,300 240,305 270,290 C310,270 330,230 320,200 Z" fill="#e74c3c" fill-opacity="0.15" stroke="#e74c3c" stroke-width="2"/>
+  <!-- Cusp point at origin side -->
+  <circle cx="80" cy="200" r="3" fill="#e74c3c"/>
+  <!-- Max point -->
+  <circle cx="320" cy="200" r="3" fill="#3498db"/>
+  <!-- Center of generating circle -->
+  <circle cx="200" cy="200" r="3" fill="black"/>
+  <text x="190" y="218" font-size="11">O</text>
+  <!-- Labels -->
+  <text x="325" y="195" font-size="12" fill="#3498db">2a</text>
+  <text x="50" y="205" font-size="12" fill="#e74c3c">cusp</text>
+  <text x="220" y="95" font-size="13" fill="#e74c3c" font-weight="bold">r = a(1+cos θ)</text>
+</svg>

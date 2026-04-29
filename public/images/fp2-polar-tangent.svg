@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Grid circles -->
+  <circle cx="200" cy="200" r="60" fill="none" stroke="#eee" stroke-width="0.8"/>
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#eee" stroke-width="0.8"/>
+  <!-- Axes -->
+  <line x1="30" y1="200" x2="370" y2="200" stroke="black" stroke-width="1.2"/>
+  <line x1="200" y1="30" x2="200" y2="370" stroke="black" stroke-width="1.2"/>
+  <text x="372" y="205" font-size="12" font-style="italic">x</text>
+  <text x="205" y="25" font-size="12" font-style="italic">y</text>
+  <!-- Cardioid r=1+cosθ, a=60 -->
+  <path d="M320,200 C330,170 310,130 270,110 C240,95 215,100 200,140 C185,100 160,95 130,110 C90,130 70,170 80,200 C70,230 90,270 130,290 C160,305 185,300 200,260 C215,300 240,305 270,290 C310,270 330,230 320,200 Z" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <!-- Point at θ=π/3: r=1+0.5=1.5, so x=1.5*cos60°*60+200=245, y=200-1.5*sin60°*60=122 -->
+  <circle cx="245" cy="122" r="4" fill="#3498db"/>
+  <text x="250" y="115" font-size="13" fill="#3498db" font-weight="bold">P(r, θ)</text>
+  <!-- Tangent line (horizontal at this point) -->
+  <line x1="180" y1="122" x2="310" y2="122" stroke="#3498db" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="315" y="118" font-size="12" fill="#3498db">tangent</text>
+  <!-- Radius vector -->
+  <line x1="200" y1="200" x2="245" y2="122" stroke="#e74c3c" stroke-width="1.2"/>
+  <!-- Origin -->
+  <circle cx="200" cy="200" r="3" fill="black"/>
+  <text x="190" y="218" font-size="11">O</text>
+</svg>

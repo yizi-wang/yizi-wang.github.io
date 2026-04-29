@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Axes -->
+  <line x1="30" y1="200" x2="370" y2="200" stroke="black" stroke-width="1.2"/>
+  <line x1="200" y1="30" x2="200" y2="370" stroke="black" stroke-width="1.2"/>
+  <text x="372" y="205" font-size="12" font-style="italic">x</text>
+  <text x="205" y="25" font-size="12" font-style="italic">y</text>
+  <!-- Polar curve (a segment) -->
+  <path d="M260,160 C280,140 300,150 310,170 C320,190 310,220 290,230 C270,240 250,230 240,215" fill="#e74c3c" fill-opacity="0.2" stroke="#e74c3c" stroke-width="2"/>
+  <!-- Bounding rays -->
+  <line x1="200" y1="200" x2="260" y2="160" stroke="#3498db" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="200" y1="200" x2="240" y2="215" stroke="#3498db" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- Origin -->
+  <circle cx="200" cy="200" r="3" fill="black"/>
+  <text x="190" y="218" font-size="11">O</text>
+  <!-- Angle labels -->
+  <text x="235" y="175" font-size="12" fill="#3498db" font-style="italic">α</text>
+  <text x="230" y="210" font-size="12" fill="#3498db" font-style="italic">β</text>
+  <!-- r label -->
+  <text x="275" y="155" font-size="13" fill="#e74c3c" font-style="italic">r = f(θ)</text>
+  <!-- Area label -->
+  <text x="270" y="195" font-size="12" fill="#e74c3c" font-weight="bold">A</text>
+</svg>
