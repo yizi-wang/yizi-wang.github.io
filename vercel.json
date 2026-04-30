@@ -1,0 +1,5 @@
+{
+  "buildCommand": "rm -rf .astro && npm run build",
+  "framework": "astro",
+  "buildCache": false
+}
