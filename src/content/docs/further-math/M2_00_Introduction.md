@@ -76,9 +76,7 @@ M2 significantly deepens the study of dynamics.
 
 To see how the different branches of mechanics come together, let's consider a fascinating piece of medieval engineering: the trebuchet. A trebuchet uses a large counterweight to launch a projectile from a sling. Analyzing its design and operation provides a perfect preview of how we will integrate Kinematics, Statics, and Dynamics in M2.
 
-:::note[配图]
-Trebuchet diagram (`trebuchet.png`) — 需要上传到网站 public 目录。
-:::
+![A medieval trebuchet launching a projectile](/images/m2-mechanics/trebuchet.png)
 
 ### Statics: Building the Machine
 
