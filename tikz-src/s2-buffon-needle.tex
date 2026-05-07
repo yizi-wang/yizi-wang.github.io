@@ -1,0 +1,33 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.6]
+% Draw parallel lines (spacing = 1)
+\draw[thick] (0,1) -- (7,1) node[right] {Line 1};
+\draw[thick] (0,3) -- (7,3) node[right] {Line 2};
+\draw[thick] (0,5) -- (7,5) node[right] {Line 3};
+
+% Draw needle (length = 1)
+\draw[red, very thick] (2.5,2.2) -- (4.2,3.2);
+
+% Show distance X to nearest line
+\node[blue] at (3,2.75) {$X$};
+\draw[blue, <->] (3.35,2.7) -- (3.35,3);
+
+% Show angle Theta
+\draw[dashed] (3.35,2.7) -- (4.5,2.7);
+\draw[thick] (3.65,2.7) arc (0:30:0.3);
+\node[black] at (3.9,2.85) {$\Theta$};
+
+% Show spacing
+\node at (-0.3,2) {1};
+\draw[<->] (-0.2,1) -- (-0.2,3);
+\node at (-0.3,4) {1};
+\draw[<->] (-0.2,3) -- (-0.2,5);
+
+% Center of needle
+\fill[black] (3.35,2.7) circle (1.5pt);
+\end{tikzpicture}
+\end{document}

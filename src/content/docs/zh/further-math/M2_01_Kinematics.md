@@ -49,7 +49,7 @@ $$\mathbf{v}(t) = \frac{d\mathbf{r}}{dt} = \frac{dx}{dt}\mathbf{i} + \frac{dy}{d
 
 $$\mathbf{a}(t) = \frac{d\mathbf{v}}{dt} = \frac{dv_x}{dt}\mathbf{i} + \frac{dv_y}{dt}\mathbf{j}$$
 
-![抛体运动轨迹](/images/m2-projectile-motion.svg)
+![抛体运动轨迹](/images/tikz/m2-projectile-motion.svg)
 
 ## 抛体运动：恒定加速度下的运动
 

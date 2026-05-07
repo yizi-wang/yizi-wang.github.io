@@ -77,7 +77,7 @@ derive expressions for their hyperbolic counterparts:
 - $\cosh x$ is similar to $\cos x$ but has minimum value 1 and grows exponentially
 - $\tanh x$ has horizontal asymptotes at $y = \pm 1$
 
-![Graphs of sinh, cosh, and tanh](/images/fp3-hyperbolic-graphs.svg)
+![Graphs of sinh, cosh, and tanh](/images/tikz/fp3-hyperbolic-graphs.svg)
 
 ### Example 1: Solve the equation $\sinh x = 3$
 
@@ -206,9 +206,9 @@ $$\cosh^{-1} x = \ln(x + \sqrt{x^2 - 1}), \quad x \geq 1$$
 $$\tanh^{-1} x = \frac{1}{2}\ln\!\left(\frac{1+x}{1-x}\right), \quad |x| < 1$$
 :::
 
-![Graphs of inverse hyperbolic functions](/images/fp3-inverse-hyperbolic.svg)
+![Graphs of inverse hyperbolic functions](/images/tikz/fp3-inverse-hyperbolic.svg)
 
-![Arc length on unit circle](/images/fp3-inverse-hyperbolic-arclength.svg)
+![Arc length on unit circle](/images/tikz/fp3-inverse-hyperbolic-arclength.svg)
 
 ### Connection with Trigonometric Functions
 
@@ -513,7 +513,7 @@ Let's establish our coordinate system:
 - $T$ = tension at point $P$
 - $T_h$ = horizontal component of tension (constant throughout the chain)
 
-![Catenary setup diagram](/images/fp3-catenary-setup.svg)
+![Catenary setup diagram](/images/tikz/fp3-catenary-setup.svg)
 
 ### Part 2: Force Analysis
 
@@ -524,7 +524,7 @@ For a small segment of the chain:
 - $T_h$ remains constant (key insight!)
 - $\theta$ is the angle between $T$ and horizontal
 
-![Force analysis diagram](/images/fp3-catenary-forces.svg)
+![Force analysis diagram](/images/tikz/fp3-catenary-forces.svg)
 
 From the force balance:
 
@@ -534,7 +534,7 @@ $$T\cos\theta = T_h \quad \text{(horizontal force balance)}$$
 
 ### Part 3: Deriving the Differential Equation
 
-![Differential triangle](/images/fp3-differential-triangle.svg)
+![Differential triangle](/images/tikz/fp3-differential-triangle.svg)
 
 For a small segment:
 

@@ -1,0 +1,17 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc, positioning, arrows.meta, 3d}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+% Draw sector
+\fill[gray!20] (0,0) -- (0.75,1.3) arc (60:120:1.5) -- cycle;
+\draw[thick] (0,0) -- (0.75,1.3) arc (60:120:1.5) -- cycle;
+% Mark angle
+\node at (0,0.4) {$2\alpha$};
+% Mark radius
+\node at (0.6,0.5) {$r$};
+% Center of mass
+\fill[red] (0,0.955) circle (2pt) node[above] {C.M.};
+\end{tikzpicture}
+\end{document}

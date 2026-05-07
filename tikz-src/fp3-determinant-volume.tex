@@ -1,0 +1,34 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows.meta, 3d, perspective, calc, matrix, positioning}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=0.7, >=stealth, 3d view={30}{25}]
+    % Define coordinates
+    \coordinate (O) at (0,0,0);
+    \coordinate (A) at (3,0,0);
+    \coordinate (B) at (1,2,0);
+    \coordinate (C) at (0,0.5,2.5);
+    \coordinate (AB) at ($(A)+(B)-(O)$);
+    \coordinate (AC) at ($(A)+(C)-(O)$);
+    \coordinate (BC) at ($(B)+(C)-(O)$);
+    \coordinate (ABC) at ($(AB)+(C)-(O)$);
+
+    % Draw the parallelepiped
+    \draw[thick, fill=blue!10, opacity=0.5] (O) -- (A) -- (AB) -- (B) -- cycle;
+    \draw[thick, fill=red!10, opacity=0.5] (O) -- (C) -- (BC) -- (B) -- cycle;
+    \draw[thick, fill=green!10, opacity=0.5] (O) -- (A) -- (AC) -- (C) -- cycle;
+    \draw[thick, fill=yellow!10, opacity=0.5] (ABC) -- (AB) -- (A) -- (AC) -- cycle;
+    \draw[thick, fill=purple!10, opacity=0.5] (ABC) -- (BC) -- (B) -- (AB) -- cycle;
+    \draw[thick, fill=orange!10, opacity=0.5] (ABC) -- (AC) -- (C) -- (BC) -- cycle;
+
+    % Draw vectors
+    \draw[->,thick,blue] (O) -- (A) node[midway,below] {$\vec{a}$};
+    \draw[->,thick,red] (O) -- (B) node[midway,above] {$\vec{b}$};
+    \draw[->,thick,green!70!black] (O) -- (C) node[midway,left] {$\vec{c}$};
+
+    % Label
+    \node[below] at (1.5,-2) {Volume = $|\det(A)|$};
+\end{tikzpicture}
+\end{document}

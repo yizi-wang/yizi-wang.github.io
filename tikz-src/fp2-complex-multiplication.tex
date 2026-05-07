@@ -1,0 +1,31 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc,intersections}
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    % z-plane
+    \begin{scope}[xshift=-4cm]
+        \draw[->] (-2,0) -- (2,0) node[right] {Re};
+        \draw[->] (0,-2) -- (0,2) node[above] {Im};
+
+        % Original shape (square)
+        \draw[blue] (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
+        \node[below] at (0,-2) {$z$-plane};
+    \end{scope}
+
+    \draw[->] (-0.5,0) -- (1.5,0);
+    \node[above] at (0.5,0) {$w = 2e^{i\pi/4}z$};
+
+    % w-plane
+    \begin{scope}[xshift=4cm]
+        \draw[->] (-2,0) -- (2,0) node[right] {Re};
+        \draw[->] (0,-2) -- (0,2) node[above] {Im};
+
+        % Transformed shape
+        \draw[red] (0,0) -- ({sqrt(2)},{sqrt(2)}) -- (0,{2*sqrt(2)}) --
+            ({-sqrt(2)},{sqrt(2)}) -- cycle;
+        \node[below] at (0,-2) {$w$-plane};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

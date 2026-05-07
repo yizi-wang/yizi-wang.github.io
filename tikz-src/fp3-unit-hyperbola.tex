@@ -1,0 +1,39 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.8, >=stealth]
+  % Axes
+  \draw[->, thick] (-2.2,0) -- (2.8,0) node[right] {$x$};
+  \draw[->, thick] (0,-2.5) -- (0,2.5) node[above] {$y$};
+
+  % Right branch: x = cosh t, y = sinh t
+  \draw[blue, thick, domain=-1.8:1.8, samples=200]
+    plot ({cosh(\x)}, {sinh(\x)});
+  % Left branch
+  \draw[blue, thick, domain=-1.8:1.8, samples=200]
+    plot ({-cosh(\x)}, {sinh(\x)});
+
+  % Asymptotes y = x and y = -x
+  \draw[dashed, gray, thin] (-2.2,-2.2) -- (2.8,2.8);
+  \draw[dashed, gray, thin] (-2.2,2.2) -- (2.8,-2.8);
+  \node[gray, anchor=south west] at (2.0,2.0) {$y=x$};
+  \node[gray, anchor=north west] at (2.0,-2.0) {$y=-x$};
+
+  % Point P on right branch
+  \pgfmathsetmacro{\tx}{1.0}
+  \pgfmathsetmacro{\px}{cosh(\tx)}
+  \pgfmathsetmacro{\py}{sinh(\tx)}
+  \filldraw[red] (\px, \py) circle (1.5pt) node[above right] {$P(\cosh t,\, \sinh t)$};
+
+  % Dashed lines to axes showing cosh t and sinh t
+  \draw[dashed, red!60, thin] (\px, \py) -- (\px, 0) node[below, font=\small] {$\cosh t$};
+  \draw[dashed, red!60, thin] (\px, \py) -- (0, \py) node[left, font=\small] {$\sinh t$};
+
+  % Origin
+  \node[anchor=north east] at (-0.05,-0.05) {$O$};
+
+  % Curve label
+  \node[blue, anchor=west] at (1.1, 1.8) {$x^2 - y^2 = 1$};
+\end{tikzpicture}
+\end{document}

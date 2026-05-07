@@ -49,7 +49,7 @@ For an ellipse centred at the origin:
 2. **Parametric equations:** $x = a\cos t$, $y = b\sin t$ where $0 \leq t < 2\pi$
 :::
 
-![Ellipse diagram](/images/fp3-ellipse.svg)
+![Ellipse diagram](/images/tikz/fp3-ellipse.svg)
 
 ### Example: Deriving Tangent and Normal Equations
 
@@ -147,7 +147,7 @@ This principle is used in:
 - The Mormon Tabernacle, Salt Lake City
 :::
 
-![Elliptical orbit with Sun at focus](/images/fp3-conic-ellipse-orbit.svg)
+![Elliptical orbit with Sun at focus](/images/tikz/fp3-elliptical-orbit.svg)
 
 ## Module 2.2: Hyperbolas
 
@@ -165,7 +165,7 @@ For a hyperbola centred at the origin with horizontal transverse axis:
 3. **Alternative parametric equations:** $x = a\sec \theta$, $y = b\tan \theta$ where $-\pi \leq \theta < \pi$, $\theta \neq \pm\dfrac{\pi}{2}$
 :::
 
-![Hyperbola diagram](/images/fp3-hyperbola.svg)
+![Hyperbola diagram](/images/tikz/fp3-hyperbola.svg)
 
 ### Deriving Tangent and Normal Equations for Hyperbolas
 
@@ -222,7 +222,7 @@ $$\frac{PF}{PM} = e$$
 where $e$ is some constant? This ratio $e$ is called the **eccentricity**.
 :::
 
-![Parabola with focus and directrix](/images/fp3-parabola-focus-directrix.svg)
+![Parabola with focus and directrix](/images/tikz/fp3-parabola-focus-directrix.svg)
 
 :::note[Visualising Different Eccentricities]
 
@@ -231,7 +231,7 @@ where $e$ is some constant? This ratio $e$ is called the **eccentricity**.
 | Circle | Ellipse | Parabola | Hyperbola |
 :::
 
-![Eccentricity comparison of conic sections](/images/fp3-eccentricity-comparison.svg)
+![Eccentricity comparison of conic sections](/images/tikz/fp3-eccentricity-family.svg)
 
 ### Example: Deriving the Ellipse Equation
 
@@ -286,7 +286,7 @@ Now it's your turn! Follow similar steps to derive the standard form of a hyperb
 **Did You Know?** Halley's Comet has an eccentricity of 0.967, making its orbit highly elliptical. This explains why it's only visible from Earth every 76 years!
 :::
 
-![Hyperbolic comet trajectory](/images/fp3-conic-hyperbola-comet.svg)
+![Hyperbolic comet trajectory](/images/tikz/fp3-hyperbola-directrix-triangle.svg)
 
 ### Comprehensive Exercise: Hyperbola and Eccentricity
 

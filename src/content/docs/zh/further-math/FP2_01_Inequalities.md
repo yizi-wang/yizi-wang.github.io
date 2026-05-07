@@ -12,7 +12,7 @@ title: "FP2 第一章：不等式"
 
 $\frac{x-2}{x+3}$ 的符号分析：
 
-![符号分析数轴](/images/fp2-number-line-sign.svg)
+![符号分析数轴](/images/tikz/fp2-number-line-sign.svg)
 
 ## 模块一：分式不等式
 
@@ -48,7 +48,7 @@ $$x = -\frac{4}{3} \text{（分母）},\ x = 0 \text{（分母）},\ x = -1 \tex
 
 **数轴分区：**
 
-![例题 2 数轴](/images/fp2-example2-number-line.svg)
+![例题 2 数轴](/images/tikz/fp2-example2-number-line.svg)
 
 **符号分析表：**
 
@@ -114,7 +114,7 @@ $$x \neq -\frac{4}{3},\ x \neq 0$$
 
 **第二步：关键特征可视化**
 
-![f(x) 和 g(x) 的图像](/images/fp2-example3-graph.svg)
+![f(x) 和 g(x) 的图像](/images/tikz/fp2-example3-graph.svg)
 
 **第三步：图像分析**
 

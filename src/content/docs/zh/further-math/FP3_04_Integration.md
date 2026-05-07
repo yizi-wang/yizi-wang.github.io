@@ -455,7 +455,7 @@ $$I_n = \frac{1}{2}\left(\frac{\pi}{2}\right)^{\frac{n-1}{2}} - \frac{1}{4}(n-1)
 $$L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\, dx$$
 :::
 
-![弧长元素 ds](/images/fp3-arc-length.svg)
+![弧长元素 ds](/images/tikz/fp3-arc-length.svg)
 
 :::note[证明一：利用微小线段]
 考虑曲线的一个微小线段：
@@ -622,7 +622,7 @@ $$k\pi\int_0^a \sqrt{16c^2 + 9}\, dc, \quad \text{其中 } c = \cos\theta$$
 :::
 
 :::danger[挑战题：加百列号角]
-![加百列号角：y = 1/x 旋转体](/images/fp3-integration-gabriel-horn.svg)
+![加百列号角：y = 1/x 旋转体](/images/tikz/fp3-integration-gabriel-horn.svg)
 
 考虑曲线 $y = \frac{1}{x}$（$x \geq 1$）绕 $x$ 轴旋转形成的立体。这个形状被称为加百列号角（Gabriel's Horn）或托里切利小号（Torricelli's Trumpet）。
 

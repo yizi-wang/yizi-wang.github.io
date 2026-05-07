@@ -142,7 +142,7 @@ P_2(x) &= 1 + x + \frac{x^2}{2}
 \end{aligned}
 $$
 
-![e^x 的麦克劳林近似](/images/fp2-maclaurin-approximation.svg)
+![e^x 的麦克劳林近似](/images/tikz/fp2-maclaurin-approximation.svg)
 
 **观察：**
 - 每个多项式 $P_n(x)$ 在 $x = 0$ 处匹配函数 $f(x)$ 及其前 $n$ 阶导数

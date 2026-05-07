@@ -27,7 +27,7 @@ title: "S2 第二章：泊松分布"
 
 让我们考虑把一小时划分为更小的时间区间：
 
-![时间区间划分](/images/poisson-time-intervals.svg)
+![时间区间划分](/images/tikz/poisson-time-intervals.svg)
 
 **规律：**
 - 随着区间越分越小，$n$ 不断增大

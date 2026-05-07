@@ -81,7 +81,7 @@ For most projectile motion problems, we use a standard coordinate system:
 抛体运动坐标示意图（对应原 TikZ 图）。
 :::
 
-![Projectile motion trajectory](/images/m2-projectile-motion.svg)
+![Projectile motion trajectory](/images/tikz/m2-projectile-motion.svg)
 
 ## Projectile Motion: Motion Under Constant Acceleration
 

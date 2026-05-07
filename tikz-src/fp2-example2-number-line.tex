@@ -1,0 +1,13 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}
+    \draw[->] (-5,0) -- (5,0);
+    \foreach \x in {-1, 0, 4}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+    \draw (-4/3,0.1) -- (-4/3,-0.1);
+    \node[below] at (-9/6,-0.1) {$-\frac{4}{3}$};
+\end{tikzpicture}
+\end{document}

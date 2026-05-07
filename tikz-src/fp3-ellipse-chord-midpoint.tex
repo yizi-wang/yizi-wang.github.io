@@ -1,0 +1,34 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\begin{document}
+    \begin{tikzpicture}[scale=1.2]
+        % Draw ellipse
+        \draw[blue, thick] (0,0) ellipse (3cm and 2cm);
+
+        % Draw several lines with different k values
+        \draw[dashed] (0,-3) -- (4,3) node[right] {$l$};
+
+        % Draw intersection points for one line
+        \node[circle, fill, inner sep=1pt] (P1) at (0.704,-1.95) {};
+        \node[circle, fill, inner sep=1pt] (P2) at (2.636,0.97) {};
+        \node[below right] at (P1) {$P$};
+        \node[right] at (P2) {$Q$};
+
+        % Draw midpoint
+        \node[circle, fill, inner sep=1pt] (M) at (1.67,-0.5) {};
+        \node[right] at (M) {$M$};
+
+        % Draw dashed lines to show midpoint
+        \draw[red] (P1) -- (P2);
+
+        % Draw axes
+        \draw[->] (-4,0) -- (4,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+
+        % Label semi-axes
+        \node[below right] at (3,0) {$3$};
+        \node[above left] at (0,2) {$2$};
+    \end{tikzpicture}
+\end{document}

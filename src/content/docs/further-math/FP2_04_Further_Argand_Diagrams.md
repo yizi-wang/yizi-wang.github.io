@@ -33,7 +33,7 @@ $$
 where $z = x + yi$. This is equivalent to the standard circle equation in Cartesian coordinates.
 :::
 
-![Complex locus: circle](/images/fp2-complex-locus-circle.svg)
+![Complex locus: circle](/images/tikz/fp2-complex-locus-circle.svg)
 
 ### Example 1: Finding the Equation of a Circle
 
@@ -81,7 +81,7 @@ $$
 The line can be written in the form $y = mx + c$ where $m = \tan \theta$ and $c = b - m \cdot a$.
 :::
 
-![Complex locus: half-line](/images/fp2-complex-locus-halfline.svg)
+![Complex locus: half-line](/images/tikz/fp2-complex-locus-halfline.svg)
 
 ### Example 3: Finding a Line Equation
 
@@ -315,7 +315,7 @@ Inequalities involving modulus or argument define regions in the complex plane:
 - $\alpha < \arg(z-z_0) < \beta$: Sector between two rays from $z_0$
 :::
 
-![Complex locus: inequality region](/images/fp2-complex-locus-inequality.svg)
+![Complex locus: inequality region](/images/tikz/fp2-complex-locus-inequality.svg)
 
 :::tip[Key Tips: Inside or Outside a Circle]
 For a circle defined by $|z-z_1| = k|z-z_2|$:
@@ -382,9 +382,9 @@ For example:
 - Scaling by $k$: $k = k + 0i$ corresponds to $\begin{pmatrix} k & 0 \\ 0 & k \end{pmatrix}$
 :::
 
-![Complex multiplication: rotation and scaling](/images/fp2-complex-multiplication.svg)
+![Complex multiplication: rotation and scaling](/images/tikz/fp2-complex-multiplication.svg)
 
-![Complex transformation w = z²](/images/fp2-complex-transformation.svg)
+![Complex transformation w = z²](/images/tikz/fp2-complex-transformation.svg)
 
 :::note[Key Concept: Möbius Transformations]
 A Möbius transformation has the form:

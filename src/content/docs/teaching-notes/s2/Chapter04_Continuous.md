@@ -23,7 +23,7 @@ The fundamental challenge with continuous random variables is that there are inf
 
 #### Visualizing the Transition: From Discrete to Continuous
 
-![Discrete to continuous distribution transition](/images/s2-discrete-to-continuous.svg)
+![Discrete to continuous distribution transition](/images/tikz/s2-discrete-to-continuous.svg)
 
 Let's understand this concept by observing what happens as we increase the number of possible values:
 
@@ -312,7 +312,7 @@ The mode represents the most "dense" point of the distribution - where the proba
 
 ### Assessing Distribution Shape: Understanding Skewness
 
-![Skewed distributions comparison](/images/s2-skewed-distributions.svg)
+![Skewed distributions comparison](/images/tikz/s2-skewed-distributions.svg)
 
 #### Visual Methods for Detecting Skewness
 

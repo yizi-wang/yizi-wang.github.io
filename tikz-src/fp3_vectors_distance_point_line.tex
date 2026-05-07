@@ -1,0 +1,34 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.3, >=stealth]
+  % Distance from point to line
+
+  % Line
+  \draw[blue, thick, <->] (-3, -1) -- (4, 2.5);
+  \node[blue, font=\small, right] at (4, 2.5) {$l$};
+
+  % Point A on line (foot of perpendicular)
+  \filldraw[black] (1, 0.8) circle (1.5pt) node[below left] {$A$};
+
+  % Direction vector of line
+  \draw[->, thick, blue!70] (1, 0.8) -- (2.5, 1.5) node[midway, below, font=\small] {$\mathbf{d}$};
+
+  % Point P (not on line)
+  \filldraw[red] (2.5, 3) circle (2pt) node[above right] {$P$};
+
+  % Perpendicular from P to line
+  \draw[thick, red, dashed] (2.5, 3) -- (1, 0.8);
+  \node[left, font=\small, red] at (1.7, 1.9) {$d$};
+
+  % Right angle symbol
+  \draw[red, thin] (1.3, 1.0) -- (1.5, 1.3) -- (1.2, 1.35);
+
+  % Vector AP cross d
+  \draw[->, thick, green!60!black] (1, 0.8) -- (2.5, 3) node[midway, above right, font=\small] {$\overrightarrow{AP}$};
+
+  % Formula
+  \node[font=\small] at (0, -1.8) {$d = \dfrac{|\overrightarrow{AP}\times\mathbf{d}|}{|\mathbf{d}|}$};
+\end{tikzpicture}
+\end{document}

@@ -453,7 +453,7 @@ The length of a curve $y = f(x)$ from $x = a$ to $x = b$ is given by:
 $$L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\, dx$$
 :::
 
-![Arc length element ds](/images/fp3-arc-length.svg)
+![Arc length element ds](/images/tikz/fp3-arc-length.svg)
 
 :::note[Proof 1: Using Small Segments]
 Consider a small segment of the curve:
@@ -620,7 +620,7 @@ and where $a, k$ are constants to be found. (6 marks)
 :::
 
 :::danger[Challenge Exercise: Gabriel's Horn]
-![Gabriel's horn: y = 1/x revolution](/images/fp3-integration-gabriel-horn.svg)
+![Gabriel's horn: y = 1/x revolution](/images/tikz/fp3-integration-gabriel-horn.svg)
 
 Consider the solid formed by rotating the curve $y = \frac{1}{x}$ ($x \geq 1$) about the $x$-axis. This shape is known as Gabriel's Horn or Torricelli's Trumpet.
 

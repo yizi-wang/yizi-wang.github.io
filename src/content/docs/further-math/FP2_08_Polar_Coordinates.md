@@ -12,7 +12,7 @@ title: "FP2 Chapter 8: Polar Coordinates"
 - $r$: the radial distance from the origin (the pole), where $r \geq 0$
 - $\theta$: the angular coordinate (polar angle) measured counterclockwise from the positive $x$-axis
 
-![Polar coordinate system](/images/fp2-polar-coordinates.svg)
+![Polar coordinate system](/images/tikz/fp2-polar-coordinates.svg)
 
 **Key Observations:**
 
@@ -113,7 +113,7 @@ The equation $r = k\theta$ represents an Archimedean spiral, where the distance 
 
 The equations $r = a(1 + \cos\theta)$ and $r = a(1 - \cos\theta)$ represent cardioids ("heart-shaped" curves).
 
-![Cardioid r = a(1+cos θ)](/images/fp2-polar-cardioid.svg)
+![Cardioid r = a(1+cos θ)](/images/tikz/fp2-polar-cardioid.svg)
 
 **Characteristics:**
 - The cardioid has a cusp (sharp point) at $\theta = \pi$ for $r = a(1 + \cos\theta)$ and at $\theta = 0$ for $r = a(1 - \cos\theta)$
@@ -133,7 +133,7 @@ The equation $r = a(3 + 2\cos\theta)$ represents a limaçon without an inner loo
 
 The equation $r^2 = a^2\cos 2\theta$ represents a lemniscate of Bernoulli.
 
-![Lemniscate of Bernoulli](/images/fp2-polar-lemniscate.svg)
+![Lemniscate of Bernoulli](/images/tikz/fp2-polar-lemniscate.svg)
 
 **Characteristics:**
 - The curve passes through the origin (which is a self-intersection point)
@@ -155,7 +155,7 @@ where the region is bounded by:
 - The curve $r = f(\theta)$
 - The origin
 
-![Area in polar coordinates](/images/fp2-polar-area-diagram.svg)
+![Area in polar coordinates](/images/tikz/fp2-polar-area-diagram.svg)
 
 ### Example: Area of a Circle
 
@@ -230,7 +230,7 @@ $$
 
 where $r'(\theta) = \frac{dr}{d\theta}$ is the derivative of $r$ with respect to $\theta$.
 
-![Tangent to a polar curve](/images/fp2-polar-tangent.svg)
+![Tangent to a polar curve](/images/tikz/fp2-polar-tangent.svg)
 
 **Derivation:**
 

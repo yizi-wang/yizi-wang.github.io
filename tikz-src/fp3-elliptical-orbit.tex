@@ -1,0 +1,13 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\begin{document}
+    \begin{tikzpicture}[scale=1.2]
+        % Draw elliptical orbit
+        \draw[blue, thick] (0,0) ellipse (3cm and 1cm) node[above] {Elliptical Orbit};
+        % Draw Sun at focus
+        \node[circle, fill=yellow, inner sep=2pt] (S) at (-1,0) {};
+        \node[below] at (S) {Sun};
+    \end{tikzpicture}
+\end{document}

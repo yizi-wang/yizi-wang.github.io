@@ -1,0 +1,18 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, 3d, perspective, calc}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+    % Coordinate system
+    \draw[->] (0,0,0) -- (2,0,0) node[right]{$\mathbf{j}$};
+    \draw[->] (0,0,0) -- (0,2,0) node[above]{$\mathbf{k}$};
+    \draw[->] (0,0,0) -- (0,0,2) node[below left]{$\mathbf{i}$};
+
+    % Cross products
+    \draw[->,thick,red,dashed] (0,0,0) -- (0,0,1.5) node[right] {$\mathbf{j} \times \mathbf{k} = \mathbf{i}$};
+
+    % Rotation arrows
+    \draw[->] (0.5,0,0) arc (0:90:0.5);
+\end{tikzpicture}
+\end{document}

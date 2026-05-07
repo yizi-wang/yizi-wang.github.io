@@ -56,7 +56,7 @@ $$
 - Multiplying by $re^{i\theta}$ does both at once
 :::
 
-![Argand diagram showing modulus and argument](/images/fp2-complex-argand.svg)
+![Argand diagram showing modulus and argument](/images/tikz/fp2-complex-argand.svg)
 
 ### Example 1: Converting Between Forms
 

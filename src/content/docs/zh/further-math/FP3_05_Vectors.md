@@ -46,7 +46,7 @@ title: "FP3 第五章：向量"
 - 确定三维空间中的垂直方向
 :::
 
-![向量积图示](/images/fp3_vectors_cross_product.svg)
+![向量积图示](/images/tikz/fp3-cross-product-3d.svg)
 
 **定义：向量积。** 两个向量 $\mathbf{a}$ 和 $\mathbf{b}$ 的向量（叉）积定义为：
 
@@ -72,7 +72,7 @@ $$
 :::tip[为什么 $\mathbf{a} \times \mathbf{b} = -\mathbf{b} \times \mathbf{a}$？]
 当我们在叉积中交换向量的顺序时，它们定义的平面保持不变，但从第一个向量到第二个向量的旋转方向反转了：
 
-![叉积反交换性](/images/fp3_vectors_anticommutative.svg)
+![叉积反交换性](/images/tikz/fp3-cross-product-anticommutative.svg)
 
 这种旋转方向的改变导致垂直向量指向相反方向，从而产生负号。
 :::
@@ -90,7 +90,7 @@ $$
 \end{aligned}
 $$
 
-![单位向量积](/images/fp3_vectors_unit_products.svg)
+![单位向量积](/images/tikz/fp3-unit-vector-cross-product.svg)
 :::
 
 ### 5.1.4 分量形式及其推导
@@ -155,7 +155,7 @@ $$
 
 *证明。* 三角形 OAB 的面积为 $\frac{1}{2}|\mathbf{a}||\mathbf{b}|\sin\theta$，其中 $\theta$ 是 $\mathbf{a}$ 和 $\mathbf{b}$ 之间的夹角。而这恰好等于 $\frac{1}{2}|\mathbf{a} \times \mathbf{b}|$。
 
-![三角形面积](/images/fp3_vectors_triangle_area.svg)
+![三角形面积](/images/tikz/fp3-triangle-area.svg)
 
 :::note[面积关键公式]
 - 三角形 OAB 面积 = $\frac{1}{2}|\mathbf{a} \times \mathbf{b}|$
@@ -163,7 +163,7 @@ $$
 - 平行四边形 OABC 面积 = $|\mathbf{a} \times \mathbf{b}|$
 - 平行四边形 ABCD 面积 = $|(\mathbf{b} - \mathbf{a}) \times (\mathbf{d} - \mathbf{a})|$
 
-![面积公式](/images/fp3_vectors_area_formulas.svg)
+![面积公式](/images/tikz/fp3-area-formulas.svg)
 :::
 
 :::note[例题：三角形面积]
@@ -259,7 +259,7 @@ $$
 \text{体积} = |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})|
 $$
 
-![平行六面体](/images/fp3_vectors_parallelepiped.svg)
+![平行六面体](/images/tikz/fp3-parallelepiped.svg)
 
 **定理：四面体体积。** 以原点和位置向量为 $\mathbf{a}$、$\mathbf{b}$ 和 $\mathbf{c}$ 的点为顶点的四面体的体积为：
 
@@ -267,7 +267,7 @@ $$
 \text{体积} = \frac{1}{6}|\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})|
 $$
 
-![四面体](/images/fp3_vectors_tetrahedron.svg)
+![四面体](/images/tikz/fp3-tetrahedron.svg)
 
 :::note[例题：四面体体积]
 求以 A(1, 3, 0)、B(3, 2, -1)、C(2, -1, -1) 和 D(-1, 3, 6) 为顶点的四面体的体积。
@@ -319,7 +319,7 @@ $$
 (\mathbf{r} - \mathbf{a}) \times \mathbf{b} = \mathbf{0}
 $$
 
-![直线方程图示](/images/fp3_vectors_line_equation.svg)
+![直线方程图示](/images/tikz/fp3-vector-line-equation.svg)
 
 :::note[直线方程的几何解释]
 - $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b}$：直线上的任意点可以从点 $A$ 出发，沿 $\mathbf{b}$ 方向移动一定距离到达
@@ -339,7 +339,7 @@ $$
 - **参数形式：** $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}$，其中 $\mathbf{b}$ 和 $\mathbf{c}$ 是平面内不平行的向量
 - **笛卡尔形式：** $ax + by + cz + d = 0$
 
-![平面方程图示](/images/fp3_vectors_plane_equation.svg)
+![平面方程图示](/images/tikz/fp3-plane-equations.svg)
 
 :::note[例题：平面表示形式之间的转换]
 求通过点 $P(2,1,3)$ 且法向量为 $\mathbf{n} = (3,2,-1)$ 的平面的不同形式方程。
@@ -396,7 +396,7 @@ $$
 - 用点和方向写出直线方程
 :::
 
-![两平面相交](/images/fp3_vectors_plane_intersection.svg)
+![两平面相交](/images/tikz/fp3-plane-intersection.svg)
 
 :::note[例题：直线-平面相交]
 求直线 $\mathbf{r} = (2, 1, 3) + t(1, 2, -1)$ 与平面 $2x - y + 3z = 8$ 的交点。
@@ -423,7 +423,7 @@ $$
 \sin\theta = \frac{|\mathbf{b} \cdot \mathbf{n}|}{|\mathbf{b}||\mathbf{n}|}
 $$
 
-![直线与平面的夹角](/images/fp3_vectors_angle_line_plane.svg)
+![直线与平面的夹角](/images/tikz/fp3-angle-line-plane.svg)
 
 **3. 两平面的夹角：**
 
@@ -431,7 +431,7 @@ $$
 \cos\theta = \frac{|\mathbf{n}_1 \cdot \mathbf{n}_2|}{|\mathbf{n}_1||\mathbf{n}_2|}
 $$
 
-![两平面的夹角](/images/fp3_vectors_angle_planes.svg)
+![两平面的夹角](/images/tikz/fp3-angle-plane-plane.svg)
 :::
 
 :::note[例题：直线与平面的夹角]
@@ -449,7 +449,7 @@ $$
 
 其中平面方程为 $\mathbf{r}\cdot\mathbf{n} = a$。
 
-![点到平面的距离](/images/fp3_vectors_distance_point_plane.svg)
+![点到平面的距离](/images/tikz/fp3-distance-point-plane.svg)
 
 **2. 点到直线的距离：**
 
@@ -459,7 +459,7 @@ $$
 
 其中直线方程为 $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b}$。
 
-![点到直线的距离](/images/fp3_vectors_distance_point_line.svg)
+![点到直线的距离](/images/tikz/fp3-distance-point-line.svg)
 
 **3. 异面直线间的距离：**
 

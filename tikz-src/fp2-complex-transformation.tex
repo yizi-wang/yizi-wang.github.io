@@ -1,0 +1,30 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc,intersections}
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    % z-plane
+    \begin{scope}[xshift=-4cm]
+        \draw[->] (-2,0) -- (2,0) node[right] {Re};
+        \draw[->] (0,-2) -- (0,2) node[above] {Im};
+
+        % Original circle
+        \draw[blue] (0,0) circle (1);
+        \node[below] at (0,-2) {$z$-plane};
+    \end{scope}
+
+    \draw[->] (-0.5,0) -- (1.5,0);
+    \node[above] at (0.5,0) {$w = \frac{1}{z}$};
+
+    % w-plane
+    \begin{scope}[xshift=4cm]
+        \draw[->] (-2,0) -- (2,0) node[right] {Re};
+        \draw[->] (0,-2) -- (0,2) node[above] {Im};
+
+        % Transformed line
+        \draw[red] (-0.5,2) -- (-0.5,-2);
+        \node[below] at (0,-2) {$w$-plane};
+    \end{scope}
+\end{tikzpicture}
+\end{document}

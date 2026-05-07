@@ -1,0 +1,30 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.5, >=stealth]
+  % Two diagrams side by side: a×b and b×a
+
+  % Left diagram: a × b
+  \begin{scope}[shift={(-2.5,0)}]
+    \draw[->, thick, blue] (0,0) -- (2, 0.5) node[right] {$\mathbf{a}$};
+    \draw[->, thick, red] (0,0) -- (0.8, 1.8) node[above] {$\mathbf{b}$};
+    \draw[->, very thick, green!60!black] (0,0) -- (0, 2.5) node[above] {$\mathbf{a}\times\mathbf{b}$};
+    \filldraw[black] (0,0) circle (1pt) node[below left] {$O$};
+    \node[below, font=\small] at (1, -0.3) {$\mathbf{a}\times\mathbf{b}$};
+  \end{scope}
+
+  % Right diagram: b × a
+  \begin{scope}[shift={(2.5,0)}]
+    \draw[->, thick, red] (0,0) -- (0.8, 1.8) node[above] {$\mathbf{b}$};
+    \draw[->, thick, blue] (0,0) -- (2, 0.5) node[right] {$\mathbf{a}$};
+    \draw[->, very thick, orange] (0,0) -- (0, -2.5) node[below] {$\mathbf{b}\times\mathbf{a}$};
+    \filldraw[black] (0,0) circle (1pt) node[below left] {$O$};
+    \node[below, font=\small] at (1, -0.3) {$\mathbf{b}\times\mathbf{a}$};
+  \end{scope}
+
+  % Equals sign with negation
+  \node[font=\large] at (0, 0) {$=$};
+  \node[font=\small] at (0, -0.5) {$\mathbf{b}\times\mathbf{a} = -\mathbf{a}\times\mathbf{b}$};
+\end{tikzpicture}
+\end{document}

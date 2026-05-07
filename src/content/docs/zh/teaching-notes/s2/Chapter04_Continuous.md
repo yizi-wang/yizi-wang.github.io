@@ -23,7 +23,7 @@ title: "S2 第四章：连续型随机变量"
 
 #### 可视化过渡：从离散到连续
 
-![从离散到连续分布的过渡](/images/s2-discrete-to-continuous.svg)
+![从离散到连续分布的过渡](/images/tikz/s2-discrete-to-continuous.svg)
 
 通过观察可能取值不断增加时发生的情况来理解这一概念：
 
@@ -314,7 +314,7 @@ $$\frac{d}{dx} f(x) = 0, \quad \frac{d^2}{dx^2} f(x) < 0$$
 
 ### 评估分布形状：理解偏态
 
-![偏态分布比较](/images/s2-skewed-distributions.svg)
+![偏态分布比较](/images/tikz/s2-skewed-distributions.svg)
 
 #### 检测偏态的视觉方法
 

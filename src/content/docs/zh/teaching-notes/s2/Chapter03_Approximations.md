@@ -123,7 +123,7 @@ $$
 
 *想象一张 B(50, 0.3) 的柱状图，上面叠加了一条红色的正态曲线 N(15, 10.5)——两者吻合得非常好。*
 
-![二项分布 B(50,0.3) 与正态分布叠加](/images/s2-binomial-normal-overlay.svg)
+![二项分布 B(50,0.3) 与正态分布叠加](/images/tikz/s2-binomial-normal-overlay.svg)
 
 均值 = 15，方差 = 10.5
 
@@ -143,7 +143,7 @@ $$
 
 *想象一张 Po(12) 的柱状图，上面叠加了一条红色的正态曲线 N(12, 12)——同样拟合得非常好。*
 
-![泊松分布 Po(12) 与正态分布叠加](/images/s2-poisson-normal-overlay.svg)
+![泊松分布 Po(12) 与正态分布叠加](/images/tikz/s2-poisson-normal-overlay.svg)
 
 均值 = 方差 = 12
 

@@ -1,0 +1,19 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    % Axes
+    \draw[->] (-3,0) -- (3,0) node[right] {Re};
+    \draw[->] (0,-3) -- (0,3) node[above] {Im};
+
+    % Example complex number z = 2e^{i\pi/3}
+    \draw[thick,blue,->] (0,0) -- (1,1.732) node[right] {$z = 2e^{i\pi/3}$};
+
+    % Modulus and argument labels
+    \draw[dashed] (0,0) -- (1,0);
+    \draw[red,->] (0.3,0) arc (0:60:0.3) node[right] {$\theta$};
+    \node[right, blue] at (0.5,0.8) {$|z| = 2$};
+\end{tikzpicture}
+\end{document}

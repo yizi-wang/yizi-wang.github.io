@@ -105,7 +105,7 @@ $$F(x) = \begin{cases}
 - $F(\frac{a+b}{2}) = 0.5$（中位数始终在中心）
 :::
 
-![均匀分布的 PDF 与 CDF](/images/s2-uniform-pdf-cdf.svg)
+![均匀分布的 PDF 与 CDF](/images/tikz/s2-uniform-pdf-cdf.svg)
 
 **例 2：CDF 的应用**
 
@@ -280,7 +280,7 @@ $$F(x) = \begin{cases}
 **惊人的发现：** 答案与 $\pi$ 有关！
 :::
 
-![蒲丰投针问题](/images/s2-buffon-needle.svg)
+![蒲丰投针问题](/images/tikz/s2-buffon-needle.svg)
 
 ### 第一步：确定随机变量
 

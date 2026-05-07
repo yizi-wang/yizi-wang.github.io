@@ -125,7 +125,7 @@ $$K_i + U_i = K_f + U_f$$
 
 **Example: Smooth track drop**
 
-![Energy conservation track](/images/m2-energy-track.svg)
+![Energy conservation track](/images/tikz/m2-energy-track.svg)
 
 A bead of mass $m$ starts from rest at height $H$ on a smooth track and descends to height $h$.
 
@@ -198,7 +198,7 @@ $$\frac{1}{2}mv_C^2 = mgh \implies h = \frac{v_C^2}{2g} = \frac{107.8}{5 \times 
 
 ## Impulses and Collisions
 
-![1D collision setup](/images/m2-collision-1d.svg)
+![1D collision setup](/images/tikz/m2-collision-1d.svg)
 
 ### The Story of Collisions: From Billiard Balls to Conservation Laws
 

@@ -496,7 +496,7 @@ given that $y = 2$ at $x = \frac{\pi}{3}$.
 
 (b) Find the value of $y$ at $x = \frac{\pi}{6}$, giving your answer in the form $a + k\ln b$, where $a$ and $b$ are integers and $k$ is rational.
 
-![Solution curve y = x² + 4/x²](/images/fp2-ode-solution-curves.svg)
+![Solution curve y = x² + 4/x²](/images/tikz/fp2-ode-solution-curves.svg)
 
 ### Practice Problem 4
 

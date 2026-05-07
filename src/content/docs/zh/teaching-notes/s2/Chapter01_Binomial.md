@@ -69,7 +69,7 @@ title: "S2 第一章：二项分布"
 
 **树形图：**
 
-![Game Tree](/images/game-tree.svg)
+![Game Tree](/images/tikz/game-tree.svg)
 
 **序列分析：**
 

@@ -27,7 +27,7 @@ Your first thought might be: "I'll use the binomial distribution!" But then you 
 
 Let's think about dividing the hour into smaller time intervals:
 
-![Time Interval Division](/images/poisson-time-intervals.svg)
+![Time Interval Division](/images/tikz/poisson-time-intervals.svg)
 
 **The Pattern:**
 - As we divide the hour into smaller intervals, $n$ increases

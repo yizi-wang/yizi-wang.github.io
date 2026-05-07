@@ -46,7 +46,7 @@ The cross product has important applications in:
 - Determining perpendicular directions in 3D space
 :::
 
-![Cross product geometric illustration](/images/fp3_vectors_cross_product.svg)
+![Cross product geometric illustration](/images/tikz/fp3-cross-product-3d.svg)
 
 **Definition (Vector Product):** The vector (or cross) product of two vectors $\mathbf{a}$ and $\mathbf{b}$ is defined as:
 
@@ -72,7 +72,7 @@ You can use the 'right-hand rule' to determine the direction of $\hat{\mathbf{n}
 :::tip[Why is $\mathbf{a} \times \mathbf{b} = -\mathbf{b} \times \mathbf{a}$?]
 When we swap the order of vectors in a cross product, the plane they define remains the same, but the direction of rotation from the first vector to the second is reversed:
 
-![Anticommutative property of cross product](/images/fp3_vectors_anticommutative.svg)
+![Anticommutative property of cross product](/images/tikz/fp3-cross-product-anticommutative.svg)
 
 This change in rotational direction causes the perpendicular vector to point in the opposite direction, resulting in the negative sign.
 :::
@@ -88,7 +88,7 @@ By the key properties of the cross product, we can obtain the following identiti
 | $\mathbf{j}\ \times$ | $-\mathbf{k}$ | $\mathbf{0}$ | $\mathbf{i}$ |
 | $\mathbf{k}\ \times$ | $\mathbf{j}$ | $-\mathbf{i}$ | $\mathbf{0}$ |
 
-![Unit vector cross products](/images/fp3_vectors_unit_products.svg)
+![Unit vector cross products](/images/tikz/fp3-unit-vector-cross-product.svg)
 :::
 
 ### 1.4 Component Form and Its Derivation
@@ -165,7 +165,7 @@ $$
 
 *Proof.* The area of triangle OAB is $\frac{1}{2}|\mathbf{a}||\mathbf{b}|\sin\theta$, where $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$. But this is exactly $\frac{1}{2}|\mathbf{a} \times \mathbf{b}|$. $\square$
 
-![Triangle area illustration](/images/fp3_vectors_triangle_area.svg)
+![Triangle area illustration](/images/tikz/fp3-triangle-area.svg)
 
 :::note[Key Formulas for Areas]
 - Area of triangle OAB = $\frac{1}{2}|\mathbf{a} \times \mathbf{b}|$
@@ -173,7 +173,7 @@ $$
 - Area of parallelogram OABC = $|\mathbf{a} \times \mathbf{b}|$
 - Area of parallelogram ABCD = $|(\mathbf{b} - \mathbf{a}) \times (\mathbf{d} - \mathbf{a})|$
 
-![Area formulas for triangles and parallelograms](/images/fp3_vectors_area_formulas.svg)
+![Area formulas for triangles and parallelograms](/images/tikz/fp3-area-formulas.svg)
 :::
 
 **Example (Area of a Triangle):** Find the area of triangle ABC, where the position vectors of A, B and C are $4\mathbf{i} - 2\mathbf{j} + \mathbf{k}$, $-12\mathbf{i} + 14\mathbf{j} + \mathbf{k}$ and $-4\mathbf{i} - 2\mathbf{j} + \mathbf{k}$ respectively.
@@ -279,7 +279,7 @@ $$
 \text{Volume} = |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})|
 $$
 
-![Parallelepiped volume illustration](/images/fp3_vectors_parallelepiped.svg)
+![Parallelepiped volume illustration](/images/tikz/fp3-parallelepiped.svg)
 
 **Theorem (Volume of a Tetrahedron):** The volume of a tetrahedron with vertices at the origin and at points with position vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ is:
 
@@ -287,7 +287,7 @@ $$
 \text{Volume} = \frac{1}{6}|\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})|
 $$
 
-![Tetrahedron volume illustration](/images/fp3_vectors_tetrahedron.svg)
+![Tetrahedron volume illustration](/images/tikz/fp3-tetrahedron.svg)
 
 **Example (Volume of a Tetrahedron):** Find the volume of the tetrahedron with vertices at A(1, 3, 0), B(3, 2, -1), C(2, -1, -1) and D(-1, 3, 6).
 
@@ -357,7 +357,7 @@ $$
 (\mathbf{r} - \mathbf{a}) \times \mathbf{b} = \mathbf{0}
 $$
 
-![Line equation illustration](/images/fp3_vectors_line_equation.svg)
+![Line equation illustration](/images/tikz/fp3-vector-line-equation.svg)
 
 :::note[Geometric Interpretation of Line Equations]
 - $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b}$: Any point on the line can be reached by starting at point $A$ and moving some distance in the direction of $\mathbf{b}$
@@ -376,7 +376,7 @@ $$
 - **Parametric form:** $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}$ where $\mathbf{b}$ and $\mathbf{c}$ are non-parallel vectors in the plane, and $\lambda$ and $\mu$ are scalar parameters.
 - **Cartesian form:** $ax + by + cz + d = 0$
 
-![Plane equation illustrations](/images/fp3_vectors_plane_equation.svg)
+![Plane equation illustrations](/images/tikz/fp3-plane-equations.svg)
 
 :::note[Geometric Interpretation of Plane Equations]
 - $\mathbf{r} \cdot \mathbf{n} = p$: The projection of any position vector $\mathbf{r}$ onto the normal $\mathbf{n}$ equals $p$. The scalar $p$ is the length of the perpendicular from the origin to the plane (when $\mathbf{n}$ is a unit vector).
@@ -478,7 +478,7 @@ $$
    - Write line equation using point and direction
 :::
 
-![Plane-plane intersection](/images/fp3_vectors_plane_intersection.svg)
+![Plane-plane intersection](/images/tikz/fp3-plane-intersection.svg)
 
 **Example (Line-Plane Intersection):** Find the point of intersection between the line $\mathbf{r} = (2, 1, 3) + t(1, 2, -1)$ and the plane $2x - y + 3z = 8$.
 
@@ -501,7 +501,7 @@ $$
 \cos\theta = \frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{a}||\mathbf{b}|}
 $$
 
-![Angle between two vectors](/images/fp3_vectors_angle_vectors.svg)
+![Angle between two vectors](/images/tikz/fp3-angle-vector-vector.svg)
 
 **2. Angle Between Line and Plane:**
 
@@ -511,7 +511,7 @@ $$
 
 where $\mathbf{b}$ is the direction of the line and $\mathbf{n}$ is normal to the plane.
 
-![Angle between line and plane](/images/fp3_vectors_angle_line_plane.svg)
+![Angle between line and plane](/images/tikz/fp3-angle-line-plane.svg)
 
 **3. Angle Between Two Planes:**
 
@@ -521,7 +521,7 @@ $$
 
 where $\mathbf{n}_1$ and $\mathbf{n}_2$ are normals to the planes.
 
-![Angle between two planes](/images/fp3_vectors_angle_planes.svg)
+![Angle between two planes](/images/tikz/fp3-angle-plane-plane.svg)
 :::
 
 :::tip[Geometric Interpretation of Angles]
@@ -561,7 +561,7 @@ $$
 
 where plane equation is $\mathbf{r}\cdot\mathbf{n} = a$.
 
-![Distance from point to plane](/images/fp3_vectors_distance_point_plane.svg)
+![Distance from point to plane](/images/tikz/fp3-distance-point-plane.svg)
 
 **2. Distance from Point to Line:**
 
@@ -571,7 +571,7 @@ $$
 
 where line equation is $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b}$.
 
-![Distance from point to line](/images/fp3_vectors_distance_point_line.svg)
+![Distance from point to line](/images/tikz/fp3-distance-point-line.svg)
 
 **3. Distance Between Skew Lines:**
 
@@ -581,7 +581,7 @@ $$
 
 where line equations are $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b}$ and $\mathbf{r} = \mathbf{c} + \mu\mathbf{d}$.
 
-![Distance between skew lines](/images/fp3_vectors_distance_skew.svg)
+![Distance between skew lines](/images/tikz/fp3-distance-skew-lines.svg)
 :::
 
 :::tip[Geometric Interpretation of Distances]

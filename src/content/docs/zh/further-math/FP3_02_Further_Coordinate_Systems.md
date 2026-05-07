@@ -49,7 +49,7 @@ title: "FP3 第二章：进一步坐标系"
 2. **参数方程：** $x = a\cos t$，$y = b\sin t$，其中 $0 \leq t < 2\pi$
 :::
 
-![椭圆图示](/images/fp3-ellipse.svg)
+![椭圆图示](/images/tikz/fp3-ellipse.svg)
 
 ### 例题：推导切线和法线方程
 
@@ -147,7 +147,7 @@ $$5x\sin\theta - 3y\cos\theta = 16\sin\theta\cos\theta$$
 - 盐湖城摩门教堂
 :::
 
-![椭圆轨道：太阳位于焦点](/images/fp3-conic-ellipse-orbit.svg)
+![椭圆轨道：太阳位于焦点](/images/tikz/fp3-elliptical-orbit.svg)
 
 ## 模块 2.2：双曲线
 
@@ -165,7 +165,7 @@ $$5x\sin\theta - 3y\cos\theta = 16\sin\theta\cos\theta$$
 3. **替代参数方程：** $x = a\sec \theta$，$y = b\tan \theta$，其中 $-\pi \leq \theta < \pi$，$\theta \neq \pm\dfrac{\pi}{2}$
 :::
 
-![双曲线图示](/images/fp3-hyperbola.svg)
+![双曲线图示](/images/tikz/fp3-hyperbola.svg)
 
 ### 推导双曲线的切线和法线方程
 
@@ -222,7 +222,7 @@ $$\frac{PF}{PM} = e$$
 的曲线，其中 $e$ 是某个常数？这个比值 $e$ 称为**离心率**。
 :::
 
-![抛物线的焦点与准线](/images/fp3-parabola-focus-directrix.svg)
+![抛物线的焦点与准线](/images/tikz/fp3-parabola-focus-directrix.svg)
 
 :::note[不同离心率的可视化]
 
@@ -231,7 +231,7 @@ $$\frac{PF}{PM} = e$$
 | 圆 | 椭圆 | 抛物线 | 双曲线 |
 :::
 
-![圆锥曲线离心率比较](/images/fp3-eccentricity-comparison.svg)
+![圆锥曲线离心率比较](/images/tikz/fp3-eccentricity-family.svg)
 
 ### 例题：推导椭圆方程
 
@@ -286,7 +286,7 @@ $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
 **你知道吗？** 哈雷彗星的离心率为 0.967，使其轨道呈高度椭圆形。这解释了为什么它每 76 年才能从地球上观测到一次！
 :::
 
-![双曲线彗星轨迹](/images/fp3-conic-hyperbola-comet.svg)
+![双曲线彗星轨迹](/images/tikz/fp3-hyperbola-directrix-triangle.svg)
 
 ### 综合练习：双曲线与离心率
 

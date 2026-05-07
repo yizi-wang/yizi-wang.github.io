@@ -12,7 +12,7 @@ title: "FP2 第八章：极坐标"
 - $r$：从原点（极点）出发的径向距离，$r \geq 0$
 - $\theta$：极角，从正 $x$ 轴逆时针方向测量
 
-![极坐标系](/images/fp2-polar-coordinates.svg)
+![极坐标系](/images/tikz/fp2-polar-coordinates.svg)
 
 **关键观察：**
 
@@ -113,7 +113,7 @@ $$
 
 方程 $r = a(1 + \cos\theta)$ 和 $r = a(1 - \cos\theta)$ 表示心形线（"心形"曲线）。
 
-![心形线 r = a(1+cos θ)](/images/fp2-polar-cardioid.svg)
+![心形线 r = a(1+cos θ)](/images/tikz/fp2-polar-cardioid.svg)
 
 **特征：**
 - 心形线在 $r = a(1 + \cos\theta)$ 的 $\theta = \pi$ 处和 $r = a(1 - \cos\theta)$ 的 $\theta = 0$ 处有一个尖点
@@ -133,7 +133,7 @@ $$
 
 方程 $r^2 = a^2\cos 2\theta$ 表示伯努利双纽线。
 
-![伯努利双纽线](/images/fp2-polar-lemniscate.svg)
+![伯努利双纽线](/images/tikz/fp2-polar-lemniscate.svg)
 
 **特征：**
 - 曲线通过原点（自交点）
@@ -155,7 +155,7 @@ $$
 - 曲线 $r = f(\theta)$
 - 原点
 
-![极坐标中的面积](/images/fp2-polar-area-diagram.svg)
+![极坐标中的面积](/images/tikz/fp2-polar-area-diagram.svg)
 
 ### 例题：圆的面积
 
@@ -230,7 +230,7 @@ $$
 
 其中 $r'(\theta) = \frac{dr}{d\theta}$ 是 $r$ 关于 $\theta$ 的导数。
 
-![极坐标曲线的切线](/images/fp2-polar-tangent.svg)
+![极坐标曲线的切线](/images/tikz/fp2-polar-tangent.svg)
 
 **推导：**
 

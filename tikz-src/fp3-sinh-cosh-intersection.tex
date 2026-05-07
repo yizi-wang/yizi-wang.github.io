@@ -1,0 +1,28 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\begin{document}
+    \begin{tikzpicture}[xscale=1.5, yscale=0.17]
+        % Axes
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[->] (0,-4) -- (0,14) node[above] {$y$};
+
+        % Asymptote y=13
+        \draw[dashed] (-3,13) -- (3,13);
+
+        % C1: y = 3sinh(2x)
+        \draw[blue, thick, domain=-1:1, samples=100]
+            plot (\x, {3*(exp(2*\x) - exp(-2*\x))/2});
+
+        % C2: y = 13 - 3e^(2x)
+        \draw[red, thick, domain=-1.5:1, samples=100]
+            plot (\x, {13 - 3*exp(2*\x)});
+
+        % Labels
+        \node[blue] at (1.1,8) {$C_1$};
+        \node[red] at (-1,11) {$C_2$};
+        \node at (3.3,13) {$y=13$};
+        \node at (0.1,10) {$10$};
+    \end{tikzpicture}
+\end{document}

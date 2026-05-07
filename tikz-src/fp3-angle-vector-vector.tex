@@ -1,0 +1,15 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows.meta, 3d, perspective, calc}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+    % Vectors
+    \draw[->, thick, blue] (0,0) -- node[below] {$\mathbf{a}$} (3,0);
+    \draw[->, thick, red] (0,0) -- node[above left] {$\mathbf{b}$} (2,2);
+
+    % Angle arc
+    \draw[->] (1.5,0) arc (0:45:1.5) node[midway, right] {$\theta$};
+  \end{tikzpicture}
+\end{document}

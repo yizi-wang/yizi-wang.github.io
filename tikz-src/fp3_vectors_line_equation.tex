@@ -1,0 +1,38 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.5, >=stealth]
+  % Line through point A with direction d
+
+  % Line (extending both directions)
+  \draw[blue, thick, ->] (-1, -0.5) -- (4, 2.0);
+  \node[above right, blue, font=\small] at (3.5, 1.8) {$\mathbf{r} = \mathbf{a} + t\mathbf{d}$};
+
+  % Point A on line
+  \pgfmathsetmacro{\ax}{1}
+  \pgfmathsetmacro{\ay}{0.5}
+  \filldraw[red] (\ax, \ay) circle (2pt) node[below left] {$A(\mathbf{a})$};
+
+  % Direction vector d
+  \draw[->, thick, green!60!black] (\ax, \ay) -- ++(1.5, 0.75) node[midway, above left, font=\small] {$\mathbf{d}$};
+
+  % Point P on line (general point)
+  \pgfmathsetmacro{\px}{3}
+  \pgfmathsetmacro{\py}{1.5}
+  \filldraw[black] (\px, \py) circle (1.5pt) node[above right] {$P(\mathbf{r})$};
+
+  % Vector from A to P
+  \draw[->, thick, red!60] (\ax, \ay) -- (\px, \py) node[midway, below right, font=\small] {$t\mathbf{d}$};
+
+  % Axes
+  \draw[->, thick] (-0.5,0) -- (4.5,0) node[right] {$x$};
+  \draw[->, thick] (0,-0.5) -- (0,3) node[above] {$y$};
+
+  % Origin
+  \filldraw[black] (0,0) circle (1pt) node[below left] {$O$};
+
+  % Position vector to A
+  \draw[->, thick, gray] (0,0) -- (\ax, \ay);
+\end{tikzpicture}
+\end{document}

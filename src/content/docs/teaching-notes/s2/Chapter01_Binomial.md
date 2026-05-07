@@ -71,7 +71,7 @@ The game will end within 2 rounds maximum. Let's enumerate all possible sequence
 
 **Tree Diagram:**
 
-![Game Tree](/images/game-tree.svg)
+![Game Tree](/images/tikz/game-tree.svg)
 
 **Sequence Analysis:**
 

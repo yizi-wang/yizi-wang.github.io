@@ -33,7 +33,7 @@ $$
 其中 $z = x + yi$。这等价于笛卡尔坐标中的标准圆方程。
 :::
 
-![复数轨迹：圆](/images/fp2-complex-locus-circle.svg)
+![复数轨迹：圆](/images/tikz/fp2-complex-locus-circle.svg)
 
 ### 例题 1：求圆的方程
 
@@ -81,7 +81,7 @@ $$
 此线可以写成 $y = mx + c$ 的形式，其中 $m = \tan \theta$，$c = b - m \cdot a$。
 :::
 
-![复数轨迹：半直线](/images/fp2-complex-locus-halfline.svg)
+![复数轨迹：半直线](/images/tikz/fp2-complex-locus-halfline.svg)
 
 ### 例题 3：求直线方程
 
@@ -313,7 +313,7 @@ $$
 - $\alpha < \arg(z-z_0) < \beta$：从 $z_0$ 出发的两条射线之间的扇形
 :::
 
-![复数轨迹：不等式区域](/images/fp2-complex-locus-inequality.svg)
+![复数轨迹：不等式区域](/images/tikz/fp2-complex-locus-inequality.svg)
 
 :::tip[判断圆内还是圆外]
 对于由 $|z-z_1| = k|z-z_2|$ 定义的圆：
@@ -380,9 +380,9 @@ $$
 - 缩放 $k$：$k = k + 0i$ 对应 $\begin{pmatrix} k & 0 \\ 0 & k \end{pmatrix}$
 :::
 
-![复数乘法：旋转与缩放](/images/fp2-complex-multiplication.svg)
+![复数乘法：旋转与缩放](/images/tikz/fp2-complex-multiplication.svg)
 
-![复数变换 w = z²](/images/fp2-complex-transformation.svg)
+![复数变换 w = z²](/images/tikz/fp2-complex-transformation.svg)
 
 :::note[核心概念：莫比乌斯变换]
 莫比乌斯变换的形式为：

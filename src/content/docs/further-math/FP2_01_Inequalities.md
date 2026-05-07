@@ -12,7 +12,7 @@ This lecture note details the solution of inequalities involving rational expres
 
 Sign analysis of $\frac{x-2}{x+3}$:
 
-![Sign analysis number line](/images/fp2-number-line-sign.svg)
+![Sign analysis number line](/images/tikz/fp2-number-line-sign.svg)
 
 ## Module 1: Rational Inequalities
 
@@ -48,7 +48,7 @@ $$x = -\frac{4}{3} \text{ (denominator)},\ x = 0 \text{ (denominator)},\ x = -1 
 
 **Number Line Partitioning:**
 
-![Number line for Example 2](/images/fp2-example2-number-line.svg)
+![Number line for Example 2](/images/tikz/fp2-example2-number-line.svg)
 
 **Sign Analysis Table:**
 
@@ -114,7 +114,7 @@ $$x \neq -\frac{4}{3},\ x \neq 0$$
 
 **Step 2: Key Features Visualisation**
 
-![Graph of f(x) and g(x)](/images/fp2-example3-graph.svg)
+![Graph of f(x) and g(x)](/images/tikz/fp2-example3-graph.svg)
 
 **Step 3: Graphical Analysis**
 

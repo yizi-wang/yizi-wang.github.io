@@ -56,7 +56,7 @@ $$
 - 乘以 $re^{i\theta}$ 同时做两件事
 :::
 
-![阿甘图：模与辐角](/images/fp2-complex-argand.svg)
+![阿甘图：模与辐角](/images/tikz/fp2-complex-argand.svg)
 
 ### 例题 1：形式转换
 

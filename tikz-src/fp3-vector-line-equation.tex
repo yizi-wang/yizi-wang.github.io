@@ -1,0 +1,38 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows.meta, 3d, perspective, calc}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1, >=stealth]
+    % Coordinate system
+    \draw[->] (-1,0) -- (5,0) node[right]{$x$};
+    \draw[->] (0,-1) -- (0,5) node[above]{$y$};
+
+    % Point A
+    \coordinate (A) at (1,1.5);
+    \fill[blue] (A) circle (0.05) node[above] {$A$};
+
+
+
+    % Line
+    \draw[thick, blue, -] (-0.5,0.75) -- (5,3.5) node[above right] {Line};
+
+    % Position vector to A
+    \draw[->,thick,purple] (0,0) -- (A) node[midway,left] {$\mathbf{a}$};
+
+    % Generic position vector r
+    \coordinate (P) at (3,2.5);
+    \fill[green!70!black] (P) circle (0.05) node[above] {$P$};
+    \draw[->,thick,green!70!black] (0,0) -- (P) node[midway,below right] {$\mathbf{r}$};
+
+    % r-a vector
+    \draw[->,thick,orange,dashed] (A) -- (P) node[midway,above] {$\lambda\mathbf{b}$};
+
+    % Vector b
+    \draw[->,thick,red] (A) -- ($(A)+(1,0.5)$) node[midway, below] {$\mathbf{b}$};
+
+    % Label the line equation
+    \node[blue] at (4,2.5) {$\mathbf{r} = \mathbf{a} + \lambda\mathbf{b}$};
+\end{tikzpicture}
+\end{document}

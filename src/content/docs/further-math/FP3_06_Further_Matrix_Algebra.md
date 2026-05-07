@@ -50,7 +50,7 @@ $$
 - If $\det(A) = 0$ and the system is consistent, it has infinitely many solutions.
 - If $\det(A) = 0$ and the system is inconsistent, it has no solution.
 
-![Unique solution vs parallel lines](/images/fp3_matrix_unique_solution.svg)
+![Unique solution vs parallel lines](/images/tikz/fp3-matrix-system-2x2.svg)
 
 ### 6.2.3 Inverse of a 2×2 Matrix
 
@@ -108,7 +108,7 @@ A system of three linear equations with three variables can be written as $A\mat
 Geometrically, each equation represents a plane in 3D space, and the solution(s) to the system represent the point(s) where all three planes intersect.
 :::
 
-![Three planes intersecting](/images/fp3_matrix_planes.svg)
+![Three planes intersecting](/images/tikz/fp3-matrix-3planes.svg)
 
 ### 6.3.2 Determinant of a 3×3 Matrix
 
@@ -163,7 +163,7 @@ For a 3×3 matrix, the absolute value of the determinant gives the volume of the
 When $\det(A) = 0$, the parallelepiped has zero volume, meaning the three vectors are linearly dependent.
 :::
 
-![Parallelepiped](/images/fp3_matrix_parallelepiped.svg)
+![Parallelepiped](/images/tikz/fp3-determinant-volume.svg)
 
 :::note[Exercise: Determinants and Systems]
 (a) Calculate the determinant of $\begin{pmatrix} 2 & 1 & 3 \\ 0 & -1 & 2 \\ 1 & 0 & 4 \end{pmatrix}$
@@ -206,7 +206,7 @@ A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)
 $$
 :::
 
-![Cofactor signs](/images/fp3_matrix_cofactor_signs.svg)
+![Cofactor signs](/images/tikz/fp3-cofactor-minor.svg)
 
 :::note[Example]
 Find the inverse of $A = \begin{pmatrix} 1 & 2 & 1 \\ 3 & 2 & 1 \\ 2 & 1 & 2 \end{pmatrix}$.
@@ -383,7 +383,7 @@ $$
 $$
 :::
 
-![Orthogonal vectors](/images/fp3_matrix_orthogonal.svg)
+![Orthogonal vectors](/images/tikz/fp3-orthogonal-vectors.svg)
 
 **Theorem.** For any orthogonal matrix $Q$:
 
@@ -600,7 +600,7 @@ Eigenvalues: $\lambda_1 = 4$ and $\lambda_2 = 2$.
 **Step 3:** For $\lambda_2 = 2$: $(A - 2I)\mathbf{v} = \mathbf{0}$ gives $v_1 = -v_2$, so $\mathbf{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}$.
 :::
 
-![Eigenvectors visualization](/images/fp3_matrix_eigenvectors.svg)
+![Eigenvectors visualization](/images/tikz/fp3-eigenvectors-visual.svg)
 
 **Eigenvalues and Eigenvectors of 3×3 Matrices**
 

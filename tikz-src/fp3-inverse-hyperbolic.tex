@@ -1,0 +1,21 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\begin{document}
+    \begin{tikzpicture}[scale=0.8]
+        % Axes
+        \draw[->] (-4,0) -- (4,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+
+        % arsinh(x)
+        \draw[blue, thick, domain=-3:3, samples=100]
+            plot (\x, {ln(abs(\x + sqrt(\x*\x + 1)))});
+        \node[blue, right] at (1,2.5) {$\sinh^{-1} x$};
+
+        % arcosh(x)
+        \draw[red, thick, domain=1:3, samples=100]
+            plot (\x, {ln(\x + sqrt(\x*\x - 1))});
+        \node[red, right] at (2,0.5) {$\cosh^{-1} x$};
+    \end{tikzpicture}
+\end{document}

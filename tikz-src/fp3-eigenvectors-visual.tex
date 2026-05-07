@@ -1,0 +1,25 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows.meta, 3d, perspective, calc, matrix, positioning}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+    % Coordinate axes
+    \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+
+    % Original vectors
+    \draw[->, thick, blue] (0,0) -- (1,1) node[above right] {$\mathbf{v}_1$};
+    \draw[->, thick, red] (0,0) -- (1,-1) node[below right] {$\mathbf{v}_2$};
+
+    % Transformed vectors
+    \draw[->, thick, blue, dashed] (0,0) -- (4,4) node[right] {$A\mathbf{v}_1 = 4\mathbf{v}_1$};
+    \draw[->, thick, red, dashed] (0,0) -- (2,-2) node[right] {$A\mathbf{v}_2 = 2\mathbf{v}_2$};
+
+    % Ellipse to show the transformation
+    \draw[rotate=45, thick, gray, dashed] (0,0) ellipse (4 and 2);
+
+    \node at (0,-3.3) {Eigenvectors of $A = \begin{pmatrix} 3 & 1 \\ 1 & 3 \end{pmatrix}$};
+\end{tikzpicture}
+\end{document}

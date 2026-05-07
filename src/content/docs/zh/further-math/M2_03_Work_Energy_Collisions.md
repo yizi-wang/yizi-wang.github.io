@@ -94,7 +94,7 @@ $$K_i + U_i = K_f + U_f$$
 
 **例题：光滑轨道下落**
 
-![能量守恒轨道](/images/m2-energy-track.svg)
+![能量守恒轨道](/images/tikz/m2-energy-track.svg)
 
 质量为 $m$ 的珠子从高度 $H$ 静止出发，下降到高度 $h$：
 
@@ -142,7 +142,7 @@ $$0 - \frac{1}{2}mv_0^2 = -\mu mgd \implies d = \frac{v_0^2}{2\mu g}$$
 
 ## 冲量与碰撞
 
-![一维碰撞示意图](/images/m2-collision-1d.svg)
+![一维碰撞示意图](/images/tikz/m2-collision-1d.svg)
 
 ### 碰撞的故事：从台球到守恒定律
 

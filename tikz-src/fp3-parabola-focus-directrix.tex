@@ -1,0 +1,28 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\begin{document}
+    \begin{tikzpicture}[scale=1.2]
+        % Draw parabola
+        \draw[blue, thick, domain=0:1] plot (\x, {sqrt(4*\x)});
+        \draw[blue, thick, domain=0:1] plot (\x, {-sqrt(4*\x)});
+
+        % Draw directrix
+        \draw[dashed] (-1,-2.5) -- (-1,2.5) node[right] {directrix};
+
+        % Draw focus
+        \node[circle, fill, inner sep=1pt] (F) at (0.25,0) {};
+        \node[above right] at (F) {$F$};
+
+        % Draw point P and lines
+        \node[circle, fill, inner sep=1pt] (P) at (0.5625,1.5) {};
+        \node[right] at (P) {$P$};
+        \draw[red] (P) -- (F);
+        \draw[red] (P) -- (-1,1.5) node[left] {$M$};
+
+        % Draw axes
+        \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+        \draw[->] (0,-1.5) -- (0,2) node[above] {$y$};
+    \end{tikzpicture}
+\end{document}

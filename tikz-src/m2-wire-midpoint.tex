@@ -1,0 +1,13 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc, positioning, arrows.meta, 3d}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+% Draw wire
+\draw[thick, blue] (0,0) -- (3,0);
+\fill[red] (1.5,0) circle (2pt) node[above] {C.M.};
+\node[below] at (1.5,0) {Midpoint};
+
+\end{tikzpicture}
+\end{document}

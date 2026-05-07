@@ -41,7 +41,7 @@ $$
 - 若 $\det(A) = 0$ 且方程组相容，则有无穷多解
 - 若 $\det(A) = 0$ 且方程组不相容，则无解
 
-![唯一解与平行线](/images/fp3_matrix_unique_solution.svg)
+![唯一解与平行线](/images/tikz/fp3-matrix-system-2x2.svg)
 
 ### 6.2.3 2×2 矩阵的逆
 
@@ -74,7 +74,7 @@ $$
 从几何上看，每个方程代表三维空间中的一个平面，方程组的解代表三个平面的交点。
 :::
 
-![三个平面相交](/images/fp3_matrix_planes.svg)
+![三个平面相交](/images/tikz/fp3-matrix-3planes.svg)
 
 ### 6.3.2 3×3 矩阵的行列式
 
@@ -100,7 +100,7 @@ $$
 当 $\det(A) = 0$ 时，平行六面体体积为零，意味着三个向量线性相关。
 :::
 
-![平行六面体](/images/fp3_matrix_parallelepiped.svg)
+![平行六面体](/images/tikz/fp3-determinant-volume.svg)
 
 :::note[练习：行列式与方程组]
 (a) 计算 $\begin{pmatrix} 2 & 1 & 3 \\ 0 & -1 & 2 \\ 1 & 0 & 4 \end{pmatrix}$ 的行列式
@@ -143,7 +143,7 @@ A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)
 $$
 :::
 
-![余子式符号](/images/fp3_matrix_cofactor_signs.svg)
+![余子式符号](/images/tikz/fp3-cofactor-minor.svg)
 
 :::note[例题]
 求 $A = \begin{pmatrix} 1 & 2 & 1 \\ 3 & 2 & 1 \\ 2 & 1 & 2 \end{pmatrix}$ 的逆矩阵。
@@ -266,7 +266,7 @@ $$
 2. 任意两个不同的行向量相互正交
 :::
 
-![正交向量](/images/fp3_matrix_orthogonal.svg)
+![正交向量](/images/tikz/fp3-orthogonal-vectors.svg)
 
 **定理。** 对于任意正交矩阵 $Q$：
 
@@ -458,7 +458,7 @@ $$
 **第三步：** $\lambda_2 = 2$：$\mathbf{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}$。
 :::
 
-![特征向量可视化](/images/fp3_matrix_eigenvectors.svg)
+![特征向量可视化](/images/tikz/fp3-eigenvectors-visual.svg)
 
 **3×3 矩阵的特征值和特征向量**
 

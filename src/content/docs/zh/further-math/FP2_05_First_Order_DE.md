@@ -466,7 +466,7 @@ $$
 
 (b) 求 $x = \frac{\pi}{6}$ 时 $y$ 的值，答案写成 $a + k\ln b$ 的形式，其中 $a$ 和 $b$ 是整数，$k$ 是有理数。
 
-![解曲线 y = x² + 4/x²](/images/fp2-ode-solution-curves.svg)
+![解曲线 y = x² + 4/x²](/images/tikz/fp2-ode-solution-curves.svg)
 
 ### 练习题 4
 

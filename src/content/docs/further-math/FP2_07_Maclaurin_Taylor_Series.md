@@ -142,7 +142,7 @@ P_2(x) &= 1 + x + \frac{x^2}{2}
 \end{aligned}
 $$
 
-![Maclaurin approximation of e^x](/images/fp2-maclaurin-approximation.svg)
+![Maclaurin approximation of e^x](/images/tikz/fp2-maclaurin-approximation.svg)
 
 **Observations:**
 - Each polynomial $P_n(x)$ matches the function $f(x)$ and its first $n$ derivatives at $x = 0$

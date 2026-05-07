@@ -1,0 +1,26 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc,intersections}
+\begin{document}
+\begin{tikzpicture}[scale=1]
+    % Axes
+    \draw[->] (-3,0) -- (3,0) node[right] {Re};
+    \draw[->] (0,-3) -- (0,3) node[above] {Im};
+
+    % Center point
+    \node[blue] at (1,1) {$\bullet$};
+    \node[above left] at (1,1) {$z_0$};
+
+    % Circle
+    \draw[red] (1,1) circle (1.5);
+
+    % Point on circle
+    \node[blue] at ({1+1.5*cos(45)},{1+1.5*sin(45)}) {$\bullet$};
+    \node[above right] at ({1+1.5*cos(45)},{1+1.5*sin(45)}) {$z$};
+
+    % Radius
+    \draw[blue, dashed] (1,1) -- ({1+1.5*cos(45)},{1+1.5*sin(45)});
+    \node[right] at (1.5,1.5) {$r$};
+\end{tikzpicture}
+\end{document}

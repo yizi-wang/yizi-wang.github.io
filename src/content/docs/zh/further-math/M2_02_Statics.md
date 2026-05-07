@@ -40,7 +40,7 @@ $$\bar{x} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}$$
 
 质心是位置的**加权平均**，"权重"是实际质量。
 
-![杆上的质心](/images/m2-center-of-mass-rod.svg)
+![杆上的质心](/images/tikz/m2-center-of-mass-rod.svg)
 
 **三个朋友：** 质量 50 kg、60 kg、70 kg，位置 0 m、2 m、5 m：
 
@@ -107,7 +107,7 @@ $$\bar{x} = \frac{x_1 + x_2}{2}, \quad \bar{y} = \frac{y_1 + y_2}{2}$$
 - **圆弧：** 距中心 $\dfrac{r\sin\alpha}{\alpha}$
 :::
 
-![标准形状的质心](/images/m2-center-of-mass-shapes.svg)
+![标准形状的质心](/images/tikz/m2-center-of-mass-shapes.svg)
 
 ## 组合法则：构建复杂形状
 
@@ -129,7 +129,7 @@ $$\bar{x} = \frac{4\rho(2) + 3\rho(0.5)}{7\rho} = \frac{19}{14}, \quad \bar{y} =
 
 质心到 AB 和 BC 的距离都是 $\dfrac{19}{14}$。
 
-![L 形薄板分解](/images/m2-l-shape-composite.svg)
+![L 形薄板分解](/images/tikz/m2-l-shape-composite.svg)
 
 ### 类型 2：弯曲导线框架
 
@@ -155,7 +155,7 @@ $$\bar{x} = \frac{36\pi(0) + (-4\pi)(3)}{36\pi - 4\pi} = -\frac{3}{8}$$
 
 距原中心 $\dfrac{3}{8}$ 单位（在孔的反方向）。
 
-![带偏心孔的垫圈](/images/m2-washer-hole.svg)
+![带偏心孔的垫圈](/images/tikz/m2-washer-hole.svg)
 
 ### 类型 4：非均匀物体
 
@@ -175,7 +175,7 @@ $$d_{\text{左}} = \frac{24(2)+30(5)}{54} = \frac{11}{3} \text{ cm}, \quad d_{\t
 - **临界：** 质心竖直线恰好在边缘
 - **不稳定：** 质心竖直线在支撑面外 → 物体翻倒
 
-![稳定性示意图](/images/m2-stability-diagram.svg)
+![稳定性示意图](/images/tikz/m2-stability-diagram.svg)
 
 ## 力与力矩
 
@@ -183,7 +183,7 @@ $$d_{\text{左}} = \frac{24(2)+30(5)}{54} = \frac{11}{3} \text{ cm}, \quad d_{\t
 
 均匀梯子长 $L$，重 $W$，靠在光滑墙上，与水平成 $\theta$ 角。地面摩擦系数 $\mu$。
 
-![靠墙梯子受力图](/images/m2-ladder-equilibrium.svg)
+![靠墙梯子受力图](/images/tikz/m2-ladder-equilibrium.svg)
 
 平衡条件：
 - $\sum F_x = 0$：$f = N_w$
@@ -228,7 +228,7 @@ $$f \leq \mu N$$
 
 ### 条带法
 
-![三角形分割为条带](/images/m2-triangle-strips.svg)
+![三角形分割为条带](/images/tikz/m2-triangle-strips.svg)
 
 将三角形切分为水平条带。每个条带在高度 $y$ 处，宽度 $w(y)$，厚度 $dy$。
 

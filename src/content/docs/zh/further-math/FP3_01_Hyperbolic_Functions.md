@@ -77,7 +77,7 @@ $$\sec \theta = \frac{1}{\cos \theta}, \quad \csc \theta = \frac{1}{\sin \theta}
 - $\cosh x$ 类似于 $\cos x$，但最小值为 1 且呈指数增长
 - $\tanh x$ 有水平渐近线 $y = \pm 1$
 
-![双曲函数图像](/images/fp3-hyperbolic-graphs.svg)
+![双曲函数图像](/images/tikz/fp3-hyperbolic-graphs.svg)
 
 ### 例题 1：解方程 $\sinh x = 3$
 
@@ -206,9 +206,9 @@ $$\cosh^{-1} x = \ln(x + \sqrt{x^2 - 1}), \quad x \geq 1$$
 $$\tanh^{-1} x = \frac{1}{2}\ln\!\left(\frac{1+x}{1-x}\right), \quad |x| < 1$$
 :::
 
-![反双曲函数图像](/images/fp3-inverse-hyperbolic.svg)
+![反双曲函数图像](/images/tikz/fp3-inverse-hyperbolic.svg)
 
-![单位圆上的弧长](/images/fp3-inverse-hyperbolic-arclength.svg)
+![单位圆上的弧长](/images/tikz/fp3-inverse-hyperbolic-arclength.svg)
 
 ### 与三角函数的联系
 
@@ -513,7 +513,7 @@ $$\frac{e^x - e^{-x}}{2} = -\frac{4}{3} \Rightarrow e^x = \frac{1}{3} \text{ 或
 - $T$ = 点 $P$ 处的张力
 - $T_h$ = 张力的水平分量（沿链条保持恒定）
 
-![悬链线设定图](/images/fp3-catenary-setup.svg)
+![悬链线设定图](/images/tikz/fp3-catenary-setup.svg)
 
 ### 第二部分：力分析
 
@@ -524,7 +524,7 @@ $$\frac{e^x - e^{-x}}{2} = -\frac{4}{3} \Rightarrow e^x = \frac{1}{3} \text{ 或
 - $T_h$ 保持恒定（关键洞察！）
 - $\theta$ 是 $T$ 与水平方向的夹角
 
-![力分析图](/images/fp3-catenary-forces.svg)
+![力分析图](/images/tikz/fp3-catenary-forces.svg)
 
 由力平衡：
 
@@ -534,7 +534,7 @@ $$T\cos\theta = T_h \quad \text{（水平力平衡）}$$
 
 ### 第三部分：推导微分方程
 
-![微分三角形](/images/fp3-differential-triangle.svg)
+![微分三角形](/images/tikz/fp3-differential-triangle.svg)
 
 对于一小段：
 
