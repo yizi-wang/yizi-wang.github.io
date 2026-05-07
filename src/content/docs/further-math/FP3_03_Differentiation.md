@@ -28,6 +28,8 @@ $\sinh x, \cosh x, \tanh x, \operatorname{sech} x, \operatorname{csch} x, \coth 
 
 The derivative of a function at a point represents the gradient of the tangent line at that point. This can be understood as the limit of the gradient of secant lines.
 
+![Secant line approaching tangent](/images/fp3-differentiation-secant-tangent.svg)
+
 :::note[Definition: Derivative as a Limit from First Principle]
 The derivative of a function $f$ at a point $x = a$ is defined as:
 

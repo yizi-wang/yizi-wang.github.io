@@ -56,6 +56,8 @@ $$
 - 乘以 $re^{i\theta}$ 同时做两件事
 :::
 
+![阿甘图：模与辐角](/images/fp2-complex-argand.svg)
+
 ### 例题 1：形式转换
 
 将下列复数写成指数形式 $re^{i\theta}$：

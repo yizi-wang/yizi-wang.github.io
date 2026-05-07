@@ -125,6 +125,8 @@ where $\mu = np$ and $\sigma^2 = np(1-p)$.
 
 *Imagine a bar chart of B(50, 0.3) with a red normal curve N(15, 10.5) overlaid — the match is remarkably close.*
 
+![Binomial B(50,0.3) with normal overlay](/images/s2-binomial-normal-overlay.svg)
+
 Mean = 15, Variance = 10.5
 
 ### Normal Approximation to Poisson Distribution
@@ -142,6 +144,8 @@ Note the beautiful property: for Poisson distributions, the mean equals the vari
 **Poisson Distribution Po(12) with Normal Overlay**
 
 *Imagine a bar chart of Po(12) with a red normal curve N(12, 12) overlaid — again, a very close fit.*
+
+![Poisson Po(12) with normal overlay](/images/s2-poisson-normal-overlay.svg)
 
 Mean = Variance = 12
 

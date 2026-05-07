@@ -208,6 +208,8 @@ $$\tanh^{-1} x = \frac{1}{2}\ln\!\left(\frac{1+x}{1-x}\right), \quad |x| < 1$$
 
 ![Graphs of inverse hyperbolic functions](/images/fp3-inverse-hyperbolic.svg)
 
+![Arc length on unit circle](/images/fp3-inverse-hyperbolic-arclength.svg)
+
 ### Connection with Trigonometric Functions
 
 For any real $x$:

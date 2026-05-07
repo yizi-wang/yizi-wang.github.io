@@ -147,6 +147,8 @@ $$5x\sin\theta - 3y\cos\theta = 16\sin\theta\cos\theta$$
 - 盐湖城摩门教堂
 :::
 
+![椭圆轨道：太阳位于焦点](/images/fp3-conic-ellipse-orbit.svg)
+
 ## 模块 2.2：双曲线
 
 ### 定义与标准形式
@@ -220,12 +222,16 @@ $$\frac{PF}{PM} = e$$
 的曲线，其中 $e$ 是某个常数？这个比值 $e$ 称为**离心率**。
 :::
 
+![抛物线的焦点与准线](/images/fp3-parabola-focus-directrix.svg)
+
 :::note[不同离心率的可视化]
 
 | $e = 0$ | $0 < e < 1$ | $e = 1$ | $e > 1$ |
 |---|---|---|---|
 | 圆 | 椭圆 | 抛物线 | 双曲线 |
 :::
+
+![圆锥曲线离心率比较](/images/fp3-eccentricity-comparison.svg)
 
 ### 例题：推导椭圆方程
 
@@ -279,6 +285,8 @@ $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
 :::note[历史笔记：离心率的发现]
 **你知道吗？** 哈雷彗星的离心率为 0.967，使其轨道呈高度椭圆形。这解释了为什么它每 76 年才能从地球上观测到一次！
 :::
+
+![双曲线彗星轨迹](/images/fp3-conic-hyperbola-comet.svg)
 
 ### 综合练习：双曲线与离心率
 

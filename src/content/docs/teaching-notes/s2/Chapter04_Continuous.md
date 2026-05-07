@@ -23,6 +23,8 @@ The fundamental challenge with continuous random variables is that there are inf
 
 #### Visualizing the Transition: From Discrete to Continuous
 
+![Discrete to continuous distribution transition](/images/s2-discrete-to-continuous.svg)
+
 Let's understand this concept by observing what happens as we increase the number of possible values:
 
 **Discrete: Few Values** — High probabilities (each bar is tall)
@@ -309,6 +311,8 @@ $$\frac{d}{dx} f(x) = 0 \text{ and } \frac{d^2}{dx^2} f(x) < 0$$
 The mode represents the most "dense" point of the distribution - where the probability is most concentrated.
 
 ### Assessing Distribution Shape: Understanding Skewness
+
+![Skewed distributions comparison](/images/s2-skewed-distributions.svg)
 
 #### Visual Methods for Detecting Skewness
 

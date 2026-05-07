@@ -28,6 +28,8 @@ $\sinh x, \cosh x, \tanh x, \operatorname{sech} x, \operatorname{csch} x, \coth 
 
 函数在某点的导数表示该点切线的斜率。这可以理解为割线斜率的极限。
 
+![割线趋近切线](/images/fp3-differentiation-secant-tangent.svg)
+
 :::note[定义：从第一性原理出发的导数]
 函数 $f$ 在点 $x = a$ 处的导数定义为：
 

@@ -208,6 +208,8 @@ $$\tanh^{-1} x = \frac{1}{2}\ln\!\left(\frac{1+x}{1-x}\right), \quad |x| < 1$$
 
 ![反双曲函数图像](/images/fp3-inverse-hyperbolic.svg)
 
+![单位圆上的弧长](/images/fp3-inverse-hyperbolic-arclength.svg)
+
 ### 与三角函数的联系
 
 对于任意实数 $x$：

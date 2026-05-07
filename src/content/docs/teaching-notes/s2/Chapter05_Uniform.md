@@ -104,6 +104,9 @@ $$F(x) = \begin{cases}
 
 - $F(\frac{a+b}{2}) = 0.5$ (median always at center)
 :::
+
+![Uniform distribution PDF and CDF](/images/s2-uniform-pdf-cdf.svg)
+
 **Example 2: CDF Applications**
 
 For $X \sim \text{Uniform}(-2, 6)$:
@@ -276,6 +279,9 @@ In 1777, French mathematician Georges-Louis Leclerc, Comte de Buffon, posed this
 
 **Amazing Discovery:** The answer involves $\pi$!
 :::
+
+![Buffon's needle problem](/images/s2-buffon-needle.svg)
+
 ### Step 1: Identify the Random Variables
 
 :::note[Your Task]

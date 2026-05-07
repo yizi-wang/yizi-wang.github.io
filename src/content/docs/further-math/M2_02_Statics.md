@@ -52,6 +52,8 @@ $$\bar{x} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}$$
 
 The center of mass is the **weighted average** of the positions, where the "weights" are the actual masses.
 
+![Center of mass on a rod](/images/m2-center-of-mass-rod.svg)
+
 **Example: Three's Company**
 
 Three friends with masses 50 kg, 60 kg, and 70 kg sit on a seesaw at positions 0 m, 2 m, and 5 m respectively.
@@ -138,6 +140,8 @@ $$\bar{x} = \frac{x_1 + x_2}{2}, \quad \bar{y} = \frac{y_1 + y_2}{2}$$
 - **Straight Wire:** At geometric midpoint
 :::
 
+![Center of mass of shapes](/images/m2-center-of-mass-shapes.svg)
+
 ## The Combination Principle: Building Complex Shapes
 
 :::tip[The Core Principle]
@@ -163,6 +167,8 @@ $$\bar{x} = \frac{4\rho \times 2 + 3\rho \times 0.5}{7\rho} = \frac{19}{14}$$
 $$\bar{y} = \frac{4\rho \times 0.5 + 3\rho \times 2.5}{7\rho} = \frac{19}{14}$$
 
 **Answer:** Distance from center of mass to AB and BC are both $\dfrac{19}{14}$.
+
+![L-shaped lamina decomposition](/images/m2-l-shape-composite.svg)
 
 ### Type 2: Bent Wire Frame
 
@@ -197,6 +203,8 @@ $$\bar{x} = \frac{36\pi \times 0 + (-4\pi) \times 3}{36\pi - 4\pi} = \frac{-12\p
 
 **Answer:** Distance from original center $= \dfrac{3}{8}$ units (away from the hole).
 
+![Washer with offset hole](/images/m2-washer-hole.svg)
+
 ### Type 4: Non-Uniform Objects
 
 Rectangle A: $4 \times 2$, mass 24, center at $(2, 1)$. Rectangle B: $2 \times 3$, mass 30, center at $(5, 1.5)$.
@@ -221,6 +229,8 @@ For an object on a tilted surface, stability depends on whether the vertical lin
 - **Critical:** CM vertical line passes at the edge
 - **Unstable:** CM vertical line falls outside the base → toppling
 
+![Stability diagram](/images/m2-stability-diagram.svg)
+
 ## Forces and Moments: The Complete Picture
 
 ### The Ladder Problem
@@ -232,6 +242,8 @@ A uniform ladder of length $L$ and weight $W$ leans against a smooth wall at ang
 - $N_w$ horizontal from wall (smooth, no friction)
 - $N_g$ vertical upward from ground
 - $f$ horizontal friction at ground
+
+![Ladder against wall with forces](/images/m2-ladder-equilibrium.svg)
 
 **Equilibrium conditions:**
 
@@ -283,6 +295,8 @@ $$f \leq \mu N$$
 ## The Triangle Challenge: Integration and Moment Balance
 
 ### The Strip Method
+
+![Triangle divided into strips](/images/m2-triangle-strips.svg)
 
 Slice the triangle into horizontal strips. Each strip at height $y$ has width $w(y)$ and thickness $dy$.
 

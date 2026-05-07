@@ -147,6 +147,8 @@ This principle is used in:
 - The Mormon Tabernacle, Salt Lake City
 :::
 
+![Elliptical orbit with Sun at focus](/images/fp3-conic-ellipse-orbit.svg)
+
 ## Module 2.2: Hyperbolas
 
 ### Definition and Standard Form
@@ -220,12 +222,16 @@ $$\frac{PF}{PM} = e$$
 where $e$ is some constant? This ratio $e$ is called the **eccentricity**.
 :::
 
+![Parabola with focus and directrix](/images/fp3-parabola-focus-directrix.svg)
+
 :::note[Visualising Different Eccentricities]
 
 | $e = 0$ | $0 < e < 1$ | $e = 1$ | $e > 1$ |
 |---|---|---|---|
 | Circle | Ellipse | Parabola | Hyperbola |
 :::
+
+![Eccentricity comparison of conic sections](/images/fp3-eccentricity-comparison.svg)
 
 ### Example: Deriving the Ellipse Equation
 
@@ -279,6 +285,8 @@ Now it's your turn! Follow similar steps to derive the standard form of a hyperb
 :::note[Historical Note: Discovery of Eccentricity]
 **Did You Know?** Halley's Comet has an eccentricity of 0.967, making its orbit highly elliptical. This explains why it's only visible from Earth every 76 years!
 :::
+
+![Hyperbolic comet trajectory](/images/fp3-conic-hyperbola-comet.svg)
 
 ### Comprehensive Exercise: Hyperbola and Eccentricity
 
