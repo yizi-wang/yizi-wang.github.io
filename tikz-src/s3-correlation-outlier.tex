@@ -1,0 +1,25 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.15]
+    % Axes
+    \draw[->] (-2,0) -- (25,0) node[right] {$x$};
+    \draw[->] (0,-5) -- (0,100) node[above] {$y$};
+    % Ticks
+    \draw (1,2) -- (1,-2) node[below] {\small 1};
+    \draw (2,2) -- (2,-2) node[below] {\small 2};
+    \draw (20,2) -- (20,-2) node[below] {\small 20};
+    \draw (2,10) -- (-2,10) node[left] {\small 10};
+    \draw (2,12) -- (-2,12) node[left] {\small 12};
+    \draw (2,90) -- (-2,90) node[left] {\small 90};
+    % Points
+    \filldraw[red] (1,10) circle (10pt);
+    \filldraw[red] (1,12) circle (10pt);
+    \filldraw[red] (2,10) circle (10pt);
+    \filldraw[red] (2,12) circle (10pt);
+    % Outlier
+    \filldraw[blue] (20,90) circle (10pt);
+    % Trend line
+    \draw[dashed, gray, thick] (0,5.5) -- (22,98);
+\end{tikzpicture}
+\end{document}

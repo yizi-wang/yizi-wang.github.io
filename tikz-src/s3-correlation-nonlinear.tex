@@ -1,0 +1,20 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    % Axes
+    \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+    \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+    % Ticks
+    \foreach \x in {-2,-1,1,2} \draw (\x,0.1) -- (\x,-0.1) node[below] {\small $\x$};
+    \foreach \y in {1,2,3,4} \draw (0.1,\y) -- (-0.1,\y) node[left] {\small $\y$};
+    % Points
+    \filldraw[blue] (-2,4) circle (2pt);
+    \filldraw[blue] (-1,1) circle (2pt);
+    \filldraw[blue] (0,0) circle (2pt);
+    \filldraw[blue] (1,1) circle (2pt);
+    \filldraw[blue] (2,4) circle (2pt);
+    % Curve
+    \draw[dashed, gray] (-2.2,4.84) parabola bend (0,0) (2.2,4.84);
+\end{tikzpicture}
+\end{document}

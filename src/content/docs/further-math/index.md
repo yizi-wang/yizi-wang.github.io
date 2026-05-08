@@ -5,7 +5,7 @@ tableOfContents: false
 
 # A-Level Further Mathematics Notes
 
-Lecture notes for Edexcel IAL Further Mathematics, covering Mechanics 2, Statistics 2, Further Pure 2, and Further Pure 3.
+Lecture notes for Edexcel IAL Further Mathematics, covering Mechanics 2, Statistics 2, Statistics 3, Further Pure 2, and Further Pure 3.
 
 ## S2 — Statistics 2
 
@@ -16,6 +16,16 @@ Lecture notes for Edexcel IAL Further Mathematics, covering Mechanics 2, Statist
 5. [The Uniform Distribution](./s2/Chapter05_Uniform)
 6. [Sampling and Sampling Distributions](./s2/Chapter06_Sampling)
 7. [Hypothesis Testing](./s2/Chapter07_Hypothesis_Testing)
+
+## S3 — Statistics 3
+
+1. [Sampling Methods](./s3/Chapter01_Sampling_Methods)
+2. [Combinations of Random Variables](./s3/Chapter02_Combinations_RV)
+3. [Estimation and Confidence Intervals](./s3/Chapter03_Estimation_CI)
+4. [Central Limit Theorem and Comparing Means](./s3/Chapter04_CLT_Mean_Differences)
+5. [Correlation and Rank](./s3/Chapter05_Correlation_Rank)
+6. [Goodness of Fit and Contingency Tables](./s3/Chapter06_Chi_Square)
+7. [International Exam Review](./s3/Chapter07_Exam_Review)
 
 ## M2 — Mechanics 2
 
