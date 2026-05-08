@@ -10,7 +10,7 @@ For the first post, I want to share my experience using AI to generate course ha
 
 I teach A-Level Further Mathematics. Commercial textbooks have a problem: knowledge points sit in isolation, with little connection between chapters. I wanted to give students a set of notes that trace how ideas develop, weave in exam questions, and offer extension material for different levels.
 
-Writing all of that in [LaTeX](https://www.latex-project.org/) by hand is enormous. FP2, FP3, S2, M2, S3 — five full sets of course notes, typed from scratch by one person. I had no idea how long that would take.
+Writing all of that in [LaTeX](https://www.latex-project.org/) by hand is enormous. [FP2](/further-math/fp2/), [FP3](/further-math/fp3/), [S2](/further-math/s2/), [M2](/further-math/m2/), S3 — five full sets of course notes, typed from scratch by one person. I had no idea how long that would take.
 
 So I started using AI.
 
@@ -20,7 +20,7 @@ I began with [Cursor](https://cursor.com/) IDE. AI capabilities were more limite
 
 Once the framework was set, I'd have AI generate a rough LaTeX skeleton, then refine it section by section. I kept a set of fixed prompts, swapping in different course content each time.
 
-Most examples needed me to come up with the framework and let AI fill in the details. For the S2 chapter on the Binomial Distribution, I was researching the origins of probability theory and found the famous correspondence between Pascal and Fermat — in 1654 France, two knights wagering 64 gold coins, Antoine leading 2:1 when the game was interrupted. How should the coins be divided fairly? The answer leads directly to the definition of the binomial distribution. I thought it would make a great classroom introduction, so I designed the structure and had AI add historical detail, polish the narrative, and embed the mathematical derivation.
+Most examples needed me to come up with the framework and let AI fill in the details. For the [S2](/further-math/s2/) chapter on the Binomial Distribution, I was researching the origins of probability theory and found the famous correspondence between Pascal and Fermat — in 1654 France, two knights wagering 64 gold coins, Antoine leading 2:1 when the game was interrupted. How should the coins be divided fairly? The answer leads directly to the definition of the binomial distribution. I thought it would make a great classroom introduction, so I designed the structure and had AI add historical detail, polish the narrative, and embed the mathematical derivation.
 
 Exam questions were more tedious. I needed OCR tools (now recommended: [LlamaParse](https://github.com/run-llama/llama_parse)) to convert problems into LaTeX, then have AI integrate them into the handout. Every graph — functions, 3D geometry, polar coordinates — required multiple rounds of adjustment. AI can't check how a rendered PDF looks, can't judge whether the vertical spacing between a problem and its workspace is reasonable. All of that had to be done by hand.
 
