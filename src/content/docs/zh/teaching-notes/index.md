@@ -8,4 +8,5 @@ title: 教学博客
 
 ## 文章
 
+- [从 Mathpix 到 Agent：一个数学老师的 AI 工具流水线](./tool-pipeline)
 - [用 AI 写讲义之后，我发现自己差点不会教书了](./ai-handout-reflection)

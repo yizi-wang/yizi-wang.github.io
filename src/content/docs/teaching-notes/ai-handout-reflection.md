@@ -2,7 +2,7 @@
 title: After Using AI to Write Handouts, I Nearly Forgot How to Teach
 ---
 
-I recently built a personal website with OpenClaw. Back in my PhD days, setting up a personal site meant days wrestling with frameworks and CSS. Now, a few conversations with AI and a polished site is ready. That made me think — it's time to start writing a blog.
+I recently built a personal website with [OpenClaw](https://www.openclaw.ai/). Back in my PhD days, setting up a personal site meant days wrestling with frameworks and CSS. Now, a few conversations with AI and a polished site is ready. That made me think — it's time to start writing a blog.
 
 For the first post, I want to share my experience using AI to generate course handouts. Not a tutorial, just honest reflections — including the mistakes I made.
 
@@ -10,19 +10,19 @@ For the first post, I want to share my experience using AI to generate course ha
 
 I teach A-Level Further Mathematics. Commercial textbooks have a problem: knowledge points sit in isolation, with little connection between chapters. I wanted to give students a set of notes that trace how ideas develop, weave in exam questions, and offer extension material for different levels.
 
-Writing all of that in LaTeX by hand is enormous. FP2, FP3, S2, M2, S3 — five full sets of course notes, typed from scratch by one person. I had no idea how long that would take.
+Writing all of that in [LaTeX](https://www.latex-project.org/) by hand is enormous. FP2, FP3, S2, M2, S3 — five full sets of course notes, typed from scratch by one person. I had no idea how long that would take.
 
 So I started using AI.
 
 ## My workflow
 
-I began with Cursor IDE. AI capabilities were more limited back then, so my approach was: first think through the chapter structure myself, then brainstorm with AI on how to sequence the knowledge points and what examples would work best as introductions.
+I began with [Cursor](https://cursor.com/) IDE. AI capabilities were more limited back then, so my approach was: first think through the chapter structure myself, then brainstorm with AI on how to sequence the knowledge points and what examples would work best as introductions.
 
 Once the framework was set, I'd have AI generate a rough LaTeX skeleton, then refine it section by section. I kept a set of fixed prompts, swapping in different course content each time.
 
 Most examples needed me to come up with the framework and let AI fill in the details. For the S2 chapter on the Binomial Distribution, I was researching the origins of probability theory and found the famous correspondence between Pascal and Fermat — in 1654 France, two knights wagering 64 gold coins, Antoine leading 2:1 when the game was interrupted. How should the coins be divided fairly? The answer leads directly to the definition of the binomial distribution. I thought it would make a great classroom introduction, so I designed the structure and had AI add historical detail, polish the narrative, and embed the mathematical derivation.
 
-Exam questions were more tedious. I needed OCR tools to convert problems into LaTeX, then have AI integrate them into the handout. Every graph — functions, 3D geometry, polar coordinates — required multiple rounds of adjustment. AI can't check how a rendered PDF looks, can't judge whether the vertical spacing between a problem and its workspace is reasonable. All of that had to be done by hand.
+Exam questions were more tedious. I needed OCR tools (now recommended: [LlamaParse](https://github.com/run-llama/llama_parse)) to convert problems into LaTeX, then have AI integrate them into the handout. Every graph — functions, 3D geometry, polar coordinates — required multiple rounds of adjustment. AI can't check how a rendered PDF looks, can't judge whether the vertical spacing between a problem and its workspace is reasonable. All of that had to be done by hand.
 
 Each time I started a new chapter, I'd feed the previous handout to AI as a format reference. Looking back, that was wasteful — stuffing an entire old handout into the context every time instead of defining a proper format standard upfront. AI capabilities improved over time, tools supported longer contexts, and things got better.
 
@@ -38,7 +38,7 @@ AI can organize your content to look "elegant," but elegant doesn't mean teachab
 
 ### Second pitfall: the framework was right, the questions were made up
 
-For a while I was exploring NotebookLM and found it well-suited for planning handout frameworks. I uploaded STEP past papers and asked it to plan a complex numbers handout — exam-focused, with theory as support.
+For a while I was exploring [NotebookLM](https://notebooklm.google.com/) and found it well-suited for planning handout frameworks. I uploaded STEP past papers and asked it to plan a complex numbers handout — exam-focused, with theory as support.
 
 The framework it produced was excellent. It even cited specific questions from the papers. I sent the outline (questions included) to my AI IDE to write the handout, and did a quick check — I recognized those problems, and the initial review looked fine.
 
