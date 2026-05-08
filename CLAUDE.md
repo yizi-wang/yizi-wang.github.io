@@ -23,10 +23,10 @@
 src/
 ├── content/
 │   ├── docs/
+│   │   ├── further-math/      # A-Level 进阶数学（S2/M2/FP2/FP3）
 │   │   ├── tmua/              # TMUA 讲义（15+ 模块）
 │   │   ├── history-of-math/   # 数学史（8 讲）
-│   │   ├── teaching-notes/    # 教学笔记（S2 统计学等）
-│   │   ├── further-math/      # 进阶数学（M2 讲义）
+│   │   ├── teaching-notes/    # 教学博客
 │   │   ├── about.md           # 关于我
 │   │   └── index.md           # 首页
 │   └── content.config.ts

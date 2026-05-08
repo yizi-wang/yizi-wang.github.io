@@ -10,9 +10,10 @@ I hold a PhD in Mathematics from the Chinese University of Hong Kong (CUHK). My 
 
 This site is my personal portfolio and teaching resource hub:
 
+- **A-Level Notes** — Lecture notes for Edexcel IAL Further Mathematics (M2, S2, FP2, FP3)
 - **TMUA Handouts** — Complete study materials for the Cambridge TMUA exam, organized by topic with worked examples and practice exercises
-- **Teaching Notes** — Reflections on pedagogy, problem-solving approaches, and the occasional good analogy
-- **Archive** — Older posts from my academic days
+- **History of Mathematics** — A lecture series on the development of mathematical ideas
+- **Teaching Blog** — Reflections on pedagogy, AI tools, and curriculum design
 
 ## Connect
 

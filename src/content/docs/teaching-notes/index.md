@@ -1,11 +1,11 @@
 ---
-title: Teaching Notes
+title: Teaching Blog
 ---
 
-# Teaching Notes
+# Teaching Blog
 
-Pedagogical materials, lecture handouts, and teaching reflections.
+Reflections on teaching, AI tools, and curriculum design.
 
-## S2 Statistics
+## Posts
 
-- [Chapter 1: The Binomial Distribution](./s2/Chapter01_Binomial)
+- [After Using AI to Write Handouts, I Nearly Forgot How to Teach](./ai-handout-reflection)

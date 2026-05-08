@@ -26,6 +26,11 @@ export default defineConfig({
 					link: '/about',
 				},
 				{
+					label: 'A-Level Notes',
+					translations: { zh: 'A-Level 笔记' },
+					autogenerate: { directory: 'further-math' },
+				},
+				{
 					label: 'TMUA Handouts',
 					translations: { zh: 'TMUA 讲义' },
 					autogenerate: { directory: 'tmua' },
@@ -36,14 +41,9 @@ export default defineConfig({
 					autogenerate: { directory: 'history-of-math' },
 				},
 				{
-					label: 'Teaching Notes',
-					translations: { zh: '教学笔记' },
+					label: 'Teaching Blog',
+					translations: { zh: '教学博客' },
 					autogenerate: { directory: 'teaching-notes' },
-				},
-				{
-					label: 'Further Math',
-					translations: { zh: '进阶数学' },
-					autogenerate: { directory: 'further-math' },
 				},
 			],
 			customCss: ['./src/styles/custom.css'],
