@@ -23,6 +23,12 @@ Complete study materials for the Cambridge TMUA exam, organized by topic with wo
 
 [View Handouts](/tmua/)
 
+## STEP Past Papers
+
+Complete solutions and examiner commentary for STEP 2 and STEP 3 (1998–2024), covering pure mathematics. 54 papers, 431 questions with detailed worked answers.
+
+[Browse Papers](/step/)
+
 ## History of Mathematics
 
 A lecture series tracing how key mathematical concepts emerged, from ancient civilizations to modern breakthroughs.
