@@ -41,6 +41,11 @@ export default defineConfig({
 					autogenerate: { directory: 'history-of-math' },
 				},
 				{
+					label: 'STEP',
+					translations: { zh: 'STEP 题库' },
+					autogenerate: { directory: 'step' },
+				},
+				{
 					label: 'Teaching Blog',
 					translations: { zh: '教学博客' },
 					autogenerate: { directory: 'teaching-notes' },
