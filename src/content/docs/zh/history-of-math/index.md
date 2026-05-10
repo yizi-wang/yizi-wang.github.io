@@ -9,11 +9,11 @@ tableOfContents: false
 
 ## 讲座
 
-1. [勾股定理](./Lecture01_Pythagorean_Theorem)
-2. [希腊几何](./Lecture02_Greek_Geometry)
-3. [数论](./Lecture03_Number_Theory)
-4. [无穷](./Lecture04_Infinity)
-5. [东方数论](./Lecture05_Eastern_Number_Theory)
-6. [代数的突破](./Lecture06_Algebraic_Breakthrough)
-7. [解析几何](./Lecture07_Analytic_Geometry)
-8. [曲面与曲率](./Lecture08_Surface_Curvature)
+1. [勾股定理](./lecture01_pythagorean_theorem)
+2. [希腊几何](./lecture02_greek_geometry)
+3. [数论](./lecture03_number_theory)
+4. [无穷](./lecture04_infinity)
+5. [东方数论](./lecture05_eastern_number_theory)
+6. [代数的突破](./lecture06_algebraic_breakthrough)
+7. [解析几何](./lecture07_analytic_geometry)
+8. [曲面与曲率](./lecture08_surface_curvature)

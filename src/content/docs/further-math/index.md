@@ -9,47 +9,47 @@ Lecture notes for Edexcel IAL Further Mathematics, covering Mechanics 2, Statist
 
 ## S2 — Statistics 2
 
-1. [The Binomial Distribution](./s2/Chapter01_Binomial)
-2. [The Poisson Distribution](./s2/Chapter02_Poisson)
-3. [Approximations](./s2/Chapter03_Approximations)
-4. [Continuous Random Variables](./s2/Chapter04_Continuous)
-5. [The Uniform Distribution](./s2/Chapter05_Uniform)
-6. [Sampling and Sampling Distributions](./s2/Chapter06_Sampling)
-7. [Hypothesis Testing](./s2/Chapter07_Hypothesis_Testing)
+1. [The Binomial Distribution](./s2/chapter01_binomial)
+2. [The Poisson Distribution](./s2/chapter02_poisson)
+3. [Approximations](./s2/chapter03_approximations)
+4. [Continuous Random Variables](./s2/chapter04_continuous)
+5. [The Uniform Distribution](./s2/chapter05_uniform)
+6. [Sampling and Sampling Distributions](./s2/chapter06_sampling)
+7. [Hypothesis Testing](./s2/chapter07_hypothesis_testing)
 
 ## S3 — Statistics 3
 
-1. [Sampling Methods](./s3/Chapter01_Sampling_Methods)
-2. [Combinations of Random Variables](./s3/Chapter02_Combinations_RV)
-3. [Estimation and Confidence Intervals](./s3/Chapter03_Estimation_CI)
-4. [Central Limit Theorem and Comparing Means](./s3/Chapter04_CLT_Mean_Differences)
-5. [Correlation and Rank](./s3/Chapter05_Correlation_Rank)
-6. [Goodness of Fit and Contingency Tables](./s3/Chapter06_Chi_Square)
-7. [International Exam Review](./s3/Chapter07_Exam_Review)
+1. [Sampling Methods](./s3/chapter01_sampling_methods)
+2. [Combinations of Random Variables](./s3/chapter02_combinations_rv)
+3. [Estimation and Confidence Intervals](./s3/chapter03_estimation_ci)
+4. [Central Limit Theorem and Comparing Means](./s3/chapter04_clt_mean_differences)
+5. [Correlation and Rank](./s3/chapter05_correlation_rank)
+6. [Goodness of Fit and Contingency Tables](./s3/chapter06_chi_square)
+7. [International Exam Review](./s3/chapter07_exam_review)
 
 ## M2 — Mechanics 2
 
-- [Introduction: A Historical Journey through Mechanics](./m2/M2_00_Introduction)
-- [Kinematics](./m2/M2_01_Kinematics)
-- [Statics](./m2/M2_02_Statics)
-- [Work, Energy and Collisions](./m2/M2_03_Work_Energy_Collisions)
+- [Introduction: A Historical Journey through Mechanics](./m2/m2_00_introduction)
+- [Kinematics](./m2/m2_01_kinematics)
+- [Statics](./m2/m2_02_statics)
+- [Work, Energy and Collisions](./m2/m2_03_work_energy_collisions)
 
 ## FP2 — Further Pure 2
 
-- [Inequalities](./fp2/FP2_01_Inequalities)
-- [Series](./fp2/FP2_02_Series)
-- [Complex Numbers](./fp2/FP2_03_Complex_Numbers)
-- [Further Argand Diagrams](./fp2/FP2_04_Further_Argand_Diagrams)
-- [First Order Differential Equations](./fp2/FP2_05_First_Order_DE)
-- [Second Order Differential Equations](./fp2/FP2_06_Second_Order_DE)
-- [Maclaurin and Taylor Series](./fp2/FP2_07_Maclaurin_Taylor_Series)
-- [Polar Coordinates](./fp2/FP2_08_Polar_Coordinates)
+- [Inequalities](./fp2/fp2_01_inequalities)
+- [Series](./fp2/fp2_02_series)
+- [Complex Numbers](./fp2/fp2_03_complex_numbers)
+- [Further Argand Diagrams](./fp2/fp2_04_further_argand_diagrams)
+- [First Order Differential Equations](./fp2/fp2_05_first_order_de)
+- [Second Order Differential Equations](./fp2/fp2_06_second_order_de)
+- [Maclaurin and Taylor Series](./fp2/fp2_07_maclaurin_taylor_series)
+- [Polar Coordinates](./fp2/fp2_08_polar_coordinates)
 
 ## FP3 — Further Pure 3
 
-- [Hyperbolic Functions](./fp3/FP3_01_Hyperbolic_Functions)
-- [Further Coordinate Systems](./fp3/FP3_02_Further_Coordinate_Systems)
-- [Differentiation](./fp3/FP3_03_Differentiation)
-- [Integration](./fp3/FP3_04_Integration)
-- [Vectors](./fp3/FP3_05_Vectors)
-- [Further Matrix Algebra](./fp3/FP3_06_Further_Matrix_Algebra)
+- [Hyperbolic Functions](./fp3/fp3_01_hyperbolic_functions)
+- [Further Coordinate Systems](./fp3/fp3_02_further_coordinate_systems)
+- [Differentiation](./fp3/fp3_03_differentiation)
+- [Integration](./fp3/fp3_04_integration)
+- [Vectors](./fp3/fp3_05_vectors)
+- [Further Matrix Algebra](./fp3/fp3_06_further_matrix_algebra)

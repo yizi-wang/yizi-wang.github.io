@@ -7,11 +7,11 @@ tableOfContents: false
 
 Edexcel FP2 (Further Pure 2), covering inequalities, series, complex numbers, differential equations, and polar coordinates.
 
-- [Inequalities](./FP2_01_Inequalities)
-- [Series](./FP2_02_Series)
-- [Complex Numbers](./FP2_03_Complex_Numbers)
-- [Further Argand Diagrams](./FP2_04_Further_Argand_Diagrams)
-- [First Order Differential Equations](./FP2_05_First_Order_DE)
-- [Second Order Differential Equations](./FP2_06_Second_Order_DE)
-- [Maclaurin and Taylor Series](./FP2_07_Maclaurin_Taylor_Series)
-- [Polar Coordinates](./FP2_08_Polar_Coordinates)
+- [Inequalities](./fp2_01_inequalities)
+- [Series](./fp2_02_series)
+- [Complex Numbers](./fp2_03_complex_numbers)
+- [Further Argand Diagrams](./fp2_04_further_argand_diagrams)
+- [First Order Differential Equations](./fp2_05_first_order_de)
+- [Second Order Differential Equations](./fp2_06_second_order_de)
+- [Maclaurin and Taylor Series](./fp2_07_maclaurin_taylor_series)
+- [Polar Coordinates](./fp2_08_polar_coordinates)

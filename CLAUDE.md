@@ -88,8 +88,9 @@ JSX 解析器会破坏 LaTeX 内容。Starlight 文档一律用 `.md`。
 
 ### 文件命名
 
-* 使用小写英文 + 连字符：`tmua-01-algebra.md`
-* 不用中文文件名，不用空格
+* **所有 .md 文件名必须全小写**，包括目录内各章节文件（如 `chapter01_binomial.md`、`fp2_01_inequalities.md`、`lecture01_pythagorean_theorem.md`）
+* **index.md 中引用链接也必须全小写**，与实际文件名一致
+* 使用下划线分隔（不用连字符），不用中文文件名，不用空格
 
 ### 文档结构
 

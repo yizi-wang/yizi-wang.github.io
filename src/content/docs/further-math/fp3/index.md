@@ -7,9 +7,9 @@ tableOfContents: false
 
 Edexcel FP3 (Further Pure 3), covering hyperbolic functions, coordinate systems, calculus, vectors, and matrix algebra.
 
-- [Hyperbolic Functions](./FP3_01_Hyperbolic_Functions)
-- [Further Coordinate Systems](./FP3_02_Further_Coordinate_Systems)
-- [Differentiation](./FP3_03_Differentiation)
-- [Integration](./FP3_04_Integration)
-- [Vectors](./FP3_05_Vectors)
-- [Further Matrix Algebra](./FP3_06_Further_Matrix_Algebra)
+- [Hyperbolic Functions](./fp3_01_hyperbolic_functions)
+- [Further Coordinate Systems](./fp3_02_further_coordinate_systems)
+- [Differentiation](./fp3_03_differentiation)
+- [Integration](./fp3_04_integration)
+- [Vectors](./fp3_05_vectors)
+- [Further Matrix Algebra](./fp3_06_further_matrix_algebra)
