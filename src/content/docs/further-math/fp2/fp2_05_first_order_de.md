@@ -2,7 +2,7 @@
 title: "FP2 Chapter 5: First-Order Differential Equations"
 ---
 
-# FP2 Lecture Notes: First-Order Ordinary Differential Equations
+## FP2 Lecture Notes: First-Order Ordinary Differential Equations
 
 First order ordinary differential equations (ODEs) are fundamental in mathematical modeling of real-world phenomena. These equations describe relationships involving an unknown function and its first derivative. We'll explore various techniques for solving these equations, with a particular focus on linear equations and integrating factors.
 

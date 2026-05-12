@@ -2,7 +2,7 @@
 title: "E Trigonometry"
 ---
 
-# 模块 E：三角函数
+## 模块 E：三角函数
 
 > **对应考纲 Section 1**: MM4.1, MM4.2, MM4.3, MM4.4, MM4.5, MM4.6
 > **对应 Paper**: P1 与 P2 均高频（41/320 题，第二大知识点）

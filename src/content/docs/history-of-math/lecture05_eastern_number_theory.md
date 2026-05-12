@@ -2,7 +2,7 @@
 title: "Lecture 5: The Wisdom of Number Theory in the East—China and India"
 ---
 
-# Lecture 5: The Wisdom of Number Theory in the East — China and India
+## Lecture 5: The Wisdom of Number Theory in the East — China and India
 
 ## Review and Introduction
 

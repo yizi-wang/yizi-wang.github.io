@@ -2,7 +2,7 @@
 title: "FP2 Chapter 8: Polar Coordinates"
 ---
 
-# FP2 Lecture Notes: Polar Coordinates
+## FP2 Lecture Notes: Polar Coordinates
 
 ## Module 1: Introduction to Polar Coordinates
 

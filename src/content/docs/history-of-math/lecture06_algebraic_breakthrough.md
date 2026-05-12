@@ -2,7 +2,7 @@
 title: "Lecture 6: The Algebraic Breakthrough—Solving the Cubic and Quartic"
 ---
 
-# Lecture 6: The Algebraic Breakthrough—Solving the Cubic and Quartic
+## Lecture 6: The Algebraic Breakthrough—Solving the Cubic and Quartic
 
 ## Review and Introduction
 

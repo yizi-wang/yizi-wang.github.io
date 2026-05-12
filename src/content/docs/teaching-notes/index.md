@@ -2,7 +2,7 @@
 title: Teaching Blog
 ---
 
-# Teaching Blog
+## Teaching Blog
 
 Reflections on teaching, AI tools, and curriculum design.
 

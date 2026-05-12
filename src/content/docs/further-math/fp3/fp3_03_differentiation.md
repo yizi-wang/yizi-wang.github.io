@@ -2,7 +2,7 @@
 title: "FP3 Chapter 3: Differentiation"
 ---
 
-# FP3 Lecture Notes: Differentiation
+## FP3 Lecture Notes: Differentiation
 
 ## Prior Knowledge Check
 

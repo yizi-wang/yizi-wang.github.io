@@ -2,7 +2,7 @@
 title: "S2 Chapter 3: Approximations and the Central Limit Theorem"
 ---
 
-# S2 Statistics: Chapter 3 — Approximations and the Central Limit Theorem
+## S2 Statistics: Chapter 3 — Approximations and the Central Limit Theorem
 
 ## Preface: The Quest for Computational Simplicity
 

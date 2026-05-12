@@ -3,7 +3,7 @@ title: 'M2 Mechanics: Statics — Centres of Mass and Equilibrium'
 description: 'Edexcel IAL M2 静力学 — 质心、组合法则、平衡与稳定性'
 ---
 
-# M2 Mechanics: Statics — Centres of Mass and Equilibrium
+## M2 Mechanics: Statics — Centres of Mass and Equilibrium
 
 ## From Balance to Understanding: The Physics of Stability
 

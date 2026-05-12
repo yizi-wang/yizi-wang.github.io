@@ -2,7 +2,7 @@
 title: "Lecture 3: Greek Number Theory and Arithmetic"
 ---
 
-# Lecture 3: Greek Number Theory and Arithmetic
+## Lecture 3: Greek Number Theory and Arithmetic
 
 ## Review and Introduction
 

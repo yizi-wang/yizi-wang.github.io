@@ -2,7 +2,7 @@
 title: "L Proof Methods"
 ---
 
-# 模块 L：证明方法
+## 模块 L：证明方法
 
 > **对应考纲 Section 2**: Prf1, Prf2, Prf3, Prf4, Prf5, Err1, Err2
 > **对应 Paper**: P2 核心（8/320 题），P1 涉及（逻辑推理型题目）

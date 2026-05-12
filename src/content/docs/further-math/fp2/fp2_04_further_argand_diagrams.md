@@ -2,7 +2,7 @@
 title: "FP2 Chapter 4: Further Argand Diagrams"
 ---
 
-# FP2 Lecture Notes: Complex Loci and Transformations
+## FP2 Lecture Notes: Complex Loci and Transformations
 
 ## Review: Complex Numbers in the Argand Diagram
 

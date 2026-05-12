@@ -2,7 +2,7 @@
 title: "B 数学逻辑基础"
 ---
 
-# 模块 B：数学逻辑基础
+## 模块 B：数学逻辑基础
 
 > **对应考纲 Section 2**: Arg1, Arg2, Arg3, Arg4, Prf1, Prf2, Err1, Err2
 > **对应 Paper**: P2 重点（19/320 题，全部来自 Paper 2）

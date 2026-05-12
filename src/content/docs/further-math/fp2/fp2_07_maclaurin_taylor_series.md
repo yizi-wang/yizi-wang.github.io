@@ -2,7 +2,7 @@
 title: "FP2 Chapter 7: Maclaurin and Taylor Series"
 ---
 
-# FP2 Lecture Notes: Maclaurin and Taylor Series
+## FP2 Lecture Notes: Maclaurin and Taylor Series
 
 ## Introduction
 

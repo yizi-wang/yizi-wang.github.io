@@ -2,7 +2,7 @@
 title: "J Sets and Probability"
 ---
 
-# 模块 J：集合与概率
+## 模块 J：集合与概率
 
 > **对应考纲 Section 1**: MM1.7, M7.1-M7.7
 > **对应 Paper**: P1 基础（概率计算），P2 深化（逻辑推理+组合计数）

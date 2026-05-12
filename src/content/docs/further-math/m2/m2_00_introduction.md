@@ -3,7 +3,7 @@ title: 'M2 Lecture Notes: A Historical Journey through Mechanics'
 description: 'Edexcel IAL M2 力学导论 — 涵盖运动学、静力学、动力学的历史回顾与综合案例分析'
 ---
 
-# M2 Lecture Notes: A Historical Journey through Mechanics
+## M2 Lecture Notes: A Historical Journey through Mechanics
 
 > Author: WANG Yizi
 

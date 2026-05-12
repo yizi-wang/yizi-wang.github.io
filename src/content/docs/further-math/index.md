@@ -3,7 +3,7 @@ title: A-Level Notes
 tableOfContents: false
 ---
 
-# A-Level Further Mathematics Notes
+## A-Level Further Mathematics Notes
 
 Lecture notes for Edexcel IAL Further Mathematics, covering Mechanics 2, Statistics 2, Statistics 3, Further Pure 2, and Further Pure 3.
 

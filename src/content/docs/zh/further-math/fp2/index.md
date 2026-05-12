@@ -3,7 +3,7 @@ title: FP2 — 纯数 2
 tableOfContents: false
 ---
 
-# FP2 — 纯数 2
+## FP2 — 纯数 2
 
 爱德思 FP2（纯数 2），涵盖不等式、级数、复数、微分方程与极坐标。
 

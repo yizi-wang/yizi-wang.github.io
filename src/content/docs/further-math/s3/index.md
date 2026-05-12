@@ -3,7 +3,7 @@ title: S3 — Statistics 3
 tableOfContents: false
 ---
 
-# S3 — Statistics 3
+## S3 — Statistics 3
 
 Edexcel S3 (Statistics 3), covering sampling methods, combinations of random variables, estimation, confidence intervals, the Central Limit Theorem, correlation, and goodness of fit.
 

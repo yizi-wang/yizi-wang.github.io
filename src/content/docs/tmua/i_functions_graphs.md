@@ -2,7 +2,7 @@
 title: "I Functions and Graphs"
 ---
 
-# 模块 I：函数与图像
+## 模块 I：函数与图像
 
 > **对应考纲 Section 1**: MM1.7, MM8.1-MM8.7
 > **对应 Paper**: P1 基础题型 + P2 推理题型（22/320 题）

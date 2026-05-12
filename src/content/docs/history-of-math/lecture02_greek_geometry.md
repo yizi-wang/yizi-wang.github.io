@@ -2,7 +2,7 @@
 title: "Lecture 2: The Foundations of Greek Geometry"
 ---
 
-# Lecture 2: The Foundations of Greek Geometry
+## Lecture 2: The Foundations of Greek Geometry
 
 ## Review and Introduction
 

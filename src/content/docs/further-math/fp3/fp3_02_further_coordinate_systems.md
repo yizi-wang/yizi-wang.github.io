@@ -2,7 +2,7 @@
 title: "FP3 Chapter 2: Further Coordinate Systems"
 ---
 
-# FP3 Lecture Notes: Ellipses and Hyperbolas
+## FP3 Lecture Notes: Ellipses and Hyperbolas
 
 ## Introduction
 

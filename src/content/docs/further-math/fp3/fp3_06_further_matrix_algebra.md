@@ -2,7 +2,7 @@
 title: "FP3 Chapter 6: Further Matrix Algebra"
 ---
 
-# FP3 Lecture Notes: Further Topics in Matrix Algebra
+## FP3 Lecture Notes: Further Topics in Matrix Algebra
 
 ## 6.1 Introduction to 3×3 Matrices
 

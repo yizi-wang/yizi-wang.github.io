@@ -2,7 +2,7 @@
 title: "FP3 Chapter 4: Integration"
 ---
 
-# FP3 Lecture Notes: Integration
+## FP3 Lecture Notes: Integration
 
 ## Prior Knowledge Check
 

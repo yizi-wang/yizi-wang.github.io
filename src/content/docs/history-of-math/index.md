@@ -3,7 +3,7 @@ title: History of Mathematics
 tableOfContents: false
 ---
 
-# History of Mathematics
+## History of Mathematics
 
 A lecture series exploring the development of mathematical ideas from ancient civilizations to modern breakthroughs. Each lecture traces how a key concept emerged, the problems that motivated it, and the people who shaped it.
 

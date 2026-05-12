@@ -3,7 +3,7 @@ title: STEP
 tableOfContents: false
 ---
 
-# STEP Past Papers — Pure Mathematics
+## STEP Past Papers — Pure Mathematics
 
 Complete solutions and examiner commentary for STEP (Sixth Term Examination Paper) past papers, covering pure mathematics questions only. 54 papers, 1998–2024.
 

@@ -2,7 +2,7 @@
 title: "F 微分"
 ---
 
-# 模块 F：微分（Differentiation）
+## 模块 F：微分（Differentiation）
 
 > **对应考纲 Section 1**: MM6.1, MM6.2, MM6.3
 > **对应 Paper**: P1 重点（24/320 题），P2 涉及（单调性证明、极值判断）

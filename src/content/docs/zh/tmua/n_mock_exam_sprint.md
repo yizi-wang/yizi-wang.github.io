@@ -2,7 +2,7 @@
 title: "N 模考冲刺"
 ---
 
-# 模块 N：模考冲刺
+## 模块 N：模考冲刺
 
 > **对应考纲**：全考纲（MM1-MM8 + Arg1-Arg4 + Prf1-Prf5 + Err1-Err2）
 > **对应 Paper**：Paper 1（应用数学知识）+ Paper 2（数学推理）

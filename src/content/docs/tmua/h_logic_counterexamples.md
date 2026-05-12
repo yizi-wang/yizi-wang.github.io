@@ -2,7 +2,7 @@
 title: "H Logic and Counterexamples"
 ---
 
-# 模块 H：逻辑与反例
+## 模块 H：逻辑与反例
 
 > **对应考纲 Section 2**: MR1.1-MR1.8（Arg1-Arg4, Prf1, Err1）
 > **对应 Paper**: P2 核心（逻辑推理与证明）

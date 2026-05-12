@@ -2,7 +2,7 @@
 title: "S2 Chapter 7: Hypothesis Testing"
 ---
 
-# From Suspicion to Scientific Proof: The Art of Statistical Decision-Making
+## From Suspicion to Scientific Proof: The Art of Statistical Decision-Making
 
 Remember our mobile game investigation from the previous chapter? We observed 0 SSR cards in 200 draws when the company claimed a 1% drop rate. We calculated that this had a 13.5% probability of occurring by random chance. But how do we decide: is 13.5% "small enough" to conclude the company is lying?
 

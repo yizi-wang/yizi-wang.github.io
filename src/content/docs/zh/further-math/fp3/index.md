@@ -3,7 +3,7 @@ title: FP3 — 纯数 3
 tableOfContents: false
 ---
 
-# FP3 — 纯数 3
+## FP3 — 纯数 3
 
 爱德思 FP3（纯数 3），涵盖双曲函数、坐标系、微积分、向量与矩阵代数。
 

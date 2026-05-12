@@ -2,7 +2,7 @@
 title: "Lecture 7: The Birth of Analytic Geometry—The Marriage of Algebra and Geometry"
 ---
 
-# Lecture 7: The Birth of Analytic Geometry—The Marriage of Algebra and Geometry
+## Lecture 7: The Birth of Analytic Geometry—The Marriage of Algebra and Geometry
 
 ## Review and Introduction
 

@@ -2,7 +2,7 @@
 title: "FP2 Chapter 2: Series — Method of Differences"
 ---
 
-# FP2 Lecture Notes: Method of Differences
+## FP2 Lecture Notes: Method of Differences
 
 The method of differences is a powerful technique for finding sums of sequences, particularly those involving rational expressions. We begin with a fascinating problem that motivated the development of this method: proving that the sum of reciprocal squares converges.
 

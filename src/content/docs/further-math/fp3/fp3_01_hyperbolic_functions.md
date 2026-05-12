@@ -2,7 +2,7 @@
 title: "FP3 Chapter 1: Hyperbolic Functions"
 ---
 
-# FP3 Lecture Notes: Hyperbolic Functions
+## FP3 Lecture Notes: Hyperbolic Functions
 
 ## Introduction
 

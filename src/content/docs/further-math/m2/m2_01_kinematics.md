@@ -3,7 +3,7 @@ title: 'M2 Mechanics: Kinematics of Motion in Two Dimensions'
 description: 'Edexcel IAL M2 运动学 — 二维运动分析、抛体运动、变加速与向量微积分'
 ---
 
-# M2 Mechanics: Kinematics of Motion in Two Dimensions
+## M2 Mechanics: Kinematics of Motion in Two Dimensions
 
 ## From Lines to Planes: Understanding Motion in the Real World
 

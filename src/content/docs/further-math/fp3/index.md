@@ -3,7 +3,7 @@ title: FP3 — Further Pure 3
 tableOfContents: false
 ---
 
-# FP3 — Further Pure 3
+## FP3 — Further Pure 3
 
 Edexcel FP3 (Further Pure 3), covering hyperbolic functions, coordinate systems, calculus, vectors, and matrix algebra.
 

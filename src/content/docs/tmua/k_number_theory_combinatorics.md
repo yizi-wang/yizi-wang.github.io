@@ -2,7 +2,7 @@
 title: "K Number Theory and Combinatorics"
 ---
 
-# 模块 K：数论与组合
+## 模块 K：数论与组合
 
 > **对应考纲 Section 1**: MM1.1, MM2.4, M2.3, M2.5
 > **对应 Paper**: P2 重点（逻辑推理与证明验证）

@@ -2,7 +2,7 @@
 title: "C Sequences and Series"
 ---
 
-# 模块 C：数列与级数
+## 模块 C：数列与级数
 
 > **对应考纲 Section 1**: MM2.1, MM2.2, MM2.3, MM2.4
 > **对应 Paper**: P1 重点（数列通项、求和公式），P2 综合（递推关系、收敛性分析）

@@ -3,7 +3,7 @@ title: S2 — Statistics 2
 tableOfContents: false
 ---
 
-# S2 — Statistics 2
+## S2 — Statistics 2
 
 Edexcel S2 (Statistics 2), covering probability distributions, sampling, and hypothesis testing.
 

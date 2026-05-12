@@ -3,7 +3,7 @@ title: FP2 — Further Pure 2
 tableOfContents: false
 ---
 
-# FP2 — Further Pure 2
+## FP2 — Further Pure 2
 
 Edexcel FP2 (Further Pure 2), covering inequalities, series, complex numbers, differential equations, and polar coordinates.
 

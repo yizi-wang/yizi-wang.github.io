@@ -3,7 +3,7 @@ title: 'M2 Mechanics: Work, Energy, Impulses and Collisions'
 description: 'Edexcel IAL M2 动力学 — 功与能、功能原理、冲量-动量、碰撞与恢复系数'
 ---
 
-# M2 Mechanics: Work, Energy, Impulses and Collisions
+## M2 Mechanics: Work, Energy, Impulses and Collisions
 
 ## From Forces to Conservation: A New Perspective on Motion
 

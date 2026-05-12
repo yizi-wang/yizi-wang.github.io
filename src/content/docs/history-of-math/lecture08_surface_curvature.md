@@ -2,7 +2,7 @@
 title: "Lecture 8: Surface Curvature and the Catenoid"
 ---
 
-# Lecture 8: Surface Curvature and the Catenoid
+## Lecture 8: Surface Curvature and the Catenoid
 
 ## Opening: From Soap Films to Engineering Marvels
 

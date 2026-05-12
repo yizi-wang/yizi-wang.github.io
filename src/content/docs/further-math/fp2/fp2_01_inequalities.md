@@ -2,7 +2,7 @@
 title: "FP2 Chapter 1: Inequalities"
 ---
 
-# FP2 Lecture Notes: Inequalities
+## FP2 Lecture Notes: Inequalities
 
 ## Introduction
 

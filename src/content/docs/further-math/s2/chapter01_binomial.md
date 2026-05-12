@@ -2,7 +2,7 @@
 title: "S2 Chapter 1: The Binomial Distribution"
 ---
 
-# S2 Statistics: Chapter 1 — The Binomial Distribution
+## S2 Statistics: Chapter 1 — The Binomial Distribution
 
 ## Preface: Journey to 1654 France
 

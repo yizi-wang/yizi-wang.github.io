@@ -3,7 +3,7 @@ title: A-Level 笔记
 tableOfContents: false
 ---
 
-# A-Level 进阶数学笔记
+## A-Level 进阶数学笔记
 
 爱德思 IAL 进阶数学课程笔记，涵盖力学 2、统计学 2、统计学 3、纯数 2 和纯数 3。
 

@@ -2,7 +2,7 @@
 title: "Lecture 4: The Concept of Infinity in Greek Mathematics"
 ---
 
-# Lecture 4: The Concept of Infinity in Greek Mathematics
+## Lecture 4: The Concept of Infinity in Greek Mathematics
 
 ## Introduction
 

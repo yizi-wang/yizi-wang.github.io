@@ -2,7 +2,7 @@
 title: "Lecture 1: The Pythagorean Theorem"
 ---
 
-# Lecture 1: The Pythagorean Theorem and Its Historical Context
+## Lecture 1: The Pythagorean Theorem and Its Historical Context
 
 ## What is the Pythagorean Theorem?
 

@@ -2,7 +2,7 @@
 title: "FP2 Chapter 6: Second-Order Differential Equations"
 ---
 
-# FP2 Lecture Notes: Second-Order Ordinary Differential Equations
+## FP2 Lecture Notes: Second-Order Ordinary Differential Equations
 
 Second order ordinary differential equations (ODEs) are equations involving the second derivative of an unknown function. They are fundamental in mathematical modeling of physical systems and appear in countless applications in physics, engineering, and other sciences. In this lecture, we'll explore the theory and techniques for solving these equations, with special focus on linear equations with constant coefficients.
 

@@ -3,7 +3,7 @@ title: S2 — 统计学 2
 tableOfContents: false
 ---
 
-# S2 — 统计学 2
+## S2 — 统计学 2
 
 爱德思 S2（统计学 2），涵盖概率分布、抽样与假设检验。
 

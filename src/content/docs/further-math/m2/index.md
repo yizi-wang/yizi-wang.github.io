@@ -3,7 +3,7 @@ title: M2 — Mechanics 2
 tableOfContents: false
 ---
 
-# M2 — Mechanics 2
+## M2 — Mechanics 2
 
 Edexcel M2 (Mechanics 2), covering kinematics, statics, work, energy, and collisions.
 

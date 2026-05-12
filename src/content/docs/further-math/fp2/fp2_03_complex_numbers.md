@@ -2,7 +2,7 @@
 title: "FP2 Chapter 3: Complex Numbers and de Moivre's Theorem"
 ---
 
-# FP2 Lecture Notes: Complex Numbers and de Moivre's Theorem
+## FP2 Lecture Notes: Complex Numbers and de Moivre's Theorem
 
 ## Review: Fundamentals of Complex Numbers
 
