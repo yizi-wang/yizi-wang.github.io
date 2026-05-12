@@ -2,7 +2,6 @@
   --sl-content-width: 55rem !important;
 }
 
-
 /* 图片白色背景，深色模式下可读 */
 img[src$=".svg"],
 img[src$=".png"] {
