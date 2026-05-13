@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "rm -rf .astro && astro build",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' rm -rf .astro && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -17,5 +17,9 @@
     "katex": "^0.16.45",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "playwright": "^1.60.0"
   }
 }

@@ -1,4 +1,4 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cross-env NODE_OPTIONS='--max-old-space-size=4096' npm run build",
   "outputDirectory": "dist"
 }
