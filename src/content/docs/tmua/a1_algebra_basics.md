@@ -409,4 +409,10 @@ $$8(p+1) = 24 \quad \Rightarrow \quad p+1 = 3 \quad \Rightarrow \quad p = 2$$
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Algebra 相关练习题](/tmua/index.html?topic=Algebra)
+
+---
+
 *本讲义基于 TMUA 官方真题数据库生成，题目来源：2016-2022 TMUA Paper 1 & Paper 2。*

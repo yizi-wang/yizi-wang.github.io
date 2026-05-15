@@ -305,6 +305,12 @@ $S = 6 \times 6\sqrt{3} = 36\sqrt{3}$
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Coordinate Geometry 相关练习题](/tmua/index.html?topic=Coordinate%20Geometry)
+
+---
+
 **模块知识点覆盖率**：
 - 直线方程：MM3.1, MM8.3 ✓
 - 圆的标准方程：MM3.2 ✓

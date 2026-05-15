@@ -372,4 +372,12 @@ $\begin{array}{c}
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Sets 相关练习题](/tmua/index.html?topic=Sets)
+
+学完本章？[→ 去做 Probability 相关练习题](/tmua/index.html?topic=Probability)
+
+---
+
 *模块 J 完成。下一个模块：Module K（指数与对数）。*

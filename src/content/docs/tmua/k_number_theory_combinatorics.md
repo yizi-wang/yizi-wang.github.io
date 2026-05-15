@@ -259,4 +259,12 @@ III. 在开头加 U，结尾加 D
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Number Theory 相关练习题](/tmua/index.html?topic=Number%20Theory)
+
+学完本章？[→ 去做 Combinatorics 相关练习题](/tmua/index.html?topic=Combinatorics)
+
+---
+
 *讲义完成！本模块共 8 题，覆盖数论基础与组合计数两大主题。*
