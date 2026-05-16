@@ -1439,12 +1439,8 @@ $\left[\frac{x^5}{5} - 8x - \frac{16}{3x^3}\right]_1^2 = \left(\frac{32}{5} - 16
 
 **题目**：A sequence $u_0, u_1, u_2, \dots$ is defined as follows:
 
-$$
-\begin{aligned}
-u_0 &= 1 \\
-u_n &= \int_0^1 4xu_{n-1} \, dx \quad \text{for } n \geqslant 1
-\end{aligned}
-$$
+$$u_0 = 1$$
+$$u_n = \int_0^1 4xu_{n-1} \, dx \quad \text{for } n \geqslant 1$$
 
 What is the value of $u_{1000}$?
 
