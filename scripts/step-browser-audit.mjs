@@ -78,13 +78,21 @@ function waitForServer(base) {
 async function startServer() {
   for (let port = 4321; port <= 4335; port += 1) {
     const base = `http://127.0.0.1:${port}`;
+    let exited = false;
     const proc = spawn('python', ['-m', 'http.server', String(port), '-d', 'dist'], {
       cwd: ROOT,
       stdio: ['ignore', 'pipe', 'pipe'],
     });
+    proc.once('exit', () => {
+      exited = true;
+    });
 
     try {
       await waitForServer(base);
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      if (exited || proc.exitCode !== null) {
+        throw new Error(`static server process exited on port ${port}`);
+      }
       return { proc, base };
     } catch {
       proc.kill();
