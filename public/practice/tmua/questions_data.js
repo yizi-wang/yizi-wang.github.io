@@ -10504,14 +10504,31 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n题目要求确定曲线 $y = 3x^4 + 4x^3 + 6x^2 - 5$ 上驻点的个数。驻点是导数为零的点，因此核心是求导后解方程，并判断实根的个数。\n\n【解题步骤】\n第一步：对函数求导\n$$\\frac{\\mathrm{d}y}{\\mathrm{d}x} = 12x^3 + 12x^2 + 12x$$\n\n第二步：令导数为零，解方程\n$$12x^3 + 12x^2 + 12x = 0 \\quad\\Longrightarrow\\quad 12x(x^2 + x + 1) = 0$$\n\n第三步：分析因式\n由 $12x = 0$ 得 $x = 0$。\n对于二次因式 $x^2 + x + 1 = 0$，判别式 $\\Delta = 1^2 - 4 \\times 1 \\times 1 = -3 < 0$，无实根。\n\n因此方程只有一个实根 $x = 0$，即仅有一个驻点。\n\n【快捷思路】\n求导后提取公因式 $12x$，剩余二次式判别式为负，直接得到仅一个实根，无需进一步计算。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "f.stationary_points",
+      "a2.quadratic_discriminant"
+    ],
+    "skills": [
+      "differentiate-polynomial",
+      "solve-derivative-zero",
+      "discriminant-root-counting"
+    ],
+    "primary_section": "f.stationary_points"
   },
   {
     "id": "2022-P2-Q2",
     "year": 2022,
     "paper": 2,
     "num": 2,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "Find the coefficient of the $x^5$ term in the expansion of\n\n$$(1+x)^5 \\times \\sum_{i=0}^{5} x^i$$",
     "options": {
@@ -10524,7 +10541,25 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n求 $(1+x)^5 \\times \\sum_{i=0}^{5} x^i$ 展开式中 $x^5$ 项的系数，需找出两因式中次数和为 $5$ 的所有配对并累加系数。\n\n【解题步骤】\n第一步：写出两个因式的展开式\n$$(1+x)^5 = 1 + 5x + 10x^2 + 10x^3 + 5x^4 + x^5$$\n$$\\sum_{i=0}^{5} x^i = 1 + x + x^2 + x^3 + x^4 + x^5$$\n\n第二步：逐对匹配次数和为 $5$ 的项\n$$1 \\cdot x^5 + 5x \\cdot x^4 + 10x^2 \\cdot x^3 + 10x^3 \\cdot x^2 + 5x^4 \\cdot x + x^5 \\cdot 1$$\n\n第三步：系数求和\n$$1 + 5 + 10 + 10 + 5 + 1 = 32$$\n\n【快捷思路】\n第二个因式系数全为 $1$，故 $x^5$ 系数即 $(1+x)^5$ 所有系数之和，令 $x=1$ 得 $(1+1)^5 = 32$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.binomial_coefficients",
+      "c.finite_power_series",
+      "a1.coefficient_extraction"
+    ],
+    "skills": [
+      "coefficient-extraction",
+      "binomial-expansion",
+      "generating-function-evaluation"
+    ],
+    "primary_section": "c.binomial_coefficients"
   },
   {
     "id": "2022-P2-Q3",
@@ -10547,7 +10582,27 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n命题为：若正整数 $n$ 是素数，则 $n^2 + 2$ 不是素数。要求找出该命题的反例。反例的定义是：满足前提条件（$n$ 为素数）但结论不成立（$n^2 + 2$ 也是素数）的情况。\n\n【解题步骤】\n逐一检验三个候选值：\n\n对于 I：$n = 2$\n$2$ 是素数，前提成立。$n^2 + 2 = 4 + 2 = 6 = 2 \\times 3$ 不是素数，结论也成立。因此不是反例。\n\n对于 II：$n = 3$\n$3$ 是素数，前提成立。$n^2 + 2 = 9 + 2 = 11$ 是素数，结论不成立。这就是反例。\n\n对于 III：$n = 4$\n$4 = 2 \\times 2$ 不是素数，前提不成立，因此不构成反例。\n\n综上，只有 II 提供了反例。\n\n【快捷思路】\n只需逐个代入检验：反例要求 $n$ 为素数且 $n^2+2$ 也为素数。$n=2$ 得 $6$ 非素数，$n=3$ 得 $11$ 为素数，$n=4$ 本身不是素数。快速锁定 II。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Number Theory"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "b_mathematical_logic_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "b.implication_counterexamples",
+      "k.primes"
+    ],
+    "skills": [
+      "test-counterexample",
+      "check-implication-premise",
+      "prime-testing"
+    ],
+    "primary_section": "h.counterexample_construction"
   },
   {
     "id": "2022-P2-Q4",
@@ -10565,18 +10620,35 @@ window.QUESTIONS = [
       "E": "none of the options **A-D** is sufficient on its own"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n已知圆的一般方程 $x^2 + 2fx + y^2 + 2gy + h = 0$ 和点 $P(p, q)$，需要确定哪些参数组合足以独立计算圆心到点 $P$ 的距离 $L$。\n\n【解题步骤】\n第一步：通过配方法求圆心\n将圆方程配方：\n$$(x + f)^2 - f^2 + (y + g)^2 - g^2 + h = 0$$\n整理得：\n$$(x + f)^2 + (y + g)^2 = f^2 + g^2 - h$$\n\n因此圆心坐标为 $(-f, -g)$。\n\n第二步：计算距离 $L$\n$$L^2 = (p - (-f))^2 + (q - (-g))^2 = (p + f)^2 + (q + g)^2$$\n\n第三步：分析所需参数\n要计算 $L$，需要知道 $f$、$g$、$p$、$q$ 四个值。参数 $h$ 仅影响半径，与距离 $L$ 无关。\n\n【快捷思路】\n圆心坐标由 $f$ 和 $g$ 决定（为 $(-f, -g)$），与 $h$ 无关。已知点 $P$ 坐标为 $(p, q)$，因此只需 $f, g, p, q$ 即可求距离，$h$ 是多余信息。\n\n【正确答案】B Geometry",
+    "analysis": "【题目分析】\n已知圆的一般方程 $x^2 + 2fx + y^2 + 2gy + h = 0$ 和点 $P(p, q)$，需要确定哪些参数组合足以独立计算圆心到点 $P$ 的距离 $L$。\n\n【解题步骤】\n第一步：通过配方法求圆心\n将圆方程配方：\n$$(x + f)^2 - f^2 + (y + g)^2 - g^2 + h = 0$$\n整理得：\n$$(x + f)^2 + (y + g)^2 = f^2 + g^2 - h$$\n\n因此圆心坐标为 $(-f, -g)$。\n\n第二步：计算距离 $L$\n$$L^2 = (p - (-f))^2 + (q - (-g))^2 = (p + f)^2 + (q + g)^2$$\n\n第三步：分析所需参数\n要计算 $L$，需要知道 $f$、$g$、$p$、$q$ 四个值。参数 $h$ 仅影响半径，与距离 $L$ 无关。\n\n【快捷思路】\n圆心坐标由 $f$ 和 $g$ 决定（为 $(-f, -g)$），与 $h$ 无关。已知点 $P$ 坐标为 $(p, q)$，因此只需 $f, g, p, q$ 即可求距离，$h$ 是多余信息。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "d.circle_equations.centre_from_general_form",
+      "b.sufficient_information"
+    ],
+    "skills": [
+      "complete-the-square",
+      "identify-circle-centre",
+      "determine-sufficient-data"
+    ],
+    "primary_section": "d.circle_equations.centre_from_general_form"
   },
   {
     "id": "2022-P2-Q5",
     "year": 2022,
     "paper": 2,
     "num": 5,
-    "topic": "Coordinate Geometry",
+    "topic": "Logic",
     "difficulty": 3,
-    "question": "A straight line $L$ passes through $(1, 2)$.\n\nLet P be the statement\n\n> **if** the $y$-intercept of $L$ is negative, **then** the $x$-intercept of $L$ is positive.\n\nWhich of the following statements **must** be true?\n\nI P\nII the converse of P\nIII the contrapositive of P",
+    "question": "A straight line $L$ passes through $(1, 2)$.\n\nLet $P$ be the statement\n\n> **if** the $y$-intercept of $L$ is negative, **then** the $x$-intercept of $L$ is positive.\n\nWhich of the following statements **must** be true?\n\nI P\nII the converse of P\nIII the contrapositive of P",
     "options": {
       "A": "none of them",
       "B": "I only",
@@ -10588,12 +10660,26 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n直线$L$过定点$(1, 2)$，涉及截距的符号与逻辑命题的真假判断。需要判断原命题P、逆命题、逆否命题三者中哪些必定成立。\n\n【解题步骤】\n设直线方程为$y - 2 = m(x - 1)$。\n\n求截距：$y$截距为$2 - m$（令$x = 0$），$x$截距为$1 - \\frac{2}{m}$（令$y = 0$，要求$m \\neq 0$）。注意$m = 0$时$y$截距为$2 > 0$，不在P的条件范围内。\n\n命题P：若$y$截距$< 0$，则$x$截距$> 0$。\n$y$截距$< 0$即$2 - m < 0 \\Rightarrow m > 2$。\n此时$x$截距$= 1 - \\frac{2}{m} > 1 - 1 = 0$，故P成立。\n\n逆命题：若$x$截距$> 0$，则$y$截距$< 0$。\n取$m = -1$，$x$截距$= 3 > 0$，但$y$截距$= 3 > 0$，逆命题不成立。\n\n逆否命题：与原命题逻辑等价，P成立则逆否命题必成立。\n\n综上，I和III成立。\n\n【快捷思路】\n过$(1, 2)$且$y$截距为负，意味着直线从左下方穿过$y$轴负半轴再经过第一象限的$(1, 2)$，必然在$(0, 1)$之间穿过$x$轴，故$x$截距为正。P直观成立，逆否命题等价于P，只需检验逆命题即可。\n\n【正确答案】F Geometry",
+    "analysis": "【题目分析】\n直线$L$过定点$(1, 2)$，涉及截距的符号与逻辑命题的真假判断。需要判断原命题P、逆命题、逆否命题三者中哪些必定成立。\n\n【解题步骤】\n设直线方程为$y - 2 = m(x - 1)$。\n\n求截距：$y$截距为$2 - m$（令$x = 0$），$x$截距为$1 - \\frac{2}{m}$（令$y = 0$，要求$m \\neq 0$）。注意$m = 0$时$y$截距为$2 > 0$，不在P的条件范围内。\n\n命题P：若$y$截距$< 0$，则$x$截距$> 0$。\n$y$截距$< 0$即$2 - m < 0 \\Rightarrow m > 2$。\n此时$x$截距$= 1 - \\frac{2}{m} > 1 - 1 = 0$，故P成立。\n\n逆命题：若$x$截距$> 0$，则$y$截距$< 0$。\n取$m = -1$，$x$截距$= 3 > 0$，但$y$截距$= 3 > 0$，逆命题不成立。\n\n逆否命题：与原命题逻辑等价，P成立则逆否命题必成立。\n\n综上，I和III成立。\n\n【快捷思路】\n过$(1, 2)$且$y$截距为负，意味着直线从左下方穿过$y$轴负半轴再经过第一象限的$(1, 2)$，必然在$(0, 1)$之间穿过$x$轴，故$x$截距为正。P直观成立，逆否命题等价于P，只需检验逆命题即可。\n\n【正确答案】F",
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Logic"
-    ]
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "b.converse_contrapositive",
+      "d.lines_gradients_intercepts"
+    ],
+    "skills": [
+      "contrapositive-equivalence",
+      "disprove-converse-by-counterexample",
+      "intercept-sign-analysis"
+    ],
+    "primary_section": "b.converse_contrapositive"
   },
   {
     "id": "2022-P2-Q6",
@@ -10614,8 +10700,24 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Sequences and Series"
-    ]
+      "Counterexamples"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "b.necessary_sufficient_conditions",
+      "b.implication_testing",
+      "h.counterexample_to_necessity"
+    ],
+    "skills": [
+      "necessary-sufficient-condition",
+      "implication-testing",
+      "counterexample-construction",
+      "median-definition"
+    ],
+    "primary_section": "b.necessary_sufficient_conditions"
   },
   {
     "id": "2022-P2-Q7",
@@ -10640,8 +10742,29 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Algebra",
-      "Counterexamples"
-    ]
+      "Counterexamples",
+      "Number Theory"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "h_logic_counterexamples",
+      "a1_algebra_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "l.proof_validation",
+      "h.counterexample_to_universal_claim",
+      "a1.polynomial_factorisation",
+      "k.primality_and_factorisation"
+    ],
+    "skills": [
+      "proof-error-identification",
+      "invalid-inference-detection",
+      "counterexample-construction",
+      "polynomial-factorisation",
+      "primality-checking"
+    ],
+    "primary_section": "l.proof_validation"
   },
   {
     "id": "2022-P2-Q8",
@@ -10650,7 +10773,7 @@ window.QUESTIONS = [
     "num": 8,
     "topic": "Combinatorics",
     "difficulty": 3,
-    "question": "A selection, $S$, of $n$ terms is taken from the arithmetic sequence 1, 4, 7, 10, ... , 70.\n\nConsider the following statement:\n\n> ($\\ast$) There are two distinct terms in $S$ whose sum is 74.\n\nWhat is the smallest value of $n$ for which ($\\ast$) is **necessarily** true?",
+    "question": "A selection, $S$, of $n$ terms is taken from the arithmetic sequence 1, 4, 7, 10, ..., 70.\n\nConsider the following statement:\n\n> ($\\ast$) There are two distinct terms in $S$ whose sum is 74.\n\nWhat is the smallest value of $n$ for which ($\\ast$) is **necessarily** true?",
     "options": {
       "A": "12",
       "B": "13",
@@ -10665,14 +10788,30 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Sequences and Series"
-    ]
+    ],
+    "modules": [
+      "k_number_theory_combinatorics",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "k.pigeonhole_principle",
+      "k.extremal_selection",
+      "c.arithmetic_sequences"
+    ],
+    "skills": [
+      "pigeonhole-principle",
+      "complementary-pairing",
+      "extremal-construction",
+      "arithmetic-sequence-indexing"
+    ],
+    "primary_section": "k.pigeonhole_principle"
   },
   {
     "id": "2022-P2-Q9",
     "year": 2022,
     "paper": 2,
     "num": 9,
-    "topic": "Logic",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "Consider the following statement:\n\n($*$) **For all** real numbers $x$, **if** $x < k$ **then** $x^2 < k$\n\nWhat is the complete set of values of $k$ for which ($*$) is true?",
     "options": {
@@ -10689,9 +10828,27 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
+      "Logic",
       "Proof",
-      "Counterexamples"
-    ]
+      "Algebra"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "b_mathematical_logic_basics",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "h.universal_statement_counterexamples",
+      "b.quantified_implications",
+      "a2.parameter_inequalities"
+    ],
+    "skills": [
+      "counterexample-construction",
+      "universal-statement-disproof",
+      "parameter-case-analysis",
+      "strict-inequality-edge-case"
+    ],
+    "primary_section": "h.universal_statement_counterexamples"
   },
   {
     "id": "2022-P2-Q10",
@@ -10717,7 +10874,23 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Proof"
-    ]
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "b.quantifier_order",
+      "b.universal_and_existential_quantifiers",
+      "l.counterexample_and_witness"
+    ],
+    "skills": [
+      "quantifier-order-analysis",
+      "witness-construction",
+      "counterexample-construction",
+      "statement-truth-evaluation"
+    ],
+    "primary_section": "b.quantifier_order"
   },
   {
     "id": "2022-P2-Q11",
@@ -10726,7 +10899,7 @@ window.QUESTIONS = [
     "num": 11,
     "topic": "Coordinate Geometry",
     "difficulty": 3,
-    "question": "The diagram shows a kite $PQRS$ whose diagonals meet at $O$.\n\n$OP = x$\n$OQ = y$\n$OR = x$\n$OS = z$\n\nWhich of the following is **necessary and sufficient** for angle $SPQ$ to be a right angle?",
+    "question": "The diagram shows a kite $PQRS$ whose diagonals meet at $O$.\n\n$OP = x$\n$OQ = y$\n$OR = x$\n$OS = z$\n\nWhich of the following is **necessary and sufficient** for $\\angle SPQ$ to be a right angle?",
     "options": {
       "A": "$x = y = z$",
       "B": "$2x = y + z$",
@@ -10735,14 +10908,30 @@ window.QUESTIONS = [
       "E": "$y^2 = x^2 + z^2$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n风筝$PQRS$的对角线交于$O$，已知$OP = OR = x$，$OQ = y$，$OS = z$。求$\\angle SPQ = 90^\\circ$的充要条件。风筝的核心性质是两条对角线互相垂直，这为使用勾股定理提供了基础。\n\n【解题步骤】\n由于$PQRS$是风筝，对角线$PR$与$QS$互相垂直，即$\\angle SOP = \\angle POQ = 90^\\circ$。\n\n在$Rt\\triangle SOP$中：$SP^2 = x^2 + z^2$\n\n在$Rt\\triangle POQ$中：$PQ^2 = x^2 + y^2$\n\n$\\angle SPQ = 90^\\circ$当且仅当$\\triangle SPQ$满足勾股定理：\n$SP^2 + PQ^2 = SQ^2$\n\n代入得：\n$(x^2 + z^2) + (x^2 + y^2) = (y + z)^2$\n\n化简：\n$2x^2 + y^2 + z^2 = y^2 + 2yz + z^2$\n\n$2x^2 = 2yz$，即$x^2 = yz$。\n\n因此充要条件为$x^2 = yz$。可取$x = 2, y = 4, z = 1$验证：满足$x^2 = yz = 4$，但不满足其他选项，确认C是唯一正确答案。\n\n【快捷思路】\n看到直角立刻想到勾股定理。风筝对角线垂直是隐含条件，将$\\angle SPQ = 90^\\circ$转化为边长关系即可。展开$(y + z)^2$后$y^2$和$z^2$恰好消去，直接得到简洁结果。\n\n【正确答案】C Geometry",
+    "analysis": "【题目分析】\n风筝$PQRS$的对角线交于$O$，已知$OP = OR = x$，$OQ = y$，$OS = z$。求$\\angle SPQ = 90^\\circ$的充要条件。风筝的核心性质是两条对角线互相垂直，这为使用勾股定理提供了基础。\n\n【解题步骤】\n由于$PQRS$是风筝，对角线$PR$与$QS$互相垂直，即$\\angle SOP = \\angle POQ = 90^\\circ$。\n\n在$Rt\\triangle SOP$中：$SP^2 = x^2 + z^2$\n\n在$Rt\\triangle POQ$中：$PQ^2 = x^2 + y^2$\n\n$\\angle SPQ = 90^\\circ$当且仅当$\\triangle SPQ$满足勾股定理：\n$SP^2 + PQ^2 = SQ^2$\n\n代入得：\n$(x^2 + z^2) + (x^2 + y^2) = (y + z)^2$\n\n化简：\n$2x^2 + y^2 + z^2 = y^2 + 2yz + z^2$\n\n$2x^2 = 2yz$，即$x^2 = yz$。\n\n因此充要条件为$x^2 = yz$。可取$x = 2, y = 4, z = 1$验证：满足$x^2 = yz = 4$，但不满足其他选项，确认C是唯一正确答案。\n\n【快捷思路】\n看到直角立刻想到勾股定理。风筝对角线垂直是隐含条件，将$\\angle SPQ = 90^\\circ$转化为边长关系即可。展开$(y + z)^2$后$y^2$和$z^2$恰好消去，直接得到简洁结果。\n\n【正确答案】C",
     "images": {
       "image": "2022 P2 Q11.png"
     },
     "has_image": true,
     "related_topics": [
-      "Proof"
-    ]
+      "Logic",
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "d.kite_diagonals_pythagoras",
+      "h.necessary_sufficient_conditions"
+    ],
+    "skills": [
+      "pythagoras-theorem",
+      "use-perpendicular-diagonals",
+      "derive-necessary-and-sufficient-condition",
+      "algebraic-simplification"
+    ],
+    "primary_section": "d.kite_diagonals_pythagoras"
   },
   {
     "id": "2022-P2-Q12",
@@ -10765,9 +10954,27 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
+      "Functions",
       "Graphs",
-      "Functions"
-    ]
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a3_exponents_logarithms",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.integral_comparison",
+      "a3.exponential_functions",
+      "i.function_comparison"
+    ],
+    "skills": [
+      "compare-integrands",
+      "exponent-rewriting",
+      "monotonic-function-comparison",
+      "interval-endpoint-check"
+    ],
+    "primary_section": "g.integral_comparison"
   },
   {
     "id": "2022-P2-Q13",
@@ -10792,7 +10999,24 @@ window.QUESTIONS = [
     "related_topics": [
       "Functions",
       "Algebra"
-    ]
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "i_functions_graphs",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "b.existential_quantifiers",
+      "i.linear_function_range",
+      "a1.algebraic_rearrangement"
+    ],
+    "skills": [
+      "quantifier-analysis",
+      "rearrange-expression",
+      "linear-function-range",
+      "case-analysis"
+    ],
+    "primary_section": "b.existential_quantifiers"
   },
   {
     "id": "2022-P2-Q14",
@@ -10817,7 +11041,23 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Coordinate Geometry"
-    ]
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "a2.absolute_value_inequalities",
+      "d.number_line_distance",
+      "a2.inequality_intersections"
+    ],
+    "skills": [
+      "absolute-value-distance-interpretation",
+      "midpoint-comparison",
+      "interval-intersection",
+      "inequality-solving"
+    ],
+    "primary_section": "a2.absolute_value_inequalities"
   },
   {
     "id": "2022-P2-Q15",
@@ -10843,7 +11083,23 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Functions"
-    ]
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a3.logarithm_to_exponential_form",
+      "a3.exponent_laws",
+      "a3.cyclic_logarithm_equations"
+    ],
+    "skills": [
+      "logarithm-to-exponential-form",
+      "substitution",
+      "index-law-manipulation",
+      "cyclic-variable-elimination"
+    ],
+    "primary_section": "a3.logarithm_to_exponential_form"
   },
   {
     "id": "2022-P2-Q16",
@@ -10870,14 +11126,32 @@ window.QUESTIONS = [
     "related_topics": [
       "Proof",
       "Logic"
-    ]
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "l_proof_methods",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "h.counterexample_to_universal_claims",
+      "l.direct_proof_inequalities",
+      "a2.inequality_reasoning"
+    ],
+    "skills": [
+      "counterexample-construction",
+      "universal-claim-testing",
+      "extremal-argument",
+      "upper-bound-proof",
+      "quantifier-scope"
+    ],
+    "primary_section": "h.counterexample_to_universal_claims"
   },
   {
     "id": "2022-P2-Q17",
     "year": 2022,
     "paper": 2,
     "num": 17,
-    "topic": "Differentiation",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "A student answered the following question:\n\n$a$ and $b$ are non-zero real numbers.\n\nProve that the equation $x^3 + ax^2 + b = 0$ has three distinct real roots if\n$$27b \\left( b + \\frac{4a^3}{27} \\right) < 0$$\n\nHere is the student’s solution:\n\nI We differentiate $y = x^3 + ax^2 + b$ to get $\\frac{dy}{dx} = 3x^2 + 2ax = x(3x + 2a)$\n\nSolving $\\frac{dy}{dx} = 0$ shows that the stationary points are at $(0, b)$ and $\\left( -\\frac{2a}{3}, b + \\frac{4a^3}{27} \\right)$\n\nII If $27b \\left( b + \\frac{4a^3}{27} \\right) < 0$, then $b$ and $b + \\frac{4a^3}{27}$ must have opposite signs, and so one of the stationary points is above the $x$-axis and one is below.\n\nIII If the cubic has three distinct real roots, then one of the stationary points is above the $x$-axis and one is below.\n\nIV Hence if $27b \\left( b + \\frac{4a^3}{27} \\right) < 0$, then the equation has three distinct real roots.\n\nWhich one of the following options best describes the student’s solution?",
     "options": {
@@ -10892,8 +11166,30 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Logic"
-    ]
+      "Proof",
+      "Differentiation",
+      "Graphs"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "l_proof_methods",
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "b.implication_converse",
+      "l.proof_validation",
+      "f.stationary_points_cubic",
+      "i.cubic_graph_roots"
+    ],
+    "skills": [
+      "converse-error-detection",
+      "proof-gap-identification",
+      "stationary-point-analysis",
+      "cubic-root-counting",
+      "implication-direction"
+    ],
+    "primary_section": "b.implication_converse"
   },
   {
     "id": "2022-P2-Q18",
@@ -10914,7 +11210,7 @@ window.QUESTIONS = [
       "H": "$P=(\\sin x)^{\\sin x},\\ Q=(\\sin x)^{\\cos x},\\ R=(\\cos x)^{\\cos x},\\ S=(\\cos x)^{\\sin x}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题要求在 $0 < x < \\frac{\\pi}{2}$ 区间内，将四条函数曲线 $y = (\\cos x)^{\\cos x}$、$y = (\\sin x)^{\\sin x}$、$y = (\\cos x)^{\\sin x}$、$y = (\\sin x)^{\\cos x}$ 与图形 P、Q、R、S 正确匹配。\n\n【解题步骤】\n最有效的方法是代入关键点的函数值来逐一排除。\n\n在 $x = 0$ 处：$(\\cos 0)^{\\cos 0} = 1^1 = 1$，$(\\cos 0)^{\\sin 0} = 1^0 = 1$，$(\\sin 0)^{\\cos 0} = 0^1 = 0$，而 $(\\sin 0)^{\\sin 0} = 0^0$ 极限为 $1$。四个函数中只有 $(\\sin x)^{\\cos x}$ 在 $x \\to 0$ 时为 $0$，对应图形 Q。\n\n在 $x = \\frac{\\pi}{2}$ 处：$(\\sin\\frac{\\pi}{2})^{\\sin\\frac{\\pi}{2}} = 1^1 = 1$，$(\\sin\\frac{\\pi}{2})^{\\cos\\frac{\\pi}{2}} = 1^0 = 1$，$(\\cos\\frac{\\pi}{2})^{\\sin\\frac{\\pi}{2}} = 0^1 = 0$。只有 $(\\cos x)^{\\sin x}$ 在 $x \\to \\frac{\\pi}{2}$ 时为 $0$，对应图形 P。\n\n剩下 $(\\cos x)^{\\cos x}$ 和 $(\\sin x)^{\\sin x}$ 对应 R 和 S。代入 $x = \\frac{\\pi}{6}$，$(\\sin\\frac{\\pi}{6})^{\\sin\\frac{\\pi}{6}} = \\left(\\frac{1}{2}\\right)^{1/2} = \\frac{1}{\\sqrt{2}} \\approx 0.7$，对应图形 S。类似地，$(\\cos x)^{\\cos x}$ 在 $x = \\frac{\\pi}{3}$ 处也约为 $0.7$，对应图形 R。\n\n因此匹配为：P = $(\\cos x)^{\\sin x}$，Q = $(\\sin x)^{\\cos x}$，R = $(\\cos x)^{\\cos x}$，S = $(\\sin x)^{\\sin x}$。\n\n【快捷思路】\n抓住端点值的唯一性：$x = 0$ 处仅一个函数值为 $0$，$x = \\frac{\\pi}{2}$ 处也仅一个函数值为 $0$，先定 Q 和 P，再用中间值区分 R 和 S。\n\n【正确答案】E",
+    "analysis": "【题目分析】\n本题要求在 $0 < x < \\frac{\\pi}{2}$ 区间内，将四条函数曲线 $y = (\\cos x)^{\\cos x}$、$y = (\\sin x)^{\\sin x}$、$y = (\\cos x)^{\\sin x}$、$y = (\\sin x)^{\\cos x}$ 与图形 P、Q、R、S 正确匹配。\n\n【解题步骤】\n最有效的方法是代入关键点的函数值来逐一排除。\n\n当 $x \\to 0^+$ 时：$(\\cos 0)^{\\cos 0} = 1^1 = 1$，$(\\cos 0)^{\\sin 0} = 1^0 = 1$，$(\\sin 0)^{\\cos 0} = 0^1 = 0$，而 $(\\sin 0)^{\\sin 0} = 0^0$ 极限为 $1$。四个函数中只有 $(\\sin x)^{\\cos x}$ 在 $x \\to 0$ 时为 $0$，对应图形 Q。\n\n当 $x \\to \\frac{\\pi}{2}^-$ 时：$(\\sin\\frac{\\pi}{2})^{\\sin\\frac{\\pi}{2}} = 1^1 = 1$，$(\\sin\\frac{\\pi}{2})^{\\cos\\frac{\\pi}{2}} = 1^0 = 1$，$(\\cos\\frac{\\pi}{2})^{\\sin\\frac{\\pi}{2}} = 0^1 = 0$。只有 $(\\cos x)^{\\sin x}$ 在 $x \\to \\frac{\\pi}{2}$ 时为 $0$，对应图形 P。\n\n剩下 $(\\cos x)^{\\cos x}$ 和 $(\\sin x)^{\\sin x}$ 对应 R 和 S。代入 $x = \\frac{\\pi}{6}$，$(\\sin\\frac{\\pi}{6})^{\\sin\\frac{\\pi}{6}} = \\left(\\frac{1}{2}\\right)^{1/2} = \\frac{1}{\\sqrt{2}} \\approx 0.7$，对应图形 S。类似地，$(\\cos x)^{\\cos x}$ 在 $x = \\frac{\\pi}{3}$ 处也约为 $0.7$，对应图形 R。\n\n因此匹配为：P = $(\\cos x)^{\\sin x}$，Q = $(\\sin x)^{\\cos x}$，R = $(\\cos x)^{\\cos x}$，S = $(\\sin x)^{\\sin x}$。\n\n【快捷思路】\n抓住端点值的唯一性：$x = 0$ 处仅一个函数值为 $0$，$x = \\frac{\\pi}{2}$ 处也仅一个函数值为 $0$，先定 Q 和 P，再用中间值区分 R 和 S。\n\n【正确答案】E",
     "images": {
       "image": "2022 P2 Q18.png"
     },
@@ -10922,7 +11218,25 @@ window.QUESTIONS = [
     "related_topics": [
       "Graphs",
       "Functions"
-    ]
+    ],
+    "modules": [
+      "e_trigonometry",
+      "i_functions_graphs",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "e.trig_function_graphs",
+      "i.graph_identification",
+      "a3.variable_exponents"
+    ],
+    "skills": [
+      "endpoint-limits",
+      "graph-matching",
+      "trig-values",
+      "function-comparison",
+      "limit-interpretation"
+    ],
+    "primary_section": "e.trig_function_graphs"
   },
   {
     "id": "2022-P2-Q19",
@@ -10944,9 +11258,27 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Trigonometry",
-      "Counterexamples"
-    ]
+      "Counterexamples",
+      "Trigonometry"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "h_logic_counterexamples",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "l.sufficiency_necessity",
+      "h.counterexample_construction",
+      "e.sine_area_formula"
+    ],
+    "skills": [
+      "sine-area-formula",
+      "complementary-angle-cases",
+      "counterexample-construction",
+      "sufficiency-analysis",
+      "case-analysis"
+    ],
+    "primary_section": "l.sufficiency_necessity"
   },
   {
     "id": "2022-P2-Q20",
@@ -10970,7 +11302,23 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Trigonometry"
-    ]
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "i.composite_functions_ranges",
+      "e.trig_function_ranges"
+    ],
+    "skills": [
+      "range-tracking",
+      "composite-function-analysis",
+      "monotonicity-on-interval",
+      "maximum-value",
+      "radians-awareness"
+    ],
+    "primary_section": "i.composite_functions_ranges"
   },
   {
     "id": "2023-P1-Q1",
