@@ -336,4 +336,12 @@ $$k = 10^{-2} = 0.01$$
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Functions 相关练习题](/practice/tmua/?topic=Functions)
+
+学完本章？[→ 去做 Graphs 相关练习题](/practice/tmua/?topic=Graphs)
+
+---
+
 **模块 I 讲义完成 | 共 22 题 | 建议课时：2 小时**

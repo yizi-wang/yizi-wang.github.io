@@ -9,6 +9,10 @@ hero:
       link: /about/
       icon: open-book
       variant: primary
+    - text: TMUA Practice
+      link: /practice/tmua/
+      icon: right-arrow
+      variant: secondary
 ---
 
 ## A-Level Further Mathematics

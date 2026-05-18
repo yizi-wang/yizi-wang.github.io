@@ -388,6 +388,12 @@ $$\exists N \in \mathbb{Z}^+ \; \forall K \in \mathbb{Z}^+ \; \exists m \in \mat
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Logic 相关练习题](/practice/tmua/?topic=Logic)
+
+---
+
 **讲义特点**：
 - ✅ 考纲全覆盖（Arg1-Arg4, Prf1, Prf2, Err1, Err2）
 - ✅ 19道真题精选（Logic 8题 + Counterexamples 11题）

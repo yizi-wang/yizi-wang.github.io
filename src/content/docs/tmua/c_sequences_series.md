@@ -308,6 +308,12 @@ $$\dfrac{a^3}{1-r^3} = \dfrac{27}{1 - \dfrac{1}{8}} = \dfrac{27}{\dfrac{7}{8}} =
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Sequences and Series 相关练习题](/practice/tmua/?topic=Sequences%20and%20Series)
+
+---
+
 ## 📚 考纲速查
 
 **MM2.1 数列定义**：通项公式、递推关系 $x_{n+1} = f(x_n)$

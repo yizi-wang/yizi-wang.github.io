@@ -223,3 +223,38 @@ npm run build
 node scripts/step-browser-audit.mjs step
 ```
 
+## TMUA 做题系统长任务规范
+
+本仓库也包含一个 TMUA 做题系统逐题审查任务。相关工作开始前先阅读 `TMUA_PROGRESS.md` 和 `TMUA_LONG_TASK.md`，不要把它和 STEP 任务混在同一个进度队列里。
+
+### 每次只处理一套 Paper
+
+一次 session 只处理 `TMUA_PROGRESS.md` 中第一个未勾选的 paper，例如 `2019 Paper 1`。该 paper 内部可以并行派 subagent，每个 subagent 负责一道题。
+
+### 单题审查范围
+
+每道题都要检查：
+
+- 题干、选项、答案、解析字段完整，选项标签连续，正确答案能对应到选项。
+- 无无端页码、OCR 页眉页脚、残留 topic 片段、重复题干、破损 Markdown/LaTeX。
+- 图片题的图片路径存在，浏览器中能加载，且与题目对应。
+- `topic` 和 `related_topics` 保持兼容旧 UI；`modules` 必须对应讲义文件名；`sections` 和 `skills` 可根据题目分析实时新增，不要强行锁死到预设列表。
+- `/practice/tmua/?id=<question-id>` 能直接打开该题，不能退回练习系统首页。
+
+### 验证命令
+
+```powershell
+node scripts/tmua-static-audit.mjs --paper 2019-P1
+npm run build
+node scripts/tmua-browser-audit.mjs --paper 2019-P1 --base http://localhost:4321
+```
+
+Windows 上如果 `npm run build` 因 shell 兼容问题失败，可改用：
+
+```powershell
+Remove-Item -Recurse -Force .astro
+npx.cmd astro build
+```
+
+只有静态审查、构建、浏览器审查全部通过后，才将 `TMUA_PROGRESS.md` 对应 paper 改成 `[x]`。
+

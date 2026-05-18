@@ -337,4 +337,10 @@ $$a^3 = (c-b)(c^2+cb+b^2) \Rightarrow a = c-b \text{ 且 } a^2 = c^2+cb+b^2$$
 
 ---
 
+## 🎯 配套练习
+
+学完本章？[→ 去做 Proof 相关练习题](/practice/tmua/?topic=Proof)
+
+---
+
 *模块 L 讲义完成 | 最后更新: 2026-04-29*
