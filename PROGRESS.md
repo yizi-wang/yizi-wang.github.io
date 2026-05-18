@@ -24,7 +24,7 @@
 - [x] src/content/docs/step/step2-2009.md
 - [x] src/content/docs/step/step2-2008.md
 - [x] src/content/docs/step/step2-2007.md
-- [ ] src/content/docs/step/step2-2006.md
+- [x] src/content/docs/step/step2-2006.md
 - [ ] src/content/docs/step/step2-2005.md
 - [ ] src/content/docs/step/step2-2004.md
 - [ ] src/content/docs/step/step2-2003.md
