@@ -45,7 +45,7 @@
 - [x] src/content/docs/step/step3-2015.md
 - [x] src/content/docs/step/step3-2014.md
 - [x] src/content/docs/step/step3-2013.md
-- [ ] src/content/docs/step/step3-2012.md
+- [x] src/content/docs/step/step3-2012.md
 - [ ] src/content/docs/step/step3-2011.md
 - [ ] src/content/docs/step/step3-2010.md
 - [ ] src/content/docs/step/step3-2009.md
