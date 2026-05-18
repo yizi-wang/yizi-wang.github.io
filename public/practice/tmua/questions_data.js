@@ -8033,16 +8033,32 @@ window.QUESTIONS = [
       "G": "$5x + 3y = 1$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n两圆半径相同，相交于两点，求交点连线方程。\n\n【解题步骤——方法1：联立方程】\n\n设两圆半径均为 $r$，则：\n$(x+2)^2 + (y-1)^2 = r^2$\n$(x-3)^2 + (y+2)^2 = r^2$\n\n展开：\n$x^2 + 4x + 4 + y^2 - 2y + 1 = r^2$\n$x^2 - 6x + 9 + y^2 + 4y + 4 = r^2$\n\n两式相减，消去 $x^2, y^2, r^2$：\n$10x - 6y - 8 = 0$\n\n化简得 $5x - 3y = 4$\n\n对应选项 F。\n\n【解题步骤——方法2：几何法】\n\n两圆半径相同，交点连线是圆心连线的中垂线。\n\n圆心 $O_1 = (-2, 1)$，$O_2 = (3, -2)$\n\n中点 $M = \\left(\\frac{1}{2}, -\\frac{1}{2}\\right)$\n\n$O_1O_2$ 斜率 $= \\frac{-2-1}{3-(-2)} = -\\frac{3}{5}$\n\n中垂线斜率 $= \\frac{5}{3}$\n\n方程：$y - \\left(-\\frac{1}{2}\\right) = \\frac{5}{3}\\left(x - \\frac{1}{2}\\right)$\n\n化简得 $5x - 3y = 4$，对应选项 F。",
+    "analysis": "【题目分析】\n两圆半径相同，相交于两点，求交点连线方程。\n\n【解题步骤——方法1：联立方程】\n\n设两圆半径均为 $r$，则：\n$(x+2)^2 + (y-1)^2 = r^2$\n$(x-3)^2 + (y+2)^2 = r^2$\n\n展开：\n$x^2 + 4x + 4 + y^2 - 2y + 1 = r^2$\n$x^2 - 6x + 9 + y^2 + 4y + 4 = r^2$\n\n两式相减，消去 $x^2, y^2, r^2$：\n$10x - 6y - 8 = 0$\n\n化简得 $5x - 3y = 4$\n\n对应选项 F。\n\n【解题步骤——方法2：几何法】\n\n两圆半径相同，交点连线是圆心连线的中垂线。\n\n圆心 $O_1 = (-2, 1)$，$O_2 = (3, -2)$\n\n中点 $M = \\left(\\frac{1}{2}, -\\frac{1}{2}\\right)$\n\n$O_1O_2$ 斜率 $= \\frac{-2-1}{3-(-2)} = -\\frac{3}{5}$\n\n中垂线斜率 $= \\frac{5}{3}$\n\n方程：$y - \\left(-\\frac{1}{2}\\right) = \\frac{5}{3}\\left(x - \\frac{1}{2}\\right)$\n\n化简得 $5x - 3y = 4$，\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.circle_intersections.radical_axis",
+      "d.perpendicular_bisectors"
+    ],
+    "primary_section": "d.circle_intersections.radical_axis",
+    "skills": [
+      "subtract-circle-equations",
+      "perpendicular-bisector",
+      "line-equation-from-gradient"
+    ]
   },
   {
     "id": "2021-P1-Q2",
     "year": 2021,
     "paper": 1,
     "num": 2,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The curve $y = x^3 - 6x + 3$ has turning points at $x = \\alpha$ and $x = \\beta$, where $\\beta > \\alpha$.\n\nFind\n\n$$\\int_{\\alpha}^{\\beta} x^3 - 6x + 3 \\, dx$$",
     "options": {
@@ -8055,16 +8071,34 @@ window.QUESTIONS = [
       "G": "$12$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n曲线 $y = x^3 - 6x + 3$ 的驻点为 $x = \\alpha$ 和 $x = \\beta$（$\\beta > \\alpha$），求 $\\int_\\alpha^\\beta (x^3 - 6x + 3)\\,dx$。\n\n【解题步骤】\n求驻点：$\\frac{dy}{dx} = 3x^2 - 6 = 0$，得 $x^2 = 2$\n\n$\\alpha = -\\sqrt{2}$，$\\beta = \\sqrt{2}$\n\n计算积分：\n\n$\\int_{-\\sqrt{2}}^{\\sqrt{2}} (x^3 - 6x + 3)\\,dx = \\left[\\frac{1}{4}x^4 - 3x^2 + 3x\\right]_{-\\sqrt{2}}^{\\sqrt{2}}$\n\n$= \\left(\\frac{1}{4}(\\sqrt{2})^4 - 3(\\sqrt{2})^2 + 3\\sqrt{2}\\right) - \\left(\\frac{1}{4}(-\\sqrt{2})^4 - 3(-\\sqrt{2})^2 + 3(-\\sqrt{2})\\right)$\n\n注意到 $\\frac{1}{4}x^4$ 和 $3x^2$ 都是偶函数，在对称区间上的贡献相消，只留下 $3x$ 项：\n\n$= 3\\sqrt{2} - (-3\\sqrt{2}) = 6\\sqrt{2}$\n\n对应选项 F。",
+    "analysis": "【题目分析】\n曲线 $y = x^3 - 6x + 3$ 的驻点为 $x = \\alpha$ 和 $x = \\beta$（$\\beta > \\alpha$），求 $\\int_\\alpha^\\beta (x^3 - 6x + 3)\\,dx$。\n\n【解题步骤】\n求驻点：$\\frac{dy}{dx} = 3x^2 - 6 = 0$，得 $x^2 = 2$\n\n$\\alpha = -\\sqrt{2}$，$\\beta = \\sqrt{2}$\n\n计算积分：\n\n$\\int_{-\\sqrt{2}}^{\\sqrt{2}} (x^3 - 6x + 3)\\,dx = \\left[\\frac{1}{4}x^4 - 3x^2 + 3x\\right]_{-\\sqrt{2}}^{\\sqrt{2}}$\n\n$= \\left(\\frac{1}{4}(\\sqrt{2})^4 - 3(\\sqrt{2})^2 + 3\\sqrt{2}\\right) - \\left(\\frac{1}{4}(-\\sqrt{2})^4 - 3(-\\sqrt{2})^2 + 3(-\\sqrt{2})\\right)$\n\n注意到 $\\frac{1}{4}x^4$ 和 $3x^2$ 都是偶函数，在对称区间上的贡献相消，只留下 $3x$ 项：\n\n$= 3\\sqrt{2} - (-3\\sqrt{2}) = 6\\sqrt{2}$\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Functions"
+    ],
+    "modules": [
+      "f_differentiation",
+      "g_integration"
+    ],
+    "sections": [
+      "f.stationary_points",
+      "g.definite_integral_symmetry"
+    ],
+    "primary_section": "g.definite_integral_symmetry",
+    "skills": [
+      "differentiate-for-limits",
+      "use-symmetric-limits",
+      "odd-even-integrand-splitting"
+    ]
   },
   {
     "id": "2021-P1-Q3",
     "year": 2021,
     "paper": 1,
     "num": 3,
-    "topic": "Trigonometry",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "An arithmetic progression and a convergent geometric progression each have first term $\\frac{1}{2}$\n\nThe sum of the second terms of the two progressions is $\\frac{1}{2}$\n\nThe sum of the third terms of the two progressions is $\\frac{1}{8}$\n\nWhat is the sum to infinity of the geometric progression?",
     "options": {
@@ -8078,9 +8112,26 @@ window.QUESTIONS = [
       "H": "$2$"
     },
     "answer": "G",
-    "analysis": "【题目分析】\n等差数列首项 $\\frac{1}{2}$，公差 $d$；等比数列首项 $\\frac{1}{2}$，公比 $r$，收敛（$|r| < 1$）。求等比数列的无穷和。\n\n【解题步骤】\n等差：$\\frac{1}{2}, \\frac{1}{2}+d, \\frac{1}{2}+2d, \\ldots$\n等比：$\\frac{1}{2}, \\frac{1}{2}r, \\frac{1}{2}r^2, \\ldots$\n\n由第二项之和 $= \\frac{1}{2}$：\n$\\frac{1}{2}+d + \\frac{1}{2}r = \\frac{1}{2}$，化简得 $d + \\frac{1}{2}r = 0$，即 $d = -\\frac{1}{2}r$\n\n由第三项之和 $= \\frac{1}{8}$：\n$\\frac{1}{2}+2d + \\frac{1}{2}r^2 = \\frac{1}{8}$\n\n代入 $d = -\\frac{1}{2}r$：\n$\\frac{1}{2} - r + \\frac{1}{2}r^2 = \\frac{1}{8}$\n\n乘以8整理：$4r^2 - 8r + 3 = 0$\n\n因式分解：$(2r-1)(2r-3) = 0$，$r = \\frac{1}{2}$ 或 $r = \\frac{3}{2}$\n\n因等比数列收敛，$|r| < 1$，取 $r = \\frac{1}{2}$\n\n无穷和 $S_\\infty = \\frac{a}{1-r} = \\frac{\\frac{1}{2}}{1-\\frac{1}{2}} = 1$\n\n对应选项 G。",
+    "analysis": "【题目分析】\n等差数列首项 $\\frac{1}{2}$，公差 $d$；等比数列首项 $\\frac{1}{2}$，公比 $r$，收敛（$|r| < 1$）。求等比数列的无穷和。\n\n【解题步骤】\n等差：$\\frac{1}{2}, \\frac{1}{2}+d, \\frac{1}{2}+2d, \\ldots$\n等比：$\\frac{1}{2}, \\frac{1}{2}r, \\frac{1}{2}r^2, \\ldots$\n\n由第二项之和 $= \\frac{1}{2}$：\n$\\frac{1}{2}+d + \\frac{1}{2}r = \\frac{1}{2}$，化简得 $d + \\frac{1}{2}r = 0$，即 $d = -\\frac{1}{2}r$\n\n由第三项之和 $= \\frac{1}{8}$：\n$\\frac{1}{2}+2d + \\frac{1}{2}r^2 = \\frac{1}{8}$\n\n代入 $d = -\\frac{1}{2}r$：\n$\\frac{1}{2} - r + \\frac{1}{2}r^2 = \\frac{1}{8}$\n\n乘以8整理：$4r^2 - 8r + 3 = 0$\n\n因式分解：$(2r-1)(2r-3) = 0$，$r = \\frac{1}{2}$ 或 $r = \\frac{3}{2}$\n\n因等比数列收敛，$|r| < 1$，取 $r = \\frac{1}{2}$\n\n无穷和 $S_\\infty = \\frac{a}{1-r} = \\frac{\\frac{1}{2}}{1-\\frac{1}{2}} = 1$\n\n【正确答案】G",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.arithmetic_geometric_links",
+      "c.geometric_series_infinity"
+    ],
+    "primary_section": "c.arithmetic_geometric_links",
+    "skills": [
+      "model-arithmetic-progression",
+      "model-geometric-progression",
+      "solve-quadratic-ratio",
+      "apply-convergence-condition"
+    ]
   },
   {
     "id": "2021-P1-Q4",
@@ -8099,16 +8150,33 @@ window.QUESTIONS = [
       "F": "$20$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n求 $f(x) = 2^{2x} - 2^{x+3} + 4$ 的最小值。\n\n【解题步骤】\n设 $u = 2^x > 0$，则 $2^{2x} = u^2$，$2^{x+3} = 8u$\n\n$f = u^2 - 8u + 4$\n\n配方法：$f = (u-4)^2 - 12$\n\n最小值在 $u = 4$ 时取得，$f_{\\min} = -12$\n\n验证 $u = 4$ 可达：$u = 2^x = 4$，$x = 2$ ✓\n\n对应选项 B。",
+    "analysis": "【题目分析】\n求 $f(x) = 2^{2x} - 2^{x+3} + 4$ 的最小值。\n\n【解题步骤】\n设 $u = 2^x > 0$，则 $2^{2x} = u^2$，$2^{x+3} = 8u$\n\n$f = u^2 - 8u + 4$\n\n配方法：$f = (u-4)^2 - 12$\n\n最小值在 $u = 4$ 时取得，$f_{\\min} = -12$\n\n验证 $u = 4$ 可达：$u = 2^x = 4$，$x = 2$ ✓\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a3.exponential_substitution",
+      "i.function_minimum_by_substitution"
+    ],
+    "primary_section": "a3.exponential_substitution",
+    "skills": [
+      "exponential-substitution",
+      "complete-the-square",
+      "check-domain-attainability"
+    ]
   },
   {
     "id": "2021-P1-Q5",
     "year": 2021,
     "paper": 1,
     "num": 5,
-    "topic": "Algebra",
+    "topic": "Functions",
     "difficulty": 3,
     "question": "The function f is such that\n\n$$ f(mn) = \\begin{cases} f(m)f(n) & \\text{if } mn \\text{ is a multiple of 3} \\\\ mn & \\text{if } mn \\text{ is not a multiple of 3} \\end{cases} $$\n\nfor all positive integers $m$ and $n$.\n\nGiven that $f(9) + f(16) - f(24) = 0$, what is the value of $f(3)$?",
     "options": {
@@ -8120,9 +8188,30 @@ window.QUESTIONS = [
       "F": "$4$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n函数 $f$ 满足：$f(mn) = f(m)f(n)$（当 $mn$ 是3的倍数），$f(mn) = mn$（当 $mn$ 不是3的倍数）。已知 $f(9) + f(16) - f(24) = 0$，求 $f(3)$。\n\n【解题步骤】\n\n$f(9) = f(3 \\times 3) = f(3)f(3) = f(3)^2$（9是3的倍数）\n\n$f(16) = 16$（16不是3的倍数）\n\n$f(24) = f(3 \\times 8) = f(3)f(8)$（24是3的倍数）\n\n$f(8) = 8$（8不是3的倍数），所以 $f(24) = 8f(3)$\n\n代入方程：$f(3)^2 + 16 - 8f(3) = 0$\n\n$f(3)^2 - 8f(3) + 16 = 0$\n\n$(f(3) - 4)^2 = 0$\n\n$f(3) = 4$\n\n对应选项 F。",
+    "analysis": "【题目分析】\n函数 $f$ 满足：$f(mn) = f(m)f(n)$（当 $mn$ 是3的倍数），$f(mn) = mn$（当 $mn$ 不是3的倍数）。已知 $f(9) + f(16) - f(24) = 0$，求 $f(3)$。\n\n【解题步骤】\n\n$f(9) = f(3 \\times 3) = f(3)f(3) = f(3)^2$（9是3的倍数）\n\n$f(16) = 16$（16不是3的倍数）\n\n$f(24) = f(3 \\times 8) = f(3)f(8)$（24是3的倍数）\n\n$f(8) = 8$（8不是3的倍数），所以 $f(24) = 8f(3)$\n\n代入方程：$f(3)^2 + 16 - 8f(3) = 0$\n\n$f(3)^2 - 8f(3) + 16 = 0$\n\n$(f(3) - 4)^2 = 0$\n\n$f(3) = 4$\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra",
+      "Number Theory"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "i.function_equations.integer_arguments",
+      "a2.quadratic_equations",
+      "k.divisibility_by_3"
+    ],
+    "primary_section": "i.function_equations.integer_arguments",
+    "skills": [
+      "apply-piecewise-function-rule",
+      "use-divisibility-condition",
+      "multiplicative-function-values",
+      "solve-quadratic"
+    ]
   },
   {
     "id": "2021-P1-Q6",
@@ -8141,16 +8230,35 @@ window.QUESTIONS = [
       "F": "2"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n求 $f(x) = \\frac{\\cos x + 3}{7 + 5\\cos x - \\sin^2 x}$ 的最大值与最小值之差。\n\n【解题步骤】\n利用 $\\sin^2 x = 1 - \\cos^2 x$，分母变为：\n$7 + 5\\cos x - (1 - \\cos^2 x) = 6 + 5\\cos x + \\cos^2 x$\n\n因式分解：$= (\\cos x + 2)(\\cos x + 3)$\n\n所以 $f(x) = \\frac{\\cos x + 3}{(\\cos x + 2)(\\cos x + 3)} = \\frac{1}{\\cos x + 2}$\n\n（$\\cos x + 3$ 恒不为零，可以约去）\n\n当 $\\cos x = -1$ 时，$f(x)$ 最大 $= \\frac{1}{-1+2} = 1$\n当 $\\cos x = 1$ 时，$f(x)$ 最小 $= \\frac{1}{1+2} = \\frac{1}{3}$\n\n差 $= 1 - \\frac{1}{3} = \\frac{2}{3}$\n\n对应选项 D。",
+    "analysis": "【题目分析】\n求 $f(x) = \\frac{\\cos x + 3}{7 + 5\\cos x - \\sin^2 x}$ 的最大值与最小值之差。\n\n【解题步骤】\n利用 $\\sin^2 x = 1 - \\cos^2 x$，分母变为：\n$7 + 5\\cos x - (1 - \\cos^2 x) = 6 + 5\\cos x + \\cos^2 x$\n\n因式分解：$= (\\cos x + 2)(\\cos x + 3)$\n\n所以 $f(x) = \\frac{\\cos x + 3}{(\\cos x + 2)(\\cos x + 3)} = \\frac{1}{\\cos x + 2}$\n\n（$\\cos x + 3$ 恒不为零，可以约去）\n\n当 $\\cos x = -1$ 时，$f(x)$ 最大 $= \\frac{1}{-1+2} = 1$\n当 $\\cos x = 1$ 时，$f(x)$ 最小 $= \\frac{1}{1+2} = \\frac{1}{3}$\n\n差 $= 1 - \\frac{1}{3} = \\frac{2}{3}$\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "e.trig_identities",
+      "e.trig_ranges",
+      "i.function_range"
+    ],
+    "primary_section": "e.trig_identities",
+    "skills": [
+      "rewrite-sin-squared-using-cosine",
+      "factor-denominator",
+      "use-cosine-range",
+      "max-min-difference"
+    ]
   },
   {
     "id": "2021-P1-Q7",
     "year": 2021,
     "paper": 1,
     "num": 7,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The function $f$ is such that $f(0) = 0$, and $xf(x) > 0$ for all non-zero values of $x$.\n\nIt is given that\n\n$$\\int_{-2}^{2} f(x) \\, dx = 4$$\n\nand\n\n$$\\int_{-2}^{2} |f(x)| \\, dx = 8$$\n\nEvaluate\n\n$$\\int_{-2}^{0} f(|x|) \\, dx$$",
     "options": {
@@ -8164,9 +8272,28 @@ window.QUESTIONS = [
       "H": "$8$"
     },
     "answer": "G",
-    "analysis": "【题目分析】\n已知 $f(0) = 0$，$xf(x) > 0$（$x \\neq 0$），$\\int_{-2}^{2} f(x)\\,dx = 4$，$\\int_{-2}^{2} |f(x)|\\,dx = 8$。求 $\\int_{-2}^{0} f(|x|)\\,dx$。\n\n【解题步骤】\n由 $xf(x) > 0$ 得：$x > 0$ 时 $f(x) > 0$，$x < 0$ 时 $f(x) < 0$。\n\n将积分拆分为 $[-2,0]$ 和 $[0,2]$ 两段，设：\n$A = \\int_{-2}^{0} f(x)\\,dx$（$A < 0$），$B = \\int_{0}^{2} f(x)\\,dx$（$B > 0$）\n\n由已知条件：\n$A + B = 4$\n$-A + B = 8$\n\n两式相加：$2B = 12$，$B = 6$，$A = -2$\n\n现在求 $\\int_{-2}^{0} f(|x|)\\,dx$：\n\n当 $x \\in [-2, 0]$ 时，$|x| = -x \\in [0, 2]$，所以 $f(|x|) = f(-x)$\n\n$\\int_{-2}^{0} f(|x|)\\,dx = \\int_{-2}^{0} f(-x)\\,dx$\n\n换元 $u = -x$：$= \\int_{2}^{0} f(u)(-du) = \\int_{0}^{2} f(u)\\,du = B = 6$\n\n对应选项 G。",
+    "analysis": "【题目分析】\n已知 $f(0) = 0$，$xf(x) > 0$（$x \\neq 0$），$\\int_{-2}^{2} f(x)\\,dx = 4$，$\\int_{-2}^{2} |f(x)|\\,dx = 8$。求 $\\int_{-2}^{0} f(|x|)\\,dx$。\n\n【解题步骤】\n由 $xf(x) > 0$ 得：$x > 0$ 时 $f(x) > 0$，$x < 0$ 时 $f(x) < 0$。\n\n将积分拆分为 $[-2,0]$ 和 $[0,2]$ 两段，设：\n$A = \\int_{-2}^{0} f(x)\\,dx$（$A < 0$），$B = \\int_{0}^{2} f(x)\\,dx$（$B > 0$）\n\n由已知条件：\n$A + B = 4$\n$-A + B = 8$\n\n两式相加：$2B = 12$，$B = 6$，$A = -2$\n\n现在求 $\\int_{-2}^{0} f(|x|)\\,dx$：\n\n当 $x \\in [-2, 0]$ 时，$|x| = -x \\in [0, 2]$，所以 $f(|x|) = f(-x)$\n\n$\\int_{-2}^{0} f(|x|)\\,dx = \\int_{-2}^{0} f(-x)\\,dx$\n\n换元 $u = -x$：$= \\int_{2}^{0} f(u)(-du) = \\int_{0}^{2} f(u)\\,du = B = 6$\n\n【正确答案】G",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.definite_integral_signs",
+      "g.absolute_value_integrals",
+      "i.function_sign_properties"
+    ],
+    "primary_section": "g.definite_integral_signs",
+    "skills": [
+      "infer-function-sign",
+      "split-integral-at-zero",
+      "use-absolute-value-integral",
+      "substitute-u-equals-minus-x"
+    ]
   },
   {
     "id": "2021-P1-Q8",
@@ -8185,16 +8312,36 @@ window.QUESTIONS = [
       "F": "$14$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n直线 $y = 2x+3$ 和 $y = 4x-2$ 分别与抛物线 $y = x^2+bx+c$ 恰有一个交点（相切），求 $b-c$。\n\n【解题步骤】\n直线与抛物线相切 $\\Leftrightarrow$ 联立方程有重根 $\\Leftrightarrow$ 判别式 $= 0$\n\n**直线1：** $x^2 + bx + c = 2x + 3$，即 $x^2 + (b-2)x + (c-3) = 0$\n$(b-2)^2 - 4(c-3) = 0$ ……①\n\n**直线2：** $x^2 + bx + c = 4x - 2$，即 $x^2 + (b-4)x + (c+2) = 0$\n$(b-4)^2 - 4(c+2) = 0$ ……②\n\n展开整理：\n①：$b^2 - 4b - 4c = -16$\n②：$b^2 - 8b - 4c = -8$\n\n相减：$4b = -8$，$b = -2$\n\n代入①：$4 + 8 - 4c = -16$，$c = 7$\n\n$b - c = -2 - 7 = -9$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n直线 $y = 2x+3$ 和 $y = 4x-2$ 分别与抛物线 $y = x^2+bx+c$ 恰有一个交点（相切），求 $b-c$。\n\n【解题步骤】\n直线与抛物线相切 $\\Leftrightarrow$ 联立方程有重根 $\\Leftrightarrow$ 判别式 $= 0$\n\n**直线1：** $x^2 + bx + c = 2x + 3$，即 $x^2 + (b-2)x + (c-3) = 0$\n$(b-2)^2 - 4(c-3) = 0$ ……①\n\n**直线2：** $x^2 + bx + c = 4x - 2$，即 $x^2 + (b-4)x + (c+2) = 0$\n$(b-4)^2 - 4(c+2) = 0$ ……②\n\n展开整理：\n①：$b^2 - 4b - 4c = -16$\n②：$b^2 - 8b - 4c = -8$\n\n相减：$4b = -8$，$b = -2$\n\n代入①：$4 + 8 - 4c = -16$，$c = 7$\n\n$b - c = -2 - 7 = -9$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "d.line_curve_tangency",
+      "i.graph_intersections",
+      "a2.discriminant_condition"
+    ],
+    "primary_section": "d.line_curve_tangency",
+    "skills": [
+      "translate-one-intersection-to-repeated-root",
+      "set-discriminant-zero",
+      "solve-simultaneous-parameters"
+    ]
   },
   {
     "id": "2021-P1-Q9",
     "year": 2021,
     "paper": 1,
     "num": 9,
-    "topic": "Trigonometry",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "Find the area enclosed by the graph of\n\n$$|x| + |y| = 1$$",
     "options": {
@@ -8207,16 +8354,34 @@ window.QUESTIONS = [
       "G": "$2\\sqrt{2}$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n求 $|x| + |y| = 1$ 围成的面积。\n\n【解题步骤】\n按象限分四种情况：\n\n| 象限 | $|x|$ | $|y|$ | 方程 | 即 $y = \\cdots$ |\n|------|-------|-------|------|----------|\n| 一 ($x>0,y>0$) | $x$ | $y$ | $x+y=1$ | $y=-x+1$ |\n| 二 ($x<0,y>0$) | $-x$ | $y$ | $-x+y=1$ | $y=x+1$ |\n| 三 ($x<0,y<0$) | $-x$ | $-y$ | $-x-y=1$ | $y=-x-1$ |\n| 四 ($x>0,y<0$) | $x$ | $-y$ | $x-y=1$ | $y=x-1$ |\n\n四条线段围成一个正方形，顶点为 $(1,0)$，$(0,1)$，$(-1,0)$，$(0,-1)$。\n\n可看作4个直角三角形，每个底和高均为1：\n面积 $= 4 \\times \\frac{1}{2} \\times 1 \\times 1 = 2$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n求 $|x| + |y| = 1$ 围成的面积。\n\n【解题步骤】\n按象限分四种情况：\n\n| 象限 | $|x|$ | $|y|$ | 方程 | 即 $y = \\cdots$ |\n|------|-------|-------|------|----------|\n| 一 ($x>0,y>0$) | $x$ | $y$ | $x+y=1$ | $y=-x+1$ |\n| 二 ($x<0,y>0$) | $-x$ | $y$ | $-x+y=1$ | $y=x+1$ |\n| 三 ($x<0,y<0$) | $-x$ | $-y$ | $-x-y=1$ | $y=-x-1$ |\n| 四 ($x>0,y<0$) | $x$ | $-y$ | $x-y=1$ | $y=x-1$ |\n\n四条线段围成一个正方形，顶点为 $(1,0)$，$(0,1)$，$(-1,0)$，$(0,-1)$。\n\n可看作4个直角三角形，每个底和高均为1：\n面积 $= 4 \\times \\frac{1}{2} \\times 1 \\times 1 = 2$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "i.absolute_value_graphs",
+      "d.area_of_polygons"
+    ],
+    "primary_section": "i.absolute_value_graphs",
+    "skills": [
+      "interpret-absolute-value-graph",
+      "split-by-quadrant",
+      "identify-vertices",
+      "compute-diamond-area"
+    ]
   },
   {
     "id": "2021-P1-Q10",
     "year": 2021,
     "paper": 1,
     "num": 10,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "Use the trapezium rule with 3 strips to estimate\n\n$$\\int_{\\frac{1}{2}}^{2} 2 \\log_{10} x \\, dx$$",
     "options": {
@@ -8228,16 +8393,33 @@ window.QUESTIONS = [
       "F": "$\\log_{10} \\frac{\\sqrt{23}}{2}$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n用梯形法则（3条）估算 $\\int_{1/2}^{2} 2\\log_{10} x\\,dx$。\n\n【解题步骤】\n区间 $[\\frac{1}{2}, 2]$，宽度 $= \\frac{3}{2}$，3条每条宽 $h = \\frac{1}{2}$。\n\n分点：$x = \\frac{1}{2}, 1, \\frac{3}{2}, 2$\n\n设 $f(x) = 2\\log_{10} x$，计算函数值：\n\n$f\\left(\\frac{1}{2}\\right) = 2\\log_{10}\\frac{1}{2} = -2\\log_{10}2$\n\n$f(1) = 2\\log_{10}1 = 0$\n\n$f\\left(\\frac{3}{2}\\right) = 2\\log_{10}\\frac{3}{2} = 2\\log_{10}3 - 2\\log_{10}2$\n\n$f(2) = 2\\log_{10}2$\n\n梯形法则：\n$\\int \\approx \\frac{h}{2}[f(x_0) + 2f(x_1) + 2f(x_2) + f(x_3)]$\n\n$= \\frac{1}{4}[-2\\log_{10}2 + 0 + 2(2\\log_{10}3 - 2\\log_{10}2) + 2\\log_{10}2]$\n\n$= \\frac{1}{4}(4\\log_{10}3 - 4\\log_{10}2)$\n\n$= \\log_{10}3 - \\log_{10}2 = \\log_{10}\\frac{3}{2}$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n用梯形法则（3条）估算 $\\int_{1/2}^{2} 2\\log_{10} x\\,dx$。\n\n【解题步骤】\n区间 $[\\frac{1}{2}, 2]$，宽度 $= \\frac{3}{2}$，3条每条宽 $h = \\frac{1}{2}$。\n\n分点：$x = \\frac{1}{2}, 1, \\frac{3}{2}, 2$\n\n设 $f(x) = 2\\log_{10} x$，计算函数值：\n\n$f\\left(\\frac{1}{2}\\right) = 2\\log_{10}\\frac{1}{2} = -2\\log_{10}2$\n\n$f(1) = 2\\log_{10}1 = 0$\n\n$f\\left(\\frac{3}{2}\\right) = 2\\log_{10}\\frac{3}{2} = 2\\log_{10}3 - 2\\log_{10}2$\n\n$f(2) = 2\\log_{10}2$\n\n梯形法则：\n$\\int \\approx \\frac{h}{2}[f(x_0) + 2f(x_1) + 2f(x_2) + f(x_3)]$\n\n$= \\frac{1}{4}[-2\\log_{10}2 + 0 + 2(2\\log_{10}3 - 2\\log_{10}2) + 2\\log_{10}2]$\n\n$= \\frac{1}{4}(4\\log_{10}3 - 4\\log_{10}2)$\n\n$= \\log_{10}3 - \\log_{10}2 = \\log_{10}\\frac{3}{2}$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "g.trapezium_rule",
+      "a3.logarithm_laws"
+    ],
+    "primary_section": "g.trapezium_rule",
+    "skills": [
+      "apply-trapezium-rule",
+      "evaluate-logarithmic-ordinates",
+      "combine-logarithms"
+    ]
   },
   {
     "id": "2021-P1-Q11",
     "year": 2021,
     "paper": 1,
     "num": 11,
-    "topic": "Algebra",
+    "topic": "Differentiation",
     "difficulty": 3,
     "question": "The function f is given by\n\n$$f(x) = x^{\\frac{1}{7}}(x^2 - x + 1)$$\n\nFind the fraction of the interval $0 < x < 1$ for which $f(x)$ is decreasing.",
     "options": {
@@ -8250,16 +8432,37 @@ window.QUESTIONS = [
       "G": "$\\frac{13}{15}$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n$f(x) = x^{1/7}(x^2 - x + 1)$，求在 $(0,1)$ 区间内 $f(x)$ 递减的比例。\n\n【解题步骤】\n求导：\n\n$f'(x) = \\frac{1}{7}x^{-6/7}(x^2-x+1) + x^{1/7}(2x-1) = \\frac{1}{7}x^{-6/7}(15x^2-8x+1)$\n\n因式分解：$15x^2-8x+1 = (5x-1)(3x-1)$\n\n$f'(x) < 0$ 当 $(5x-1)(3x-1) < 0$（注意 $x > 0$ 时 $\\frac{1}{7}x^{-6/7} > 0$）\n\n$(5x-1)(3x-1) = 0$ 的根为 $x = \\frac{1}{5}$ 和 $x = \\frac{1}{3}$\n\n$(5x-1)(3x-1) < 0$ 当 $\\frac{1}{5} < x < \\frac{1}{3}$\n\n递减区间长度 $= \\frac{1}{3} - \\frac{1}{5} = \\frac{2}{15}$\n\n占 $(0,1)$ 的比例 $= \\frac{2}{15}$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n$f(x) = x^{1/7}(x^2 - x + 1)$，求在 $(0,1)$ 区间内 $f(x)$ 递减的比例。\n\n【解题步骤】\n求导：\n\n$f'(x) = \\frac{1}{7}x^{-6/7}(x^2-x+1) + x^{1/7}(2x-1) = \\frac{1}{7}x^{-6/7}(15x^2-8x+1)$\n\n因式分解：$15x^2-8x+1 = (5x-1)(3x-1)$\n\n$f'(x) < 0$ 当 $(5x-1)(3x-1) < 0$（注意 $x > 0$ 时 $\\frac{1}{7}x^{-6/7} > 0$）\n\n$(5x-1)(3x-1) = 0$ 的根为 $x = \\frac{1}{5}$ 和 $x = \\frac{1}{3}$\n\n$(5x-1)(3x-1) < 0$ 当 $\\frac{1}{5} < x < \\frac{1}{3}$\n\n递减区间长度 $= \\frac{1}{3} - \\frac{1}{5} = \\frac{2}{15}$\n\n占 $(0,1)$ 的比例 $= \\frac{2}{15}$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra",
+      "Functions"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a1_algebra_basics",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "f.monotonicity",
+      "f.power_function_derivatives",
+      "a1.fractional_indices"
+    ],
+    "primary_section": "f.monotonicity",
+    "skills": [
+      "differentiate-product-with-fractional-powers",
+      "factor-quadratic",
+      "sign-chart",
+      "interval-length-ratio"
+    ]
   },
   {
     "id": "2021-P1-Q12",
     "year": 2021,
     "paper": 1,
     "num": 12,
-    "topic": "Differentiation",
+    "topic": "Algebra",
     "difficulty": 3,
     "question": "The minimum value of the function $x^4 - p^2x^2$ is $-9$\n\n$p$ is a real number.\n\nFind the minimum value of the function $x^2 - px + 6$",
     "options": {
@@ -8271,16 +8474,37 @@ window.QUESTIONS = [
       "F": "$6 + \\frac{3\\sqrt{2}}{2}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n$x^4 - p^2x^2$ 的最小值为 $-9$，$p$ 为实数。求 $x^2 - px + 6$ 的最小值。\n\n【解题步骤】\n**先求 $p$：**\n\n$x^4 - p^2x^2 = \\left(x^2 - \\frac{1}{2}p^2\\right)^2 - \\frac{1}{4}p^4$\n\n最小值在 $x^2 = \\frac{1}{2}p^2$ 时取得，$= -\\frac{1}{4}p^4 = -9$\n\n所以 $p^4 = 36$，因 $p$ 为实数，$p^2 = 6$\n\n**再求 $x^2 - px + 6$ 的最小值：**\n\n$= \\left(x - \\frac{1}{2}p\\right)^2 - \\frac{1}{4}p^2 + 6 = \\left(x - \\frac{1}{2}p\\right)^2 - \\frac{6}{4} + 6 = \\left(x - \\frac{1}{2}p\\right)^2 + \\frac{9}{2}$\n\n最小值 $= \\frac{9}{2}$\n\n对应选项 E。",
+    "analysis": "【题目分析】\n$x^4 - p^2x^2$ 的最小值为 $-9$，$p$ 为实数。求 $x^2 - px + 6$ 的最小值。\n\n【解题步骤】\n**先求 $p$：**\n\n$x^4 - p^2x^2 = \\left(x^2 - \\frac{1}{2}p^2\\right)^2 - \\frac{1}{4}p^4$\n\n最小值在 $x^2 = \\frac{1}{2}p^2$ 时取得，$= -\\frac{1}{4}p^4 = -9$\n\n所以 $p^4 = 36$，因 $p$ 为实数，$p^2 = 6$\n\n**再求 $x^2 - px + 6$ 的最小值：**\n\n$= \\left(x - \\frac{1}{2}p\\right)^2 - \\frac{1}{4}p^2 + 6 = \\left(x - \\frac{1}{2}p\\right)^2 - \\frac{6}{4} + 6 = \\left(x - \\frac{1}{2}p\\right)^2 + \\frac{9}{2}$\n\n最小值 $= \\frac{9}{2}$\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Functions"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.quadratic_vertex_form",
+      "f.stationary_points_extrema",
+      "i.function_minimum"
+    ],
+    "primary_section": "a2.quadratic_vertex_form",
+    "skills": [
+      "complete-the-square",
+      "parameter-from-minimum",
+      "use-p-squared-not-p",
+      "quadratic-minimum"
+    ]
   },
   {
     "id": "2021-P1-Q13",
     "year": 2021,
     "paper": 1,
     "num": 13,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The function f is such that, for every integer $n$\n\n$$\\int_{n}^{n+1} f(x) \\, dx = n + 1$$\n\nEvaluate\n\n$$\\sum_{r=1}^{8} \\left( \\int_{0}^{r} f(x) \\, dx \\right)$$",
     "options": {
@@ -8292,16 +8516,35 @@ window.QUESTIONS = [
       "F": "288"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n$\\int_n^{n+1} f(x)\\,dx = n+1$，求 $\\sum_{r=1}^{8} \\int_0^r f(x)\\,dx$。\n\n【解题步骤】\n\n$\\int_0^r f(x)\\,dx = \\int_0^1 f(x)\\,dx + \\int_1^2 f(x)\\,dx + \\cdots + \\int_{r-1}^{r} f(x)\\,dx$\n\n$= 1 + 2 + \\cdots + r = \\frac{1}{2}r(r+1)$\n\n所以：\n\n$\\sum_{r=1}^{8} \\frac{1}{2}r(r+1) = \\frac{1}{2}(1 \\times 2 + 2 \\times 3 + 3 \\times 4 + 4 \\times 5 + 5 \\times 6 + 6 \\times 7 + 7 \\times 8 + 8 \\times 9)$\n\n$= \\frac{1}{2}(2 + 6 + 12 + 20 + 30 + 42 + 56 + 72) = \\frac{1}{2} \\times 240 = 120$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n$\\int_n^{n+1} f(x)\\,dx = n+1$，求 $\\sum_{r=1}^{8} \\int_0^r f(x)\\,dx$。\n\n【解题步骤】\n\n$\\int_0^r f(x)\\,dx = \\int_0^1 f(x)\\,dx + \\int_1^2 f(x)\\,dx + \\cdots + \\int_{r-1}^{r} f(x)\\,dx$\n\n$= 1 + 2 + \\cdots + r = \\frac{1}{2}r(r+1)$\n\n所以：\n\n$\\sum_{r=1}^{8} \\frac{1}{2}r(r+1) = \\frac{1}{2}(1 \\times 2 + 2 \\times 3 + 3 \\times 4 + 4 \\times 5 + 5 \\times 6 + 6 \\times 7 + 7 \\times 8 + 8 \\times 9)$\n\n$= \\frac{1}{2}(2 + 6 + 12 + 20 + 30 + 42 + 56 + 72) = \\frac{1}{2} \\times 240 = 120$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sequences and Series",
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "g.definite_integral_additivity",
+      "c.arithmetic_series_sums",
+      "c.summation_notation"
+    ],
+    "primary_section": "g.definite_integral_additivity",
+    "skills": [
+      "split-integral-into-unit-intervals",
+      "convert-to-triangular-numbers",
+      "sum-quadratic-expression"
+    ]
   },
   {
     "id": "2021-P1-Q14",
     "year": 2021,
     "paper": 1,
     "num": 14,
-    "topic": "Algebra",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "Find the number of distinct values of $x$ that satisfy the equation\n\n$$(x + 1)(3 - x) = 2(1 - \\cos(\\pi x))$$",
     "options": {
@@ -8313,16 +8556,38 @@ window.QUESTIONS = [
       "F": "7"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n求 $(x+1)(3-x) = 2(1-\\cos\\pi x)$ 的不同实数解的个数。\n\n【解题步骤】\n画图分析两边的交点。\n\n**左边** $y = (x+1)(3-x) = -x^2+2x+3$ 是开口向下的抛物线，根在 $x=-1$ 和 $x=3$，顶点 $(1,4)$。\n\n**右边** $y = 2(1-\\cos\\pi x)$ 是变换后的余弦函数：\n$y = \\cos\\pi x$ 周期为2，$y = 1-\\cos\\pi x$ 关于 $x$ 轴反射后上移1，$y = 2(1-\\cos\\pi x)$ 再纵向拉伸2倍，值域 $[0,4]$。\n\n两图叠加分析：\n- 三角函数图在 $x = 1$ 处取最大值4，与抛物线顶点重合 → 一个切点 $(1,4)$\n- 在 $x \\in (-1, 0)$ 区间有一个交点\n- 在 $x \\in (2, 3)$ 区间有一个交点\n- 其余区域三角函数值 $\\geq 0$ 而抛物线值 $< 0$，无交点\n\n共3个交点。\n\n对应选项 B。",
+    "analysis": "【题目分析】\n求 $(x+1)(3-x) = 2(1-\\cos\\pi x)$ 的不同实数解的个数。\n\n【解题步骤】\n先令 $t=x-1$。左边变为\n$$(x+1)(3-x)=(t+2)(2-t)=4-t^2.$$\n\n右边利用 $\\cos(\\pi(t+1))=-\\cos(\\pi t)$：\n$$2(1-\\cos\\pi x)=2(1+\\cos\\pi t)=4\\cos^2\\frac{\\pi t}{2}.$$\n\n所以方程等价于\n$$4-t^2=4\\cos^2\\frac{\\pi t}{2},$$\n即\n$$t^2=4\\sin^2\\frac{\\pi t}{2}.$$\n\n两边都关于 $t=0$ 对称，因此解关于 $x=1$ 对称。显然 $t=0$ 是一个解，即 $x=1$。\n\n当 $|t|>2$ 时，左式 $t^2>4$，右式最大为 4，不可能有解；只需看 $0<t\\le2$。在 $0<t<1$ 内，$2\\sin(\\pi t/2)>t$；在 $t=1$ 时 $2\\sin(\\pi/2)=2>1$；在 $t=2$ 时 $2\\sin\\pi=0<2$，且图像在 $(1,2)$ 内只相交一次。因此正的 $t$ 有一个解，负的 $t$ 对称也有一个解。\n\n总共有 3 个不同实数解。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Trigonometry",
+      "Functions",
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.equation_roots.graph_intersections",
+      "e.trig_graphs",
+      "e.trig_equations_graph_intersections"
+    ],
+    "primary_section": "i.equation_roots.graph_intersections",
+    "skills": [
+      "count-graph-intersections",
+      "use-symmetry",
+      "trig-identity-transform",
+      "solution-counting"
+    ]
   },
   {
     "id": "2021-P1-Q15",
     "year": 2021,
     "paper": 1,
     "num": 15,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The diagram shows the graph of $y = f(x)$.\n\nThe graph consists of alternating straight-line segments of gradient 1 and $-1$ and continues in this way for all values of $x$.\n\nThe function g is defined as\n\n$$g(x) = \\sum_{r=1}^{10} f\\left(2^{r-1}x\\right)$$\n\nFind the value of\n\n$$\\int_{0}^{1} g(x) \\, dx$$",
     "options": {
@@ -8334,18 +8599,40 @@ window.QUESTIONS = [
       "F": "$55$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n$f(x)$ 是斜率为 $\\pm 1$ 的折线函数，$g(x) = \\sum_{r=1}^{10} f(2^{r-1}x)$，求 $\\int_0^1 g(x)\\,dx$。\n\n【解题步骤】\n\n$\\int_0^1 g(x)\\,dx = \\sum_{r=1}^{10} \\int_0^1 f(2^{r-1}x)\\,dx$\n\n**关键观察：** 每项积分都等于 $\\frac{1}{2}$\n\n- $r=1$：$\\int_0^1 f(x)\\,dx = \\frac{1}{2}$（底为1高为1的直角三角形）\n- $r=2$：$f(2x)$ 是 $f(x)$ 在 $x$ 方向压缩为 $\\frac{1}{2}$，$[0,1]$ 上的图像仍是一个直角三角形，面积 $= \\frac{1}{2}$\n- $r=3$：$f(4x)$ 在 $[0,1]$ 上画两个三角形，用正方形包围后，每个矩形中一半在图下一半在图上，总面积 $= \\frac{1}{2}$\n- 一般地，$f(2^{r-1}x)$ 在 $[0,1]$ 上的面积恒为 $\\frac{1}{2}$\n\n总和 $= 10 \\times \\frac{1}{2} = 5$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n$f(x)$ 是斜率为 $\\pm 1$ 的折线函数，$g(x) = \\sum_{r=1}^{10} f(2^{r-1}x)$，求 $\\int_0^1 g(x)\\,dx$。\n\n【解题步骤】\n\n$\\int_0^1 g(x)\\,dx = \\sum_{r=1}^{10} \\int_0^1 f(2^{r-1}x)\\,dx$\n\n**关键观察：** 每项积分都等于 $\\frac{1}{2}$\n\n- $r=1$：$\\int_0^1 f(x)\\,dx = \\frac{1}{2}$（底为1高为1的直角三角形）\n- $r=2$：$f(2x)$ 是 $f(x)$ 在 $x$ 方向压缩为 $\\frac{1}{2}$，$[0,1]$ 上的图像仍是一个直角三角形，面积 $= \\frac{1}{2}$\n- $r=3$：$f(4x)$ 在 $[0,1]$ 上画两个三角形，用正方形包围后，每个矩形中一半在图下一半在图上，总面积 $= \\frac{1}{2}$\n- 一般地，$f(2^{r-1}x)$ 在 $[0,1]$ 上的面积恒为 $\\frac{1}{2}$\n\n总和 $= 10 \\times \\frac{1}{2} = 5$\n\n【正确答案】C",
     "images": {
       "image": "2021 P1 Q15.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Graphs",
+      "Functions",
+      "Sequences and Series"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "g.definite_integral_scaling",
+      "g.area_under_piecewise_linear_graphs",
+      "i.periodic_graphs"
+    ],
+    "primary_section": "g.definite_integral_scaling",
+    "skills": [
+      "substitution-for-scaled-input",
+      "periodic-area-counting",
+      "triangular-wave-area",
+      "sum-identical-integrals"
+    ]
   },
   {
     "id": "2021-P1-Q16",
     "year": 2021,
     "paper": 1,
     "num": 16,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "Consider the expansion of\n$$(a + bx)^n$$\n\nThe third term, in **ascending** powers of $x$, is $105x^2$\n\nThe fourth term, in **ascending** powers of $x$, is $210x^3$\n\nThe fourth term, in **descending** powers of $x$, is $210x^3$\n\nFind the value of $(\\frac{a}{b})^2$",
     "options": {
@@ -8356,16 +8643,36 @@ window.QUESTIONS = [
       "E": "$1$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n$(a+bx)^n$ 展开中，升序第3项为 $105x^2$，升序第4项为 $210x^3$，降序第4项也为 $210x^3$。求 $\\left(\\frac{a}{b}\\right)^2$。\n\n【解题步骤】\n二项式展开：$(a+bx)^n = \\binom{n}{0}a^n + \\binom{n}{1}a^{n-1}bx + \\binom{n}{2}a^{n-2}b^2x^2 + \\binom{n}{3}a^{n-3}b^3x^3 + \\cdots$\n\n升序第3项：$\\binom{n}{2}a^{n-2}b^2 = 105$\n升序第4项：$\\binom{n}{3}a^{n-3}b^3 = 210$\n降序第4项：$\\binom{n}{n-3}a^3b^{n-3} = 210$\n\n由降序第4项知 $n-3 = 3$，即 $n = 6$。\n\n代入前两式：\n$\\binom{6}{2}a^4b^2 = 15a^4b^2 = 105$，即 $a^4b^2 = 7$\n$\\binom{6}{3}a^3b^3 = 20a^3b^3 = 210$，即 $a^3b^3 = \\frac{21}{2}$\n\n两式相除：$\\frac{a}{b} = \\frac{7}{\\frac{21}{2}} = \\frac{2}{3}$\n\n所以 $\\left(\\frac{a}{b}\\right)^2 = \\frac{4}{9}$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n$(a+bx)^n$ 展开中，升序第3项为 $105x^2$，升序第4项为 $210x^3$，降序第4项也为 $210x^3$。求 $\\left(\\frac{a}{b}\\right)^2$。\n\n【解题步骤】\n二项式展开：$(a+bx)^n = \\binom{n}{0}a^n + \\binom{n}{1}a^{n-1}bx + \\binom{n}{2}a^{n-2}b^2x^2 + \\binom{n}{3}a^{n-3}b^3x^3 + \\cdots$\n\n升序第3项：$\\binom{n}{2}a^{n-2}b^2 = 105$\n升序第4项：$\\binom{n}{3}a^{n-3}b^3 = 210$\n降序第4项：$\\binom{n}{n-3}a^3b^{n-3} = 210$\n\n由降序第4项知 $n-3 = 3$，即 $n = 6$。\n\n代入前两式：\n$\\binom{6}{2}a^4b^2 = 15a^4b^2 = 105$，即 $a^4b^2 = 7$\n$\\binom{6}{3}a^3b^3 = 20a^3b^3 = 210$，即 $a^3b^3 = \\frac{21}{2}$\n\n两式相除：$\\frac{a}{b} = \\frac{7}{\\frac{21}{2}} = \\frac{2}{3}$\n\n所以 $\\left(\\frac{a}{b}\\right)^2 = \\frac{4}{9}$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra",
+      "Combinatorics"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.binomial_expansion",
+      "c.coefficient_extraction",
+      "a1.coefficient_matching"
+    ],
+    "primary_section": "c.binomial_expansion",
+    "skills": [
+      "binomial-expansion",
+      "coefficient-comparison",
+      "ascending-descending-terms",
+      "ratio-elimination"
+    ]
   },
   {
     "id": "2021-P1-Q17",
     "year": 2021,
     "paper": 1,
     "num": 17,
-    "topic": "Algebra",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "Which of the following sketches shows the graph of\n\n$$\\sin(x^2 + y^2) = \\frac{1}{2}$$\n\nwhere $x^2 + y^2 \\le 8\\pi$?\n\n",
     "options": {
@@ -8376,18 +8683,39 @@ window.QUESTIONS = [
       "E": "Sketch E"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n识别 $\\sin(x^2+y^2) = \\frac{1}{2}$（$x^2+y^2 \\leq 8\\pi$）的图形。\n\n【解题步骤】\n设 $r^2 = x^2 + y^2 \\geq 0$，方程变为 $\\sin r^2 = \\frac{1}{2}$。\n\n$r^2 = \\frac{\\pi}{6} + 2k\\pi$ 或 $r^2 = \\frac{5\\pi}{6} + 2k\\pi$（$k$ 为整数）\n\n在 $r^2 \\leq 8\\pi$ 范围内，$k = 0,1,2,3$，共8个圆：\n\n$r^2 = \\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{13\\pi}{6}, \\frac{17\\pi}{6}, \\frac{25\\pi}{6}, \\frac{29\\pi}{6}, \\frac{37\\pi}{6}, \\frac{41\\pi}{6}$\n\n提取公因子 $\\sqrt{\\pi/6}$，各圆半径为：\n\n$\\sqrt{\\frac{\\pi}{6}} \\times 1, \\sqrt{5}, \\sqrt{13}, \\sqrt{17}, \\sqrt{25}, \\sqrt{29}, \\sqrt{37}, \\sqrt{41}$\n\n近似值：$\\rho \\approx 1, 2, 3.5, 4, 5, 5.5, 6, 6.5$\n\n最小的几个圆间距较大，后面的圆越来越密，且成对出现——这对应选项 A。",
+    "analysis": "【题目分析】\n识别 $\\sin(x^2+y^2)=\\frac12$（$x^2+y^2\\le 8\\pi$）的图形。\n\n【解题步骤】\n设 $r^2=x^2+y^2\\ge0$，则方程为\n$$\\sin r^2=\\frac12.$$\n\n因此\n$$r^2=\\frac{\\pi}{6}+2k\\pi \\quad\\text{或}\\quad r^2=\\frac{5\\pi}{6}+2k\\pi,$$\n其中 $k$ 为非负整数，并且 $r^2\\le8\\pi$。\n\n可得到 8 个同心圆：\n$$r^2=\\frac{\\pi}{6},\\frac{5\\pi}{6},\\frac{13\\pi}{6},\\frac{17\\pi}{6},\\frac{25\\pi}{6},\\frac{29\\pi}{6},\\frac{37\\pi}{6},\\frac{41\\pi}{6}.$$\n\n也就是说半径与\n$$1,\\sqrt5,\\sqrt{13},\\sqrt{17},5,\\sqrt{29},\\sqrt{37},\\sqrt{41}$$\n成比例，后面的圆越来越密，并且以相近的一对一对出现。\n\n这正对应选项 A 的同心圆分布。\n\n【正确答案】A",
     "images": {
       "image": "2021 P1 Q17 5 options.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Trigonometry",
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "e_trigonometry",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "i.implicit_graphs",
+      "e.trig_equations_radial_graphs",
+      "d.circle_equations.concentric_circles"
+    ],
+    "primary_section": "i.implicit_graphs",
+    "skills": [
+      "radial-substitution",
+      "trig-solution-families",
+      "concentric-circle-recognition",
+      "spacing-pattern-analysis"
+    ]
   },
   {
     "id": "2021-P1-Q18",
     "year": 2021,
     "paper": 1,
     "num": 18,
-    "topic": "Algebra",
+    "topic": "Coordinate Geometry",
     "difficulty": 3,
     "question": "The curve with equation\n$$x = y^2 - 6y + 11$$\nis rotated 90° clockwise about the point $P$ to give the curve $C$.\n\n$P$ has $x$-coordinate $-2$ and $y$-coordinate 3.\n\nWhat is the equation of $C$?",
     "options": {
@@ -8401,16 +8729,36 @@ window.QUESTIONS = [
       "H": "$y = \\phantom{-}x^2 + 6x + 7$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n曲线 $x = y^2 - 6y + 11$ 绕点 $P(-2, 3)$ 顺时针旋转90°，求新曲线方程。\n\n【解题步骤】\n原曲线配方：$x = (y-3)^2 + 2$，顶点 $(2, 3)$，开口向右。\n\n旋转思路：顶点 $(2,3)$ 到中心 $P(-2,3)$ 的相对位置是 $(4,0)$（向右4个单位）。\n\n顺时针旋转90°后，相对位置变为 $(0,-4)$（向下4个单位），新顶点 $(-2,-1)$，开口向下。\n\n设原曲线上的点 $(x_0, y_0)$ 绕 $P$ 顺时针旋转90°得到 $(x_1, y_1)$：\n\n相对坐标：$(x_0+2, y_0-3) \\to (y_0-3, -(x_0+2))$\n\n$x_1 = -2 + (y_0-3)$，$y_1 = 3 - (x_0+2) = 1-x_0$\n\n反解：$y_0 = x_1+5$，$x_0 = 1-y_1$\n\n代入 $x_0 = y_0^2 - 6y_0 + 11$：\n\n$1 - y_1 = (x_1+5)^2 - 6(x_1+5) + 11 = x_1^2 + 4x_1 + 6$\n\n$y_1 = -x_1^2 - 4x_1 - 5$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n曲线 $x = y^2 - 6y + 11$ 绕点 $P(-2, 3)$ 顺时针旋转90°，求新曲线方程。\n\n【解题步骤】\n原曲线配方：$x = (y-3)^2 + 2$，顶点 $(2, 3)$，开口向右。\n\n旋转思路：顶点 $(2,3)$ 到中心 $P(-2,3)$ 的相对位置是 $(4,0)$（向右4个单位）。\n\n顺时针旋转90°后，相对位置变为 $(0,-4)$（向下4个单位），新顶点 $(-2,-1)$，开口向下。\n\n设原曲线上的点 $(x_0, y_0)$ 绕 $P$ 顺时针旋转90°得到 $(x_1, y_1)$：\n\n相对坐标：$(x_0+2, y_0-3) \\to (y_0-3, -(x_0+2))$\n\n$x_1 = -2 + (y_0-3)$，$y_1 = 3 - (x_0+2) = 1-x_0$\n\n反解：$y_0 = x_1+5$，$x_0 = 1-y_1$\n\n代入 $x_0 = y_0^2 - 6y_0 + 11$：\n\n$1 - y_1 = (x_1+5)^2 - 6(x_1+5) + 11 = x_1^2 + 4x_1 + 6$\n\n$y_1 = -x_1^2 - 4x_1 - 5$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "d.coordinate_transformations.rotation",
+      "i.graph_transformations.rotation",
+      "i.quadratic_graphs"
+    ],
+    "primary_section": "d.coordinate_transformations.rotation",
+    "skills": [
+      "rotation-about-point",
+      "coordinate-substitution",
+      "complete-the-square",
+      "parabola-orientation"
+    ]
   },
   {
     "id": "2021-P1-Q19",
     "year": 2021,
     "paper": 1,
     "num": 19,
-    "topic": "Algebra",
+    "topic": "Trigonometry",
     "difficulty": 3,
     "question": "$$\\sin^2 (4^{\\cos \\theta} \\times 60^\\circ) = \\frac{3}{4}$$\n\nhas exactly three solutions in the range $0^\\circ \\le \\theta \\le x^\\circ$\n\nWhat is the range of all possible values of $x$?",
     "options": {
@@ -8422,16 +8770,37 @@ window.QUESTIONS = [
       "F": "$450 \\le x < 630$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n$\\sin^2(4^{\\cos\\theta} \\times 60°) = \\frac{3}{4}$ 在 $0° \\leq \\theta \\leq x°$ 恰有3个解，求 $x$ 的范围。\n\n【解题步骤】\n$\\sin^2 u = \\frac{3}{4}$，则 $\\sin u = \\pm\\frac{\\sqrt{3}}{2}$\n\n$u = 60°, 120°, 240°, 300°, \\ldots$\n\n其中 $u = 4^{\\cos\\theta} \\times 60° > 0$，所以：\n$4^{\\cos\\theta} \\times 60° = 60°, 120°, 240°, 300°, \\ldots$\n\n$4^{\\cos\\theta} = 1, 2, 4, 5, \\ldots$\n\n$\\cos\\theta = 0, \\frac{1}{2}, 1$（$4^{\\cos\\theta} > 4$ 时无解）\n\n对应的 $\\theta$ 值：\n- $\\cos\\theta = 0$：$\\theta = 90°, 270°, 450°, \\ldots$\n- $\\cos\\theta = \\frac{1}{2}$：$\\theta = 60°, 300°, 420°, \\ldots$\n- $\\cos\\theta = 1$：$\\theta = 0°, 360°, \\ldots$\n\n按递增排列：$\\theta = 0°, 60°, 90°, 270°, 300°, \\ldots$\n\n恰有3个解意味着第3个解 $\\theta = 90°$ 包含在内，第4个解 $\\theta = 270°$ 不包含在内。\n\n所以 $90 \\leq x < 270$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n$\\sin^2(4^{\\cos\\theta} \\times 60°) = \\frac{3}{4}$ 在 $0° \\leq \\theta \\leq x°$ 恰有3个解，求 $x$ 的范围。\n\n【解题步骤】\n$\\sin^2 u = \\frac{3}{4}$，则 $\\sin u = \\pm\\frac{\\sqrt{3}}{2}$\n\n$u = 60°, 120°, 240°, 300°, \\ldots$\n\n其中 $u = 4^{\\cos\\theta} \\times 60° > 0$，所以：\n$4^{\\cos\\theta} \\times 60° = 60°, 120°, 240°, 300°, \\ldots$\n\n$4^{\\cos\\theta} = 1, 2, 4, 5, \\ldots$\n\n$\\cos\\theta = 0, \\frac{1}{2}, 1$（$4^{\\cos\\theta} > 4$ 时无解）\n\n对应的 $\\theta$ 值：\n- $\\cos\\theta = 0$：$\\theta = 90°, 270°, 450°, \\ldots$\n- $\\cos\\theta = \\frac{1}{2}$：$\\theta = 60°, 300°, 420°, \\ldots$\n- $\\cos\\theta = 1$：$\\theta = 0°, 360°, \\ldots$\n\n按递增排列：$\\theta = 0°, 60°, 90°, 270°, 300°, \\ldots$\n\n恰有3个解意味着第3个解 $\\theta = 90°$ 包含在内，第4个解 $\\theta = 270°$ 不包含在内。\n\n所以 $90 \\leq x < 270$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a3_exponents_logarithms",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "e.trig_equations.solution_counting",
+      "e.trig_values_periodicity",
+      "a3.exponential_equations"
+    ],
+    "primary_section": "e.trig_equations.solution_counting",
+    "skills": [
+      "solve-squared-trig-equation",
+      "exact-trig-values",
+      "exponential-substitution",
+      "ordered-solution-counting"
+    ]
   },
   {
     "id": "2021-P1-Q20",
     "year": 2021,
     "paper": 1,
     "num": 20,
-    "topic": "Algebra",
+    "topic": "Coordinate Geometry",
     "difficulty": 3,
     "question": "Find the length of the curve with equation\n\n$$2 \\log_{10} (x - y) = \\log_{10} (2 - 2x) + \\log_{10} (y + 5)$$",
     "options": {
@@ -8443,9 +8812,30 @@ window.QUESTIONS = [
       "F": "$12\\pi$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n求 $2\\log_{10}(x-y) = \\log_{10}(2-2x) + \\log_{10}(y+5)$ 的曲线长度。\n\n【解题步骤】\n合并右边对数：$\\log_{10}(x-y)^2 = \\log_{10}[(2-2x)(y+5)]$\n\n所以 $(x-y)^2 = (2-2x)(y+5)$\n\n展开：$x^2 - 2xy + y^2 = 2y + 10 - 2xy - 10x$\n\n整理：$x^2 + y^2 + 10x - 2y = 10$\n\n配方：$(x+5)^2 + (y-1)^2 = 36$\n\n这是一个圆心 $(-5, 1)$、半径 $6$ 的圆，周长 $= 12\\pi$。\n\n**但必须检查定义域约束！** 对数有定义要求：\n- $x - y > 0$\n- $2 - 2x > 0$，即 $x < 1$\n- $y + 5 > 0$，即 $y > -5$\n\n$x < 1$ 排除了点 $(1,1)$，$y > -5$ 排除了点 $(-5,-5)$。\n\n$x > y$（即 $x - y > 0$）将圆分成两部分：直线 $x = y$ 过圆上的 $(1,1)$ 和 $(-5,-5)$ 两点，恰好将圆分为四等份。区域 $x > y$ 对应圆的 $\\frac{1}{4}$。\n\n曲线长度 $= \\frac{1}{4} \\times 12\\pi = 3\\pi$\n\n对应选项 D。",
+    "analysis": "【题目分析】\n求 $2\\log_{10}(x-y)=\\log_{10}(2-2x)+\\log_{10}(y+5)$ 所表示曲线的长度。\n\n【解题步骤】\n先合并对数：\n$$\\log_{10}(x-y)^2=\\log_{10}((2-2x)(y+5)),$$\n因此\n$$(x-y)^2=(2-2x)(y+5).$$\n\n展开并整理：\n$$x^2-2xy+y^2=2y+10-2xy-10x,$$\n所以\n$$x^2+y^2+10x-2y=10.$$\n\n配方得\n$$(x+5)^2+(y-1)^2=36.$$\n这是圆心 $(-5,1)$、半径 $6$ 的圆。\n\n但原对数还要求\n$$x-y>0,\\qquad x<1,\\qquad y>-5.$$\n\n直线 $x=y$ 与圆交于 $(1,1)$ 和 $(-5,-5)$。这两个点到圆心的半径互相垂直，所以满足 $x>y$ 且同时满足 $x<1,y>-5$ 的部分正是从 $(-5,-5)$ 到 $(1,1)$ 的较短四分之一圆弧。\n\n圆周长为 $12\\pi$，所需弧长为\n$$\\frac14\\times 12\\pi=3\\pi.$$\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra",
+      "Trigonometry"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "d_coordinate_geometry",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "a3.logarithm_laws",
+      "d.circle_equations.domain_restrictions",
+      "e.arc_length"
+    ],
+    "primary_section": "d.circle_equations.domain_restrictions",
+    "skills": [
+      "log-domain-restrictions",
+      "complete-the-square",
+      "arc-selection",
+      "radian-arc-length"
+    ]
   },
   {
     "id": "2021-P2-Q1",
