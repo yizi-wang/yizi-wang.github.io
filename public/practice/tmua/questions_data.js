@@ -4799,16 +4799,38 @@ window.QUESTIONS = [
       "F": "$-2x^2 - 4x + 5$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n已知二次函数图像过点 $(1,−1)$ 和 $(−1,3)$，且顶点在 $x = −1$ 处。求 $f(x)$ 的表达式。\n\n【方法一：代入排除法】\n将 $x = 1$ 和 $x = −1$ 代入六个选项验证：\n- $x = 1$ 时，只有 A、C、D、F 给出 $y = −1$\n- $x = −1$ 时，只有 A 和 C 给出 $y = 3$\n- 需要顶点在 $x = −1$（即 $f'(−1) = 0$）：\n  - A: $f'(x) = −2x−2$，$f'(−1) = 2−2 = 0$ ✓\n  - C: $f'(x) = 2x−2$，$f'(−1) = −2−2 = −4 \neq 0$ ✗\n\n【方法二：直接求解析式】\n设 $f(x) = ax^2+bx+c$，由已知条件：\n- $f(1) = −1$ → $a+b+c = −1$  ...(1)\n- $f(−1) = 3$ → $a−b+c = 3$    ...(2)\n- (1)+(2)：$2a+2c = 2$ → $a+c = 1$，进而 $b = −2$\n- 顶点在 $x = −1$：$f'(x) = 2ax+b$，$f'(−1) = −2a+b = 0$\n- 代入 $b = −2$：$−2a−2 = 0$ → $a = −1$\n- 由 $a+c = 1$：$c = 2$\n\n因此 $f(x) = −x^2−2x+2$，对应选项 A。",
+    "analysis": "【题目分析】\n已知二次函数图像过点 $(1,−1)$ 和 $(−1,3)$，且顶点在 $x = −1$ 处。求 $f(x)$ 的表达式。\n\n【方法一：代入排除法】\n将 $x = 1$ 和 $x = −1$ 代入六个选项验证：\n- $x = 1$ 时，只有 A、C、D、F 给出 $y = −1$\n- $x = −1$ 时，只有 A 和 C 给出 $y = 3$\n- 需要顶点在 $x = −1$（即 $f'(−1) = 0$）：\n  - A: $f'(x) = −2x−2$，$f'(−1) = 2−2 = 0$ ✓\n  - C: $f'(x) = 2x−2$，$f'(−1) = −2−2 = −4 \neq 0$ ✗\n\n【方法二：直接求解析式】\n设 $f(x) = ax^2+bx+c$，由已知条件：\n- $f(1) = −1$ → $a+b+c = −1$  ...(1)\n- $f(−1) = 3$ → $a−b+c = 3$    ...(2)\n- (1)+(2)：$2a+2c = 2$ → $a+c = 1$，进而 $b = −2$\n- 顶点在 $x = −1$：$f'(x) = 2ax+b$，$f'(−1) = −2a+b = 0$\n- 代入 $b = −2$：$−2a−2 = 0$ → $a = −1$\n- 由 $a+c = 1$：$c = 2$\n\n因此 $f(x) = −x^2−2x+2$，\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Graphs"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a2.quadratic_vertex_form",
+      "i.quadratic_parameter_effects",
+      "a1.coefficient_matching"
+    ],
+    "primary_section": "a2.quadratic_vertex_form",
+    "skills": [
+      "quadratic-vertex-form",
+      "point-substitution",
+      "turning-point-condition",
+      "coefficient-comparison",
+      "option-elimination"
+    ]
   },
   {
     "id": "2019-P1-Q2",
     "year": 2019,
     "paper": 1,
     "num": 2,
-    "topic": "Trigonometry",
+    "topic": "Algebra",
     "difficulty": 3,
     "question": "Find the complete set of values of the real constant $k$ for which the expression\n\n$$x^2 + kx + 2x + 1 - 2k$$\n\nis positive for all real values of $x$.",
     "options": {
@@ -4822,16 +4844,35 @@ window.QUESTIONS = [
       "H": "$k < 0$ or $k > 4$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n已知表达式 $x^2+kx+2x+1-2k$ 对所有实数 $x$ 恒为正，求 $k$ 的取值范围。\n\n【解题步骤】\n将表达式重写为 $x^2+(k+2)x+(1-2k)$，使 $x$ 的系数和常数项更清晰。\n\n二次项系数为 $1 > 0$，抛物线开口向上。\n要使表达式对所有实数 $x$ 恒为正，需要判别式小于 $0$：\n\n$Δ = (k+2)^2-4(1-2k) < 0$\n\n展开并化简：\n$k^2+4k+4-4+8k < 0$\n$k^2+12k < 0$\n$k(k+12) < 0$\n\n解得 $-12 < k < 0$。\n\n对应选项 A。",
+    "analysis": "【题目分析】\n已知表达式 $x^2+kx+2x+1-2k$ 对所有实数 $x$ 恒为正，求 $k$ 的取值范围。\n\n【解题步骤】\n将表达式重写为 $x^2+(k+2)x+(1-2k)$，使 $x$ 的系数和常数项更清晰。\n\n二次项系数为 $1 > 0$，抛物线开口向上。\n要使表达式对所有实数 $x$ 恒为正，需要判别式小于 $0$：\n\n$Δ = (k+2)^2-4(1-2k) < 0$\n\n展开并化简：\n$k^2+4k+4-4+8k < 0$\n$k^2+12k < 0$\n$k(k+12) < 0$\n\n解得 $-12 < k < 0$。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.parameter_discriminant",
+      "a2.quadratic_inequalities",
+      "i.quadratic_parameter_effects"
+    ],
+    "primary_section": "a2.parameter_discriminant",
+    "skills": [
+      "quadratic-positive-for-all-real",
+      "discriminant-condition",
+      "parameter-inequality",
+      "quadratic-factorisation"
+    ]
   },
   {
     "id": "2019-P1-Q3",
     "year": 2019,
     "paper": 1,
     "num": 3,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "Find the coefficient of $x$ in the expression:\n\n$$(1 + x)^0 + (1 + x)^1 + (1 + x)^2 + (1 + x)^3 + \\dots + (1 + x)^{79} + (1 + x)^{80}$$",
     "options": {
@@ -4845,16 +4886,35 @@ window.QUESTIONS = [
       "H": "6642"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n求 $(1+x)^0 + (1+x)^1 + ... + (1+x)^{80}$ 中 $x$ 的系数。\n\n【解题步骤】\n第一步：分析每个项的 $x$ 系数\n$(1+x)^n$ 的二项式展开：$C(n,0)·1 + C(n,1)·x + C(n,2)·x² + ...$\n$x$ 的系数 = $C(n,1) = n$\n\n第二步：列出各项 $x$ 系数\n$(1+x)^0$: $x$ 系数 = $0$（展开只有常数项 $1$）\n$(1+x)^1$: $x$ 系数 = $1$（展开为 $1+x$）\n$(1+x)^2$: $x$ 系数 = $2$（展开为 $1+2x+x²$）\n...$n$(1+x)^{80}$: $x$ 系数 = $80$\n\n第三步：求和\n$x$ 系数总和 = $0 + 1 + 2 + ... + 80$\n$= \\frac{80×(80+1)}{2}$\n$= \\frac{80×81}{2}$\n$= 3240$\n\n对应选项 E。",
+    "analysis": "【题目分析】\n求 $(1+x)^0 + (1+x)^1 + \\cdots + (1+x)^{80}$ 中 $x$ 的系数。\n\n【解题步骤】\n对任意非负整数 $n$，$(1+x)^n$ 的展开式中 $x$ 的系数为\n$$\\binom{n}{1}=n.$$\n\n因此各项中 $x$ 的系数依次为\n$$0,1,2,\\ldots,80.$$\n\n所求总系数为\n$$0+1+2+\\cdots+80=\\frac{80\\times81}{2}=3240.$$\n\n【快捷思路】\n只看一次项系数即可：$(1+x)^n$ 的一次项系数是 $n$。所以问题化为求 $0$ 到 $80$ 的等差数列和。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.binomial_specific_coefficients",
+      "c.arithmetic_series_sums",
+      "a1.coefficient_matching"
+    ],
+    "primary_section": "c.binomial_specific_coefficients",
+    "skills": [
+      "binomial-coefficient-extraction",
+      "coefficient-summation",
+      "arithmetic-series-sum",
+      "sigma-notation"
+    ]
   },
   {
     "id": "2019-P1-Q4",
     "year": 2019,
     "paper": 1,
     "num": 4,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "The sequence $x_n$ is given by:\n\n$$x_1 = 10$$\n\n$$x_{n+1} = \\sqrt{x_n} \\text{ for } n \\ge 1$$\n\nWhat is the value of $x_{100}$ ?\n\n[Note that $a^{b^c}$ means $a^{(b^c)}$]",
     "options": {
@@ -4868,16 +4928,37 @@ window.QUESTIONS = [
       "H": "$10^{-2^{-100}}$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n已知 $x_1 = 10$，$x_{n+1} = \\sqrt{x_n}$，求 $x_{100}$。\n\n【解题步骤】\n计算前几项，写成选项中给出的形式：\n$x_1 = 10 = 10^1$\n$x_2 = \\sqrt{10} = 10^{\\frac{1}{2}}$\n$x_3 = \\sqrt{10^{\\frac{1}{2}}} = (10^{\\frac{1}{2}})^{\\frac{1}{2}} = 10^{\\frac{1}{2} \\times \\frac{1}{2}} = 10^{\\frac{1}{4}} = 10^{2^{-2}}$\n$x_4 = \\sqrt{10^{\\frac{1}{4}}} = 10^{\\frac{1}{8}} = 10^{2^{-3}}$\n\n规律：$x_n = 10^{2^{-(n-1)}}$\n\n因此 $x_{100} = 10^{2^{-99}}$，对应选项 C。",
+    "analysis": "【题目分析】\n已知 $x_1 = 10$，$x_{n+1} = \\sqrt{x_n}$，求 $x_{100}$。\n\n【解题步骤】\n计算前几项，写成选项中给出的形式：\n$x_1 = 10 = 10^1$\n$x_2 = \\sqrt{10} = 10^{\\frac{1}{2}}$\n$x_3 = \\sqrt{10^{\\frac{1}{2}}} = (10^{\\frac{1}{2}})^{\\frac{1}{2}} = 10^{\\frac{1}{2} \\times \\frac{1}{2}} = 10^{\\frac{1}{4}} = 10^{2^{-2}}$\n$x_4 = \\sqrt{10^{\\frac{1}{4}}} = 10^{\\frac{1}{8}} = 10^{2^{-3}}$\n\n规律：$x_n = 10^{2^{-(n-1)}}$\n\n因此 $x_{100} = 10^{2^{-99}}$，\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a3_exponents_logarithms",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.recurrence_patterns",
+      "c.power_transformed_series",
+      "a3.exponent_laws"
+    ],
+    "primary_section": "c.recurrence_patterns",
+    "skills": [
+      "recursive-sequence-pattern",
+      "repeated-square-root",
+      "index-shift",
+      "exponent-laws",
+      "power-tower-notation"
+    ]
   },
   {
     "id": "2019-P1-Q5",
     "year": 2019,
     "paper": 1,
     "num": 5,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "S is a geometric sequence.\n\nThe sum of the first 6 terms of S is equal to 9 times the sum of the first 3 terms of S.\n\nThe 7<sup>th</sup> term of S is 360.\n\nFind the 1<sup>st</sup> term of S.",
     "options": {
@@ -4889,9 +4970,29 @@ window.QUESTIONS = [
       "F": "$\\frac{45}{4}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n已知几何数列 $S$ 的前 $6$ 项和等于前 $3$ 项和的 $9$ 倍，且第 $7$ 项 $= 360$，求首项。\n\n【解题步骤】\n设首项为 $a$，公比为 $r$。\n前 $n$ 项和公式：$S_n = \\frac{a(r^n-1)}{r-1}$。\n\n由已知条件：\n$\\frac{a(r^6-1)}{r-1} = 9 \\cdot \\frac{a(r^3-1)}{r-1}$\n\n两边乘以 $(r-1)$ 并除以 $a$（$a \\neq 0$）：\n$r^6 - 1 = 9(r^3-1)$\n\n令 $R = r^3$，则方程化为：\n$R^2 - 1 = 9R - 9$\n$R^2 - 9R + 8 = 0$\n$(R-1)(R-8) = 0$\n\n所以 $R = 1$ 或 $R = 8$，即 $r^3 = 1$ 或 $r^3 = 8$，故 $r = 1$ 或 $r = 2$。\n\n**讨论 $r = 1$ 的情况**：\n若 $r = 1$，数列为常数列，前 $6$ 项和 $= 6a$，前 $3$ 项和 $= 3a$。\n此时 $6a = 9 \\times 3a$ 仅当 $a = 0$ 时成立，但这与第 $7$ 项 $= 360$ 矛盾。\n因此 $r = 1$ 不成立，必须有 $r = 2$。\n\n第 $7$ 项 = $ar^6 = a \\cdot 2^6 = 64a = 360$\n解得 $a = \\frac{360}{64} = \\frac{45}{8}$。\n\n对应选项 E。",
+    "analysis": "【题目分析】\n已知几何数列 $S$ 的前 $6$ 项和等于前 $3$ 项和的 $9$ 倍，且第 $7$ 项 $= 360$，求首项。\n\n【解题步骤】\n设首项为 $a$，公比为 $r$。\n前 $n$ 项和公式：$S_n = \\frac{a(r^n-1)}{r-1}$。\n\n由已知条件：\n$\\frac{a(r^6-1)}{r-1} = 9 \\cdot \\frac{a(r^3-1)}{r-1}$\n\n两边乘以 $(r-1)$ 并除以 $a$（$a \\neq 0$）：\n$r^6 - 1 = 9(r^3-1)$\n\n令 $R = r^3$，则方程化为：\n$R^2 - 1 = 9R - 9$\n$R^2 - 9R + 8 = 0$\n$(R-1)(R-8) = 0$\n\n所以 $R = 1$ 或 $R = 8$，即 $r^3 = 1$ 或 $r^3 = 8$，故 $r = 1$ 或 $r = 2$。\n\n**讨论 $r = 1$ 的情况**：\n若 $r = 1$，数列为常数列，前 $6$ 项和 $= 6a$，前 $3$ 项和 $= 3a$。\n此时 $6a = 9 \\times 3a$ 仅当 $a = 0$ 时成立，但这与第 $7$ 项 $= 360$ 矛盾。\n因此 $r = 1$ 不成立，必须有 $r = 2$。\n\n第 $7$ 项 = $ar^6 = a \\cdot 2^6 = 64a = 360$\n解得 $a = \\frac{360}{64} = \\frac{45}{8}$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "c.geometric_series",
+      "c.geometric_sequences",
+      "a2.quadratic_factorisation"
+    ],
+    "primary_section": "c.geometric_series",
+    "skills": [
+      "geometric-series-sum",
+      "ratio-equation",
+      "substitution",
+      "case-checking",
+      "nth-term-formula"
+    ]
   },
   {
     "id": "2019-P1-Q6",
@@ -4909,16 +5010,33 @@ window.QUESTIONS = [
       "E": "50"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n两圆 $(x+4)^2+(y+1)^2 = 64$ 和 $(x-8)^2+(y-4)^2 = r^2$ 恰有一个交点，求 $r$ 的两个可能值之差。\n\n【解题步骤】\n**几何方法**（代数方法较复杂）：\n- 圆1：圆心 $C_1 = (-4,-1)$，半径 $R_1 = 8$\n- 圆2：圆心 $C_2 = (8,4)$，半径 $R_2 = r$\n\n计算圆心距：$d = \\sqrt{(8-(-4))^2 + (4-(-1))^2} = \\sqrt{12^2+5^2} = \\sqrt{169} = 13$\n\n点 $(8,4)$ 不在圆1内部（距离 $> 8$），所以两圆恰有一个交点的情况为：\n1. **外切**：$R_1 + R_2 = d$，即 $8 + r_1 = 13$，得 $r_1 = 5$\n2. **内切**（圆1在圆2内部相切）：$R_2 - R_1 = d$，即 $r_2 - 8 = 13$，得 $r_2 = 21$\n\n**关键洞察**：实际上我们不需要计算出 $r_1$ 和 $r_2$ 的具体值！\n由 $r_1 + 8 = d$ 和 $r_2 - 8 = d$，直接相减得：\n$r_2 - r_1 = 16$\n\n所以 $r$ 的两个可能值之差为 $16$，对应选项 C。",
+    "analysis": "【题目分析】\n两圆 $(x+4)^2+(y+1)^2 = 64$ 和 $(x-8)^2+(y-4)^2 = r^2$ 恰有一个交点，求 $r$ 的两个可能值之差。\n\n【解题步骤】\n**几何方法**（代数方法较复杂）：\n- 圆1：圆心 $C_1 = (-4,-1)$，半径 $R_1 = 8$\n- 圆2：圆心 $C_2 = (8,4)$，半径 $R_2 = r$\n\n计算圆心距：$d = \\sqrt{(8-(-4))^2 + (4-(-1))^2} = \\sqrt{12^2+5^2} = \\sqrt{169} = 13$\n\n点 $(8,4)$ 不在圆1内部（距离 $> 8$），所以两圆恰有一个交点的情况为：\n1. **外切**：$R_1 + R_2 = d$，即 $8 + r_1 = 13$，得 $r_1 = 5$\n2. **内切**（圆1在圆2内部相切）：$R_2 - R_1 = d$，即 $r_2 - 8 = 13$，得 $r_2 = 21$\n\n**关键洞察**：实际上我们不需要计算出 $r_1$ 和 $r_2$ 的具体值！\n由 $r_1 + 8 = d$ 和 $r_2 - 8 = d$，直接相减得：\n$r_2 - r_1 = 16$\n\n所以 $r$ 的两个可能值之差为 $16$，\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.circle_equations.circle_distances",
+      "d.circle_tangency"
+    ],
+    "primary_section": "d.circle_equations.circle_distances",
+    "skills": [
+      "circle-centre-radius",
+      "distance-formula",
+      "circle-tangency",
+      "internal-external-tangency"
+    ]
   },
   {
     "id": "2019-P1-Q7",
     "year": 2019,
     "paper": 1,
     "num": 7,
-    "topic": "Algebra",
+    "topic": "Differentiation",
     "difficulty": 3,
     "question": "A curve has equation\n\n$$y = (2q - x^2)(2qx + 3)$$\n\nThe gradient of the curve at $x = -1$ is a function of $q$.\n\nFind the value of $q$ which minimises the gradient of the curve at $x = -1$.",
     "options": {
@@ -4931,16 +5049,36 @@ window.QUESTIONS = [
       "G": "$1$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n已知 $y = (2q - x^2)(2qx + 3)$，求使 $x = -1$ 处梯度最小的 $q$ 值。\n\n【解题步骤】\n展开：$y = 4q^2x - 2qx^3 + 6q - 3x^2$\n\n求导：$\\frac{dy}{dx} = 4q^2 - 6qx^2 - 6x$\n\n在 $x = -1$ 处的梯度：\n$\\frac{dy}{dx}\bigg|_{x=-1} = 4q^2 - 6q(1) - 6(-1) = 4q^2 - 6q + 6$\n\n记 $G(q) = 4q^2 - 6q + 6$，求其最小值：\n$G'(q) = 8q - 6 = 0$ → $q = \\frac{3}{4}$\n\n$G''(q) = 8 > 0$，故 $q = \\frac{3}{4}$ 时取最小值。\n\n对应选项 F。",
+    "analysis": "【题目分析】\n已知 $y = (2q - x^2)(2qx + 3)$，求使 $x = -1$ 处梯度最小的 $q$ 值。\n\n【解题步骤】\n展开：$y = 4q^2x - 2qx^3 + 6q - 3x^2$\n\n求导：$\\frac{dy}{dx} = 4q^2 - 6qx^2 - 6x$\n\n在 $x = -1$ 处的梯度：\n$\\left.\\frac{dy}{dx}\\right|_{x=-1} = 4q^2 - 6q(1) - 6(-1) = 4q^2 - 6q + 6$\n\n记 $G(q) = 4q^2 - 6q + 6$，求其最小值：\n$G'(q) = 8q - 6 = 0$ → $q = \\frac{3}{4}$\n\n$G''(q) = 8 > 0$，故 $q = \\frac{3}{4}$ 时取最小值。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "f.parameter_optimisation",
+      "f.product_rule",
+      "a2.quadratic_vertex_form"
+    ],
+    "primary_section": "f.parameter_optimisation",
+    "skills": [
+      "product-rule",
+      "evaluate-derivative-at-point",
+      "parameter-function",
+      "quadratic-minimum",
+      "vertex-formula"
+    ]
   },
   {
     "id": "2019-P1-Q8",
     "year": 2019,
     "paper": 1,
     "num": 8,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The function f is such that $0 < f(x) < 1$ for $0 \\le x \\le 1$.\n\nThe trapezium rule with $n$ equal intervals is used to estimate $\\int_{0}^{1} f(x) \\, dx$ and produces an underestimate.\n\nUsing the same number of equal intervals, for which one of the following does the trapezium rule produce an overestimate?",
     "options": {
@@ -4951,9 +5089,30 @@ window.QUESTIONS = [
       "E": "$\\int_{0}^{1} (1 - f(x)) \\, dx$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n已知梯形法则对 $int_{0}^{1} f(x) \\, dx$ **低估**，判断哪个选项使用相同区间数时会产生**高估**。\n已知 $0 < f(x) < 1$。\n\n【梯形法则与凹凸性】\n- 凸函数（$f'' > 0$）：弦在弧下方 → **高估**\n- 凹函数（$f'' < 0$）：弦在弧上方 → **低估**\n\n题目对 $f$ 低估 → $f$ 是凹函数（$f'' < 0$）。\n\n【逐项分析】\n\n**选项 A**：$\\int_{0}^{1} (f(x) + 1) \\, dx$\n$g(x) = f(x)+1$，$g''(x) = f''(x) < 0$，仍低估 ❌\n\n**选项 B**：$\\int_{0}^{1} 2f(x) \\, dx$\n$g(x) = 2f(x)$，$g''(x) = 2f''(x) < 0$，仍低估 ❌\n\n**选项 C**：$\\int_{-1}^{0} f(x+1) \\, dx$\n换元 $u = x+1$，得 $\\int_{0}^{1} f(u) \\, du$，即原积分，仍低估 ❌\n\n**选项 D**：$\\int_{-1}^{0} f(-x) \\, dx$\n$g(x) = f(-x)$，$g''(x) = f''(-x) < 0$，仍低估 ❌\n\n**选项 E**：$\\int_{0}^{1} (1 - f(x)) \\, dx$\n$h(x) = 1 - f(x)$，$h''(x) = -f''(x) > 0$\n变为凸函数 → 梯形法则**高估** ✓\n（垂直平移不影响高估/低估性质，参见选项 A）\n\n对应选项 E。",
+    "analysis": "【题目分析】\n已知梯形法则对 $\\int_{0}^{1} f(x) \\, dx$ **低估**，判断哪个选项使用相同区间数时会产生**高估**。\n已知 $0 < f(x) < 1$。\n\n【梯形法则与凹凸性】\n- 凸函数（$f'' > 0$）：弦在图像上方 → **高估**\n- 凹函数（$f'' < 0$）：弦在图像下方 → **低估**\n\n题目对 $f$ 低估 → $f$ 是凹函数（$f'' < 0$）。\n\n【逐项分析】\n\n**选项 A**：$\\int_{0}^{1} (f(x) + 1) \\, dx$\n$g(x) = f(x)+1$，$g''(x) = f''(x) < 0$，仍低估 ❌\n\n**选项 B**：$\\int_{0}^{1} 2f(x) \\, dx$\n$g(x) = 2f(x)$，$g''(x) = 2f''(x) < 0$，仍低估 ❌\n\n**选项 C**：$\\int_{-1}^{0} f(x+1) \\, dx$\n换元 $u = x+1$，得 $\\int_{0}^{1} f(u) \\, du$，即原积分，仍低估 ❌\n\n**选项 D**：$\\int_{-1}^{0} f(-x) \\, dx$\n$g(x) = f(-x)$，$g''(x) = f''(-x) < 0$，仍低估 ❌\n\n**选项 E**：$\\int_{0}^{1} (1 - f(x)) \\, dx$\n$h(x) = 1 - f(x)$，$h''(x) = -f''(x) > 0$\n变为凸函数 → 梯形法则**高估** ✓\n（垂直平移不影响高估/低估性质，参见选项 A）\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Graphs"
+    ],
+    "modules": [
+      "g_integration",
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.trapezium_rule_error",
+      "f.second_derivative_concavity",
+      "i.graph_transformations"
+    ],
+    "primary_section": "g.trapezium_rule_error",
+    "skills": [
+      "trapezium-rule-error",
+      "concavity",
+      "complementary-function",
+      "translation-reflection-effect"
+    ]
   },
   {
     "id": "2019-P1-Q9",
@@ -4973,16 +5132,36 @@ window.QUESTIONS = [
       "G": "$2p^4$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n已知 $p > 0$，求曲线 $y = p\\sqrt{x}$ 和 $x = p\\sqrt{y}$ 围成的面积。\n\n【解题步骤】\n由 $y = p\\sqrt{x}$ 得 $y^2 = p^2 x$，即 $x = \\frac{y^2}{p^2}$。\n由 $x = p\\sqrt{y}$ 得 $x^2 = p^2 y$。\n\n求交点：代入得 $\\frac{y^2}{p^2} = p\\sqrt{y}$，即 $y^4 = p^6 y$。\n$y(y^3 - p^6) = 0$，解得 $y = 0$ 或 $y = p^2$。\n\n当 $y = p^2$ 时：$x = p\\sqrt{p^2} = p^2$。\n所以交点为 $(0,0)$ 和 $(p^2, p^2)$。\n（交点在 $y = x$ 直线上，图形关于该直线对称）\n\n面积 = $\\int_0^{p^2} (\\text{上曲线} - \\text{下曲线}) dx$\n$y = p\\sqrt{x}$ 在上，$y = \\frac{x^2}{p^2}$ 在下。\n\n面积 = $\\int_0^{p^2} (p\\sqrt{x} - \\frac{x^2}{p^2}) dx$\n$= \\left[ \\frac{2}{3}px^{3/2} - \\frac{x^3}{3p^2} \\right]_0^{p^2}$\n$= \\frac{2}{3}p(p^2)^{3/2} - \\frac{(p^2)^3}{3p^2}$\n$= \\frac{2}{3}p \\cdot p^3 - \\frac{p^6}{3p^2}$\n$= \\frac{2}{3}p^4 - \\frac{p^4}{3}$\n$= \\frac{p^4}{3}$\n\n对应选项 D。",
+    "analysis": "【题目分析】\n已知 $p > 0$，求曲线 $y = p\\sqrt{x}$ 和 $x = p\\sqrt{y}$ 围成的面积。\n\n【解题步骤】\n由 $y = p\\sqrt{x}$ 得 $y^2 = p^2 x$，即 $x = \\frac{y^2}{p^2}$。\n由 $x = p\\sqrt{y}$ 得 $x^2 = p^2 y$。\n\n求交点：代入得 $\\frac{y^2}{p^2} = p\\sqrt{y}$，即 $y^4 = p^6 y$。\n$y(y^3 - p^6) = 0$，解得 $y = 0$ 或 $y = p^2$。\n\n当 $y = p^2$ 时：$x = p\\sqrt{p^2} = p^2$。\n所以交点为 $(0,0)$ 和 $(p^2, p^2)$。\n（交点在 $y = x$ 直线上，图形关于该直线对称）\n\n面积 = $\\int_0^{p^2} (\\text{上曲线} - \\text{下曲线}) dx$\n$y = p\\sqrt{x}$ 在上，$y = \\frac{x^2}{p^2}$ 在下。\n\n面积 = $\\int_0^{p^2} (p\\sqrt{x} - \\frac{x^2}{p^2}) dx$\n$= \\left[ \\frac{2}{3}px^{3/2} - \\frac{x^3}{3p^2} \\right]_0^{p^2}$\n$= \\frac{2}{3}p(p^2)^{3/2} - \\frac{(p^2)^3}{3p^2}$\n$= \\frac{2}{3}p \\cdot p^3 - \\frac{p^6}{3p^2}$\n$= \\frac{2}{3}p^4 - \\frac{p^4}{3}$\n$= \\frac{p^4}{3}$\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.area_between_curves",
+      "g.power_function_integration",
+      "i.curve_intersections"
+    ],
+    "primary_section": "g.area_between_curves",
+    "skills": [
+      "find-curve-intersections",
+      "area-between-curves",
+      "power-rule-integration",
+      "upper-minus-lower",
+      "parameter-handling"
+    ]
   },
   {
     "id": "2019-P1-Q10",
     "year": 2019,
     "paper": 1,
     "num": 10,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "Evaluate $$\\int_{-1}^{3} |x|(1 - x) \\, dx$$",
     "options": {
@@ -4994,16 +5173,36 @@ window.QUESTIONS = [
       "F": "$-\\frac{11}{3}$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n计算积分 $int_{-1}^{3} |x|(1-x) \\, dx$。\n\n【分段处理】\n当 $x \\in [-1, 0]$：$|x| = -x$\n当 $x \\in [0, 3]$：$|x| = x$\n\n【分区间积分】\n$int_{-1}^{3} |x|(1-x) \\, dx = \\int_{-1}^{0} (-x)(1-x) \\, dx + \\int_{0}^{3} x(1-x) \\, dx$\n\n第一部分：\n$\\int_{-1}^{0} (-x+x^2) \\, dx = \\left[ -\\frac{x^2}{2} + \\frac{x^3}{3} \\right]_{-1}^{0}$\n$= 0 - \\left( -\\frac{1}{2} - \\frac{1}{3} \\right) = \\frac{5}{6}$\n\n第二部分：\n$\\int_{0}^{3} (x-x^2) \\, dx = \\left[ \\frac{x^2}{2} - \\frac{x^3}{3} \\right]_{0}^{3}$\n$= \\left( \\frac{9}{2} - 9 \\right) = -\\frac{9}{2}$\n\n【合并】\n总计 = $\\frac{5}{6} - \\frac{9}{2} = \\frac{5}{6} - \\frac{27}{6} = -\\frac{22}{6} = -\\frac{11}{3}$\n\n对应选项 F。",
+    "analysis": "【题目分析】\n计算积分 $\\int_{-1}^{3} |x|(1-x) \\, dx$。\n\n【分段处理】\n当 $x \\in [-1, 0]$：$|x| = -x$\n当 $x \\in [0, 3]$：$|x| = x$\n\n【分区间积分】\n$\\int_{-1}^{3} |x|(1-x) \\, dx = \\int_{-1}^{0} (-x)(1-x) \\, dx + \\int_{0}^{3} x(1-x) \\, dx$\n\n第一部分：\n$\\int_{-1}^{0} (-x+x^2) \\, dx = \\left[ -\\frac{x^2}{2} + \\frac{x^3}{3} \\right]_{-1}^{0}$\n$= 0 - \\left( -\\frac{1}{2} - \\frac{1}{3} \\right) = \\frac{5}{6}$\n\n第二部分：\n$\\int_{0}^{3} (x-x^2) \\, dx = \\left[ \\frac{x^2}{2} - \\frac{x^3}{3} \\right]_{0}^{3}$\n$= \\left( \\frac{9}{2} - 9 \\right) = -\\frac{9}{2}$\n\n【合并】\n总计 = $\\frac{5}{6} - \\frac{9}{2} = \\frac{5}{6} - \\frac{27}{6} = -\\frac{22}{6} = -\\frac{11}{3}$\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.piecewise_absolute_area",
+      "g.definite_integrals",
+      "i.absolute_value_functions"
+    ],
+    "primary_section": "g.piecewise_absolute_area",
+    "skills": [
+      "split-integral",
+      "absolute-value",
+      "piecewise-definition",
+      "definite-integration",
+      "sign-analysis"
+    ]
   },
   {
     "id": "2019-P1-Q11",
     "year": 2019,
     "paper": 1,
     "num": 11,
-    "topic": "Functions",
+    "topic": "Algebra",
     "difficulty": 3,
     "question": "Find the sum of the real values of $x$ that satisfy the simultaneous equations:\n\n$$\\log_3(xy^2) = 1$$\n\n$$(\\log_3 x)(\\log_3 y) = -3$$",
     "options": {
@@ -5017,9 +5216,28 @@ window.QUESTIONS = [
       "H": "$27\\frac{1}{9}$"
     },
     "answer": "H",
-    "analysis": "【题目分析】\n已知 $\\log_3(xy^2) = 1$，$(\\log_3 x)(\\log_3 y) = -3$，求所有实数 $x$ 之和。\n\n【解题步骤】\n设 $a = \\log_3 x$，$b = \\log_3 y$。\n\n由已知条件：\n$\\log_3(xy^2) = \\log_3 x + 2\\log_3 y = a + 2b = 1$  ...(1)\n$ab = -3$  ...(2)\n\n由 (1)：$a = 1 - 2b$\n\n代入 (2)：$(1-2b)b = -3$\n$b - 2b^2 = -3$\n$2b^2 - b - 3 = 0$\n$(2b-3)(b+1) = 0$\n\n解得：$b = \\frac{3}{2}$ 或 $b = -1$。\n\n**情况一**：$b = \\frac{3}{2}$\n$a = 1 - 2 \\times \\frac{3}{2} = 1 - 3 = -2$\n$x = 3^a = 3^{-2} = \\frac{1}{9}$\n\n**情况二**：$b = -1$\n$a = 1 - 2(-1) = 1 + 2 = 3$\n$x = 3^a = 3^3 = 27$\n\n$x$ 之和 = $\\frac{1}{9} + 27 = 27\\frac{1}{9}$\n\n对应选项 H。",
+    "analysis": "【题目分析】\n已知 $\\log_3(xy^2) = 1$，$(\\log_3 x)(\\log_3 y) = -3$，求所有实数 $x$ 之和。\n\n【解题步骤】\n设 $a = \\log_3 x$，$b = \\log_3 y$。\n\n由已知条件：\n$\\log_3(xy^2) = \\log_3 x + 2\\log_3 y = a + 2b = 1$  ...(1)\n$ab = -3$  ...(2)\n\n由 (1)：$a = 1 - 2b$\n\n代入 (2)：$(1-2b)b = -3$\n$b - 2b^2 = -3$\n$2b^2 - b - 3 = 0$\n$(2b-3)(b+1) = 0$\n\n解得：$b = \\frac{3}{2}$ 或 $b = -1$。\n\n**情况一**：$b = \\frac{3}{2}$\n$a = 1 - 2 \\times \\frac{3}{2} = 1 - 3 = -2$\n$x = 3^a = 3^{-2} = \\frac{1}{9}$\n\n**情况二**：$b = -1$\n$a = 1 - 2(-1) = 1 + 2 = 3$\n$x = 3^a = 3^3 = 27$\n\n$x$ 之和 = $\\frac{1}{9} + 27 = 27\\frac{1}{9}$\n\n【正确答案】H",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a3.logarithm_equations",
+      "a3.logarithm_laws",
+      "a2.simultaneous_equations"
+    ],
+    "primary_section": "a3.logarithm_equations",
+    "skills": [
+      "logarithm-laws",
+      "substitution-to-system",
+      "solve-quadratic",
+      "sum-solution-values"
+    ]
   },
   {
     "id": "2019-P1-Q12",
@@ -5038,9 +5256,27 @@ window.QUESTIONS = [
       "F": "$744\\pi + 7$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n已知 $\\frac{dV}{dt} = \\frac{24\\pi(t-1)}{1+\\sqrt{t}}$（$t \\geq 1$），且 $V(1) = 7$，求 $V(9)$。\n\n【化简】\n注意到 $t-1 = (\\sqrt{t}+1)(\\sqrt{t}-1)$，所以：\n$\\frac{dV}{dt} = 24\\pi(\\sqrt{t}-1)$\n\n【积分】\n$V = 24\\pi \\left( \\frac{2}{3}t^{3/2} - t \\right) + c$\n$V = 16\\pi t^{3/2} - 24\\pi t + c$\n\n代入 $t = 1$，$V = 7$：\n$7 = 16\\pi - 24\\pi + c$\n$c = 8\\pi + 7$\n\n当 $t = 9$：\n$V = 16\\pi \\times 9^{3/2} - 24\\pi \\times 9 + 8\\pi + 7$\n$= (16 \\times 27 - 24 \\times 9 + 8)\\pi + 7$\n$= (432 - 216 + 8)\\pi + 7$\n$= 224\\pi + 7$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n已知 $\\frac{dV}{dt} = \\frac{24\\pi(t-1)}{1+\\sqrt{t}}$（$t \\geq 1$），且 $V(1) = 7$，求 $V(9)$。\n\n【化简】\n注意到 $t-1 = (\\sqrt{t}+1)(\\sqrt{t}-1)$，所以：\n$\\frac{dV}{dt} = 24\\pi(\\sqrt{t}-1)$\n\n【积分】\n$V = 24\\pi \\left( \\frac{2}{3}t^{3/2} - t \\right) + c$\n$V = 16\\pi t^{3/2} - 24\\pi t + c$\n\n代入 $t = 1$，$V = 7$：\n$7 = 16\\pi - 24\\pi + c$\n$c = 8\\pi + 7$\n\n当 $t = 9$：\n$V = 16\\pi \\times 9^{3/2} - 24\\pi \\times 9 + 8\\pi + 7$\n$= (16 \\times 27 - 24 \\times 9 + 8)\\pi + 7$\n$= (432 - 216 + 8)\\pi + 7$\n$= 224\\pi + 7$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation"
+    ],
+    "modules": [
+      "g_integration"
+    ],
+    "sections": [
+      "g.differential_equations",
+      "g.integral_simplify_first",
+      "g.power_function_integration"
+    ],
+    "primary_section": "g.differential_equations",
+    "skills": [
+      "simplify-before-integrating",
+      "integrate-rate-of-change",
+      "apply-initial-condition",
+      "evaluate-definite-change"
+    ]
   },
   {
     "id": "2019-P1-Q13",
@@ -5059,16 +5295,36 @@ window.QUESTIONS = [
       "F": "There is no maximum value."
     },
     "answer": "B",
-    "analysis": "【题目分析】\n求 $4^{\\sin x} - 4 \\times 2^{\\sin x} + \\frac{17}{4}$ 的最大值。\n\n【换元】\n设 $u = 2^{\\sin x}$。\n由于 $-1 \\leq \\sin x \\leq 1$，所以 $\\frac{1}{2} \\leq u \\leq 2$。\n\n$4^{\\sin x} = (2^2)^{\\sin x} = u^2$\n\n$f(u) = u^2 - 4u + \\frac{17}{4}$\n\n【配方】\n$f(u) = (u-2)^2 - 4 + \\frac{17}{4} = (u-2)^2 + \\frac{1}{4}$\n\n在 $u \\in [\\frac{1}{2}, 2]$ 上：\n- $u=2$ 时取最小值 $\\frac{1}{4}$\n- $u=\\frac{1}{2}$ 时取最大值：$\\left(\\frac{1}{2}-2\\right)^2+\\frac{1}{4} = \\frac{9}{4}+\\frac{1}{4} = \\frac{10}{4} = \\frac{5}{2}$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n求 $4^{\\sin x} - 4 \\times 2^{\\sin x} + \\frac{17}{4}$ 的最大值。\n\n【换元】\n设 $u = 2^{\\sin x}$。\n由于 $-1 \\leq \\sin x \\leq 1$，所以 $\\frac{1}{2} \\leq u \\leq 2$。\n\n$4^{\\sin x} = (2^2)^{\\sin x} = u^2$\n\n$f(u) = u^2 - 4u + \\frac{17}{4}$\n\n【配方】\n$f(u) = (u-2)^2 - 4 + \\frac{17}{4} = (u-2)^2 + \\frac{1}{4}$\n\n在 $u \\in [\\frac{1}{2}, 2]$ 上：\n- $u=2$ 时取最小值 $\\frac{1}{4}$\n- $u=\\frac{1}{2}$ 时取最大值：$\\left(\\frac{1}{2}-2\\right)^2+\\frac{1}{4} = \\frac{9}{4}+\\frac{1}{4} = \\frac{10}{4} = \\frac{5}{2}$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.trig_ranges",
+      "a3.exponential_substitution",
+      "a2.quadratic_optimisation"
+    ],
+    "primary_section": "a3.exponential_substitution",
+    "skills": [
+      "range-of-sine",
+      "exponential-substitution",
+      "complete-the-square",
+      "endpoint-maximum"
+    ]
   },
   {
     "id": "2019-P1-Q14",
     "year": 2019,
     "paper": 1,
     "num": 14,
-    "topic": "Algebra",
+    "topic": "Trigonometry",
     "difficulty": 3,
     "question": "$x$ satisfies the simultaneous equations\n\n$$\\sin 2x + \\sqrt{3} \\cos 2x = -1$$\n\nand\n\n$$\\sqrt{3} \\sin 2x - \\cos 2x = \\sqrt{3}$$\n\nwhere $0^{\\circ} \\le x \\le 360^{\\circ}$.\n\nFind the sum of the possible values of $x$.",
     "options": {
@@ -5080,9 +5336,28 @@ window.QUESTIONS = [
       "F": "$930^{\\circ}$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n已知 $x$ 满足联立方程：\n$\\sin 2x + \\sqrt{3} \\cos 2x = -1$\n$\\sqrt{3} \\sin 2x - \\cos 2x = \\sqrt{3}$\n其中 $0^{\\circ} \\leq x \\leq 360^{\\circ}$，求 $x$ 的可能值之和。\n\n【消元】\n设 $S = \\sin 2x$，$C = \\cos 2x$，则方程组化为：\n$S + \\sqrt{3} C = -1$  ...(1)\n$\\sqrt{3} S - C = \\sqrt{3}$  ...(2)\n\n将 (2) 式乘以 $\\sqrt{3}$ 后与 (1) 式相加：\n$\\sqrt{3} \\times (\\sqrt{3} S - C) + (S + \\sqrt{3} C) = \\sqrt{3} \\times \\sqrt{3} + (-1)$\n$3S - \\sqrt{3}C + S + \\sqrt{3}C = 3 - 1$\n$4S = 2$\n$S = \\frac{1}{2}$\n\n代入 (2) 式：\n$\\sqrt{3} \\cdot \\frac{1}{2} - C = \\sqrt{3}$\n$C = \\frac{\\sqrt{3}}{2} - \\sqrt{3} = -\\frac{\\sqrt{3}}{2}$\n\n【求解】\n$\\sin 2x = \\frac{1}{2}$，$\\cos 2x = -\\frac{\\sqrt{3}}{2}$\n\n在 $0^{\\circ} \\leq 2x \\leq 720^{\\circ}$ 范围内：\n$2x = 150^{\\circ}$ 或 $2x = 510^{\\circ}$\n$x = 75^{\\circ}$ 或 $x = 255^{\\circ}$\n\n$x$ 的可能值之和 $= 75^{\\circ} + 255^{\\circ} = 330^{\\circ}$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n已知 $x$ 满足联立方程：\n$\\sin 2x + \\sqrt{3} \\cos 2x = -1$\n$\\sqrt{3} \\sin 2x - \\cos 2x = \\sqrt{3}$\n其中 $0^{\\circ} \\leq x \\leq 360^{\\circ}$，求 $x$ 的可能值之和。\n\n【消元】\n设 $S = \\sin 2x$，$C = \\cos 2x$，则方程组化为：\n$S + \\sqrt{3} C = -1$  ...(1)\n$\\sqrt{3} S - C = \\sqrt{3}$  ...(2)\n\n将 (2) 式乘以 $\\sqrt{3}$ 后与 (1) 式相加：\n$\\sqrt{3} \\times (\\sqrt{3} S - C) + (S + \\sqrt{3} C) = \\sqrt{3} \\times \\sqrt{3} + (-1)$\n$3S - \\sqrt{3}C + S + \\sqrt{3}C = 3 - 1$\n$4S = 2$\n$S = \\frac{1}{2}$\n\n代入 (2) 式：\n$\\sqrt{3} \\cdot \\frac{1}{2} - C = \\sqrt{3}$\n$C = \\frac{\\sqrt{3}}{2} - \\sqrt{3} = -\\frac{\\sqrt{3}}{2}$\n\n【求解】\n$\\sin 2x = \\frac{1}{2}$，$\\cos 2x = -\\frac{\\sqrt{3}}{2}$\n\n在 $0^{\\circ} \\leq 2x \\leq 720^{\\circ}$ 范围内：\n$2x = 150^{\\circ}$ 或 $2x = 510^{\\circ}$\n$x = 75^{\\circ}$ 或 $x = 255^{\\circ}$\n\n$x$ 的可能值之和 $= 75^{\\circ} + 255^{\\circ} = 330^{\\circ}$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.trig_equations",
+      "e.special_angle_solutions",
+      "a2.simultaneous_equations"
+    ],
+    "primary_section": "e.trig_equations",
+    "skills": [
+      "linear-system-elimination",
+      "special-angle-values",
+      "quadrant-identification",
+      "degree-interval-solutions"
+    ]
   },
   {
     "id": "2019-P1-Q15",
@@ -5101,16 +5376,35 @@ window.QUESTIONS = [
       "F": "$2 \\log_2 3$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n求方程 $\\frac{2^{(9^x)}}{8^{(3^x)}} = \\frac{1}{4}$ 的非零实数解。\n\n【化简】\n注意到 $9^x = (3^2)^x = 3^{2x} = (3^x)^2$。\n设 $u = 3^x$，则 $9^x = u^2$，$8^{(3^x)} = (2^3)^u = 2^{3u}$。\n\n原方程化为：\n$\\frac{2^{u^2}}{2^{3u}} = 2^{-2}$\n\n底数相同，指数相等：\n$u^2 - 3u = -2$\n$u^2 - 3u + 2 = 0$\n$(u-1)(u-2) = 0$\n\n解得 $u = 1$ 或 $u = 2$。\n\n【取舍】\n当 $u = 1$：$3^x = 1$，得 $x = 0$（题目要求非零解，舍去）\n当 $u = 2$：$3^x = 2$，得 $x = \\log_3 2$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n求方程 $\\frac{2^{(9^x)}}{8^{(3^x)}} = \\frac{1}{4}$ 的非零实数解。\n\n【化简】\n注意到 $9^x = (3^2)^x = 3^{2x} = (3^x)^2$。\n设 $u = 3^x$，则 $9^x = u^2$，$8^{(3^x)} = (2^3)^u = 2^{3u}$。\n\n原方程化为：\n$\\frac{2^{u^2}}{2^{3u}} = 2^{-2}$\n\n底数相同，指数相等：\n$u^2 - 3u = -2$\n$u^2 - 3u + 2 = 0$\n$(u-1)(u-2) = 0$\n\n解得 $u = 1$ 或 $u = 2$。\n\n【取舍】\n当 $u = 1$：$3^x = 1$，得 $x = 0$（题目要求非零解，舍去）\n当 $u = 2$：$3^x = 2$，得 $x = \\log_3 2$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a3.exponential_equations",
+      "a3.exponential_substitution",
+      "a1.exponent_laws"
+    ],
+    "primary_section": "a3.exponential_equations",
+    "skills": [
+      "rewrite-common-bases",
+      "substitution-to-quadratic",
+      "exclude-zero-solution",
+      "logarithm-definition"
+    ]
   },
   {
     "id": "2019-P1-Q16",
     "year": 2019,
     "paper": 1,
     "num": 16,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "Given that\n$$2 \\int_{0}^{1} f(x) \\, dx + 5 \\int_{1}^{2} f(x) \\, dx = 14$$\n\nand\n$$\\int_{0}^{1} f(x + 1) \\, dx = 6$$\n\nfind the value of\n\n$$\\int_{0}^{2} f(x) \\, dx$$",
     "options": {
@@ -5124,9 +5418,25 @@ window.QUESTIONS = [
       "H": "$14$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n已知 $2 \\int_{0}^{1} f(x) \\, dx + 5 \\int_{1}^{2} f(x) \\, dx = 14$，且 $\\int_{0}^{1} f(x+1) \\, dx = 6$，求 $\\int_{0}^{2} f(x) \\, dx$。\n\n【理解条件】\n设 $A = \\int_{0}^{1} f(x) \\, dx$，$B = \\int_{1}^{2} f(x) \\, dx$。\n\n$\\int_{0}^{1} f(x+1) \\, dx$ 是 $y = f(x+1)$ 在 $x=0$ 到 $x=1$ 的有向面积。\n$y = f(x+1)$ 是 $y = f(x)$ 向左平移 1 个单位，故该积分等于原曲线在 $x=1$ 到 $x=2$ 的有向面积，即 $B$。\n\n因此 $B = 6$。\n\n【求解】\n代入第一个方程：\n$2A + 5B = 14$\n$2A + 5 \\times 6 = 14$\n$2A + 30 = 14$\n$2A = -16$\n$A = -8$\n\n$\\int_{0}^{2} f(x) \\, dx = A + B = -8 + 6 = -2$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n已知 $2 \\int_{0}^{1} f(x) \\, dx + 5 \\int_{1}^{2} f(x) \\, dx = 14$，且 $\\int_{0}^{1} f(x+1) \\, dx = 6$，求 $\\int_{0}^{2} f(x) \\, dx$。\n\n【理解条件】\n设 $A = \\int_{0}^{1} f(x) \\, dx$，$B = \\int_{1}^{2} f(x) \\, dx$。\n\n$\\int_{0}^{1} f(x+1) \\, dx$ 是 $y = f(x+1)$ 在 $x=0$ 到 $x=1$ 的有向面积。\n$y = f(x+1)$ 是 $y = f(x)$ 向左平移 1 个单位，故该积分等于原曲线在 $x=1$ 到 $x=2$ 的有向面积，即 $B$。\n\n因此 $B = 6$。\n\n【求解】\n代入第一个方程：\n$2A + 5B = 14$\n$2A + 5 \\times 6 = 14$\n$2A + 30 = 14$\n$2A = -16$\n$A = -8$\n\n$\\int_{0}^{2} f(x) \\, dx = A + B = -8 + 6 = -2$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "g_integration"
+    ],
+    "sections": [
+      "g.definite_integral_translation",
+      "g.integral_combination"
+    ],
+    "primary_section": "g.definite_integral_translation",
+    "skills": [
+      "u-substitution-translation",
+      "definite-integral-splitting",
+      "linear-equation-solving"
+    ]
   },
   {
     "id": "2019-P1-Q17",
@@ -5147,9 +5457,24 @@ window.QUESTIONS = [
       "H": "$\\frac{11}{12}$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n求 $(\\sin 2\\theta - 1)(\\sin \\theta - \\cos \\theta) \\geq 0$ 在 $0 \\leq \\theta \\leq \\pi$ 上的解区间占总区间的比例。\n\n【分析符号】\n乘积 $\\geq 0$ 当且仅当两因子同号（均非负或均非正）。\n\n在 $0 \\leq \\theta \\leq \\pi$ 上：\n- $\\sin 2\\theta - 1 \\leq 0$ 恒成立（因为 $\\sin 2\\theta \\leq 1$）\n- $\\sin \\theta - \\cos \\theta < 0$ 当 $\\theta < \\frac{\\pi}{4}$\n- $\\sin \\theta - \\cos \\theta > 0$ 当 $\\theta > \\frac{\\pi}{4}$\n\n【确定区间】\n两因子同号：\n- 均非正：$\\theta \\in \\left[0, \\frac{\\pi}{4}\\right]$（两因子均 $\\leq 0$）\n- 均非负：仅 $\\theta = \\frac{5\\pi}{4}$ 满足（不在 $[0,\\pi]$ 内，舍去）\n\n故不等式成立的区间为 $\\left[0, \\frac{\\pi}{4}\\right]$。\n总长度 $= \\frac{\\pi}{4}$。\n\n占总区间 $\\pi$ 的比例 $= \\frac{\\pi/4}{\\pi} = \\frac{1}{4}$。\n\n对应选项 A。",
+    "analysis": "【题目分析】\n求区间 $0 \\leq \\theta \\leq \\pi$ 中满足\n\n$$(\\sin 2\\theta - \\frac{1}{2})(\\sin\\theta - \\cos\\theta) \\geq 0$$\n\n的部分占整个区间的比例。核心是找出两个因子的零点，并在这些临界点之间做符号判断。\n\n【解题步骤】\n第一个因子为零时：\n$$\\sin 2\\theta = \\frac{1}{2}$$\n在 $0 \\leq 2\\theta \\leq 2\\pi$ 中，\n$$2\\theta = \\frac{\\pi}{6},\\frac{5\\pi}{6}$$\n所以\n$$\\theta = \\frac{\\pi}{12},\\frac{5\\pi}{12}.$$\n\n第二个因子为零时：\n$$\\sin\\theta - \\cos\\theta = 0 \\quad\\Rightarrow\\quad \\theta = \\frac{\\pi}{4}.$$\n\n按临界点把 $[0,\\pi]$ 分成\n$$0,\\frac{\\pi}{12},\\frac{\\pi}{4},\\frac{5\\pi}{12},\\pi.$$\n逐段判断符号：\n- $[0,\\frac{\\pi}{12}]$：$\\sin2\\theta-\\frac12\\leq0$，$\\sin\\theta-\\cos\\theta\\leq0$，乘积非负；\n- $(\\frac{\\pi}{12},\\frac{\\pi}{4})$：两因子异号，乘积为负；\n- $[\\frac{\\pi}{4},\\frac{5\\pi}{12}]$：两因子均非负，乘积非负；\n- $(\\frac{5\\pi}{12},\\pi]$：两因子异号，乘积为负。\n\n满足条件的总长度为\n$$\\frac{\\pi}{12}+\\left(\\frac{5\\pi}{12}-\\frac{\\pi}{4}\\right)=\\frac{\\pi}{12}+\\frac{2\\pi}{12}=\\frac{\\pi}{4}.$$\n\n占整个区间长度 $\\pi$ 的比例为\n$$\\frac{\\pi/4}{\\pi}=\\frac14.$$\n\n【快捷思路】\n只需画一条符号表：两个因子的零点分别是 $\\frac{\\pi}{12},\\frac{5\\pi}{12}$ 和 $\\frac{\\pi}{4}$。同号区间长度相加为 $\\frac{\\pi}{4}$，比例为 $\\frac14$。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "e_trigonometry"
+    ],
+    "sections": [
+      "e.trigonometric_inequalities",
+      "e.trig_sign_charts"
+    ],
+    "primary_section": "e.trigonometric_inequalities",
+    "skills": [
+      "trig-inequality",
+      "sign-chart",
+      "critical-angle-partition",
+      "interval-length-ratio"
+    ]
   },
   {
     "id": "2019-P1-Q18",
@@ -5169,18 +5494,39 @@ window.QUESTIONS = [
       "G": "6"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n求曲线 $y = x^2 + 4$ 上的点到直线 $2x - y - 2 = 0$ 的最短距离。\n\n【法线条件】\n直线 $2x - y - 2 = 0$ 即 $y = 2x - 2$，斜率为 $2$。\n与之垂直的直线斜率为 $-\\frac{1}{2}$。\n\n曲线 $y = x^2 + 4$ 上点 $(x, x^2+4)$ 处的切线斜率为 $2x$，法线斜率为 $-\\frac{1}{2x}$。\n\n令法线斜率等于垂直斜率：\n$-\\frac{1}{2x} = -\\frac{1}{2}$\n$\\frac{1}{2x} = \\frac{1}{2}$\n$x = 1$\n\n【求距离】\n对应曲线上的点：$(1, 1^2+4) = (1, 5)$\n\n该点到直线 $2x - y - 2 = 0$ 的距离：\n$d = \\frac{|2(1) - 5 - 2|}{\\sqrt{2^2 + (-1)^2}} = \\frac{|-5|}{\\sqrt{5}} = \\frac{5}{\\sqrt{5}} = \\sqrt{5}$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n求曲线 $y = x^2 + 4$ 上的点到直线 $2x - y - 2 = 0$ 的最短距离。\n\n【法线条件】\n直线 $2x - y - 2 = 0$ 即 $y = 2x - 2$，斜率为 $2$。\n与之垂直的直线斜率为 $-\\frac{1}{2}$。\n\n曲线 $y = x^2 + 4$ 上点 $(x, x^2+4)$ 处的切线斜率为 $2x$，法线斜率为 $-\\frac{1}{2x}$。\n\n令法线斜率等于垂直斜率：\n$-\\frac{1}{2x} = -\\frac{1}{2}$\n$\\frac{1}{2x} = \\frac{1}{2}$\n$x = 1$\n\n【求距离】\n对应曲线上的点：$(1, 1^2+4) = (1, 5)$\n\n该点到直线 $2x - y - 2 = 0$ 的距离：\n$d = \\frac{|2(1) - 5 - 2|}{\\sqrt{2^2 + (-1)^2}} = \\frac{|-5|}{\\sqrt{5}} = \\frac{5}{\\sqrt{5}} = \\sqrt{5}$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "f_differentiation",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "d.point_to_line_distance",
+      "f.tangent_normal_distance",
+      "a2.quadratic_minimum"
+    ],
+    "primary_section": "d.point_to_line_distance",
+    "skills": [
+      "point-line-distance",
+      "quadratic-minimisation",
+      "normal-gradient",
+      "distance-formula"
+    ]
   },
   {
     "id": "2019-P1-Q19",
     "year": 2019,
     "paper": 1,
     "num": 19,
-    "topic": "Algebra",
+    "topic": "Trigonometry",
     "difficulty": 3,
-    "question": "Find the value of\n\n$$\\sum_{k=0}^{90} \\sin(10 + 90k)^\\circ$$",
+    "question": "Find the value of\n\n$\\sum_{k=0}^{90} \\sin((10 + 90k)^\\circ)$",
     "options": {
       "A": "0",
       "B": "$\\sin 10^\\circ$",
@@ -5190,16 +5536,35 @@ window.QUESTIONS = [
       "F": "1"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n求 $\\sum_{k=0}^{90} \\sin(10 + 90k)^\\circ$ 的值。共 91 项，相邻项角度差为 $90^\\circ$。\n\n【分组配对】\n每连续 4 项为一组：\n$\\sin(10^\\circ) + \\sin(100^\\circ) + \\sin(190^\\circ) + \\sin(280^\\circ)$\n\n利用诱导公式：\n$\\sin(190^\\circ) = \\sin(180^\\circ + 10^\\circ) = -\\sin(10^\\circ)$\n$\\sin(280^\\circ) = \\sin(360^\\circ - 80^\\circ) = -\\sin(80^\\circ) = -\\sin(100^\\circ)$\n\n所以每 4 项的和：\n$\\sin(10^\\circ) + \\sin(100^\\circ) - \\sin(10^\\circ) - \\sin(100^\\circ) = 0$\n\n【计算余项】\n$91 = 22 \\times 4 + 3$\n\n前 88 项（22 组）的和为 $0$，剩余 $k = 88, 89, 90$ 三项：\n\n$k=88$：$\\sin(10 + 7920)^\\circ = \\sin(7930^\\circ)$\n$7930 = 22 \\times 360 + 10$，所以 $\\sin(10^\\circ)$\n\n$k=89$：$\\sin(10 + 8010)^\\circ = \\sin(8020^\\circ)$\n$8020 = 22 \\times 360 + 100$，所以 $\\sin(100^\\circ)$\n\n$k=90$：$\\sin(10 + 8100)^\\circ = \\sin(8110^\\circ)$\n$8110 = 22 \\times 360 + 190$，所以 $\\sin(190^\\circ) = -\\sin(10^\\circ)$\n\n【求和】\n总计 $= \\sin(10^\\circ) + \\sin(100^\\circ) - \\sin(10^\\circ) = \\sin(100^\\circ)$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n求 $\\sum_{k=0}^{90} \\sin(10 + 90k)^\\circ$ 的值。共 91 项，相邻项角度差为 $90^\\circ$。\n\n【分组配对】\n每连续 4 项为一组：\n$\\sin(10^\\circ) + \\sin(100^\\circ) + \\sin(190^\\circ) + \\sin(280^\\circ)$\n\n利用诱导公式：\n$\\sin(190^\\circ) = \\sin(180^\\circ + 10^\\circ) = -\\sin(10^\\circ)$\n$\\sin(280^\\circ) = \\sin(360^\\circ - 80^\\circ) = -\\sin(80^\\circ) = -\\sin(100^\\circ)$\n\n所以每 4 项的和：\n$\\sin(10^\\circ) + \\sin(100^\\circ) - \\sin(10^\\circ) - \\sin(100^\\circ) = 0$\n\n【计算余项】\n$91 = 22 \\times 4 + 3$\n\n前 88 项（22 组）的和为 $0$，剩余 $k = 88, 89, 90$ 三项：\n\n$k=88$：$\\sin(10 + 7920)^\\circ = \\sin(7930^\\circ)$\n$7930 = 22 \\times 360 + 10$，所以 $\\sin(10^\\circ)$\n\n$k=89$：$\\sin(10 + 8010)^\\circ = \\sin(8020^\\circ)$\n$8020 = 22 \\times 360 + 100$，所以 $\\sin(100^\\circ)$\n\n$k=90$：$\\sin(10 + 8100)^\\circ = \\sin(8110^\\circ)$\n$8110 = 22 \\times 360 + 190$，所以 $\\sin(190^\\circ) = -\\sin(10^\\circ)$\n\n【求和】\n总计 $= \\sin(10^\\circ) + \\sin(100^\\circ) - \\sin(10^\\circ) = \\sin(100^\\circ)$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sequences and Series"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "e.trig_periodicity",
+      "e.angle_reduction",
+      "c.periodic_sequence_sum"
+    ],
+    "primary_section": "e.trig_periodicity",
+    "skills": [
+      "periodic-sum",
+      "angle-reduction",
+      "four-term-cancellation",
+      "remainder-terms"
+    ]
   },
   {
     "id": "2019-P1-Q20",
     "year": 2019,
     "paper": 1,
     "num": 20,
-    "topic": "Algebra",
+    "topic": "Functions",
     "difficulty": 3,
     "question": "What is the complete range of values of $k$ for which the curves with equations\n\n$$y = x^3 - 12x$$\n\nand\n\n$$y = k - (x - 2)^2$$\n\nintersect at **three** distinct points, of which exactly **two** have positive $x$-coordinates?",
     "options": {
@@ -5211,9 +5576,32 @@ window.QUESTIONS = [
       "F": "$-16 < k < 16$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n求使曲线 $y = x^3 - 12x$ 与曲线 $y = k - (x-2)^2$ 恰有一个交点的 $k$ 的取值范围。\n\n【联立方程】\n$x^3 - 12x = k - (x-2)^2$\n$x^3 - 12x = k - x^2 + 4x - 4$\n$x^3 + x^2 - 16x - k + 4 = 0$\n\n设 $f(x) = x^3 + x^2 - 16x - k + 4$。\n\n【分析驻点】\n$f'(x) = 3x^2 + 2x - 16 = 0$\n解得 $x = 2$ 或 $x = -\\frac{8}{3}$\n\n【条件分析】\n要使方程恰有一个正根，需要：\n- $f(0) > 0$，即 $4 - k > 0$，得 $k < 4$\n- 驻点 $x = 2$ 处 $f(2) < 0$：\n  $f(2) = 8 + 4 - 32 - k + 4 = -16 - k < 0$，得 $k > -16$\n\n故 $k$ 的取值范围为 $-16 < k < 4$。\n\n对应选项 E。",
+    "analysis": "【题目分析】\n两条曲线的交点满足\n$$x^3-12x = k-(x-2)^2.$$\n题目要求共有三个不同交点，并且其中恰有两个交点的 $x$ 坐标为正。由于两曲线都是函数图像，交点个数等价于这个方程的不同实根个数。\n\n【解题步骤】\n整理方程：\n$$x^3-12x = k-(x^2-4x+4)$$\n$$x^3+x^2-16x+4-k=0.$$\n令\n$$F(x)=x^3+x^2-16x+4-k.$$\n\n先看驻点：\n$$F'(x)=3x^2+2x-16=(3x+8)(x-2).$$\n因此驻点为 $x=-\\frac{8}{3}$ 和 $x=2$。三次函数首项系数为正，所以 $x=-\\frac{8}{3}$ 是局部极大点，$x=2$ 是局部极小点。要有三个不同实根，需要\n$$F\\left(-\\frac{8}{3}\\right)>0 \\quad\\text{且}\\quad F(2)<0.$$\n\n但题目还要求恰有两个正根。由于一个驻点在负数处、一个驻点在正数处，若三根中恰有两个为正，则第三个根必须为负，且 $x=0$ 应位于负根和两个正根之间。也就是说\n$$F(0)>0.$$\n\n计算关键条件：\n$$F(0)=4-k>0 \\quad\\Rightarrow\\quad k<4.$$\n\n又\n$$F(2)=8+4-32+4-k=-16-k.$$\n要使正数处的局部极小值低于 $x$ 轴，需要\n$$-16-k<0 \\quad\\Rightarrow\\quad k>-16.$$\n\n当 $-16<k<4$ 时，$F(0)>0$ 且 $F(2)<0$；同时 $F\\left(-\\frac{8}{3}\\right)>0$ 自动成立。因此方程在负半轴有一个根，在 $(0,2)$ 和 $(2,\\infty)$ 各有一个正根，恰有三个不同交点，其中两个 $x$ 坐标为正。\n\n因此完整范围为\n$$-16<k<4.$$\n\n【快捷思路】\n把交点问题转成三次方程根的分布。关键检查 $F(0)>0$ 和正驻点 $F(2)<0$：前者保证两个正根不会被 $0$ 截掉，后者保证正半轴上确有两次穿越。得到 $k<4$ 与 $k>-16$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "f.stationary_points_root_count",
+      "i.equation_roots.graph_intersections",
+      "a2.parameter_cubic_inequality"
+    ],
+    "primary_section": "f.stationary_points_root_count",
+    "skills": [
+      "curve-intersection",
+      "cubic-root-count",
+      "stationary-point-sign-test",
+      "positive-root-count",
+      "parameter-condition"
+    ]
   },
   {
     "id": "2019-P2-Q1",
