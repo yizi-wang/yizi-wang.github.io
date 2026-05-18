@@ -5608,7 +5608,7 @@ window.QUESTIONS = [
     "year": 2019,
     "paper": 2,
     "num": 1,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "Find the coefficient of the $x^4$ term in the expansion of\n\n$$x^2 \\left( 2x + \\frac{1}{x} \\right)^6$$",
     "options": {
@@ -5621,7 +5621,26 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n本题考查二项式定理展开中指定次幂项的系数。核心思路是先确定括号内需要产生 $x^2$ 项，乘以外部 $x^2$ 后才得到 $x^4$。\n\n【解题步骤】\n先不考虑外部因子 $x^2$，我们需要在 $\\left(2x + \\frac{1}{x}\\right)^6$ 的展开中找到 $x^2$ 项。\n\n由二项式定理，通项为：\n\n$$C_6^r \\cdot (2x)^{6-r} \\cdot \\left(\\frac{1}{x}\\right)^r = C_6^r \\cdot 2^{6-r} \\cdot x^{6-2r}$$\n\n令幂次 $6 - 2r = 2$，解得 $r = 2$。\n\n将 $r = 2$ 代入通项，该系数为：\n\n$$C_6^2 \\cdot 2^4 = 15 \\times 16 = 240$$\n\n再乘以外部因子 $x^2$，得到 $240x^4$，因此 $x^4$ 项的系数为 $240$。\n\n【快捷思路】\n不必展开全部项。先算出括号内需要几次幂（$x^4 \\div x^2 = x^2$），再用二项式通项公式一步定位到 $r = 2$，直接代值即可。这是考试中最快的路径。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.binomial_expansion",
+      "c.coefficient_extraction",
+      "a1.polynomial_expansion"
+    ],
+    "primary_section": "c.coefficient_extraction",
+    "skills": [
+      "binomial-expansion",
+      "coefficient-extraction",
+      "index-equation-solving",
+      "negative-power-tracking"
+    ]
   },
   {
     "id": "2019-P2-Q2",
@@ -5642,14 +5661,33 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n本题考查因式定理。已知两个一次因式意味着多项式有两个已知根，代入后建立关于 $p$、$q$ 的方程组。\n\n【解题步骤】\n设 $f(x) = 2x^3 + px^2 + q$。\n\n由因式定理，$(2x+1)$ 是因式 $\\Rightarrow f(-\\frac{1}{2}) = 0$：\n\n$$-\\frac{1}{4} + \\frac{p}{4} + q = 0$$\n\n整理得 $p + 4q = 1$ “……”①\n\n$(x-2)$ 是因式 $\\Rightarrow f(2) = 0$：\n\n$$16 + 4p + q = 0$$\n\n整理得 $4p + q = -16$ “……”②\n\n由 ② 得 $q = -16 - 4p$，代入 ①：\n\n$$p - 64 - 16p = 1 \\quad \\Rightarrow \\quad p = -\\frac{13}{3}$$\n\n代回得 $q = \\frac{4}{3}$。\n\n最终：$2p + q = -\\frac{26}{3} + \\frac{4}{3} = -\\frac{22}{3}$。\n\n【快捷思路】\n直接利用因式定理将因式转化为根，代入建立方程组。注意代入负数时符号容易出错，建议先写出完整代入式再化简。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a2.factor_theorem",
+      "a2.simultaneous_equations",
+      "a1.polynomial_factorisation"
+    ],
+    "primary_section": "a2.factor_theorem",
+    "skills": [
+      "factor-theorem",
+      "substitution-at-root",
+      "linear-system-solving",
+      "parameter-solving"
+    ]
   },
   {
     "id": "2019-P2-Q3",
     "year": 2019,
     "paper": 2,
     "num": 3,
-    "topic": "Algebra",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "$a, b$ and $c$ are real numbers.\n\nGiven that $ab = ac$, which of the following statements **must** be true?\n\nI $a = 0$\n\nII $b = 0$ **or** $c = 0$\n\nIII $b = c$",
     "options": {
@@ -5665,14 +5703,35 @@ window.QUESTIONS = [
     "answer": "A",
     "analysis": "【题目分析】\n本题考查代数运算中除法的陷阱。已知 $ab = ac$，核心是将等式移项并因式分解，注意 $a$ 可能为零，不能直接约去。\n\n【解题步骤】\n将 $ab = ac$ 移项：\n\n$$ab - ac = 0$$\n\n提取公因式：\n\n$$a(b - c) = 0$$\n\n由此可知：要么 $a = 0$，要么 $b - c = 0$（即 $b = c$），或者两者同时成立。\n\n逐一分析三个命题：\n\n命题 I：“$a = 0$”——不一定成立。例如取 $a = 1$、$b = c = 3$，则 $ab = ac$ 成立但 $a \\neq 0$。\n\n命题 II：“$b = 0$ 或 $c = 0$”——不一定成立。例如取 $a = 1$、$b = c = 5$，则 $ab = ac$ 成立但 $b$、$c$ 都不为零。\n\n命题 III：“$b = c$”——不一定成立。例如取 $a = 0$、$b = 2$、$c = 7$，则 $ab = ac = 0$ 成立但 $b \\neq c$。\n\n三个命题都存在反例，没有一个必然成立。\n\n【快捷思路】\n本题核心陷阱是“两边同时除以 $a$ 得到 $b = c$”——但 $a$ 可能为零！记住：等式两边同除之前，必须先确认除数不为零。直接因式分解 $a(b - c) = 0$ 可避免这个错误。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Algebra"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "l_proof_methods",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "l.proof_error_identification",
+      "a1.polynomial_factorisation"
+    ],
+    "primary_section": "h.counterexample_construction",
+    "skills": [
+      "zero-product-property",
+      "avoid-illegal-cancellation",
+      "must-be-true-analysis",
+      "construct-counterexamples"
+    ]
   },
   {
     "id": "2019-P2-Q4",
     "year": 2019,
     "paper": 2,
     "num": 4,
-    "topic": "Algebra",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "Consider the following conjecture:\n\n> **If** $N$ is a positive integer that consists of the digit 1 followed by an odd number of 0 digits and then a final digit 1, **then** $N$ is a prime number.\n\nHere are three numbers:\n\nI $N = 101$ (which is a prime number)\n\nII $N = 1001$ (which equals $7 \\times 11 \\times 13$)\n\nIII $N = 10001$ (which equals $73 \\times 137$)\n\nWhich of these provide(s) a counterexample to the conjecture?",
     "options": {
@@ -5688,14 +5747,35 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n本题涉及逻辑推理中的反例概念。猜想为：若正整数 $N$ 由数字 1 开头、中间有奇数个 0、最后以 1 结尾，则 $N$ 是素数。需要找出能推翻该猜想的反例。\n\n【解题步骤】\n反例的定义是：前提条件成立（$N$ 符合所述数字形式），但结论不成立（$N$ 不是素数）。\n\n逐一检查三个候选值：\n\nI：$N = 101$。数字形式为 1-0-1，中间有 1 个 0（奇数），前提成立。检验 $101$ 是否为素数：$101$ 不能被 $2$、$3$、$5$、$7$ 整除（$\\sqrt{101} \\approx 10$），因此 $101$ 是素数，结论也成立。这不是反例。\n\nII：$N = 1001$。数字形式为 1-00-1，中间有 2 个 0（偶数），前提条件不满足。因此这也不是反例。\n\nIII：$N = 10001$。数字形式为 1-000-1，中间有 3 个 0（奇数），前提成立。检验 $10001$ 是否为素数：注意到 $10001 = 73 \\times 137$，因此 $10001$ 不是素数，结论不成立。这是一个反例。\n\n只有 III 满足反例的定义。\n\n【快捷思路】\n找反例只需验证两件事：形式对不对（前提）、素不素数（结论）。$101$ 是素数排除，$1001$ 零的个数是偶数直接排除，$10001 = 73 \\times 137$ 是合数——锁定答案。记住几个常见的形式特殊的合数能帮你快速判断。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Number Theory"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "b_mathematical_logic_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "b.counterexample_construction",
+      "k.prime_factorisation"
+    ],
+    "primary_section": "h.counterexample_construction",
+    "skills": [
+      "counterexample-testing",
+      "premise-conclusion-separation",
+      "prime-composite-classification",
+      "digit-pattern-checking"
+    ]
   },
   {
     "id": "2019-P2-Q5",
     "year": 2019,
     "paper": 2,
     "num": 5,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "Consider the following statement about the positive integers $a$, $b$ and $n$:\n\n> ($\\ast$): $ab$ is divisible by $n$\n\nThe condition ‘either $a$ or $b$ is divisible by $n$’ is:",
     "options": {
@@ -5707,14 +5787,35 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题考查充分条件与必要条件的判断。需判断'$a$ 或 $b$ 是 $n$ 的倍数'对于 '$ab$ 是 $n$ 的倍数'而言是充分条件、必要条件，还是兼具。\n\n【解题步骤】\n充分性：设 $a = kn$（$k$ 为正整数），则 $ab = knb$，显然 $ab$ 也是 $n$ 的倍数。充分性成立。\n\n必要性：假设 $ab$ 是 $n$ 的倍数，能推出 $a$ 或 $b$ 是 $n$ 的倍数吗？取 $n = 4$（非质数），$a = 2$，$b = 2$，则 $ab = 4$ 是 $4$ 的倍数，但 $a$ 和 $b$ 都不是 $4$ 的倍数。反例成立，必要性不成立。\n\n关键：当 $n$ 为质数时必要性才成立，但题目中 $n$ 是任意正整数。\n\n【快捷思路】\n充分性显然；必要性找反例取 $n$ 为非质数（如 $4$），令 $a=2, b=2$ 即可。反例法是选择题最快策略。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Counterexamples",
+      "Number Theory"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "b.necessary_sufficient_conditions",
+      "h.necessary_condition_counterexamples",
+      "k.divisibility_remainders"
+    ],
+    "primary_section": "b.necessary_sufficient_conditions",
+    "skills": [
+      "necessary-sufficient-condition-test",
+      "divisibility-reasoning",
+      "counterexample-construction",
+      "non-prime-modulus-trap"
+    ]
   },
   {
     "id": "2019-P2-Q6",
     "year": 2019,
     "paper": 2,
     "num": 6,
-    "topic": "Algebra",
+    "topic": "Proof",
     "difficulty": 3,
     "question": "$$ \\cos x + \\sin x \\tan x = 2 \\sin x - 1 $$\n\nin the range $0 \\le x \\le 2\\pi$.\n\nThe student’s attempt is as follows:\n\n$$ \\cos x + \\sin x \\tan x = 2 \\sin x - 1 $$\n\nSo $\\cos x - \\sin x + \\sin x \\tan x - \\sin x = -1$ (I)\n\nSo $(\\sin x - \\cos x)(\\tan x - 1) = -1$ (II)\n\nSo $\\sin x - \\cos x = -1$ or $\\tan x - 1 = -1$ (III)\n\nSo $(\\sin x - \\cos x)^2 = 1$ or $\\tan x = 0$ (IV)\n\nSo $2 \\sin x \\cos x = 0$ or $\\tan x = 0$ (V)\n\nSo $x = 0, \\frac{\\pi}{2}, \\pi, \\frac{3\\pi}{2}, 2\\pi$ (VI)\n\nWhich of the following best describes this attempt?",
     "options": {
@@ -5727,16 +5828,35 @@ window.QUESTIONS = [
       "G": "It is incorrect, and the first error is not eliminating the values where $\\tan x$ is undefined on line (VI)"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n本题考查三角方程求解中错误步骤的识别。给出学生解 $\\cos x + \\sin x \tan x = 2\\sin x - 1$ 的六行推导，要求找出最先出错的行。\n\n【解题步骤】\n逐行检查：\n第 (I) 行：$\tan x$ 写为 $\frac{\\sin x}{\\cos x}$ 并移项，正确。\n\n第 (II) 行：两边同乘 $\\cos x$，得 $\\cos^2 x + \\sin^2 x = (2\\sin x - 1)\\cos x$，正确。\n\n第 (III) 行：$\\cos^2 x + \\sin^2 x = 1$，得 $1 = (2\\sin x - 1)\\cos x$，正确。\n\n第 (IV) 行：由 $1 = (2\\sin x - 1)\\cos x$ 推出 $\\cos x = 1$ 或 $2\\sin x - 1 = 0$。这是致命错误——两数乘积为 $1$ 不能推出其中一个为 $1$！只有乘积为 $0$ 才能用'至少一个因子为零'的结论。\n\n验证：将 $x = 0$ 代入第 (III) 行，两边均为 $-1$，成立；但第 (IV) 行推理逻辑错误。\n\n【快捷思路】\n特殊值法：将 $x = 0$（学生的错误答案）逐行代入，从中间行开始检验可快速缩小范围。第 (III) 行成立，错误在其后。\n\n【正确答案】D",
+    "analysis": "【题目分析】\n本题给出一名学生对三角方程\n$$\\cos x+\\sin x\\tan x=2\\sin x-1$$\n的推导，要求找出第一次出错的位置。关键是逐行检查逻辑等价变形，尤其警惕把“乘积等于某个非零数”误当作“某个因子等于某个数”。\n\n【解题步骤】\n从原方程出发，学生第 (I) 行把右边移到左边，并把式子整理为\n$$\\cos x-\\sin x+\\sin x\\tan x-\\sin x=-1,$$\n这是合法变形。\n\n第 (II) 行将左边因式分解为\n$$(\\sin x-\\cos x)(\\tan x-1)=-1,$$\n展开可得\n$$\\sin x\\tan x-\\sin x-\\cos x\\tan x+\\cos x.$$\n由于 $\\cos x\\tan x=\\sin x$，这正是第 (I) 行左边，所以第 (II) 行仍正确。\n\n第 (III) 行由\n$$(\\sin x-\\cos x)(\\tan x-1)=-1$$\n推出\n$$\\sin x-\\cos x=-1 \\quad\\text{or}\\quad \\tan x-1=-1.$$\n这是第一次错误。只有当乘积为 $0$ 时，才可以推出至少一个因子为 $0$；乘积为 $-1$ 不能推出某个因子等于 $-1$。\n\n因此最先出错的是第 (III) 行，对应选项 D。\n\n【快捷思路】\n看到“两个因子乘积等于 $-1$”后直接拆成“某个因子等于 $-1$”，就是典型的零乘积法误用。零乘积法只适用于乘积等于 $0$。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Trigonometry"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "e.trig_equations",
+      "e.trig_identities",
+      "l.proof_error_identification"
+    ],
+    "primary_section": "l.proof_error_identification",
+    "skills": [
+      "trig-equation-manipulation",
+      "tan-domain-awareness",
+      "invalid-product-inference",
+      "proof-error-identification"
+    ]
   },
   {
     "id": "2019-P2-Q7",
     "year": 2019,
     "paper": 2,
     "num": 7,
-    "topic": "Algebra",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "For which one of the following statements can the fact that $12^2 + 16^2 = 20^2$ be used to produce a **counterexample**?",
     "options": {
@@ -5748,7 +5868,26 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题考查用已知等式 $12^2 + 16^2 = 20^2$ 构造反例的能力。'反例'指满足命题前提但结论不成立的情况。\n\n【解题步骤】\n逐项分析：\nA：命题要求 $a, b, c$ 无公因子。但 $12, 16, 20$ 有公因子 $4$，不满足前提，不能作为反例。\n\nB：命题声称 $a^4 + b^2 = c^2$ 无正整数解。注意到 $16 = 4^2$，故 $12^2 + 16^2 = 20^2$ 可改写为 $4^4 + 12^2 = 20^2$，取 $a=4, b=12, c=20$ 即为正整数解，直接构成反例。\n\nC：命题为 $a^4 + b^4 = c^4$ 无解（费马大定理 $n=4$）。$12, 16, 20$ 均非整数四次方，无法改写为该形式，且此命题为真。\n\nD：命题涉及等差数列条件，$12, 16, 20$ 满足该条件，不能作为反例。\n\n【快捷思路】\n抓住 $16 = 4^2$ 这一关键：$16^2 = (4^2)^2 = 4^4$，立刻将 $12^2 + 16^2 = 20^2$ 变为 $4^4 + 12^2 = 20^2$，锁定选项 B。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Number Theory"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "h.counterexample_identification",
+      "k.integer_powers"
+    ],
+    "primary_section": "h.counterexample_identification",
+    "skills": [
+      "counterexample-identification",
+      "rewrite-pythagorean-triple",
+      "integer-power-recognition",
+      "premise-checking"
+    ]
   },
   {
     "id": "2019-P2-Q8",
@@ -5769,9 +5908,24 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题考查含负数的不等式运算。已知 $a < b < c < 0$（三个负数递增），判断三个命题哪些一定成立。核心规则：不等式两边同乘或同除负数，不等号方向必须反转。\n\n【解题步骤】\n命题 I：$a^2 > ab > ac$。从 $a < b < c$ 同乘 $a < 0$，不等号反转，得 $a^2 > ab > ac$。正确。\n\n命题 II：$b(a + c) > 0$。由于 $a < 0, c < 0$，故 $a + c < 0$。又 $b < 0$，两负数相乘为正。正确。\n\n命题 III：$\frac{c}{b} > \frac{a}{b}$。从 $c > a$ 同除以 $b < 0$，不等号应反转，得 $\frac{c}{b} < \frac{a}{b}$，与命题矛盾。错误。\n\n验证：取 $a=-3, b=-2, c=-1$，则 $\frac{c}{b} = 0.5 < 1.5 = \frac{a}{b}$。\n\n【快捷思路】\n负数不等式铁律：乘除负数必变号。命题 III 是典型陷阱——除以负数忘记反转不等号。用特殊值 $a=-3, b=-2, c=-1$ 秒验。\n\n【正确答案】E",
+    "analysis": "【题目分析】\n本题考查含负数的不等式运算。已知 $a < b < c < 0$，判断三个命题哪些一定成立。核心规则是：不等式两边同乘或同除负数时，不等号方向必须反转。\n\n【解题步骤】\n命题 I：$ac < ab < a^2$。从 $a < b < c$ 同乘 $a < 0$，不等号反转，得\n$$a^2 > ab > ac,$$\n即\n$$ac < ab < a^2.$$\n命题 I 正确。\n\n命题 II：$b(c+a)>0$。由于 $a<0$ 且 $c<0$，所以 $a+c<0$；又 $b<0$，两个负数相乘为正。因此命题 II 正确。\n\n命题 III：$\\frac{c}{b}>\\frac{a}{b}$。由 $c>a$ 同除以 $b<0$，不等号应反转，得到\n$$\\frac{c}{b}<\\frac{a}{b}.$$\n因此命题 III 错误。取 $a=-3,b=-2,c=-1$，则 $\\frac{c}{b}=\\frac12<\\frac32=\\frac{a}{b}$，也可直接验证。\n\n所以 I 和 II 必然成立。\n\n【快捷思路】\n负数不等式最容易出错的地方就是乘除负数忘记反号。命题 III 正是这个陷阱；用 $a=-3,b=-2,c=-1$ 可以快速排除。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a2.inequality_direction",
+      "a2.negative_number_inequalities"
+    ],
+    "primary_section": "a2.inequality_direction",
+    "skills": [
+      "negative-multiplier-reversal",
+      "inequality-chain-reasoning",
+      "test-counterexample-values",
+      "must-be-true-analysis"
+    ]
   },
   {
     "id": "2019-P2-Q9",
@@ -5790,16 +5944,34 @@ window.QUESTIONS = [
       "F": "20"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n本题考查抽屉原理与极端构造思想。在圆形排列的 $40$ 个座位中，求最少已坐多少人，才能使后来的人无论坐哪都必定与某人相邻。核心思路是控制人与人之间的最大空隙。\n\n【解题步骤】\n若新来者可以不与任何人相邻而坐，说明存在至少 $3$ 个连续的空座位——他坐在中间那个就不会挨着任何人。\n\n反过来，若要保证新来者必然与某人相邻，任意两个相邻就坐者之间最多只能有 $2$ 个空座位。\n\n为了让已坐人数最少，我们让每个人之间的空隙尽可能大，即每两人之间恰好隔 $2$ 个空位。\n从第 $1$ 号座位开始坐人，此后每隔 $3$ 个座位坐一人：$1, 4, 7, 10, \\cdots, 37, 40$。\n\n这是首项为 $1$、公差为 $3$ 的等差数列。末项 $40 = 1 + 3(k-1)$，解得 $k = 14$。\n\n验证：$14$ 人坐好后，$13$ 个间隔各空 $2$ 个座位（共 $26$ 空），最后一个间隔是座位 $40$ 到座位 $1$ 之间，也是相邻的（空 $0$ 个），总计 $14 + 26 = 40$，刚好排满。\n\n若只有 $13$ 人，则总空隙 $40 - 13 = 27$ 个，由鸽巢原理，$13$ 个间隔分配 $27$ 个空位，至少有一个间隔 $\\geq \\lceil 27/13 \\rceil = 3$，新来者可坐中间而不相邻。\n因此最少需要 $14$ 人。\n\n【快捷思路】\n每两人之间最多空 $2$ 个座位才能''封死''所有位置。$40$ 个座位按''人空2''循环分组，每组 $3$ 个座位需 $1$ 人，$40 \\div 3 \\approx 13.3$，向上取整得 $14$ 人。\n\n【正确答案】D",
+    "analysis": "【题目分析】\n本题考查抽屉原理与极端构造思想。在圆形排列的 $40$ 个座位中，求最少已坐多少人，才能使后来的人无论坐哪都必定与某人相邻。核心思路是控制人与人之间的最大空隙。\n\n【解题步骤】\n若新来者可以不与任何人相邻而坐，说明存在至少 $3$ 个连续的空座位——他坐在中间那个就不会挨着任何人。\n\n反过来，若要保证新来者必然与某人相邻，任意两个相邻就坐者之间最多只能有 $2$ 个空座位。\n\n为了让已坐人数最少，我们让每个人之间的空隙尽可能大，即每两人之间恰好隔 $2$ 个空位。\n从第 $1$ 号座位开始坐人，此后每隔 $3$ 个座位坐一人：$1, 4, 7, 10, \\cdots, 37, 40$。\n\n这是首项为 $1$、公差为 $3$ 的等差数列。末项 $40 = 1 + 3(k-1)$，解得 $k = 14$。\n\n验证：$14$ 人坐好后，$13$ 个间隔各空 $2$ 个座位（共 $26$ 空），最后一个间隔是座位 $40$ 到座位 $1$ 之间，也是相邻的（空 $0$ 个），总计 $14 + 26 = 40$，刚好排满。\n\n若只有 $13$ 人，则总空隙 $40 - 13 = 27$ 个，由鸽巢原理，$13$ 个间隔分配 $27$ 个空位，至少有一个间隔 $\\geq \\lceil 27/13 \\rceil = 3$，新来者可坐中间而不相邻。\n因此最少需要 $14$ 人。\n\n【快捷思路】\n每两人之间最多空 $2$ 个座位才能“封死“所有位置。$40$ 个座位按“人空2“循环分组，每组 $3$ 个座位需 $1$ 人，$40 \\div 3 \\approx 13.3$，向上取整得 $14$ 人。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Number Theory"
+    ],
+    "modules": [
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "k.pigeonhole_principle",
+      "k.extremal_counting",
+      "k.circular_arrangements"
+    ],
+    "primary_section": "k.pigeonhole_principle",
+    "skills": [
+      "pigeonhole-principle",
+      "extremal-construction",
+      "cycle-spacing",
+      "ceil-division"
+    ]
   },
   {
     "id": "2019-P2-Q10",
     "year": 2019,
     "paper": 2,
     "num": 10,
-    "topic": "Algebra",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "$PQRS$ is a quadrilateral, labelled anticlockwise.\n\nWhich one of the following is a **necessary** but **<u>not</u> sufficient** condition for $PQRS$ to be a parallelogram?",
     "options": {
@@ -5809,16 +5981,36 @@ window.QUESTIONS = [
       "D": "$PR = QS$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n本题考查平面几何中平行四边形的判定条件，以及逻辑上的''必要''与''充分''概念。''必要''指平行四边形一定满足该条件，''充分''指满足该条件就一定是平行四边形。需要对每个选项逐一分析。\n\n【解题步骤】\n逐项分析：\n\n选项 A：$PQ = SR$ 且 $PS \\parallel QR$。\n平行四边形的对边相等且对边平行，所以这两个性质都是必要的。\n但是否充分？画两条平行线 $PS$ 和 $QR$，用等长的 $PQ$ 和 $SR$ 连接它们。连接方式有两种——一种是平行四边形，另一种是等腰梯形（两腰相等但不平行）。因此 A 不充分。综合判断：A 是必要但不充分条件。\n\n选项 B：$PQ = SR$ 且 $PQ \\parallel SR$。\n一组对边相等且平行，可以推出四边形是平行四边形（向量法或全等三角形均可证），所以 B 既是必要又是充分的。\n\n选项 C：四条边都相等。\n这是菱形的特征，菱形是平行四边形的一种，所以 C 是充分的。但一般平行四边形四边不一定相等，所以 C 不是必要的。\n\n选项 D：对角线 $PR = QS$。\n一般平行四边形对角线不相等（只有矩形才相等），所以 D 不是必要的。\n\n综上，只有 A 满足''必要但不充分''。\n\n【快捷思路】\n直接找反例判断''充分性''：A 选项画个等腰梯形就破功（对腰相等、底平行但不是平行四边形），B 是课本经典判定定理直接充分，C 是菱形太特殊不普遍必要，D 矩形才有不普遍必要。锁定 A。\n\n【正确答案】A",
+    "analysis": "【题目分析】\n本题考查平面几何中平行四边形的判定条件，以及逻辑上的“必要“与“充分“概念。“必要“指平行四边形一定满足该条件，“充分“指满足该条件就一定是平行四边形。需要对每个选项逐一分析。\n\n【解题步骤】\n逐项分析：\n\n选项 A：$PQ = SR$ 且 $PS \\parallel QR$。\n平行四边形的对边相等且对边平行，所以这两个性质都是必要的。\n但是否充分？画两条平行线 $PS$ 和 $QR$，用等长的 $PQ$ 和 $SR$ 连接它们。连接方式有两种——一种是平行四边形，另一种是等腰梯形（两腰相等但不平行）。因此 A 不充分。综合判断：A 是必要但不充分条件。\n\n选项 B：$PQ = SR$ 且 $PQ \\parallel SR$。\n一组对边相等且平行，可以推出四边形是平行四边形（向量法或全等三角形均可证），所以 B 既是必要又是充分的。\n\n选项 C：四条边都相等。\n这是菱形的特征，菱形是平行四边形的一种，所以 C 是充分的。但一般平行四边形四边不一定相等，所以 C 不是必要的。\n\n选项 D：对角线 $PR = QS$。\n一般平行四边形对角线不相等（只有矩形才相等），所以 D 不是必要的。\n\n综上，只有 A 满足“必要但不充分“。\n\n【快捷思路】\n直接找反例判断“充分性“：A 选项画个等腰梯形就破功（对腰相等、底平行但不是平行四边形），B 是课本经典判定定理直接充分，C 是菱形太特殊不普遍必要，D 矩形才有不普遍必要。锁定 A。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Coordinate Geometry",
+      "Logic"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "h.necessary_sufficient_conditions",
+      "h.necessary_condition_counterexamples",
+      "d.quadrilateral_properties"
+    ],
+    "primary_section": "h.necessary_sufficient_conditions",
+    "skills": [
+      "necessary-sufficient-analysis",
+      "parallelogram-criteria",
+      "counterexample-construction",
+      "quadrilateral-classification"
+    ]
   },
   {
     "id": "2019-P2-Q11",
     "year": 2019,
     "paper": 2,
     "num": 11,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "An **arithmetic** series has $n$ terms, all of which are **integers**.\n\nThe sum of the series is 20.\n\nWhich of the following statements **must** be true?\n\nI The first term of the series is even.\n\nII $n$ is even.\n\nIII The common difference is even.",
     "options": {
@@ -5834,14 +6026,37 @@ window.QUESTIONS = [
     "answer": "A",
     "analysis": "【题目分析】\n本题考查等差数列求和公式及整数性质。已知 $n$ 项整数等差数列的和为 $20$，需判断三个命题是否必然成立。核心方法是用求和公式列出方程，通过构造反例逐一否定。\n\n【解题步骤】\n设首项为 $a$，公差为 $d$，由等差数列求和公式：\n$$\\frac{n}{2}(2a + (n-1)d) = 20$$\n两边乘以 $2$ 得：\n$$n(2a + (n-1)d) = 40$$\n由于各项为整数，$a$、$d$ 均为整数，所以 $n$ 必须是 $40$ 的正因数。列出可能的 $n$ 值及对应关系：\n\n$n=1$：$2a=40 \\Rightarrow a=20$。\n\n$n=2$：$2a+d=20$。取 $d=2$，得 $a=9$，数列为 $9, 11$，和为 $20$。首项 $9$ 是奇数，说明命题 I（首项必为偶数）不成立。\n\n$n=5$：$2a+4d=8 \\Rightarrow a+2d=4$。取 $d=1$，得 $a=2$，数列为 $2, 3, 4, 5, 6$，和为 $20$。这里 $n=5$ 是奇数，说明命题 II（$n$ 必为偶数）不成立；同时 $d=1$ 是奇数，说明命题 III（公差必为偶数）不成立。\n三个命题均能找到反例，都不必然成立。\n\n【快捷思路】\n用反例法最快：$n=1$ 时只有 $a=20$（偶），但 $n=2$ 时取 $9+11=20$ 首项为奇，否定 I；$2+3+4+5+6=20$ 这一个反例同时否定 II 和 III（$n=5$ 为奇，$d=1$ 为奇）。三个全否。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Number Theory",
+      "Counterexamples"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "k_number_theory_combinatorics",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "c.arithmetic_series",
+      "c.arithmetic_series_integer_constraints",
+      "k.parity_integer_constraints",
+      "h.counterexample_construction"
+    ],
+    "primary_section": "c.arithmetic_series_integer_constraints",
+    "skills": [
+      "arithmetic-series-sum",
+      "integer-constraint",
+      "parity-analysis",
+      "divisor-case-analysis",
+      "counterexample-construction"
+    ]
   },
   {
     "id": "2019-P2-Q12",
     "year": 2019,
     "paper": 2,
     "num": 12,
-    "topic": "Algebra",
+    "topic": "Probability",
     "difficulty": 3,
     "question": "Most students in a large college study Mathematics. A teacher chooses three different students at random, one after the other.\n\nConsider these three probabilities:\n\n$R = \\text{P(At least one of the students chosen studies Mathematics)}$\n\n$S = \\text{P(The second student chosen studies Mathematics)}$\n\n$T = \\text{P(All three of the students chosen study Mathematics)}$\n\nWhich of the following is true?",
     "options": {
@@ -5853,9 +6068,29 @@ window.QUESTIONS = [
       "F": "$T < S < R$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n本题考查概率的比较与集合包含关系。已知大多数学生学数学，随机选 $3$ 人，比较三个事件概率的大小。最巧妙的方法是不用计算，直接分析事件之间的逻辑蕴含关系。\n\n【解题步骤】\n设 $M$ 表示''选出的学生学数学''。三个事件分别为：\n\n$R$：至少一人学数学。\n$S$：第二人选数学。\n$T$：三人都学数学。\n\n分析蕴含关系：\n若 $T$ 发生（三人都学数学），则第二人必然学数学，即 $S$ 也发生。所以 $T \\subseteq S$，即 $T < S$（严格不等，因为存在''第二人学数学但另两人不学''的情况，概率大于零）。\n\n若 $S$ 发生（第二人学数学），则''至少一人学数学''必然成立，即 $R$ 也发生。所以 $S \\subseteq R$，即 $S < R$（严格不等，因为存在''第一人学数学但第二人不学''的情况）。\n综合得到：$T < S < R$。\n\n验证：设学数学的比例为 $p$（$0.5 < p < 1$），\n$R = 1 - (1-p)^3$，$S = p$，$T = p^3$。\n取 $p = 0.8$：$R = 1 - 0.008 = 0.992$，$S = 0.8$，$T = 0.512$，满足 $T < S < R$。\n\n【快捷思路】\n利用集合包含关系秒杀：''三人都学''蕴含''第二人学''蕴含''至少一人学''，事件范围从小到大，概率自然递增。无需任何计算。\n\n【正确答案】F",
+    "analysis": "【题目分析】\n本题考查概率的比较与集合包含关系。已知大多数学生学数学，随机选 $3$ 人，比较三个事件概率的大小。最巧妙的方法是不用计算，直接分析事件之间的逻辑蕴含关系。\n\n【解题步骤】\n设 $M$ 表示''选出的学生学数学''。三个事件分别为：\n\n$R$：至少一人学数学。\n$S$：第二人选数学。\n$T$：三人都学数学。\n\n分析蕴含关系：\n若 $T$ 发生（三人都学数学），则第二人必然学数学，即 $S$ 也发生。所以 $T \\subseteq S$，即 $T < S$（严格不等，因为存在''第二人学数学但另两人不学''的情况，概率大于零）。\n\n若 $S$ 发生（第二人学数学），则''至少一人学数学''必然成立，即 $R$ 也发生。所以 $S \\subseteq R$，即 $S < R$（严格不等，因为存在''第一人学数学但第二人不学''的情况）。\n综合得到：$T < S < R$。\n\n【快捷思路】\n利用集合包含关系秒杀：''三人都学''蕴含''第二人学''蕴含''至少一人学''，事件范围从小到大，概率自然递增。无需任何计算。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Sets"
+    ],
+    "modules": [
+      "j_sets_probability",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "j.event_inclusion_probability",
+      "j.probability_comparison",
+      "b.logical_implication"
+    ],
+    "primary_section": "j.event_inclusion_probability",
+    "skills": [
+      "event-inclusion",
+      "probability-ordering",
+      "implication-chain",
+      "without-replacement-reasoning"
+    ]
   },
   {
     "id": "2019-P2-Q13",
@@ -5874,14 +6109,36 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n本题考查梯形法则的误差分析与函数对称性。已知用4个小区间的梯形法则近似 $\\int_{a}^{b}\\sin^{2}x\\,dx$ 产生高估，判断对积分 $\\int_{-b}^{-a}\\sin^{2}x\\,dx$ 和 $\\int_{a}^{b}\\cos^{2}x\\,dx$ 应用同样方法时的误差方向。\n\n【解题步骤】\n命题I：考虑 $\\int_{-b}^{-a}\\sin^{2}x\\,dx$。\n\n$\\sin^{2}x$ 是偶函数，因为 $\\sin^{2}(-x)=(-\\sin x)^{2}=\\sin^{2}x$，图像关于 $y$ 轴对称。\n\n将原区间 $[a,b]$ 上的4个梯形沿 $y$ 轴反射，恰好得到区间 $[-b,-a]$ 上的梯形近似。图形完全对称，面积不变，误差方向也不变。\n\n因此原近似是高估，反射后的近似同样是高估。命题I成立。\n\n命题II：考虑 $\\int_{a}^{b}\\cos^{2}x\\,dx$。\n\n利用恒等式 $\\sin^{2}x+\\cos^{2}x=1$，得 $\\cos^{2}x=1-\\sin^{2}x$。\n\n在区间 $[a,b]$ 上，$\\cos^{2}x$ 的图像可以看作 $\\sin^{2}x$ 的图像关于直线 $y=\\frac{1}{2}$ 翻折。\n\n梯形近似中，对应 $\\sin^{2}x$ 的梯形面积与对应 $\\cos^{2}x$ 的梯形面积之和等于矩形面积（高为1），这是精确值。既然 $\\sin^{2}x$ 的梯形近似是高估（偏大），那么 $\\cos^{2}x$ 的梯形近似必然低估（偏小）。命题II成立。\n\n【快捷思路】\n利用偶函数对称性直接判断命题I；利用 $\\sin^{2}x+\\cos^{2}x=1$ 的互补关系，一个高估则另一个必低估，秒判命题II。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Trigonometry",
+      "Graphs"
+    ],
+    "modules": [
+      "g_integration",
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.trapezium_rule_error",
+      "g.complementary_integrands",
+      "e.trig_identities",
+      "i.even_function_symmetry"
+    ],
+    "primary_section": "g.trapezium_rule_error",
+    "skills": [
+      "trapezium-rule-error",
+      "even-function-symmetry",
+      "complementary-functions",
+      "trig-identity-use"
+    ]
   },
   {
     "id": "2019-P2-Q14",
     "year": 2019,
     "paper": 2,
     "num": 14,
-    "topic": "Algebra",
+    "topic": "Functions",
     "difficulty": 3,
     "question": "Consider the following statements about the polynomial $p(x)$, where $a < b$:\n\nI $p(a) \\le p(b)$\n\nII $p'(a) \\le p'(b)$\n\nIII $p''(a) \\le p''(b)$\n\nWhich of these statements is a **necessary** condition for $p(x)$ to be increasing for $a \\le x \\le b$?",
     "options": {
@@ -5897,7 +6154,28 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题考查增函数的必要条件。已知多项式 $p(x)$ 在区间 $[a,b]$（$a<b$）上递增，判断三个命题哪些是必然成立的必要条件。\n\n【解题步骤】\n命题I：$p(a)\\leq p(b)$。\n\n$p(x)$ 在 $[a,b]$ 上递增，意味着对任意 $x_1<x_2\\in[a,b]$，有 $p(x_1)\\leq p(x_2)$。取 $x_1=a,x_2=b$，即得 $p(a)\\leq p(b)$。这是增函数定义的直接推论，必然成立。\n\n命题II：$p'(a)\\leq p'(b)$。\n\n函数递增只要求导数非负，不要求导数本身递增。构造反例：$p(x)=9-x^{2}$ 在 $[-3,0]$ 上递增，但 $p'(-3)=6>0=p'(0)$，导数反而减小。命题II不是必要条件。\n\n命题III：$p''(a)\\leq p''(b)$。\n\n递增与二阶导数无关。构造反例：令 $p''(x)=-x$，积分得 $p'(x)=-\\frac{1}{2}x^{2}+c$，再积分得 $p(x)=-\\frac{1}{6}x^{3}+cx$。取 $c=2$，在 $[0,1]$ 上 $p'(x)>0$，函数递增，但 $p''(0)=0>-1=p''(1)$。命题III不是必要条件。\n\n本质理解：递增只约束函数值的大小关系，对导数和二阶导数没有任何必然约束。\n\n【快捷思路】\n命题I由定义直接得证。命题II和III分别只需一个反例即可排除：用 $p(x)=9-x^{2}$ 否定II，用三次多项式否定III。考试时直接想到'递增只涉及函数值不涉及导数变化趋势'，可快速排除II和III。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Counterexamples"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "f_differentiation",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "i.function_monotonicity",
+      "f.monotonicity",
+      "h.counterexample_construction"
+    ],
+    "primary_section": "i.function_monotonicity",
+    "skills": [
+      "necessary-condition",
+      "monotonicity-definition",
+      "derivative-counterexample",
+      "second-derivative-counterexample"
+    ]
   },
   {
     "id": "2019-P2-Q15",
@@ -5917,7 +6195,26 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题考查对数运算法则与三元一次方程组。已知三个对数等式，底数相同且未知，$a,b,c>1$，求对数的底数。\n【解题步骤】\n利用对数运算法则 $\\log(xy)=\\log x+\\log y$ 和 $\\log(x^{n})=n\\log x$，将三个等式展开：\n$$\\log a+2\\log b+\\log c=7$$\n$$2\\log a+\\log b+2\\log c=11$$\n$$2\\log a+2\\log b+3\\log c=15$$\n令 $A=\\log a$，$B=\\log b$，$C=\\log c$，得到三元一次方程组：\n$$A+2B+C=7\\qquad(1)$$\n$$2A+B+2C=11\\qquad(2)$$\n$$2A+2B+3C=15\\qquad(3)$$\n$(3)-(2)$ 消去 $A$：$B+C=4\\qquad(4)$\n$(3)-2\\times(1)$ 消去 $A$：$-2B+C=1\\qquad(5)$\n$(4)-(5)$ 得：$3B=3$，所以 $B=1$。\n代入 $(4)$ 得 $C=3$，代入 $(1)$ 得 $A=2$。\n即 $\\log b=1$，这意味着底数就是 $b$（因为 $\\log_{b}b=1$）。\n同时 $\\log a=2$ 得 $a=b^{2}$，$\\log c=3$ 得 $c=b^{3}$。\n\n【快捷思路】\n观察到 $\\log b=1$ 即为突破口，底数就是 $b$。解方程组时先用 $(3)-(2)$ 消去 $A$，再用 $(3)-2(1)$ 消去 $A$，两式相减直接得 $B=1$，避免完整求解三元方程。\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a3.logarithm_laws",
+      "a3.logarithm_base_identification",
+      "a2.linear_simultaneous_equations"
+    ],
+    "primary_section": "a3.logarithm_base_identification",
+    "skills": [
+      "log-laws",
+      "linear-system-elimination",
+      "substitution",
+      "base-identification"
+    ]
   },
   {
     "id": "2019-P2-Q16",
@@ -5942,14 +6239,33 @@ window.QUESTIONS = [
     "images": {
       "image": "2019 P2 Q16 8 options.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.parameter_discriminant",
+      "a2.quadratic_inequalities",
+      "i.inequality_regions"
+    ],
+    "primary_section": "a2.parameter_discriminant",
+    "skills": [
+      "discriminant-condition",
+      "factorised-inequality",
+      "parameter-region",
+      "graph-region-selection"
+    ]
   },
   {
     "id": "2019-P2-Q17",
     "year": 2019,
     "paper": 2,
     "num": 17,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "A multiple-choice test question offered the following four options relating to a certain statement. \n\nGiven that **exactly one** of these options was correct, which one was it?",
     "options": {
@@ -5961,7 +6277,26 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n本题考查逻辑推理能力，涉及充分条件（if）与充要条件（iff）之间的蕴含关系。题目给出关于命题 $P(x)$ 的四个选项，已知恰好只有一个选项正确，要求判断哪个选项是正确答案。四个选项分别是：A（$P(x)\\iff x>1$）、B（$x>1\\implies P(x)$）、C（$P(x)\\iff x>2$）、D（$x>2\\implies P(x)$）。\n\n【解题步骤】\n解题核心在于理解一个关键逻辑原则：若选项X能推出选项Y，则Y不可能是唯一正确的选项（因为X正确时Y也必然正确，这就出现了两个正确选项，与题意矛盾）。\n\n首先分析A与B的关系：若A正确，即 $P(x)$ 等价于 $x>1$，这意味着当 $x>1$ 时 $P(x)$ 成立，即B也成立。所以A正确蕴含B正确，A不可能是答案。\n\n同理分析C与D的关系：若C正确，即 $P(x)$ 等价于 $x>2$，则 $x>2$ 时 $P(x)$ 成立，D也成立。C不可能是答案。\n\n接下来比较B与D：若B正确（$x>1$ 时 $P(x)$ 成立），则 $x>2$ 时必有 $x>1$，从而 $P(x)$ 也成立，即D也正确。因此B不可能是答案。\n\n反过来，若D正确（$x>2$ 时 $P(x)$ 成立），不能推出B正确——例如当 $x=\\frac{3}{2}$ 时 $P(x)$ 可以不成立，此时B不成立。这是唯一满足“恰好一个正确”的情况。\n\n【快捷思路】\n画逻辑蕴含图：A→B，C→D，B→D。箭头表示“蕴含”。有箭头指向的选项不可能是唯一正确答案（因为被蕴含者正确则蕴含者也正确）。只有D没有任何其他选项蕴含它，且D不能反向推出其他选项，因此D是唯一可能的答案。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Counterexamples"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "b.logical_implication",
+      "b.necessary_sufficient_conditions",
+      "h.necessary_sufficient_conditions"
+    ],
+    "primary_section": "b.logical_implication",
+    "skills": [
+      "implication-chain",
+      "uniqueness-condition",
+      "necessary-sufficient-analysis",
+      "counterexample-model"
+    ]
   },
   {
     "id": "2019-P2-Q18",
@@ -5984,7 +6319,27 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n本题要求不等式 $a|x|+1\\leq |x-2|$ 对一切实数 $x$ 都成立时，参数 $a$ 的取值范围。涉及两个含绝对值的函数，最佳策略是通过图像分析来把握整体关系。\n\n【解题步骤】\n将不等式理解为比较两个函数：$y=a|x|+1$ 和 $y=|x-2|$。我们需要 $a|x|+1$ 的图像始终在 $|x-2|$ 的图像下方。\n\n函数 $y=|x-2|$ 是 $y=|x|$ 向右平移 $2$ 个单位得到的V形折线，最低点在 $(2,0)$。\n\n函数 $y=a|x|+1$ 是将 $y=|x|$ 纵向拉伸 $a$ 倍后向上平移 $1$ 个单位，最低点在 $(0,1)$。\n\n当 $a>0$ 时，$y=a|x|+1$ 是开口向上的V形，在 $x\\to\\pm\\infty$ 时趋向无穷大，必然会与 $y=|x-2|$ 相交，不满足条件。\n\n当 $a=0$ 时，$y=1$，在 $x=2$ 处 $1\\leq 0$ 不成立。\n\n当 $a<0$ 时，$y=a|x|+1$ 是开口向下的倒V形。关键转折点是当它恰好经过 $(2,0)$ 时：代入得 $a\\cdot 2+1=0$，解得 $a=-\\frac{1}{2}$。\n\n当 $a=-\\frac{1}{2}$ 时，在 $x=2$ 处两函数值相等（均为0），在其他位置需要验证不等式是否成立。当 $a<-\\frac{1}{2}$ 时，$y=a|x|+1$ 在 $x=2$ 处为负值，且开口更“扁”，始终低于 $y=|x-2|$。\n\n因此临界值为 $a=-\\frac{1}{2}$，所求范围为 $a\\leq -\\frac{1}{2}$。\n\n【快捷思路】\n直接代入临界点 $(2,0)$：令 $a|2|+1=0$，解得 $a=-\\frac{1}{2}$。由于 $a$ 越小，$a|x|+1$ 的图像越低，不等式越容易成立，因此答案为 $a\\leq -\\frac{1}{2}$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Graphs"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.absolute_value_inequalities",
+      "i.absolute_value_functions"
+    ],
+    "primary_section": "a2.absolute_value_inequalities",
+    "skills": [
+      "absolute-value-inequality",
+      "parameter-condition",
+      "graph-comparison",
+      "critical-point-test",
+      "all-real-inequality"
+    ]
   },
   {
     "id": "2019-P2-Q19",
@@ -6006,7 +6361,21 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n本题要求化简 $\\sqrt{8-4\\sqrt{2}+1}+\\sqrt{9-12\\sqrt{2}+8}$ 的值。核心技巧是将被开方数识别为完全平方的形式，从而去掉外层根号。\n\n【解题步骤】\n首先化简第一个根号：$\\sqrt{8-4\\sqrt{2}+1}=\\sqrt{9-4\\sqrt{2}}$。\n\n尝试写成 $(a-b\\sqrt{2})^2=a^2+2b^2-2ab\\sqrt{2}$ 的形式。需要 $a^2+2b^2=9$ 且 $2ab=4$，即 $ab=2$。\n\n取 $a=2\\sqrt{2}$，$b=1$（因为 $8-4\\sqrt{2}+1$ 中 $8=(2\\sqrt{2})^2$，$1=1^2$），验证：$(2\\sqrt{2}-1)^2=8+1-4\\sqrt{2}=9-4\\sqrt{2}$ ✓。由于 $2\\sqrt{2}\\approx 2.828>1$，故 $\\sqrt{9-4\\sqrt{2}}=2\\sqrt{2}-1$。\n\n接下来化简第二个根号：$\\sqrt{9-12\\sqrt{2}+8}=\\sqrt{17-12\\sqrt{2}}$。\n\n观察 $9=3^2$，$8=(2\\sqrt{2})^2$，尝试 $(3-2\\sqrt{2})^2=9+8-12\\sqrt{2}=17-12\\sqrt{2}$ ✓。\n\n由于 $3>2\\sqrt{2}\\approx 2.828$，故 $\\sqrt{17-12\\sqrt{2}}=3-2\\sqrt{2}$。\n\n将两项相加：$(2\\sqrt{2}-1)+(3-2\\sqrt{2})=2$。\n\n【快捷思路】\n出题人刻意将 $8-4\\sqrt{2}+1$ 写成展开形式（而非简化为 $9-4\\sqrt{2}$），就是暗示我们将其视为完全平方 $(2\\sqrt{2}-1)^2$。同理，$9-12\\sqrt{2}+8$ 对应 $(3-2\\sqrt{2})^2$。两项相加后 $\\sqrt{2}$ 项恰好抵消，结果为 $2$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a1.surds",
+      "a1.surd_simplification"
+    ],
+    "primary_section": "a1.surd_simplification",
+    "skills": [
+      "surd-simplification",
+      "perfect-square-recognition",
+      "absolute-value-from-square-root"
+    ]
   },
   {
     "id": "2019-P2-Q20",
@@ -6028,7 +6397,28 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题考查函数图像变换与周期性的关系。函数 $y=f(x)$ 经过“关于 $y$ 轴反射再向左平移2个单位”和“向左平移2个单位再关于 $y$ 轴反射”两种操作后得到相同的函数，要求由此推导出 $f(x)$ 的性质。\n\n【解题步骤】\n逐步追踪两种变换对函数表达式的影响。\n\n第一种操作：先关于 $y$ 轴反射，得 $y=f(-x)$；再向左平移 $2$ 个单位（将 $x$ 替换为 $x+2$），得 $g(x)=f(-(x+2))=f(-x-2)$。\n\n第二种操作：先向左平移 $2$ 个单位，得 $y=f(x+2)$；再关于 $y$ 轴反射（将 $x$ 替换为 $-x$），得 $h(x)=f(-x+2)$。\n\n已知 $g(x)$ 与 $h(x)$ 是同一函数，即对任意 $x$：\n$$f(-x-2)=f(-x+2)$$\n\n令 $u=-x-2$，则 $-x+2=u+4$，代入上式得：\n$$f(u)=f(u+4)\\quad\\text{对任意} \\, u \\, \\text{成立}$$\n\n将 $u$ 换回 $x$，即 $f(x)=f(x+4)$ 对所有 $x$ 成立，说明 $f(x)$ 是以 $4$ 为周期的周期函数。\n\n【快捷思路】\n直接写出两种变换后的表达式：$g(x)=f(-x-2)$，$h(x)=f(-x+2)$。令两者相等 $f(-x-2)=f(-x+2)$，做变量代换 $u=-x-2$，立即得到 $f(u)=f(u+4)$，即周期为 $4$。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs",
+      "Logic"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "i.graph_transformations",
+      "i.function_periodicity",
+      "h.necessary_sufficient_conditions"
+    ],
+    "primary_section": "i.graph_transformations",
+    "skills": [
+      "graph-transformation-order",
+      "reflection-translation-composition",
+      "variable-substitution",
+      "periodicity-condition",
+      "necessary-sufficient-analysis"
+    ]
   },
   {
     "id": "2020-P1-Q1",
