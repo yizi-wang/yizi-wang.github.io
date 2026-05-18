@@ -8855,16 +8855,34 @@ window.QUESTIONS = [
       "G": "$34.5$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n计算 $\\int_1^4 \\left(3\\sqrt{x} + \\frac{4}{x^2}\\right)dx$。\n\n【解题步骤】\n改写为幂次形式：\n\n$\\int_1^4 (3x^{1/2} + 4x^{-2})\\,dx = \\left[2x^{3/2} - 4x^{-1}\\right]_1^4$\n\n$= (2 \\times 8 - 4 \\times \\frac{1}{4}) - (2 \\times 1 - 4 \\times 1)$\n\n$= (16 - 1) - (2 - 4) = 15 - (-2) = 17$\n\n对应选项 D。",
+    "analysis": "【题目分析】\n计算 $\\int_1^4 \\left(3\\sqrt{x} + \\frac{4}{x^2}\\right)dx$。\n\n【解题步骤】\n改写为幂次形式：\n\n$\\int_1^4 (3x^{1/2} + 4x^{-2})\\,dx = \\left[2x^{3/2} - 4x^{-1}\\right]_1^4$\n\n$= (2 \\times 8 - 4 \\times \\frac{1}{4}) - (2 \\times 1 - 4 \\times 1)$\n\n$= (16 - 1) - (2 - 4) = 15 - (-2) = 17$\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "g.definite_integrals",
+      "g.power_rule_integration",
+      "a1.index_laws"
+    ],
+    "skills": [
+      "integrate-power-functions",
+      "evaluate-definite-integral",
+      "negative-index-rewriting"
+    ],
+    "primary_section": "g.definite_integrals"
   },
   {
     "id": "2021-P2-Q2",
     "year": 2021,
     "paper": 2,
     "num": 2,
-    "topic": "Algebra",
+    "topic": "Coordinate Geometry",
     "difficulty": 3,
     "question": "$A(0, 2)$ and $C(4, 0)$ are opposite vertices of the square $ABCD$.\n\nWhat is the equation of the straight line through $B$ and $D$?",
     "options": {
@@ -8876,16 +8894,33 @@ window.QUESTIONS = [
       "F": "$y = 2x + 2$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n正方形 $ABCD$ 的对角顶点 $A(0,2)$ 和 $C(4,0)$，求对角线 $BD$ 的方程。\n\n【解题步骤】\n正方形对角线互相垂直平分，$BD$ 是 $AC$ 的中垂线。\n\n$AC$ 中点 $= \\left(\\frac{0+4}{2}, \\frac{2+0}{2}\\right) = (2, 1)$\n\n$AC$ 斜率 $= \\frac{0-2}{4-0} = -\\frac{1}{2}$，所以 $BD$ 斜率 $= 2$\n\n$BD$ 方程：$y - 1 = 2(x-2)$，即 $y = 2x - 3$\n\n对应选项 E。",
+    "analysis": "【题目分析】\n正方形 $ABCD$ 的对角顶点 $A(0,2)$ 和 $C(4,0)$，求对角线 $BD$ 的方程。\n\n【解题步骤】\n正方形对角线互相垂直平分，$BD$ 是 $AC$ 的中垂线。\n\n$AC$ 中点 $= \\left(\\frac{0+4}{2}, \\frac{2+0}{2}\\right) = (2, 1)$\n\n$AC$ 斜率 $= \\frac{0-2}{4-0} = -\\frac{1}{2}$，所以 $BD$ 斜率 $= 2$\n\n$BD$ 方程：$y - 1 = 2(x-2)$，即 $y = 2x - 3$\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.line_equations",
+      "d.midpoints_and_gradients",
+      "d.perpendicular_lines"
+    ],
+    "skills": [
+      "midpoint-formula",
+      "perpendicular-gradient",
+      "line-equation"
+    ],
+    "primary_section": "d.line_equations"
   },
   {
     "id": "2021-P2-Q3",
     "year": 2021,
     "paper": 2,
     "num": 3,
-    "topic": "Algebra",
+    "topic": "Probability",
     "difficulty": 3,
     "question": "A student is chosen at random from a class. Each student is equally likely to be chosen.\n\nWhich of the following conditions is/are **necessary** for the probability that the student wears glasses to equal $\\frac{4}{15}$?\n\nI Exactly 11 students in the class do not wear glasses.\n\nII The number of students in the class is divisible by 3.\n\nIII The class contains 30 students, and 8 of them wear glasses.",
     "options": {
@@ -8899,9 +8934,29 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n概率 $= \\frac{4}{15}$（最简分数），判断哪些条件是**必要条件**。\n\n【解题步骤】\n不戴眼镜概率 $= \\frac{11}{15}$，所以戴眼镜与不戴眼镜之比为 $4:11$。\n\n因此人数可以是 $(4, 11)$（共15人）、$(8, 22)$（共30人）等。\n\n**条件I**：恰好11人不戴眼镜——不必要，也可以22人不戴眼镜。\n\n**条件II**：总人数能被3整除——必要！因为总人数 $= 15k$，必为3的倍数。\n\n**条件III**：30人，8人戴眼镜——不必要，15人4人戴眼镜也满足。\n\n只有条件II是必要条件。\n\n对应选项 C。",
+    "analysis": "【题目分析】\n概率 $= \\frac{4}{15}$（最简分数），判断哪些条件是**必要条件**。\n\n【解题步骤】\n不戴眼镜概率 $= \\frac{11}{15}$，所以戴眼镜与不戴眼镜之比为 $4:11$。\n\n因此人数可以是 $(4, 11)$（共15人）、$(8, 22)$（共30人）等。\n\n**条件I**：恰好11人不戴眼镜——不必要，也可以22人不戴眼镜。\n\n**条件II**：总人数能被3整除——必要！因为总人数 $= 15k$，必为3的倍数。\n\n**条件III**：30人，8人戴眼镜——不必要，15人4人戴眼镜也满足。\n\n只有条件II是必要条件。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Number Theory"
+    ],
+    "modules": [
+      "j_sets_probability",
+      "b_mathematical_logic_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "j.probability_as_ratio",
+      "b.necessary_and_sufficient_conditions",
+      "k.divisibility"
+    ],
+    "skills": [
+      "probability-ratio",
+      "necessary-condition",
+      "divisibility-from-fraction"
+    ],
+    "primary_section": "j.probability_as_ratio"
   },
   {
     "id": "2021-P2-Q4",
@@ -8922,9 +8977,29 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n找出反例使命题(如果 $a$ 是 $bc$ 的因子，则 $a$ 是 $b$ 的因子或 $a$ 是 $c$ 的因子)不成立。\n\n反例需要：前提为真（$a \\mid bc$），但结论为假（$a \\nmid b$ 且 $a \\nmid c$）。\n\n【逐个检验】\n**I** $a=5, b=10, c=20$：$bc=200$，$5\\mid 200$ ✓ 前提成立，$5\\mid 10$ ✓ 结论成立。不是反例。\n\n**II** $a=8, b=4, c=4$：$bc=16$，$8\\mid 16$ ✓ 前提成立，$8\\nmid 4$ 且 $8\\nmid 4$ ✗ 结论不成立。是反例。\n\n**III** $a=6, b=7, c=12$：$bc=84$，$6\\mid 84$ ✓ 前提成立，$6\\nmid 7$ 但 $6\\mid 12$ ✓ 结论成立。不是反例。\n\n只有 II 提供反例。\n\n对应选项 C。",
+    "analysis": "【题目分析】\n找出反例使命题(如果 $a$ 是 $bc$ 的因子，则 $a$ 是 $b$ 的因子或 $a$ 是 $c$ 的因子)不成立。\n\n反例需要：前提为真（$a \\mid bc$），但结论为假（$a \\nmid b$ 且 $a \\nmid c$）。\n\n【逐个检验】\n**I** $a=5, b=10, c=20$：$bc=200$，$5\\mid 200$ ✓ 前提成立，$5\\mid 10$ ✓ 结论成立。不是反例。\n\n**II** $a=8, b=4, c=4$：$bc=16$，$8\\mid 16$ ✓ 前提成立，$8\\nmid 4$ 且 $8\\nmid 4$ ✗ 结论不成立。是反例。\n\n**III** $a=6, b=7, c=12$：$bc=84$，$6\\mid 84$ ✓ 前提成立，$6\\nmid 7$ 但 $6\\mid 12$ ✓ 结论成立。不是反例。\n\n只有 II 提供反例。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Number Theory"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "k.divisibility",
+      "b.implication_logic"
+    ],
+    "skills": [
+      "counterexample-testing",
+      "divisibility-check",
+      "premise-conclusion-analysis"
+    ],
+    "primary_section": "h.counterexample_construction"
   },
   {
     "id": "2021-P2-Q5",
@@ -8942,16 +9017,34 @@ window.QUESTIONS = [
       "E": "Substituting $x = \\pi$ gives $0 = 4$."
     },
     "answer": "B",
-    "analysis": "【题目分析】\n找出论证中的第一个错误。论证从恒等式 $\\\\sin^2 x + \\cos^2 x = 1$ 出发，推导到代入 $x = \\pi$ 得出 $0 = 4$ 的矛盾。\n\n【解题步骤】\n**A行**：$\\\\sin^2 x + \\cos^2 x = 1$ 是恒等式 ✓\n\n**B行**：由 $\\\\cos^2 x = 1 - \\sin^2 x$ 开平方得 $\\\\cos x = \\\\sqrt{1 - \\sin^2 x}$。\n\n这是第一个错误！$\\\\sqrt{\\\\cdots}$ 表示**非负**平方根，但 $\\\\cos x$ 在 $x \\in (\\\\frac{\\\\pi}{2}, \\\\pi)$ 时为负数，不能直接写成正根形式。正确写法应为 $\\\\cos x = \\\\pm\\\\sqrt{1-\\\\sin^2 x}$。\n\n**验证**：代入 $x = \\pi$，$\\\\cos \\pi = -1$，但B行给出 $\\\\cos \\pi = \\\\sqrt{1-0} = 1$，矛盾由此产生。\n\n第一个错误在 **B行**。\n\n对应选项 B。",
+    "analysis": "【题目分析】\n找出论证中的第一个错误。论证从恒等式 $\\sin^2 x + \\cos^2 x = 1$ 出发，推导到代入 $x = \\pi$ 得出 $0 = 4$ 的矛盾。\n\n【解题步骤】\n**A行**：$\\sin^2 x + \\cos^2 x = 1$ 是恒等式 ✓\n\n**B行**：由 $\\cos^2 x = 1 - \\sin^2 x$ 开平方得 $\\cos x = \\sqrt{1 - \\sin^2 x}$。\n\n这是第一个错误！$\\sqrt{\\cdots}$ 表示**非负**平方根，但 $\\cos x$ 在 $x \\in (\\frac{\\pi}{2}, \\pi)$ 时为负数，不能直接写成正根形式。正确写法应为 $\\cos x = \\pm\\sqrt{1-\\sin^2 x}$。\n\n**验证**：代入 $x = \\pi$，$\\cos \\pi = -1$，但B行给出 $\\cos \\pi = \\sqrt{1-0} = 1$，矛盾由此产生。\n\n第一个错误在 **B行**。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Proof",
+      "Logic"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "e.pythagorean_identity",
+      "l.proof_error_identification"
+    ],
+    "skills": [
+      "square-root-sign-check",
+      "identity-validation",
+      "first-error-identification"
+    ],
+    "primary_section": "e.pythagorean_identity"
   },
   {
     "id": "2021-P2-Q6",
     "year": 2021,
     "paper": 2,
     "num": 6,
-    "topic": "Functions",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "Consider the following two statements about the polynomial $f(x)$:\n\n$P$: $f(x) = 0$ for exactly three real values of $x$\n\n$Q$: $f'(x) = 0$ for exactly two real values of $x$\n\nWhich one of the following is correct?",
     "options": {
@@ -8961,16 +9054,38 @@ window.QUESTIONS = [
       "D": "$P$ is **not necessary** and **not sufficient** for $Q$."
     },
     "answer": "D",
-    "analysis": "【题目分析】\n判断命题 P（$f(x)=0$ 恰有三个实根）与命题 Q（$f'(x)=0$ 恰有两个实根）的逻辑关系。\n\n【解题步骤】\n**P 不是 Q 的充分条件**：\n反例：$f(x) = x^4 - x^2$，则 $f(x) = x^2(x^2-1)$，实根为 $x = -1, 0, 1$（恰好三个，P 成立）。\n但 $f'(x) = 4x^3 - 2x = 2x(2x^2-1)$，有三个实根 $x = 0, \\\\pm\\\\frac{1}{\\\\sqrt{2}}$（Q 不成立）。\n另一个反例：$f(x)$ 为五次多项式，有三个单根和两个极值点，P 成立但 $f'(x)=0$ 有五个根。\n\n**P 不是 Q 的必要条件**：\n反例：$f(x) = x^3 - x + 1$，$f'(x) = 3x^2 - 1 = 0$ 有两个实根 $x = \\\\pm\\\\frac{1}{\\\\sqrt{3}}$（Q 成立），但 $f(x)=0$ 只有一个实根（P 不成立）。\n\nP 与 Q 互不蕴含。\n\n对应选项 D。",
+    "analysis": "【题目分析】\n判断命题 P（$f(x)=0$ 恰有三个实根）与命题 Q（$f'(x)=0$ 恰有两个实根）的逻辑关系。\n\n【解题步骤】\n**P 不是 Q 的充分条件**：\n反例：$f(x) = x^4 - x^2$，则 $f(x) = x^2(x^2-1)$，实根为 $x = -1, 0, 1$（恰好三个，P 成立）。\n但 $f'(x) = 4x^3 - 2x = 2x(2x^2-1)$，有三个实根 $x = 0, \\pm\\frac{1}{\\sqrt{2}}$（Q 不成立）。\n另一个反例：$f(x)$ 为五次多项式，有三个单根和两个极值点，P 成立但 $f'(x)=0$ 有五个根。\n\n**P 不是 Q 的必要条件**：\n反例：$f(x) = x^3 - x + 1$，$f'(x) = 3x^2 - 1 = 0$ 有两个实根 $x = \\pm\\frac{1}{\\sqrt{3}}$（Q 成立），但 $f(x)=0$ 只有一个实根（P 不成立）。\n\nP 与 Q 互不蕴含。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Functions",
+      "Counterexamples"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "h.necessary_sufficient_conditions",
+      "f.polynomial_stationary_points",
+      "i.polynomial_roots"
+    ],
+    "skills": [
+      "necessary-sufficient-conditions",
+      "counterexample-construction",
+      "polynomial-derivative-roots",
+      "rolle-theorem-reasoning"
+    ],
+    "primary_section": "h.necessary_sufficient_conditions"
   },
   {
     "id": "2021-P2-Q7",
     "year": 2021,
     "paper": 2,
     "num": 7,
-    "topic": "Algebra",
+    "topic": "Coordinate Geometry",
     "difficulty": 3,
     "question": "A circle has equation $(x - 9)^2 + (y + 2)^2 = 4$\n\nA square has vertices at $(1, 0)$, $(1, 2)$, $(-1, 2)$ and $(-1, 0)$.\n\nA straight line bisects both the area of the circle and the area of the square.\n\nWhat is the $x$-coordinate of the point where this straight line meets the $x$-axis?",
     "options": {
@@ -8984,16 +9099,33 @@ window.QUESTIONS = [
       "H": "There is no straight line that bisects both the area of the circle and the area of the square."
     },
     "answer": "B",
-    "analysis": "【题目分析】\n圆 $(x-9)^2+(y+2)^2 = 4$，正方形顶点 $(1,0),(1,2),(-1,2),(-1,0)$。一条直线同时平分两者的面积，求与 $x$ 轴交点的横坐标。\n\n【解题步骤】\n平分圆面积的直线必过圆心 $(9,-2)$；平分正方形面积的直线必过正方形中心 $(0,1)$。因此所求直线过这两点。\n\n斜率 $k = \\\\frac{-2-1}{9-0} = -\\\\frac{1}{3}$\n\n直线方程：$y = -\\\\frac{1}{3}x + 1$\n\n与 $x$ 轴交点（$y=0$）：$0 = -\\\\frac{1}{3}x+1$，得 $x = 3$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n圆 $(x-9)^2+(y+2)^2 = 4$，正方形顶点 $(1,0),(1,2),(-1,2),(-1,0)$。一条直线同时平分两者的面积，求与 $x$ 轴交点的横坐标。\n\n【解题步骤】\n平分圆面积的直线必过圆心 $(9,-2)$；平分正方形面积的直线必过正方形中心 $(0,1)$。因此所求直线过这两点。\n\n斜率 $k = \\frac{-2-1}{9-0} = -\\frac{1}{3}$\n\n直线方程：$y = -\\frac{1}{3}x + 1$\n\n与 $x$ 轴交点（$y=0$）：$0 = -\\frac{1}{3}x+1$，得 $x = 3$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.lines_gradients_intercepts",
+      "d.centres_and_midpoints"
+    ],
+    "skills": [
+      "centre-of-symmetry",
+      "gradient-from-two-points",
+      "line-equation",
+      "x-intercept"
+    ],
+    "primary_section": "d.lines_gradients_intercepts"
   },
   {
     "id": "2021-P2-Q8",
     "year": 2021,
     "paper": 2,
     "num": 8,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "Consider the following statement about the polynomial $p(x)$, where $a$ and $b$ are real numbers with $a < b$:\n\n($*$) There exists a number $c$ with $a < c < b$ such that $p'(c) = 0$.\n\nWhich one of the following is true?",
     "options": {
@@ -9003,16 +9135,35 @@ window.QUESTIONS = [
       "D": "The condition $p(a) = p(b)$ is **not necessary** and **not sufficient** for ($*$)"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n判断 $p(a)=p(b)$ 对于命题 $(*)$（存在 $c \\in (a,b)$ 使 $p'(c)=0$）是何种条件。\n\n【解题步骤】\n**充分性**：若 $p(a)=p(b)$，由罗尔定理，在 $(a,b)$ 内至少存在一点 $c$ 使 $p'(c)=0$。✓ 充分。\n\n**必要性**：若 $(*)$ 成立，$p(a)$ 是否必须等于 $p(b)$？\n反例：$p(x) = x^2$，$a=-1$，$b=2$。\n$p'(x)=2x$，$p'(0)=0$，满足 $(*)$（$c=0 \\in (-1,2)$）。\n但 $p(-1)=1 \\\neq 4=p(2)$。✗ 不必要。\n\n因此 $p(a)=p(b)$ 是充分但不必要条件。\n\n对应选项 C。",
+    "analysis": "【题目分析】\n判断 $p(a)=p(b)$ 对于命题 $(*)$（存在 $c \\in (a,b)$ 使 $p'(c)=0$）是何种条件。\n\n【解题步骤】\n**充分性**：若 $p(a)=p(b)$，由罗尔定理，在 $(a,b)$ 内至少存在一点 $c$ 使 $p'(c)=0$。✓ 充分。\n\n**必要性**：若 $(*)$ 成立，$p(a)$ 是否必须等于 $p(b)$？\n反例：$p(x) = x^2$，$a=-1$，$b=2$。\n$p'(x)=2x$，$p'(0)=0$，满足 $(*)$（$c=0 \\in (-1,2)$）。\n但 $p(-1)=1 \\\neq 4=p(2)$。✗ 不必要。\n\n因此 $p(a)=p(b)$ 是充分但不必要条件。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Counterexamples"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "f_differentiation"
+    ],
+    "sections": [
+      "h.necessary_sufficient_conditions",
+      "f.rolle_theorem_stationary_points"
+    ],
+    "skills": [
+      "necessary-sufficient-conditions",
+      "rolle-theorem",
+      "counterexample-construction",
+      "derivative-zero-condition"
+    ],
+    "primary_section": "h.necessary_sufficient_conditions"
   },
   {
     "id": "2021-P2-Q9",
     "year": 2021,
     "paper": 2,
     "num": 9,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "Consider the following statements about a polynomial $f(x)$:\n\nI $f(x) = px^3 + qx^2 + rx + s$, where $p \\neq 0$.\n\nII There is a real number $t$ for which $f'(t) = 0$.\n\nIII There are real numbers $u$ and $v$ for which $f(u)f(v) < 0$.\n\nWhich of these statements is/are **sufficient** for the equation $f(x) = 0$ to have a real solution?\n\n<table>\n  <thead>\n    <tr>\n        <th> </th>\n        <th>Statement I is<br/>sufficient</th>\n        <th>Statement II is<br/>sufficient</th>\n        <th>Statement III is<br/>sufficient</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>A</td>\n<td>Yes</td>\n<td>Yes</td>\n<td>Yes</td>\n    </tr>\n<tr>\n        <td>B</td>\n<td>Yes</td>\n<td>Yes</td>\n<td>No</td>\n    </tr>\n<tr>\n        <td>C</td>\n<td>Yes</td>\n<td>No</td>\n<td>Yes</td>\n    </tr>\n<tr>\n        <td>D</td>\n<td>Yes</td>\n<td>No</td>\n<td>No</td>\n    </tr>\n<tr>\n        <td>E</td>\n<td>No</td>\n<td>Yes</td>\n<td>Yes</td>\n    </tr>\n<tr>\n        <td>F</td>\n<td>No</td>\n<td>Yes</td>\n<td>No</td>\n    </tr>\n<tr>\n        <td>G</td>\n<td>No</td>\n<td>No</td>\n<td>Yes</td>\n    </tr>\n<tr>\n        <td>H</td>\n<td>No</td>\n<td>No</td>\n<td>No</td>\n    </tr>\n  </tbody>\n</table>",
     "options": {
@@ -9026,18 +9177,37 @@ window.QUESTIONS = [
       "H": "Option H"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n判断哪些条件是 $f(x)=0$ 有实数解的**充分条件**。\n\n**条件 I**：$f(x)=px^3+qx^2+rx+s$，$p \\\neq 0$（三次多项式）。\n三次多项式当 $x \\\to +\\\\infty$ 和 $x \\\to -\\\\infty$ 时趋向异号无穷，由介值定理必穿过 $x$ 轴。✓ 充分。\n（注：条件 III 中令 $u$ 为很大的正数、$v$ 为很大的负数也可推出 I。）\n\n**条件 II**：$f'(t)=0$ 对某个 $t$ 成立。\n反例：$f(x)=x^2+1$，$f'(0)=0$ 但 $f(x) > 0$ 恒成立，无实根。❌ 不充分。\n\n**条件 III**：存在 $u,v$ 使 $f(u)f(v) < 0$。\n$f(u)$ 和 $f(v)$ 异号，由介值定理存在 $w \\in (u,v)$ 使 $f(w)=0$。✓ 充分。\n（注：若 $f$ 不是多项式，此条件不一定充分，例如 $f(x)=\\\\frac{1}{x}$。）\n\nI 和 III 充分，II 不充分。\n\n对应选项 C。",
-    "images": {
-      "image": null
-    },
-    "has_image": false
+    "analysis": "【题目分析】\n判断哪些条件是 $f(x)=0$ 有实数解的**充分条件**。\n\n**条件 I**：$f(x)=px^3+qx^2+rx+s$，$p \\\neq 0$（三次多项式）。\n三次多项式当 $x \\\to +\\infty$ 和 $x \\\to -\\infty$ 时趋向异号无穷，由介值定理必穿过 $x$ 轴。✓ 充分。\n（注：条件 III 中令 $u$ 为很大的正数、$v$ 为很大的负数也可推出 I。）\n\n**条件 II**：$f'(t)=0$ 对某个 $t$ 成立。\n反例：$f(x)=x^2+1$，$f'(0)=0$ 但 $f(x) > 0$ 恒成立，无实根。❌ 不充分。\n\n**条件 III**：存在 $u,v$ 使 $f(u)f(v) < 0$。\n$f(u)$ 和 $f(v)$ 异号，由介值定理存在 $w \\in (u,v)$ 使 $f(w)=0$。✓ 充分。\n（注：若 $f$ 不是多项式，此条件不一定充分，例如 $f(x)=\\frac{1}{x}$。）\n\nI 和 III 充分，II 不充分。\n\n【正确答案】C",
+    "images": null,
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Proof"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "i_functions_graphs",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "h.sufficient_conditions",
+      "i.polynomial_roots",
+      "i.intermediate_value_sign_change"
+    ],
+    "skills": [
+      "sufficiency-testing",
+      "intermediate-value-theorem",
+      "odd-degree-polynomial-end-behaviour",
+      "counterexample-construction"
+    ],
+    "primary_section": "h.sufficient_conditions"
   },
   {
     "id": "2021-P2-Q10",
     "year": 2021,
     "paper": 2,
     "num": 10,
-    "topic": "Algebra",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "The first seven terms of a sequence of positive integers are:\n\n$$\n\\begin{aligned}\nu_1 &= 15 \\\\\nu_2 &= 21 \\\\\nu_3 &= 30 \\\\\nu_4 &= 37 \\\\\nu_5 &= 44 \\\\\nu_6 &= 51 \\\\\nu_7 &= 59\n\\end{aligned}\n$$\n\nConsider the following statement about this sequence:\n\n> (\\*) **If** $n$ is a prime number, **then** $u_n$ is a multiple of 3 **or** $u_n$ is a multiple of 5.\n\nWhat is the smallest value of $n$ that provides a **counterexample** to (\\*)?",
     "options": {
@@ -9050,16 +9220,38 @@ window.QUESTIONS = [
       "G": "7"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n命题 $(*)$：若 $n$ 是素数，则 $u_n$ 是 3 或 5 的倍数。找最小反例。\n\n【解题步骤】\n| $n$ | 素数？ | $u_n$ | 3 的倍数？ | 5 的倍数？ | 反例？ |\n|------|--------|--------|-------------|-------------|--------|\n| 1 | ✗ | 15 | - | - | - |\n| 2 | ✓ | 21 | ✓ | ✗ | ✗ |\n| 3 | ✓ | 30 | ✓ | ✓ | ✗ |\n| 4 | ✗ | 37 | - | - | - |\n| 5 | ✓ | 44 | ✗ | ✗ | **✓** |\n| 6 | ✗ | 51 | - | - | - |\n| 7 | ✓ | 59 | ✗ | ✗ | ✓ |\n\n$n=5$ 和 $n=7$ 均为反例，最小反例为 $n=5$。\n\n对应选项 E。",
+    "analysis": "【题目分析】\n命题 $(*)$：若 $n$ 是素数，则 $u_n$ 是 3 或 5 的倍数。找最小反例。\n\n【解题步骤】\n| $n$ | 素数？ | $u_n$ | 3 的倍数？ | 5 的倍数？ | 反例？ |\n|------|--------|--------|-------------|-------------|--------|\n| 1 | ✗ | 15 | - | - | - |\n| 2 | ✓ | 21 | ✓ | ✗ | ✗ |\n| 3 | ✓ | 30 | ✓ | ✓ | ✗ |\n| 4 | ✗ | 37 | - | - | - |\n| 5 | ✓ | 44 | ✗ | ✗ | **✓** |\n| 6 | ✗ | 51 | - | - | - |\n| 7 | ✓ | 59 | ✗ | ✗ | ✓ |\n\n$n=5$ 和 $n=7$ 均为反例，最小反例为 $n=5$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Number Theory",
+      "Sequences and Series"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "h.counterexamples_to_implications",
+      "k.primes_divisibility",
+      "c.sequence_terms"
+    ],
+    "skills": [
+      "implication-counterexample",
+      "prime-checking",
+      "divisibility-tests",
+      "table-enumeration"
+    ],
+    "primary_section": "h.counterexamples_to_implications"
   },
   {
     "id": "2021-P2-Q11",
     "year": 2021,
     "paper": 2,
     "num": 11,
-    "topic": "Algebra",
+    "topic": "Proof",
     "difficulty": 3,
     "question": "A student attempts to solve the following problem, where $a$ and $b$ are non-zero real numbers:\n\n> Show that **if** $a^2 - 4b^3 \\ge 0$ **then** there exist real numbers $x$ and $y$ such that $a = xy(x + y)$ and $b = xy$.\n\nConsider the following attempt:\n\n$(x - y)^2 \\ge 0$ (I)\n\nso $x^2 + y^2 - 2xy \\ge 0$ (II)\n\nso $(x + y)^2 - 4xy \\ge 0$ (III)\n\nso $x^2y^2(x + y)^2 - 4x^3y^3 \\ge 0$ (IV)\n\nso $a^2 - 4b^3 \\ge 0$ (V)\n\nWhich of the following best describes this attempt?",
     "options": {
@@ -9071,16 +9263,37 @@ window.QUESTIONS = [
       "F": "It is incorrect because there is an error in line (IV)."
     },
     "answer": "C",
-    "analysis": "【题目分析】\n学生的证明目标：若 $a^2-4b^3 \\geq 0$，则存在实数 $x,y$ 使 $a=xy(x+y)$ 且 $b=xy$。\n\n逐行检查推导：\n**(I)** $(x-y)^2 \\geq 0$ ✓\n**(II)** 展开得 $x^2+y^2-2xy \\geq 0$ ✓\n**(III)** 由 $x^2+y^2 = (x+y)^2-2xy$，得 $(x+y)^2-4xy \\geq 0$ ✓\n**(IV)** 两边乘 $x^2y^2$（$x^2y^2 \\geq 0$，不等号方向不变）✓\n**(V)** 代入 $a=xy(x+y), b=xy$，得 $a^2-4b^3 \\geq 0$ ✓\n\n**问题**：第(V)行是从第(IV)行**代入** $a,b$ 的定义推出的，即假设了 $a=xy(x+y)$ 和 $b=xy$ 成立。\n\n因此整个推导证明的是：**若存在 $x,y$ 使 $a=xy(x+y)$ 且 $b=xy$，则 $a^2-4b^3 \\geq 0$**——这正是原命题的**逆命题**，而非原命题本身。\n\n对应选项 C。",
+    "analysis": "【题目分析】\n学生的证明目标：若 $a^2-4b^3 \\geq 0$，则存在实数 $x,y$ 使 $a=xy(x+y)$ 且 $b=xy$。\n\n逐行检查推导：\n**(I)** $(x-y)^2 \\geq 0$ ✓\n**(II)** 展开得 $x^2+y^2-2xy \\geq 0$ ✓\n**(III)** 由 $x^2+y^2 = (x+y)^2-2xy$，得 $(x+y)^2-4xy \\geq 0$ ✓\n**(IV)** 两边乘 $x^2y^2$（$x^2y^2 \\geq 0$，不等号方向不变）✓\n**(V)** 代入 $a=xy(x+y), b=xy$，得 $a^2-4b^3 \\geq 0$ ✓\n\n**问题**：第(V)行是从第(IV)行**代入** $a,b$ 的定义推出的，即假设了 $a=xy(x+y)$ 和 $b=xy$ 成立。\n\n因此整个推导证明的是：**若存在 $x,y$ 使 $a=xy(x+y)$ 且 $b=xy$，则 $a^2-4b^3 \\geq 0$**——这正是原命题的**逆命题**，而非原命题本身。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Algebra"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "b_mathematical_logic_basics",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "l.proof_validation",
+      "b.implication_converse",
+      "a1.inequality_manipulation"
+    ],
+    "skills": [
+      "line-by-line-proof-check",
+      "converse-identification",
+      "proof-direction",
+      "substitution-validation"
+    ],
+    "primary_section": "l.proof_validation"
   },
   {
     "id": "2021-P2-Q12",
     "year": 2021,
     "paper": 2,
     "num": 12,
-    "topic": "Algebra",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "Which of the following statements about polynomials f and g is/are true?\n\nI **If** $f(x) \\geq g(x)$ for all $x \\geq 0$, **then** $\\int_{0}^{x} f(t) \\, dt \\geq \\int_{0}^{x} g(t) \\, dt$ for all $x \\geq 0$.\n\nII **If** $f(x) \\geq g(x)$ for all $x \\geq 0$, **then** $f'(x) \\geq g'(x)$ for all $x \\geq 0$.\n\nIII **If** $f'(x) \\geq g'(x)$ for all $x \\geq 0$, **then** $f(x) \\geq g(x)$ for all $x \\geq 0$.",
     "options": {
@@ -9094,16 +9307,40 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n判断三个关于多项式 $f,g$ 的命题。\n\n**命题 I**：若 $f(x) \\geq g(x)$（所有 $x \\geq 0$），则 $\\\\int_0^x f(t)dt \\geq \\int_0^x g(t)dt$。\n证明：$\\\\int_0^x (f-g)(t)dt$，被积函数 $\\\\geq 0$，积分 $\\\\geq 0$。✓ 正确。\n\n**命题 II**：若 $f(x) \\geq g(x)$，则 $f'(x) \\geq g'(x)$。\n反例：$f(x) = (x-1)^2$，$g(x) = 0$。\n$x \\geq 0$ 时 $f(x) \\geq 0 = g(x)$ ✓，但 $f'(0) = -2 < 0 = g'(x)$。✗ 错误。\n\n**命题 III**：若 $f'(x) \\geq g'(x)$，则 $f(x) \\geq g(x)$。\n反例：$f'(x) = g'(x) = 1$（即 $f(x)=x, g(x)=x+1$），\n$f'(x) \\geq g'(x)$ ✓，但 $f(x) < g(x)$ 对所有 $x$。✗ 错误。\n\n只有 I 正确。\n\n对应选项 B。",
+    "analysis": "【题目分析】\n判断三个关于多项式 $f,g$ 的命题。\n\n**命题 I**：若 $f(x) \\geq g(x)$（所有 $x \\geq 0$），则 $\\int_0^x f(t)dt \\geq \\int_0^x g(t)dt$。\n证明：$\\int_0^x (f-g)(t)dt$，被积函数 $\\geq 0$，积分 $\\geq 0$。✓ 正确。\n\n**命题 II**：若 $f(x) \\geq g(x)$，则 $f'(x) \\geq g'(x)$。\n反例：$f(x) = (x-1)^2$，$g(x) = 0$。\n$x \\geq 0$ 时 $f(x) \\geq 0 = g(x)$ ✓，但 $f'(0) = -2 < 0 = g'(x)$。✗ 错误。\n\n**命题 III**：若 $f'(x) \\geq g'(x)$，则 $f(x) \\geq g(x)$。\n反例：$f'(x) = g'(x) = 1$（即 $f(x)=x, g(x)=x+1$），\n$f'(x) \\geq g'(x)$ ✓，但 $f(x) < g(x)$ 对所有 $x$。✗ 错误。\n\n只有 I 正确。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Integration",
+      "Differentiation",
+      "Proof"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "g_integration",
+      "f_differentiation",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "h.false_universal_claims",
+      "g.integral_ordering",
+      "f.derivative_ordering_counterexamples",
+      "l.proof_and_disproof"
+    ],
+    "skills": [
+      "counterexample-construction",
+      "integral-of-nonnegative-function",
+      "derivative-comparison",
+      "constant-of-integration-awareness"
+    ],
+    "primary_section": "h.false_universal_claims"
   },
   {
     "id": "2021-P2-Q13",
     "year": 2021,
     "paper": 2,
     "num": 13,
-    "topic": "Algebra",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "A region $R$ in the $(x, y)$-plane is defined by the simultaneous inequalities\n\n$$y - x < 3$$\n\n$$y - x^2 < 1$$\n\nWhich of the following statements is/are true for **every** point in $R$?\n\nI $-1 < x < 2$\n\nII $(y - x)(y - x^2) < 3$\n\nIII $y < 5$",
     "options": {
@@ -9117,18 +9354,42 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n区域 $R: y-x < 3$ 且 $y-x^2 < 1$。判断哪些命题对 $R$ 中**所有**点成立。\n\n【解题步骤——逐个找反例】\n\n**命题 I** ($-1 < x < 2$)：\n反例：$(10, 0) \\in R$（$0-10=-10<3$ ✓，$0-100=-100<1$ ✓），但 $x=10$ 不满足 $-1<x<2$。✗\n\n**命题 II** ($(y-x)(y-x^2) < 3$)：\n反例：$(0, -2) \\in R$（$(-2)-0=-2<3$ ✓，$(-2)-0=-2<1$ ✓），\n但 $(y-x)(y-x^2)=(-2-0)(-2-0)=4 > 3$。✗\n\n**命题 III** ($y < 5$)：\n反例：$(6, 6) \\in R$（$6-6=0<3$ ✓，$6-36=-30<1$ ✓），\n但 $y=6 \\geq 5$。✗\n\n三个命题均非恒成立。\n\n对应选项 A。",
+    "analysis": "【题目分析】\n区域 $R: y-x < 3$ 且 $y-x^2 < 1$。判断哪些命题对 $R$ 中**所有**点成立。\n\n【解题步骤——逐个找反例】\n\n**命题 I** ($-1 < x < 2$)：\n反例：$(10, 0) \\in R$（$0-10=-10<3$ ✓，$0-100=-100<1$ ✓），但 $x=10$ 不满足 $-1<x<2$。✗\n\n**命题 II** ($(y-x)(y-x^2) < 3$)：\n反例：$(0, -2) \\in R$（$(-2)-0=-2<3$ ✓，$(-2)-0=-2<1$ ✓），\n但 $(y-x)(y-x^2)=(-2-0)(-2-0)=4 > 3$。✗\n\n**命题 III** ($y < 5$)：\n反例：$(6, 6) \\in R$（$6-6=0<3$ ✓，$6-36=-30<1$ ✓），\n但 $y=6 \\geq 5$。✗\n\n三个命题均非恒成立。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Counterexamples",
+      "Coordinate Geometry",
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "d_coordinate_geometry",
+      "h_logic_counterexamples",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.regions_defined_by_inequalities",
+      "d.coordinate_regions",
+      "h.counterexamples_to_universal_claims",
+      "a2.simultaneous_inequalities"
+    ],
+    "skills": [
+      "test-point-counterexample",
+      "region-membership-check",
+      "inequality-substitution",
+      "universal-statement-disproof"
+    ],
+    "primary_section": "i.regions_defined_by_inequalities"
   },
   {
     "id": "2021-P2-Q14",
     "year": 2021,
     "paper": 2,
     "num": 14,
-    "topic": "Trigonometry",
+    "topic": "Functions",
     "difficulty": 3,
-    "question": "Consider the following simultaneous equations, where $p$ is a real number:\n\n$$p2^x + \\log_2 y = 2$$\n\n$$2^x + \\log_2 y = 1$$\n\nWhat is the complete range of $p$ for which these simultaneous equations have a real solution $(x, y)$?",
+    "question": "Consider the following simultaneous equations, where $p$ is a real number:\n\n$$p\\,2^x + \\log_2 y = 2$$\n\n$$2^x + \\log_2 y = 1$$\n\nWhat is the complete range of $p$ for which these simultaneous equations have a real solution $(x, y)$?",
     "options": {
       "A": "$p < 1$",
       "B": "$p \\neq 1$",
@@ -9140,16 +9401,36 @@ window.QUESTIONS = [
       "H": "All real values of $p$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n已知 $p$ 为实数，方程组 $p \\cdot 2^x + \\log_2 y = 2$ 与 $2^x + \\log_2 y = 1$ 何时有实数解 $(x,y)$。\n\n【解题步骤】\n设 $X = 2^x > 0$，$Y = \\log_2 y$（当 $y>0$ 时有定义）。\n\n方程组化为：\n$\\\begin{cases} pX + Y = 2 \\\\ X + Y = 1 \\\\end{cases}$\n\n相减得 $(p-1)X = 1$，故当 $p \\\neq 1$ 时 $X = \\\frac{1}{p-1}$，代入得 $Y = 1-X = \\\frac{p-2}{p-1}$。\n\n$Y = \\log_2 y$ 对**任意**实数 $Y$ 均可解出 $y = 2^Y > 0$，无额外限制。\n\n$X = 2^x > 0$ 要求 $\\\frac{1}{p-1} > 0$，即 $p-1 > 0$，$p > 1$。\n\n$p = 1$ 时方程 $(p-1)X = 1$ 无解；$p < 1$ 时 $X < 0$ 与 $2^x > 0$ 矛盾。\n\n综上，$p > 1$。\n\n对应选项 C。",
+    "analysis": "【题目分析】\n已知 $p$ 为实数，方程组 $p \\cdot 2^x + \\log_2 y = 2$ 与 $2^x + \\log_2 y = 1$ 何时有实数解 $(x,y)$。\n\n【解题步骤】\n设 $X = 2^x > 0$，$Y = \\log_2 y$（当 $y>0$ 时有定义）。\n\n方程组化为：\n$\\\begin{cases} pX + Y = 2 \\\\ X + Y = 1 \\end{cases}$\n\n相减得 $(p-1)X = 1$，故当 $p \\\neq 1$ 时 $X = \\frac{1}{p-1}$，代入得 $Y = 1-X = \\frac{p-2}{p-1}$。\n\n$Y = \\log_2 y$ 对**任意**实数 $Y$ 均可解出 $y = 2^Y > 0$，无额外限制。\n\n$X = 2^x > 0$ 要求 $\\frac{1}{p-1} > 0$，即 $p-1 > 0$，$p > 1$。\n\n$p = 1$ 时方程 $(p-1)X = 1$ 无解；$p < 1$ 时 $X < 0$ 与 $2^x > 0$ 矛盾。\n\n综上，$p > 1$。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a3.exponential_logarithmic_equations",
+      "a3.log_domain_range",
+      "a2.parameter_conditions"
+    ],
+    "skills": [
+      "exponential-substitution",
+      "logarithm-domain-check",
+      "parameter-condition",
+      "positivity-condition"
+    ],
+    "primary_section": "a3.exponential_logarithmic_equations"
   },
   {
     "id": "2021-P2-Q15",
     "year": 2021,
     "paper": 2,
     "num": 15,
-    "topic": "Algebra",
+    "topic": "Coordinate Geometry",
     "difficulty": 3,
     "question": "A circle has equation\n\n$$x^2 + ax + y^2 + by + c = 0$$\n\nwhere $a$, $b$ and $c$ are non-zero real constants.\n\nWhich one of the following is a **necessary and sufficient** condition for the circle to be tangent to the $y$-axis?",
     "options": {
@@ -9161,16 +9442,35 @@ window.QUESTIONS = [
       "F": "$-\\frac{b}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n圆 $x^2+ax+y^2+by+c=0$ 与 $y$ 轴相切，求充要条件。\n\n【解题步骤——方法一：配方法】\n配方得 $\\left(x+\\\\frac{a}{2}\\\\right)^2 + \\left(y+\\\\frac{b}{2}\\\\right)^2 = \\\frac{a^2}{4}+\\\\frac{b^2}{4}-c$\n\n圆心 $\\\\left(-\\\\frac{a}{2}, -\\\\frac{b}{2}\\\\right)$，半径 $r = \\\\sqrt{\\\\frac{a^2}{4}+\\\\frac{b^2}{4}-c}$。\n\n与 $y$ 轴（$x=0$）相切 $\\Leftrightarrow$ 半径 $r = |$圆心的 $x$ 坐标 $| = \\\\left|-\\\\frac{a}{2}\\\\right|$。\n\n两边平方：$\\\\frac{a^2}{4}+\\\\frac{b^2}{4}-c = \\\frac{a^2}{4}$\n\n化简得 $\\\\frac{b^2}{4} = c$，即 $b^2 = 4c$。\n\n【解题步骤——方法二：代入法】\n与 $y$ 轴相切 $\\Leftrightarrow$ 代入 $x=0$ 后 $y^2+by+c=0$ 有重根。\n判别式 $\\\\Delta = b^2-4c = 0$，即 $b^2 = 4c$。\n\n对应选项 B。",
+    "analysis": "【题目分析】\n圆 $x^2+ax+y^2+by+c=0$ 与 $y$ 轴相切，求充要条件。\n\n【解题步骤——方法一：配方法】\n配方得 $\\left(x+\\frac{a}{2}\\right)^2 + \\left(y+\\frac{b}{2}\\right)^2 = \\frac{a^2}{4}+\\frac{b^2}{4}-c$\n\n圆心 $\\left(-\\frac{a}{2}, -\\frac{b}{2}\\right)$，半径 $r = \\sqrt{\\frac{a^2}{4}+\\frac{b^2}{4}-c}$。\n\n与 $y$ 轴（$x=0$）相切 $\\Leftrightarrow$ 半径 $r = |$圆心的 $x$ 坐标 $| = \\left|-\\frac{a}{2}\\right|$。\n\n两边平方：$\\frac{a^2}{4}+\\frac{b^2}{4}-c = \\frac{a^2}{4}$\n\n化简得 $\\frac{b^2}{4} = c$，即 $b^2 = 4c$。\n\n【解题步骤——方法二：代入法】\n与 $y$ 轴相切 $\\Leftrightarrow$ 代入 $x=0$ 后 $y^2+by+c=0$ 有重根。\n判别式 $\\Delta = b^2-4c = 0$，即 $b^2 = 4c$。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "d.circle_equations.tangency_to_axes",
+      "d.distance_from_point_to_line",
+      "a2.discriminant_condition"
+    ],
+    "skills": [
+      "complete-the-square",
+      "circle-centre-radius",
+      "tangency-condition",
+      "discriminant-zero"
+    ],
+    "primary_section": "d.circle_equations.tangency_to_axes"
   },
   {
     "id": "2021-P2-Q16",
     "year": 2021,
     "paper": 2,
     "num": 16,
-    "topic": "Algebra",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "$p$ and $q$ are real numbers, and the equation\n\n$$x |x| = px + q$$\n\nhas exactly $k$ distinct real solutions for $x$.\n\nWhich one of the following is the complete list of possible values for $k$?",
     "options": {
@@ -9182,16 +9482,35 @@ window.QUESTIONS = [
       "F": "1, 2, 3, 4"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n$x|x| = px+q$ 恰有 $k$ 个实数解，求 $k$ 的所有可能值。\n\n【解题步骤——画图/代数分析】\n当 $x \\geq 0$，方程为 $x^2 = px+q$；当 $x < 0$，方程为 $-x^2 = px+q$。\n每个二次方程最多两个实根，但需满足对应的符号条件。\n\n**可能值分析**：\n- $k=1$：例如 $p=q=0$，$x=0$ 是唯一解 ✓\n- $k=2$：例如 $p=-1,q=0$，$x=0$ 和 $x=1$ 两个解 ✓\n- $k=3$：例如 $p=-2,q=1$，$x=1$ 和 $x=-1\\\\pm\\\\sqrt{2}$（$-1+\\\\sqrt{2}>0$ 不合，$x<0$ 只有一个有效根）—— 实际例子：$p=-1,q=1$ 给出三个解 ✓\n- $k=4$ 不可能：两个方程各需两个有效根，但符号条件矛盾（$x\\\\geq 0$ 要求 $q<0$，$x<0$ 要求 $q>0$）。\n\n$k$ 的可能值为 $1,2,3$。\n\n对应选项 E。",
+    "analysis": "【题目分析】\n$x|x| = px+q$ 恰有 $k$ 个实数解，求 $k$ 的所有可能值。把左边看成分段函数：\n$$\nx|x|=\\begin{cases}\nx^2, & x\\geq 0,\\\\\n-x^2, & x<0.\n\\end{cases}\n$$\n因此解的个数就是直线 $y=px+q$ 与右半抛物线 $y=x^2$ 及左半抛物线 $y=-x^2$ 的交点总数。\n\n【解题步骤】\n当 $x\\geq 0$，方程为 $x^2=px+q$；当 $x<0$，方程为 $-x^2=px+q$。每一边最多给出两个有效交点。\n\n**可构造的情况**：\n- $k=1$：取 $p=q=0$，只有 $x=0$ 一个解。\n- $k=2$：取 $p=2,q=-1$，右半边 $x^2=2x-1$ 给出重根 $x=1$，左半边 $-x^2=2x-1$ 给出 $x=-1-\\sqrt{2}$，共两个解。\n- $k=3$：取 $p=1,q=0$，右半边 $x^2=x$ 给出 $x=0,1$，左半边 $-x^2=x$ 给出 $x=-1$，共三个解。\n\n**不可能的情况**：\n- $k=0$ 不可能，因为连续函数 $x|x|-px-q$ 在 $x\\to-\\infty$ 时趋向 $-\\infty$，在 $x\\to+\\infty$ 时趋向 $+\\infty$，至少有一个实根。\n- $k=4$ 不可能。要有四个交点，两边的二次方程都必须有两个有效根。右半边两个非负根要求乘积 $-q>0$，即 $q<0$；左半边两个负根要求乘积 $q>0$，矛盾。\n\n所以 $k$ 的可能值为 $1,2,3$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.piecewise_function_intersections",
+      "a2.quadratic_intersections"
+    ],
+    "skills": [
+      "piecewise-analysis",
+      "line-curve-intersections",
+      "solution-counting",
+      "case-analysis"
+    ],
+    "primary_section": "i.piecewise_function_intersections"
   },
   {
     "id": "2021-P2-Q17",
     "year": 2021,
     "paper": 2,
     "num": 17,
-    "topic": "Algebra",
+    "topic": "Functions",
     "difficulty": 3,
     "question": "Consider the following functions defined for $x > 1$:\n\n$$f(x) = \\log_2(\\log_2 \\sqrt{x})$$\n\n$$g(x) = \\log_2(\\sqrt{\\log_2 x})$$\n\nWhich one of the following is true for **all** values of $x > 1$?",
     "options": {
@@ -9203,16 +9522,34 @@ window.QUESTIONS = [
       "F": "$1 \\le g(x) \\le f(x)$ **or** $f(x) \\le g(x) \\le 1$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n比较 $f(x)=\\log_2(\\log_2\\sqrt{x})$ 与 $g(x)=\\log_2(\\sqrt{\\log_2 x})$ 的大小关系。\n\n【解题步骤——化简】\n$f(x) = \\log_2\\!\\left(\\frac{1}{2}\\log_2 x\\right) = -1 + \\log_2(\\log_2 x)$\n$g(x) = \\log_2\\!\\left((\\log_2 x)^{1/2}\\right) = \\frac{1}{2}\\log_2(\\log_2 x)$\n\n令 $z = \\log_2(\\log_2 x)$（$x>1$ 时 $\\log_2 x>0$，$z$ 可取任意实数），\n则 $f = z-1$，$g = \\frac{1}{2}z$。\n\n**两函数交点**：$z-1 = \\frac{1}{2}z \\Rightarrow z=2$，此时 $f=g=1$。\n\n**图像分析**：\n- 当 $z \\geq 2$（即 $f,g \\geq 1$）时，$f \\geq g$\n- 当 $z \\leq 2$（即 $f,g \\leq 1$）时，$f \\leq g$\n\n即：$f(x) \\geq g(x) \\geq 1$ 或 $f(x) \\leq g(x) \\leq 1$（两者同时成立）。\n\n对应选项 F。",
+    "analysis": "【题目分析】\n比较 $f(x)=\\log_2(\\log_2\\sqrt{x})$ 与 $g(x)=\\log_2(\\sqrt{\\log_2 x})$ 的大小关系。\n\n【解题步骤——化简】\n$f(x) = \\log_2\\!\\left(\\frac{1}{2}\\log_2 x\\right) = -1 + \\log_2(\\log_2 x)$\n$g(x) = \\log_2\\!\\left((\\log_2 x)^{1/2}\\right) = \\frac{1}{2}\\log_2(\\log_2 x)$\n\n令 $z = \\log_2(\\log_2 x)$（$x>1$ 时 $\\log_2 x>0$，$z$ 可取任意实数），\n则 $f = z-1$，$g = \\frac{1}{2}z$。\n\n**两函数交点**：$z-1 = \\frac{1}{2}z \\Rightarrow z=2$，此时 $f=g=1$。\n\n**图像分析**：\n- 当 $z \\geq 2$（即 $f,g \\geq 1$）时，$f \\geq g$\n- 当 $z \\leq 2$（即 $f,g \\leq 1$）时，$f \\leq g$\n\n即：$f(x) \\geq g(x) \\geq 1$ 或 $f(x) \\leq g(x) \\leq 1$，分段对应上述两种情况。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "i.function_comparison",
+      "a3.logarithm_simplification"
+    ],
+    "skills": [
+      "logarithm-laws",
+      "substitution",
+      "function-comparison",
+      "linear-comparison"
+    ],
+    "primary_section": "i.function_comparison"
   },
   {
     "id": "2021-P2-Q18",
     "year": 2021,
     "paper": 2,
     "num": 18,
-    "topic": "Algebra",
+    "topic": "Trigonometry",
     "difficulty": 3,
     "question": "A student chooses two distinct real numbers $x$ and $y$ with $0 < x < y < 1$.\n\nThe student then attempts to draw a triangle $ABC$ with:\n\n$$AB = 1$$\n$$\\sin A = x$$\n$$\\sin B = y$$\n\nWhich of the following statements is/are correct?\n\n*   **I** For some choice of $x$ and $y$, there is exactly **one** triangle the student could draw.\n\n*   **II** For some choice of $x$ and $y$, there are exactly **two** different triangles the student could draw.\n\n*   **III** For some choice of $x$ and $y$, there are exactly **three** different triangles the student could draw.\n\n(Note that congruent triangles are considered to be the same.)",
     "options": {
@@ -9226,16 +9563,31 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n三角形 $ABC$，$AB=1$，$\\sin A = x$，$\\sin B = y$，$0 < x < y < 1$。判断命题 I/II/III。\n\n【解题步骤】\n记 $\\theta = \\arcsin x$，$\\phi = \\arcsin y$（均为锐角），则 $\\theta < \\phi$（因 $x < y$）。\n$A$ 可取 $\\theta$ 或 $\\pi - \\theta$；$B$ 可取 $\\phi$ 或 $\\pi - \\phi$。\n\n**Case 1**（$A=\\theta$, $B=\\phi$，均锐角）：\n$A+B = \\theta+\\phi < \\pi$，$C = \\pi - A - B > 0$ ✓。唯一确定一个三角形。\n\n**Case 2**（$A=\\pi-\\theta$, $B=\\phi$，A 钝 B 锐）：\n$A+B = \\pi-\\theta+\\phi > \\pi$（因 $\\phi > \\theta$），$C < 0$ ✗。不可能。\n\n**Case 3**（$A=\\theta$, $B=\\pi-\\phi$，A 锐 B 钝）：\n$A+B = \\pi-(\\phi-\\theta) < \\pi$，$C = \\phi-\\theta > 0$ ✓。唯一确定一个三角形。\n\n**Case 4**（$A=\\pi-\\theta$, $B=\\pi-\\phi$，均钝角）：两钝角之和超过 $\\pi$，不可能。\n\n**总结**：Case 1 和 Case 3 各产生一个三角形，Case 2 和 4 不可能。\n因此**总能画出恰好两个不同的三角形**，与 $x,y$ 的取值无关。\n\n命题 I（恰一个）✗、II（恰两个）✓、III（恰三个）✗。\n\n对应选项 C。",
+    "analysis": "【题目分析】\n三角形 $ABC$，$AB=1$，$\\sin A = x$，$\\sin B = y$，$0 < x < y < 1$。判断命题 I/II/III。\n\n【解题步骤】\n记 $\\theta = \\arcsin x$，$\\phi = \\arcsin y$（均为锐角），则 $\\theta < \\phi$（因 $x < y$）。\n$A$ 可取 $\\theta$ 或 $\\pi - \\theta$；$B$ 可取 $\\phi$ 或 $\\pi - \\phi$。\n\n**Case 1**（$A=\\theta$, $B=\\phi$，均锐角）：\n$A+B = \\theta+\\phi < \\pi$，$C = \\pi - A - B > 0$ ✓。唯一确定一个三角形。\n\n**Case 2**（$A=\\pi-\\theta$, $B=\\phi$，A 钝 B 锐）：\n$A+B = \\pi-\\theta+\\phi > \\pi$（因 $\\phi > \\theta$），$C < 0$ ✗。不可能。\n\n**Case 3**（$A=\\theta$, $B=\\pi-\\phi$，A 锐 B 钝）：\n$A+B = \\pi-(\\phi-\\theta) < \\pi$，$C = \\phi-\\theta > 0$ ✓。唯一确定一个三角形。\n\n**Case 4**（$A=\\pi-\\theta$, $B=\\pi-\\phi$，均钝角）：两钝角之和超过 $\\pi$，不可能。\n\n**总结**：Case 1 和 Case 3 各产生一个三角形，Case 2 和 4 不可能。\n因此**总能画出恰好两个不同的三角形**，与 $x,y$ 的取值无关。\n\n命题 I（恰一个）✗、II（恰两个）✓、III（恰三个）✗。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "e_trigonometry"
+    ],
+    "sections": [
+      "e.sine_ambiguous_angles",
+      "e.triangle_angle_constraints"
+    ],
+    "skills": [
+      "ambiguous-sine-values",
+      "angle-sum",
+      "case-analysis",
+      "triangle-counting"
+    ],
+    "primary_section": "e.sine_ambiguous_angles"
   },
   {
     "id": "2021-P2-Q19",
     "year": 2021,
     "paper": 2,
     "num": 19,
-    "topic": "Algebra",
+    "topic": "Trigonometry",
     "difficulty": 3,
     "question": "The angle $\\theta$ can take any of the values $1^\\circ, 2^\\circ, 3^\\circ, \\dots, 359^\\circ, 360^\\circ$.\n\nFor how many of these values of $\\theta$ is it true that\n\n$$\\sin \\theta \\sqrt{1 + \\sin \\theta} \\sqrt{1 - \\sin \\theta} + \\cos \\theta \\sqrt{1 + \\cos \\theta} \\sqrt{1 - \\cos \\theta} = 0$$",
     "options": {
@@ -9249,16 +9601,33 @@ window.QUESTIONS = [
       "H": "360"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n$\theta \\in \\{1°, 2°, \\ldots, 360°\\}$，求满足给定方程的 $\theta$ 的个数。\n\n【解题步骤——化简】\n$sqrt{(1+\\sin\\theta)(1-\\sin\\theta)} = \\sqrt{\\cos^2\\theta} = |\\cos\\theta|$\n$sqrt{(1+\\cos\\theta)(1-\\cos\\theta)} = \\sqrt{\\sin^2\\theta} = |\\sin\\theta|$\n\n方程化简为：$\\sin\\theta\\,|\\cos\\theta| + \\cos\\theta\\,|\\sin\\theta| = 0$\n\n**分类讨论**：\n- $\\sin\\theta > 0, \\cos\\theta > 0$（第一象限）：$2\\sin\\theta\\cos\\theta > 0$ ✗\n- $\\sin\\theta < 0, \\cos\\theta < 0$（第三象限）：$-2\\sin\\theta\\cos\\theta > 0$ ✗\n- $\\sin\\theta > 0, \\cos\\theta < 0$（第二象限）：$-\\sin\\theta\\cos\\theta + \\sin\\theta\\cos\\theta = 0$ ✓\n- $\\sin\\theta < 0, \\cos\\theta > 0$（第四象限）：$\\sin\\theta\\cos\\theta - \\sin\\theta\\cos\\theta = 0$ ✓\n- $\\sin\\theta = 0$ 或 $\\cos\\theta = 0$（轴上）：$= 0$ ✓\n\n**满足条件的范围**：$90° \\leq \\theta \\leq 180°$ 或 $270° \\leq \\theta \\leq 360°$。\n\n计数：每个区间 91 个角（含两端点），共 $91 + 91 = 182$ 个。\n\n对应选项 F。",
+    "analysis": "【题目分析】\n$\theta \\in \\{1°, 2°, \\ldots, 360°\\}$，求满足给定方程的 $\theta$ 的个数。\n\n【解题步骤——化简】\n$\\sqrt{(1+\\sin\\theta)(1-\\sin\\theta)} = \\sqrt{\\cos^2\\theta} = |\\cos\\theta|$\n$\\sqrt{(1+\\cos\\theta)(1-\\cos\\theta)} = \\sqrt{\\sin^2\\theta} = |\\sin\\theta|$\n\n方程化简为：$\\sin\\theta\\,|\\cos\\theta| + \\cos\\theta\\,|\\sin\\theta| = 0$\n\n**分类讨论**：\n- $\\sin\\theta > 0, \\cos\\theta > 0$（第一象限）：$2\\sin\\theta\\cos\\theta > 0$ ✗\n- $\\sin\\theta < 0, \\cos\\theta < 0$（第三象限）：$-2\\sin\\theta\\cos\\theta > 0$ ✗\n- $\\sin\\theta > 0, \\cos\\theta < 0$（第二象限）：$-\\sin\\theta\\cos\\theta + \\sin\\theta\\cos\\theta = 0$ ✓\n- $\\sin\\theta < 0, \\cos\\theta > 0$（第四象限）：$\\sin\\theta\\cos\\theta - \\sin\\theta\\cos\\theta = 0$ ✓\n- $\\sin\\theta = 0$ 或 $\\cos\\theta = 0$（轴上）：$= 0$ ✓\n\n**满足条件的范围**：$90° \\leq \\theta \\leq 180°$ 或 $270° \\leq \\theta \\leq 360°$。\n\n计数：每个区间 91 个角（含两端点），共 $91 + 91 = 182$ 个。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.quadrant_signs",
+      "e.trig_absolute_values"
+    ],
+    "skills": [
+      "absolute-value-simplification",
+      "quadrant-analysis",
+      "integer-angle-counting"
+    ],
+    "primary_section": "e.quadrant_signs"
   },
   {
     "id": "2021-P2-Q20",
     "year": 2021,
     "paper": 2,
     "num": 20,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "A sequence of functions $f_1, f_2, f_3, \\dots$ is defined by\n\n$$f_1(x) = |x|$$\n\n$$f_{n+1}(x) = |f_n(x) + x| \\quad \\text{for } n \\geq 1$$\n\nFind the value of\n\n$$\\int_{-1}^{1} f_{99}(x) \\, dx$$",
     "options": {
@@ -9272,9 +9641,30 @@ window.QUESTIONS = [
       "H": "100"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n$f_1(x) = |x|$，$f_{n+1}(x) = |f_n(x) + x|$，求 $\\int_{-1}^{1} f_{99}(x)\\,dx$。\n\n【解题步骤——找规律】\n$f_1(x) = |x|$：$x<0$ 时 $=-x$，$x \\geq 0$ 时 $=x$\n\n$f_2(x) = |f_1(x)+x|$：\n- $x<0$：$|-x+x| = 0$\n- $x \\geq 0$：$|x+x| = 2x$\n\n$f_3(x) = |f_2(x)+x|$：\n- $x<0$：$|0+x| = -x$\n- $x \\geq 0$：$|2x+x| = 3x$\n\n$f_4(x) = |f_3(x)+x|$：\n- $x<0$：$|-x+x| = 0$\n- $x \\geq 0$：$|3x+x| = 4x$\n\n**归纳**：\n- $n$ 为偶数：$f_n(x) = 0$（$x<0$），$f_n(x) = nx$（$x \\geq 0$）\n- $n$ 为奇数：$f_n(x) = -x$（$x<0$），$f_n(x) = nx$（$x \\geq 0$）\n\n$n=99$（奇数）：$f_{99}(x) = -x$（$x<0$），$f_{99}(x) = 99x$（$x \\geq 0$）\n\n**计算积分**：\n$\\int_{-1}^{0}(-x)\\,dx + \\int_{0}^{1}99x\\,dx = \\frac{1}{2} + \\frac{99}{2} = 50$\n\n对应选项 E。",
+    "analysis": "【题目分析】\n$f_1(x) = |x|$，$f_{n+1}(x) = |f_n(x) + x|$，求 $\\int_{-1}^{1} f_{99}(x)\\,dx$。\n\n【解题步骤——找规律】\n$f_1(x) = |x|$：$x<0$ 时 $=-x$，$x \\geq 0$ 时 $=x$\n\n$f_2(x) = |f_1(x)+x|$：\n- $x<0$：$|-x+x| = 0$\n- $x \\geq 0$：$|x+x| = 2x$\n\n$f_3(x) = |f_2(x)+x|$：\n- $x<0$：$|0+x| = -x$\n- $x \\geq 0$：$|2x+x| = 3x$\n\n$f_4(x) = |f_3(x)+x|$：\n- $x<0$：$|-x+x| = 0$\n- $x \\geq 0$：$|3x+x| = 4x$\n\n**归纳**：\n- $n$ 为偶数：$f_n(x) = 0$（$x<0$），$f_n(x) = nx$（$x \\geq 0$）\n- $n$ 为奇数：$f_n(x) = -x$（$x<0$），$f_n(x) = nx$（$x \\geq 0$）\n\n$n=99$（奇数）：$f_{99}(x) = -x$（$x<0$），$f_{99}(x) = 99x$（$x \\geq 0$）\n\n**计算积分**：\n$\\int_{-1}^{0}(-x)\\,dx + \\int_{0}^{1}99x\\,dx = \\frac{1}{2} + \\frac{99}{2} = 50$\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sequences and Series",
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "c_sequences_series",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.piecewise_integrals",
+      "c.function_recurrence",
+      "i.absolute_value_functions"
+    ],
+    "skills": [
+      "recurrence-pattern-recognition",
+      "piecewise-functions",
+      "induction",
+      "definite-integration"
+    ],
+    "primary_section": "g.piecewise_integrals"
   },
   {
     "id": "2022-P1-Q1",
