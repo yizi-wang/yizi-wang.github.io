@@ -3249,6 +3249,22 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "g.integral_simplify_first",
+      "g.power_function_integrals",
+      "a1.exponent_laws"
+    ],
+    "primary_section": "g.integral_simplify_first",
+    "skills": [
+      "integrand-simplification",
+      "power-rule-integration",
+      "definite-integral-evaluation",
+      "exponent-laws"
     ]
   },
   {
@@ -3268,9 +3284,23 @@ window.QUESTIONS = [
       "F": "$a = \\frac{38}{3}d$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n本题给出等差数列首项为 $a$、公差为 $d$，且前 $5$ 项和等于前 $8$ 项和，要求找出 $a$ 与 $d$ 的关系。等差数列求和公式为 $S_n=\\frac{n}{2}[2a+(n-1)d]$，分别计算 $S_5$ 和 $S_8$ 后令其相等即可求解。本题也可利用 $S_8-S_5$ 的巧思快速作答。\n【解题步骤】\n方法一：利用求和公式\n\n$$S_5=\\frac{5}{2}[2a+4d]=5a+10d$$\n$$S_8=\\frac{8}{2}[2a+7d]=8a+28d$$\n\n令 $S_5=S_8$：\n$$5a+10d=8a+28d$$\n$$-3a=18d$$\n$$a=-6d$$\n\n方法二（快捷法）：$S_8-S_5$ 恰好等于第 $6$、$7$、$8$ 项之和。因为 $S_5=S_8$，所以这三项之和为零：\n$$(a+5d)+(a+6d)+(a+7d)=0$$\n$$3a+18d=0\\quad\\Rightarrow\\quad a=-6d$$\n【快捷思路】\n注意到 $S_8=S_5+u_6+u_7+u_8$，由 $S_5=S_8$ 直接推出 $u_6+u_7+u_8=0$，即 $(a+5d)+(a+6d)+(a+7d)=0$，一步得到 $3a+18d=0$，避免展开 $S_5$、$S_8$ 的繁琐计算。\n【正确答案】C and Series",
+    "analysis": "【题目分析】\n本题给出等差数列首项为 $a$、公差为 $d$，且前 $5$ 项和等于前 $8$ 项和，要求找出 $a$ 与 $d$ 的关系。等差数列求和公式为 $S_n=\\frac{n}{2}[2a+(n-1)d]$，分别计算 $S_5$ 和 $S_8$ 后令其相等即可求解。本题也可利用 $S_8-S_5$ 的巧思快速作答。\n【解题步骤】\n方法一：利用求和公式\n\n$$S_5=\\frac{5}{2}[2a+4d]=5a+10d$$\n$$S_8=\\frac{8}{2}[2a+7d]=8a+28d$$\n\n令 $S_5=S_8$：\n$$5a+10d=8a+28d$$\n$$-3a=18d$$\n$$a=-6d$$\n\n方法二（快捷法）：$S_8-S_5$ 恰好等于第 $6$、$7$、$8$ 项之和。因为 $S_5=S_8$，所以这三项之和为零：\n$$(a+5d)+(a+6d)+(a+7d)=0$$\n$$3a+18d=0\\quad\\Rightarrow\\quad a=-6d$$\n【快捷思路】\n注意到 $S_8=S_5+u_6+u_7+u_8$，由 $S_5=S_8$ 直接推出 $u_6+u_7+u_8=0$，即 $(a+5d)+(a+6d)+(a+7d)=0$，一步得到 $3a+18d=0$，避免展开 $S_5$、$S_8$ 的繁琐计算。\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.arithmetic_series_sums",
+      "c.arithmetic_progressions"
+    ],
+    "primary_section": "c.arithmetic_series_sums",
+    "skills": [
+      "arithmetic-series-sum",
+      "sum-difference",
+      "term-sum-reduction",
+      "parameter-relation"
+    ]
   },
   {
     "id": "2018-P1-Q3",
@@ -3288,9 +3318,22 @@ window.QUESTIONS = [
       "E": "$5\\sqrt{2}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题求两圆之间的最短距离。首先需要从圆的标准方程 $(x-h)^2+(y-k)^2=r^2$ 中读出圆心坐标和半径，然后计算两圆心之间的距离，最后减去两半径之和即得最短距离（两圆外离时）。关键在于识别圆心和半径，并判断两圆的位置关系。\n【解题步骤】\n圆1：$(x+2)^2+(y-3)^2=18$，圆心 $C_1(-2,3)$，半径 $r_1=\\sqrt{18}=3\\sqrt{2}$。\n\n圆2：$(x-7)^2+(y+6)^2=2$，圆心 $C_2(7,-6)$，半径 $r_2=\\sqrt{2}$。\n\n计算两圆心距离：\n$$|C_1C_2|=\\sqrt{(7-(-2))^2+(-6-3)^2}=\\sqrt{9^2+(-9)^2}=\\sqrt{81+81}=\\sqrt{162}=9\\sqrt{2}$$\n\n两半径之和为 $r_1+r_2=3\\sqrt{2}+\\sqrt{2}=4\\sqrt{2}$。\n\n因为 $9\\sqrt{2}>4\\sqrt{2}$，两圆外离。最短距离为圆心距减去两半径：\n$$9\\sqrt{2}-4\\sqrt{2}=5\\sqrt{2}$$\n【快捷思路】\n识别圆心差为 $(9,-9)$，距离为 $9\\sqrt{2}$。两半径和为 $4\\sqrt{2}$，直接相减得 $5\\sqrt{2}$。画简图可快速确认两圆外离，无需额外验证。\n【正确答案】E Geometry",
+    "analysis": "【题目分析】\n本题求两圆之间的最短距离。首先需要从圆的标准方程 $(x-h)^2+(y-k)^2=r^2$ 中读出圆心坐标和半径，然后计算两圆心之间的距离，最后减去两半径之和即得最短距离（两圆外离时）。关键在于识别圆心和半径，并判断两圆的位置关系。\n【解题步骤】\n圆1：$(x+2)^2+(y-3)^2=18$，圆心 $C_1(-2,3)$，半径 $r_1=\\sqrt{18}=3\\sqrt{2}$。\n\n圆2：$(x-7)^2+(y+6)^2=2$，圆心 $C_2(7,-6)$，半径 $r_2=\\sqrt{2}$。\n\n计算两圆心距离：\n$$|C_1C_2|=\\sqrt{(7-(-2))^2+(-6-3)^2}=\\sqrt{9^2+(-9)^2}=\\sqrt{81+81}=\\sqrt{162}=9\\sqrt{2}$$\n\n两半径之和为 $r_1+r_2=3\\sqrt{2}+\\sqrt{2}=4\\sqrt{2}$。\n\n因为 $9\\sqrt{2}>4\\sqrt{2}$，两圆外离。最短距离为圆心距减去两半径：\n$$9\\sqrt{2}-4\\sqrt{2}=5\\sqrt{2}$$\n【快捷思路】\n识别圆心差为 $(9,-9)$，距离为 $9\\sqrt{2}$。两半径和为 $4\\sqrt{2}$，直接相减得 $5\\sqrt{2}$。画简图可快速确认两圆外离，无需额外验证。\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.circle_equations.circle_distances"
+    ],
+    "primary_section": "d.circle_equations.circle_distances",
+    "skills": [
+      "circle-centre-radius",
+      "distance-formula",
+      "external-circle-distance",
+      "surd-simplification"
+    ]
   },
   {
     "id": "2018-P1-Q4",
@@ -3313,8 +3356,19 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题给出含参数 $a$ 的联立方程组，要求找出使方程组对 $x$ 有两个不同实数解的 $a$ 的取值范围。标准做法是消元得到关于 $x$ 的一元二次方程，再通过判别式 $\\Delta$ 判断根的个数。本题的巧妙之处在于判别式恒正，因此 $a$ 可取任意实数。\n【解题步骤】\n由 $x+y=a$ 得 $y=a-x$，代入第一个方程：\n$$3x^2+2x(a-x)=4$$\n$$3x^2+2ax-2x^2=4$$\n$$x^2+2ax-4=0$$\n\n这是关于 $x$ 的一元二次方程，其判别式为：\n$$\\Delta=(2a)^2-4\\times 1\\times(-4)=4a^2+16$$\n\n由于 $a^2\\geq 0$ 对所有实数 $a$ 成立，故 $4a^2+16\\geq 16>0$。\n\n判别式恒为正数，说明方程 $x^2+2ax-4=0$ 对任意实数 $a$ 都有两个不同的实数根。因此 $a$ 可取所有实数值。\n【快捷思路】\n消元后得到 $x^2+2ax-4=0$，观察判别式 $\\Delta=4a^2+16$，注意到常数项为 $+16>0$，而 $4a^2\\geq 0$，因此 $\\Delta$ 永远大于零，无需进一步分析。直接选所有实数。\n【正确答案】G",
     "images": null,
     "has_image": false,
-    "related_topics": [
-      "Functions"
+    "modules": [
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a2.simultaneous_equations",
+      "a2.parameter_discriminant"
+    ],
+    "primary_section": "a2.parameter_discriminant",
+    "skills": [
+      "substitution",
+      "quadratic-discriminant",
+      "parameter-condition",
+      "distinct-real-roots"
     ]
   },
   {
@@ -3322,7 +3376,7 @@ window.QUESTIONS = [
     "year": 2018,
     "paper": 1,
     "num": 5,
-    "topic": "Functions",
+    "topic": "Algebra",
     "difficulty": 3,
     "question": "The function f is defined by $f(x) = x^3 + ax^2 + bx + c$.\n\n$a, b$ and $c$ take the values 1, 2 and 3 with no two of them being equal and not necessarily in this order.\n\nThe remainder when $f(x)$ is divided by $(x + 2)$ is $R$.\n\nThe remainder when $f(x)$ is divided by $(x + 3)$ is $S$.\n\nWhat is the largest possible value of $R - S$?",
     "options": {
@@ -3335,7 +3389,26 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n给定三次多项式 $f(x)=x^3+ax^2+bx+c$，其中 $a,b,c$ 是 $\\{1,2,3\\}$ 的一个排列（互不相等）。记 $R$ 为 $f(x)$ 除以 $(x+2)$ 的余数，$S$ 为 $f(x)$ 除以 $(x+3)$ 的余数，求 $R-S$ 的最大可能值。\n\n本题核心工具是余数定理：$f(x)$ 除以 $(x-p)$ 的余数等于 $f(p)$。因此 $R=f(-2)$，$S=f(-3)$。\n\n【解题步骤】\n由余数定理：\n$R=f(-2)=-8+4a-2b+c$\n$S=f(-3)=-27+9a-3b+c$\n\n作差得：\n$R-S=(-8+4a-2b+c)-(-27+9a-3b+c)=19-5a+b$\n\n要使 $R-S$ 最大，需 $-5a+b$ 最大。由于 $a$ 的系数为负，应取 $a$ 尽可能小；$b$ 的系数为正，应取 $b$ 尽可能大。$a,b,c$ 为 $\\{1,2,3\\}$ 的排列，故取 $a=1$，$b=3$，$c=2$。\n\n此时 $R-S=19-5\\times 1+3=17$。\n\n【快捷思路】\n直接作差消去 $c$，得到 $R-S=19-5a+b$。由于 $a$ 的系数绝对值远大于 $b$，优先让 $a$ 取最小值 $1$，再让 $b$ 取最大值 $3$，立即得到答案 $17$。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a1_algebra_basics",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a1.remainder_theorem",
+      "a2.remainder_theorem"
+    ],
+    "primary_section": "a1.remainder_theorem",
+    "skills": [
+      "remainder-theorem",
+      "function-evaluation",
+      "expression-difference",
+      "coefficient-optimisation",
+      "permutation-selection"
+    ]
   },
   {
     "id": "2018-P1-Q6",
@@ -3357,7 +3430,22 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Graphs"
+      "Functions"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "e.trig_equations_graph_intersections",
+      "i.graph_intersections"
+    ],
+    "primary_section": "e.trig_equations_graph_intersections",
+    "skills": [
+      "trig-equation-transformation",
+      "tan-branch-counting",
+      "graph-intersection",
+      "solution-counting"
     ]
   },
   {
@@ -3379,7 +3467,24 @@ window.QUESTIONS = [
     "answer": "A",
     "analysis": "【题目分析】\n已知非零常数 $k$ 使得 $(1+kx^2)^7$ 与 $(k+x)^{10}$ 展开式中 $x^6$ 的系数相等，求 $k$ 的值。\n\n本题运用二项式定理，分别写出两个展开式中 $x^6$ 项的系数，建立等式求解。\n\n【解题步骤】\n对于 $(1+kx^2)^7$，通项为 $\\binom{7}{r}(kx^2)^r=\\binom{7}{r}k^r x^{2r}$。令 $2r=6$ 得 $r=3$，故 $x^6$ 的系数为：\n$\\binom{7}{3}k^3=\\frac{7\\times 6\\times 5}{3\\times 2\\times 1}k^3=35k^3$\n\n对于 $(k+x)^{10}$，通项为 $\\binom{10}{r}k^{10-r}x^r$。令 $r=6$ 得 $x^6$ 的系数为：\n$\\binom{10}{6}k^4=\\binom{10}{4}k^4=\\frac{10\\times 9\\times 8\\times 7}{4\\times 3\\times 2\\times 1}k^4=210k^4$\n\n令两系数相等：\n$35k^3=210k^4$\n\n由于 $k\\neq 0$，两边除以 $k^3$ 得：\n$35=210k$\n\n解得 $k=\\frac{35}{210}=\\frac{1}{6}$。\n\n【快捷思路】\n直接识别：$(1+kx^2)^7$ 中 $x^6$ 来自 $r=3$，系数 $35k^3$；$(k+x)^{10}$ 中 $x^6$ 来自 $r=6$，系数 $210k^4$。等式 $35k^3=210k^4$ 两边除以 $35k^3$ 得 $k=\\frac{1}{6}$。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sequences and Series"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.binomial_specific_coefficients",
+      "a1.polynomial_coefficient_matching"
+    ],
+    "primary_section": "c.binomial_specific_coefficients",
+    "skills": [
+      "binomial-expansion",
+      "coefficient-comparison",
+      "parameter-solving"
+    ]
   },
   {
     "id": "2018-P1-Q8",
@@ -3398,9 +3503,22 @@ window.QUESTIONS = [
       "F": "216"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n已知一个等比数列各项的无穷项和为 $6$，各项平方的无穷项和为 $12$，求各项立方的无穷项和。\n\n本题需要利用等比数列无穷和公式 $S_\\infty=\\frac{a}{1-r}$（其中 $|r|<1$），通过已知条件联立求出首项 $a$ 和公比 $r$。\n\n【解题步骤】\n设原等比数列首项为 $a$，公比为 $r$（$|r|<1$）。\n\n由题意：\n$\\frac{a}{1-r}=6\\quad\\cdots(1)$\n\n各项平方构成新等比数列：$a^2,a^2r^2,a^2r^4,\\cdots$，公比为 $r^2$，首项为 $a^2$。其无穷和为：\n$\\frac{a^2}{1-r^2}=12\\quad\\cdots(2)$\n\n将式 $(2)$ 分母分解：$\\frac{a^2}{(1+r)(1-r)}=12$。\n\n利用式 $(1)$ 中 $\\frac{a}{1-r}=6$，代入得：\n$\\frac{a}{1+r}\\cdot 6=12$，即 $\\frac{a}{1+r}=2$\n\n于是 $a=2+2r\\quad\\cdots(3)$\n\n联立 $(1)$ 的变形 $a=6-6r$ 与 $(3)$：\n$6-6r=2+2r$\n\n解得 $r=\\frac{1}{2}$，代入得 $a=3$。\n\n各项立方构成等比数列：$a^3,a^3r^3,a^3r^6,\\cdots$，公比为 $r^3=\\frac{1}{8}$。其无穷和为：\n$\\frac{a^3}{1-r^3}=\\frac{27}{1-\\frac{1}{8}}=\\frac{27}{\\frac{7}{8}}=\\frac{216}{7}$\n\n【快捷思路】\n由 $\\frac{a^2}{1-r^2}=12$ 和 $\\frac{a}{1-r}=6$，两式相除立即得 $\\frac{a}{1+r}=2$，再与 $a=6-6r$ 联立解出 $a=3,r=\\frac{1}{2}$。立方和首项 $27$，公比 $\\frac{1}{8}$，结果为 $\\frac{216}{7}$。\n\n【正确答案】D and Series",
+    "analysis": "【题目分析】\n已知一个等比数列各项的无穷项和为 $6$，各项平方的无穷项和为 $12$，求各项立方的无穷项和。\n\n本题需要利用等比数列无穷和公式 $S_\\infty=\\frac{a}{1-r}$（其中 $|r|<1$），通过已知条件联立求出首项 $a$ 和公比 $r$。\n\n【解题步骤】\n设原等比数列首项为 $a$，公比为 $r$（$|r|<1$）。\n\n由题意：\n$\\frac{a}{1-r}=6\\quad\\cdots(1)$\n\n各项平方构成新等比数列：$a^2,a^2r^2,a^2r^4,\\cdots$，公比为 $r^2$，首项为 $a^2$。其无穷和为：\n$\\frac{a^2}{1-r^2}=12\\quad\\cdots(2)$\n\n将式 $(2)$ 分母分解：$\\frac{a^2}{(1+r)(1-r)}=12$。\n\n利用式 $(1)$ 中 $\\frac{a}{1-r}=6$，代入得：\n$\\frac{a}{1+r}\\cdot 6=12$，即 $\\frac{a}{1+r}=2$\n\n于是 $a=2+2r\\quad\\cdots(3)$\n\n联立 $(1)$ 的变形 $a=6-6r$ 与 $(3)$：\n$6-6r=2+2r$\n\n解得 $r=\\frac{1}{2}$，代入得 $a=3$。\n\n各项立方构成等比数列：$a^3,a^3r^3,a^3r^6,\\cdots$，公比为 $r^3=\\frac{1}{8}$。其无穷和为：\n$\\frac{a^3}{1-r^3}=\\frac{27}{1-\\frac{1}{8}}=\\frac{27}{\\frac{7}{8}}=\\frac{216}{7}$\n\n【快捷思路】\n由 $\\frac{a^2}{1-r^2}=12$ 和 $\\frac{a}{1-r}=6$，两式相除立即得 $\\frac{a}{1+r}=2$，再与 $a=6-6r$ 联立解出 $a=3,r=\\frac{1}{2}$。立方和首项 $27$，公比 $\\frac{1}{8}$，结果为 $\\frac{216}{7}$。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.geometric_series_infinity",
+      "c.power_transformed_series"
+    ],
+    "primary_section": "c.power_transformed_series",
+    "skills": [
+      "infinite-geometric-series",
+      "power-series-transform",
+      "simultaneous-equations"
+    ]
   },
   {
     "id": "2018-P1-Q9",
@@ -3424,7 +3542,23 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Functions",
-      "Graphs"
+      "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "f.stationary_points_root_count",
+      "i.polynomial_roots",
+      "a2.parameter_inequalities"
+    ],
+    "primary_section": "f.stationary_points_root_count",
+    "skills": [
+      "derivative-sign-analysis",
+      "cubic-root-counting",
+      "parameter-range"
     ]
   },
   {
@@ -3446,7 +3580,19 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n已知 $|2 - x| \\le 6$ 和 $|y + 2| \\le 4$，求 $|xy|$ 的最大可能值。这是绝对值不等式的最值问题，关键在于分别确定 $x$ 和 $y$ 的取值范围，再利用 $|xy| = |x| \\cdot |y|$ 的性质将两变量解耦。\n\n【解题步骤】\n解第一个不等式：$|2 - x| \\le 6$ 表示 $x$ 到 $2$ 的距离不超过 $6$，即 $-4 \\le x \\le 8$。因此 $|x|$ 的最大值为 $8$（在 $x = 8$ 处取得）。\n\n解第二个不等式：$|y + 2| \\le 4$ 即 $|y - (-2)| \\le 4$，表示 $y$ 到 $-2$ 的距离不超过 $4$，即 $-6 \\le y \\le 2$。因此 $|y|$ 的最大值为 $6$（在 $y = -6$ 处取得）。\n\n由于 $|xy| = |x| \\cdot |y|$，要使乘积最大，只需分别取 $|x|$ 和 $|y|$ 的最大值：$|xy|_{\\max} = 8 \\times 6 = 48$。\n\n验证可行性：$x = 8$ 在范围内，$y = -6$ 在范围内，故 $|xy| = 48$ 可以取到。\n\n【快捷思路】\n$|xy| = |x| \\cdot |y|$ 将两个变量完全分离，各自独立取最大绝对值再相乘即可，无需逐一代入边界点。$|x|_{\\max} = 8$，$|y|_{\\max} = 6$，乘积 $48$。\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a2.absolute_value_inequalities"
+    ],
+    "primary_section": "a2.absolute_value_inequalities",
+    "skills": [
+      "absolute-value-inequality",
+      "interval-endpoints",
+      "product-maximisation"
+    ]
   },
   {
     "id": "2018-P1-Q11",
@@ -3470,6 +3616,21 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Coordinate Geometry"
+    ],
+    "modules": [
+      "f_differentiation",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "f.tangent_normal_equations",
+      "d.line_gradients"
+    ],
+    "primary_section": "f.tangent_normal_equations",
+    "skills": [
+      "derivative-slope",
+      "normal-gradient",
+      "line-intercept-comparison",
+      "parameter-sign"
     ]
   },
   {
@@ -3493,7 +3654,22 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Graphs"
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.signed_area",
+      "g.area_with_x_axis",
+      "i.graph_sign_intervals"
+    ],
+    "primary_section": "g.signed_area",
+    "skills": [
+      "signed-area",
+      "interval-sign-analysis",
+      "linear-system-from-integrals"
     ]
   },
   {
@@ -3519,6 +3695,20 @@ window.QUESTIONS = [
     "has_image": true,
     "related_topics": [
       "Graphs"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "f.stationary_points_extrema",
+      "i.derivative_graphs"
+    ],
+    "primary_section": "f.stationary_points_extrema",
+    "skills": [
+      "derivative-sign-change",
+      "local-extremum-classification",
+      "graph-reading"
     ]
   },
   {
@@ -3542,7 +3732,22 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Functions"
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "a3.logarithm_equations",
+      "d.line_equations"
+    ],
+    "primary_section": "a3.logarithm_equations",
+    "skills": [
+      "substitution",
+      "case-analysis",
+      "logarithm-zero",
+      "parameter-equation-solving"
     ]
   },
   {
@@ -3567,6 +3772,20 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a3.exponential_equations",
+      "a1.exponent_laws"
+    ],
+    "primary_section": "a3.exponential_equations",
+    "skills": [
+      "exponent-laws",
+      "substitution-to-quadratic",
+      "logarithm-sum"
     ]
   },
   {
@@ -3586,12 +3805,30 @@ window.QUESTIONS = [
       "F": "$b = \\sqrt{6}$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n抛物线 $C: y = x^2 + bx + 2$（$b \\geq 0$），求使原点与驻点距离最小的 $b$ 值。本题综合了驻点求解、距离公式和最优化方法。\n【解题步骤】\n先求驻点。求导得 $y' = 2x + b$，令 $y' = 0$ 得 $x = -b/2$。\n代入原方程得 $y = (-b/2)^2 + b(-b/2) + 2 = b^2/4 - b^2/2 + 2 = 2 - b^2/4$。\n驻点为 $(-b/2, 2 - b^2/4)$。\n\n原点到驻点的距离平方为：\n$D^2 = (-b/2)^2 + (2 - b^2/4)^2 = b^2/4 + 4 - b^2 + b^4/16 = b^4/16 - 3b^2/4 + 4$\n\n令 $B = b^2$（$B \\geq 0$），则 $D^2 = B^2/16 - 3B/4 + 4$。\n对 $B$ 求导并令为零：$d(D^2)/dB = B/8 - 3/4 = 0$，解得 $B = 6$。\n\n故 $b^2 = 6$，又 $b \\geq 0$，得 $b = \\sqrt{6}$。\n【快捷思路】\n最小化距离等价于最小化距离平方，避免开根号。驻点坐标含 $b$ 的偶次幂，令 $B = b^2$ 后距离平方变为关于 $B$ 的二次函数，求最小值远比处理四次多项式简单。配方得 $(B-6)^2 - 36$ 的最小值在 $B = 6$ 处取得。\n【正确答案】F",
+    "analysis": "【题目分析】\n抛物线 $C: y = x^2 + bx + 2$（$b \\geq 0$），求使原点与驻点距离最小的 $b$ 值。本题综合了驻点求解、距离公式和最优化方法。\n【解题步骤】\n先求驻点。求导得 $y' = 2x + b$，令 $y' = 0$ 得 $x = -b/2$。\n代入原方程得 $y = (-b/2)^2 + b(-b/2) + 2 = b^2/4 - b^2/2 + 2 = 2 - b^2/4$。\n驻点为 $(-b/2, 2 - b^2/4)$。\n\n原点到驻点的距离平方为：\n$D^2 = (-b/2)^2 + (2 - b^2/4)^2 = b^2/4 + 4 - b^2 + b^4/16 = b^4/16 - 3b^2/4 + 4$\n\n令 $B = b^2$（$B \\geq 0$），则 $D^2 = B^2/16 - 3B/4 + 4$。\n对 $B$ 求导并令为零：$d(D^2)/dB = B/8 - 3/4 = 0$，解得 $B = 6$。\n\n故 $b^2 = 6$，又 $b \\geq 0$，得 $b = \\sqrt{6}$。\n【快捷思路】\n最小化距离等价于最小化距离平方，避免开根号。驻点坐标含 $b$ 的偶次幂，令 $B = b^2$ 后距离平方变为关于 $B$ 的二次函数，求最小值远比处理四次多项式简单。配方为 $\\frac{1}{16}(B-6)^2+\\frac{7}{4}$，因此最小值在 $B = 6$ 处取得。\n【正确答案】F",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Coordinate Geometry",
       "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "d_coordinate_geometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "f.stationary_points",
+      "f.parameter_optimisation",
+      "d.distance_formula",
+      "a2.quadratic_minimum"
+    ],
+    "primary_section": "f.parameter_optimisation",
+    "skills": [
+      "stationary-point",
+      "distance-squared",
+      "parameter-substitution",
+      "quadratic-minimisation"
     ]
   },
   {
@@ -3612,7 +3849,20 @@ window.QUESTIONS = [
     "answer": "A",
     "analysis": "【题目分析】\n本题涉及两组数据的均值变化问题。第一组均值 $15$，第二组均值 $20$，交换两个数据点后，第一组均值升至 $16$，第二组均值降至 $17$。需要求合并全部数据后的总均值。关键在于发现交换前后数据的总和保持不变。\n\n【解题步骤】\n设第一组有 $n$ 个数据，第二组有 $m$ 个数据。\n\n交换前：第一组总和为 $15n$，第二组总和为 $20m$，合计 $15n+20m$。\n\n交换后：第一组总和变为 $16n$，第二组总和变为 $17m$，合计 $16n+17m$。\n\n由于交换只是内部调整，总数据量不变，故总体总和相等：\n$$15n+20m=16n+17m\\implies 3m=n$$\n\n由此知第一组数据个数是第二组的 $3$ 倍。总数据个数为 $n+m=4m$，总和为 $15n+20m=45m+20m=65m$，因此合并均值为：\n$$\\frac{65m}{4m}=\\frac{65}{4}=16\\frac{1}{4}$$\n\n【快捷思路】\n不必单独考虑交换的具体数值。利用交换前后总和不变这一核心事实，直接列出 $15n+20m=16n+17m$，快速得到 $n=3m$，代入均值公式即可。\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a1.mean_total_invariance",
+      "a1.ratio_modelling"
+    ],
+    "primary_section": "a1.mean_total_invariance",
+    "skills": [
+      "mean-total-equation",
+      "invariant-total",
+      "ratio-modelling"
+    ]
   },
   {
     "id": "2018-P1-Q18",
@@ -3634,7 +3884,22 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Graphs"
+      "Functions"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "e.trig_graph_symmetry",
+      "e.phase_shift",
+      "i.graph_symmetry"
+    ],
+    "primary_section": "e.trig_graph_symmetry",
+    "skills": [
+      "sine-graph-symmetry",
+      "phase-shift",
+      "smallest-positive-solution"
     ]
   },
   {
@@ -3659,6 +3924,23 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.ssa_ambiguous_case",
+      "e.cosine_rule",
+      "e.triangle_area",
+      "a2.vieta_relations"
+    ],
+    "primary_section": "e.ssa_ambiguous_case",
+    "skills": [
+      "ambiguous-case",
+      "cosine-rule",
+      "area-ratio",
+      "vieta-relations"
     ]
   },
   {
@@ -3668,7 +3950,7 @@ window.QUESTIONS = [
     "num": 20,
     "topic": "Trigonometry",
     "difficulty": 3,
-    "question": "$$\\sin^2 0^\\circ + \\sin^2 1^\\circ + \\sin^2 2^\\circ + \\sin^2 3^\\circ + \\dots + \\sin^2 87^\\circ + \\sin^2 88^\\circ + \\sin^2 89^\\circ + \\sin^2 90^\\circ$$",
+    "question": "Find the value of\n\n$$\\sin^2 0^\\circ + \\sin^2 1^\\circ + \\sin^2 2^\\circ + \\sin^2 3^\\circ + \\dots + \\sin^2 87^\\circ + \\sin^2 88^\\circ + \\sin^2 89^\\circ + \\sin^2 90^\\circ$$",
     "options": {
       "A": "0.5",
       "B": "1",
@@ -3680,7 +3962,25 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n计算 $S=\\sin^2 0^\\circ+\\sin^2 1^\\circ+\\cdots+\\sin^2 90^\\circ$，共 $91$ 项。利用互补角的恒等关系配对求和。\n\n【解题步骤】\n利用 $\\sin^2 x+\\sin^2(90^\\circ-x)=\\sin^2 x+\\cos^2 x=1$。\n\n采用倒序相加法：\n$$2S=\\sum_{k=0}^{90}\\left[\\sin^2 k^\\circ+\\sin^2(90^\\circ-k^\\circ)\\right]=\\sum_{k=0}^{90}1=91$$\n因此 $S=\\dfrac{91}{2}=45.5$。\n\n【快捷思路】\n识别 $\\sin^2\\theta+\\sin^2(90^\\circ-\\theta)=1$ 的配对关系，共 $91$ 项倒序相加得 $2S=91$，无需逐项计算。\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sequences and Series"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "e.complementary_angle_pairs",
+      "e.pythagorean_identity",
+      "c.paired_sum"
+    ],
+    "primary_section": "e.complementary_angle_pairs",
+    "skills": [
+      "complementary-angle-pairing",
+      "reverse-sum",
+      "pythagorean-identity"
+    ]
   },
   {
     "id": "2018-P2-Q1",

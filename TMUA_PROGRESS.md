@@ -9,7 +9,7 @@
 - [x] 2016 Paper 2
 - [x] 2017 Paper 1
 - [x] 2017 Paper 2
-- [ ] 2018 Paper 1
+- [x] 2018 Paper 1
 - [ ] 2018 Paper 2
 - [ ] 2019 Paper 1
 - [ ] 2019 Paper 2
