@@ -7224,14 +7224,34 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n本题考查直线与二次曲线相交/相切的判别式条件。\n\n【解题方法】\n直线与曲线相交或相切意味着联立方程有实数解。\n\n【详细步骤】\nStep 1: 联立方程\ny = x - 2 与 y = x² + kx + 2 联立：\nx - 2 = x² + kx + 2\n\nStep 2: 整理为标准二次方程\nx² + kx + 2 - x + 2 = 0\nx² + (k-1)x + 4 = 0\n\nStep 3: 计算判别式\nΔ = (k-1)² - 4×1×4 = (k-1)² - 16\n\nStep 4: 判别式条件\n相交或相切需 Δ ≥ 0：\n(k-1)² - 16 ≥ 0\n(k-1)² ≥ 16\n|k-1| ≥ 4\n\nStep 5: 解不等式\nk - 1 ≥ 4 或 k - 1 ≤ -4\nk ≥ 5 或 k ≤ -3\n\n【验证】\n- 当 k = 5 时：x² + 4x + 4 = 0，Δ = 16 - 16 = 0（相切）\n- 当 k = -3 时：x² - 4x + 4 = 0，Δ = 16 - 16 = 0（相切）\n- 当 k = 0 时：x² - x + 4 = 0，Δ = 1 - 16 = -15 < 0（不相交）✓\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra",
+      "Graphs"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "d_coordinate_geometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.discriminant_parameter_range",
+      "d.line_curve_intersections",
+      "i.graph_intersections"
+    ],
+    "primary_section": "a2.discriminant_parameter_range",
+    "skills": [
+      "line-curve-intersection",
+      "quadratic-discriminant",
+      "parameter-inequality-solving"
+    ]
   },
   {
     "id": "2020-P2-Q2",
     "year": 2020,
     "paper": 2,
     "num": 2,
-    "topic": "Algebra",
+    "topic": "Trigonometry",
     "difficulty": 3,
     "question": "Given that $\\tan \\theta = 2$ and $180^\\circ < \\theta < 360^\\circ$, find the value of $\\cos \\theta$",
     "options": {
@@ -7245,9 +7265,24 @@ window.QUESTIONS = [
       "H": "$-\\frac{2\\sqrt{5}}{5}$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n已知 tan θ = 2，θ 在第三象限（180° < θ < 360°），求 cos θ。\n\n【确定符号】\ntan θ = 2 > 0 → θ 在第三象限 ✓\n第三象限：sin θ < 0，cos θ < 0\n\n【构造直角三角形】\n|tan θ| = |对边|/|邻边| = 2/1\n斜边 = √(2² + 1²) = √5\n\ncos θ = 邻边/斜边 = 1/√5 = √5/5\n第三象限取负值：cos θ = −√5/5\n\n【验证】\ntan θ = (−2√5/5)/(−√5/5) = 2 ✓\n\n【正确答案】F（−√5/5）",
+    "analysis": "【题目分析】\n已知 tan θ = 2，θ 在第三象限（180° < θ < 360°），求 cos θ。\n\n【确定符号】\ntan θ = 2 > 0 → θ 在第三象限 ✓\n第三象限：sin θ < 0，cos θ < 0\n\n【构造直角三角形】\n|tan θ| = |对边|/|邻边| = 2/1\n斜边 = √(2² + 1²) = √5\n\ncos θ = 邻边/斜边 = 1/√5 = √5/5\n第三象限取负值：cos θ = −√5/5\n\n【验证】\ntan θ = (−2√5/5)/(−√5/5) = 2 ✓\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "e_trigonometry"
+    ],
+    "sections": [
+      "e.trig_ratios",
+      "e.quadrant_signs",
+      "e.tangent_cosine_relationship"
+    ],
+    "primary_section": "e.quadrant_signs",
+    "skills": [
+      "quadrant-signs",
+      "tan-to-cos-conversion",
+      "exact-trig-values"
+    ]
   },
   {
     "id": "2020-P2-Q3",
@@ -7269,7 +7304,28 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n学生论证：4((9n+1)/2-(3n-1)/2)可被3整除。\n找出第一个错误行。\n\n【解题步骤】\n(I): 4(...)=2(2(...)) ✓ 恒等变形\n(II): 2(2((9n+1)/2-(3n-1)/2))=2(9n+1-3n-1)\n     2·((9n+1)/2-(3n-1)/2)=(9n+1)-(3n-1)=9n+1-3n+1=6n+2\n     但学生写成了9n+1-3n-1=6n ✗\n\n第一个错误在(II)。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Algebra",
+      "Number Theory"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "l.proof_audit_error_identification",
+      "h.proof_error_identification",
+      "k.divisibility"
+    ],
+    "primary_section": "l.proof_audit_error_identification",
+    "skills": [
+      "proof-line-audit",
+      "algebraic-sign-checking",
+      "divisibility-reasoning"
+    ]
   },
   {
     "id": "2020-P2-Q4",
@@ -7292,34 +7348,78 @@ window.QUESTIONS = [
     "answer": "G",
     "analysis": "【题目分析】\n命题：所有大于6的正整数N可写成两个大于1的非素数之和。\n找出反例。\n\n【解题步骤】\nI. N=5：不满足N>6条件，不在命题范围，不是反例 ✗\nII. N=7：需找两个非素数(>1)之和=7\n    非素数>1：4,6,8,9,10...\n    7=4+3(3是素数)✗, 7=6+1(1不>1)✗\n    无法分解 ✓ N=7是反例\nIII. N=9：非素数之和=9\n    9=4+5(5素)✗, 9=6+3(3素)✗, 9=8+1(1不>1)✗\n    无法分解 ✓ N=9是反例\n\nII和III是反例。\n\n【正确答案】G",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Number Theory"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "b_mathematical_logic_basics",
+      "l_proof_methods",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "h.counterexample_identification",
+      "b.counterexample_conditions",
+      "l.disproof_by_counterexample",
+      "k.prime_composite_numbers"
+    ],
+    "primary_section": "h.counterexample_identification",
+    "skills": [
+      "counterexample-validation",
+      "hypothesis-checking",
+      "prime-composite-classification"
+    ]
   },
   {
     "id": "2020-P2-Q5",
     "year": 2020,
     "paper": 2,
     "num": 5,
-    "topic": "Algebra",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "Which one of the following shows the graph of\n\n$$y = \\frac{2^x}{1 + 2^x}$$\n\n(Dotted lines indicate asymptotes.)",
     "options": {
-      "D": "</td>\n<td>",
-      "E": "</td>\n<td>",
-      "F": "</td>\n    </tr>\n<tr>\n        <td><img src=\"image\" alt=\"Graph D: A decreasing sigmoid-like curve starting near a horizontal dotted asymptote for negative x and approaching y=0 for positive x.\"></td>\n<td><img src=\"image\" alt=\"Graph E: A decreasing exponential-like curve starting high for negative x and approaching y=0 for positive x. No horizontal asymptote is shown.\"></td>\n<td><img src=\"image\" alt=\"Graph F: A decreasing curve starting high for negative x and approaching a horizontal dotted asymptote for positive x.\"></td>\n    </tr>\n</table>"
+      "A": "Graph A",
+      "B": "Graph B",
+      "C": "Graph C",
+      "D": "Graph D",
+      "E": "Graph E",
+      "F": "Graph F"
     },
     "answer": "A",
     "analysis": "【题目分析】\ny = 2^x / (1 + 2^x)\n\n【解题步骤】\nx→-∞: 2^x→0, y→0/(1+0)=0\nx→+∞: 2^x→+∞, y→1（水平渐近线y=1）\nx=0: y=1/2\n\ny' = [2^x·ln2·(1+2^x) - 2^x·2^x·ln2] / (1+2^x)²\n   = 2^x·ln2 / (1+2^x)² > 0\n\n所以y单调递增，从0到1，过(0, 1/2)。\n\n【正确答案】A",
     "images": {
-      "image": "2020 P2 Q5 6 options.png"
+      "options_image": "2020 P2 Q5 6 options.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Functions",
+      "Algebra"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a3.exponential_function_graphs",
+      "i.graph_transformations",
+      "i.asymptotes"
+    ],
+    "primary_section": "a3.exponential_function_graphs",
+    "skills": [
+      "asymptote-analysis",
+      "monotonicity-checking",
+      "exponential-graph-recognition"
+    ]
   },
   {
     "id": "2020-P2-Q6",
     "year": 2020,
     "paper": 2,
     "num": 6,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "The function $f(x)$ is defined for all real values of $x$.\n\nWhich of the following conditions on $f(x)$ is/are **necessary** to ensure that\n\n$$\\int_{-5}^{0} f(x) \\, dx = \\int_{0}^{5} f(x) \\, dx$$\n\nCondition I: $f(x) = f(-x)$ for $-5 \\leq x \\leq 5$\n\nCondition II: $f(x) = c$ for $-5 \\leq x \\leq 5$, where $c$ is a constant\n\nCondition III: $f(x) = -f(-x)$ for $-5 \\leq x \\leq 5$",
     "options": {
@@ -7333,39 +7433,76 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n∫₋₅⁰f(x)dx = ∫₀⁵f(x)dx\n判断哪些条件是必要的。\n\n条件I：f(x)=f(-x)（偶函数）\n∫₋₅⁰f(x)dx = ∫₀⁵f(-x)dx = ∫₀⁵f(x)dx ✓\n但这是充分条件，不是必要条件。\n反例：f(x)=x，∫₋₅⁰x dx = -12.5, ∫₀⁵x dx = 12.5，不相等。\n但存在非偶函数使积分相等。\n\n条件II：f(x)=c（常数）\n∫₋₅⁰c dx = -5c, ∫₀⁵c dx = 5c\n-5c=5c → c=0\n所以只有f(x)=0时成立，不是必要条件。\n\n条件III：f(x)=-f(-x)（奇函数）\n∫₋₅⁰f(x)dx = -∫₀⁵f(x)dx\n要使相等：∫₀⁵f(x)dx = -∫₀⁵f(x)dx → ∫₀⁵f(x)dx = 0\n不是必要条件。\n\n三个条件都不是必要条件。\n\n【正确答案】A",
+    "analysis": "【题目分析】\n题目要求判断哪些条件是必要条件，能保证\n\n$$\\int_{-5}^{0} f(x)\\,dx = \\int_{0}^{5} f(x)\\,dx.$$\n\n【解题步骤】\n条件 I：$f(x)=f(-x)$ 是偶函数条件。它能推出左右两段面积相等，因此是充分条件；但不是必要条件。例如 $f(x)=x^3-\\frac{25}{2}x$ 在 $[0,5]$ 上积分为 0，左右两段积分相等，却不是偶函数。\n\n条件 II：$f(x)=c$ 是常数函数条件。此时两边积分都等于 $5c$，所以它也是充分条件；但它显然不是必要条件，例如 $f(x)=x^2$ 也使两边积分相等。\n\n条件 III：$f(x)=-f(-x)$ 是奇函数条件。奇函数时左边积分等于右边积分的相反数，只有当 $\\int_0^5 f(x)\\,dx=0$ 时才相等，所以这不是保证等式成立的必要条件；例如 $f(x)=x^2$ 满足等式但不是奇函数。\n\n因此三个条件都不是必要条件。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Integration",
+      "Functions"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "h.sufficient_necessary_conditions",
+      "g.definite_integral_symmetry"
+    ],
+    "primary_section": "h.sufficient_necessary_conditions",
+    "skills": [
+      "necessary-vs-sufficient",
+      "counterexample-construction",
+      "definite-integral-symmetry"
+    ]
   },
   {
     "id": "2020-P2-Q7",
     "year": 2020,
     "paper": 2,
     "num": 7,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "Consider the following conditions on a **parallelogram** $PQRS$, labelled anticlockwise:\n\nI length of $PQ$ = length of $QR$\nII The diagonal $PR$ intersects the diagonal $QS$ at right angles\nIII $\\angle PQR = \\angle QRS$\n\nWhich of these conditions is/are individually **sufficient** for the parallelogram $PQRS$ to be a square?\n\n<table>\n  <thead>\n    <tr>\n        <th> </th>\n        <th>**Condition I is<br/>sufficient**</th>\n        <th>**Condition II is<br/>sufficient**</th>\n        <th>**Condition III is<br/>sufficient**</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>",
     "options": {
-      "A": "</td>\n<td>yes</td>\n<td>yes</td>\n<td>yes</td>\n    </tr>\n<tr>\n        <td>",
-      "B": "</td>\n<td>yes</td>\n<td>yes</td>\n<td>no</td>\n    </tr>\n<tr>\n        <td>",
-      "C": "</td>\n<td>yes</td>\n<td>no</td>\n<td>yes</td>\n    </tr>\n<tr>\n        <td>",
-      "D": "</td>\n<td>yes</td>\n<td>no</td>\n<td>no</td>\n    </tr>\n<tr>\n        <td>",
-      "E": "</td>\n<td>no</td>\n<td>yes</td>\n<td>yes</td>\n    </tr>\n<tr>\n        <td>",
-      "F": "</td>\n<td>no</td>\n<td>yes</td>\n<td>no</td>\n    </tr>\n<tr>\n        <td>",
-      "G": "</td>\n<td>no</td>\n<td>no</td>\n<td>yes</td>\n    </tr>\n<tr>\n        <td>",
-      "H": "</td>\n<td>no</td>\n<td>no</td>\n<td>no</td>\n    </tr>\n  </tbody>\n</table>"
+      "A": "I yes; II yes; III yes",
+      "B": "I yes; II yes; III no",
+      "C": "I yes; II no; III yes",
+      "D": "I yes; II no; III no",
+      "E": "I no; II yes; III yes",
+      "F": "I no; II yes; III no",
+      "G": "I no; II no; III yes",
+      "H": "I no; II no; III no"
     },
     "answer": "H",
-    "analysis": "【题目分析】\n平行四边形PQRS，判断三个条件哪些能单独推出它是正方形。\n\n【解题方法】\n分析每个条件是否充分。\n\n【详细步骤】\n条件I：|PQ| = |QR|\n- 平行四边形对边相等，所以 |PQ| = |RS|, |QR| = |PS|\n- 若 |PQ| = |QR|，则四边相等\n- 菱形的定义：四边相等的平行四边形\n- 菱形不一定是正方形（角可以不是直角）\n- 条件I不充分 ✗\n\n条件II：对角线PR ⟂ QS\n- 对角线互相垂直的平行四边形是菱形\n- 但菱形不一定是正方形\n- 条件II不充分 ✗\n\n条件III：∠PQR = ∠QRS\n- 在平行四边形中，∠PQR + ∠QRS = 180°（同旁内角）\n- 若∠PQR = ∠QRS，则都是90°\n- 有一个角是直角的平行四边形是矩形\n- 矩形的对角线相等，但边不一定相等\n- 所以是矩形，但不一定是正方形\n- 条件III不充分 ✗\n\nI和II组合：菱形（四边相等 + 对角线垂直）= 正方形 ✓\nII和III组合：对角线垂直 + 有一个直角 → 正方形 ✓\n\n【正确答案】E（条件I不充分，II不充分，III不充分）",
+    "analysis": "【题目分析】\n平行四边形 $PQRS$ 中，判断三个条件是否各自足以推出它是正方形。\n\n【解题步骤】\n条件 I：$PQ=QR$。平行四边形相邻两边相等时，它是菱形；但菱形的角不一定是直角，所以不一定是正方形。I 不充分。\n\n条件 II：对角线 $PR$ 与 $QS$ 垂直。对角线互相垂直的平行四边形可以是非正方形的菱形，所以 II 不充分。\n\n条件 III：$\\angle PQR=\\angle QRS$。平行四边形相邻角互补，若二者相等，则都是 $90^\\circ$，因此四边形是矩形；但矩形的相邻边不一定相等，所以不一定是正方形。III 不充分。\n\n所以三个条件单独看都不充分。\n\n【正确答案】H",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Coordinate Geometry",
+      "Proof"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "h.sufficient_conditions",
+      "d.parallelogram_properties"
+    ],
+    "primary_section": "h.sufficient_conditions",
+    "skills": [
+      "sufficient-condition-testing",
+      "parallelogram-square-conditions",
+      "counterexample-testing"
+    ]
   },
   {
     "id": "2020-P2-Q8",
     "year": 2020,
     "paper": 2,
     "num": 8,
-    "topic": "Trigonometry",
+    "topic": "Counterexamples",
     "difficulty": 3,
     "question": "A student is asked to prove whether the following statement ($*$) is true or false:\n\n> ($*$) For all real numbers $a$ and $b$, $|a + b| < |a| + |b|$\n\nThe student’s proof is as follows:\n\n> Statement ($*$) is **false**. A counterexample is $a = 3$, $b = 4$, as $|3 + 4| = 7$ and $|3| + |4| = 7$, but $7 < 7$ is false.\n\nWhich of the following best describes the student’s proof?",
     "options": {
@@ -7378,7 +7515,24 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n命题(*): 对所有实数a,b, |a+b| < |a|+|b|\n\n学生反例：a=3, b=4\n|3+4|=7, |3|+|4|=7\n7<7是假的，所以命题是假的。\n\n三角不等式：|a+b| ≤ |a|+|b|，等号在a,b同号时成立。\n学生的反例正确，证明完整。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic",
+      "Proof"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "l.disproof_by_counterexample"
+    ],
+    "primary_section": "h.counterexample_construction",
+    "skills": [
+      "disproof-by-counterexample",
+      "triangle-inequality-equality-case"
+    ]
   },
   {
     "id": "2020-P2-Q9",
@@ -7399,7 +7553,20 @@ window.QUESTIONS = [
     "answer": "F",
     "analysis": "【题目分析】\n计算f(x)=x·sin(x)（弧度）\n但计算器只接受度数。如何正确计算f(4)？\n\n【解题步骤】\nf(4)=4·sin(4弧度)\n弧度→度数：4弧度=4×180/π度≈229.2度\n\n计算器输入（度数模式）：\nsin(4弧度)=sin(229.2度)=sin(4×180/π度)\n正确输入：sin(180×4/π)（度数）\n\n完整f(4)：需x用弧度值（4），sin用度数转换\nf(4)=4×sin(180×4/π度)\n\n选项D：(180×4/π)×sin(4) — 错误，4是弧度不能直接sin(4度)\n选项F：4×sin(180×4/π) — 正确！\n\n等等，选项F是正确答案。但让我重新检查：\n选项D：(180×4÷π)×sin(4) — 度数×sin(4度) ✗\n选项F：4×sin(180×4÷π) — 弧度×sin(转换后度数) ✓\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "e_trigonometry"
+    ],
+    "sections": [
+      "e.radian_measure",
+      "e.degrees_radians_conversion"
+    ],
+    "primary_section": "e.radian_measure",
+    "skills": [
+      "radian-degree-conversion",
+      "calculator-degree-mode"
+    ]
   },
   {
     "id": "2020-P2-Q10",
@@ -7420,9 +7587,26 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n0 < a+b < c+d 且 0 < a+c < b+d\n判断三个不等式哪些一定成立。\n\n【解题步骤】\n条件：a+b < c+d 且 a+c < b+d\n\n命题I \"a < d\"：\n从 a+b < c+d 和 a+c < b+d\n相加：2a+b+c < b+c+2d → 2a < 2d → a < d ✓\n\n命题II \"b < c\"：\n从 a+b < c+d 和 a+c < b+d\n相减：(a+b)-(a+c) < (c+d)-(b+d) → b-c < c-b → 2b < 2c → b < c ✓\n\n命题III \"a+b+c+d > 0\"：\n从 a+b > 0 且 a+c > 0\n相加：2a+b+c > 0\n但需要 a+b+c+d > 0\n从 a+b < c+d → a+b+c+d > 2(a+b) > 0 ✓\n\n三个命题都成立。\n\n【正确答案】H",
+    "analysis": "【题目分析】\n已知 $0<a+b<c+d$ 且 $0<a+c<b+d$，判断哪些结论必然成立。\n\n【解题步骤】\n命题 I：$a<d$。\n由 $a+b<c+d$ 和 $a+c<b+d$ 相加，得\n$$2a+b+c<b+c+2d,$$\n所以 $2a<2d$，即 $a<d$。I 必然成立。\n\n命题 II：$b<c$。\n这不一定成立。反例：取 $a=1,b=3,c=1,d=5$，则\n$$0<4<6,\\qquad 0<2<8,$$\n满足题设，但 $b<c$ 为假。II 不必然成立。\n\n命题 III：$a+b+c+d>0$。\n因为 $a+b>0$ 且 $c+d>a+b$，所以\n$$a+b+c+d>2(a+b)>0.$$\nIII 必然成立。\n\n因此必然成立的是 I 和 III。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Logic"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "a2.inequality_implications",
+      "h.necessary_conditions"
+    ],
+    "primary_section": "a2.inequality_implications",
+    "skills": [
+      "inequality-implication",
+      "counterexample-testing",
+      "must-be-true-statements"
+    ]
   },
   {
     "id": "2020-P2-Q11",
@@ -7443,20 +7627,38 @@ window.QUESTIONS = [
       "H": "(−100, −99)"
     },
     "answer": "G",
-    "analysis": "【题目分析】\n螺旋从(0,0)→(-2,0)→(-2,-2)→(2,-2)→(2,2)→(-4,2)→(-4,-4)→(4,-4)→(4,4)...\n判断哪个点不在螺旋上。\n\n【解题步骤】\n观察螺旋规律：\n- 每圈向外扩展2单位\n- 方向：左→下→右→上→左...\n\n第n圈（n=1,2,3...）：\n- 左边界：x=-2n（向左移动）\n- 下边界：y=-2n\n- 右边界：x=2n\n- 上边界：y=2n（向右后向上）\n\n检查各点：\nA(99,100)：接近边界，100>99，在上边界？\n上边界轨迹：从右边界向上到左边界上方\n(2,2)→(-4,2)经过y=2的水平线（非上边界）\n上边界是(-4,2)→(-4,-4)？不对，这是左边界向下。\n\n重新分析：\n路径点：(-2,0),(-2,-2),(2,-2),(2,2),(-4,2),(-4,-4),(4,-4),(4,4),(-6,4)...\n规律：奇数圈右边界为正偶数，偶数圈左边界为负偶数\n第n圈右边界=2n（当n个\"向右\"完成后）\n\n分析(99,-100)：\n99接近某个右边界？右边界值：2,4,6,8...偶数\n99不是偶数边界值！\n可能在路径上？需要精确匹配。\n\n关键：螺旋上的x,y值都是偶数（±2,±4,±6...）\n(99,-100)：99不是偶数 ✗不在螺旋上？\n\n但奇数圈结束后可能停在某位置？\n(4,4)后箭头指向左，说明继续向左移动。\n向左移动过程中x值从4递减经过3,2,1,0,-1,-2...？\n但题目说\"square spiral\"，应该是离散点还是连续线？\n\n如果连续线，则x,y可以取中间值。\n(99,-100)：检查是否在路径段上\n水平段：y=-100水平线存在？第50圈下边界y=-100\n路径：(-100,-100)→(100,-100)（下边界水平段）\n(99,-100)在下边界段上 ✓\n\n答案B说(99,-100)不在螺旋上？\n\n重新理解：题目显示箭头\"pointing left\"从(4,4)开始\n说明下一段是从(4,4)向左到某个点。\n规律：上边界从右向左移动。\n第n圈上边界y=2n（偶数）\n从(2n,2n)向左到(-2(n+1),2n)\n\n(99,100)：在上边界y=100的水平段？\n第50圈上边界y=100，从(100,100)向左到(-102,100)\n(99,100)在这段上 ✓\n\n(99,-100)：在下边界y=-100的水平段？\n第50圈下边界y=-100，从(-100,-100)向右到(100,-100)\n(99,-100)在这段上 ✓\n\n答案B说(99,-100)不在？\n可能需要更精确分析转折点。\n\n转折点坐标都是偶数，但路径段包含中间值。\n除非题目暗示只有转折点算\"在螺旋上\"？\n\n【正确答案】B",
+    "analysis": "【题目分析】\n螺旋线按坐标轴方向不断向外延伸。需要判断给出的八个点中哪一个不在螺旋线上。\n\n【解题步骤】\n从图形可读出转折点规律：\n$$(0,0)\\to(-2,0)\\to(-2,-2)\\to(2,-2)\\to(2,2)\\to(-4,2)\\to(-4,-4)\\to(4,-4)\\to(4,4)\\to\\cdots$$\n\n因此每一圈的水平、竖直线段交替出现在偶数坐标边界上。\n\n检查选项：\n- $y=100$ 的上方水平线段从 $(100,100)$ 向左延伸到 $(-102,100)$，所以 $(99,100)$ 和 $(-99,100)$ 在螺旋线上。\n- $y=-100$ 的下方水平线段从 $(-100,-100)$ 向右延伸到 $(100,-100)$，所以 $(99,-100)$ 和 $(-99,-100)$ 在螺旋线上。\n- $x=100$ 的右侧竖直线段从 $(100,-100)$ 向上到 $(100,100)$，所以 $(100,99)$ 和 $(100,-99)$ 在螺旋线上。\n- $x=-100$ 的左侧竖直线段从 $(-100,98)$ 向下到 $(-100,-100)$，所以 $(-100,-99)$ 在螺旋线上，但 $(-100,99)$ 不在这一段上。\n\n不在螺旋线上的点是 $(-100,99)$。\n\n【正确答案】G",
     "images": {
       "image": "2020 P2 Q11.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Sequences and Series"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "d.coordinate_spiral_patterns",
+      "d.lattice_points",
+      "c.pattern_generalisation"
+    ],
+    "primary_section": "d.coordinate_spiral_patterns",
+    "skills": [
+      "model-recursive-geometric-pattern",
+      "test-point-on-segment",
+      "generalise-coordinate-rules"
+    ]
   },
   {
     "id": "2020-P2-Q12",
     "year": 2020,
     "paper": 2,
     "num": 12,
-    "topic": "Trigonometry",
+    "topic": "Integration",
     "difficulty": 3,
-    "question": "Which one of",
+    "question": "Which one of A-F correctly completes the following statement?\n\nGiven that $a < b$, and $f(x) > 0$ for all $x$ with $a < x < b$, the trapezium rule produces an overestimate for\n\n$$\\int_a^b f(x)\\,dx$$",
     "options": {
       "A": ". . . **if** $f'(x) > 0$ **and** $f''(x) < 0$ for all $x$ with $a < x < b$",
       "B": ". . . **only if** $f'(x) > 0$ **and** $f''(x) < 0$ for all $x$ with $a < x < b$",
@@ -7466,16 +7668,33 @@ window.QUESTIONS = [
       "F": ". . . **if and only if** $f'(x) < 0$ **and** $f''(x) > 0$ for all $x$ with $a < x < b$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\na < b，f(x) > 0 在 (a,b) 上，梯形法则对 ∫ₐᵇ f(x)dx **高估**。\n判断哪个选项正确描述这一情况。\n\n【梯形法则与凹凸性】\n- 凸函数（f'' > 0，开口向上）：弦在弧下方 → **高估**\n- 凹函数（f'' < 0，开口向下）：弦在弧上方 → **低估**\n\n题目说高估，所以 f 是凸函数（f'' > 0）。\n\n【选项分析】\n题目问的是\"哪个条件正确描述\"，即满足什么条件时梯形法则高估。\n\n选项D：\"...if f'(x) < 0 and f''(x) > 0\"\nf'' > 0 → 凸函数 → 高估 ✓\n\"if\" 表示充分条件：若 f'' > 0（无论单调性如何），梯形法则高估。\n\n其他选项涉及 f'' < 0（凹函数）或\"only if/iff\"（要求充要条件），均不正确。\n\n【正确答案】D",
+    "analysis": "【题目分析】\n题目要判断什么条件能正确补全：梯形法则会对 $\\int_a^b f(x)\\,dx$ 产生高估。\n\n【解题步骤】\n梯形法则的高估/低估主要由图像凹凸性决定，而不是由函数单调性决定。\n\n若 $f''(x)>0$，图像在区间上凸，端点连成的弦通常位于曲线之上，所以梯形面积会高估积分。这个条件是充分的。\n\n但是 $f'(x)>0$ 或 $f'(x)<0$ 都不是必要条件；一个函数可以先降后升，仍然因为 $f''(x)>0$ 而被梯形法则高估。例如 $f(x)=x^2+1$ 在 $[-1,1]$ 上就是这种情况。\n\n所以正确补全应为：如果 $f'(x)<0$ 且 $f''(x)>0$ 对区间内所有 $x$ 成立，则会高估。这里 $f'(x)<0$ 虽不是必要，但和 $f''(x)>0$ 一起作为 if 条件仍然充分。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "f_differentiation"
+    ],
+    "sections": [
+      "g.trapezium_rule",
+      "f.concavity_second_derivative"
+    ],
+    "primary_section": "g.trapezium_rule",
+    "skills": [
+      "relate-convexity-to-trapezium-error",
+      "distinguish-sufficient-and-necessary-conditions"
+    ]
   },
   {
     "id": "2020-P2-Q13",
     "year": 2020,
     "paper": 2,
     "num": 13,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "$f(x)$ is a function for which\n\n$$\\int_{0}^{3} (f(x))^2 \\, dx \\ + \\ \\int_{0}^{3} f(x) \\, dx \\ = \\ \\int_{0}^{1} f(x) \\, dx$$\n\nWhich of the following claims about $f(x)$ is/are **necessarily** true?\n\nI $f(x) \\le 0$ for some $x$ with $1 \\le x \\le 3$\n\nII $\\int_{0}^{3} f(x) \\, dx \\le \\int_{0}^{1} f(x) \\, dx$",
     "options": {
@@ -7487,7 +7706,26 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n∫₀³(f(x))²dx + ∫₀³f(x)dx = ∫₀¹f(x)dx\n判断两个命题是否必然成立。\n\n【解题步骤】\n设I₁=∫₀¹f(x)dx, I₂=∫₁³f(x)dx\n条件：∫₀³f² + (I₁+I₂) = I₁\n→ ∫₀³f² + I₂ = 0\n\n命题I \"f(x)≤0对某个x∈[1,3]\"：\n如果f(x)>0对所有x∈[1,3]，则I₂>0，但∫₀³f²≥0\n条件∫₀³f²+I₂=0不可能（左边>0）\n所以命题I成立 ✓ 必然正确\n\n命题II \"∫₀³f≤∫₀¹f\"：\n即I₁+I₂≤I₁ → I₂≤0\n从条件∫₀³f²+I₂=0，得I₂=-∫₀³f²≤0 ✓\n命题II成立 ✓ 必然正确\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Proof",
+      "Logic"
+    ],
+    "modules": [
+      "g_integration",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "g.definite_integrals",
+      "g.non_negative_integrals",
+      "l.necessary_conditions"
+    ],
+    "primary_section": "g.definite_integrals",
+    "skills": [
+      "rearrange-integral-identity",
+      "use-nonnegative-square-integral",
+      "prove-necessary-claim"
+    ]
   },
   {
     "id": "2020-P2-Q14",
@@ -7504,16 +7742,37 @@ window.QUESTIONS = [
       "D": "I and II"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n等差数列T，首项a，公差d（非零整数）。\n性质P：存在正整数m，使得前m项和等于前2m项和。\n\n【解题方法】\n分析充要条件。\n\n【详细步骤】\n前m项和：S_m = m/2 × [2a + (m-1)d]\n前2m项和：S_{2m} = 2m/2 × [2a + (2m-1)d] = m × [2a + (2m-1)d]\n\nS_m = S_{2m} 意味着：\nm/2 × [2a + (m-1)d] = m × [2a + (2m-1)d]\n\n化简（m ≠ 0）：\n1/2 × [2a + (m-1)d] = 2a + (2m-1)d\n2a + (m-1)d = 4a + 2(2m-1)d\n2a + (m-1)d = 4a + (4m-2)d\n(m-1)d - (4m-2)d = 4a - 2a\n(m-1-4m+2)d = 2a\n(-3m+1)d = 2a\n2a = (1-3m)d\na = (1-3m)d/2\n\n由于a和d是整数，且d≠0：\n若d为偶数，则(1-3m)d是偶数，a为整数 ✓\n若d为奇数，则(1-3m)必须是偶数，即1-3m是偶数，需要m为奇数\n\n分析条件I（ad < 0是充分的）：\nad < 0 意味着 a和d异号\n从 a = (1-3m)d/2，若d>0，则a需要<0，即(1-3m)<0，即m>1/3，m≥1 ✓\n若d<0，则a需要>0，即(1-3m)>0，即m<1/3，但m是正整数，矛盾\n所以条件I不是充分的 ✗\n\n分析条件II（d是偶数是必要的）：\n从上面的分析，d可以是奇数（只要m是奇数）\n反例：d=1（奇数），m=1，a=-1\nS_1 = -1, S_2 = -1+0 = -1 ✓\n条件II不是必要的 ✗\n\n【正确答案】F（两个都不对）",
+    "analysis": "【题目分析】\n等差数列首项 $a$、公差 $d$ 均为非零整数。性质 P 表示存在正整数 $m$，使前 $m$ 项和等于前 $2m$ 项和。\n\n【解题步骤】\n等差数列前 $n$ 项和为\n$$S_n=\\frac n2(2a+(n-1)d).$$\n\n令 $S_m=S_{2m}$：\n$$\\frac m2(2a+(m-1)d)=m(2a+(2m-1)d).$$\n因 $m>0$，化简得\n$$2a+(m-1)d=4a+(4m-2)d,$$\n所以\n$$2a=(1-3m)d.$$\n\n命题 I：$ad<0$ 是否充分？不充分。反例取 $a=-2,d=1$，则 $ad<0$，但由 $2a=(1-3m)d$ 得 $-4=1-3m$，所以 $m=\\frac53$，不是正整数，性质 P 不成立。\n\n命题 II：$d$ 为偶数是否必要？不必要。反例取 $a=-1,d=1,m=1$，则\n$$2a=-2=(1-3)d,$$\n性质 P 成立，但 $d=1$ 是奇数。\n\n两个命题都不真。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Number Theory",
+      "Logic"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "k_number_theory_combinatorics",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "c.arithmetic_sequences",
+      "c.sum_formulae",
+      "k.integer_conditions",
+      "h.necessary_sufficient"
+    ],
+    "primary_section": "c.arithmetic_sequences",
+    "skills": [
+      "derive-arithmetic-sum-condition",
+      "test-sufficiency",
+      "construct-counterexample"
+    ]
   },
   {
     "id": "2020-P2-Q15",
     "year": 2020,
     "paper": 2,
     "num": 15,
-    "topic": "Algebra",
+    "topic": "Trigonometry",
     "difficulty": 3,
     "question": "Which one of the following is a **necessary and sufficient** condition for\n\n$$\\sum_{k=1}^{n} \\sin\\left(\\frac{k\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$$\n\nto be true?",
     "options": {
@@ -7527,14 +7786,32 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\nΣ(k=1 to n) sin(kπ/3) = √3/2\n求充要条件。\n\n【解题步骤】\n计算sin(kπ/3)周期值：\nk=1: sin(π/3)=√3/2\nk=2: sin(2π/3)=√3/2\nk=3: sin(π)=0\nk=4: sin(4π/3)=-√3/2\nk=5: sin(5π/3)=-√3/2\nk=6: sin(2π)=0\n\n周期为6，每周期和=√3/2+√3/2+0-√3/2-√3/2+0=0\n\nΣ(k=1 to n) = √3/2 当n=1 ✓\n当n=2: Σ=√3/2+√3/2=√3 ✗\n当n=3: Σ=√3 ✗\n当n=4: Σ=√3-√3/2=√3/2 ✓\n当n=5: Σ=√3/2-√3/2=0 ✗\n当n=6: Σ=0 ✗\n当n=7: Σ=√3/2 ✓\n\n规律：n=1,4,7,10...即n≡1(mod3)时Σ=√3/2\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sequences and Series"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "e.trig_values_periodicity",
+      "c.finite_sums",
+      "k.modular_patterns"
+    ],
+    "primary_section": "e.trig_values_periodicity",
+    "skills": [
+      "use-standard-angle-values",
+      "exploit-periodicity",
+      "convert-pattern-to-congruence-condition"
+    ]
   },
   {
     "id": "2020-P2-Q16",
     "year": 2020,
     "paper": 2,
     "num": 16,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial f :\n\n$$\\frac{d}{dx} \\left( \\int_{0}^{x} f(t) \\, dt \\right) = f(x)$$\n\nA student calculates $\\frac{d}{dx} \\left( \\int_{x}^{2x} t^2 \\, dt \\right)$ as follows:\n\n(I) $\\int_{x}^{2x} t^2 \\, dt = \\int_{0}^{2x} t^2 \\, dt - \\int_{0}^{x} t^2 \\, dt$\n\n(II) By FTC, $\\frac{d}{dx} \\left( \\int_{0}^{x} t^2 \\, dt \\right) = x^2$\n\n(III) By FTC, $\\frac{d}{dx} \\left( \\int_{0}^{2x} t^2 \\, dt \\right) = (2x)^2 = 4x^2$\n\n(IV) So $\\frac{d}{dx} \\left( \\int_{x}^{2x} t^2 \\, dt \\right) = 4x^2 - x^2$\n\n(V) giving $\\frac{d}{dx} \\left( \\int_{x}^{2x} t^2 \\, dt \\right) = 3x^2$\n\nWhich of the following best describes the student’s calculation?",
     "options": {
@@ -7546,16 +7823,36 @@ window.QUESTIONS = [
       "F": "The calculation is incorrect, and the first error occurs on line (V)."
     },
     "answer": "D",
-    "analysis": "【题目分析】\n学生计算 d/dx [∫_x^{2x} t² dt]，分析哪一步首次出错。\n\n【解题方法】\n验证每一步。\n\n【详细步骤】\n(I) ∫_x^{2x} t² dt = ∫_0^{2x} t² dt - ∫_0^x t² dt\n积分限拆分正确 ✓\n\n(II) d/dx [∫_0^x t² dt] = x²\nFTC应用正确 ✓\n\n(III) d/dx [∫_0^{2x} t² dt] = (2x)² = 4x²\n错误！需要用链式法则：\nd/dx [∫_0^{2x} t² dt] = (2x)² × d/dx(2x) = 4x² × 2 = 8x²\n\n正确答案应该是 8x² - x² = 7x²\n\n【正确答案】D（第III步首次出错）",
+    "analysis": "【题目分析】\n学生计算 d/dx [∫_x^{2x} t² dt]，分析哪一步首次出错。\n\n【解题方法】\n验证每一步。\n\n【详细步骤】\n(I) ∫_x^{2x} t² dt = ∫_0^{2x} t² dt - ∫_0^x t² dt\n积分限拆分正确 ✓\n\n(II) d/dx [∫_0^x t² dt] = x²\nFTC应用正确 ✓\n\n(III) d/dx [∫_0^{2x} t² dt] = (2x)² = 4x²\n错误！需要用链式法则：\nd/dx [∫_0^{2x} t² dt] = (2x)² × d/dx(2x) = 4x² × 2 = 8x²\n\n正确答案应该是 8x² - x² = 7x²\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Differentiation",
+      "Proof"
+    ],
+    "modules": [
+      "g_integration",
+      "f_differentiation"
+    ],
+    "sections": [
+      "g.fundamental_theorem_calculus",
+      "g.variable_limits",
+      "f.chain_rule"
+    ],
+    "primary_section": "g.fundamental_theorem_calculus",
+    "skills": [
+      "apply-ftc",
+      "differentiate-variable-limit-integral",
+      "chain-rule",
+      "find-first-error"
+    ]
   },
   {
     "id": "2020-P2-Q17",
     "year": 2020,
     "paper": 2,
     "num": 17,
-    "topic": "Trigonometry",
+    "topic": "Number Theory",
     "difficulty": 3,
     "question": "A set of six **distinct** integers is split into two sets of three.\n\nThe first set of three integers has a mean of 10 and a median of 8.\nThe second set of three integers has a mean of 12 and a median of 9.\nWhat is the smallest possible range of the set of all six integers?",
     "options": {
@@ -7567,9 +7864,27 @@ window.QUESTIONS = [
       "F": "15"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n六整数分两组：\n组1：均值10，中位数8\n组2：均值12，中位数9\n求最小range（六数范围）。\n\n【解题步骤】\n组1（均值10中位数8）：\n三个数排序：a≤8≤c\n均值10 → a+b+c=30，中位数b=8 → a+c=22\n最小range：选最小a和最大c\na尽量小，c尽量大，但要六个数distinct\n组1为{a,8,c}\n\n组2（均值12中位数9）：\n三个数排序：d≤9≤f\n均值12 → d+e+f=36，中位数e=9 → d+f=27\n\n六数最小range = max(a,b,c,d,e,f)-min(...)\n=min(max(c,f))-max(min(a,d))\n\n优化：让a,d尽量接近，c,f尽量接近\n组1：a+c=22，选{6,8,16}（range=10）\n组2：d+f=27，选{7,9,20}（range=13）\n六数{6,7,8,9,16,20}，range=20-6=14\n\n能否更小？\n组1：{7,8,15}，组2：{6,9,21} → range=21-6=15 ✗ 更大\n组1：{5,8,17}，组2：{10,9,17}冲突（17重复）\n\n尝试其他组合：\n组1：{5,8,17}或{6,8,16}或{7,8,15}\n组2：{9-e,f关系}\n\n最优：组1{6,8,16},组2{7,9,20}\n六数{6,7,8,9,16,20},range=14\n\n但答案F=15，可能我优化有误或题目有其他约束。\n\n【正确答案】F",
+    "analysis": "【题目分析】\n六个互不相同的整数分成两组三个。第一组均值为 10、中位数为 8；第二组均值为 12、中位数为 9。求六个数整体的最小可能 range。\n\n【解题步骤】\n第一组可写为 $a,8,c$，其中 $a<8<c$ 且\n$$a+8+c=30,$$\n所以 $a+c=22$。因此 $a\\le 7$，$c\\ge 15$。\n\n第二组可写为 $d,9,f$，其中 $d<9<f$ 且\n$$d+9+f=36,$$\n所以 $d+f=27$。若 $d=8$，会与第一组的中位数 8 重复；因此 $d\\le 7$，从而 $f\\ge 20$。\n\n若第一组取 $a=7$，则第二组不能再取 $d=7$，只能 $d\\le 6$，于是 $f\\ge 21$，range 至少为 $21-7=14$。\n若第一组取 $a\\le 6$，则由于 $f\\ge 20$，range 至少为 $20-6=14$。\n\n所以整体 range 不可能小于 14。构造\n$$\\{6,8,16\\},\\qquad \\{7,9,20\\}$$\n满足全部条件，整体 range 为 $20-6=14$。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "k_number_theory_combinatorics",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "k.integer_constraints",
+      "a2.constraint_optimisation"
+    ],
+    "primary_section": "k.integer_constraints",
+    "skills": [
+      "integer-case-analysis",
+      "distinctness-constraint",
+      "minimise-range",
+      "mean-median-equations"
+    ]
   },
   {
     "id": "2020-P2-Q18",
@@ -7590,16 +7905,37 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "G",
-    "analysis": "【题目分析】\nf(x)=ax³+bx²+cx+d, g(x)=px³+qx²+rx+s\nf(x)-g(x)>0 对所有实数x。\n判断三个命题。\n\n【解题步骤】\n设h(x)=f(x)-g(x)=(a-p)x³+(b-q)x²+(c-r)x+(d-s)\n\nh(x)>0对所有x成立。\n\n命题I \"a>p\"：\n如果a≠p，h(x)是三次多项式。\n三次多项式当x→±∞时趋向±∞（符号相反），不可能对所有x保持>0。\n所以必须有a=p（三次项抵消）。\n如果a=p，则a>p不成立。\n所以I不是必然成立的。✗\n\n命题II \"若b=q则c=r\"：\n如果b=q且a=p，h(x)=(c-r)x+(d-s)，是一次函数。\n一次函数不可能对所有x保持>0（一端趋向-∞）。\n所以b=q的前提与h(x)>0对所有x矛盾（前提不可能成立）。\n在逻辑上，\"若P则Q\"当P为假时自动为真（空真）。\n所以II是必然成立的。✓\n\n命题III \"d>s\"：\nh(0)=d-s>0（因为h(x)>0对所有x，包括x=0）\n所以d>s必然成立。✓\n\nII和III必然成立。\n\n【正确答案】G",
+    "analysis": "【题目分析】\nf(x)=ax³+bx²+cx+d, g(x)=px³+qx²+rx+s\nf(x)-g(x)>0 对所有实数x。\n判断三个命题。\n\n【解题步骤】\n设h(x)=f(x)-g(x)=(a-p)x³+(b-q)x²+(c-r)x+(d-s)\n\nh(x)>0对所有x成立。\n\n命题I \"a>p\"：\n如果a≠p，h(x)是三次多项式。\n三次多项式当x→±∞时趋向±∞（符号相反），不可能对所有x保持>0。\n所以必须有a=p（三次项抵消）。\n如果a=p，则a>p不成立。\n所以I不是必然成立的。✗\n\n命题II \"若b=q则c=r\"：\n如果 $b=q$，又已知必须有 $a=p$，则\n$h(x)=(c-r)x+(d-s).$\n若 $c\\ne r$，这是一次函数，不可能对所有实数 $x$ 都保持正值。因此必须有 $c=r$。所以 II 必然成立。✓\n\n命题III \"d>s\"：\nh(0)=d-s>0（因为h(x)>0对所有x，包括x=0）\n所以d>s必然成立。✓\n\nII和III必然成立。\n\n【正确答案】G",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Logic"
+    ],
+    "modules": [
+      "a1_algebra_basics",
+      "i_functions_graphs",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "a1.polynomial_coefficients",
+      "i.polynomial_positivity",
+      "b.necessary_conditions"
+    ],
+    "primary_section": "a1.polynomial_coefficients",
+    "skills": [
+      "leading-coefficient-cancellation",
+      "polynomial-sign-reasoning",
+      "necessary-condition",
+      "evaluate-at-zero"
+    ]
   },
   {
     "id": "2020-P2-Q19",
     "year": 2020,
     "paper": 2,
     "num": 19,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown. Two people are called *neighbours* if they are sitting in squares that share a side. (People in diagonally adjacent squares, which only have a point in common, are not called neighbours.)\n\nEach of the nine people in the grid is either a truth-teller who **always** tells the truth, or a liar who **always** lies.\n\nEvery person in the grid says: ‘My neighbours are all liars’.\n\nGiven only this information, what are the **smallest** number and the **largest** number of people who could be telling the truth?",
     "options": {
@@ -7613,18 +7949,37 @@ window.QUESTIONS = [
       "H": "Smallest: 5, Largest: 5"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n3×3网格中9人，每人说我的邻居都是说谎者。\n邻居定义：上下左右相邻（对角不算）。\n每人要么总说真话，要么总说谎。\n\n【解题方法】\n逻辑推理 + 情况分析。\n\n【详细步骤】\n网格位置分类：\n- 角落（4人）：2个邻居\n- 边上（4人）：3个邻居  \n- 中心（1人）：4个邻居\n\n设说真话者数T，说谎者数L = 9-T\n\n每人说我的邻居都是说谎者：\n- 若说真话：所有邻居确实是说谎者\n- 若说谎者：至少有一个邻居是说真话者\n\n最大说真话人数：\n- 若角落说真话，其邻居（边上+中心）必须说谎\n- 最优策略：让不相邻的说真话\n- 格子染色：黑白相间，同色格子互不相邻\n- 黑格：5个，白格：4个\n- 如果所有黑格都说真话，每个黑格的邻居都是白格（说谎者）\n- 最大T = 5 ✓\n\n最小说真话人数：\n- 中心说真话：4个邻居都说谎，边上邻居说谎需要至少一个邻居说真话，这些可以是角落的邻居\n- 尝试T=3：中心说真话，对角两个角落说真话\n  - 中心说真话 → 四边都说谎\n  - 角落说真话 → 其邻居（边上）说谎 ✓（边上已经是说谎者）\n  - 但边上的说谎者需要有说真话的邻居...边上邻居是中心（说真话）✓\n- 最小T = 3 ✓\n\n【正确答案】E（最小3，最大5）",
+    "analysis": "【题目分析】\n3×3 网格中每个人都说“我的邻居全是说谎者”。真话者说真话，说谎者说假话。求真话者人数的最小值和最大值。\n\n【解题步骤】\n真话者的所有邻居都必须是说谎者，因此两个真话者不能上下左右相邻。另一方面，每个说谎者说“我的邻居全是说谎者”是假话，所以每个说谎者至少要有一个真话者邻居。\n\n这等价于在 3×3 网格中选一组互不相邻、且能邻接覆盖所有未选格子的格子。\n\n最大值：棋盘染色后，同色格子互不相邻。取四个角和中心这 5 个格子为真话者，其余四个边中格都是说谎者，且每个说谎者都有真话者邻居。因此最大值为 5。\n\n最小值：2 个真话者最多无法覆盖所有 9 个格子中其余的说谎者；可以逐类检查，角、边中、中心两两组合时，总会留下至少一个说谎者没有真话者邻居。因此至少需要 3 个。\n\n构造 3 个真话者可行：取左上角、右中格、左下角为真话者。它们互不相邻；其余每个格子都至少邻接其中一个真话者，所以都是说谎者且陈述为假。\n\n所以真话者人数最小为 3，最大为 5。\n\n【正确答案】E",
     "images": {
       "image": "2020 P2 Q19.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Combinatorics"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "b.truth_tellers_liars",
+      "b.truth_counting",
+      "k.grid_configurations"
+    ],
+    "primary_section": "b.truth_tellers_liars",
+    "skills": [
+      "truth-teller-liar-reasoning",
+      "grid-case-analysis",
+      "truth-counting",
+      "extremal-configuration"
+    ]
   },
   {
     "id": "2020-P2-Q20",
     "year": 2020,
     "paper": 2,
     "num": 20,
-    "topic": "Algebra",
+    "topic": "Logic",
     "difficulty": 3,
     "question": "$x$ is a real number and f is a function.\n\nGiven that **exactly one** of the following statements is true, which one is it?",
     "options": {
@@ -7636,9 +7991,29 @@ window.QUESTIONS = [
       "F": "$f(x) \\ge 0$ **if and only if** $x < 0$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n六个逻辑命题，只有一个是真的。找出那个。\n\n【解题步骤】\n假设每个命题唯一真，检验其他命题必须假。\n\n命题A \"x≥0 only if f(x)<0\"：\n含义：x≥0 → f(x)<0\n如果A真，其他假：\nB \"x<0 if f(x)≥0\"：即f(x)≥0 → x<0（A的逆否命题）\n如果A真，B也真 ✗ 矛盾，A不能唯一真\n\n命题B \"x<0 if f(x)≥0\"：\n含义：f(x)≥0 → x<0\n如果B真，其他假：\nA: x≥0 → f(x)<0（B的逆否）→ A也真 ✗\nB不能唯一真\n\n命题C \"x≥0 only if f(x)≥0\"：\n含义：x≥0 → f(x)≥0\nD \"f(x)<0 if x<0\"：即x<0 → f(x)<0\nE \"f(x)≥0 only if x≥0\"：即f(x)≥0 → x≥0\nF \"f(x)≥0 iff x<0\"：即f(x)≥0 ↔ x<0\n\n检验F唯一真：\nF真 → f≥0 ↔ x<0\n检验其他命题假：\nA: x≥0 → f<0？从F，x<0时f≥0，x≥0时f<0或f<0？\nF说x<0 ↔ f≥0，即x≥0 ↔ f<0 ✓ A也成立 ✗\n\n检验C唯一真：\nC真 → x≥0 → f≥0\n其他假：\nB: f≥0 → x<0，从C的逆否：f<0 → x<0 ✗ 不一致\nD: x<0 → f<0，从C不能推出 ✗ C下x<0时f可能≥0或<0\n\n检验B唯一真（重新分析）：\nB: f≥0 → x<0\n逆否：x≥0 → f<0（与A相同）\n所以B真时A也真 ✗\n\n关键观察：A和B互为逆否命题，必然同真同假。\n所以A和B都不能唯一真。\n\n检查D \"f(x)<0 if x<0\"：\n含义：x<0 → f(x)<0\n逆否：f≥0 → x≥0\n如果D真，检验其他：\nA: x≥0 → f<0？从D的逆否：f≥0 → x≥0，不能推出A ✗ A假 ✓\nB: f≥0 → x<0？从D的逆否得f≥0 → x≥0，与B矛盾 ✗ B假 ✓\nC: x≥0 → f≥0？从D不能推出 ✗ C假 ✓\nE: f≥0 → x≥0？这与D的逆否相同！E真 ✗\n\nD不能唯一真（E也真）\n\n检验E \"f≥0 only if x≥0\"：\n即f≥0 → x≥0\n这是D的逆否，所以E和D同真同假 ✗\n\n检验B唯一真已排除（A也真）。\n\n答案可能是B，因为题目理解有特殊性。\n可能是\"only one\"指在特定x,f值下只有一个命题成立？\n\n【正确答案】B",
+    "analysis": "【题目分析】\n六个命题中恰有一个为真，要求找出这个真命题。关键是把 only if、if、if and only if 都翻译成蕴含关系。\n\n【解题步骤】\nA 表示 $x\\ge0\\Rightarrow f(x)<0$。\nB 表示 $f(x)\\ge0\\Rightarrow x<0$。\nA 和 B 是互为逆否的同一命题，所以必然同真同假，不能有其中一个唯一为真。\n\nD 表示 $x<0\\Rightarrow f(x)<0$。\nE 表示 $f(x)\\ge0\\Rightarrow x\\ge0$。\nD 和 E 也是互为逆否的同一命题，所以也不能有其中一个唯一为真。\n\nF 表示 $f(x)\\ge0\\Leftrightarrow x<0$。如果 F 为真，则 B 也为真，所以 F 也不可能唯一为真。\n\n剩下唯一可能的是 C。并且 C 的确可以唯一为真：例如取 $f(x)=|x|$，则 $x\\ge0$ 时 $f(x)\\ge0$，所以 C 真；而 A、B、D、E、F 都为假。\n\n因此唯一为真的命题是 C。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "h_logic_counterexamples",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "b.implication_contraposition",
+      "b.unique_true_statement",
+      "i.function_sign_conditions"
+    ],
+    "primary_section": "b.implication_contraposition",
+    "skills": [
+      "translate-only-if",
+      "use-contrapositive",
+      "eliminate-equivalent-statements",
+      "construct-example-function"
+    ]
   },
   {
     "id": "2021-P1-Q1",
