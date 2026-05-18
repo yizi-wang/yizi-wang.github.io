@@ -1663,7 +1663,20 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n本题考点为积分求原函数。已知导数 $\\frac{dy}{dx}$ 的表达式，需要对各项分别积分，再利用初始条件 $x=1$ 时 $y=5$ 确定积分常数。\n\n【解题步骤】\n第一步：化简被积函数。将分式项写成幂的形式：\n$$\\frac{dy}{dx} = 3x^2 - \\frac{2-3x}{x^3} = 3x^2 - \\frac{2}{x^3} + \\frac{3x}{x^3} = 3x^2 - 2x^{-3} + 3x^{-2}$$\n\n第二步：逐项积分。利用幂函数积分公式 $\\int x^n dx = \\frac{x^{n+1}}{n+1}$：\n$$y = \\int (3x^2 - 2x^{-3} + 3x^{-2}) dx = x^3 - 2\\cdot\\frac{x^{-2}}{-2} + 3\\cdot\\frac{x^{-1}}{-1} + C = x^3 + x^{-2} - 3x^{-1} + C$$\n\n第三步：代入初始条件求 $C$。当 $x=1$ 时 $y=5$：\n$$5 = 1^3 + 1^{-2} - 3\\cdot 1^{-1} + C = 1 + 1 - 3 + C = -1 + C$$\n解得 $C = 6$。\n\n因此 $y = x^3 + x^{-2} - 3x^{-1} + 6$，对应选项 C。\n\n【快捷思路】\n逐项积分后代入 $x=1$ 即可求出常数项，无需验证全部选项。注意 $(2-3x)/x^3$ 的符号拆分容易出错。\n\n【正确答案】C\n",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "g_integration"
+    ],
+    "sections": [
+      "g.differential_equations.power_functions"
+    ],
+    "primary_section": "g.differential_equations.power_functions",
+    "skills": [
+      "split-rational-expression",
+      "power-rule-integration",
+      "constant-of-integration",
+      "initial-condition"
+    ]
   },
   {
     "id": "2017-P1-Q2",
@@ -1687,6 +1700,20 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "f.second_derivatives",
+      "a1.algebraic_expansion"
+    ],
+    "primary_section": "f.second_derivatives",
+    "skills": [
+      "expand-before-differentiating",
+      "negative-power-rules",
+      "second-derivative-evaluation"
     ]
   },
   {
@@ -1705,12 +1732,25 @@ window.QUESTIONS = [
       "E": "$40 \\frac{1}{2}$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n本题考点为坐标几何中的直线方程与面积计算。需要求垂直直线的方程、两直线交点，再求与 $x$ 轴围成的三角形面积。\n\n【解题步骤】\n第一步：确定第二条直线的方程。直线 $l: y = 6-2x$ 的斜率为 $-2$，与之垂直的直线斜率为 $\\frac{1}{2}$。过点 $(-6,0)$，方程为：\n$$y - 0 = \\frac{1}{2}(x + 6) \\quad \\Rightarrow \\quad y = \\frac{1}{2}x + 3$$\n\n第二步：求两直线与 $x$ 轴的交点。\n直线 $l$ 与 $x$ 轴交于 $y=0 \\Rightarrow x=3$，即点 $A(3,0)$。\n第二条直线与 $x$ 轴交于 $y=0 \\Rightarrow x=-6$，即点 $B(-6,0)$。\n\n第三步：求两直线的交点。联立方程：\n$$6 - 2x = \\frac{1}{2}x + 3 \\quad \\Rightarrow \\quad \\frac{5}{2}x = 3 \\quad \\Rightarrow \\quad x = \\frac{6}{5}$$\n代入得 $y = \\frac{1}{2}\\cdot\\frac{6}{5} + 3 = \\frac{18}{5}$，即交点 $C\\left(\\frac{6}{5}, \\frac{18}{5}\\right)$。\n\n第四步：计算三角形面积。底边 $AB$ 长为 $3 - (-6) = 9$，高为交点的纵坐标 $\\frac{18}{5}$：\n$$\\text{面积} = \\frac{1}{2} \\times 9 \\times \\frac{18}{5} = \\frac{81}{5} = 16\\frac{1}{5}$$\n\n对应选项 A。\n\n【快捷思路】\n底边长度 $9$ 可直接读出（两直线与 $x$ 轴交点横坐标之差），只需计算交点纵坐标代入面积公式即可。\n\n【正确答案】A\n Geometry",
+    "analysis": "【题目分析】\n本题考点为坐标几何中的直线方程与面积计算。需要求垂直直线的方程、两直线交点，再求与 $x$ 轴围成的三角形面积。\n\n【解题步骤】\n第一步：确定第二条直线的方程。直线 $l: y = 6-2x$ 的斜率为 $-2$，与之垂直的直线斜率为 $\\frac{1}{2}$。过点 $(-6,0)$，方程为：\n$$y - 0 = \\frac{1}{2}(x + 6) \\quad \\Rightarrow \\quad y = \\frac{1}{2}x + 3$$\n\n第二步：求两直线与 $x$ 轴的交点。\n直线 $l$ 与 $x$ 轴交于 $y=0 \\Rightarrow x=3$，即点 $A(3,0)$。\n第二条直线与 $x$ 轴交于 $y=0 \\Rightarrow x=-6$，即点 $B(-6,0)$。\n\n第三步：求两直线的交点。联立方程：\n$$6 - 2x = \\frac{1}{2}x + 3 \\quad \\Rightarrow \\quad \\frac{5}{2}x = 3 \\quad \\Rightarrow \\quad x = \\frac{6}{5}$$\n代入得 $y = \\frac{1}{2}\\cdot\\frac{6}{5} + 3 = \\frac{18}{5}$，即交点 $C\\left(\\frac{6}{5}, \\frac{18}{5}\\right)$。\n\n第四步：计算三角形面积。底边 $AB$ 长为 $3 - (-6) = 9$，高为交点的纵坐标 $\\frac{18}{5}$：\n$$\\text{面积} = \\frac{1}{2} \\times 9 \\times \\frac{18}{5} = \\frac{81}{5} = 16\\frac{1}{5}$$\n\n对应选项 A。\n\n【快捷思路】\n底边长度 $9$ 可直接读出（两直线与 $x$ 轴交点横坐标之差），只需计算交点纵坐标代入面积公式即可。\n\n【正确答案】A",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Graphs",
       "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.perpendicular_lines_area"
+    ],
+    "primary_section": "d.perpendicular_lines_area",
+    "skills": [
+      "perpendicular-gradient",
+      "line-equation-from-point",
+      "simultaneous-linear-equations",
+      "triangle-area-from-base-height"
     ]
   },
   {
@@ -1734,6 +1774,20 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Functions"
+    ],
+    "modules": [
+      "a1_algebra_basics",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a1.remainder_theorem",
+      "a2.remainder_theorem"
+    ],
+    "primary_section": "a1.remainder_theorem",
+    "skills": [
+      "remainder-theorem",
+      "substitution-at-root",
+      "parameter-solving"
     ]
   },
   {
@@ -1757,7 +1811,21 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n求同时满足 $x^2 - 8x + 12 < 0$ 和 $2x + 1 > 9$ 的解集 $S$，并从选项中找出等价表示 $S$ 的单一不等式。本题核心在于先分别解两个不等式取交集，再将区间形式反向构造为二次不等式。\n\n【解题步骤】\n第一步，解二次不等式 $x^2 - 8x + 12 < 0$。因式分解得 $(x-2)(x-6) < 0$，由开口向上的抛物线图像可知解为 $2 < x < 6$。\n\n第二步，解线性不等式 $2x + 1 > 9$，得 $x > 4$。\n\n第三步，取交集：$S = (2, 6) \\cap (4, \\infty) = (4, 6)$，即 $4 < x < 6$。\n\n第四步，将区间 $4 < x < 6$ 反向构造为二次不等式。由 $x - 4 > 0$ 且 $x - 6 < 0$，得 $(x-4)(x-6) < 0$，展开即 $x^2 - 10x + 24 < 0$，对应选项 C。\n\n【快捷思路】\n不必逐一验证各选项，直接从交集 $4 < x < 6$ 反推：两根为 $4$ 和 $6$、开口向上的二次式在两根之间为负，即 $(x-4)(x-6) < 0$，展开对比即可。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a2.inequality_intersections",
+      "a2.quadratic_inequalities"
+    ],
+    "primary_section": "a2.inequality_intersections",
+    "skills": [
+      "solve-quadratic-inequality",
+      "linear-inequality",
+      "interval-intersection",
+      "construct-quadratic-from-roots"
+    ]
   },
   {
     "id": "2017-P1-Q6",
@@ -1776,9 +1844,23 @@ window.QUESTIONS = [
       "F": "$\\frac{80}{3}$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n圆 $x^2 + y^2 = 144$ 的一条切线过点 $(20, 0)$ 且与正 $y$ 轴相交，求切线与 $y$ 轴交点的纵坐标。本题利用切线到圆心的距离等于半径这一核心几何条件求解。\n\n【解题步骤】\n圆以原点为圆心，半径 $r = 12$。设切线为 $y = m(x - 20)$，其一般式为 $mx - y - 20m = 0$。\n\n利用切线条件：圆心到直线距离等于半径，即\n$$\\frac{|{-20m}|}{\\sqrt{m^2 + 1}} = 12$$\n两边平方整理得 $400m^2 = 144(m^2 + 1)$，即 $256m^2 = 144$，解得 $m = \\pm \\frac{3}{4}$。\n\n由于切线与正 $y$ 轴相交（$y$ 轴截距 $> 0$），由 $c = -20m > 0$ 可知 $m < 0$，故 $m = -\\frac{3}{4}$。\n\n截距 $c = -20 \\times (-\\frac{3}{4}) = 15$，即切线与 $y$ 轴交于 $(0, 15)$。\n\n【快捷思路】\n利用相似三角形可更快求解：设切线与 $y$ 轴交点为 $P(0, k)$，切点为 $Q$，原点为 $O$。$\\triangle OQR$ 中 $OR = 20$，$OQ = 12$，由勾股定理得 $QR = 16$（3-4-5 三角形）。由 $\\triangle PQO \\sim \\triangle OQR$，得 $\\frac{k}{12} = \\frac{20}{16}$，故 $k = 15$。\n\n【正确答案】B Geometry",
+    "analysis": "【题目分析】\n圆 $x^2 + y^2 = 144$ 的一条切线过点 $(20, 0)$ 且与正 $y$ 轴相交，求切线与 $y$ 轴交点的纵坐标。本题利用切线到圆心的距离等于半径这一核心几何条件求解。\n\n【解题步骤】\n圆以原点为圆心，半径 $r = 12$。设切线为 $y = m(x - 20)$，其一般式为 $mx - y - 20m = 0$。\n\n利用切线条件：圆心到直线距离等于半径，即\n$$\\frac{|{-20m}|}{\\sqrt{m^2 + 1}} = 12$$\n两边平方整理得 $400m^2 = 144(m^2 + 1)$，即 $256m^2 = 144$，解得 $m = \\pm \\frac{3}{4}$。\n\n由于切线与正 $y$ 轴相交（$y$ 轴截距 $> 0$），由 $c = -20m > 0$ 可知 $m < 0$，故 $m = -\\frac{3}{4}$。\n\n截距 $c = -20 \\times (-\\frac{3}{4}) = 15$，即切线与 $y$ 轴交于 $(0, 15)$。\n\n【快捷思路】\n利用相似三角形可更快求解：设外点为 $R(20,0)$，切线与 $y$ 轴交点为 $P(0,k)$，切点为 $Q$，原点为 $O$。$\\triangle OQR$ 中 $OR = 20$，$OQ = 12$，由勾股定理得 $QR = 16$（3-4-5 三角形）。由 $\\triangle PQO \\sim \\triangle OQR$，得 $\\frac{k}{12} = \\frac{20}{16}$，故 $k = 15$。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.circle_tangents",
+      "d.point_to_line_distance"
+    ],
+    "primary_section": "d.circle_tangents",
+    "skills": [
+      "tangent-condition",
+      "point-to-line-distance",
+      "y-intercept",
+      "slope-selection"
+    ]
   },
   {
     "id": "2017-P1-Q7",
@@ -1795,9 +1877,23 @@ window.QUESTIONS = [
       "D": "$\\frac{185}{8}$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n已知等差数列前三项为 $p, q, p^2$（$p < 0$），等比数列前三项为 $p, p^2, q$，求等差数列前 10 项和。本题需要联立两种数列的定义，建立关于 $p$ 的方程。\n\n【解题步骤】\n先利用等比数列：公比 $r = \\frac{p^2}{p} = p$，第三项 $q = p \\cdot r = p^3$。\n\n再利用等差数列：公差 $d = q - p$，第三项 $p + 2d = p^2$。代入 $q = p^3$ 得：\n$$p + 2(p^3 - p) = p^2 \\implies 2p^3 - p^2 - p = 0$$\n因式分解：$p(2p+1)(p-1) = 0$。\n\n由条件 $p < 0$ 且 $p \\neq 0$，得 $p = -\\frac{1}{2}$。进而 $q = p^3 = -\\frac{1}{8}$，公差 $d = q - p = \\frac{3}{8}$。\n\n等差数列前 $n$ 项和公式 $S_n = \\frac{n}{2}[2a + (n-1)d]$，代入 $n = 10$，$a = -\\frac{1}{2}$，$d = \\frac{3}{8}$：\n$$S_{10} = 5 \\times \\left(-1 + \\frac{27}{8}\\right) = 5 \\times \\frac{19}{8} = \\frac{95}{8}$$\n\n【快捷思路】\n联立等差与等比条件直接消去 $q$ 和 $d$：由等比得 $q = p^3$，由等差得 $2q = p + p^2$，联立即 $2p^3 - p^2 - p = 0$，解出 $p$ 后代入求和公式。\n\n【正确答案】B and Series",
+    "analysis": "【题目分析】\n已知等差数列前三项为 $p, q, p^2$（$p < 0$），等比数列前三项为 $p, p^2, q$，求等差数列前 10 项和。本题需要联立两种数列的定义，建立关于 $p$ 的方程。\n\n【解题步骤】\n先利用等比数列：公比 $r = \\frac{p^2}{p} = p$，第三项 $q = p \\cdot r = p^3$。\n\n再利用等差数列：公差 $d = q - p$，第三项 $p + 2d = p^2$。代入 $q = p^3$ 得：\n$$p + 2(p^3 - p) = p^2 \\implies 2p^3 - p^2 - p = 0$$\n因式分解：$p(2p+1)(p-1) = 0$。\n\n由条件 $p < 0$ 且 $p \\neq 0$，得 $p = -\\frac{1}{2}$。进而 $q = p^3 = -\\frac{1}{8}$，公差 $d = q - p = \\frac{3}{8}$。\n\n等差数列前 $n$ 项和公式 $S_n = \\frac{n}{2}[2a + (n-1)d]$，代入 $n = 10$，$a = -\\frac{1}{2}$，$d = \\frac{3}{8}$：\n$$S_{10} = 5 \\times \\left(-1 + \\frac{27}{8}\\right) = 5 \\times \\frac{19}{8} = \\frac{95}{8}$$\n\n【快捷思路】\n联立等差与等比条件直接消去 $q$ 和 $d$：由等比得 $q = p^3$，由等差得 $2q = p + p^2$，联立即 $2p^3 - p^2 - p = 0$，解出 $p$ 后代入求和公式。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.arithmetic_geometric_links",
+      "c.arithmetic_series_sum"
+    ],
+    "primary_section": "c.arithmetic_geometric_links",
+    "skills": [
+      "sequence-definition",
+      "simultaneous-conditions",
+      "factorisation",
+      "arithmetic-sum"
+    ]
   },
   {
     "id": "2017-P1-Q8",
@@ -1816,7 +1912,25 @@ window.QUESTIONS = [
     "answer": "A",
     "analysis": "【题目分析】\n求 $(1 - 2\\sin x)\\cos x \\ge 0$ 在 $[0, \\pi]$ 上的完整解集。本题需将乘积不等式拆分为两个因式的符号分析，利用三角函数的单调性分段判断。\n\n【解题步骤】\n两因式乘积非负，即同号或至少一个为零。先确定零点：\n$1 - 2\\sin x = 0$ 得 $\\sin x = \\frac{1}{2}$，在 $[0, \\pi]$ 上解为 $x = \\frac{\\pi}{6}$ 和 $x = \\frac{5\\pi}{6}$。\n$\\cos x = 0$ 在 $[0, \\pi]$ 上解为 $x = \\frac{\\pi}{2}$。\n\n以零点将 $[0, \\pi]$ 分段，分析符号：\n\n$[0, \\frac{\\pi}{6}]$：$\\sin x \\le \\frac{1}{2}$，故 $1-2\\sin x \\ge 0$；$\\cos x > 0$。乘积 $\\ge 0$ ✓\n\n$[\\frac{\\pi}{6}, \\frac{\\pi}{2}]$：$\\sin x \\ge \\frac{1}{2}$，故 $1-2\\sin x \\le 0$；$\\cos x > 0$。乘积 $\\le 0$ ✗\n\n$[\\frac{\\pi}{2}, \\frac{5\\pi}{6}]$：$\\sin x \\ge \\frac{1}{2}$，故 $1-2\\sin x \\le 0$；$\\cos x < 0$。乘积 $\\ge 0$ ✓\n\n$[\\frac{5\\pi}{6}, \\pi]$：$\\sin x \\le \\frac{1}{2}$，故 $1-2\\sin x \\ge 0$；$\\cos x < 0$。乘积 $\\le 0$ ✗\n\n综上，解集为 $0 \\le x \\le \\frac{\\pi}{6}$ 或 $\\frac{\\pi}{2} \\le x \\le \\frac{5\\pi}{6}$，对应选项 A。\n\n【快捷思路】\n取测试点快速判断各段符号：$x = 0$ 时乘积为 $1 > 0$；$x = \\frac{\\pi}{3}$ 时乘积为负；$x = \\frac{2\\pi}{3}$ 时乘积为正；$x = \\pi$ 时乘积为 $-1 < 0$。根据正负交替规律即可确定区间。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.trig_inequalities",
+      "a2.product_inequalities"
+    ],
+    "primary_section": "e.trig_inequalities",
+    "skills": [
+      "critical-values",
+      "sign-chart",
+      "special-angle-values",
+      "interval-endpoints"
+    ]
   },
   {
     "id": "2017-P1-Q9",
@@ -1837,11 +1951,26 @@ window.QUESTIONS = [
       "H": "$48\\sqrt{3}$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n已知圆方程 $x^2 + y^2 - 18x - 22y + 178 = 0$，圆内作正六边形且顶点均在圆上，求正六边形面积。本题综合考查圆方程配方法与正多边形面积公式。\n\n【解题步骤】\n第一步：将圆方程配方化为标准形式\n$(x - 9)^2 + (y - 11)^2 - 9^2 - 11^2 + 178 = 0$\n$(x - 9)^2 + (y - 11)^2 = 81 + 121 - 178 = 24$\n圆心为 $(9, 11)$，半径 $r = \\sqrt{24}$。\n\n第二步：分析正六边形的几何结构\n正六边形内接于圆时，六条半径将其分割为 $6$ 个全等的等边三角形，每个三角形边长等于半径 $r$。\n\n第三步：计算单个等边三角形面积\n利用面积公式 $\\frac{1}{2}ab\\sin C$：\n$S_{\\triangle} = \\frac{1}{2} r^2 \\sin 60^\\circ = \\frac{1}{2} \\cdot 24 \\cdot \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}$\n\n第四步：正六边形总面积\n$S = 6 \\times 6\\sqrt{3} = 36\\sqrt{3}$\n\n【快捷思路】\n正六边形内接圆面积公式为 $\\frac{3\\sqrt{3}}{2}r^2$，直接代入 $r^2 = 24$ 得 $36\\sqrt{3}$。关键在于先用配方法求出半径平方，无需完整化简半径。\n\n【正确答案】F Geometry",
+    "analysis": "【题目分析】\n已知圆方程 $x^2 + y^2 - 18x - 22y + 178 = 0$，圆内作正六边形且顶点均在圆上，求正六边形面积。本题综合考查圆方程配方法与正多边形面积公式。\n\n【解题步骤】\n第一步：将圆方程配方化为标准形式\n$(x - 9)^2 + (y - 11)^2 - 9^2 - 11^2 + 178 = 0$\n$(x - 9)^2 + (y - 11)^2 = 81 + 121 - 178 = 24$\n圆心为 $(9, 11)$，半径 $r = \\sqrt{24}$。\n\n第二步：分析正六边形的几何结构\n正六边形内接于圆时，六条半径将其分割为 $6$ 个全等的等边三角形，每个三角形边长等于半径 $r$。\n\n第三步：计算单个等边三角形面积\n利用面积公式 $\\frac{1}{2}ab\\sin C$：\n$S_{\\triangle} = \\frac{1}{2} r^2 \\sin 60^\\circ = \\frac{1}{2} \\cdot 24 \\cdot \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}$\n\n第四步：正六边形总面积\n$S = 6 \\times 6\\sqrt{3} = 36\\sqrt{3}$\n\n【快捷思路】\n正六边形内接圆面积公式为 $\\frac{3\\sqrt{3}}{2}r^2$，直接代入 $r^2 = 24$ 得 $36\\sqrt{3}$。关键在于先用配方法求出半径平方，无需完整化简半径。\n\n【正确答案】F",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Trigonometry"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "d.circle_equations",
+      "d.inscribed_regular_polygons"
+    ],
+    "primary_section": "d.inscribed_regular_polygons",
+    "skills": [
+      "completing-square",
+      "radius-squared",
+      "regular-hexagon-area",
+      "triangle-area-formula"
     ]
   },
   {
@@ -1866,6 +1995,22 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "f.normal_lines",
+      "f.parameter_optimisation",
+      "a2.completing_square"
+    ],
+    "primary_section": "f.parameter_optimisation",
+    "skills": [
+      "power-rule",
+      "normal-gradient",
+      "parameter-optimisation",
+      "completing-square"
     ]
   },
   {
@@ -1884,9 +2029,21 @@ window.QUESTIONS = [
       "E": "$7$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n数列 $x_n$ 满足 $x_1 = 7$，$x_{n+1} = \\dfrac{23x_n - 53}{5x_n + 1}$，已知前三项为 $7, 3, 1$，求 $x_{100}$。本题考查递推数列的周期性识别。\n\n【解题步骤】\n第一步：逐项计算以寻找规律\n题目已给出 $x_1 = 7$，$x_2 = 3$，$x_3 = 1$。\n继续计算：\n$x_4 = \\dfrac{23 \\cdot 1 - 53}{5 \\cdot 1 + 1} = \\dfrac{-30}{6} = -5$\n$x_5 = \\dfrac{23 \\cdot (-5) - 53}{5 \\cdot (-5) + 1} = \\dfrac{-168}{-24} = 7$\n$x_6 = \\dfrac{23 \\cdot 7 - 53}{5 \\cdot 7 + 1} = \\dfrac{108}{36} = 3$\n\n第二步：确认周期\n出现 $x_5 = x_1 = 7$，说明数列以 $4$ 为周期循环：\n$7,\\; 3,\\; 1,\\; -5,\\; 7,\\; 3,\\; 1,\\; -5,\\; \\ldots$\n\n第三步：确定 $x_{100}$ 的位置\n$100 \\div 4 = 25$ 余 $0$，即 $100 = 25 \\times 4$，对应周期中第 $4$ 个位置：\n$x_{100} = x_4 = -5$\n\n【快捷思路】\n递推数列求大项索引，优先找周期。已给前三项，只需再算两项即可验证周期为 $4$。$100$ 是 $4$ 的倍数，故 $x_{100}$ 等于第 $4$ 项 $-5$。\n\n【正确答案】A and Series",
+    "analysis": "【题目分析】\n数列 $x_n$ 满足 $x_1 = 7$，$x_{n+1} = \\dfrac{23x_n - 53}{5x_n + 1}$，已知前三项为 $7, 3, 1$，求 $x_{100}$。本题考查递推数列的周期性识别。\n\n【解题步骤】\n第一步：逐项计算以寻找规律\n题目已给出 $x_1 = 7$，$x_2 = 3$，$x_3 = 1$。\n继续计算：\n$x_4 = \\dfrac{23 \\cdot 1 - 53}{5 \\cdot 1 + 1} = \\dfrac{-30}{6} = -5$\n$x_5 = \\dfrac{23 \\cdot (-5) - 53}{5 \\cdot (-5) + 1} = \\dfrac{-168}{-24} = 7$\n$x_6 = \\dfrac{23 \\cdot 7 - 53}{5 \\cdot 7 + 1} = \\dfrac{108}{36} = 3$\n\n第二步：确认周期\n出现 $x_5 = x_1 = 7$，说明数列以 $4$ 为周期循环：\n$7,\\; 3,\\; 1,\\; -5,\\; 7,\\; 3,\\; 1,\\; -5,\\; \\ldots$\n\n第三步：确定 $x_{100}$ 的位置\n$100 \\div 4 = 25$ 余 $0$，即 $100 = 25 \\times 4$，对应周期中第 $4$ 个位置：\n$x_{100} = x_4 = -5$\n\n【快捷思路】\n递推数列求大项索引，优先找周期。已给前三项，只需再算两项即可验证周期为 $4$。$100$ 是 $4$ 的倍数，故 $x_{100}$ 等于第 $4$ 项 $-5$。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.recurrence_periodicity"
+    ],
+    "primary_section": "c.recurrence_periodicity",
+    "skills": [
+      "recurrence-iteration",
+      "period-detection",
+      "modular-indexing"
+    ]
   },
   {
     "id": "2017-P1-Q12",
@@ -1910,6 +2067,20 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.definite_integral_translation",
+      "i.function_translations"
+    ],
+    "primary_section": "g.definite_integral_translation",
+    "skills": [
+      "substitution",
+      "interval-shift",
+      "constant-integral"
     ]
   },
   {
@@ -1931,7 +2102,24 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n本题要求根据 $(a+bx)^5$ 展开式中 $x^4$ 的系数是 $x^2$ 系数的 $8$ 倍这一条件，求 $a+b$ 的最小值，其中 $a,b$ 为非零正整数。\n\n【解题步骤】\n利用二项式定理，$(a+bx)^5$ 的通项为 $\\binom{5}{r}a^{5-r}b^r x^r$。\n\n$x^4$ 项对应 $r=4$，系数为 $\\binom{5}{4}ab^4=5ab^4$。\n\n$x^2$ 项对应 $r=2$，系数为 $\\binom{5}{2}a^3b^2=10a^3b^2$。\n\n由条件 $5ab^4=8\\times 10a^3b^2$，即 $5ab^4=80a^3b^2$。\n\n因为 $a,b$ 非零，两边除以 $5ab^2$，得 $b^2=16a^2$。\n\n又 $a,b$ 均为正数，开方得 $b=4a$。\n\n于是 $a+b=a+4a=5a$，当 $a=1$ 时取最小值 $5$。\n\n【快捷思路】\n直接写出两系数比 $\\frac{5ab^4}{10a^3b^2}=\\frac{b^2}{2a^2}$，令其等于 $8$ 即可一步得到 $b^2=16a^2$，进而 $b=4a$，$a+b=5a$ 最小为 $5$。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sequences and Series"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.binomial_expansion",
+      "a1.polynomial_coefficients"
+    ],
+    "primary_section": "c.binomial_expansion",
+    "skills": [
+      "binomial-coefficients",
+      "coefficient-ratio",
+      "integer-minimisation"
+    ]
   },
   {
     "id": "2017-P1-Q14",
@@ -1952,7 +2140,21 @@ window.QUESTIONS = [
     "answer": "F",
     "analysis": "【题目分析】\n本题给出含指数的联立方程组，通过变量代换转化为代数方程组求解，最终计算 $p-q$。\n\n【解题步骤】\n令 $u=2^x$，$v=2^y$，则 $u>0,v>0$。\n\n原方程组化为：\n$u+3v=3$，\n$u^2-9v^2=6$。\n\n第二个方程利用平方差公式：$(u+3v)(u-3v)=6$。\n\n将 $u+3v=3$ 代入得 $3(u-3v)=6$，即 $u-3v=2$。\n\n联立 $u+3v=3$ 与 $u-3v=2$，相加得 $2u=5$，故 $u=\\frac{5}{2}$；相减得 $6v=1$，故 $v=\\frac{1}{6}$。\n\n由 $p=x=\\log_2 u=\\log_2\\frac{5}{2}$，$q=y=\\log_2 v=\\log_2\\frac{1}{6}$，\n\n得 $p-q=\\log_2\\frac{5}{2}-\\log_2\\frac{1}{6}=\\log_2\\left(\\frac{5}{2}\\div\\frac{1}{6}\\right)=\\log_2 15$。\n\n【快捷思路】\n关键在于识别 $u^2-9v^2=(u+3v)(u-3v)$，利用第一个方程直接得到 $u-3v$，无需代入消元展开，两步即可求解。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a3.exponential_substitution",
+      "a2.simultaneous_equations"
+    ],
+    "primary_section": "a3.exponential_substitution",
+    "skills": [
+      "exponential-substitution",
+      "difference-of-squares",
+      "log-laws"
+    ]
   },
   {
     "id": "2017-P1-Q15",
@@ -1974,12 +2176,28 @@ window.QUESTIONS = [
     },
     "answer": "B",
     "analysis": "【题目分析】\n本题用梯形法则估算三条曲线在 $[0,1]$ 上的面积，判断每条曲线得到的是高估还是低估。核心在于曲线的凹凸性与梯形法则误差的关系。\n\n【解题步骤】\n梯形法则的误差取决于二阶导数的符号：若 $f''(x)<0$（凹函数），梯形法则低估；若 $f''(x)>0$（凸函数），梯形法则高估。\n\n曲线(1)：$y=f(x)=-2x^2+10$，$f''(x)=-4<0$，凹函数，故 underestimate。\n\n曲线(2)：$y=f(x+1)=-2(x+1)^2+10$，求二阶导数得 $-4<0$，仍为凹函数，故 underestimate。平移不改变凹凸性。\n\n曲线(3)：将 $y=f(x+1)$ 关于直线 $y=6$ 作反射。反射公式为 $y=12-f(x+1)$，其二阶导数为 $-f''(x+1)=4>0$，变为凸函数，故 overestimate。\n\n也可通过画图直观判断：$f(x)$ 在 $[0,1]$ 上开口向下，梯形弦在曲线下方；反射后开口向上，弦在曲线上方。\n\n【快捷思路】\n只需判断二阶导数符号。平移不改变 $f''$ 的符号，反射相当于乘以 $-1$，符号反转。因此(1)(2)同为 underestimate，(3)为 overestimate。\n\n【正确答案】B",
-    "images": {
-      "image": null
-    },
+    "images": null,
     "has_image": false,
     "related_topics": [
-      "Differentiation"
+      "Differentiation",
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.trapezium_rule_error",
+      "f.second_derivative_concavity",
+      "i.graph_transformations"
+    ],
+    "primary_section": "g.trapezium_rule_error",
+    "skills": [
+      "trapezium-rule-error",
+      "concavity",
+      "second-derivative-test",
+      "reflection-transformation"
     ]
   },
   {
@@ -2000,9 +2218,28 @@ window.QUESTIONS = [
       "G": "$-2 \\leq x \\leq -1$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题给出两个函数 $f(x)$ 和 $g(x)$，求使一个函数递增而另一个递减的 $x$ 的取值范围。\n\n【解题步骤】\n分别求导分析单调性。\n\n对于 $f(x)=3x^2+12x+4$：\n$f'(x)=6x+12=6(x+2)$。\n当 $x>-2$ 时 $f'(x)>0$，$f$ 递增；当 $x<-2$ 时 $f'(x)<0$，$f$ 递减。\n\n对于 $g(x)=x^3+6x^2+9x-8$：\n$g'(x)=3x^2+12x+9=3(x+1)(x+3)$。\n抛物线开口向上，根为 $-3$ 和 $-1$。\n当 $x<-3$ 或 $x>-1$ 时 $g'(x)>0$，$g$ 递增；当 $-3<x<-1$ 时 $g'(x)<0$，$g$ 递减。\n\n用数轴分区间讨论一增一减的情况：\n\n当 $x\\leq -3$ 时，$f$ 递减、$g$ 递增，满足条件。\n\n当 $-3<x<-2$ 时，$f$ 递减、$g$ 递减，不满足。\n\n当 $-2\\leq x\\leq -1$ 时，$f$ 递增、$g$ 递减，满足条件。\n\n当 $x>-1$ 时，$f$ 递增、$g$ 递增，不满足。\n\n故解集为 $x\\leq -3$ 或 $-2\\leq x\\leq -1$。\n\n【快捷思路】\n画出数轴，标出关键点 $-3,-2,-1$ 将实数轴分为四个区间，在每个区间内判断 $f'$ 和 $g'$ 的符号，直接选出符号相反的区间即可。\n\n【正确答案】E",
+    "analysis": "【题目分析】\n本题给出两个函数 $f(x)$ 和 $g(x)$，求使一个函数递增而另一个递减的 $x$ 的取值范围。\n\n【解题步骤】\n分别求导分析单调性。\n\n对于 $f(x)=3x^2+12x+4$：\n$f'(x)=6x+12=6(x+2)$。\n当 $x>-2$ 时 $f'(x)>0$，$f$ 递增；当 $x<-2$ 时 $f'(x)<0$，$f$ 递减。\n\n对于 $g(x)=x^3+6x^2+9x-8$：\n$g'(x)=3x^2+12x+9=3(x+1)(x+3)$。\n抛物线开口向上，根为 $-3$ 和 $-1$。\n当 $x<-3$ 或 $x>-1$ 时 $g'(x)>0$，$g$ 递增；当 $-3<x<-1$ 时 $g'(x)<0$，$g$ 递减。\n\n用数轴分区间讨论一增一减的情况：\n\n当 $x\\leq -3$ 时，$f$ 递减、$g$ 递增，满足条件。\n\n当 $-3<x<-2$ 时，$f$ 递减、$g$ 递减，不满足。\n\n当 $-2\\leq x\\leq -1$ 时，$f$ 递增、$g$ 递减，满足条件。\n\n当 $x>-1$ 时，$f$ 递增、$g$ 递增，不满足。\n\n在端点 $x=-3,-2,-1$ 处相应导数为 $0$，选项采用非严格单调的区间端点约定，因此端点包含在内。故解集为 $x\\leq -3$ 或 $-2\\leq x\\leq -1$。\n\n【快捷思路】\n画出数轴，标出关键点 $-3,-2,-1$ 将实数轴分为四个区间，在每个区间内判断 $f'$ 和 $g'$ 的符号，直接选出符号相反的区间即可。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "f.monotonicity",
+      "f.derivative_sign_charts",
+      "i.function_monotonicity"
+    ],
+    "primary_section": "f.monotonicity",
+    "skills": [
+      "differentiate-polynomials",
+      "derivative-sign-chart",
+      "interval-union",
+      "monotonicity-comparison"
+    ]
   },
   {
     "id": "2017-P1-Q17",
@@ -2025,6 +2262,23 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Sequences and Series"
+    ],
+    "modules": [
+      "g_integration",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "g.definite_integral_evaluation",
+      "g.integral_as_area",
+      "c.arithmetic_series_sums"
+    ],
+    "primary_section": "g.definite_integral_evaluation",
+    "skills": [
+      "definite-integral",
+      "area-under-line",
+      "sigma-summation",
+      "arithmetic-series",
+      "threshold-inequality"
     ]
   },
   {
@@ -2049,6 +2303,22 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Graphs"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "i.logarithmic_graph_transformations",
+      "i.graph_transformations",
+      "a3.logarithm_laws"
+    ],
+    "primary_section": "i.logarithmic_graph_transformations",
+    "skills": [
+      "logarithm-laws",
+      "graph-translation",
+      "horizontal-stretch",
+      "transformation-equivalence"
     ]
   },
   {
@@ -2072,7 +2342,25 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Graphs"
+      "Functions"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.quadratic_inequalities",
+      "a2.roots_coefficients",
+      "a2.variable_substitution_inequality",
+      "i.quadratic_sign_intervals"
+    ],
+    "primary_section": "a2.quadratic_inequalities",
+    "skills": [
+      "quadratic-inequality",
+      "vieta-relations",
+      "substitution",
+      "negative-multiplier-reversal",
+      "root-ordering"
     ]
   },
   {
@@ -2095,7 +2383,24 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Proof"
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.cosine_rule",
+      "e.triangle_side_angle_ranges",
+      "a2.parameter_inequalities"
+    ],
+    "primary_section": "e.cosine_rule",
+    "skills": [
+      "cosine-rule",
+      "triangle-inequality",
+      "parameter-range",
+      "angle-range-from-cosine",
+      "strict-inequality-boundaries"
     ]
   },
   {
