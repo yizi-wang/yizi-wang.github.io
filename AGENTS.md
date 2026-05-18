@@ -1,0 +1,225 @@
+# AGENTS.md - 个人网站
+
+## 项目定位
+
+王逸孜的个人数学教学网站，托管于 GitHub Pages（通过 Vercel 构建）。Astro + Starlight 框架，支持中英双语。
+
+**网址**：https://yizi-wang.github.io  
+**仓库**：`git@github.com:yizi-wang/yizi-wang.github.io`
+
+## 技术栈
+
+|层|技术|
+|-|-|
+|框架|Astro 6.1.9 + Starlight 0.38.4|
+|数学渲染|KaTeX 0.16.45 + remark-math + rehype-katex|
+|MDX|@astrojs/mdx 5.0.4|
+|部署|GitHub Pages + Vercel（自动构建）|
+|语言|中英双语（root=en, zh=中文）|
+
+## 站点结构
+
+```
+src/
+├── content/
+│   ├── docs/
+│   │   ├── further-math/      # A-Level 进阶数学（S2/M2/FP2/FP3）
+│   │   ├── tmua/              # TMUA 讲义（15+ 模块）
+│   │   ├── history-of-math/   # 数学史（8 讲）
+│   │   ├── teaching-notes/    # 教学博客
+│   │   ├── about.md           # 关于我
+│   │   └── index.md           # 首页
+│   └── content.config.ts
+├── assets/
+└── styles/
+    └── custom.css             # 自定义样式
+```
+
+侧边栏配置在 `astro.config.mjs` 中，使用 `autogenerate` 自动生成目录。
+
+## 构建与开发
+
+```bash
+# 开发预览
+npm run dev                    
+
+# 构建（⚠️ 必须先清 .astro 缓存）
+rm -rf .astro \&\& npm ci \&\& npm run build
+
+# 预览构建结果
+npm run preview
+```
+
+## 验证
+
+改完后必须跑一次构建确认无报错：
+
+```bash
+rm -rf .astro \&\& npm ci \&\& npm run build
+```
+
+构建成功 = 验证通过。构建失败则修复后再提交。
+
+## ⚠️ 红线
+
+### 文件扩展名
+
+**永远用 `.md`，不用 `.mdx`！**  
+JSX 解析器会破坏 LaTeX 内容。Starlight 文档一律用 `.md`。
+
+### 构建缓存
+
+`.astro` 缓存可能导致构建异常或旧内容残留。**每次构建前先 `rm -rf .astro`**。  
+`package.json` 中的 build 脚本已包含此步骤。
+
+### 数学公式
+
+* 行内公式：`$...$`
+* 块级公式：`$$...$$`
+* KaTeX 已全局配置，无需额外引入
+* 生成内容后必须在浏览器中验证公式渲染
+
+### LaTeX 特殊字符
+
+* `\&` 在 KaTeX 中需要转义或放在公式块内
+* 避免在正文中直接使用 `\_`、`^` 等 LaTeX 控制符
+
+## 内容规范
+
+### 文件命名
+
+* **所有 .md 文件名必须全小写**，包括目录内各章节文件（如 `chapter01_binomial.md`、`fp2_01_inequalities.md`、`lecture01_pythagorean_theorem.md`）
+* **index.md 中引用链接也必须全小写**，与实际文件名一致
+* 使用下划线分隔（不用连字符），不用中文文件名，不用空格
+
+### 文档结构
+
+```markdown
+---
+title: 标题（英文）
+---
+
+# 标题
+
+正文...
+```
+
+Starlight 自动处理双语导航，文档内部的中文内容直接写中文即可。
+
+### 来源对应
+
+* 新讲义从 OneDrive 上的原始 .tex 文件转换而来
+* 转换后存放路径对应 Starlight 目录（如 OneDrive/M2 Notes/ → further-math/M2\_\*.md）
+* 转换规则见 `workflows/tex-to-starlight-methodology.md`
+
+## 常见任务
+
+### 添加新讲义
+
+1. 将 .md 文件放入 `src/content/docs/<栏目>/` 下
+2. 确保文件名与 autogenerate 目录匹配
+3. 本地 `npm run dev` 预览
+4. `git add` + `git commit` + `git push` → Vercel 自动构建
+
+### 修改侧边栏
+
+编辑 `astro.config.mjs` 中的 `sidebar` 数组，或直接依赖 `autogenerate`。
+
+### 修改自定义样式
+
+编辑 `src/styles/custom.css`。
+
+## TikZ 图片编译
+
+图片源文件在 `tikz-src/` 目录，用 TikZ (LaTeX) 编写，编译成 SVG 后放到 `public/images/tikz/`。
+
+### 工具链
+
+MiKTeX (latex + dvisvgm)，路径：`C:\Users\46537\AppData\Local\Programs\MiKTeX\miktex\bin\x64`
+
+### 编译命令
+
+```powershell
+# 编译单个文件（不带 .tex 扩展名）
+cd tikz-src
+powershell -ExecutionPolicy Bypass -File build-all.ps1 fp3-unit-hyperbola
+
+# 编译全部 .tex 文件
+powershell -ExecutionPolicy Bypass -File build-all.ps1
+```
+
+### 添加新图片
+
+1. 在 `tikz-src/` 下创建 `.tex` 文件，使用 `standalone` 文档类
+2. 运行编译脚本，SVG 输出到 `public/images/tikz/`
+3. 在 markdown 中引用：`![描述](/images/tikz/文件名.svg)`
+
+### TikZ 文件模板
+
+```latex
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.8, >=stealth]
+  % 图片内容
+\end{tikzpicture}
+\end{document}
+```
+
+### 注意事项
+
+- `--no-fonts` 参数让 dvisvgm 把文字转成矢量路径，不依赖外部字体
+- `--exact` 参数使用精确坐标
+- 首次编译新宏包时 MiKTeX 会自动下载，可能需要等待
+- 编译后的 SVG 是静态文件，直接提交到仓库即可
+
+## STEP 长任务规范
+
+本仓库包含一个持续运行的 STEP 网站审查任务。每次开始相关工作时，先阅读 `PROGRESS.md`，找到 `## Next` 中第一个未勾选的条目。
+
+### 每次只处理一个条目
+
+一次 session 只处理一个 unchecked item。完整完成该条目的检查、修复、验证、进度更新后，再进入下一个 session。
+
+### 单条目流程
+
+1. 运行静态审查：
+
+```powershell
+node scripts/step-static-audit.mjs <path-to-step-md>
+```
+
+2. 人工阅读目标文件，修复以下问题：
+   - `## Question N` 缺失、重复、顺序错误，或题目数量不是 Q1--Q8
+   - `### Problem`、`Hint`、`Model Solution`、`Examiner Notes` 区块格式不一致
+   - `<details>` / `<summary>` 破损、空内容、嵌套异常
+   - 明显 LaTeX 渲染风险、TODO/FIXME、残留转换噪声
+
+3. 内容规则：
+   - `Model Solution` 是每题必需区块。
+   - `Hint` 缺失时，可以基于现有题面和解答补写。
+   - `Examiner Notes` 缺失时不要编造；除非已有可靠内容，否则保持缺失。
+
+4. 验证目标文件：
+
+```powershell
+node scripts/step-static-audit.mjs <path-to-step-md>
+npm run build
+node scripts/step-browser-audit.mjs <path-or-slug>
+```
+
+5. 只有验证通过后，才在 `PROGRESS.md` 中将该条目改为 `[x]`。
+
+6. 提交时只包含相关 STEP 文件、审查脚本和 `PROGRESS.md`。不要回滚或整理无关的既有改动。
+
+### 周期性全量检查
+
+每完成 5--10 个 STEP 条目后，运行：
+
+```powershell
+node scripts/step-static-audit.mjs
+npm run build
+node scripts/step-browser-audit.mjs step
+```
+
