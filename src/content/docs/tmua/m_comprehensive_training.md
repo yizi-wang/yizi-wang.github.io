@@ -387,7 +387,7 @@ $$PT = \sqrt{400 + 100 - 400 \times \left(-\frac{1}{2}\right)} = \sqrt{700} = 10
 
 ## 🎯 配套练习
 
-学完全部内容？[→ 去做所有 TMUA 练习题](/tmua/index.html)
+学完全部内容？[→ 去做所有 TMUA 练习题](/practice/tmua/)
 
 ---
 

@@ -390,7 +390,7 @@ $$\exists N \in \mathbb{Z}^+ \; \forall K \in \mathbb{Z}^+ \; \exists m \in \mat
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Logic 相关练习题](/tmua/index.html?topic=Logic)
+学完本章？[→ 去做 Logic 相关练习题](/practice/tmua/?topic=Logic)
 
 ---
 

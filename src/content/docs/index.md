@@ -10,7 +10,7 @@ hero:
       icon: open-book
       variant: primary
     - text: TMUA Practice
-      link: /tmua/index.html
+      link: /practice/tmua/
       icon: right-arrow
       variant: secondary
 ---

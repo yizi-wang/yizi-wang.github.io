@@ -433,7 +433,7 @@ $\sin(2x) = \frac{\sqrt{3}}{2}$ 的解：$2x = 60°, 120°, 420°, 480°$。
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Trigonometry 相关练习题](/tmua/index.html?topic=Trigonometry)
+学完本章？[→ 去做 Trigonometry 相关练习题](/practice/tmua/?topic=Trigonometry)
 
 ---
 

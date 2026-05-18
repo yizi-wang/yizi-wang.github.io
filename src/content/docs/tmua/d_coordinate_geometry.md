@@ -307,7 +307,7 @@ $S = 6 \times 6\sqrt{3} = 36\sqrt{3}$
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Coordinate Geometry 相关练习题](/tmua/index.html?topic=Coordinate%20Geometry)
+学完本章？[→ 去做 Coordinate Geometry 相关练习题](/practice/tmua/?topic=Coordinate%20Geometry)
 
 ---
 

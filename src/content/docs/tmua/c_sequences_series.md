@@ -310,7 +310,7 @@ $$\dfrac{a^3}{1-r^3} = \dfrac{27}{1 - \dfrac{1}{8}} = \dfrac{27}{\dfrac{7}{8}} =
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Sequences and Series 相关练习题](/tmua/index.html?topic=Sequences%20and%20Series)
+学完本章？[→ 去做 Sequences and Series 相关练习题](/practice/tmua/?topic=Sequences%20and%20Series)
 
 ---
 

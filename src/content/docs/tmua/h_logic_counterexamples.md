@@ -343,7 +343,7 @@ TMUA 要求识别伪证明中的逻辑错误。
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Counterexamples 相关练习题](/tmua/index.html?topic=Counterexamples)
+学完本章？[→ 去做 Counterexamples 相关练习题](/practice/tmua/?topic=Counterexamples)
 
 ---
 

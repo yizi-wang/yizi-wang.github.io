@@ -14,7 +14,7 @@ These handouts are organized by topic, covering all 15 knowledge areas tested in
 
 ### 📝 在线练习系统
 
-完成讲义后进入 [TMUA 练习系统](/tmua/index.html)，支持按年份、知识点筛选和模拟考试。
+完成讲义后进入 [TMUA 练习系统](/practice/tmua/)，支持按年份、知识点筛选和模拟考试。
 
 ---
 

@@ -393,7 +393,7 @@ $$f(-2)=-96+80+240+30>0, \quad f(2)=96-80-240+30<0$$
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Differentiation 相关练习题](/tmua/index.html?topic=Differentiation)
+学完本章？[→ 去做 Differentiation 相关练习题](/practice/tmua/?topic=Differentiation)
 
 ---
 

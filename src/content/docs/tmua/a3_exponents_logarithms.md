@@ -315,7 +315,7 @@ $$\log_{10}(100x) = \log_{10} x - \log_{10} k$$
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Algebra 相关练习题](/tmua/index.html?topic=Algebra)
+学完本章？[→ 去做 Algebra 相关练习题](/practice/tmua/?topic=Algebra)
 
 ---
 

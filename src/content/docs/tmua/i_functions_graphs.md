@@ -338,9 +338,9 @@ $$k = 10^{-2} = 0.01$$
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Functions 相关练习题](/tmua/index.html?topic=Functions)
+学完本章？[→ 去做 Functions 相关练习题](/practice/tmua/?topic=Functions)
 
-学完本章？[→ 去做 Graphs 相关练习题](/tmua/index.html?topic=Graphs)
+学完本章？[→ 去做 Graphs 相关练习题](/practice/tmua/?topic=Graphs)
 
 ---
 

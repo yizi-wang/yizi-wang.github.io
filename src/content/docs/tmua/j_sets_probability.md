@@ -374,9 +374,9 @@ $\begin{array}{c}
 
 ## 🎯 配套练习
 
-学完本章？[→ 去做 Sets 相关练习题](/tmua/index.html?topic=Sets)
+学完本章？[→ 去做 Sets 相关练习题](/practice/tmua/?topic=Sets)
 
-学完本章？[→ 去做 Probability 相关练习题](/tmua/index.html?topic=Probability)
+学完本章？[→ 去做 Probability 相关练习题](/practice/tmua/?topic=Probability)
 
 ---
 
