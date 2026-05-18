@@ -12156,14 +12156,30 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n这是一道根式分式方程题。方程左边两个分母 $\\sqrt{x} - 6$ 和 $\\sqrt{x} + 6$ 构成共轭对，利用通分和平方差公式可快速化简。\n\n【解题步骤】\n第一步：通分合并左边。\n\n$$\\dfrac{1}{\\sqrt{x} - 6} - \\dfrac{1}{\\sqrt{x} + 6} = \\dfrac{(\\sqrt{x} + 6) - (\\sqrt{x} - 6)}{(\\sqrt{x} - 6)(\\sqrt{x} + 6)} = \\dfrac{12}{x - 36}$$\n\n第二步：令其等于 $\\dfrac{3}{11}$，交叉相乘：\n\n$$12 \\times 11 = 3(x - 36)$$\n$$132 = 3x - 108$$\n$$3x = 240$$\n$$x = 80$$\n\n第三步：验证。$\\sqrt{80} = 4\\sqrt{5}$，代入左边得 $\\dfrac{12}{80 - 36} = \\dfrac{12}{44} = \\dfrac{3}{11}$，等式成立。\n\n【快捷思路】\n看到 $\\dfrac{1}{\\sqrt{x} - a} - \\dfrac{1}{\\sqrt{x} + a}$ 的共轭形式，直接套用公式 $\\dfrac{2a}{x - a^2}$。这里 $a = 6$，得 $\\dfrac{12}{x - 36} = \\dfrac{3}{11}$，一步得到 $x = 80$。\n\n【正确答案】H",
     "has_image": false,
     "images": [],
-    "topic": "Algebra"
+    "topic": "Algebra",
+    "difficulty": 3,
+    "related_topics": [],
+    "modules": [
+      "a1_algebra_basics",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a1.surds_rationalisation",
+      "a2.radical_equations"
+    ],
+    "skills": [
+      "conjugate-denominator",
+      "difference-of-fractions",
+      "solve-linear-equation-after-substitution"
+    ],
+    "primary_section": "a1.surds_rationalisation"
   },
   {
     "id": "2023-P2-Q2",
     "year": 2023,
     "paper": 2,
     "num": 2,
-    "question": "Evaluate\n\n$$\\int_{9}^{16}\\left(\\dfrac{1}{\\sqrt{x}} + \\sqrt{x}\\right)dx - \\int_{9}^{16}\\left(\\dfrac{1}{\\sqrt{x}} - \\sqrt{x}\\right)dx$$",
+    "question": "Evaluate\n\n$$\\int_{9}^{16}\\left(\\dfrac{1}{x}+2+x\\right)dx-\\int_{9}^{16}\\left(\\dfrac{1}{x}-2+x\\right)dx$$",
     "options": {
       "A": "$0$",
       "B": "$2$",
@@ -12175,17 +12191,35 @@ window.QUESTIONS = [
       "H": "$175$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n定积分计算题。两个被积函数中 $\\dfrac{1}{\\sqrt{x}}$ 项相同，相减后消去，只需对 $2\\sqrt{x}$ 在 $[9, 16]$ 上积分。\n\n【解题步骤】\n第一步：合并积分。\n\n$$\\int_{9}^{16}\\!\\!\\left(\\dfrac{1}{\\sqrt{x}} + \\sqrt{x}\\right)\\!dx - \\int_{9}^{16}\\!\\!\\left(\\dfrac{1}{\\sqrt{x}} - \\sqrt{x}\\right)\\!dx = \\int_{9}^{16} 2\\sqrt{x}\\,dx$$\n\n第二步：求原函数。$\\int 2x^{1/2}dx = \\dfrac{4}{3}x^{3/2}$。\n\n第三步：代入上下限。\n\n$$\\left[\\dfrac{4}{3}x^{3/2}\\right]_{9}^{16} = \\dfrac{4}{3}(64 - 27) = \\dfrac{148}{3}$$\n\n注意：计算结果为 $\\dfrac{148}{3} \\approx 49.33$，不在选项中。按官方答案选 F，原题可能有印刷误差。\n\n【快捷思路】\n两积分相减消去 $\\dfrac{1}{\\sqrt{x}}$，用公式 $\\int x^{1/2}dx = \\dfrac{2}{3}x^{3/2}$ 得 $\\dfrac{4}{3}x^{3/2}$，代入计算。\n\n【正确答案】F",
+    "analysis": "【题目分析】\n本题考察定积分的线性性质。两个积分的上下限相同，可以先把被积函数相减，再进行积分。相同的 $\\dfrac{1}{x}$ 和 $x$ 项会抵消，只剩下常数项。\n\n【解题步骤】\n第一步，合并两个积分：\n$$\\int_9^{16}\\left(\\dfrac{1}{x}+2+x\\right)dx-\\int_9^{16}\\left(\\dfrac{1}{x}-2+x\\right)dx\n=\\int_9^{16}\\left[\\left(\\dfrac{1}{x}+2+x\\right)-\\left(\\dfrac{1}{x}-2+x\\right)\\right]dx$$\n\n第二步，化简被积函数：\n$$\\left(\\dfrac{1}{x}+2+x\\right)-\\left(\\dfrac{1}{x}-2+x\\right)=4$$\n\n第三步，计算定积分：\n$$\\int_9^{16}4\\,dx=4(16-9)=28$$\n\n【快捷思路】\n不要先分别积分。直接利用相同上下限把两个积分合并，被积函数相减后只剩 $4$，所以答案是 $4\\times 7=28$。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
-    "topic": "Integration"
+    "topic": "Integration",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "g.definite_integral_properties",
+      "a1.expression_simplification"
+    ],
+    "skills": [
+      "combine-definite-integrals",
+      "simplify-before-integrating",
+      "constant-integral"
+    ],
+    "primary_section": "g.definite_integral_properties"
   },
   {
     "id": "2023-P2-Q3",
     "year": 2023,
     "paper": 2,
     "num": 3,
-    "question": "Consider the claim:\n\nFor all positive real numbers $x$ and $y$,\n\n$$\\sqrt{xy} = \\sqrt{x}\\,\\sqrt{y}$$\n\nWhich of the following is/are a counterexample to the claim?\n\nI $\\quad x = 1,\\ y = 16$\n\nII $\\quad x = 2,\\ y = 8$\n\nIII $\\quad x = 3,\\ y = 4$",
+    "question": "Consider the claim:\n\nFor all positive real numbers $x$ and $y$,\n\n$$\\left(\\sqrt{x}\\right)^y=x^{\\sqrt{y}}$$\n\nWhich of the following is/are a counterexample to the claim?\n\nI $\\quad x = 1,\\ y = 16$\n\nII $\\quad x = 2,\\ y = 8$\n\nIII $\\quad x = 3,\\ y = 4$",
     "options": {
       "A": "none of them",
       "B": "I only",
@@ -12197,10 +12231,28 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n本题考察平方根乘积法则及反例的概念。题目声称对所有正实数 $x, y$，有 $\\sqrt{xy} = \\sqrt{x}\\,\\sqrt{y}$，要求找出反例（使等式不成立的数值）。\n\n【解题步骤】\n核心事实：平方根乘积法则 $\\sqrt{xy} = \\sqrt{x}\\,\\sqrt{y}$ 对所有非负实数均成立。由于题目限定 $x, y$ 为正实数，该恒等式必然成立，不存在反例。\n\n逐一验证三组数值：\n\n第一组 $x=1, y=16$：$\\sqrt{16} = 4$，$\\sqrt{1} \\times \\sqrt{16} = 4$，相等。\n\n第二组 $x=2, y=8$：$\\sqrt{16} = 4$，$\\sqrt{2} \\times \\sqrt{8} = \\sqrt{16} = 4$，相等。\n\n第三组 $x=3, y=4$：$\\sqrt{12} = 2\\sqrt{3}$，$\\sqrt{3} \\times \\sqrt{4} = 2\\sqrt{3}$，相等。\n\n三组均满足等式，无一构成反例。\n\n【快捷思路】\n平方根乘积法则对非负实数恒成立，题目限定正实数范围内，等式对所有数值成立，无需逐个计算即可判断「none of them」。注意：该法则在涉及负数时不成立，如 $\\sqrt{(-1)(-1)} = 1$ 但 $\\sqrt{-1} \\times \\sqrt{-1} = -1$，但本题不涉及此情况。\n\n【正确答案】A",
+    "analysis": "【题目分析】\n本题考察反例判断。题目声称对所有正实数 $x,y$，都有 $\\left(\\sqrt{x}\\right)^y=x^{\\sqrt{y}}$。反例是使该等式不成立的一组数值。\n\n【解题步骤】\n逐一检查三组数值。\n\nI：$x=1,y=16$。左边为 $(\\sqrt1)^{16}=1$，右边为 $1^{\\sqrt{16}}=1^4=1$，等式成立，不是反例。\n\nII：$x=2,y=8$。左边为 $(\\sqrt2)^8=(2^{1/2})^8=2^4=16$，右边为 $2^{\\sqrt8}=2^{2\\sqrt2}$。由于 $4\\neq 2\\sqrt2$，两边不相等，所以 II 是反例。\n\nIII：$x=3,y=4$。左边为 $(\\sqrt3)^4=(3^{1/2})^4=3^2=9$，右边为 $3^{\\sqrt4}=3^2=9$，等式成立，不是反例。\n\n因此只有 II 是反例。\n\n【快捷思路】\n把左边写成 $x^{y/2}$，右边是 $x^{\\sqrt y}$。当 $x\\neq1$ 时，需要比较 $y/2$ 与 $\\sqrt y$。三组中只有 $y=8$ 使二者不同。\n\n【正确答案】C",
     "has_image": false,
     "images": [],
-    "topic": "Counterexamples"
+    "topic": "Counterexamples",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "h.counterexample_testing",
+      "a3.indices_and_surds"
+    ],
+    "skills": [
+      "counterexample-testing",
+      "evaluate-index-expressions",
+      "distinguish-false-generalisation"
+    ],
+    "primary_section": "h.counterexample_testing"
   },
   {
     "id": "2023-P2-Q4",
@@ -12222,7 +12274,29 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题要求审查一段关于「最大连续奇素数个数」的证明。学生利用模 $3$ 分类法论证任意三个连续奇整数中必有一个是 $3$ 的倍数，从而不可能全为素数。思路方向正确，但推理中存在关键疏漏。\n\n【解题步骤】\n逐行检查学生的论证：\n\n第 I 行：正确。17 和 19 确实是两个连续奇素数。\n\n第 II 行：正确。任意三个连续奇整数可表示为 $n-2, n, n+2$。\n\n第 III–V 行：正确。按 $n \\bmod 3$ 分类，三种情况分别说明 $n+2$、$n-2$、$n$ 中有一个是 $3$ 的倍数，穷尽所有可能。\n\n第 VI 行：错误！学生声称「其中一个整数是 $3$ 的倍数，因此不是素数」。这个推理忽略了 $3$ 本身既是 $3$ 的倍数又是素数！当 $n = 3$ 时，三数为 $1, 3, 5$，其中 $3$ 是 $3$ 的倍数但也是素数。虽然 $1$ 不是素数导致这三个数不全为素数，但学生并未论证这一点，而是错误地断言「$3$ 的倍数都不是素数」。\n\n严谨的证明需要补充：当 $3$ 的倍数恰好是 $3$ 时，需单独验证其余两个数不全是素数。学生跳过了这个关键步骤。\n\n第 VII 行：结论正确（最大个数为 2），但推理过程有缺陷。\n\n【快捷思路】\n审查证明时重点关注边界情况。本题的陷阱在于「$3$ 的倍数不是素数」忽略了 $3$ 本身就是素数。涉及素数与整除性的论证必须单独处理小素数倍数的特殊情况，这是数论证明的常见考点。\n\n【正确答案】G",
     "has_image": false,
     "images": [],
-    "topic": "Proof"
+    "topic": "Proof",
+    "difficulty": 3,
+    "related_topics": [
+      "Number Theory",
+      "Logic"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "k_number_theory_combinatorics",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "l.proof_validation",
+      "k.primes_multiples",
+      "b.error_identification"
+    ],
+    "skills": [
+      "proof-line-audit",
+      "edge-case-checking",
+      "prime-exception-handling",
+      "modulo-3-case-analysis"
+    ],
+    "primary_section": "l.proof_validation"
   },
   {
     "id": "2023-P2-Q5",
@@ -12240,7 +12314,28 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题考察必要条件与充分条件的判断，结合定积分计算。\n\n定义两个命题：R 表示 $k$ 是 $\\pi$ 的整数倍，即存在整数 $n$ 使 $k = n\\pi$；S 表示 $\\displaystyle\\int_{0}^{k}\\sin 2x\\,dx = 0$。需要判断 R 对 S 的逻辑关系。\n\n【解题步骤】\n首先计算定积分：\n$$\\int_{0}^{k}\\sin 2x\\,dx = \\left[-\\frac{1}{2}\\cos 2x\\right]_{0}^{k} = -\\frac{1}{2}(\\cos 2k - 1) = \\frac{1 - \\cos 2k}{2}$$\n\n令积分值为零：$\\frac{1 - \\cos 2k}{2} = 0$，得 $\\cos 2k = 1$。\n\n余弦函数 $\\cos\\theta = 1$ 当且仅当 $\\theta = 2n\\pi$（$n$ 为整数），因此 $2k = 2n\\pi$，即 $k = n\\pi$。\n\n这恰好就是命题 R 的内容。所以 S 成立等价于 R 成立，R 既是 S 的充分条件也是必要条件。\n\n【快捷思路】\n直接计算积分并化简，发现 S 的条件 $\\cos 2k = 1$ 与 R 的条件 $k = n\\pi$ 完全等价，无需分别验证充分性和必要性，一步得出充要关系。\n\n【正确答案】A",
     "has_image": false,
     "images": [],
-    "topic": "Integration"
+    "topic": "Logic",
+    "difficulty": 3,
+    "related_topics": [
+      "Integration",
+      "Trigonometry"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "g_integration",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "b.necessary_sufficient_conditions",
+      "g.definite_integrals_basic",
+      "e.cosine_periodicity"
+    ],
+    "skills": [
+      "necessary-sufficient-condition",
+      "definite-integral-evaluation",
+      "solve-cosine-equation"
+    ],
+    "primary_section": "b.necessary_sufficient_conditions"
   },
   {
     "id": "2023-P2-Q6",
@@ -12262,7 +12357,28 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题考察指数方程解的个数，以及函数变换对解个数的影响。已知 $a > 1$，方程 $(*)$ 为 $a^x = x$。需要逐一判断三个变换后的方程是否与 $(*)$ 具有相同数量的实数解。\n\n【解题步骤】\n对方程 I：$\\log_a x = x$。两边取 $a$ 的幂次，得到 $a^{\\log_a x} = a^x$，即 $x = a^x$，这与原方程 $(*)$ 完全等价（因为 $a^x = x > 0$，$x$ 自动在 $\\log_a$ 的定义域内）。故 I 与 $(*)$ 解的个数相同。\n\n对方程 II：$a^{2x} = x^2$，即 $(a^x)^2 = x^2$。开方得 $a^x = x$ 或 $a^x = -x$。第一个分支正是 $(*)$，但第二个分支 $a^x = -x$ 需要额外分析。令 $g(x) = a^x + x$，则 $g'(x) = a^x\\ln a + 1 > 0$（因为 $a > 1$），故 $g$ 严格递增。又 $g(0) = 1 > 0$，$g(-\\infty) = -\\infty$，由介值定理知 $a^x = -x$ 在 $x < 0$ 处恰好有一个解。因此 II 比 $(*)$ 多一个解。\n\n对方程 III：$a^{2x} = 2x$。令 $y = 2x$，代入得 $a^y = y$，这正是 $(*)$。变量替换 $x \\leftrightarrow y = 2x$ 是一一映射，故 III 与 $(*)$ 解的个数相同。\n\n【快捷思路】\nI 是原方程取对数的等价变形；II 多出了 $a^x = -x$ 分支（恒有一个负解）；III 通过 $y = 2x$ 替换直接还原为 $(*)$。因此仅 I 和 III 满足条件。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
-    "topic": "Functions"
+    "topic": "Functions",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "i.function_equations",
+      "i.solution_count_invariance",
+      "a3.exponential_logarithmic_equations"
+    ],
+    "skills": [
+      "equivalent-transformations",
+      "domain-checking",
+      "substitution",
+      "solution-count-comparison",
+      "monotonicity-argument"
+    ],
+    "primary_section": "i.function_equations"
   },
   {
     "id": "2023-P2-Q7",
@@ -12279,10 +12395,33 @@ window.QUESTIONS = [
       "F": "$a$ and $c$ have the same sign"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题考察直线方程的斜率与截距，以及必要非充分条件的判断。直线为 $ax + by = c$，其中 $a, b, c$ 均为非零实数。要求判断哪个选项是直线具有正斜率和正截距的必要但不充分条件。\n\n【解题步骤】\n将直线方程化为斜截式：$y = -\\frac{a}{b}x + \\frac{c}{b}$。\n\n正斜率条件：$-\\frac{a}{b} > 0$，即 $\\frac{a}{b} < 0$，说明 $a$ 与 $b$ 异号。\n\n正截距条件：$\\frac{c}{b} > 0$，说明 $c$ 与 $b$ 同号。\n\n由上述两条可推出：$a$ 与 $b$ 异号，$b$ 与 $c$ 同号，因此 $a$ 与 $c$ 必异号。这就是必要条件。\n\n但 $a$ 与 $c$ 异号并非充分条件：例如取 $a = 1, b = -1, c = -1$，此时 $a$ 与 $c$ 异号，但斜率 $-a/b = -1 < 0$，不满足正斜率要求。\n\n逐项检查：A 是充要条件而非必要非充分；B 条件方向完全相反；C、D 涉及三者大小比较，既非必要也非充分；F 要求同号，与结论矛盾。因此 E 正确。\n\n【快捷思路】\n先求充要条件：$\\frac{a}{b} < 0$ 且 $\\frac{c}{b} > 0$，推出 $a, c$ 异号。验证异号是必要非充分的即可锁定 E，无需逐项分析 C、D 的具体数值。\n\n【正确答案】E Geometry",
+    "analysis": "【题目分析】\n本题考察直线方程的斜率与截距，以及必要非充分条件的判断。直线为 $ax + by = c$，其中 $a, b, c$ 均为非零实数。要求判断哪个选项是直线具有正斜率和正截距的必要但不充分条件。\n\n【解题步骤】\n将直线方程化为斜截式：$y = -\\frac{a}{b}x + \\frac{c}{b}$。\n\n正斜率条件：$-\\frac{a}{b} > 0$，即 $\\frac{a}{b} < 0$，说明 $a$ 与 $b$ 异号。\n\n正截距条件：$\\frac{c}{b} > 0$，说明 $c$ 与 $b$ 同号。\n\n由上述两条可推出：$a$ 与 $b$ 异号，$b$ 与 $c$ 同号，因此 $a$ 与 $c$ 必异号。这就是必要条件。\n\n但 $a$ 与 $c$ 异号并非充分条件：例如取 $a = 1, b = 1, c = -1$，此时 $a$ 与 $c$ 异号，但斜率 $-a/b = -1 < 0$，不满足正斜率要求。\n\n逐项检查：A 是充要条件而非必要非充分；B 条件方向完全相反；C、D 涉及三者大小比较，既非必要也非充分；F 要求同号，与结论矛盾。因此 E 正确。\n\n【快捷思路】\n先求充要条件：$\\frac{a}{b} < 0$ 且 $\\frac{c}{b} > 0$，推出 $a, c$ 异号。验证异号是必要非充分的即可锁定 E，无需逐项分析 C、D 的具体数值。\n\n【正确答案】E",
     "has_image": false,
     "images": [],
-    "topic": "Coordinate Geometry"
+    "topic": "Coordinate Geometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Logic",
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "b_mathematical_logic_basics",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "d.line_equations.gradient_intercept",
+      "b.necessary_sufficient_conditions",
+      "a2.sign_conditions"
+    ],
+    "skills": [
+      "rearrange-line-equation",
+      "gradient-intercept-identification",
+      "sign-analysis",
+      "necessary-not-sufficient",
+      "counterexample-checking"
+    ],
+    "primary_section": "d.line_equations.gradient_intercept"
   },
   {
     "id": "2023-P2-Q8",
@@ -12301,17 +12440,38 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n本题考察三角形几何性质。一条直线将三角形分成两个三角形，当且仅当该直线经过一个顶点并与对边相交。若其中一个子三角形为直角三角形，则该直线必须是三角形的一条高线。因此问题转化为：三角形的三条高线中，有多少条与对边的交点落在边的内部（而非延长线上）。\n\n【解题步骤】\n对于锐角三角形：三个内角均小于 $90^\\circ$，三条高线的垂足都落在对边内部。每条高线都将原三角形分成两个直角三角形。因此恰好有 $3$ 条满足条件的直线，命题 III 成立。\n\n对于钝角三角形：设钝角顶点为 $A$。从 $A$ 作高线，垂足落在对边 $BC$ 内部（因为角 $A > 90^\\circ$，$A$ 的对边是三角形中最长边）。但从锐角顶点 $B$ 或 $C$ 作高线，垂足落在对边的延长线上，无法将三角形分成两个三角形。因此恰好有 $1$ 条满足条件的直线，命题 I 成立。\n\n对于非直角的三角形，不可能恰好有 $2$ 条高线垂足在内部：因为三个角之和为 $180^\\circ$，若有两个角 $\\geq 90^\\circ$，则第三个角 $\\leq 0^\\circ$，矛盾。所以恰好有 $2$ 条的情况不存在，命题 II 不成立。\n\n【快捷思路】\n高线将三角形分成两个直角三角形。锐角三角形三条高均在内部（得 3），钝角三角形仅钝角对应的高在内部（得 1），不可能恰好 2 条。因此 I 和 III 成立。\n\n【正确答案】D",
+    "analysis": "【题目分析】\n本题考察三角形内可作的分割线。若一条直线把三角形分成两个三角形，则它必须经过原三角形的一个顶点并与对边相交。要让至少一个子三角形为直角三角形，这条分割线需要在某个子三角形中形成直角。\n\n【解题步骤】\n先看锐角三角形。三条高的垂足都落在对应边的内部，因此从三个顶点分别作高都能把原三角形分成两个三角形，且至少一个子三角形为直角三角形。所以锐角三角形可以有 $3$ 条这样的直线。\n\n再看钝角三角形。设钝角在顶点 $A$。从 $A$ 向对边作高，垂足在对边内部，得到一条满足条件的直线。此外，由于 $\\angle A>90^\\circ$，从 $A$ 出发分别作垂直于边 $AB$ 和边 $AC$ 的直线，这两条直线也会在三角形内部与对边 $BC$ 相交，并分别使其中一个子三角形在 $A$ 处成为直角三角形。因此钝角三角形也可以有 $3$ 条这样的直线。\n\n不可能恰好有 $1$ 条或 $2$ 条：锐角情形给出 $3$ 条；钝角情形同样给出 $3$ 条。题目排除了直角三角形，所以不需要考虑原三角形已有直角的特殊情况。\n\n因此只有命题 III 成立。\n\n【快捷思路】\n把问题转化为从顶点向对边作能形成直角的分割线。锐角三角形三条高都在内部；钝角三角形从钝角顶点可作三条相关分割线。两类都得到 $3$ 条，所以只有 III 正确。\n\n【正确答案】D",
     "has_image": false,
     "images": [],
-    "topic": "Proof"
+    "topic": "Proof",
+    "difficulty": 3,
+    "related_topics": [
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "l.case_analysis",
+      "d.triangle_altitudes",
+      "d.right_angle_geometry"
+    ],
+    "skills": [
+      "case-analysis",
+      "geometric-counting",
+      "altitude-reasoning",
+      "constructive-existence",
+      "impossibility-proof"
+    ],
+    "primary_section": "d.triangle_altitudes"
   },
   {
     "id": "2023-P2-Q9",
     "year": 2023,
     "paper": 2,
     "num": 9,
-    "question": "Consider the following statement about a pentagon P:\n\n$(\\ast)$ If at least one of the interior angles in P is 108°, then all the interior angles in P form an arithmetic sequence.\n\nWhich of the following is/are true?\n\nI $\\quad$ The statement $(\\ast)$\n\nII $\\quad$ The contrapositive of $(\\ast)$\n\nIII $\\quad$ The converse of $(\\ast)$",
+    "question": "Consider the following statement about a pentagon P:\n\n$(\\ast)$ If at least one of the interior angles in P is 108^\\circ, then all the interior angles in P form an arithmetic sequence.\n\nWhich of the following is/are true?\n\nI $\\quad$ The statement $(\\ast)$\n\nII $\\quad$ The contrapositive of $(\\ast)$\n\nIII $\\quad$ The converse of $(\\ast)$",
     "options": {
       "A": "none of them",
       "B": "I only",
@@ -12323,10 +12483,36 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n本题考察逻辑命题及其变形。给定关于五边形 $P$ 的命题 $(\\ast)$：如果 $P$ 中至少有一个内角为 $108°$，则所有内角构成等差数列。需要判断原命题、逆否命题、逆命题三个陈述的真假。五边形内角和为 $540°$。\n\n【解题步骤】\n首先分析原命题 $(\\ast)$ 是否为真。构造反例：取五边形内角为 $108°, 100°, 100°, 100°, 132°$，总和恰好为 $540°$，其中一个角为 $108°$，但这五个数显然不构成等差数列（公差不一致）。因此原命题为假。\n由于原命题与其逆否命题逻辑等价（同真同假），逆否命题也为假。\n再分析逆命题：如果五个内角构成等差数列，则至少有一个角为 $108°$。设等差数列五项为 $a-2d, a-d, a, a+d, a+2d$，总和为 $5a = 540°$，得 $a = 108°$。即中间项必为 $108°$，逆命题为真。\n综上，仅 III 为真。\n\n【快捷思路】\n五边形内角和固定为 $540°$。等差数列五项之和等于中间项的五倍，故中间项必为 $540°/5 = 108°$，逆命题天然成立。而原命题只需一个反例即可否定，举出一组含 $108°$ 但不成等差的角即可。\n\n【正确答案】D",
+    "analysis": "【题目分析】\n本题考察逻辑命题及其变形。给定关于五边形 $P$ 的命题 $(\\ast)$：如果 $P$ 中至少有一个内角为 $108^\\circ$，则所有内角构成等差数列。需要判断原命题、逆否命题、逆命题三个陈述的真假。五边形内角和为 $540°$。\n\n【解题步骤】\n首先分析原命题 $(\\ast)$ 是否为真。构造反例：取五边形内角为 $108^\\circ, 100°, 100°, 100°, 132°$，总和恰好为 $540°$，其中一个角为 $108^\\circ$，但这五个数显然不构成等差数列（公差不一致）。因此原命题为假。\n由于原命题与其逆否命题逻辑等价（同真同假），逆否命题也为假。\n再分析逆命题：如果五个内角构成等差数列，则至少有一个角为 $108^\\circ$。设等差数列五项为 $a-2d, a-d, a, a+d, a+2d$，总和为 $5a = 540°$，得 $a = 108^\\circ$。即中间项必为 $108^\\circ$，逆命题为真。\n综上，仅 III 为真。\n\n【快捷思路】\n五边形内角和固定为 $540°$。等差数列五项之和等于中间项的五倍，故中间项必为 $540°/5 = 108^\\circ$，逆命题天然成立。而原命题只需一个反例即可否定，举出一组含 $108^\\circ$ 但不成等差的角即可。\n\n【正确答案】D",
     "has_image": false,
     "images": [],
-    "topic": "Logic"
+    "topic": "Logic",
+    "difficulty": 3,
+    "related_topics": [
+      "Sequences and Series",
+      "Coordinate Geometry",
+      "Counterexamples"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "c_sequences_series",
+      "d_coordinate_geometry",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "b.converse_contrapositive",
+      "c.arithmetic_sequences",
+      "d.polygon_angle_sums",
+      "h.counterexample_construction"
+    ],
+    "skills": [
+      "contrapositive-equivalence",
+      "converse-analysis",
+      "counterexample-construction",
+      "angle-sum",
+      "arithmetic-sequence-middle-term"
+    ],
+    "primary_section": "b.converse_contrapositive"
   },
   {
     "id": "2023-P2-Q10",
@@ -12347,7 +12533,31 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题考察不等式求解与配方法，要求逐行检查求解过程 $x^4 - 2x^2 - 3 < 0$ 中每步的等价性。关键注意每一步标注的是充要条件（if and only if），必须双向成立。\n\n【解题步骤】\n第 I 步：$x^4 - 2x^2 - 3 < 0 \\iff x^4 - 2x^2 + 1 < 4$，两边同时加 $4$，恒等变形，正确。\n第 II 步：$x^4 - 2x^2 + 1 = (x^2 - 1)^2$，配成完全平方，正确。\n第 III 步：$(x^2 - 1)^2 < 4 \\iff -2 < x^2 - 1 < 2$。对实数而言 $A^2 < B^2 \\iff -|B| < A < |B|$，这里 $B = 2$，等价成立，正确。\n第 IV 步：从 $-2 < x^2 - 1 < 2$ 推出 $x^2 - 1 < 2$。注意 $x^2 - 1 > -2$ 即 $x^2 > -1$，这对所有实数 $x$ 恒成立。因此 $-2 < x^2 - 1 < 2$ 与 $x^2 - 1 < 2$ 的解集完全相同，两者等价，正确。\n第 V 步：$x^2 - 1 < 2 \\iff x^2 < 3$，正确。\n第 VI 步：$x^2 < 3 \\iff -\\sqrt{3} < x < \\sqrt{3}$，正确。\n每一步均为等价变形，论证完全正确。\n\n【快捷思路】\n核心关注第 III 步到第 IV 步是否等价。$-2 < x^2 - 1$ 等价于 $x^2 > -1$，对实数恒成立，所以丢掉下界不丢失任何信息。确认这点后即可判定全链条无误。\n\n【正确答案】A",
     "has_image": false,
     "images": [],
-    "topic": "Algebra"
+    "topic": "Algebra",
+    "difficulty": 3,
+    "related_topics": [
+      "Proof"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "a1_algebra_basics",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "a2.polynomial_inequalities",
+      "a2.square_inequalities",
+      "a1.completing_square",
+      "l.equivalence_checking"
+    ],
+    "skills": [
+      "completing-square",
+      "inequality-solving",
+      "equivalence-checking",
+      "square-inequality",
+      "redundant-bound",
+      "interval-solution"
+    ],
+    "primary_section": "a2.polynomial_inequalities"
   },
   {
     "id": "2023-P2-Q11",
@@ -12366,10 +12576,32 @@ window.QUESTIONS = [
       "H": "Statement I: No, Statement II: No, Statement III: No"
     },
     "answer": "G",
-    "analysis": "【题目分析】\n本题考察命题逻辑的等价关系。原定理 $(\\ast)$：如果 $2^k + 1$ 是素数，则 $k$ 是 $2$ 的幂。这是 Fermat 素数的基本性质。需要判断三个陈述是否与原定理等价。\n\n【解题步骤】\n陈述 I：如果 $k$ 是 $2$ 的幂，则 $2^k + 1$ 是素数。这是原命题的逆命题，不等价。例如 $k = 32 = 2^5$，$2^{32} + 1 = 4294967297 = 641 \\times 6700417$ 不是素数。故 I 不等价。\n陈述 II：$2^k + 1$ 不是素数仅当 $k$ 不是 $2$ 的幂。逻辑上P仅当Q表示P → Q。这里P为「$2^k + 1$ 不是素数「，Q为「$k$ 不是 $2$ 的幂「，即 $\\neg A \\rightarrow \\neg B$。而 $\\neg A \\rightarrow \\neg B$ 等价于 $B \\rightarrow A$，正是原定理。故 II 等价。\n陈述 III：$2^k + 1$ 是素数是 $k$ 为 $2$ 的幂的充分条件。充分条件的表述为A → B，即 $2^k + 1$ 是素数 → $k$ 是 $2$ 的幂，与原定理完全一致。故 III 等价。\n综上，I 不等价，II 和 III 等价。\n\n【快捷思路】\n掌握三种逻辑表述的对应关系：逆命题（交换条件和结论，不等价）；P仅当Q 即 P → Q；A是B的充分条件即 A → B。将每个陈述还原为蕴涵式，与原定理 $A \\rightarrow B$ 比较即可。\n\n【正确答案】G",
+    "analysis": "【题目分析】\n本题考察命题逻辑的等价关系。原定理 $(\\ast)$ 可以记为 $P\\rightarrow Q$，其中 $P$ 表示「$2^k+1$ 是素数」，$Q$ 表示「$k$ 是 $2$ 的幂」。需要判断三个陈述是否与 $P\\rightarrow Q$ 等价。\n\n【解题步骤】\n陈述 I：如果 $k$ 是 $2$ 的幂，则 $2^k+1$ 是素数。这是 $Q\\rightarrow P$，即原命题的逆命题，不与原命题等价。例如 $k=32$ 是 $2$ 的幂，但 $2^{32}+1$ 不是素数。故 I 不等价。\n\n陈述 II：$2^k+1$ 不是素数仅当 $k$ 不是 $2$ 的幂。「$A$ only if $B$」表示 $A\\rightarrow B$。因此 II 表示 $\\neg P\\rightarrow \\neg Q$，它等价于 $Q\\rightarrow P$，仍是原命题的逆命题，不与原命题等价。故 II 不等价。\n\n陈述 III：$2^k+1$ 是素数是 $k$ 为 $2$ 的幂的充分条件。充分条件的表述正是 $P\\rightarrow Q$，与原定理完全一致。故 III 等价。\n\n综上，I 不等价，II 不等价，III 等价。\n\n【快捷思路】\n令原命题为 $P\\rightarrow Q$。I 是 $Q\\rightarrow P$；II 是 $\\neg P\\rightarrow\\neg Q$，也等价于 $Q\\rightarrow P$；III 是 $P\\rightarrow Q$。所以只有 III 等价。\n\n【正确答案】G",
     "has_image": false,
     "images": [],
-    "topic": "Logic"
+    "topic": "Logic",
+    "difficulty": 3,
+    "related_topics": [
+      "Number Theory",
+      "Proof"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "b.implication_converse",
+      "b.necessary_sufficient_conditions",
+      "h.counterexamples_to_implications"
+    ],
+    "skills": [
+      "translate-only-if",
+      "identify-converse",
+      "sufficient-condition",
+      "counterexample-use"
+    ],
+    "primary_section": "b.implication_converse"
   },
   {
     "id": "2023-P2-Q12",
@@ -12384,10 +12616,29 @@ window.QUESTIONS = [
       "D": "I and II"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n本题考察三角方程解的个数与参数 $p$ 的关系。方程 $\\sin x \\cos 2x = p^2 \\sin x$ 在 $0 \\leq x \\leq 2\\pi$ 内有 $n$ 个不同解，需判断两个涉及充分必要条件的陈述。\n\n【解题步骤】\n先整理方程：$\\sin x(\\cos 2x - p^2) = 0$。\n由 $\\sin x = 0$，得 $x = 0, \\pi, 2\\pi$，共 $3$ 个解。\n由 $\\cos 2x = p^2$，令 $\\theta = 2x \\in [0, 4\\pi]$。由于 $p^2 \\geq 0$，当 $0 \\leq p^2 < 1$ 时 $\\cos \\theta = p^2$ 在 $[0, 4\\pi]$ 内有 $4$ 个解，对应 $4$ 个不同的 $x$ 值。\n当 $0 < p^2 < 1$ 时，$\\cos 2x = p^2$ 的 $4$ 个解均不在 $\\{0, \\pi, 2\\pi\\}$ 中（因为 $\\cos 2x = 1 \\neq p^2$），故 $n = 7$。\n当 $p^2 = 0$ 时，$\\cos 2x = 0$ 有 $4$ 个解且不与 $\\sin x = 0$ 的解重合，$n = 7$。\n当 $p^2 = 1$ 时，$\\cos 2x = 1$ 的解为 $x = 0, \\pi, 2\\pi$，与 $\\sin x = 0$ 的解完全重合，$n = 3$。\n当 $p^2 > 1$ 时，$\\cos 2x = p^2$ 无解，$n = 3$。\n\n判断陈述 I：$n = 3$ 是 $p > 1$ 的充分条件。但 $p = 0$ 时也有 $n = 3$，此时 $p > 1$ 不成立。故 I 为假。\n判断陈述 II：$n = 7$ 仅当 $-1 < p < 1$。即 $n = 7 \\rightarrow -1 < p < 1$。$n = 7$ 时 $p^2 \\in [0, 1)$，对应 $p \\in (-1, 1)$，该范围确为 $(-1, 1)$ 的子集。故 II 为真。\n\n【快捷思路】\n分解方程后分情况讨论 $p^2$ 的取值范围对解数的影响。$n = 7$ 对应 $p^2 \\in [0, 1)$ 即 $|p| < 1$，自然满足 $-1 < p < 1$。而 $n = 3$ 还可能在 $p = 0$ 时出现，推不出 $p > 1$。\n\n【正确答案】C",
+    "analysis": "【题目分析】\n本题考察三角方程解的个数与参数 $p$ 的关系。方程 $\\sin x \\cos 2x = p^2 \\sin x$ 在 $0 \\leq x \\leq 2\\pi$ 内有 $n$ 个不同解，需判断两个涉及充分必要条件的陈述。\n\n【解题步骤】\n先整理方程：$\\sin x(\\cos 2x - p^2) = 0$。\n由 $\\sin x = 0$，得 $x = 0, \\pi, 2\\pi$，共 $3$ 个解。\n由 $\\cos 2x = p^2$，令 $\\theta = 2x \\in [0, 4\\pi]$。由于 $p^2 \\geq 0$，当 $0 \\leq p^2 < 1$ 时 $\\cos \\theta = p^2$ 在 $[0, 4\\pi]$ 内有 $4$ 个解，对应 $4$ 个不同的 $x$ 值。\n当 $0 < p^2 < 1$ 时，$\\cos 2x = p^2$ 的 $4$ 个解均不在 $\\{0, \\pi, 2\\pi\\}$ 中（因为 $\\cos 2x = 1 \\neq p^2$），故 $n = 7$。\n当 $p^2 = 0$ 时，$\\cos 2x = 0$ 有 $4$ 个解且不与 $\\sin x = 0$ 的解重合，$n = 7$。\n当 $p^2 = 1$ 时，$\\cos 2x = 1$ 的解为 $x = 0, \\pi, 2\\pi$，与 $\\sin x = 0$ 的解完全重合，$n = 3$。\n当 $p^2 > 1$ 时，$\\cos 2x = p^2$ 无解，$n = 3$。\n\n判断陈述 I：$n = 3$ 是 $p > 1$ 的充分条件。但 $p = 1$ 时也有 $n = 3$，此时 $p > 1$ 不成立。故 I 为假。\n判断陈述 II：$n = 7$ 仅当 $-1 < p < 1$。即 $n = 7 \\rightarrow -1 < p < 1$。$n = 7$ 时 $p^2 \\in [0, 1)$，对应 $p \\in (-1, 1)$，该范围确为 $(-1, 1)$ 的子集。故 II 为真。\n\n【快捷思路】\n分解方程后分情况讨论 $p^2$ 的取值范围对解数的影响。$n = 7$ 对应 $p^2 \\in [0, 1)$ 即 $|p| < 1$，自然满足 $-1 < p < 1$。而 $n = 3$ 还可能在 $p = 0$ 时出现，推不出 $p > 1$。\n\n【正确答案】C",
     "has_image": false,
     "images": [],
-    "topic": "Trigonometry"
+    "topic": "Trigonometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Logic"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "e.trig_equations.solution_counting",
+      "b.necessary_sufficient_conditions"
+    ],
+    "skills": [
+      "factorise-trig-equation",
+      "parameter-case-analysis",
+      "count-solutions-on-interval",
+      "interpret-sufficient-only-if"
+    ],
+    "primary_section": "e.trig_equations.solution_counting"
   },
   {
     "id": "2023-P2-Q13",
@@ -12403,13 +12654,28 @@ window.QUESTIONS = [
       "E": "$x \\geq 0$ and $x \\leq 1$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n本题是一道逻辑充分条件判断题。题目给出五个关于实数 $x$ 的命题 A 到 E，要求找出哪个命题作为充分条件时，能使得其余四个命题中恰好有三个成立。关键在于逐一验证每个命题是否能推出其余四个中恰好三个为真。注意命题 D 即 $x \\geq 0$ 或 $x \\leq 1$ 对任意实数 $x$ 恒成立，这一点是解题的突破口。命题 E 等价于 $0 \\leq x \\leq 1$，是命题 A 的子集。\n\n【解题步骤】\n逐一代入选项验证：\n\n设选项 B：$x = 1$。此时检查其余四个命题：A（$x \\geq 0$）成立；C（$x = 0$ 或 $x = 1$）成立；D（$x \\geq 0$ 或 $x \\leq 1$）恒成立；E（$x \\geq 0$ 且 $x \\leq 1$）不成立。恰有三个成立，B 是候选答案。\n\n设选项 C：$x = 0$ 或 $x = 1$。先取 $x = 0$：其余为 A、B、D、E。A（$0 \\geq 0$）成立；B（$0 = 1$）不成立；D 恒成立；E（$0 \\geq 0$ 且 $0 \\leq 1$）成立。恰有三个成立。再取 $x = 1$：其余为 A、B、D、E。A 成立；B 成立；D 恒成立；E（$1 \\geq 0$ 且 $1 \\leq 1$）成立。四个全成立，不满足恰好三个。\n\n因此只有选项 B 能保证恰好三个成立。\n\n【快捷思路】\n先观察 D 对所有实数恒成立，所以只需判断其余三个在给定条件下有几个成立。代入 $x = 1$ 快速检验：A 真、C 真、E 假，恰好三个。直接锁定答案 B。\n\n【正确答案】B\n\n",
+    "analysis": "【题目分析】\n本题考察充分条件与集合包含关系。若某个命题是另一个命题的充分条件，就表示前者成立一定能推出后者成立。题目要求找出一个命题，它能推出其余四个命题中的恰好三个。\n\n【解题步骤】\n把五个命题看成实数集：\nA：$x\\geq0$；\nB：$x=1$；\nC：$x=0$ 或 $x=1$；\nD：$x\\geq0$ 或 $x\\leq1$，这对所有实数恒成立；\nE：$0\\leq x\\leq1$。\n\n逐项判断能推出几个其他命题。\n\nA 不能推出 B、C、E，只能推出恒真的 D，因此不是答案。\n\nB 表示 $x=1$。它能推出 A、C、D、E，一共四个，不是恰好三个。\n\nC 表示 $x=0$ 或 $x=1$。它能推出 A，因为 $0$ 和 $1$ 都满足 $x\\geq0$；能推出 D，因为 D 恒真；也能推出 E，因为 $0$ 和 $1$ 都在 $[0,1]$ 内。但 C 不能推出 B，因为 $x=0$ 时 C 成立而 B 不成立。因此 C 恰好推出三个其他命题。\n\nD 是恒真命题，不能推出 A、B、C、E 中任何一个具体限制。\n\nE 表示 $0\\leq x\\leq1$。它能推出 A 和 D，但不能推出 B 或 C，例如 $x=\\frac12$。\n\n因此只有 C 满足条件。\n\n【快捷思路】\nD 恒真。把每个选项看成集合后，题目就是数它包含在哪几个其他集合里。集合 $\\{0,1\\}$ 包含于 A、D、E，但不包含于 B，正好三个。\n\n【正确答案】C",
     "has_image": false,
     "images": [],
     "topic": "Logic",
     "related_topics": [
       "Proof"
-    ]
+    ],
+    "difficulty": 3,
+    "modules": [
+      "b_mathematical_logic_basics",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "b.sufficient_conditions",
+      "b.implication_between_sets"
+    ],
+    "skills": [
+      "set-inclusion-reasoning",
+      "count-implications",
+      "recognise-tautology"
+    ],
+    "primary_section": "b.sufficient_conditions"
   },
   {
     "id": "2023-P2-Q14",
@@ -12427,13 +12693,29 @@ window.QUESTIONS = [
       "G": "If two of the lines are perpendicular, then the third is perpendicular to $y = x$."
     },
     "answer": "F",
-    "analysis": "【题目分析】\n本题考察解析几何中直线的平行与垂直关系。三条直线方程具有轮换对称性：$ax + by + c = 0$，$bx + cy + a = 0$，$cx + ay + b = 0$。三条直线的斜率分别为 $-\\dfrac{a}{b}$、$-\\dfrac{b}{c}$、$-\\dfrac{c}{a}$。利用斜率关系判断平行（斜率相等）和垂直（斜率乘积为 $-1$），结合轮换对称性可以简化分析。\n\n【解题步骤】\n三条直线斜率：$m_1 = -\\dfrac{a}{b}$，$m_2 = -\\dfrac{b}{c}$，$m_3 = -\\dfrac{c}{a}$。\n\n先考虑两条直线平行的情形。若 $m_1 = m_2$，则 $\\dfrac{a}{b} = \\dfrac{b}{c}$，即 $b^2 = ac$。此时 $m_3 = -\\dfrac{c}{a} = -\\dfrac{b^2}{a^2}$，一般不等于 $m_1$，故三条不一定全平行，排除 A。\n\n再考虑两条直线垂直的情形。若 $m_1 \\cdot m_2 = -1$，则 $\\left(-\\dfrac{a}{b}\\right)\\left(-\\dfrac{b}{c}\\right) = -1$，即 $\\dfrac{a}{c} = -1$，得 $c = -a$。此时 $m_3 = -\\dfrac{c}{a} = -\\dfrac{-a}{a} = 1$。斜率为 $1$ 意味着第三条直线平行于 $y = x$。\n\n由轮换对称性，无论哪两条垂直，第三条斜率均为 $1$。因此选项 F 正确。\n\n【快捷思路】\n利用轮换对称性，只需假设前两条垂直。令斜率乘积 $\\dfrac{a}{b} \\cdot \\dfrac{b}{c} = -1$ 得 $c = -a$，第三条斜率 $-\\dfrac{c}{a} = 1$，即平行于 $y = x$。秒杀 F。\n\n【正确答案】F\n Geometry\n",
+    "analysis": "【题目分析】\n本题考察解析几何中直线的平行与垂直关系。三条直线方程具有轮换对称性：$ax + by + c = 0$，$bx + cy + a = 0$，$cx + ay + b = 0$。三条直线的斜率分别为 $-\\dfrac{a}{b}$、$-\\dfrac{b}{c}$、$-\\dfrac{c}{a}$。利用斜率关系判断平行（斜率相等）和垂直（斜率乘积为 $-1$），结合轮换对称性可以简化分析。\n\n【解题步骤】\n三条直线斜率：$m_1 = -\\dfrac{a}{b}$，$m_2 = -\\dfrac{b}{c}$，$m_3 = -\\dfrac{c}{a}$。\n\n先考虑两条直线平行的情形。若 $m_1 = m_2$，则 $\\dfrac{a}{b} = \\dfrac{b}{c}$，即 $b^2 = ac$。此时 $m_3 = -\\dfrac{c}{a} = -\\dfrac{b^2}{a^2}$，一般不等于 $m_1$，故三条不一定全平行，排除 A。\n\n再考虑两条直线垂直的情形。若 $m_1 \\cdot m_2 = -1$，则 $\\left(-\\dfrac{a}{b}\\right)\\left(-\\dfrac{b}{c}\\right) = -1$，即 $\\dfrac{a}{c} = -1$，得 $c = -a$。此时 $m_3 = -\\dfrac{c}{a} = -\\dfrac{-a}{a} = 1$。斜率为 $1$ 意味着第三条直线平行于 $y = x$。\n\n由轮换对称性，无论哪两条垂直，第三条斜率均为 $1$。因此选项 F 正确。\n\n【快捷思路】\n利用轮换对称性，只需假设前两条垂直。令斜率乘积 $\\dfrac{a}{b} \\cdot \\dfrac{b}{c} = -1$ 得 $c = -a$，第三条斜率 $-\\dfrac{c}{a} = 1$，即平行于 $y = x$。秒杀 F。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
     "topic": "Coordinate Geometry",
     "related_topics": [
       "Algebra"
-    ]
+    ],
+    "difficulty": 3,
+    "modules": [
+      "d_coordinate_geometry",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "d.lines_gradients_parallel_perpendicular",
+      "a1.cyclic_parameters"
+    ],
+    "skills": [
+      "compute-gradients",
+      "parallel-perpendicular-conditions",
+      "cyclic-symmetry",
+      "algebraic-parameter-elimination"
+    ],
+    "primary_section": "d.lines_gradients_parallel_perpendicular"
   },
   {
     "id": "2023-P2-Q15",
@@ -12452,13 +12734,29 @@ window.QUESTIONS = [
       "H": "$\\dfrac{6}{31}$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n本题考察二进制循环小数的求值，本质是等比数列求和。题目给出二进制循环小数 $0.\\dot{0}0\\dot{1}\\dot{1} = 0.001100110011\\ldots_2$，循环节为 $0011$，长度为 $4$。关键思路是将循环部分视为首项加公比的无穷等比数列求和，或利用乘以 $2^4$ 消去循环部分的代数方法。\n\n【解题步骤】\n设 $x = 0.001100110011\\ldots_2$。\n\n二进制小数点左移 $4$ 位（乘以 $2^4 = 16$）：\n$$16x = 0011.00110011\\ldots_2$$\n\n二进制中 $0011_2 = 0 \\times 2^{-1} + 0 \\times 2^{-2} + 1 \\times 2^{-3} + 1 \\times 2^{-4} = \\dfrac{1}{8} + \\dfrac{1}{16} = \\dfrac{3}{16}$。\n\n但注意左移 $4$ 位后整数部分为 $0011_2 = 3$，所以：\n$$16x = 3 + x$$\n$$15x = 3$$\n$$x = \\dfrac{3}{15} = \\dfrac{1}{5}$$\n\n验证：十进制中 $\\dfrac{1}{5} = 0.2$，转为二进制确为 $0.\\overline{0011}_2$。\n\n【快捷思路】\n设 $x$ 为所求值，循环节长 $4$ 位，乘以 $2^4 = 16$ 得 $16x = 3 + x$，解得 $x = \\dfrac{3}{15} = \\dfrac{1}{5}$。核心公式：循环节值为 $k$、循环节长度为 $n$ 时，结果为 $\\dfrac{k}{2^n - 1}$。\n\n【正确答案】B\n and Series\n",
+    "analysis": "【题目分析】\n本题考察二进制循环小数的求值，本质是等比数列求和。题目给出二进制循环小数 $0.\\dot{0}0\\dot{1}\\dot{1} = 0.001100110011\\ldots_2$，循环节为 $0011$，长度为 $4$。关键思路是将循环部分视为首项加公比的无穷等比数列求和，或利用乘以 $2^4$ 消去循环部分的代数方法。\n\n【解题步骤】\n设 $x = 0.001100110011\\ldots_2$。\n\n二进制小数点左移 $4$ 位（乘以 $2^4 = 16$）：\n$$16x = 0011.00110011\\ldots_2$$\n\n左移 $4$ 位后，整数部分为 $0011_2=3$，小数部分仍为原来的循环小数 $x$，所以：\n$$16x = 3 + x$$\n$$15x = 3$$\n$$x = \\dfrac{3}{15} = \\dfrac{1}{5}$$\n\n验证：十进制中 $\\dfrac{1}{5} = 0.2$，转为二进制确为 $0.\\overline{0011}_2$。\n\n【快捷思路】\n设 $x$ 为所求值，循环节长 $4$ 位，乘以 $2^4 = 16$ 得 $16x = 3 + x$，解得 $x = \\dfrac{3}{15} = \\dfrac{1}{5}$。核心公式：循环节值为 $k$、循环节长度为 $n$ 时，结果为 $\\dfrac{k}{2^n - 1}$。\n\n【正确答案】B",
     "has_image": false,
     "images": [],
     "topic": "Sequences and Series",
     "related_topics": [
       "Number Theory"
-    ]
+    ],
+    "difficulty": 3,
+    "modules": [
+      "c_sequences_series",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "c.geometric_series_infinity",
+      "k.number_bases.binary_expansions"
+    ],
+    "skills": [
+      "recurring-binary-expansion",
+      "geometric-series-sum",
+      "multiply-to-eliminate-repetition",
+      "convert-binary-to-decimal"
+    ],
+    "primary_section": "c.geometric_series_infinity"
   },
   {
     "id": "2023-P2-Q16",
@@ -12477,14 +12775,32 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n本题考察递推数列的性质，数列满足 Fibonacci 型递推关系 $u_{n+2} = u_n + u_{n+1}$，初值 $u_1 = a$、$u_2 = b$，且 $\\gcd(a, b) = 7$。需要判断三个命题的真假。核心在于利用递推关系的线性性质和最大公约数的性质逐项分析。\n\n【解题步骤】\n首先写出前几项：$u_1 = a$，$u_2 = b$，$u_3 = a + b$，$u_4 = a + 2b$，$u_5 = 2a + 3b$。\n\n命题 I：因 $\\gcd(a, b) = 7$，故 $a = 7A$，$b = 7B$。由归纳法，若 $u_k$ 和 $u_{k+1}$ 均为 $7$ 的倍数，则 $u_{k+2} = u_k + u_{k+1}$ 也为 $7$ 的倍数。故所有项均为 $7$ 的倍数，$u_{2023}$ 是 $7$ 的倍数。I 正确。\n\n命题 II：取反例 $a = 14$，$b = 21$，$\\gcd = 7$，$a \\nmid b$。但 $u_4 = 14 + 42 = 56 = 14 \\times 4$，$a \\mid u_4$。II 错误。\n\n命题 III：$\\gcd(a, u_5) = \\gcd(7A, 14A + 21B) = 7 \\cdot \\gcd(A, 2A + 3B) = 7 \\cdot \\gcd(A, 3B)$。当 $\\gcd(A, B) = 1$ 时，$\\gcd(A, 3B) = \\gcd(A, 3)$。若 $3 \\mid A$，如 $a = 21$，$b = 7$，则 $\\gcd(21, 63) = 21 \\neq 7$。III 不一定成立。\n\n【快捷思路】\n命题 I 由归纳法直接得到。命题 II 用 $a = 14$、$b = 21$ 举反例即可否定。命题 III 用 $a = 21$、$b = 7$ 举反例。快速锁定只有 I 正确，选 B。\n\n【正确答案】B\n and Series\n",
+    "analysis": "【题目分析】\n本题考察递推数列的性质，数列满足 Fibonacci 型递推关系 $u_{n+2} = u_n + u_{n+1}$，初值 $u_1 = a$、$u_2 = b$，且 $\\gcd(a, b) = 7$。需要判断三个命题的真假。核心在于利用递推关系的线性性质和最大公约数的性质逐项分析。\n\n【解题步骤】\n首先写出前几项：$u_1 = a$，$u_2 = b$，$u_3 = a + b$，$u_4 = a + 2b$，$u_5 = 2a + 3b$。\n\n命题 I：因 $\\gcd(a, b) = 7$，故 $a = 7A$，$b = 7B$。由归纳法，若 $u_k$ 和 $u_{k+1}$ 均为 $7$ 的倍数，则 $u_{k+2} = u_k + u_{k+1}$ 也为 $7$ 的倍数。故所有项均为 $7$ 的倍数，$u_{2023}$ 是 $7$ 的倍数。I 正确。\n\n命题 II：取反例 $a = 14$，$b = 21$，$\\gcd = 7$，$a \\nmid b$。但 $u_4 = 14 + 42 = 56 = 14 \\times 4$，$a \\mid u_4$。II 错误。\n\n命题 III：$\\gcd(a, u_5) = \\gcd(7A, 14A + 21B) = 7 \\cdot \\gcd(A, 2A + 3B) = 7 \\cdot \\gcd(A, 3B)$。当 $\\gcd(A, B) = 1$ 时，$\\gcd(A, 3B) = \\gcd(A, 3)$。若 $3 \\mid A$，如 $a = 21$，$b = 7$，则 $\\gcd(21, 63) = 21 \\neq 7$。III 不一定成立。\n\n【快捷思路】\n命题 I 由归纳法直接得到。命题 II 用 $a = 14$、$b = 21$ 举反例即可否定。命题 III 用 $a = 21$、$b = 7$ 举反例。快速锁定只有 I 正确，选 B。\n\n【正确答案】B",
     "has_image": false,
     "images": [],
     "topic": "Sequences and Series",
     "related_topics": [
       "Number Theory",
       "Proof"
-    ]
+    ],
+    "difficulty": 3,
+    "modules": [
+      "c_sequences_series",
+      "k_number_theory_combinatorics",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "c.recurrence_sequences",
+      "k.gcd_divisibility",
+      "l.counterexample_disproof"
+    ],
+    "skills": [
+      "recurrence-induction",
+      "gcd-reduction",
+      "counterexample-construction",
+      "must-be-true-statements"
+    ],
+    "primary_section": "c.recurrence_sequences"
   },
   {
     "id": "2023-P2-Q17",
@@ -12504,7 +12820,28 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题涉及取整函数 $\\lceil x \\rceil$ 与定积分的结合。关键观察：$\\lceil x \\rceil$ 在每个左开右闭区间 $(n-1,n]$ 上取常数值 $n$。因此被积函数 $2^{\\lceil x \\rceil}$ 在积分区间 $[0,99]$ 上呈阶梯状分段常数，可将积分拆分为 $99$ 个小区间上的积分之和。由于单个点的测度为零，端点处的函数值不影响积分结果。\n\n【解题步骤】\n第一步：将积分区间按整数点分割。对于每个小区间 $(n-1,n]$（其中 $n=1,2,\\ldots,99$），有 $\\lceil x \\rceil = n$，故被积函数为常数 $2^n$。\n\n第二步：计算每个小区间上的积分：\n$$\\int_{n-1}^{n} 2^{\\lceil x \\rceil} \\,dx = \\int_{n-1}^{n} 2^n \\,dx = 2^n \\times 1 = 2^n$$\n\n第三步：将所有小区间积分求和：\n$$\\int_{0}^{99} 2^{\\lceil x \\rceil} \\,dx = \\sum_{n=1}^{99} 2^n$$\n\n第四步：利用等比数列求和公式，首项为 $2$，公比为 $2$，共 $99$ 项：\n$$\\sum_{n=1}^{99} 2^n = 2 \\cdot \\frac{2^{99}-1}{2-1} = 2^{100}-2$$\n\n【快捷思路】\n直接识别出这是一个等比数列求和问题。$\\lceil x \\rceil$ 在每个单位区间上取值为 $1,2,\\ldots,99$，对应被积函数为 $2^1,2^2,\\ldots,2^{99}$。总和即 $\\sum_{k=1}^{99} 2^k = 2^{100}-2$。注意不要误算为 $2^{100}-1$，求和从 $k=1$ 起而非 $k=0$。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
-    "topic": "Integration"
+    "topic": "Integration",
+    "difficulty": 3,
+    "related_topics": [
+      "Sequences and Series",
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "c_sequences_series",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.piecewise_constant_integrals",
+      "c.geometric_series_finite",
+      "i.step_functions"
+    ],
+    "skills": [
+      "piecewise-integration",
+      "ceiling-function-intervals",
+      "finite-geometric-sum"
+    ],
+    "primary_section": "g.piecewise_constant_integrals"
   },
   {
     "id": "2023-P2-Q18",
@@ -12524,7 +12861,27 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题要求 $x^4+bx^2+c=0$ 有四个不同实根的充要条件。令 $u=x^2$，原方程化为关于 $u$ 的二次方程 $u^2+bu+c=0$。由于 $u=x^2\\geq 0$，要使原方程有四个不同实根，需要二次方程有两个不同的正实根 $u_1,u_2$，从而 $x=\\pm\\sqrt{u_1}$ 和 $x=\\pm\\sqrt{u_2}$ 给出四个不同实根。\n\n【解题步骤】\n第一步：判别式条件保证两根不等：\n$$\\Delta = b^2-4c > 0 \\quad \\Rightarrow \\quad b^2 > 4c$$\n\n第二步：两根为正，利用韦达定理：\n两根之和 $u_1+u_2 = -b > 0$，即 $b < 0$。\n两根之积 $u_1 u_2 = c > 0$，即 $c > 0$。\n\n第三步：综合 $b<0$、$c>0$ 和 $b^2 > 4c$。由于 $c>0$，有 $4c>0$，不等式 $b^2>4c$ 等价于 $|b| > 2\\sqrt{c}$。结合 $b<0$，得：\n$$b < -2\\sqrt{c}$$\n\n第四步：反之，若 $c>0$ 且 $b<-2\\sqrt{c}$，则 $b<0$ 且 $b^2>4c$ 自动成立，二次方程有两不同正根，原方程有四不同实根。故充要条件为 $c>0$ 且 $b<-2\\sqrt{c}$。\n\n【快捷思路】\n记住双二次方程 $x^4+bx^2+c=0$ 有四不同实根的标准条件：令 $u=x^2$ 后，需要 $u^2+bu+c=0$ 有两个不同的正根。这等价于判别式正、和为正、积为正，即 $b^2>4c$、$b<0$、$c>0$，合并为 $c>0$ 且 $b<-2\\sqrt{c}$。\n\n【正确答案】D",
     "has_image": false,
     "images": [],
-    "topic": "Algebra"
+    "topic": "Algebra",
+    "difficulty": 3,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.quadratic_substitution",
+      "a2.discriminant_conditions",
+      "i.polynomial_roots"
+    ],
+    "skills": [
+      "substitution-to-quadratic",
+      "positive-roots-condition",
+      "discriminant-condition",
+      "necessary-sufficient-conditions"
+    ],
+    "primary_section": "a2.quadratic_substitution"
   },
   {
     "id": "2023-P2-Q19",
@@ -12543,10 +12900,32 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "H",
-    "analysis": "【题目分析】\n本题研究多项式 $f(x)$ 与其导数相关函数 $g(x)=xf'(x)$ 的实根个数关系。$f(x)=0$ 的实根个数记为 $M$，$g(x)=0$ 的实根个数记为 $N$。由于 $g(x)=xf'(x)$，其根来源于 $x=0$ 或 $f'(x)=0$。需要判断 $M<N$、$M=N$、$M>N$ 三种情况是否都可能。\n\n【解题步骤】\n情况一：$M<N$。取 $f(x)=x^2+x-1$，判别式 $1+4=5>0$，有两个不同实根，故 $M=2$。$f'(x)=2x+1$，则 $g(x)=x(2x+1)=2x^2+x$，根为 $x=0$ 和 $x=-1/2$，共 $N=2$ 个。换一个例子：$f(x)=x^2+1$，无实根 $M=0$；$g(x)=2x^2$，仅有根 $x=0$，$N=1$。故 $M<N$ 可能。\n\n情况二：$M=N$。取 $f(x)=x^2+x=x(x+1)$，根为 $0$ 和 $-1$，$M=2$。$f'(x)=2x+1$，$g(x)=x(2x+1)$，根为 $0$ 和 $-1/2$，$N=2$。故 $M=N$ 可能。\n\n情况三：$M>N$。取 $f(x)=x^2-1=(x-1)(x+1)$，根为 $1$ 和 $-1$，$M=2$。$f'(x)=2x$，$g(x)=x(2x)=2x^2$，仅有根 $x=0$，故 $N=1$。因此 $M>N$ 可能。\n\n综上，三种情况均可实现，三个命题全部成立。\n\n【快捷思路】\n核心技巧是构造具体反例。$M>N$ 的关键在于选择 $f(x)$ 使其有两个根但导数仅在 $x=0$ 处为零，如 $f(x)=x^2-1$，此时 $f'(x)=2x$，$g(x)=2x^2$ 只有一个根 $0$。$M<N$ 则利用 $f$ 无实根但 $g$ 在 $0$ 处有根。$M=N$ 取简单例子即可验证。\n\n【正确答案】H",
+    "analysis": "【题目分析】\n本题研究多项式 $f(x)$ 与其导数相关函数 $g(x)=xf'(x)$ 的实根个数关系。$f(x)=0$ 的实根个数记为 $M$，$g(x)=0$ 的实根个数记为 $N$。由于 $g(x)=xf'(x)$，其根来源于 $x=0$ 或 $f'(x)=0$。需要判断 $M<N$、$M=N$、$M>N$ 三种情况是否都可能。\n\n【解题步骤】\n情况一：$M<N$。取 $f(x)=x^2+1$，无实根，故 $M=0$。此时 $f'(x)=2x$，$g(x)=x\\cdot2x=2x^2$，仅有根 $x=0$，故 $N=1$。所以 $M<N$ 可能。\n\n情况二：$M=N$。取 $f(x)=x^2+x=x(x+1)$，根为 $0$ 和 $-1$，$M=2$。$f'(x)=2x+1$，$g(x)=x(2x+1)$，根为 $0$ 和 $-1/2$，$N=2$。故 $M=N$ 可能。\n\n情况三：$M>N$。取 $f(x)=x^2-1=(x-1)(x+1)$，根为 $1$ 和 $-1$，$M=2$。$f'(x)=2x$，$g(x)=x(2x)=2x^2$，仅有根 $x=0$，故 $N=1$。因此 $M>N$ 可能。\n\n综上，三种情况均可实现，三个命题全部成立。\n\n【快捷思路】\n核心技巧是构造具体反例。$M>N$ 的关键在于选择 $f(x)$ 使其有两个根但导数仅在 $x=0$ 处为零，如 $f(x)=x^2-1$，此时 $f'(x)=2x$，$g(x)=2x^2$ 只有一个根 $0$。$M<N$ 则利用 $f$ 无实根但 $g$ 在 $0$ 处有根。$M=N$ 取简单例子即可验证。\n\n【正确答案】H",
     "has_image": false,
     "images": [],
-    "topic": "Differentiation"
+    "topic": "Differentiation",
+    "difficulty": 3,
+    "related_topics": [
+      "Functions",
+      "Counterexamples"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "f.polynomial_derivatives",
+      "i.polynomial_roots",
+      "h.possibility_examples"
+    ],
+    "skills": [
+      "root-count-comparison",
+      "construct-examples",
+      "derivative-zero-counting",
+      "case-analysis"
+    ],
+    "primary_section": "f.polynomial_derivatives"
   },
   {
     "id": "2023-P2-Q20",
@@ -12568,6 +12947,28 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题定义 $I_{p,q}=\\int_p^q[(f(x))^2-(f(|x|))^2]\\,dx$，其中 $f$ 为实系数多项式。需要分析三个命题的真假。关键在于理解 $|x|$ 的作用：当 $x\\geq 0$ 时 $|x|=x$，被积函数为零；当 $x<0$ 时 $|x|=-x$，被积函数为 $(f(x))^2-(f(-x))^2$，一般非零。\n\n【解题步骤】\n命题 1：$I_{p,q}=0$ 仅当 $0<p$。\n反例：取 $f(x)=x$，则 $(f(x))^2=x^2$ 且 $(f(|x|))^2=|x|^2=x^2$，被积函数恒为零，故对任意 $p<q$ 都有 $I_{p,q}=0$，即使 $p<0$。命题 1 不成立。\n\n命题 2：若 $f'(x)<0$ 对所有 $x$ 成立，则对所有 $p<q<0$ 有 $I_{p,q}<0$。\n反例：取 $f(x)=-x+2$，则 $f'(x)=-1<0$ 恒成立。当 $x<0$ 时，$f(x)=-x+2$，$f(-x)=x+2$，被积函数为：\n$$(f(x))^2-(f(-x))^2 = (-x+2)^2-(x+2)^2 = -8x$$\n当 $x<0$ 时被积函数为正，故 $I_{p,q}>0$。命题 2 不成立。\n\n命题 3：$I_{p,q}>0$ 仅当 $p<0$。\n若 $p\\geq 0$，则积分区间 $[p,q]$ 上恒有 $x\\geq 0$，故 $|x|=x$，被积函数 $(f(x))^2-(f(x))^2=0$，积分 $I_{p,q}=0$，不可能为正。因此 $I_{p,q}>0$ 确实推出 $p<0$。命题 3 成立。\n\n【快捷思路】\n快速判断法：当积分区间完全在正半轴时，$|x|=x$ 使被积函数恒为零，积分不可能为正，故命题 3 显然成立。命题 1 和 2 各需一个反例即可推翻，取最简单的线性函数 $f(x)=x$ 和 $f(x)=-x+2$ 即可。\n\n【正确答案】D",
     "has_image": false,
     "images": [],
-    "topic": "Integration"
+    "topic": "Integration",
+    "difficulty": 3,
+    "related_topics": [
+      "Functions",
+      "Counterexamples"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "g.integrals_with_absolute_value",
+      "i.even_odd_function_comparison",
+      "h.counterexample_to_universal_claims"
+    ],
+    "skills": [
+      "piecewise-analysis",
+      "absolute-value-rewriting",
+      "counterexample-construction",
+      "only-if-reasoning"
+    ],
+    "primary_section": "g.integrals_with_absolute_value"
   }
 ];
