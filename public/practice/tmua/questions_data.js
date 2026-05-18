@@ -4001,7 +4001,20 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n给定函数 $f(x)=\\dfrac{x^3-4x}{2\\sqrt{x}}$（$x>0$），求 $f'(4)$ 的值。本题核心在于先用指数法则化简分式，再对化简后的幂函数逐项求导，最后代入求值。直接对原分式用商法则会非常繁琐，化简是本题的关键突破口。\n\n【解题步骤】\n先将分子各项分别除以分母：\n$$f(x)=\\frac{x^3}{2x^{1/2}}-\\frac{4x}{2x^{1/2}}=\\frac{1}{2}x^{5/2}-2x^{1/2}$$\n\n利用幂函数求导公式 $\\dfrac{d}{dx}(x^n)=nx^{n-1}$：\n$$f'(x)=\\frac{1}{2}\\cdot\\frac{5}{2}x^{3/2}-2\\cdot\\frac{1}{2}x^{-1/2}=\\frac{5}{4}x^{3/2}-x^{-1/2}$$\n\n代入 $x=4$：\n$$f'(4)=\\frac{5}{4}\\cdot 4^{3/2}-4^{-1/2}=\\frac{5}{4}\\cdot 8-\\frac{1}{2}=10-\\frac{1}{2}=9.5$$\n\n【快捷思路】\n先化简为幂函数形式是本题唯一高效路径。记住 $\\sqrt{x}=x^{1/2}$，除法即指数相减：$x^3\\div x^{1/2}=x^{5/2}$。化简后求导一步到位，代入时注意 $4^{3/2}=(\\sqrt{4})^3=2^3=8$。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "f_differentiation"
+    ],
+    "sections": [
+      "f.power_rule",
+      "f.surd_index_form"
+    ],
+    "primary_section": "f.power_rule",
+    "skills": [
+      "surd-to-index-form",
+      "power-rule-differentiation",
+      "substitution-evaluation"
+    ]
   },
   {
     "id": "2018-P2-Q2",
@@ -4022,7 +4035,20 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n求 $\\left(x^6-\\dfrac{1}{x^2}\\right)^{12}$ 展开式中的常数项。这是二项式定理的典型应用，关键是写出通项公式并令 $x$ 的指数为零来确定对应的项数。\n\n【解题步骤】\n由二项式定理，第 $k$ 项（$k$ 从 $0$ 开始计数）为：\n$$\\binom{12}{k}(x^6)^{12-k}\\left(-\\frac{1}{x^2}\\right)^k=\\binom{12}{k}(-1)^k x^{6(12-k)}\\cdot x^{-2k}=\\binom{12}{k}(-1)^k x^{72-8k}$$\n\n常数项要求 $x$ 的指数为零：\n$$72-8k=0\\quad\\Rightarrow\\quad k=9$$\n\n代入得常数项：\n$$\\binom{12}{9}(-1)^9=\\binom{12}{3}\\cdot(-1)=\\frac{12\\times 11\\times 10}{3\\times 2\\times 1}\\cdot(-1)=220\\cdot(-1)=-220$$\n\n这里利用了 $\\dbinom{n}{k}=\\dbinom{n}{n-k}$ 将 $\\dbinom{12}{9}$ 化为更易计算的 $\\dbinom{12}{3}$。\n\n【快捷思路】\n通项中 $x$ 的指数为 $6(12-k)-2k=72-8k$，令其为零得 $k=9$。符号由 $(-1)^k=(-1)^9=-1$ 确定为负。二项式系数用 $\\dbinom{12}{3}$ 计算比 $\\dbinom{12}{9}$ 更方便。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.binomial_specific_terms",
+      "c.constant_term"
+    ],
+    "primary_section": "c.binomial_specific_terms",
+    "skills": [
+      "binomial-general-term",
+      "constant-term-extraction",
+      "negative-index-laws"
+    ]
   },
   {
     "id": "2018-P2-Q3",
@@ -4045,7 +4071,20 @@ window.QUESTIONS = [
     "answer": "F",
     "analysis": "【题目分析】\n题目给出一个论断：一段行程分两部分，第一部分平均速度为 $u$，第二部分平均速度为 $v$，则全程平均速度为 $\\dfrac{1}{2}(u+v)$。要求判断给出的三个具体行程中，哪些构成该论断的反例（counterexample），即哪些行程的实际平均速度不等于 $\\dfrac{1}{2}(u+v)$。注意 $\\dfrac{1}{2}(u+v)=\\dfrac{1}{2}(50+40)=45$，只需逐一计算各行程的真实平均速度即可。\n\n【解题步骤】\n平均速度 = 总距离 $\\div$ 总时间。\n\n**行程 I**：第一段 $50$ km/h 行驶 $100$ km，用时 $t_1=2$ h；第二段 $40$ km/h 行驶 $100$ km，用时 $t_2=2.5$ h。总距离 $D=200$ km，总时间 $T=4.5$ h，平均速度 $V=\\dfrac{200}{4.5}=\\dfrac{400}{9}\\approx 44.44\\neq 45$，是反例。\n\n**行程 II**：第一段 $50$ km/h 行驶 $1$ h，距离 $d_1=50$ km；第二段 $40$ km/h 行驶 $1$ h，距离 $d_2=40$ km。总距离 $D=90$ km，总时间 $T=2$ h，平均速度 $V=\\dfrac{90}{2}=45$，恰好等于 $\\dfrac{1}{2}(u+v)$，不是反例。\n\n**行程 III**：第一段 $50$ km/h 行驶 $80$ km，用时 $t_1=1.6$ h；第二段 $40$ km/h 行驶 $100$ km，用时 $t_2=2.5$ h。总距离 $D=180$ km，总时间 $T=4.1$ h，平均速度 $V=\\dfrac{180}{4.1}=\\dfrac{1800}{41}\\approx 43.90\\neq 45$，是反例。\n\n因此 I 和 III 是反例。\n\n【快捷思路】\n当两段时间相等时（如行程 II），平均速度恰好是算术平均 $\\dfrac{u+v}{2}$；但当两段距离相等或时间不等时（如行程 I 和 III），实际平均速度是加权平均，不等于算术平均。掌握这个规律可直接判断，无需逐个计算。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "h.statement_testing"
+    ],
+    "primary_section": "h.counterexample_construction",
+    "skills": [
+      "counterexample-testing",
+      "average-speed",
+      "weighted-average"
+    ]
   },
   {
     "id": "2018-P2-Q4",
@@ -4066,7 +4105,20 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n已知 $\\cos x=c$（$c\\neq 0$）在区间 $\\left(0,\\dfrac{3\\pi}{2}\\right)$ 内恰有两个解。由此可确定 $c$ 的取值范围。再求方程 $\\cos^2 2x=c^2$ 在同一区间内的解的个数。本题需结合余弦函数图像分析解的分布。\n\n【解题步骤】\n首先分析条件：在 $\\left(0,\\dfrac{3\\pi}{2}\\right)$ 上，$\\cos x$ 从 $1$ 递减到 $-1$（经过 $x=\\pi$），再从 $-1$ 递增到 $0$（到达 $x=\\frac{3\\pi}{2}$）。要使 $\\cos x=c$ 恰有两个解，直线 $y=c$ 必须与曲线在此区间内相交两次，这要求 $-1<c<0$（此时一条水平线在 $(0,\\pi)$ 和 $(\\pi,\\frac{3\\pi}{2})$ 各交一次）。\n\n方程 $\\cos^2 2x=c^2$ 等价于 $\\cos 2x=c$ 或 $\\cos 2x=-c$。\n\n令 $u=2x$，则 $u\\in(0,3\\pi)$。由于 $-1<c<0$，故 $0<-c<1$。\n\n对于 $\\cos u=c$（$c$ 为负）：在 $(0,2\\pi)$ 内有 $2$ 个解，在 $(2\\pi,3\\pi)$ 内还有 $1$ 个解（因为 $c+2\\pi$ 对应的角在 $(2\\pi,3\\pi)$ 中），共 $3$ 个解。\n\n对于 $\\cos u=-c$（$-c$ 为正）：在 $(0,2\\pi)$ 内有 $2$ 个解，在 $(2\\pi,3\\pi)$ 内还有 $1$ 个解，共 $3$ 个解。\n\n由于 $c\\neq -c$（$c\\neq 0$），两组解互不重合，总计 $6$ 个解。\n\n【快捷思路】\n由 $\\cos x=c$ 在 $(0,\\frac{3\\pi}{2})$ 有两个解 $\\Rightarrow -1<c<0$。换元 $u=2x$，范围扩大到 $(0,3\\pi)$，即 $1.5$ 个完整周期。每条水平线 $y=c$ 和 $y=-c$ 在 $1.5$ 个周期内各交 $3$ 次，共 $6$ 个解。画草图可以直观验证。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "e_trigonometry"
+    ],
+    "sections": [
+      "e.trig_equation_solution_count",
+      "e.cosine_graphs"
+    ],
+    "primary_section": "e.trig_equation_solution_count",
+    "skills": [
+      "range-from-solution-count",
+      "angle-doubling-substitution",
+      "graphical-solution-counting"
+    ]
   },
   {
     "id": "2018-P2-Q5",
@@ -4083,11 +4135,27 @@ window.QUESTIONS = [
       "D": "I and II"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n已知四边形$Q$的两条对角线互相垂直，判断两个命题是否必然成立。这是一道典型的反例判断题，核心思路是不需要证明命题为真，而是尝试构造反例说明命题为假。\n\n命题I：一条对角线是对称轴。命题II：四边中点构成正方形。\n\n【解题步骤】\n对于命题I，画图法最直观。画两条垂直的对角线，只需让不在同一条对角线上的两个顶点到该对角线的距离不同，即可破坏对称性。例如取对角线交点为原点，在两条对角线上分别取不对称的点作为顶点，得到的一般四边形满足对角线垂直但没有对称轴，故命题I不必然成立。\n\n对于命题II，由Varignon定理可知，任意四边形各边中点构成平行四边形，其边分别平行于原四边形的对角线。当对角线垂直时，该平行四边形为菱形（邻边互相垂直的平行四边形是矩形，对角线垂直时是菱形）。但菱形不一定是正方形，需要额外条件——对角线相等——才能保证是正方形。构造一个对角线垂直但不相等的四边形即可作为反例。\n\n综上，两个命题都不必然成立。\n\n【快捷思路】\n遇到这类几何判断题，直接画图尝试构造反例比严格证明更高效。对角线垂直只保证了中点四边形是菱形而非正方形，对称性则需要更多条件。\n\n【正确答案】A",
+    "analysis": "【题目分析】\n已知四边形$Q$的两条对角线互相垂直，判断两个命题是否必然成立。这是一道典型的反例判断题，核心思路是不需要证明命题为真，而是尝试构造反例说明命题为假。\n\n命题I：一条对角线是对称轴。命题II：四边中点构成正方形。\n\n【解题步骤】\n对于命题I，画图法最直观。画两条垂直的对角线，只需让不在同一条对角线上的两个顶点到该对角线的距离不同，即可破坏对称性。例如取对角线交点为原点，在两条对角线上分别取不对称的点作为顶点，得到的一般四边形满足对角线垂直但没有对称轴，故命题I不必然成立。\n\n对于命题II，由Varignon定理可知，任意四边形各边中点构成平行四边形，其边分别平行于原四边形的对角线。当原四边形的对角线垂直时，中点四边形的相邻边也互相垂直，因此它是矩形。但矩形不一定是正方形；还需要原四边形的两条对角线相等，才能保证中点四边形相邻边长度相等。构造一个对角线垂直但不相等的四边形即可作为反例。\n\n综上，两个命题都不必然成立。\n\n【快捷思路】\n遇到这类几何判断题，直接画图尝试构造反例比严格证明更高效。对角线垂直只保证了中点四边形是矩形而非正方形，对称性则需要更多条件。\n\n【正确答案】A",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Coordinate Geometry"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "h.necessary_condition_counterexamples",
+      "d.quadrilateral_diagonals",
+      "d.midpoint_geometry"
+    ],
+    "primary_section": "h.necessary_condition_counterexamples",
+    "skills": [
+      "necessary-condition-testing",
+      "counterexample-construction",
+      "varignon-theorem",
+      "perpendicular-diagonals"
     ]
   },
   {
@@ -4112,6 +4180,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Differentiation",
       "Functions"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "f_differentiation",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "f.monotonicity",
+      "i.function_monotonicity"
+    ],
+    "primary_section": "h.counterexample_construction",
+    "skills": [
+      "counterexample-construction",
+      "differentiate-polynomial",
+      "monotonicity-test",
+      "check-conclusion-failure"
     ]
   },
   {
@@ -4132,11 +4217,26 @@ window.QUESTIONS = [
       "G": "6"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n两个等差数列的公共项问题。数列1：首项$11$，公差$3$；数列2：首项$2$，公差$5$。要求第$20$个公共项$N$被$7$除的余数。\n\n【解题步骤】\n列出两数列前若干项：\n数列1：$11, 14, 17, 20, 23, 26, 29, 32, \\ldots$\n数列2：$2, 7, 12, 17, 22, 27, 32, 37, \\ldots$\n\n观察发现第一个公共项是$17$，第二个是$32$，差值为$15$。这是因为公共项必须同时满足$a_n = 11+3m = 2+5k$，即$3m - 5k = -9$。两数列的公差分别为$3$和$5$，最小公倍数为$15$，故公共项构成以$17$为首项、$15$为公差的等差数列。\n\n第$20$个公共项为：\n$N = 17 + (20-1) \\times 15 = 17 + 285 = 302$\n\n计算$302 \\div 7 = 43 \\cdots 1$，余数为$1$。\n\n【快捷思路】\n直接写出两数列前几项，找出前两个公共项$17$和$32$，差为$15$（即$\\text{lcm}(3,5)$），立即得到公共项通项为$17+15k$。第$20$项$302$除以$7$求余即可。利用同余也可快速验证：$302 = 7 \\times 43 + 1$。\n\n【正确答案】B and Series",
+    "analysis": "【题目分析】\n两个等差数列的公共项问题。数列1：首项$11$，公差$3$；数列2：首项$2$，公差$5$。要求第$20$个公共项$N$被$7$除的余数。\n\n【解题步骤】\n列出两数列前若干项：\n数列1：$11, 14, 17, 20, 23, 26, 29, 32, \\ldots$\n数列2：$2, 7, 12, 17, 22, 27, 32, 37, \\ldots$\n\n观察发现第一个公共项是$17$，第二个是$32$，差值为$15$。这是因为公共项必须同时满足$a_n = 11+3m = 2+5k$，即$3m - 5k = -9$。两数列的公差分别为$3$和$5$，最小公倍数为$15$，故公共项构成以$17$为首项、$15$为公差的等差数列。\n\n第$20$个公共项为：\n$N = 17 + (20-1) \\times 15 = 17 + 285 = 302$\n\n计算$302 \\div 7 = 43 \\cdots 1$，余数为$1$。\n\n【快捷思路】\n直接写出两数列前几项，找出前两个公共项$17$和$32$，差为$15$（即$\\text{lcm}(3,5)$），立即得到公共项通项为$17+15k$。第$20$项$302$除以$7$求余即可。利用同余也可快速验证：$302 = 7 \\times 43 + 1$。\n\n【正确答案】B",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Number Theory"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "c.arithmetic_sequences",
+      "k.divisibility_remainders",
+      "k.modular_arithmetic"
+    ],
+    "primary_section": "c.arithmetic_sequences",
+    "skills": [
+      "common-arithmetic-progression",
+      "least-common-multiple",
+      "modular-remainder"
     ]
   },
   {
@@ -4165,6 +4265,21 @@ window.QUESTIONS = [
     "has_image": true,
     "related_topics": [
       "Proof"
+    ],
+    "modules": [
+      "k_number_theory_combinatorics",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "k.dyck_paths",
+      "k.valid_code_transformations",
+      "l.direct_proof_and_cases"
+    ],
+    "primary_section": "k.dyck_paths",
+    "skills": [
+      "dyck-path-prefix-condition",
+      "valid-code-transformation",
+      "statement-evaluation"
     ]
   },
   {
@@ -4185,11 +4300,28 @@ window.QUESTIONS = [
       "G": "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (IV)."
     },
     "answer": "F",
-    "analysis": "【题目分析】\n本题给出了解方程 $4x\\sqrt{2x - 1} = 10x - 5$ 的完整步骤链，要求识别推理中的错误及其位置。核心在于追踪每一步变换的合法性，特别关注可能丢失解的操作。\n\n【解题步骤】\n原方程 $4x\\sqrt{2x - 1} = 10x - 5$。\n\n步骤(I)：将右边因式分解，$10x - 5 = 5(2x - 1)$，这是恒等变形，正确。\n\n步骤(II)：两边平方，得 $16x^2(2x - 1) = 25(2x - 1)^2$。平方操作不可逆，可能引入增根，但不会丢根。验证 $x = \\frac{5}{8}$ 和 $x = \\frac{5}{2}$ 确实满足原方程。\n\n步骤(III)→(IV)：两边除以 $2x - 1$。这里是关键错误！当 $2x - 1 = 0$ 即 $x = \\frac{1}{2}$ 时，除以零无意义。验证 $x = \\frac{1}{2}$：左边 $4 \\cdot \\frac{1}{2} \\cdot \\sqrt{0} = 0$，右边 $10 \\cdot \\frac{1}{2} - 5 = 0$，等式成立。所以 $x = \\frac{1}{2}$ 是原方程的第三个解，在这一步被丢失。\n\n后续步骤(IV)→(VI)：解二次方程 $16x^2 - 50x + 25 = 0$，得 $x = \\frac{5}{8}$ 和 $x = \\frac{5}{2}$，计算无误，但由于前一步丢根，结论不完整。\n\n正确做法：从 $16x^2(2x - 1) = 25(2x - 1)^2$ 应移项提公因式，得 $(2x - 1)(16x^2 - 25(2x - 1)) = 0$，才能保留 $x = \\frac{1}{2}$ 这个解。\n\n【快捷思路】\n看到方程中出现 $2x - 1$ 同时出现在根号内和方程两边时，警惕除以 $2x - 1$ 可能丢根。正确做法是移项提公因式 $(2x - 1)$，而非直接约去。\n\n【正确答案】G",
+    "analysis": "【题目分析】\n本题给出了解方程 $4x\\sqrt{2x - 1} = 10x - 5$ 的完整步骤链，要求识别推理中的错误及其位置。核心在于追踪每一步变换的合法性，特别关注可能丢失解的操作。\n\n【解题步骤】\n原方程 $4x\\sqrt{2x - 1} = 10x - 5$。\n\n步骤(I)：将右边因式分解，$10x - 5 = 5(2x - 1)$，这是恒等变形，正确。\n\n步骤(II)：两边平方，得 $16x^2(2x - 1) = 25(2x - 1)^2$。平方操作不可逆，可能引入增根，但不会丢根。验证 $x = \\frac{5}{8}$ 和 $x = \\frac{5}{2}$ 确实满足原方程。\n\n步骤(III)：两边约去 $2x - 1$。这里是关键错误！当 $2x - 1 = 0$ 即 $x = \\frac{1}{2}$ 时，除以零无意义。验证 $x = \\frac{1}{2}$：左边 $4 \\cdot \\frac{1}{2} \\cdot \\sqrt{0} = 0$，右边 $10 \\cdot \\frac{1}{2} - 5 = 0$，等式成立。所以 $x = \\frac{1}{2}$ 是原方程的第三个解，在这一步被丢失。\n\n后续步骤(IV)→(VI)：解二次方程 $16x^2 - 50x + 25 = 0$，得 $x = \\frac{5}{8}$ 和 $x = \\frac{5}{2}$，计算无误，但由于前一步丢根，结论不完整。\n\n正确做法：从 $16x^2(2x - 1) = 25(2x - 1)^2$ 应移项提公因式，得 $(2x - 1)(16x^2 - 25(2x - 1)) = 0$，才能保留 $x = \\frac{1}{2}$ 这个解。\n\n【快捷思路】\n看到方程中出现 $2x - 1$ 同时出现在根号内和方程两边时，警惕除以 $2x - 1$ 可能丢根。正确做法是移项提公因式 $(2x - 1)$，而非直接约去。\n\n【正确答案】F",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Proof"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "l_proof_methods",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "a2.equation_solving",
+      "l.proof_error_detection",
+      "h.invalid_division"
+    ],
+    "primary_section": "l.proof_error_detection",
+    "skills": [
+      "proof-step-audit",
+      "division-by-zero-check",
+      "lost-solution-detection",
+      "radical-equation-solving"
     ]
   },
   {
@@ -4216,6 +4348,20 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Logic"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "i.graph_symmetry",
+      "h.necessary_sufficient_conditions"
+    ],
+    "primary_section": "i.graph_symmetry",
+    "skills": [
+      "symmetry-condition-translation",
+      "variable-substitution",
+      "necessary-sufficient-analysis"
     ]
   },
   {
@@ -4243,6 +4389,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Functions",
       "Logic"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a3_exponents_logarithms",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "i.equation_roots.graph_intersections",
+      "a3.exponential_function_graphs",
+      "h.counterexample_construction"
+    ],
+    "primary_section": "i.equation_roots.graph_intersections",
+    "skills": [
+      "graph-intersection",
+      "exponential-linear-intersection",
+      "counterexample-construction",
+      "parameter-counterexample"
     ]
   },
   {
@@ -4270,6 +4433,21 @@ window.QUESTIONS = [
     "related_topics": [
       "Proof",
       "Number Theory"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "b.quantifier_negation",
+      "b.nested_quantifiers",
+      "k.primes"
+    ],
+    "primary_section": "b.quantifier_negation",
+    "skills": [
+      "nested-quantifier-negation",
+      "symbolic-translation",
+      "prime-predicate-negation"
     ]
   },
   {
@@ -4295,6 +4473,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Proof",
       "Counterexamples"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "e_trigonometry",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "l.proof_error_identification",
+      "e.trig_identities",
+      "h.counterexample_construction"
+    ],
+    "primary_section": "l.proof_error_identification",
+    "skills": [
+      "proof-error-identification",
+      "invalid-square-root-inference",
+      "trig-counterexample",
+      "quadrant-analysis"
     ]
   },
   {
@@ -4321,6 +4516,21 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Coordinate Geometry"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "e.ssa_ambiguous_case",
+      "d.circle_line_intersections"
+    ],
+    "primary_section": "e.ssa_ambiguous_case",
+    "skills": [
+      "ambiguous-case",
+      "circle-ray-intersection",
+      "distance-to-line",
+      "case-analysis"
     ]
   },
   {
@@ -4348,6 +4558,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Differentiation",
       "Graphs"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "f_differentiation"
+    ],
+    "sections": [
+      "i.polynomial_root_counts",
+      "i.graph_transformations",
+      "f.stationary_points_root_count"
+    ],
+    "primary_section": "f.stationary_points_root_count",
+    "skills": [
+      "stationary-points",
+      "cubic-root-count",
+      "graph-translation",
+      "graph-reflection",
+      "parameter-condition"
     ]
   },
   {
@@ -4357,7 +4584,7 @@ window.QUESTIONS = [
     "num": 16,
     "topic": "Sequences and Series",
     "difficulty": 3,
-    "question": "In this question, $x_1, x_2, x_3, \\dots$ is an **arithmetic progression**, all of whose terms are integers.\n\nLet $n$ be a positive integer. If the median of the first $n$ terms of the sequence is an integer, which of the following three statements **must** be true?\n\n        I The median of the first $n + 2$ terms is an integer.\n\n        II The median of the first $2n$ terms is an integer.\n\n        III The median of $x_2, x_4, x_6, \\dots, x_{2n}$ is an integer.",
+    "question": "In this question, $x_1, x_2, x_3, \\dots$ is an **arithmetic progression**, all of whose terms are integers.\n\nLet $n$ be a positive integer. If the median of the first $n$ terms of the sequence is an integer, which of the following three statements **must** be true?\n\n**I** The median of the first $n + 2$ terms is an integer.\n\n**II** The median of the first $2n$ terms is an integer.\n\n**III** The median of $x_2, x_4, x_6, \\dots, x_{2n}$ is an integer.",
     "options": {
       "A": "none of them",
       "B": "I only",
@@ -4369,11 +4596,25 @@ window.QUESTIONS = [
       "H": "I, II and III"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n等差数列 $\\{x_k\\}$ 各项为整数，已知前 $n$ 项中位数为整数，判断三个关于其他中位数的命题是否必然成立。\n\n【解题步骤】\n中位数分析：\n- $n$ 为奇数：中位数为 $x_{\\frac{n+1}{2}}$，本身是整数。\n- $n$ 为偶数：中位数为 $x_{\\frac{n}{2}}+\\frac{d}{2}$（$d$ 为公差），已知为整数，故 $d$ 为偶数。\n\n命题I：前 $n+2$ 项的中位数。\n$n$ 奇 $\\to n+2$ 奇，中位数为某一项，整数。$n$ 偶 $\\to n+2$ 偶，中位数为 $x_{\\frac{n}{2}+1}+\\frac{d}{2}$，因 $d$ 为偶数，整数。I成立。✓\n\n命题II：前 $2n$ 项的中位数。\n反例：$1,2,3,\\ldots$（$d=1$），$n=3$，前 $3$ 项中位数 $=2$（整数），前 $6$ 项中位数 $=\\frac{3+4}{2}=3.5$（非整数）。II不成立。✗\n\n命题III：子列 $x_2,x_4,\\ldots,x_{2n}$（$n$ 项，公差 $2d$）。\n$n$ 奇时中位数为 $x_{n+1}$（整数）；$n$ 偶时中位数为 $\\frac{x_n+x_{n+2}}{2}=x_{n+1}$（整数）。III成立。✓\n\n【快捷思路】\nII用 $1,2,3,\\ldots$、$n=3$ 反例排除。I和III奇偶分类均可证。\n\n【正确答案】F and Series",
+    "analysis": "【题目分析】\n等差数列 $\\{x_k\\}$ 各项为整数，已知前 $n$ 项中位数为整数，判断三个关于其他中位数的命题是否必然成立。\n\n【解题步骤】\n中位数分析：\n- $n$ 为奇数：中位数为 $x_{\\frac{n+1}{2}}$，本身是整数。\n- $n$ 为偶数：中位数为 $x_{\\frac{n}{2}}+\\frac{d}{2}$（$d$ 为公差），已知为整数，故 $d$ 为偶数。\n\n命题I：前 $n+2$ 项的中位数。\n$n$ 奇 $\\to n+2$ 奇，中位数为某一项，整数。$n$ 偶 $\\to n+2$ 偶，中位数为 $x_{\\frac{n}{2}+1}+\\frac{d}{2}$，因 $d$ 为偶数，整数。I成立。✓\n\n命题II：前 $2n$ 项的中位数。\n反例：$1,2,3,\\ldots$（$d=1$），$n=3$，前 $3$ 项中位数 $=2$（整数），前 $6$ 项中位数 $=\\frac{3+4}{2}=3.5$（非整数）。II不成立。✗\n\n命题III：子列 $x_2,x_4,\\ldots,x_{2n}$（$n$ 项，公差 $2d$）。\n$n$ 奇时中位数为 $x_{n+1}$（整数）；$n$ 偶时中位数为 $\\frac{x_n+x_{n+2}}{2}=x_{n+1}$（整数）。III成立。✓\n\n【快捷思路】\nII用 $1,2,3,\\ldots$、$n=3$ 反例排除。I和III奇偶分类均可证。\n\n【正确答案】F",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Number Theory"
+    ],
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.arithmetic_progressions",
+      "c.sequence_medians"
+    ],
+    "primary_section": "c.sequence_medians",
+    "skills": [
+      "parity-case-analysis",
+      "median-of-sequence",
+      "arithmetic-progression",
+      "counterexample-testing"
     ]
   },
   {
@@ -4397,6 +4638,24 @@ window.QUESTIONS = [
     "related_topics": [
       "Number Theory",
       "Proof"
+    ],
+    "modules": [
+      "k_number_theory_combinatorics",
+      "h_logic_counterexamples",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "k.prime_factorisation",
+      "h.counterexample_construction",
+      "l.disproof_by_counterexample"
+    ],
+    "primary_section": "k.prime_factorisation",
+    "skills": [
+      "prime-factorisation",
+      "parity-of-exponents",
+      "iff-definition",
+      "counterexample-construction",
+      "closure-property"
     ]
   },
   {
@@ -4422,6 +4681,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Graphs",
       "Proof"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "f.second_derivative",
+      "i.convexity",
+      "l.necessary_conditions"
+    ],
+    "primary_section": "f.second_derivative",
+    "skills": [
+      "convexity-recognition",
+      "second-derivative-test",
+      "necessary-condition",
+      "counterexample-elimination"
     ]
   },
   {
@@ -4444,6 +4720,24 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Proof"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "a3.exponential_inequalities",
+      "a2.inequality_manipulation",
+      "l.counterexample_testing"
+    ],
+    "primary_section": "a3.exponential_inequalities",
+    "skills": [
+      "exponent-law",
+      "positive-denominator-clearing",
+      "inequality-comparison",
+      "monotonicity",
+      "counterexample-testing"
     ]
   },
   {
@@ -4468,6 +4762,24 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Graphs"
+    ],
+    "modules": [
+      "a1_algebra_basics",
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a1.surds",
+      "a2.radical_parameter_equations",
+      "i.graphical_solution"
+    ],
+    "primary_section": "a2.radical_parameter_equations",
+    "skills": [
+      "domain-restriction",
+      "squaring-equations",
+      "extraneous-root-check",
+      "parameter-range",
+      "endpoint-case"
     ]
   },
   {
