@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMUA 练习系统</title>
+    
+    <!-- KaTeX 数学公式渲染库 -->
+    <!-- 使用 unpkg CDN 加载 KaTeX，修复 jsdelivr 字体文件加载失败导致 sqrt 无法显示的问题 -->
+    <link rel="stylesheet" href="https://unpkg.com/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://unpkg.com/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== 欢迎主页 ===== -->
+        <div id="welcomeView">
+            <div class="welcome-hero">
+                <h1 class="welcome-title">📚 TMUA 练习系统</h1>
+                <p class="welcome-subtitle">2016–2022 · 280+ 题目 · 完整解析</p>
+            </div>
+
+            <div class="welcome-cards">
+                <div class="welcome-card card-practice" data-mode="practice">
+                    <div class="card-icon">📝</div>
+                    <h2>开始练习</h2>
+                    <p>自由练习，按年份和知识点筛选</p>
+                </div>
+                <div class="welcome-card card-mock" data-mode="mock">
+                    <div class="card-icon">⏱️</div>
+                    <h2>模拟考试</h2>
+                    <p>75 分钟限时，完整仿真体验</p>
+                </div>
+                <div class="welcome-card card-wrong" data-mode="wrong-redo">
+                    <div class="card-icon">🔄</div>
+                    <h2>错题复习</h2>
+                    <p>专注薄弱点，重做错题</p>
+                </div>
+                <div class="welcome-card card-shuffle" data-mode="shuffle">
+                    <div class="card-icon">🎲</div>
+                    <h2>随机练习</h2>
+                    <p>打乱顺序，检测真实水平</p>
+                </div>
+            </div>
+
+            <div class="welcome-progress">
+                <div class="welcome-progress-info">
+                    <span id="welcomeProgressText">已完成 0/280 题</span>
+                    <span id="welcomeCorrectRate">正确率 0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="welcomeProgressFill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="welcome-footer">
+                <a href="javascript:void(0)" id="welcomeContinueLink" class="hidden">继续上次练习 →</a>
+                <button class="btn btn-small" id="welcomeDarkModeBtn" onclick="window.quizApp && window.quizApp.toggleDarkMode()">🌙 切换主题</button>
+            </div>
+        </div>
+
+        <!-- ===== 模拟考试选卷界面 ===== -->
+        <div id="mockSelectView" class="hidden">
+            <div class="mock-select-container">
+                <!-- 导航 -->
+                <div class="mock-select-nav">
+                    <a href="javascript:void(0)" id="mockBackLink" class="back-link">← 返回首页</a>
+                    <span class="mock-select-title">⏱️ 选择试卷</span>
+                </div>
+
+                <!-- 步骤指示器 -->
+                <div class="mock-steps">
+                    <span class="mock-step active" id="mockStep1">1. 选择年份</span>
+                    <span class="mock-step-arrow">›</span>
+                    <span class="mock-step" id="mockStep2">2. 选择试卷</span>
+                </div>
+
+                <!-- 第一步：选年份 -->
+                <div class="mock-section" id="mockYearSection">
+                    <div class="year-grid" id="yearGrid">
+                        <!-- JS 动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 第二步：选试卷 -->
+                <div class="mock-section hidden" id="mockPaperSection">
+                    <div class="paper-cards" id="paperCards">
+                        <!-- JS 动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 底部操作区 -->
+                <div class="mock-bottom">
+                    <span class="mock-selection-hint" id="mockSelectionHint">请选择年份和试卷</span>
+                    <button class="btn mock-start-btn" id="mockStartBtn" disabled>开始考试</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 模拟考试结果页 ===== -->
+        <div id="mockResultView" class="hidden">
+            <div class="mock-result-container">
+                <!-- 顶部标题 -->
+                <div class="mock-result-header">
+                    <h2>📊 模拟考试结果</h2>
+                    <p class="mock-result-subtitle" id="mockResultSubtitle">2019 Paper 1</p>
+                </div>
+
+                <!-- 大号成绩环形图 -->
+                <div class="mock-score-hero">
+                    <div class="mock-score-ring">
+                        <svg viewBox="0 0 160 160" class="mock-ring-svg">
+                            <circle cx="80" cy="80" r="72" class="mock-ring-bg"/>
+                            <circle cx="80" cy="80" r="72" class="mock-ring-fill" id="mockRingFill"/>
+                        </svg>
+                        <div class="mock-ring-text">
+                            <span class="mock-ring-pct" id="mockRingPct">0%</span>
+                            <span class="mock-ring-frac" id="mockRingFrac">0/20</span>
+                        </div>
+                    </div>
+                    <p class="mock-score-msg" id="mockScoreMsg">考试完成</p>
+                </div>
+
+                <!-- 统计卡片 -->
+                <div class="mock-stats-row">
+                    <div class="mock-stat-card">
+                        <span class="mock-stat-icon">✅</span>
+                        <span class="mock-stat-num" id="mockStatCorrect">0</span>
+                        <span class="mock-stat-label">正确</span>
+                    </div>
+                    <div class="mock-stat-card">
+                        <span class="mock-stat-icon">❌</span>
+                        <span class="mock-stat-num" id="mockStatWrong">0</span>
+                        <span class="mock-stat-label">错误</span>
+                    </div>
+                    <div class="mock-stat-card">
+                        <span class="mock-stat-icon">⏱️</span>
+                        <span class="mock-stat-num" id="mockStatTime">0:00</span>
+                        <span class="mock-stat-label">总用时</span>
+                    </div>
+                    <div class="mock-stat-card">
+                        <span class="mock-stat-icon">📝</span>
+                        <span class="mock-stat-num" id="mockStatAvg">0s</span>
+                        <span class="mock-stat-label">平均每题</span>
+                    </div>
+                </div>
+
+                <!-- 题目正误网格 -->
+                <div class="mock-section">
+                    <h3>题目详情（点击回顾）</h3>
+                    <div class="mock-question-grid" id="mockQuestionGrid"></div>
+                </div>
+
+                <!-- 知识点分析 -->
+                <div class="mock-section">
+                    <h3>知识点分析</h3>
+                    <div class="mock-topic-list" id="mockTopicList"></div>
+                </div>
+
+                <!-- 提交成绩到老师系统 -->
+                <div class="mock-section mock-submit-section">
+                    <h3>📤 提交成绩给老师</h3>
+                    <div class="submit-form">
+                        <input type="text" id="studentNameInput" 
+                               placeholder="请输入你的姓名" 
+                               class="student-name-input">
+                        <button class="btn btn-submit-score" id="submitScoreBtn">
+                            提交成绩
+                        </button>
+                        <span class="submit-status hidden" id="submitStatus"></span>
+                    </div>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="mock-result-actions">
+                    <button class="btn btn-primary" id="mockReviewBtn">📝 回顾答卷</button>
+                    <button class="btn btn-secondary" id="mockRetryBtn">🔄 重新考试</button>
+                    <button class="btn btn-outline" id="mockResultHomeBtn">🏠 返回首页</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 练习界面 ===== -->
+        <div id="practiceView" class="hidden">
+            <!-- Mock 模式专属顶栏 -->
+            <div id="mockHeader" class="hidden">
+                <span class="mock-paper-label" id="mockPaperLabel">2019 Paper 1</span>
+                <span class="mock-timer-large" id="mockTimerLarge">75:00</span>
+                <button class="btn btn-mock-submit" id="mockSubmitTopBtn">交卷</button>
+            </div>
+
+            <header>
+                <div class="header-left">
+                    <a href="javascript:void(0)" id="backToHomeLink" class="back-link">🏠 首页</a>
+                    <h1>📚 TMUA练习系统</h1>
+                </div>
+                <div class="header-right">
+                    <button class="btn btn-small" id="darkModeBtn" onclick="window.quizApp && window.quizApp.toggleDarkMode()">🌙</button>
+                    <button class="btn btn-small btn-danger" id="clearProgressBtn">清空进度</button>
+                </div>
+            </header>
+            
+            <!-- 整合控制栏 -->
+            <div class="control-bar">
+                <div class="control-left">
+                    <div class="year-paper-select">
+                        <label>年份:</label>
+                        <select id="yearSelect">
+                            <option value="all">全部年份</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+
+                        <label>Paper:</label>
+                        <select id="paperSelect">
+                            <option value="all">全部试卷</option>
+                            <option value="1">Paper 1</option>
+                            <option value="2">Paper 2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-center">
+                    <button class="filter-btn active" data-filter="all">全部题目</button>
+                    <button class="filter-btn" data-filter="topic">按知识点</button>
+                    <button class="filter-btn" data-filter="wrong">错题本</button>
+                    <button class="filter-btn" data-filter="uncompleted">未完成</button>
+                    <select class="topic-select hidden" id="topicSelect">
+                        <option value="">选择知识点</option>
+                    </select>
+                </div>
+
+                <div class="control-right">
+                    <button class="btn btn-primary btn-sm" id="startMockBtn">开始模拟</button>
+                    <button class="btn btn-secondary btn-sm" id="startShuffleBtn">随机练习</button>
+                    <button class="btn btn-secondary btn-sm hidden" id="submitMockBtn">提前交卷</button>
+                    <span class="mode-status hidden" id="mockStatus">当前模式: 普通练习</span>
+                    <span class="mock-timer hidden" id="mockTimer">75:00</span>
+                </div>
+            </div>
+
+            <details class="collapsible-panel insights-panel">
+                <summary class="collapsible-summary">
+                    <span>📊 数据面板</span>
+                    <span class="collapse-arrow">&#9660;</span>
+                </summary>
+                <div class="insights-panel-body">
+                    <div class="insight-box">
+                        <h3>知识点诊断</h3>
+                        <div class="insight-list" id="topicStats"></div>
+                    </div>
+                    <div class="insight-box">
+                        <h3>薄弱点推荐</h3>
+                        <div class="insight-list" id="weakTopics"></div>
+                    </div>
+                </div>
+            </details>
+            
+            <div class="main-layout">
+                <div class="main-content">
+                    <div class="question-container" id="questionArea">
+                        <!-- 导航按钮 -->
+                        <div class="nav-buttons" id="navButtons">
+                            <button class="btn btn-nav" id="prevBtn">⬅️ 上一题</button>
+                            <span class="question-counter" id="questionCounter">第 1 题 / 共 20 题</span>
+                            <button class="btn btn-nav" id="nextBtn">下一题 ➡️</button>
+                        </div>
+
+                        <div class="question-meta">
+                            <span id="questionId">题目 #2016-P1-Q1</span>
+                            <span id="questionTopic">知识点: Differentiation</span>
+                            <span id="questionImageBadge" class="has-image-badge hidden">📷 有图</span>
+                        </div>
+
+                        <div class="question-text" id="questionText">
+                            加载题目中...
+                        </div>
+
+                        <div class="options" id="optionsArea">
+                            <!-- 选项将动态生成 -->
+                        </div>
+
+                        <div class="actions">
+                            <button class="btn btn-primary" id="submitBtn">提交答案</button>
+                            <button class="btn btn-secondary" id="skipBtn">下一题</button>
+                            <button class="btn btn-secondary" id="analysisBtn">查看解析</button>
+                        </div>
+
+                        <!-- Mock 模式底部导航 -->
+                        <div class="mock-bottom-nav">
+                            <button class="btn btn-nav" id="mockPrevBtn">⬅ 上一题</button>
+                            <span class="mock-question-counter" id="mockQuestionCounter">第 1 题 / 共 20 题</span>
+                            <button class="btn btn-nav" id="mockNextBtn">下一题 ➡</button>
+                        </div>
+
+                        <details class="collapsible-panel analysis" id="analysisArea" open>
+                            <summary class="collapsible-summary">
+                                <span>📝 解析</span>
+                                <span class="collapse-arrow">&#9660;</span>
+                            </summary>
+                            <p id="analysisText">暂无解析</p>
+                        </details>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar" id="sidebar">
+                    <details class="collapsible-panel answer-card" open>
+                        <summary class="collapsible-summary">
+                            <span>📋 答题卡</span>
+                            <span class="collapse-arrow">&#9660;</span>
+                        </summary>
+                        <div class="answer-card-progress">
+                            <span id="progressText">进度: 0/280</span>
+                            <span id="correctRate">正确率: 0%</span>
+                        </div>
+                        <div class="answer-card-header">
+                            <button class="btn btn-secondary btn-small" id="redoWrongBtn">错题二刷</button>
+                        </div>
+                        <div id="answerCardContainer">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <div class="result hidden" id="resultArea">
+                <h3>📊 练习结果</h3>
+                <p id="resultModeText">模式: 普通练习</p>
+                <p>完成: <span id="finalCompleted">0</span>/<span id="finalTotal">0</span></p>
+                <p>正确: <span id="finalCorrect">0</span></p>
+                <p>正确率: <span id="finalRate">0%</span></p>
+                <p id="mockSummaryText" class="hidden"></p>
+                <button class="btn btn-secondary" id="redoWrongResultBtn">错题二刷</button>
+                <button class="btn btn-primary" id="restartBtn">重新开始</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- 先加载题库数据 -->
+    <script src="questions_data.js"></script>
+    <!-- 再加载应用逻辑 -->
+    <script src="js/render.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

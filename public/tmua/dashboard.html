@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 TMUA 教师数据看板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 头部 */
+        .dashboard-header {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(33, 150, 243, 0.3);
+        }
+
+        .dashboard-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .dashboard-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .refresh-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 16px;
+            transition: all 0.2s;
+        }
+
+        .refresh-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* 统计卡片 */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .stat-card.primary .stat-value { color: #2196F3; }
+        .stat-card.success .stat-value { color: #4CAF50; }
+        .stat-card.warning .stat-value { color: #FF9800; }
+        .stat-card.info .stat-value { color: #9C27B0; }
+
+        /* 内容区域 */
+        .content-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* 筛选栏 */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .filter-input {
+            padding: 10px 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 200px;
+            transition: border-color 0.2s;
+        }
+
+        .filter-input:focus {
+            border-color: #2196F3;
+            outline: none;
+        }
+
+        .filter-select {
+            padding: 10px 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+
+        /* 学生列表表格 */
+        .student-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .student-table th {
+            background: #f5f7fa;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 2px solid #eee;
+        }
+
+        .student-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        .student-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .student-table .name-cell {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .score-badge {
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .score-badge.high { background: #e8f5e9; color: #2e7d32; }
+        .score-badge.medium { background: #fff3e0; color: #ef6c00; }
+        .score-badge.low { background: #ffebee; color: #c62828; }
+
+        .detail-btn {
+            background: #2196F3;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .detail-btn:hover {
+            background: #1976D2;
+        }
+
+        /* 知识点分析 */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .topic-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .topic-name {
+            flex: 1;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .topic-bar-wrap {
+            width: 120px;
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            margin-right: 12px;
+        }
+
+        .topic-bar {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .topic-bar.high { background: #4CAF50; }
+        .topic-bar.medium { background: #FF9800; }
+        .topic-bar.low { background: #f44336; }
+
+        .topic-pct {
+            font-weight: 600;
+            color: #666;
+            min-width: 50px;
+            text-align: right;
+        }
+
+        /* 学生详情弹窗 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .detail-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .detail-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .wrong-questions-list {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .wrong-q-badge {
+            background: #ffebee;
+            color: #c62828;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+
+        /* 加载状态 */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #2196F3;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 空状态 */
+        .empty-state {
+            text-align: center;
+            padding: 60px;
+            color: #666;
+        }
+
+        .empty-state .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        /* 暗黑模式 */
+        body.dark-mode {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        body.dark-mode .dashboard-header {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+        }
+
+        body.dark-mode .stat-card,
+        body.dark-mode .content-section {
+            background: #1e1e2e;
+            color: #fff;
+        }
+
+        body.dark-mode .stat-value { color: #fff; }
+        body.dark-mode .section-title { color: #fff; border-color: #333; }
+        body.dark-mode .student-table th { background: #2a2a3a; color: #aaa; border-color: #333; }
+        body.dark-mode .student-table td { border-color: #333; color: #fff; }
+        body.dark-mode .student-table tr:hover { background: #2a2a3a; }
+        body.dark-mode .topic-item { background: #2a2a3a; }
+        body.dark-mode .topic-name { color: #fff; }
+        body.dark-mode .filter-input,
+        body.dark-mode .filter-select {
+            background: #1e1e2e;
+            border-color: #444;
+            color: #fff;
+        }
+
+        body.dark-mode .modal-content {
+            background: #1e1e2e;
+            color: #fff;
+        }
+
+        body.dark-mode .detail-item {
+            background: #2a2a3a;
+        }
+
+        body.dark-mode .detail-value {
+            color: #fff;
+        }
+
+        /* 暗黑模式切换 */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background: #1e1e2e;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+
+    <div class="dashboard-container">
+        <!-- 头部 -->
+        <div class="dashboard-header">
+            <h1>📊 TMUA 教师数据看板</h1>
+            <p>实时查看学生模考成绩与分析报告</p>
+            <button class="refresh-btn" onclick="loadData()">🔄 刷新数据</button>
+        </div>
+
+        <!-- 统计卡片 -->
+        <div class="stats-row">
+            <div class="stat-card primary">
+                <div class="stat-icon">📝</div>
+                <div class="stat-value" id="totalSubmissions">-</div>
+                <div class="stat-label">总提交数</div>
+            </div>
+            <div class="stat-card success">
+                <div class="stat-icon">📈</div>
+                <div class="stat-value" id="avgScore">-</div>
+                <div class="stat-label">平均正确率</div>
+            </div>
+            <div class="stat-card warning">
+                <div class="stat-icon">📅</div>
+                <div class="stat-value" id="todayCount">-</div>
+                <div class="stat-label">今日提交</div>
+            </div>
+            <div class="stat-card info">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-value" id="highestScore">-</div>
+                <div class="stat-label">最高分</div>
+            </div>
+        </div>
+
+        <!-- 学生成绩列表 -->
+        <div class="content-section">
+            <h2 class="section-title">👨‍🎓 学生成绩列表</h2>
+            <div class="filter-bar">
+                <input type="text" class="filter-input" id="searchName" placeholder="搜索学生姓名..." oninput="filterStudents()">
+                <select class="filter-select" id="filterPaper" onchange="filterStudents()">
+                    <option value="all">全部试卷</option>
+                </select>
+            </div>
+            <div id="studentListContainer">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>正在加载数据...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 知识点分析 -->
+        <div class="content-section">
+            <h2 class="section-title">📚 知识点薄弱分析（全班平均）</h2>
+            <div id="topicAnalysisContainer">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>正在加载数据...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 学生详情弹窗 -->
+    <div class="modal-overlay" id="studentModal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalStudentName">学生详情</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="detail-grid" id="modalDetails"></div>
+            <div id="modalTopics"></div>
+            <div id="modalWrongQuestions"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://quickform.cn/api/6g8ir94jih/all';
+        let allData = null;
+        let filteredStudents = [];
+
+        // 加载数据
+        async function loadData() {
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                allData = data;
+                
+                updateStats();
+                updatePaperFilter();
+                renderStudentList(data.submissions);
+                renderTopicAnalysis(data.submissions);
+            } catch (e) {
+                document.getElementById('studentListContainer').innerHTML = 
+                    '<div class="empty-state"><div class="icon">❌</div><p>加载失败：' + e.message + '</p></div>';
+            }
+        }
+
+        // 更新统计卡片
+        function updateStats() {
+            const submissions = allData.submissions;
+            const total = submissions.length;
+            
+            document.getElementById('totalSubmissions').textContent = total;
+            
+            if (total > 0) {
+                const avgPct = Math.round(submissions.reduce((sum, s) => sum + s.score_pct, 0) / total);
+                document.getElementById('avgScore').textContent = avgPct + '%';
+                
+                const highest = Math.max(...submissions.map(s => s.score_pct));
+                document.getElementById('highestScore').textContent = highest + '%';
+                
+                const today = new Date().toISOString().split('T')[0];
+                const todayCount = submissions.filter(s => s.exam_date === today).length;
+                document.getElementById('todayCount').textContent = todayCount;
+            } else {
+                document.getElementById('avgScore').textContent = '-';
+                document.getElementById('highestScore').textContent = '-';
+                document.getElementById('todayCount').textContent = '0';
+            }
+        }
+
+        // 更新试卷筛选器
+        function updatePaperFilter() {
+            const papers = [...new Set(allData.submissions.map(s => s.paper))];
+            const select = document.getElementById('filterPaper');
+            select.innerHTML = '<option value="all">全部试卷</option>';
+            papers.forEach(p => {
+                select.innerHTML += `<option value="${p}">${p}</option>`;
+            });
+        }
+
+        // 渲染学生列表
+        function renderStudentList(students) {
+            filteredStudents = students;
+            const container = document.getElementById('studentListContainer');
+            
+            if (students.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>暂无学生提交数据</p></div>';
+                return;
+            }
+            
+            // 按提交时间倒序
+            students.sort((a, b) => new Date(b.submitted_at) - new Date(a.submitted_at));
+            
+            let html = '<table class="student-table"><thead><tr>';
+            html += '<th>姓名</th><th>试卷</th><th>正确率</th><th>得分</th><th>用时</th><th>提交时间</th><th>操作</th>';
+            html += '</tr></thead><tbody>';
+            
+            students.forEach((s, idx) => {
+                const scoreClass = s.score_pct >= 70 ? 'high' : s.score_pct >= 40 ? 'medium' : 'low';
+                html += `<tr>
+                    <td class="name-cell">${s.student_name}</td>
+                    <td>${s.paper}</td>
+                    <td><span class="score-badge ${scoreClass}">${s.score_pct}%</span></td>
+                    <td>${s.score_correct}/${s.score_total}</td>
+                    <td>${formatTime(s.time_seconds)}</td>
+                    <td>${s.submitted_at}</td>
+                    <td><button class="detail-btn" onclick="showStudentDetail(${idx})">查看详情</button></td>
+                </tr>`;
+            });
+            
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        // 渲染知识点分析
+        function renderTopicAnalysis(students) {
+            const container = document.getElementById('topicAnalysisContainer');
+            
+            if (students.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>暂无数据</p></div>';
+                return;
+            }
+            
+            // 汇总所有知识点
+            const topicTotals = {};
+            students.forEach(s => {
+                if (s.topic_breakdown) {
+                    Object.entries(s.topic_breakdown).forEach(([topic, data]) => {
+                        if (!topicTotals[topic]) {
+                            topicTotals[topic] = { total: 0, correct: 0 };
+                        }
+                        topicTotals[topic].total += data.total;
+                        topicTotals[topic].correct += data.correct;
+                    });
+                }
+            });
+            
+            // 计算平均正确率并排序（从低到高，方便看薄弱环节）
+            const topics = Object.entries(topicTotals)
+                .map(([name, data]) => ({
+                    name,
+                    pct: Math.round(data.correct / data.total * 100),
+                    total: data.total,
+                    correct: data.correct
+                }))
+                .sort((a, b) => a.pct - b.pct);
+            
+            let html = '<div class="topic-grid">';
+            topics.forEach(t => {
+                const barClass = t.pct >= 70 ? 'high' : t.pct >= 40 ? 'medium' : 'low';
+                html += `<div class="topic-item">
+                    <span class="topic-name">${t.name}</span>
+                    <div class="topic-bar-wrap">
+                        <div class="topic-bar ${barClass}" style="width:${t.pct}%"></div>
+                    </div>
+                    <span class="topic-pct">${t.pct}% (${t.correct}/${t.total})</span>
+                </div>`;
+            });
+            html += '</div>';
+            
+            container.innerHTML = html;
+        }
+
+        // 筛选学生
+        function filterStudents() {
+            const nameFilter = document.getElementById('searchName').value.toLowerCase();
+            const paperFilter = document.getElementById('filterPaper').value;
+            
+            let filtered = allData.submissions;
+            
+            if (nameFilter) {
+                filtered = filtered.filter(s => s.student_name.toLowerCase().includes(nameFilter));
+            }
+            
+            if (paperFilter !== 'all') {
+                filtered = filtered.filter(s => s.paper === paperFilter);
+            }
+            
+            renderStudentList(filtered);
+        }
+
+        // 显示学生详情
+        function showStudentDetail(idx) {
+            const student = filteredStudents[idx];
+            document.getElementById('modalStudentName').textContent = student.student_name + ' 的详细成绩';
+            
+            // 基本信息
+            let detailsHtml = `
+                <div class="detail-item">
+                    <div class="detail-label">试卷</div>
+                    <div class="detail-value">${student.paper}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">正确率</div>
+                    <div class="detail-value">${student.score_pct}%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">得分</div>
+                    <div class="detail-value">${student.score_correct}/${student.score_total}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">用时</div>
+                    <div class="detail-value">${formatTime(student.time_seconds)}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">平均每题</div>
+                    <div class="detail-value">${student.avg_seconds}秒</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">提交时间</div>
+                    <div class="detail-value">${student.submitted_at}</div>
+                </div>
+            `;
+            document.getElementById('modalDetails').innerHTML = detailsHtml;
+            
+            // 知识点分析
+            if (student.topic_breakdown) {
+                const topics = Object.entries(student.topic_breakdown)
+                    .map(([name, data]) => ({
+                        name,
+                        pct: Math.round(data.correct / data.total * 100),
+                        total: data.total,
+                        correct: data.correct
+                    }))
+                    .sort((a, b) => a.pct - b.pct);
+                
+                let topicsHtml = '<h4 style="margin: 20px 0 12px; color: #666;">知识点分析</h4><div class="topic-grid">';
+                topics.forEach(t => {
+                    const barClass = t.pct >= 70 ? 'high' : t.pct >= 40 ? 'medium' : 'low';
+                    topicsHtml += `<div class="topic-item">
+                        <span class="topic-name">${t.name}</span>
+                        <div class="topic-bar-wrap">
+                            <div class="topic-bar ${barClass}" style="width:${t.pct}%"></div>
+                        </div>
+                        <span class="topic-pct">${t.pct}%</span>
+                    </div>`;
+                });
+                topicsHtml += '</div>';
+                document.getElementById('modalTopics').innerHTML = topicsHtml;
+            } else {
+                document.getElementById('modalTopics').innerHTML = '';
+            }
+            
+            // 错题列表
+            if (student.wrong_questions && student.wrong_questions.length > 0) {
+                let wrongHtml = '<h4 style="margin: 20px 0 12px; color: #666;">错题列表</h4><div class="wrong-questions-list">';
+                student.wrong_questions.forEach(q => {
+                    wrongHtml += `<span class="wrong-q-badge">${q}</span>`;
+                });
+                wrongHtml += '</div>';
+                document.getElementById('modalWrongQuestions').innerHTML = wrongHtml;
+            } else {
+                document.getElementById('modalWrongQuestions').innerHTML = '<p style="color: #4CAF50; margin-top: 20px;">🎉 无错题！全部正确！</p>';
+            }
+            
+            document.getElementById('studentModal').classList.add('show');
+        }
+
+        // 关闭弹窗
+        function closeModal(event) {
+            if (event && event.target !== document.getElementById('studentModal')) return;
+            document.getElementById('studentModal').classList.remove('show');
+        }
+
+        // 格式化时间
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = seconds % 60;
+            return min > 0 ? `${min}分${sec}秒` : `${sec}秒`;
+        }
+
+        // 暗黑模式
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.dark-mode-toggle');
+            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            localStorage.setItem('dashboard-dark-mode', document.body.classList.contains('dark-mode'));
+        }
+
+        // 初始化暗黑模式
+        if (localStorage.getItem('dashboard-dark-mode') === 'true') {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.dark-mode-toggle').textContent = '☀️';
+        }
+
+        // 页面加载时获取数据
+        loadData();
+    </script>
+</body>
+</html>
