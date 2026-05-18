@@ -14,7 +14,7 @@
 - [x] src/content/docs/step/step2-2019.md
 - [x] src/content/docs/step/step2-2018.md
 - [x] src/content/docs/step/step2-2017.md
-- [ ] src/content/docs/step/step2-2016.md
+- [x] src/content/docs/step/step2-2016.md
 - [ ] src/content/docs/step/step2-2015.md
 - [ ] src/content/docs/step/step2-2014.md
 - [ ] src/content/docs/step/step2-2013.md
