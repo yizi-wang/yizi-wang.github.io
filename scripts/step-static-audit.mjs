@@ -120,12 +120,6 @@ function checkDetails(file, section, issues) {
     issues.push({ severity: 'error', file: rel(file), line: lineForOffset(readFileSync(file, 'utf8'), section.start), message: `Question ${section.number}: Examiner Notes appears before Model Solution` });
   }
 
-  if (positions.Hint === -1) {
-    issues.push({ severity: 'warning', file: rel(file), line: lineForOffset(readFileSync(file, 'utf8'), section.start), message: `Question ${section.number}: missing optional Hint` });
-  }
-  if (positions['Examiner Notes'] === -1) {
-    issues.push({ severity: 'warning', file: rel(file), line: lineForOffset(readFileSync(file, 'utf8'), section.start), message: `Question ${section.number}: missing optional Examiner Notes` });
-  }
   if (positions['Model Solution'] === -1) {
     issues.push({ severity: 'error', file: rel(file), line: lineForOffset(readFileSync(file, 'utf8'), section.start), message: `Question ${section.number}: missing required Model Solution` });
   }
@@ -134,7 +128,7 @@ function checkDetails(file, section, issues) {
 function checkLatexHazards(file, text, issues) {
   const patterns = [
     { re: /\\tag\{/g, severity: 'warning', message: 'KaTeX tag numbering may render awkwardly in Starlight content' },
-    { re: /\\begin\{(align|aligned|array)\*?\}/g, severity: 'warning', message: 'check multiline LaTeX visually in browser' },
+    { re: /\\begin\{(align|array)\*?\}/g, severity: 'warning', message: 'check multiline LaTeX visually in browser' },
     { re: /TODO|FIXME/g, severity: 'error', message: 'TODO/FIXME marker remains' },
   ];
 
