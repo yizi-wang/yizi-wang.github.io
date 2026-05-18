@@ -11336,13 +11336,28 @@ window.QUESTIONS = [
       "G": "$5$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n本题给出两个关于 $a$ 和 $b$ 的定积分方程，要求求出 $a+b$ 的值。被积函数都是关于 $x$ 的一次函数 $ax+b$ 或其与 $x$ 的乘积。核心思路是先分别计算两个定积分，得到关于 $a$ 和 $b$ 的两个线性方程，然后联立求解。这类题型考察定积分的基本计算法则以及二元一次方程组的求解能力，是积分与代数结合的经典考法。\n\n【解题步骤】\n第一步，计算第一个积分：\n$$\\int_{0}^{1}(ax+b)\\,dx = \\left[\\frac{ax^2}{2}+bx\\right]_{0}^{1} = \\frac{a}{2}+b = 1$$\n\n第二步，计算第二个积分：\n$$\\int_{0}^{1}x(ax+b)\\,dx = \\int_{0}^{1}(ax^2+bx)\\,dx = \\left[\\frac{ax^3}{3}+\\frac{bx^2}{2}\\right]_{0}^{1} = \\frac{a}{3}+\\frac{b}{2} = 1$$\n\n第三步，联立两个方程。由第一个方程得 $b = 1-\\dfrac{a}{2}$，代入第二个方程：\n$$\\frac{a}{3}+\\frac{1}{2}\\left(1-\\frac{a}{2}\\right) = 1 \\implies \\frac{a}{3}+\\frac{1}{2}-\\frac{a}{4} = 1$$\n$$\\frac{a}{12} = \\frac{1}{2} \\implies a = 6$$\n\n代回得 $b = 1-3 = -2$，所以 $a+b = 6+(-2) = 4$。\n\n【快捷思路】\n直接观察第一个方程 $\\dfrac{a}{2}+b=1$，所求为 $a+b$。将方程两边乘以 2 得 $a+2b=2$，再结合第二个方程 $\\dfrac{a}{3}+\\dfrac{b}{2}=1$ 两边乘以 6 得 $2a+3b=6$。两式相减即可快速得 $a=4$，代入得 $b=-2$，$a+b=4$。\n\n【正确答案】F",
+    "analysis": "【题目分析】\n本题给出两个关于 $a$ 和 $b$ 的定积分方程，要求求出 $a+b$ 的值。被积函数都是关于 $x$ 的一次函数 $ax+b$ 或其与 $x$ 的乘积。核心思路是先分别计算两个定积分，得到关于 $a$ 和 $b$ 的两个线性方程，然后联立求解。这类题型考察定积分的基本计算法则以及二元一次方程组的求解能力，是积分与代数结合的经典考法。\n\n【解题步骤】\n第一步，计算第一个积分：\n$$\\int_{0}^{1}(ax+b)\\,dx = \\left[\\frac{ax^2}{2}+bx\\right]_{0}^{1} = \\frac{a}{2}+b = 1$$\n\n第二步，计算第二个积分：\n$$\\int_{0}^{1}x(ax+b)\\,dx = \\int_{0}^{1}(ax^2+bx)\\,dx = \\left[\\frac{ax^3}{3}+\\frac{bx^2}{2}\\right]_{0}^{1} = \\frac{a}{3}+\\frac{b}{2} = 1$$\n\n第三步，联立两个方程。由第一个方程得 $b = 1-\\dfrac{a}{2}$，代入第二个方程：\n$$\\frac{a}{3}+\\frac{1}{2}\\left(1-\\frac{a}{2}\\right) = 1 \\implies \\frac{a}{3}+\\frac{1}{2}-\\frac{a}{4} = 1$$\n$$\\frac{a}{12} = \\frac{1}{2} \\implies a = 6$$\n\n代回得 $b = 1-3 = -2$，所以 $a+b = 6+(-2) = 4$。\n\n【快捷思路】\n直接观察第一个方程 $\\dfrac{a}{2}+b=1$，所求为 $a+b$。将方程两边乘以 2 得 $a+2b=2$，再结合第二个方程 $\\dfrac{a}{3}+\\dfrac{b}{2}=1$ 两边乘以 6 得 $2a+3b=6$。两式相减即可快速得 $a=6$，代入得 $b=-2$，$a+b=4$。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
     "topic": "Integration",
     "related_topics": [
       "Algebra"
-    ]
+    ],
+    "difficulty": 3,
+    "modules": [
+      "g_integration",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "g.definite_integrals_basic",
+      "a1.simultaneous_linear_equations"
+    ],
+    "skills": [
+      "definite-integral-evaluation",
+      "simultaneous-equations",
+      "linear-equation-solving"
+    ],
+    "primary_section": "g.definite_integrals_basic"
   },
   {
     "id": "2023-P1-Q2",
@@ -11359,13 +11374,29 @@ window.QUESTIONS = [
       "F": "$m < -11,\\ m > 1$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n本题涉及抛物线 $y=x^2+5x+6$ 与直线 $y=mx-3$ 的位置关系。两图像不相遇意味着联立方程无实数解，即所得一元二次方程的判别式小于零。这是典型的二次方程判别式应用问题，也是解析几何中研究曲线位置关系的基本方法。解题的关键在于正确建立方程并准确求解含参不等式。\n\n【解题步骤】\n第一步，将两方程联立，令函数值相等：\n$$x^2+5x+6 = mx-3$$\n移项整理为标准二次方程形式：\n$$x^2+(5-m)x+9 = 0$$\n\n第二步，该二次方程无实数根的条件是判别式 $\\Delta < 0$：\n$$\\Delta = (5-m)^2 - 4\\times 1 \\times 9 = (5-m)^2-36 < 0$$\n\n第三步，解此不等式：\n$$(5-m)^2 < 36 \\implies |5-m| < 6$$\n展开绝对值不等式：\n$$-6 < 5-m < 6 \\implies -11 < -m < 1$$\n两边同时乘以 $-1$（注意不等号方向改变）：\n$$-1 < m < 11$$\n\n因此 $m$ 的完整取值范围是 $-1 < m < 11$。\n\n【快捷思路】\n注意到两图像不相遇等价于联立后的二次方程判别式为负。直接写出 $\\Delta = (5-m)^2-36 < 0$，解出 $|5-m| < 6$ 即得 $-1 < m < 11$。整个过程只需三步运算，无需画图即可得到精确范围。\n\n【正确答案】A Geometry",
+    "analysis": "【题目分析】\n本题涉及抛物线 $y=x^2+5x+6$ 与直线 $y=mx-3$ 的位置关系。两图像不相遇意味着联立方程无实数解，即所得一元二次方程的判别式小于零。这是典型的二次方程判别式应用问题，也是解析几何中研究曲线位置关系的基本方法。解题的关键在于正确建立方程并准确求解含参不等式。\n\n【解题步骤】\n第一步，将两方程联立，令函数值相等：\n$$x^2+5x+6 = mx-3$$\n移项整理为标准二次方程形式：\n$$x^2+(5-m)x+9 = 0$$\n\n第二步，该二次方程无实数根的条件是判别式 $\\Delta < 0$：\n$$\\Delta = (5-m)^2 - 4\\times 1 \\times 9 = (5-m)^2-36 < 0$$\n\n第三步，解此不等式：\n$$(5-m)^2 < 36 \\implies |5-m| < 6$$\n展开绝对值不等式：\n$$-6 < 5-m < 6 \\implies -11 < -m < 1$$\n两边同时乘以 $-1$（注意不等号方向改变）：\n$$-1 < m < 11$$\n\n因此 $m$ 的完整取值范围是 $-1 < m < 11$。\n\n【快捷思路】\n注意到两图像不相遇等价于联立后的二次方程判别式为负。直接写出 $\\Delta = (5-m)^2-36 < 0$，解出 $|5-m| < 6$ 即得 $-1 < m < 11$。整个过程只需三步运算，无需画图即可得到精确范围。\n\n【正确答案】A",
     "has_image": false,
     "images": [],
-    "topic": "Coordinate Geometry",
+    "topic": "Graphs",
     "related_topics": [
-      "Algebra"
-    ]
+      "Algebra",
+      "Coordinate Geometry"
+    ],
+    "difficulty": 3,
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.graph_intersections",
+      "a2.discriminant_conditions"
+    ],
+    "skills": [
+      "discriminant-condition",
+      "parameter-inequality",
+      "graph-intersection"
+    ],
+    "primary_section": "i.graph_intersections"
   },
   {
     "id": "2023-P1-Q3",
@@ -11388,7 +11419,22 @@ window.QUESTIONS = [
     "topic": "Integration",
     "related_topics": [
       "Sequences and Series"
-    ]
+    ],
+    "difficulty": 3,
+    "modules": [
+      "g_integration",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "g.definite_integral_properties",
+      "c.indexed_sums"
+    ],
+    "skills": [
+      "interval-additivity",
+      "reversed-limits",
+      "finite-sum-decomposition"
+    ],
+    "primary_section": "g.definite_integral_properties"
   },
   {
     "id": "2023-P1-Q4",
@@ -11404,20 +11450,35 @@ window.QUESTIONS = [
       "E": "$3$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n本题要求计算一个无穷级数，分子含有三角函数 $\\sin\\left(n\\pi+\\dfrac{\\pi}{3}\\right)$，分母为 $2^n$。关键技巧是利用三角函数的周期性简化分子表达式，将其转化为等比数列求和问题。这类将三角函数与无穷级数结合的题目在 TMUA 中较为常见，核心在于识别周期性规律后转化为标准等比级数。\n\n【解题步骤】\n第一步，简化分子。利用正弦函数的周期性：\n$$\\sin\\left(n\\pi+\\frac{\\pi}{3}\\right) = (-1)^n\\sin\\frac{\\pi}{3} = (-1)^n\\cdot\\frac{\\sqrt{3}}{2}$$\n\n第二步，代入级数：\n$$\\sum_{n=0}^{\\infty}\\frac{(-1)^n\\cdot\\dfrac{\\sqrt{3}}{2}}{2^n} = \\frac{\\sqrt{3}}{2}\\sum_{n=0}^{\\infty}\\frac{(-1)^n}{2^n} = \\frac{\\sqrt{3}}{2}\\sum_{n=0}^{\\infty}\\left(-\\frac{1}{2}\\right)^n$$\n\n第三步，识别为无穷等比级数，首项为 $1$，公比 $r=-\\dfrac{1}{2}$。由于 $|r|<1$，级数收敛：\n$$\\sum_{n=0}^{\\infty}\\left(-\\frac{1}{2}\\right)^n = \\frac{1}{1-(-\\frac{1}{2})} = \\frac{1}{\\frac{3}{2}} = \\frac{2}{3}$$\n\n最终结果：$\\dfrac{\\sqrt{3}}{2}\\times\\dfrac{2}{3} = \\dfrac{\\sqrt{3}}{3}$\n\n【快捷思路】\n识别 $\\sin(n\\pi+\\theta)=(-1)^n\\sin\\theta$ 这一恒等式后，级数立刻变为公比为 $-\\dfrac{1}{2}$ 的等比级数。直接套用求和公式 $S=\\dfrac{a}{1-r}$ 即可得到答案 $\\dfrac{\\sqrt{3}}{3}$。\n\n【正确答案】C and Series",
+    "analysis": "【题目分析】\n本题要求计算一个无穷级数，分子含有三角函数 $\\sin\\left(n\\pi+\\dfrac{\\pi}{3}\\right)$，分母为 $2^n$。关键技巧是利用三角函数的周期性简化分子表达式，将其转化为等比数列求和问题。这类将三角函数与无穷级数结合的题目在 TMUA 中较为常见，核心在于识别周期性规律后转化为标准等比级数。\n\n【解题步骤】\n第一步，简化分子。利用正弦函数的周期性：\n$$\\sin\\left(n\\pi+\\frac{\\pi}{3}\\right) = (-1)^n\\sin\\frac{\\pi}{3} = (-1)^n\\cdot\\frac{\\sqrt{3}}{2}$$\n\n第二步，代入级数：\n$$\\sum_{n=0}^{\\infty}\\frac{(-1)^n\\cdot\\dfrac{\\sqrt{3}}{2}}{2^n} = \\frac{\\sqrt{3}}{2}\\sum_{n=0}^{\\infty}\\frac{(-1)^n}{2^n} = \\frac{\\sqrt{3}}{2}\\sum_{n=0}^{\\infty}\\left(-\\frac{1}{2}\\right)^n$$\n\n第三步，识别为无穷等比级数，首项为 $1$，公比 $r=-\\dfrac{1}{2}$。由于 $|r|<1$，级数收敛：\n$$\\sum_{n=0}^{\\infty}\\left(-\\frac{1}{2}\\right)^n = \\frac{1}{1-(-\\frac{1}{2})} = \\frac{1}{\\frac{3}{2}} = \\frac{2}{3}$$\n\n最终结果：$\\dfrac{\\sqrt{3}}{2}\\times\\dfrac{2}{3} = \\dfrac{\\sqrt{3}}{3}$\n\n【快捷思路】\n识别 $\\sin(n\\pi+\\theta)=(-1)^n\\sin\\theta$ 这一恒等式后，级数立刻变为公比为 $-\\dfrac{1}{2}$ 的等比级数。直接套用求和公式 $S=\\dfrac{a}{1-r}$ 即可得到答案 $\\dfrac{\\sqrt{3}}{3}$。\n\n【正确答案】C",
     "has_image": false,
     "images": [],
     "topic": "Sequences and Series",
     "related_topics": [
       "Trigonometry"
-    ]
+    ],
+    "difficulty": 3,
+    "modules": [
+      "c_sequences_series",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "c.infinite_geometric_series",
+      "e.trig_periodicity"
+    ],
+    "skills": [
+      "trigonometric-periodicity",
+      "infinite-geometric-series",
+      "series-transformation"
+    ],
+    "primary_section": "c.infinite_geometric_series"
   },
   {
     "id": "2023-P1-Q5",
     "year": 2023,
     "paper": 1,
     "num": 5,
-    "question": "The following shape has two lines of reflectional symmetry.\n\nN  S  O\n       T\nR\nM  U     P\n\n[diagram not to scale]\n\nMNOP is a square of perimeter 40 cm.\n\nThe vertices of rectangle RSTU lie on the edge of square MNOP.\n\nMR has length $x$ cm.\n\nWhat is the largest possible value of $x$ such that RSTU has area 20 cm²?",
+    "question": "The following shape has two lines of reflectional symmetry.\n\n[diagram not to scale]\n\nMNOP is a square of perimeter 40 cm.\n\nThe vertices of rectangle RSTU lie on the edge of square MNOP.\n\nMR has length $x$ cm.\n\nWhat is the largest possible value of $x$ such that RSTU has area 20 cm²?",
     "options": {
       "A": "$2$",
       "B": "$10$",
@@ -11427,12 +11488,32 @@ window.QUESTIONS = [
       "F": "$5 + \\sqrt{15}$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n结合图形分析。MNOP 为正方形，周长 $40$ cm，故边长为 $10$ cm。矩形 RSTU 内接于正方形，四个顶点分别落在正方形的四条边上。由题设「两条反射对称轴」可知，矩形 RSTU 与正方形共享对称中心。设 $MR = x$ cm，则 $R$ 在 $MP$ 边上距 $M$ 点 $x$ 处。利用对称性可确定其余三个顶点的位置。\n\n【解题步骤】\n以 $M$ 为原点建立直角坐标系：$M(0,0)$，$N(10,0)$，$O(10,10)$，$P(0,10)$。由对称性，$R$ 在 $MP$ 上，$S$ 在 $MN$ 上，$T$ 在 $NO$ 上，$U$ 在 $OP$ 上。$MR = x$ 即 $R(0,x)$，则 $S(x,0)$，$T(10,10-x)$，$U(10-x,10)$。\n\n计算相邻两边：\n$RS = \\sqrt{(x-0)^2 + (0-x)^2} = x\\sqrt{2}$\n$RU = \\sqrt{(10-x-0)^2 + (10-x)^2} = (10-x)\\sqrt{2}$\n\n矩形面积为 $RS \\times RU = 2x(10-x)$。令其等于 $20$：\n$2x(10-x) = 20 \\implies x^2 - 10x + 10 = 0$\n\n解得 $x = 5 \\pm \\sqrt{15}$。取较大值，$x = 5 + \\sqrt{15}$。\n\n【快捷思路】\n直接利用对称性写出面积公式 $2x(10-x) = 20$，解二次方程即可，无需逐一验证几何关系。\n\n【正确答案】F Geometry",
+    "analysis": "【题目分析】\n结合图形分析。MNOP 为正方形，周长 $40$ cm，故边长为 $10$ cm。矩形 RSTU 内接于正方形，四个顶点分别落在正方形的四条边上。由题设「两条反射对称轴」可知，矩形 RSTU 与正方形共享对称中心。设 $MR = x$ cm，则 $R$ 在 $MP$ 边上距 $M$ 点 $x$ 处。利用对称性可确定其余三个顶点的位置。\n\n【解题步骤】\n以 $M$ 为原点建立直角坐标系：$M(0,0)$，$N(10,0)$，$O(10,10)$，$P(0,10)$。由对称性，$R$ 在 $MP$ 上，$S$ 在 $MN$ 上，$T$ 在 $NO$ 上，$U$ 在 $OP$ 上。$MR = x$ 即 $R(0,x)$，则 $S(x,0)$，$T(10,10-x)$，$U(10-x,10)$。\n\n计算相邻两边：\n$RS = \\sqrt{(x-0)^2 + (0-x)^2} = x\\sqrt{2}$\n$RU = \\sqrt{(10-x-0)^2 + (10-x)^2} = (10-x)\\sqrt{2}$\n\n矩形面积为 $RS \\times RU = 2x(10-x)$。令其等于 $20$：\n$2x(10-x) = 20 \\implies x^2 - 10x + 10 = 0$\n\n解得 $x = 5 \\pm \\sqrt{15}$。取较大值，$x = 5 + \\sqrt{15}$。\n\n【快捷思路】\n直接利用对称性写出面积公式 $2x(10-x) = 20$，解二次方程即可，无需逐一验证几何关系。\n\n【正确答案】F",
     "has_image": true,
     "images": [
       "images/2023/2023-P1-Q5-symmetry-shape.png"
     ],
-    "topic": "Coordinate Geometry"
+    "topic": "Coordinate Geometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "d.coordinate_modelling",
+      "d.symmetry_geometry",
+      "a2.quadratic_equations"
+    ],
+    "skills": [
+      "coordinate-modelling",
+      "symmetry-reasoning",
+      "area-equation",
+      "quadratic-solving"
+    ],
+    "primary_section": "d.coordinate_modelling"
   },
   {
     "id": "2023-P1-Q6",
@@ -11450,10 +11531,32 @@ window.QUESTIONS = [
       "G": "$13$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n对 $(2+3x)^{12}$ 进行二项式展开，判断各项系数中有多少个能被 $12$ 整除。通项为 $T_{k+1} = \\binom{12}{k} \\cdot 2^{12-k} \\cdot 3^k$，其中 $k = 0,1,\\ldots,12$。$12 = 2^2 \\times 3$，故系数需同时含至少两个因子 $2$ 和一个因子 $3$。\n\n【解题步骤】\n考察各 $k$ 值下系数的质因数分解：\n\n$k=0$：系数为 $\\binom{12}{0} \\cdot 2^{12} = 2^{12} = 4096$，无因子 $3$，不满足。\n\n$k=12$：系数为 $\\binom{12}{12} \\cdot 3^{12} = 3^{12}$，无因子 $2$，不满足。\n\n$k = 1$ 至 $11$：此时 $3^k$ 提供至少一个因子 $3$；同时 $\\binom{12}{k} \\cdot 2^{12-k}$ 中 $12-k \\geq 1$，而 $\\binom{12}{k}$ 在 $k=1\\sim11$ 范围内均为正整数。经逐项检验（例如 $k=8$ 时 $\\binom{12}{8} = 495$，系数 $v_2 = 4 \\geq 2$），所有 $k=1\\sim11$ 的系数 $v_2 \\geq 2$ 且 $v_3 \\geq 1$，均满足整除条件。\n\n共 $11$ 项系数能被 $12$ 整除。\n\n【快捷思路】\n只需检查首尾两项：$k=0$ 缺因子 $3$，$k=12$ 缺因子 $2$，其余 $11$ 项因同时含 $2^{12-k}$ 和 $3^k$ 的贡献，自动满足整除条件。\n\n【正确答案】E Theory",
+    "analysis": "【题目分析】\n对 $(2+3x)^{12}$ 进行二项式展开，判断各项系数中有多少个能被 $12$ 整除。通项为 $T_{k+1} = \\binom{12}{k} \\cdot 2^{12-k} \\cdot 3^k$，其中 $k = 0,1,\\ldots,12$。$12 = 2^2 \\times 3$，故系数需同时含至少两个因子 $2$ 和一个因子 $3$。\n\n【解题步骤】\n考察各 $k$ 值下系数的质因数分解：\n\n$k=0$：系数为 $\\binom{12}{0} \\cdot 2^{12} = 2^{12} = 4096$，无因子 $3$，不满足。\n\n$k=12$：系数为 $\\binom{12}{12} \\cdot 3^{12} = 3^{12}$，无因子 $2$，不满足。\n\n$k = 1$ 至 $11$：此时 $3^k$ 提供至少一个因子 $3$；同时 $\\binom{12}{k} \\cdot 2^{12-k}$ 中 $12-k \\geq 1$，而 $\\binom{12}{k}$ 在 $k=1\\sim11$ 范围内均为正整数。经逐项检验（例如 $k=8$ 时 $\\binom{12}{8} = 495$，系数 $v_2 = 4 \\geq 2$），所有 $k=1\\sim11$ 的系数 $v_2 \\geq 2$ 且 $v_3 \\geq 1$，均满足整除条件。\n\n共 $11$ 项系数能被 $12$ 整除。\n\n【快捷思路】\n只需检查首尾两项：$k=0$ 缺因子 $3$，$k=12$ 缺因子 $2$。其中 $k=1,\\ldots,10$ 时 $2^{12-k}$ 至少提供两个因子 $2$，$k=11$ 时 $\\binom{12}{11}=12$ 提供足够的因子 $2$，因此除首尾两项外均满足。\n\n【正确答案】E",
     "has_image": false,
     "images": [],
-    "topic": "Number Theory"
+    "topic": "Number Theory",
+    "difficulty": 3,
+    "related_topics": [
+      "Sequences and Series",
+      "Algebra"
+    ],
+    "modules": [
+      "k_number_theory_combinatorics",
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "k.divisibility_prime_factors",
+      "c.binomial_expansion",
+      "a1.expansion_collection"
+    ],
+    "skills": [
+      "binomial-coefficient-analysis",
+      "divisibility-check",
+      "prime-factor-counting",
+      "endpoint-case-analysis"
+    ],
+    "primary_section": "k.divisibility_prime_factors"
   },
   {
     "id": "2023-P1-Q7",
@@ -11474,14 +11577,35 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n已知 $P(x) = 2^x + 4$，$Q(x) = 2^{(2x-2)} - 2^{x+2} + 16$。题目要求 $P(x)$ 与 $Q(x)$ 的比为 $4:1$，即 $P(x) = 4Q(x)$，求满足条件的最大 $x$。\n\n【解题步骤】\n由 $P(x) = 4Q(x)$ 得：\n$2^x + 4 = 4\\left(2^{2x-2} - 2^{x+2} + 16\\right)$\n\n化简右侧：$4 \\cdot 2^{2x-2} = 2^{2x}$，$4 \\cdot 2^{x+2} = 2^{x+4}$，$4 \\cdot 16 = 64$。\n$2^x + 4 = 2^{2x} - 2^{x+4} + 64$\n\n令 $u = 2^x$（$u > 0$），则 $2^{2x} = u^2$，$2^{x+4} = 16u$：\n$u + 4 = u^2 - 16u + 64$\n\n整理得：$u^2 - 17u + 60 = 0$。\n\n因式分解得 $(u-12)(u-5) = 0$。\n$u = 12$ 或 $u = 5$。\n对应 $x = \\log_2 12$ 或 $x = \\log_2 5$。\n较大值为 $x = \\log_2 12$。\n\n【快捷思路】\n令 $u = 2^x$ 将指数方程化为关于 $u$ 的二次方程 $u^2 - 17u + 60 = 0$，因式分解直接得 $u = 12$ 或 $5$，取对数后比较大小即可。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
-    "topic": "Algebra"
+    "topic": "Algebra",
+    "difficulty": 3,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a3.exponential_equations",
+      "a2.substitution_to_quadratic",
+      "i.function_notation"
+    ],
+    "skills": [
+      "exponential-substitution",
+      "quadratic-factorisation",
+      "ratio-equation",
+      "compare-root-values"
+    ],
+    "primary_section": "a3.exponential_equations"
   },
   {
     "id": "2023-P1-Q8",
     "year": 2023,
     "paper": 1,
     "num": 8,
-    "question": "A triangle XYZ is called fun if it has the following properties:\n\nangle $YXZ = 30°$\n\n$XY = \\sqrt{3}a$\n\n$YZ = a$\n\nwhere $a$ is a constant.\n\nFor a given value of $a$, there are two distinct fun triangles S and T, where the area of S is greater than the area of T.\n\nFind the ratio $\\text{area of S} : \\text{area of T}$.",
+    "question": "A triangle XYZ is called fun if it has the following properties:\n\n$\\angle YXZ = 30^\\circ$\n\n$XY = \\sqrt{3}a$\n\n$YZ = a$\n\nwhere $a$ is a constant.\n\nFor a given value of $a$, there are two distinct fun triangles S and T, where the area of S is greater than the area of T.\n\nFind the ratio $\\text{area of S} : \\text{area of T}$.",
     "options": {
       "A": "$1:1$",
       "B": "$2:1$",
@@ -11490,17 +11614,37 @@ window.QUESTIONS = [
       "E": "$3:1$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n「趣味三角形」XYZ 满足：$\\angle YXZ = 30°$，$XY = \\sqrt{3}a$，$YZ = a$。已知给定 $a$ 存在两个不同的三角形 $S$ 和 $T$（$S$ 面积较大），求面积比。这是典型的 SSA 模糊情形——已知两边及其中一边的对角，可能产生两个解。\n\n【解题步骤】\n设 $XZ = t$。对三角形 XYZ 用余弦定理：\n$YZ^2 = XY^2 + XZ^2 - 2 \\cdot XY \\cdot XZ \\cdot \\cos(\\angle YXZ)$\n\n$a^2 = (\\sqrt{3}a)^2 + t^2 - 2(\\sqrt{3}a)(t) \\cdot \\frac{\\sqrt{3}}{2}$\n\n$a^2 = 3a^2 + t^2 - 3at$\n\n$t^2 - 3at + 2a^2 = 0$\n\n$(t-a)(t-2a) = 0$\n\n故 $t = a$ 或 $t = 2a$，对应两个不同三角形。\n\n面积公式：$\\text{Area} = \\frac{1}{2} \\cdot XY \\cdot XZ \\cdot \\sin(30°) = \\frac{1}{2} \\cdot \\sqrt{3}a \\cdot t \\cdot \\frac{1}{2} = \\frac{\\sqrt{3}}{4}at$。\n\n三角形 $T$（$XZ = a$）：面积 $= \\frac{\\sqrt{3}}{4}a^2$。\n三角形 $S$（$XZ = 2a$）：面积 $= \\frac{\\sqrt{3}}{2}a^2$。\n\n面积比 $S:T = \\frac{\\sqrt{3}}{2}a^2 : \\frac{\\sqrt{3}}{4}a^2 = 2:1$。\n\n【快捷思路】\n面积与 $XZ$ 长度成正比（因为 $XY$ 和夹角固定），故面积比直接等于 $XZ$ 之比 $= 2a:a = 2:1$。\n\n【正确答案】B",
+    "analysis": "【题目分析】\n「趣味三角形」XYZ 满足：$\\angle YXZ = 30^\\circ$，$XY = \\sqrt{3}a$，$YZ = a$。已知给定 $a$ 存在两个不同的三角形 $S$ 和 $T$（$S$ 面积较大），求面积比。这是典型的 SSA 模糊情形——已知两边及其中一边的对角，可能产生两个解。\n\n【解题步骤】\n设 $XZ = t$。对三角形 XYZ 用余弦定理：\n$YZ^2 = XY^2 + XZ^2 - 2 \\cdot XY \\cdot XZ \\cdot \\cos(\\angle YXZ)$\n\n$a^2 = (\\sqrt{3}a)^2 + t^2 - 2(\\sqrt{3}a)(t) \\cdot \\frac{\\sqrt{3}}{2}$\n\n$a^2 = 3a^2 + t^2 - 3at$\n\n$t^2 - 3at + 2a^2 = 0$\n\n$(t-a)(t-2a) = 0$\n\n故 $t = a$ 或 $t = 2a$，对应两个不同三角形。\n\n面积公式：$\\text{Area} = \\frac{1}{2} \\cdot XY \\cdot XZ \\cdot \\sin(30^\\circ) = \\frac{1}{2} \\cdot \\sqrt{3}a \\cdot t \\cdot \\frac{1}{2} = \\frac{\\sqrt{3}}{4}at$。\n\n三角形 $T$（$XZ = a$）：面积 $= \\frac{\\sqrt{3}}{4}a^2$。\n三角形 $S$（$XZ = 2a$）：面积 $= \\frac{\\sqrt{3}}{2}a^2$。\n\n面积比 $S:T = \\frac{\\sqrt{3}}{2}a^2 : \\frac{\\sqrt{3}}{4}a^2 = 2:1$。\n\n【快捷思路】\n面积与 $XZ$ 长度成正比（因为 $XY$ 和夹角固定），故面积比直接等于 $XZ$ 之比 $= 2a:a = 2:1$。\n\n【正确答案】B",
     "has_image": false,
     "images": [],
-    "topic": "Trigonometry"
+    "topic": "Trigonometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "e.cosine_rule",
+      "e.ambiguous_triangle_case",
+      "d.area_of_triangle"
+    ],
+    "skills": [
+      "cosine-rule",
+      "quadratic-length-solving",
+      "triangle-area-ratio",
+      "ambiguous-case-analysis"
+    ],
+    "primary_section": "e.cosine_rule"
   },
   {
     "id": "2023-P1-Q9",
     "year": 2023,
     "paper": 1,
     "num": 9,
-    "question": "How many solutions are there to\n\n$$(1 + 3\\cos 3\\theta)^2 = 4$$\n\nin the interval $0° \\leq \\theta \\leq 180°$?",
+    "question": "How many solutions are there to\n\n$$(1 + 3\\cos 3\\theta)^2 = 4$$\n\nin the interval $0^\\circ \\leq \\theta \\leq 180^\\circ$?",
     "options": {
       "A": "$1$",
       "B": "$2$",
@@ -11510,10 +11654,30 @@ window.QUESTIONS = [
       "F": "$6$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题考查三角方程的求解与解的计数。方程为 $(1 + 3\\cos 3\\theta)^2 = 4$，区间为 $0° \\leq \\theta \\leq 180°$。核心思路是先开方化为两个简单的余弦方程，再利用角度范围逐一计数。注意 $3\\theta$ 的范围会扩大到 $540°$，即一圈半，需仔细判断每个方程在此范围内的解的个数。\n\n【解题步骤】\n第一步：对方程两边开方，得 $1 + 3\\cos 3\\theta = \\pm 2$，分为两个情况。\n\n情况一：$1 + 3\\cos 3\\theta = 2$，即 $\\cos 3\\theta = \\dfrac{1}{3}$。\n情况二：$1 + 3\\cos 3\\theta = -2$，即 $\\cos 3\\theta = -1$。\n\n第二步：确定 $3\\theta$ 的范围。由 $0° \\leq \\theta \\leq 180°$ 得 $0° \\leq 3\\theta \\leq 540°$。\n\n第三步：计数情况一的解。$\\cos 3\\theta = \\dfrac{1}{3}$ 在一个周期 $[0°, 360°]$ 内有两个解（第一象限和第四象限各一个）。由于范围延伸到 $540° = 360° + 180°$，第二圈的 $0°$ 到 $180°$ 还会再出现一个解（第一象限那个），所以共 $3$ 个解。\n\n第四步：计数情况二的解。$\\cos 3\\theta = -1$ 即 $3\\theta = 180°, 540°$（$900°$ 超出范围），共 $2$ 个解。\n\n第五步：总计 $3 + 2 = 5$ 个解。\n\n【快捷思路】\n开方后直接得到 $\\cos 3\\theta = \\dfrac{1}{3}$ 和 $\\cos 3\\theta = -1$ 两个方程。$3\\theta \\in [0°, 540°]$ 覆盖一圈半。$\\cos 3\\theta = \\dfrac{1}{3}$ 每圈两个解，半圈内只多出第一象限的一个解，共 $3$ 个。$\\cos 3\\theta = -1$ 每圈一个解，在 $180°$ 和 $540°$ 处各一个，共 $2$ 个。合计 $5$ 个。\n\n【正确答案】E",
+    "analysis": "【题目分析】\n本题考查三角方程的求解与解的计数。方程为 $(1 + 3\\cos 3\\theta)^2 = 4$，区间为 $0^\\circ \\leq \\theta \\leq 180^\\circ$。核心思路是先开方化为两个简单的余弦方程，再利用角度范围逐一计数。注意 $3\\theta$ 的范围会扩大到 $540^\\circ$，即一圈半，需仔细判断每个方程在此范围内的解的个数。\n\n【解题步骤】\n第一步：对方程两边开方，得 $1 + 3\\cos 3\\theta = \\pm 2$，分为两个情况。\n\n情况一：$1 + 3\\cos 3\\theta = 2$，即 $\\cos 3\\theta = \\dfrac{1}{3}$。\n情况二：$1 + 3\\cos 3\\theta = -2$，即 $\\cos 3\\theta = -1$。\n\n第二步：确定 $3\\theta$ 的范围。由 $0^\\circ \\leq \\theta \\leq 180^\\circ$ 得 $0^\\circ \\leq 3\\theta \\leq 540^\\circ$。\n\n第三步：计数情况一的解。$\\cos 3\\theta = \\dfrac{1}{3}$ 在一个周期 $[0^\\circ, 360^\\circ]$ 内有两个解（第一象限和第四象限各一个）。由于范围延伸到 $540^\\circ = 360^\\circ + 180^\\circ$，第二圈的 $0^\\circ$ 到 $180^\\circ$ 还会再出现一个解（第一象限那个），所以共 $3$ 个解。\n\n第四步：计数情况二的解。$\\cos 3\\theta = -1$ 即 $3\\theta = 180^\\circ, 540^\\circ$（$900^\\circ$ 超出范围），共 $2$ 个解。\n\n第五步：总计 $3 + 2 = 5$ 个解。\n\n【快捷思路】\n开方后直接得到 $\\cos 3\\theta = \\dfrac{1}{3}$ 和 $\\cos 3\\theta = -1$ 两个方程。$3\\theta \\in [0^\\circ, 540^\\circ]$ 覆盖一圈半。$\\cos 3\\theta = \\dfrac{1}{3}$ 每圈两个解，半圈内只多出第一象限的一个解，共 $3$ 个。$\\cos 3\\theta = -1$ 每圈一个解，在 $180^\\circ$ 和 $540^\\circ$ 处各一个，共 $2$ 个。合计 $5$ 个。\n\n【正确答案】E",
     "has_image": false,
     "images": [],
-    "topic": "Trigonometry"
+    "topic": "Trigonometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.trig_equations.solution_counting",
+      "e.multiple_angle_ranges",
+      "a2.solving_squared_equations"
+    ],
+    "skills": [
+      "split-plus-minus-case",
+      "trig-solution-counting",
+      "multiple-angle-range",
+      "endpoint-inclusion"
+    ],
+    "primary_section": "e.trig_equations.solution_counting"
   },
   {
     "id": "2023-P1-Q10",
@@ -11530,10 +11694,32 @@ window.QUESTIONS = [
       "F": "$4\\pi - 6\\sqrt{3}$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n本题考查梯形法则数值积分与几何面积的结合。积分 $\\displaystyle\\int_{-2}^{2}\\sqrt{4 - x^2}\\,dx$ 的精确值可以用几何方法求得——被积函数表示上半圆 $y = \\sqrt{4 - x^2}$，半径为 $2$，面积恰为半圆面积。梯形法则用 $4$ 个梯形近似曲线下面积，需要计算各节点处的函数值并代入公式，最后求估计值与精确值的正差。\n\n【解题步骤】\n第一步：计算精确值。$y = \\sqrt{4 - x^2}$ 是半径 $r = 2$ 的上半圆，精确面积为 $\\dfrac{1}{2}\\pi r^2 = 2\\pi$。\n\n第二步：应用梯形法则。区间 $[-2, 2]$ 分成 $4$ 条，步长 $h = 1$。节点为 $x = -2, -1, 0, 1, 2$。\n各点函数值：$f(-2) = 0$，$f(-1) = \\sqrt{3}$，$f(0) = 2$，$f(1) = \\sqrt{3}$，$f(2) = 0$。\n\n第三步：代入梯形法则公式：\n$$\\text{估计值} = \\frac{h}{2}\\Bigl[f(-2) + 2f(-1) + 2f(0) + 2f(1) + f(2)\\Bigr] = \\frac{1}{2}\\Bigl[0 + 2\\sqrt{3} + 4 + 2\\sqrt{3} + 0\\Bigr] = 2 + 2\\sqrt{3}$$\n\n第四步：计算正差。精确值为 $2\\pi$，梯形法则由于函数上凸会低估面积，故正差为：\n$$2\\pi - (2 + 2\\sqrt{3}) = 2(\\pi - 1 - \\sqrt{3})$$\n\n【快捷思路】\n精确值一眼看出是半圆面积 $2\\pi$。梯形法则估计值计算时注意到 $f(\\pm 1) = \\sqrt{3}$ 对称、$f(\\pm 2) = 0$，中间项 $2 + 2(\\sqrt{3} + \\sqrt{3} + 2)$ 简化为 $2 + 2\\sqrt{3}$。差值直接写为 $2(\\pi - 1 - \\sqrt{3})$。\n\n【正确答案】B",
+    "analysis": "【题目分析】\n本题考查梯形法则数值积分与几何面积的结合。积分 $\\displaystyle\\int_{-2}^{2}\\sqrt{4 - x^2}\\,dx$ 的精确值可以用几何方法求得——被积函数表示上半圆 $y = \\sqrt{4 - x^2}$，半径为 $2$，面积恰为半圆面积。梯形法则用 $4$ 个梯形近似曲线下面积，需要计算各节点处的函数值并代入公式，最后求估计值与精确值的正差。\n\n【解题步骤】\n第一步：计算精确值。$y = \\sqrt{4 - x^2}$ 是半径 $r = 2$ 的上半圆，精确面积为 $\\dfrac{1}{2}\\pi r^2 = 2\\pi$。\n\n第二步：应用梯形法则。区间 $[-2, 2]$ 分成 $4$ 条，步长 $h = 1$。节点为 $x = -2, -1, 0, 1, 2$。\n各点函数值：$f(-2) = 0$，$f(-1) = \\sqrt{3}$，$f(0) = 2$，$f(1) = \\sqrt{3}$，$f(2) = 0$。\n\n第三步：代入梯形法则公式：\n$$\\text{估计值} = \\frac{h}{2}\\Bigl[f(-2) + 2f(-1) + 2f(0) + 2f(1) + f(2)\\Bigr] = \\frac{1}{2}\\Bigl[0 + 2\\sqrt{3} + 4 + 2\\sqrt{3} + 0\\Bigr] = 2 + 2\\sqrt{3}$$\n\n第四步：计算正差。精确值为 $2\\pi$，梯形法则由于函数上凸会低估面积，故正差为：\n$$2\\pi - (2 + 2\\sqrt{3}) = 2(\\pi - 1 - \\sqrt{3})$$\n\n【快捷思路】\n精确值一眼看出是半圆面积 $2\\pi$。梯形法则估计值计算时注意到 $f(\\pm 1) = \\sqrt{3}$ 对称、$f(\\pm 2) = 0$，估计值为 $\\frac12(2\\sqrt3+4+2\\sqrt3)=2+2\\sqrt3$。差值直接写为 $2(\\pi - 1 - \\sqrt{3})$。\n\n【正确答案】B",
     "has_image": false,
     "images": [],
-    "topic": "Integration"
+    "topic": "Integration",
+    "difficulty": 3,
+    "related_topics": [
+      "Graphs",
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "g_integration",
+      "d_coordinate_geometry",
+      "m_comprehensive_training"
+    ],
+    "sections": [
+      "g.trapezium_rule",
+      "g.area_under_curve",
+      "d.circle_geometry"
+    ],
+    "skills": [
+      "trapezium-rule",
+      "semicircle-area",
+      "exact-vs-estimate-difference",
+      "function-value-table"
+    ],
+    "primary_section": "g.trapezium_rule"
   },
   {
     "id": "2023-P1-Q11",
@@ -11553,7 +11739,25 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题考查函数变换与二次函数最值的综合。已知 $f(x) = x^2 - 6x$，考虑两条变换后的曲线 $y = f(kx)$ 和 $y = f(x - c)$，它们有相同的最小点。需要分别求出两条抛物线的顶点坐标，令其相等，从而建立 $k$ 与 $c$ 的关系式。关键注意 $k$ 是水平伸缩参数，$c$ 是水平平移参数，二者对顶点的影响方式不同。\n\n【解题步骤】\n第一步：求原函数 $f(x)$ 的最小点。配方得 $f(x) = (x - 3)^2 - 9$，最小点为 $(3, -9)$。\n\n第二步：求 $y = f(kx)$ 的最小点。$f(kx) = (kx)^2 - 6(kx) = k^2x^2 - 6kx$。配方：\n$$f(kx) = k^2\\Bigl(x - \\frac{3}{k}\\Bigr)^2 - 9$$\n最小点为 $\\Bigl(\\dfrac{3}{k}, -9\\Bigr)$，注意纵坐标仍为 $-9$（水平伸缩不改变极值）。\n\n第三步：求 $y = f(x - c)$ 的最小点。$f(x - c) = (x - c)^2 - 6(x - c)$。配方：\n$$f(x - c) = (x - c - 3)^2 - 9 = \\Bigl[x - (c + 3)\\Bigr]^2 - 9$$\n最小点为 $(c + 3, -9)$。\n\n第四步：令两个最小点相等。纵坐标已相同（均为 $-9$），只需横坐标相等：\n$$\\frac{3}{k} = c + 3 \\quad \\Rightarrow \\quad k = \\frac{3}{c + 3}$$\n\n【快捷思路】\n原函数最小点横坐标为 $3$。$f(kx)$ 的最小点横坐标变为 $3/k$（水平伸缩除以 $k$），$f(x - c)$ 的最小点横坐标变为 $3 + c$（右移 $c$ 单位）。令 $3/k = 3 + c$，即得 $k = 3/(c + 3)$。\n\n【正确答案】B",
     "has_image": false,
     "images": [],
-    "topic": "Functions"
+    "topic": "Functions",
+    "difficulty": 3,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "i.function_transformations.horizontal_scaling_translation",
+      "i.quadratic_turning_points"
+    ],
+    "skills": [
+      "complete-square",
+      "track-transformed-vertex",
+      "parameter-rearrangement"
+    ],
+    "primary_section": "i.function_transformations.horizontal_scaling_translation"
   },
   {
     "id": "2023-P1-Q12",
@@ -11574,7 +11778,27 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题考查指数方程与三角恒等式的综合运用。方程为 $2^{\\tan^2 x} = 4^{\\sin^2 x}$，区间为 $0 \\leq x \\leq 2\\pi$。核心技巧是统一底数后比较指数，再利用三角恒等式 $\\tan^2 x = \\dfrac{\\sin^2 x}{\\cos^2 x}$ 化简，最后注意 $\\tan x$ 的定义域限制（$\\cos x \\neq 0$）。\n\n【解题步骤】\n第一步：统一底数。$4^{\\sin^2 x} = 2^{2\\sin^2 x}$，方程化为：\n$$2^{\\tan^2 x} = 2^{2\\sin^2 x} \\quad \\Rightarrow \\quad \\tan^2 x = 2\\sin^2 x$$\n\n第二步：利用 $\\tan^2 x = \\dfrac{\\sin^2 x}{\\cos^2 x}$（需 $\\cos x \\neq 0$），代入得：\n$$\\frac{\\sin^2 x}{\\cos^2 x} = 2\\sin^2 x \\quad \\Rightarrow \\quad \\sin^2 x = 2\\sin^2 x \\cos^2 x$$\n移项整理：$\\sin^2 x(1 - 2\\cos^2 x) = 0$\n\n第三步：分情况讨论。\n- 情况一：$\\sin x = 0$，在 $[0, 2\\pi]$ 上 $x = 0, \\pi, 2\\pi$，共 $3$ 个解。此时 $\\cos x = \\pm 1 \\neq 0$，均有效。\n- 情况二：$1 - 2\\cos^2 x = 0$，即 $\\cos^2 x = \\dfrac{1}{2}$，$\\cos x = \\pm\\dfrac{1}{\\sqrt{2}}$。对应 $x = \\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}, \\dfrac{5\\pi}{4}, \\dfrac{7\\pi}{4}$，共 $4$ 个解。此时 $\\sin x \\neq 0$，$\\cos x \\neq 0$，均有效。\n\n第四步：总计 $3 + 4 = 7$ 个解。\n\n【快捷思路】\n统一底数后 $\\tan^2 x = 2\\sin^2 x$。若 $\\sin x = 0$ 则两边均为 $0$，得 $x = 0, \\pi, 2\\pi$（$3$ 个）。若 $\\sin x \\neq 0$，两边约去 $\\sin^2 x$ 得 $\\cos^2 x = 1/2$，即 $\\cos x = \\pm 1/\\sqrt{2}$，四个象限各一个解（$4$ 个）。合计 $7$ 个。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
-    "topic": "Trigonometry"
+    "topic": "Trigonometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra",
+      "Functions"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "e.trig_equations.exponential_form",
+      "e.trig_identities.tan_sin_cos"
+    ],
+    "skills": [
+      "rewrite-exponential-bases",
+      "trig-domain-check",
+      "case-analysis",
+      "solution-counting-on-interval"
+    ],
+    "primary_section": "e.trig_equations.exponential_form"
   },
   {
     "id": "2023-P1-Q13",
@@ -11592,10 +11816,26 @@ window.QUESTIONS = [
       "G": "$16 + 2\\sqrt{6}$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n本题给出两个圆的方程，要求分别位于两个圆上的点 P 和 Q 之间的最大距离。圆 1 的方程为 $(x - 2)^2 + (y - 1)^2 = 16$，圆心为 $(2, 1)$，半径为 $4$；圆 2 的方程为 $(x - 4)^2 + (y + 5)^2 = 16$，圆心为 $(4, -5)$，半径也为 $4$。这是一个典型的圆上两点最大距离问题。\n\n【解题步骤】\n对于两个圆上的点，它们之间的最大距离出现在两个圆心连线延长线上、且两点分别位于各自圆远离对方圆心的一侧。具体公式为：最大距离等于两圆心之间的距离加上两个圆的半径之和。\n\n第一步，计算两圆心之间的距离：\n$$d = \\sqrt{(4 - 2)^2 + (-5 - 1)^2} = \\sqrt{2^2 + (-6)^2} = \\sqrt{4 + 36} = \\sqrt{40} = 2\\sqrt{10}$$\n\n第二步，加上两个半径：\n$$\\text{最大 PQ} = d + r_1 + r_2 = 2\\sqrt{10} + 4 + 4 = 8 + 2\\sqrt{10}$$\n\n【快捷思路】\n直接套用两圆上两点最大距离公式：圆心距加两半径。圆心距 $\\sqrt{(4-2)^2+(-5-1)^2}=2\\sqrt{10}$，两半径之和为 $8$，故答案为 $8+2\\sqrt{10}$。注意区分最小距离（圆心距减两半径）与最大距离。\n\n【正确答案】F Geometry",
+    "analysis": "【题目分析】\n本题给出两个圆的方程，要求分别位于两个圆上的点 P 和 Q 之间的最大距离。圆 1 的方程为 $(x - 2)^2 + (y - 1)^2 = 16$，圆心为 $(2, 1)$，半径为 $4$；圆 2 的方程为 $(x - 4)^2 + (y + 5)^2 = 16$，圆心为 $(4, -5)$，半径也为 $4$。这是一个典型的圆上两点最大距离问题。\n\n【解题步骤】\n对于两个圆上的点，它们之间的最大距离出现在两个圆心连线延长线上、且两点分别位于各自圆远离对方圆心的一侧。具体公式为：最大距离等于两圆心之间的距离加上两个圆的半径之和。\n\n第一步，计算两圆心之间的距离：\n$$d = \\sqrt{(4 - 2)^2 + (-5 - 1)^2} = \\sqrt{2^2 + (-6)^2} = \\sqrt{4 + 36} = \\sqrt{40} = 2\\sqrt{10}$$\n\n第二步，加上两个半径：\n$$\\text{最大 PQ} = d + r_1 + r_2 = 2\\sqrt{10} + 4 + 4 = 8 + 2\\sqrt{10}$$\n\n【快捷思路】\n直接套用两圆上两点最大距离公式：圆心距加两半径。圆心距 $\\sqrt{(4-2)^2+(-5-1)^2}=2\\sqrt{10}$，两半径之和为 $8$，故答案为 $8+2\\sqrt{10}$。注意区分最小距离（圆心距减两半径）与最大距离。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
-    "topic": "Coordinate Geometry"
+    "topic": "Coordinate Geometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Graphs"
+    ],
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.circle_equations.distance_between_circles"
+    ],
+    "skills": [
+      "identify-circle-centre-radius",
+      "distance-formula",
+      "maximum-distance-between-circles"
+    ],
+    "primary_section": "d.circle_equations.distance_between_circles"
   },
   {
     "id": "2023-P1-Q14",
@@ -11617,7 +11857,28 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题给出三次函数 $f(x) = \\frac{2}{3}x^3 + 2mx^2 + n$（其中 $m > 0$），已知它有三个不同的实根，求 $n$ 关于 $m$ 的取值范围。三次函数有三个不同实根的条件是：其局部极大值大于零且局部极小值小于零。\n\n【解题步骤】\n第一步，求导找驻点：\n$$f'(x) = 2x^2 + 4mx = 2x(x + 2m)$$\n驻点为 $x = 0$ 和 $x = -2m$。\n\n第二步，判断极大极小：\n$$f''(x) = 4x + 4m$$\n$f''(0) = 4m > 0$，故 $x = 0$ 处为局部极小值，$f(0) = n$。\n$f''(-2m) = -4m < 0$，故 $x = -2m$ 处为局部极大值。\n\n第三步，计算极大值：\n$$f(-2m) = \\frac{2}{3}(-2m)^3 + 2m(-2m)^2 + n = -\\frac{16}{3}m^3 + 8m^3 + n = \\frac{8}{3}m^3 + n$$\n\n第四步，三个不同实根的条件：\n$$\\frac{8}{3}m^3 + n > 0 \\quad \\text{且} \\quad n < 0$$\n即 $-\\frac{8}{3}m^3 < n < 0$。\n\n【快捷思路】\n三次函数三实根即极大值大于零、极小值小于零。先求导得驻点 $0$ 和 $-2m$，分别代入求极值。注意计算 $f(-2m)$ 时 $2m \\cdot 4m^2 = 8m^3$，与 $-\\frac{16}{3}m^3$ 合并得 $\\frac{8}{3}m^3 + n$。\n\n【正确答案】A",
     "has_image": false,
     "images": [],
-    "topic": "Differentiation"
+    "topic": "Differentiation",
+    "difficulty": 3,
+    "related_topics": [
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "f.stationary_points_maxima_minima",
+      "i.cubic_root_conditions"
+    ],
+    "skills": [
+      "differentiate-polynomial",
+      "classify-stationary-points",
+      "three-real-roots-condition",
+      "parameter-inequality"
+    ],
+    "primary_section": "f.stationary_points_maxima_minima"
   },
   {
     "id": "2023-P1-Q15",
@@ -11637,7 +11898,29 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题涉及指数函数与三角函数的复合。函数 $f(x) = a^{\\cos x}$ 中，$\\cos x$ 的取值范围为 $[-1, 1]$，因此 $f(x)$ 的最大值和最小值取决于底数 $a$ 的大小。已知最大值与最小值之差为 $3$，求所有可能的 $a$ 值之和。\n\n【解题步骤】\n由于 $\\cos x \\in [-1, 1]$，分两种情况讨论：\n\n情况一：$a > 1$。此时 $a^{\\cos x}$ 随 $\\cos x$ 递增。\n最大值为 $a^1 = a$，最小值为 $a^{-1} = \\frac{1}{a}$。\n差值为 $a - \\frac{1}{a} = 3$，即 $a^2 - 3a - 1 = 0$。\n解得 $a = \\frac{3 \\pm \\sqrt{13}}{2}$。因 $a > 1$，取 $a_1 = \\frac{3 + \\sqrt{13}}{2}$。\n\n情况二：$0 < a < 1$。此时 $a^{\\cos x}$ 随 $\\cos x$ 递减。\n最大值为 $a^{-1} = \\frac{1}{a}$，最小值为 $a^1 = a$。\n差值为 $\\frac{1}{a} - a = 3$，即 $a^2 + 3a - 1 = 0$。\n解得 $a = \\frac{-3 \\pm \\sqrt{13}}{2}$。因 $0 < a < 1$，取 $a_2 = \\frac{-3 + \\sqrt{13}}{2}$。\n\n两值之和：\n$$a_1 + a_2 = \\frac{3 + \\sqrt{13}}{2} + \\frac{-3 + \\sqrt{13}}{2} = \\frac{2\\sqrt{13}}{2} = \\sqrt{13}$$\n\n【快捷思路】\n$\\cos x \\in [-1, 1]$ 是核心。分 $a > 1$ 和 $0 < a < 1$ 两种情况列差值方程。两个二次方程的合法解分别为 $\\frac{3+\\sqrt{13}}{2}$ 和 $\\frac{-3+\\sqrt{13}}{2}$，相加后线性项抵消，仅剩 $\\sqrt{13}$。\n\n【正确答案】F",
     "has_image": false,
     "images": [],
-    "topic": "Functions"
+    "topic": "Functions",
+    "difficulty": 3,
+    "related_topics": [
+      "Trigonometry",
+      "Algebra"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a3.exponential_functions.range",
+      "e.cosine_range",
+      "i.function_range_composition"
+    ],
+    "skills": [
+      "range-of-cosine",
+      "case-split-by-base",
+      "solve-quadratic-parameter",
+      "sum-valid-solutions"
+    ],
+    "primary_section": "a3.exponential_functions.range"
   },
   {
     "id": "2023-P1-Q16",
@@ -11655,10 +11938,30 @@ window.QUESTIONS = [
       "G": "$10.25$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n直角三角形三个顶点为 $(2, 3)$、$(9, -1)$ 和 $(5, k)$，直角可能在任意一个顶点处。利用向量点积为零的条件，分别讨论三种情况，求出所有可能的 $k$ 值并求和。\n\n【解题步骤】\n设 $A(2, 3)$，$B(9, -1)$，$C(5, k)$。两向量垂直等价于点积为零。\n\n情况一：直角在 $A(2, 3)$。向量 $\\vec{AB} = (7, -4)$，$\\vec{AC} = (3, k - 3)$。\n$$7 \\cdot 3 + (-4)(k - 3) = 0 \\Rightarrow 21 - 4k + 12 = 0 \\Rightarrow k = \\frac{33}{4}$$\n\n情况二：直角在 $B(9, -1)$。向量 $\\vec{BA} = (-7, 4)$，$\\vec{BC} = (-4, k + 1)$。\n$$(-7)(-4) + 4(k + 1) = 0 \\Rightarrow 28 + 4k + 4 = 0 \\Rightarrow k = -8$$\n\n情况三：直角在 $C(5, k)$。向量 $\\vec{CA} = (-3, 3 - k)$，$\\vec{CB} = (4, -1 - k)$。\n$$(-3)(4) + (3 - k)(-1 - k) = 0 \\Rightarrow -12 + (k^2 - 2k - 3) = 0 \\Rightarrow k^2 - 2k - 15 = 0$$\n解得 $(k - 5)(k + 3) = 0$，即 $k = 5$ 或 $k = -3$。\n\n所有可能的 $k$ 值之和：\n$$\\frac{33}{4} + (-8) + 5 + (-3) = \\frac{33}{4} - 6 = \\frac{33 - 24}{4} = \\frac{9}{4} = 2.25$$\n\n【快捷思路】\n直角可能在三个顶点中的任何一个，每种情况用点积为零列方程。情况三得到二次方程有两个解。最终求和时注意正负号：$\\frac{33}{4} - 8 + 5 - 3 = \\frac{9}{4}$。\n\n【正确答案】E Geometry",
+    "analysis": "【题目分析】\n直角三角形三个顶点为 $(2, 3)$、$(9, -1)$ 和 $(5, k)$，直角可能在任意一个顶点处。利用向量点积为零的条件，分别讨论三种情况，求出所有可能的 $k$ 值并求和。\n\n【解题步骤】\n设 $A(2, 3)$，$B(9, -1)$，$C(5, k)$。两向量垂直等价于点积为零。\n\n情况一：直角在 $A(2, 3)$。向量 $\\vec{AB} = (7, -4)$，$\\vec{AC} = (3, k - 3)$。\n$$7 \\cdot 3 + (-4)(k - 3) = 0 \\Rightarrow 21 - 4k + 12 = 0 \\Rightarrow k = \\frac{33}{4}$$\n\n情况二：直角在 $B(9, -1)$。向量 $\\vec{BA} = (-7, 4)$，$\\vec{BC} = (-4, k + 1)$。\n$$(-7)(-4) + 4(k + 1) = 0 \\Rightarrow 28 + 4k + 4 = 0 \\Rightarrow k = -8$$\n\n情况三：直角在 $C(5, k)$。向量 $\\vec{CA} = (-3, 3 - k)$，$\\vec{CB} = (4, -1 - k)$。\n$$(-3)(4) + (3 - k)(-1 - k) = 0 \\Rightarrow -12 + (k^2 - 2k - 3) = 0 \\Rightarrow k^2 - 2k - 15 = 0$$\n解得 $(k - 5)(k + 3) = 0$，即 $k = 5$ 或 $k = -3$。\n\n所有可能的 $k$ 值之和：\n$$\\frac{33}{4} + (-8) + 5 + (-3) = \\frac{33}{4} - 6 = \\frac{33 - 24}{4} = \\frac{9}{4} = 2.25$$\n\n【快捷思路】\n直角可能在三个顶点中的任何一个，每种情况用点积为零列方程。情况三得到二次方程有两个解。最终求和时注意正负号：$\\frac{33}{4} - 8 + 5 - 3 = \\frac{9}{4}$。\n\n【正确答案】E",
     "has_image": false,
     "images": [],
-    "topic": "Coordinate Geometry"
+    "topic": "Coordinate Geometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "d.perpendicular_vectors",
+      "d.coordinate_triangles",
+      "a1.quadratic_equations"
+    ],
+    "skills": [
+      "dot-product-perpendicularity",
+      "case-analysis",
+      "solve-quadratic",
+      "sum-all-solutions"
+    ],
+    "primary_section": "d.perpendicular_vectors"
   },
   {
     "id": "2023-P1-Q17",
@@ -11675,19 +11978,39 @@ window.QUESTIONS = [
       "F": "$40400\\pi$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n结合图形分析。题目给出了圆族 $C_n$ 的方程 $x^2 + y^2 = 2n(x + y)$。每对相邻圆 $C_{2i-1}$ 与 $C_{2i}$ 之间的环形区域被涂上阴影，共画 100 个圆即 50 对，求全部阴影面积之和。\n\n【解题步骤】\n首先将圆方程配方化为标准形式。对于 $C_n$：\n$$x^2 - 2nx + y^2 - 2ny = 0$$\n$$(x - n)^2 + (y - n)^2 = 2n^2$$\n\n因此 $C_n$ 的圆心为 $(n, n)$，半径为 $r_n = n\\sqrt{2}$，面积为：\n$$A_n = \\pi r_n^2 = 2\\pi n^2$$\n\n第 $i$ 对圆的阴影面积（$C_{2i}$ 与 $C_{2i-1}$ 之间）为：\n$$A_{2i} - A_{2i-1} = 2\\pi(2i)^2 - 2\\pi(2i-1)^2 = 2\\pi(4i^2 - 4i^2 + 4i - 1) = \\pi(8i - 2)$$\n\n对 $i = 1$ 到 $50$ 求和：\n$$\\text{总面积} = \\sum_{i=1}^{50} \\pi(8i - 2) = \\pi\\left(8 \\cdot \\frac{50 \\times 51}{2} - 2 \\times 50\\right) = \\pi(10200 - 100) = 10100\\pi$$\n\n【快捷思路】\n直接看出 $A_n = 2\\pi n^2$，每对阴影面积为 $\\pi(8i - 2)$，这是关于 $i$ 的等差数列。利用求和公式 $\\sum_{i=1}^{50}(8i-2) = 8 \\cdot \\frac{50 \\times 51}{2} - 100 = 10100$，立即得到答案 $10100\\pi$。\n\n【正确答案】E Geometry",
+    "analysis": "【题目分析】\n结合图形分析。题目给出了圆族 $C_n$ 的方程 $x^2 + y^2 = 2n(x + y)$。每对相邻圆 $C_{2i-1}$ 与 $C_{2i}$ 之间的环形区域被涂上阴影，共画 100 个圆即 50 对，求全部阴影面积之和。\n\n【解题步骤】\n首先将圆方程配方化为标准形式。对于 $C_n$：\n$$x^2 - 2nx + y^2 - 2ny = 0$$\n$$(x - n)^2 + (y - n)^2 = 2n^2$$\n\n因此 $C_n$ 的圆心为 $(n, n)$，半径为 $r_n = n\\sqrt{2}$，面积为：\n$$A_n = \\pi r_n^2 = 2\\pi n^2$$\n\n第 $i$ 对圆的阴影面积（$C_{2i}$ 与 $C_{2i-1}$ 之间）为：\n$$A_{2i} - A_{2i-1} = 2\\pi(2i)^2 - 2\\pi(2i-1)^2 = 2\\pi(4i^2 - 4i^2 + 4i - 1) = \\pi(8i - 2)$$\n\n对 $i = 1$ 到 $50$ 求和：\n$$\\text{总面积} = \\sum_{i=1}^{50} \\pi(8i - 2) = \\pi\\left(8 \\cdot \\frac{50 \\times 51}{2} - 2 \\times 50\\right) = \\pi(10200 - 100) = 10100\\pi$$\n\n【快捷思路】\n直接看出 $A_n = 2\\pi n^2$，每对阴影面积为 $\\pi(8i - 2)$，这是关于 $i$ 的等差数列。利用求和公式 $\\sum_{i=1}^{50}(8i-2) = 8 \\cdot \\frac{50 \\times 51}{2} - 100 = 10100$，立即得到答案 $10100\\pi$。\n\n【正确答案】E",
     "has_image": true,
     "images": [
       "images/2023/2023-P1-Q17-circles.png"
     ],
-    "topic": "Coordinate Geometry"
+    "topic": "Coordinate Geometry",
+    "difficulty": 3,
+    "related_topics": [
+      "Sequences and Series"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "d.circle_equation_completion_square",
+      "d.circle_areas",
+      "c.arithmetic_series_sums"
+    ],
+    "skills": [
+      "complete-the-square",
+      "radius-from-circle-equation",
+      "area-difference",
+      "summation"
+    ],
+    "primary_section": "d.circle_equation_completion_square"
   },
   {
     "id": "2023-P1-Q18",
     "year": 2023,
     "paper": 1,
     "num": 18,
-    "question": "You are given that\n\n$$S = 4 + \\frac{2^k}{7} + \\frac{16^k}{49} + \\frac{32^k}{343} + \\cdots + 4\\left(\\frac{2^k}{7}\\right)^n + \\cdots$$\n\nThe value for $k$ is chosen as an integer in the range $-5 \\leq k \\leq 5$.\n\nAll possible values for $k$ are equally likely to be chosen.\n\nWhat is the probability that the value of $S$ is a finite number greater than 3?",
+    "question": "You are given that\n\n$$S = 4 + \\frac{8k}{7} + \\frac{16k^2}{49} + \\frac{32k^3}{343} + \\cdots + 4\\left(\\frac{2k}{7}\\right)^n + \\cdots$$\n\nThe value for $k$ is chosen as an integer in the range $-5 \\leq k \\leq 5$.\n\nAll possible values for $k$ are equally likely to be chosen.\n\nWhat is the probability that the value of $S$ is a finite number greater than 3?",
     "options": {
       "A": "$\\dfrac{1}{11}$",
       "B": "$\\dfrac{1}{10}$",
@@ -11699,10 +12022,32 @@ window.QUESTIONS = [
       "H": "$\\dfrac{7}{10}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题考察无穷等比级数的收敛性及求和，结合概率计算。级数通项为 $4\\left(\\frac{2^k}{7}\\right)^n$，即首项为 $4$、公比为 $r = \\frac{2^k}{7}$。$k$ 在 $-5$ 到 $5$ 的整数中等可能选取，求 $S$ 为有限值且大于 $3$ 的概率。\n\n【解题步骤】\n无穷等比级数收敛条件为 $|r| < 1$：\n$$\\left|\\frac{2^k}{7}\\right| < 1 \\;\\Longrightarrow\\; 2^k < 7$$\n\n$2^k > 0$ 恒成立。对整数 $k$ 逐一判断：\n- $k \\leq 2$ 时 $2^k \\leq 4 < 7$，级数收敛\n- $k \\geq 3$ 时 $2^k \\geq 8 > 7$，级数发散\n\n收敛时求和得：\n$$S = \\frac{4}{1 - \\frac{2^k}{7}} = \\frac{28}{7 - 2^k}$$\n\n验证 $S > 3$：$k \\leq 2$ 时 $7 - 2^k > 0$，不等式化为 $28 > 3(7 - 2^k)$ 即 $2^k > -\\frac{7}{3}$，恒成立。\n\n综合收敛性与 $S > 3$ 两个条件，$k \\in \\{-5, -4, -3, -2, -1\\}$ 共 5 个值满足要求。总共有 11 个可能取值，故概率为 $\\frac{5}{11}$。\n\n【快捷思路】\n先由 $|2^k/7| < 1$ 确定 $k \\leq 2$ 收敛，再用 $S = 28/(7-2^k)$ 验证。负 $k$ 值对应的级数和更稳定地满足 $S > 3$，计数得 5 个有效值。\n\n【正确答案】E and Series",
+    "analysis": "【题目分析】\n本题考察无穷等比级数的收敛性及求和，结合概率计算。级数通项为 $4\\left(\\frac{2k}{7}\\right)^n$，即首项为 $4$、公比为 $r = \\frac{2k}{7}$。$k$ 在 $-5$ 到 $5$ 的整数中等可能选取，求 $S$ 为有限值且大于 $3$ 的概率。\n\n【解题步骤】\n无穷等比级数收敛条件为 $|r| < 1$：\n$$\\left|\\frac{2k}{7}\\right| < 1 \\;\\Longrightarrow\\; -\\frac{7}{2} < k < \\frac{7}{2}$$\n\n由于 $k$ 是整数，收敛时 $k \\in \\{-3,-2,-1,0,1,2,3\\}$。\n\n收敛时求和得：\n$$S = \\frac{4}{1 - \\frac{2k}{7}} = \\frac{28}{7 - 2k}$$\n\n验证 $S > 3$。在收敛范围内 $7-2k>0$，所以\n$$\\frac{28}{7-2k} > 3 \\;\\Longrightarrow\\; 28 > 21 - 6k \\;\\Longrightarrow\\; k > -\\frac{7}{6}$$\n\n因此满足两个条件的整数为 $k \\in \\{-1,0,1,2,3\\}$，共 5 个。总共有 11 个可能取值，故概率为 $\\frac{5}{11}$。\n\n【快捷思路】\n先由 $\\left|\\frac{2k}{7}\\right|<1$ 得到 $k=-3,-2,-1,0,1,2,3$，再由 $S=\\frac{28}{7-2k}>3$ 得到 $k>-\\frac{7}{6}$。可行值为 $-1,0,1,2,3$，概率为 $\\frac{5}{11}$。\n\n【正确答案】E",
     "has_image": false,
     "images": [],
-    "topic": "Sequences and Series"
+    "topic": "Sequences and Series",
+    "difficulty": 3,
+    "related_topics": [
+      "Probability",
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "j_sets_probability",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "c.geometric_series_infinity",
+      "j.equally_likely_outcomes",
+      "a2.linear_inequalities"
+    ],
+    "skills": [
+      "geometric-series-convergence",
+      "sum-to-infinity",
+      "integer-range-counting",
+      "probability-as-count-ratio"
+    ],
+    "primary_section": "c.geometric_series_infinity"
   },
   {
     "id": "2023-P1-Q19",
@@ -11724,7 +12069,27 @@ window.QUESTIONS = [
     "analysis": "【题目分析】\n本题给出微分方程 $\\frac{dy}{dx} = |-6x|$，要求找出原函数 $f(x)$ 的表达式。核心难点在于处理绝对值符号，需要对 $x$ 的正负分别讨论，然后整合为一个统一的闭式表达。\n\n【解题步骤】\n先去掉绝对值，分情况积分。\n\n当 $x \\geq 0$ 时，$|-6x| = 6x$，积分得：\n$$f(x) = \\int 6x\\, dx = 3x^2 + C_1$$\n\n当 $x < 0$ 时，$|-6x| = -6x$，积分得：\n$$f(x) = \\int (-6x)\\, dx = -3x^2 + C_2$$\n\n为保证 $f(x)$ 在 $x = 0$ 处连续，需 $C_1 = C_2$，取 $C_1 = C_2 = 0$（常数 $c$ 已单独写出）。\n\n现在寻找统一表达式。注意到 $x|x|$ 具有如下性质：\n- 当 $x \\geq 0$ 时，$x|x| = x^2$\n- 当 $x < 0$ 时，$x|x| = -x^2$\n\n因此：\n$$f(x) = 3x|x|$$\n\n验证导数：当 $x > 0$ 时 $f'(x) = 6x = |-6x|$；当 $x < 0$ 时 $f'(x) = -6x = |-6x|$；当 $x = 0$ 时，左右导数均为 $0$，$f'(0) = 0 = |-6 \\cdot 0|$。完全吻合。\n\n【快捷思路】\n直接利用恒等式 $\\int |x|\\, dx = \\frac{x|x|}{2} + C$，则 $\\int |-6x|\\, dx = 6 \\int |x|\\, dx = 3x|x| + C$，一步到位选出答案 D。\n\n【正确答案】D",
     "has_image": false,
     "images": [],
-    "topic": "Integration"
+    "topic": "Integration",
+    "difficulty": 3,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "g.differential_equations",
+      "g.integrating_absolute_value",
+      "a1.piecewise_expressions"
+    ],
+    "skills": [
+      "integrate-absolute-value",
+      "piecewise-analysis",
+      "rewrite-with-x-abs-x",
+      "derivative-verification"
+    ],
+    "primary_section": "g.integrating_absolute_value"
   },
   {
     "id": "2023-P1-Q20",
@@ -11748,7 +12113,28 @@ window.QUESTIONS = [
     "images": [
       "images/2023/2023-P1-Q20-graph.png"
     ],
-    "topic": "Functions"
+    "topic": "Functions",
+    "difficulty": 3,
+    "related_topics": [
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.composite_functions_ranges",
+      "i.function_range_from_graph",
+      "a2.quadratic_vertex_form"
+    ],
+    "skills": [
+      "range-substitution",
+      "quadratic-minimum",
+      "endpoint-checking",
+      "intermediate-value-reasoning"
+    ],
+    "primary_section": "i.composite_functions_ranges"
   },
   {
     "id": "2023-P2-Q1",
