@@ -6,7 +6,7 @@
 
 ## Next
 - [x] 2016 Paper 1
-- [ ] 2016 Paper 2
+- [x] 2016 Paper 2
 - [ ] 2017 Paper 1
 - [ ] 2017 Paper 2
 - [ ] 2018 Paper 1

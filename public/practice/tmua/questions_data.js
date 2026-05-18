@@ -835,7 +835,26 @@ window.QUESTIONS = [
     "answer": "A",
     "analysis": "【题目分析】\n本题考查定积分的计算。被积函数为$\\left(x^2 - \\frac{4}{x^2}\\right)^2$，积分区间为$[1,2]$。核心思路是先将括号内表达式平方展开，再逐项利用幂函数积分公式$\\int x^n dx = \\frac{x^{n+1}}{n+1}$（$n \\neq -1$）求解，最后代入上下限计算差值。这是定积分计算的标准流程，展开后各项均为幂函数形式，可直接积分。\n\n【解题步骤】\n第一步：展开被积函数\n$\\left(x^2 - \\frac{4}{x^2}\\right)^2 = x^4 - 2 \\cdot x^2 \\cdot \\frac{4}{x^2} + \\frac{16}{x^4} = x^4 - 8 + 16x^{-4}$\n\n第二步：逐项求原函数\n$\\int (x^4 - 8 + 16x^{-4})dx = \\frac{x^5}{5} - 8x - \\frac{16}{3x^3} + C$\n\n第三步：代入上下限$[1,2]$\n$\\left[\\frac{x^5}{5} - 8x - \\frac{16}{3x^3}\\right]_1^2 = \\left(\\frac{32}{5} - 16 - \\frac{2}{3}\\right) - \\left(\\frac{1}{5} - 8 - \\frac{16}{3}\\right) = \\frac{31}{5} - 8 + \\frac{14}{3} = \\frac{93 - 120 + 70}{15} = \\frac{43}{15}$\n\n【快捷思路】\n展开后三项分别为$x^4$、常数项和$x^{-4}$，积分后注意$x^{-4}$积分时指数加一除以新指数，得到$-\\frac{16}{3}x^{-3}$，代入下限时注意负号变正。\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "g.integral_simplify_first",
+      "g.power_function_integration",
+      "a1.expansion_collection"
+    ],
+    "primary_section": "g.integral_simplify_first",
+    "skills": [
+      "expand-before-integrating",
+      "power-rule-integration",
+      "definite-integral-evaluation",
+      "fraction-arithmetic"
+    ]
   },
   {
     "id": "2016-P2-Q2",
@@ -854,7 +873,26 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题考查函数求导。函数$f(x) = \\frac{(x^2+5)(2x)}{\\sqrt[4]{x^3}}$中分母含四次根式，直接求导会很繁琐。正确做法是先化简函数表达式：将分母$\\sqrt[4]{x^3}$写成$x^{\\frac{3}{4}}$，分子展开后逐项除以分母，化为幂函数的和，再利用幂函数求导公式$\\frac{d}{dx}x^n = nx^{n-1}$逐项求导。这是处理含根式函数求导的标准技巧。\n\n【解题步骤】\n第一步：化简函数\n分子：$(x^2+5)(2x) = 2x^3 + 10x$\n分母：$\\sqrt[4]{x^3} = x^{\\frac{3}{4}}$\n$f(x) = \\frac{2x^3 + 10x}{x^{\\frac{3}{4}}} = 2x^{3-\\frac{3}{4}} + 10x^{1-\\frac{3}{4}} = 2x^{\\frac{9}{4}} + 10x^{\\frac{1}{4}}$\n\n第二步：逐项求导\n$f'(x) = 2 \\cdot \\frac{9}{4}x^{\\frac{9}{4}-1} + 10 \\cdot \\frac{1}{4}x^{\\frac{1}{4}-1} = \\frac{9}{2}x^{\\frac{5}{4}} + \\frac{5}{2}x^{-\\frac{3}{4}}$\n\n第三步：对照选项\n结果与选项B完全一致。\n\n【快捷思路】\n先化简再求导永远比直接套用商法则简单。关键是将根式转化为分数指数幂，分子展开后分别除以分母，即可化为幂函数线性组合。\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "f.power_function_derivatives",
+      "a1.exponent_laws",
+      "a1.radical_to_fractional_powers"
+    ],
+    "primary_section": "f.power_function_derivatives",
+    "skills": [
+      "simplify-before-differentiating",
+      "radical-to-index-form",
+      "power-rule-differentiation",
+      "negative-fractional-indices"
+    ]
   },
   {
     "id": "2016-P2-Q3",
@@ -875,7 +913,25 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n本题考查三角方程求解及区间内最大角的确定。方程$8\\sin^2 x + 4\\cos^2 x = 7$同时含$\\sin x$和$\\cos x$，需用恒等式$\\sin^2 x + \\cos^2 x = 1$消去$\\cos^2 x$，将方程化为仅含$\\sin^2 x$的形式。解出$\\sin x = \\pm\\frac{\\sqrt{3}}{2}$后，在区间$[0, 2\\pi]$内找出所有解，再取最大值。注意正负两个值对应的解分布在不同的半周期。\n\n【解题步骤】\n第一步：利用恒等式化简\n$8\\sin^2 x + 4\\cos^2 x = 8\\sin^2 x + 4(1-\\sin^2 x) = 4\\sin^2 x + 4 = 7$\n$4\\sin^2 x = 3 \\implies \\sin^2 x = \\frac{3}{4} \\implies \\sin x = \\pm\\frac{\\sqrt{3}}{2}$\n\n第二步：在$[0, 2\\pi]$内求解\n$\\sin x = \\frac{\\sqrt{3}}{2}$时，$x = \\frac{\\pi}{3}$或$\\frac{2\\pi}{3}$（第一、二象限）\n$\\sin x = -\\frac{\\sqrt{3}}{2}$时，$x = \\frac{4\\pi}{3}$或$\\frac{5\\pi}{3}$（第三、四象限）\n\n第三步：取最大值\n四个解中$\\frac{5\\pi}{3}$最大，对应选项D。\n\n【快捷思路】\n最大角一定在$\\pi < x < 2\\pi$范围内（因为负值对应的解更大），直接找$\\sin x = -\\frac{\\sqrt{3}}{2}$在该区间的最大解即可，即$2\\pi - \\frac{\\pi}{3} = \\frac{5\\pi}{3}$。\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry"
+    ],
+    "sections": [
+      "e.trig_equations",
+      "e.pythagorean_identity",
+      "e.special_angle_solutions"
+    ],
+    "primary_section": "e.trig_equations",
+    "skills": [
+      "use-pythagorean-identity",
+      "solve-squared-trig-equation",
+      "unit-circle-solutions",
+      "select-largest-solution"
+    ]
   },
   {
     "id": "2016-P2-Q4",
@@ -895,7 +951,26 @@ window.QUESTIONS = [
     "answer": "C",
     "analysis": "【题目分析】\n本题考查逻辑推理。五个瓮装有相同数量$n$个球（$n > 0$），每个瓮附有一条关于$n$的陈述，且恰有一条陈述为真。各陈述对应的$n$的取值集合分别为：$P:\\{1,4\\}$，$Q:\\{2,4\\}$，$R:\\{3,4\\}$，$S:\\{1,2\\}$，$T:\\{1,2\\}$（即$n < 3$）。关键观察：当$n=1$时$P$和$S$同时为真，当$n=2$时$Q$、$S$、$T$同时为真，当$n=4$时$P$和$Q$同时为真。唯有$n=3$时仅$R$为真，其余全假。\n\n【解题步骤】\n逐一假设某瓮的陈述为真，检验是否导致矛盾：\n- 假设$P$为真：$n \\in \\{1,4\\}$。若$n=1$则$S$也真（矛盾）；若$n=4$则$Q$也真（矛盾）。\n- 假设$Q$为真：$n \\in \\{2,4\\}$。若$n=2$则$S$和$T$也真（矛盾）；若$n=4$则$P$也真（矛盾）。\n- 假设$R$为真：$n \\in \\{3,4\\}$。若$n=4$则$P$也真（矛盾）；若$n=3$，验证$P$假、$Q$假、$S$假、$T$假，全部通过。\n- 假设$S$为真：$n \\in \\{1,2\\}$。若$n=1$则$P$也真；若$n=2$则$Q$也真。均矛盾。\n- 假设$T$为真：$n < 3$即$n \\in \\{1,2\\}$，此时$S$也真（矛盾）。\n\n唯一无矛盾情形：$n=3$，$R$的陈述为真。\n\n【快捷思路】\n注意到$S$和$T$的集合存在包含关系（$n<3$蕴含$n \\in \\{1,2\\}$），故$T$为真时$S$必为真，直接排除。剩余只需检验$P$、$Q$、$R$三种情况。\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Sets"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "b.unique_true_statement",
+      "b.truth_sets",
+      "h.logical_elimination"
+    ],
+    "primary_section": "b.unique_true_statement",
+    "skills": [
+      "translate-statements-to-sets",
+      "case-analysis",
+      "truth-counting",
+      "elimination-by-overlap"
+    ]
   },
   {
     "id": "2016-P2-Q5",
@@ -917,7 +992,25 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Number Theory"
+      "Number Theory",
+      "Logic"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "h.universal_statement_counterexamples",
+      "k.primes_and_residue_classes"
+    ],
+    "primary_section": "h.counterexample_construction",
+    "skills": [
+      "counterexample-enumeration",
+      "modular-residue-class-listing",
+      "prime-composite-classification",
+      "range-exhaustion"
     ]
   },
   {
@@ -939,11 +1032,26 @@ window.QUESTIONS = [
       "H": "$x^{10} + 10x^9 + (10 \\times 9)x^8 + \\dots + (10 \\times 9 \\times \\dots \\times 2)x + (10 \\times 9 \\times \\dots \\times 2 \\times 1)$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n给定函数序列 $f_1(x) = x^{10}$，递推关系 $f_{n+1}(x) = x \\cdot f_n'(x)$。要求计算 $\\sum_{n=1}^{20} f_n(x)$。关键是先找出 $f_n(x)$ 的通项公式。\n\n【解题步骤】\n第一步：逐项计算找规律。\n$f_1(x) = x^{10}$\n$f_2(x) = x \\cdot f_1'(x) = x \\cdot 10x^9 = 10x^{10}$\n$f_3(x) = x \\cdot f_2'(x) = x \\cdot 100x^9 = 100x^{10} = 10^2 x^{10}$\n$f_4(x) = x \\cdot f_3'(x) = x \\cdot 1000x^9 = 10^3 x^{10}$\n归纳得 $f_n(x) = 10^{n-1} x^{10}$。\n\n第二步：利用等比数列求和公式。\n$\\sum_{n=1}^{20} f_n(x) = \\sum_{n=1}^{20} 10^{n-1} x^{10} = x^{10} \\sum_{n=0}^{19} 10^n$\n\n首项 $a = 1$，公比 $r = 10$，项数 $n = 20$，等比数列和 $S_n = \\frac{a(r^n - 1)}{r - 1}$：\n$= x^{10} \\cdot \\frac{10^{20} - 1}{10 - 1} = \\frac{10^{20} - 1}{9} x^{10}$\n\n对应选项 C。\n\n【快捷思路】\n注意到每次求导后乘以 $x$，$x^{10}$ 的次数始终保持为 10，而系数每次乘以指数 10。因此 $f_n(x) = 10^{n-1}x^{10}$ 一眼可看出，之后直接套用等比数列求和即可。注意求和上限是 20 项，分子是 $10^{20} - 1$ 而非 $10^{21} - 1$。\n\n【正确答案】C and Series",
+    "analysis": "【题目分析】\n给定函数序列 $f_1(x) = x^{10}$，递推关系 $f_{n+1}(x) = x \\cdot f_n'(x)$。要求计算 $\\sum_{n=1}^{20} f_n(x)$。关键是先找出 $f_n(x)$ 的通项公式。\n\n【解题步骤】\n第一步：逐项计算找规律。\n$f_1(x) = x^{10}$\n$f_2(x) = x \\cdot f_1'(x) = x \\cdot 10x^9 = 10x^{10}$\n$f_3(x) = x \\cdot f_2'(x) = x \\cdot 100x^9 = 100x^{10} = 10^2 x^{10}$\n$f_4(x) = x \\cdot f_3'(x) = x \\cdot 1000x^9 = 10^3 x^{10}$\n归纳得 $f_n(x) = 10^{n-1} x^{10}$。\n\n第二步：利用等比数列求和公式。\n$\\sum_{n=1}^{20} f_n(x) = \\sum_{n=1}^{20} 10^{n-1} x^{10} = x^{10} \\sum_{n=0}^{19} 10^n$\n\n首项 $a = 1$，公比 $r = 10$，项数 $n = 20$，等比数列和 $S_n = \\frac{a(r^n - 1)}{r - 1}$：\n$= x^{10} \\cdot \\frac{10^{20} - 1}{10 - 1} = \\frac{10^{20} - 1}{9} x^{10}$\n\n对应选项 C。\n\n【快捷思路】\n注意到每次求导后乘以 $x$，$x^{10}$ 的次数始终保持为 10，而系数每次乘以指数 10。因此 $f_n(x) = 10^{n-1}x^{10}$ 一眼可看出，之后直接套用等比数列求和即可。注意求和上限是 20 项，分子是 $10^{20} - 1$ 而非 $10^{21} - 1$。\n\n【正确答案】C",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Differentiation"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "f_differentiation"
+    ],
+    "sections": [
+      "c.geometric_series",
+      "c.recursive_sequences",
+      "f.power_rule"
+    ],
+    "primary_section": "c.geometric_series",
+    "skills": [
+      "find-recursive-pattern",
+      "power-rule-differentiation",
+      "geometric-series-sum"
     ]
   },
   {
@@ -951,7 +1059,7 @@ window.QUESTIONS = [
     "year": 2016,
     "paper": 2,
     "num": 7,
-    "topic": "Algebra",
+    "topic": "Proof",
     "difficulty": 3,
     "question": "The four real numbers $a, b, c,$ and $d$ are all greater than 1.\n\nSuppose that they satisfy the equation $\\log_c d = (\\log_a b)^2$.\n\nUse some of the lines given to construct a proof that, in this case, it follows that\n\n$$(*) \\quad \\log_b d = (\\log_a b)(\\log_a c).$$\n\n**(1)** Let $x = \\log_a b$ and $y = \\log_a c$\n\n**(2)** $d = (c^x)^2$\n**(3)** $d = c^{(x^2)}$\n**(4)** $d = b^{xy}$\n\n**(5)** $d = (a^y)^{(x^2)}$\n**(6)** $d = ((a^y)^x)^2$\n**(7)** $d = (a^x)^{xy}$\n\n**(8)** $d = a^{(y2x)}$\n**(9)** $d = a^{(x^2y)}$",
     "options": {
@@ -969,7 +1077,24 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Proof"
+      "Algebra"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "l_proof_methods",
+      "m_comprehensive_training"
+    ],
+    "sections": [
+      "a3.logarithm_laws",
+      "a3.change_of_base_reasoning",
+      "l.proof_chain_ordering"
+    ],
+    "primary_section": "l.proof_chain_ordering",
+    "skills": [
+      "proof-line-ordering",
+      "logarithm-to-exponential-form",
+      "substitution",
+      "index-law-manipulation"
     ]
   },
   {
@@ -991,11 +1116,31 @@ window.QUESTIONS = [
       "H": "1, 2 and 3"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n区域由 $x + y > 6$ 和 $x - y > -4$ 定义。需判断三个命题中哪些对该区域内所有点恒成立。关键是将两不等式联立分析，并对可疑命题构造反例。\n\n【解题步骤】\n命题 1：两不等式相加得 $2x > 2$，即 $x > 1$。区域边界交于 $(1, 5)$，整个区域在 $x = 1$ 右侧，命题 1 恒成立。\n\n命题 2：两不等式相减得 $2y > 10$，即 $y > 5$。但这是必要条件而非充分推导——实际上区域是两半平面的交集，存在点如 $(7, 0)$ 满足 $7+0=7 > 6$ 且 $7-0=7 > -4$，但 $y = 0 \\ngtr 5$。命题 2 不成立。\n\n命题 3：$(x+y)(x-y) > -24$。虽然 $x+y > 6$ 且 $x-y > -4$，但不能直接将不等式相乘（因为 $x-y$ 可能为负）。构造反例：取 $x = 5, y = 8$，则 $x+y = 13 > 6$，$x-y = -3 > -4$，但 $(x+y)(x-y) = -39 < -24$。命题 3 不成立。\n\n仅命题 1 恒成立，对应选项 B。\n\n【快捷思路】\n相加得 $x > 1$ 直接成立。对命题 2 和 3 不必严格推导，只需各找一个反例即可否定。$(7, 0)$ 否定命题 2，$(5, 8)$ 否定命题 3。不等式不能随意相乘，尤其是涉及负数时。\n\n【正确答案】B Geometry",
+    "analysis": "【题目分析】\n区域由 $x + y > 6$ 和 $x - y > -4$ 定义。需判断三个命题中哪些对该区域内所有点恒成立。关键是将两不等式联立分析，并对可疑命题构造反例。\n\n【解题步骤】\n命题 1：两不等式相加得 $2x > 2$，即 $x > 1$。区域边界交于 $(1, 5)$，整个区域在 $x = 1$ 右侧，命题 1 恒成立。\n\n命题 2：两不等式相减得 $2y > 10$，即 $y > 5$。但这是必要条件而非充分推导——实际上区域是两半平面的交集，存在点如 $(7, 0)$ 满足 $7+0=7 > 6$ 且 $7-0=7 > -4$，但 $y = 0 \\ngtr 5$。命题 2 不成立。\n\n命题 3：$(x+y)(x-y) > -24$。虽然 $x+y > 6$ 且 $x-y > -4$，但不能直接将不等式相乘（因为 $x-y$ 可能为负）。构造反例：取 $x = 5, y = 8$，则 $x+y = 13 > 6$，$x-y = -3 > -4$，但 $(x+y)(x-y) = -39 < -24$。命题 3 不成立。\n\n仅命题 1 恒成立，对应选项 B。\n\n【快捷思路】\n相加得 $x > 1$ 直接成立。对命题 2 和 3 不必严格推导，只需各找一个反例即可否定。$(7, 0)$ 否定命题 2，$(5, 8)$ 否定命题 3。不等式不能随意相乘，尤其是涉及负数时。\n\n【正确答案】B",
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Counterexamples"
+      "Counterexamples",
+      "Logic",
+      "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "a2_equations_inequalities",
+      "h_logic_counterexamples",
+      "m_comprehensive_training"
+    ],
+    "sections": [
+      "d.linear_inequality_regions",
+      "a2.linear_inequality_systems",
+      "h.universal_claim_counterexamples"
+    ],
+    "primary_section": "d.linear_inequality_regions",
+    "skills": [
+      "add-inequalities",
+      "half-plane-reasoning",
+      "counterexample-construction",
+      "avoid-invalid-inequality-multiplication"
     ]
   },
   {
@@ -1021,7 +1166,26 @@ window.QUESTIONS = [
     "images": {
       "image": null
     },
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "l_proof_methods"
+    ],
+    "sections": [
+      "l.sufficient_conditions",
+      "l.geometry_congruence",
+      "l.area_similarity_congruence"
+    ],
+    "primary_section": "l.geometry_congruence",
+    "skills": [
+      "sufficiency-testing",
+      "triangle-area-formula",
+      "congruence-criteria",
+      "similar-triangles",
+      "ambiguous-sine-counterexample"
+    ]
   },
   {
     "id": "2016-P2-Q10",
@@ -1042,7 +1206,26 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n$x, y$ 为非零实数，找出哪个不等式条件足以推出 $x < y$。关键思路：若函数 $f(t)$ 在整个实数域上严格单调递增，则 $f(x) < f(y) \\iff x < y$；否则需要构造反例。\n\n【解题步骤】\n选项 A：$x^4 < y^4$。取 $x = 1, y = -2$，则 $1 < 16$ 成立，但 $x > y$。$f(t) = t^4$ 在 $t < 0$ 递减、$t > 0$ 递增，非整体单调。不充分。\n\n选项 B：$y^4 < x^4$。取 $x = 2, y = 1$，条件成立但 $x > y$。不充分。\n\n选项 C：$x^{-1} < y^{-1}$。取 $x = 2, y = 1$，$\\frac{1}{2} < 1$ 成立，但 $x > y$。$f(t) = t^{-1}$ 在正负两支分别递减但不整体单调。不充分。\n\n选项 D：$y^{-1} < x^{-1}$。取 $x = 1, y = -1$，$-1 < 1$ 成立，但 $x > y$。不充分。\n\n选项 E：$x^{3/5} < y^{3/5}$。注意到 $t^{3/5} = \\sqrt[5]{t^3}$，其中 $t^3$ 和 $\\sqrt[5]{\\cdot}$ 在 $\\mathbb{R}$ 上均严格递增，复合后 $f(t) = t^{3/5}$ 在 $\\mathbb{R}$ 上严格递增。因此 $x^{3/5} < y^{3/5} \\iff x < y$。充分。\n\n选项 F：$y^{3/5} < x^{3/5}$，同理推出 $y < x$，与所需方向相反。不充分。\n\n【快捷思路】\n逐个考察 $f(t) = t^4$、$f(t) = t^{-1}$、$f(t) = t^{3/5}$ 的单调性。前两个函数在 $\\mathbb{R}$ 上非整体单调（$t^4$ 为偶函数，$t^{-1}$ 在正负两侧符号不同），只有 $t^{3/5}$ 全实数严格递增。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.function_monotonicity_inequalities",
+      "i.power_functions",
+      "a2.inequality_implications"
+    ],
+    "primary_section": "i.function_monotonicity_inequalities",
+    "skills": [
+      "strict-monotonicity",
+      "counterexample-testing",
+      "odd-root-powers",
+      "reciprocal-order-analysis"
+    ]
   },
   {
     "id": "2016-P2-Q11",
@@ -1069,6 +1252,28 @@ window.QUESTIONS = [
     "related_topics": [
       "Integration",
       "Graphs"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "h_logic_counterexamples",
+      "f_differentiation",
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "l.must_be_true_statements",
+      "h.counterexample_testing",
+      "f.rolle_theorem",
+      "g.signed_integral_vs_area",
+      "i.graph_transformations"
+    ],
+    "primary_section": "l.must_be_true_statements",
+    "skills": [
+      "must-be-true-testing",
+      "counterexample-construction",
+      "rolle-theorem",
+      "signed-area-vs-area",
+      "graph-transformation"
     ]
   },
   {
@@ -1088,9 +1293,27 @@ window.QUESTIONS = [
       "F": "neither the sign of $a$ nor the sign of $d$ can be deduced"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n等差数列首项为 $a$、公差为 $d$，前 $n$ 项和为 $S_n$。已知 $S_8 > 3S_6$，判断 $a$ 和 $d$ 的符号。利用求和公式将条件化为关于 $a, d$ 的不等式，再分析符号约束。\n\n【解题步骤】\n等差数列求和公式：$S_n = \\frac{n}{2}[2a + (n-1)d]$。\n\n代入 $n = 8$：$S_8 = 4(2a + 7d) = 8a + 28d$。\n代入 $n = 6$：$S_6 = 3(2a + 5d) = 6a + 15d$。\n\n条件 $S_8 > 3S_6$ 即：\n$$8a + 28d > 3(6a + 15d) = 18a + 45d$$\n\n整理得：$-10a > 17d$，即 $d < -\\frac{10}{17}a$。\n\n分析 $a$ 和 $d$ 的符号可能性：\n\n情形一：$a > 0$。此时 $-\\frac{10}{17}a < 0$，故 $d < \\text{负数}$，即 $d < 0$。例如 $a = 17, d = -10$，验证：$S_8 = 8(17) + 28(-10) = 136 - 280 = -144$，$3S_6 = 3[6(17) + 15(-10)] = 3(102 - 150) = 3(-48) = -144$，取 $d = -11$ 则 $S_8 = 136 - 308 = -172$，$3S_6 = 3(102 - 165) = -189$，$-172 > -189$ 成立。此时 $a > 0, d < 0$。\n\n情形二：$a < 0$。此时 $-\\frac{10}{17}a > 0$，$d$ 可以小于一个正数，故 $d$ 可正可负。例如 $a = -17$，则 $d < 10$：取 $d = 1 > 0$ 或 $d = -1 < 0$ 均可满足。\n\n情形三：$a = 0$。此时 $d < 0$ 才满足条件。\n\n综上，$a$ 可正可负，$d$ 也可正可负（取决于 $a$ 的具体取值），无法从条件唯一确定任何一方的符号。\n\n【快捷思路】\n将 $S_8 > 3S_6$ 化为 $d < -\\frac{10}{17}a$。$a$ 的符号改变时，右边变号，$d$ 的约束方向随之翻转，因此 $a$ 和 $d$ 的符号均无法确定。\n\n【正确答案】F and Series",
+    "analysis": "【题目分析】\n等差数列首项为 $a$、公差为 $d$，前 $n$ 项和为 $S_n$。已知 $S_8 > 3S_6$，判断 $a$ 和 $d$ 的符号。利用求和公式将条件化为关于 $a, d$ 的不等式，再分析符号约束。\n\n【解题步骤】\n等差数列求和公式：$S_n = \\frac{n}{2}[2a + (n-1)d]$。\n\n代入 $n = 8$：$S_8 = 4(2a + 7d) = 8a + 28d$。\n代入 $n = 6$：$S_6 = 3(2a + 5d) = 6a + 15d$。\n\n条件 $S_8 > 3S_6$ 即：\n$$8a + 28d > 3(6a + 15d) = 18a + 45d$$\n\n整理得：$-10a > 17d$，即 $d < -\\frac{10}{17}a$。\n\n分析 $a$ 和 $d$ 的符号可能性：\n\n情形一：$a > 0$。此时 $-\\frac{10}{17}a < 0$，故 $d < \\text{负数}$，即 $d < 0$。例如 $a = 17, d = -10$，验证：$S_8 = 8(17) + 28(-10) = 136 - 280 = -144$，$3S_6 = 3[6(17) + 15(-10)] = 3(102 - 150) = 3(-48) = -144$，取 $d = -11$ 则 $S_8 = 136 - 308 = -172$，$3S_6 = 3(102 - 165) = -189$，$-172 > -189$ 成立。此时 $a > 0, d < 0$。\n\n情形二：$a < 0$。此时 $-\\frac{10}{17}a > 0$，$d$ 可以小于一个正数，故 $d$ 可正可负。例如 $a = -17$，则 $d < 10$：取 $d = 1 > 0$ 或 $d = -1 < 0$ 均可满足。\n\n情形三：$a = 0$。此时 $d < 0$ 才满足条件。\n\n综上，$a$ 可正可负，$d$ 也可正可负（取决于 $a$ 的具体取值），无法从条件唯一确定任何一方的符号。\n\n【快捷思路】\n将 $S_8 > 3S_6$ 化为 $d < -\\frac{10}{17}a$。$a$ 的符号改变时，右边变号，$d$ 的约束方向随之翻转，因此 $a$ 和 $d$ 的符号均无法确定。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "c.arithmetic_series_sums",
+      "a2.linear_inequalities_parameters"
+    ],
+    "primary_section": "c.arithmetic_series_sums",
+    "skills": [
+      "arithmetic-series-sum",
+      "inequality-rearrangement",
+      "sign-deduction",
+      "counterexample-testing"
+    ]
   },
   {
     "id": "2016-P2-Q13",
@@ -1109,11 +1332,30 @@ window.QUESTIONS = [
       "F": "Line 6"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题给出一段对错误命题的尝试性证明，要求找出哪一行包含逻辑错误。原命题为：若正整数 $a$ 整除 $bc$，则 $a$ 整除 $b$ 或 $a$ 整除 $c$。这是一个假命题，例如 $a=6,\\;b=2,\\;c=3$，有 $6\\mid 6$ 但 $6\\nmid 2$ 且 $6\\nmid 3$。\n\n【解题步骤】\n逐行审查证明过程：\n\n第1行：将原命题转换为逆否命题。原命题 $a\\mid bc\\Rightarrow(a\\mid b\\;\\lor\\;a\\mid c)$ 的逆否命题为 $\\neg(a\\mid b)\\land\\neg(a\\mid c)\\Rightarrow\\neg(a\\mid bc)$，即若 $a$ 不整除 $b$ 且 $a$ 不整除 $c$，则 $a$ 不整除 $bc$。转换正确。\n\n第2行：由 $a\\nmid b$，设 $b$ 除以 $a$ 的余数为 $r$，$0<r<a$；同理 $c$ 除以 $a$ 的余数为 $s$，$0<s<a$。正确。\n\n第3行：带余除法表达式 $b=ax+r$，$c=ay+s$。正确。\n\n第4行：展开 $bc=(ax+r)(ay+s)=a^2xy+axs+ayr+rs=a(axy+xs+yr)+rs$。代数运算正确。\n\n第5行：断言 $bc$ 除以 $a$ 的余数是 $rs$。这是错误所在！当 $rs\\geq a$ 时，$rs$ 并非余数，真正的余数应为 $rs\\bmod a$。例如 $a=6,r=2,s=3$，$rs=6=a$，余数为 $0$，此时 $a$ 恰好整除 $bc$。\n\n第6行：由 $r>0,s>0$ 得 $rs>0$。正确。\n\n第7行：若第5行正确则第7行也正确，但第5行已错。\n\n【快捷思路】\n关键是认识到 $rs$ 未必小于 $a$。只需一个反例 $a=6,r=2,s=3\\Rightarrow rs=6$，余数为 $0$，直接推翻第5行的断言。\n\n【正确答案】E Theory",
+    "analysis": "【题目分析】\n本题给出一段对错误命题的尝试性证明，要求找出哪一行包含逻辑错误。原命题为：若正整数 $a$ 整除 $bc$，则 $a$ 整除 $b$ 或 $a$ 整除 $c$。这是一个假命题，例如 $a=6,\\;b=2,\\;c=3$，有 $6\\mid 6$ 但 $6\\nmid 2$ 且 $6\\nmid 3$。\n\n【解题步骤】\n逐行审查证明过程：\n\n第1行：将原命题转换为逆否命题。原命题 $a\\mid bc\\Rightarrow(a\\mid b\\;\\lor\\;a\\mid c)$ 的逆否命题为 $\\neg(a\\mid b)\\land\\neg(a\\mid c)\\Rightarrow\\neg(a\\mid bc)$，即若 $a$ 不整除 $b$ 且 $a$ 不整除 $c$，则 $a$ 不整除 $bc$。转换正确。\n\n第2行：由 $a\\nmid b$，设 $b$ 除以 $a$ 的余数为 $r$，$0<r<a$；同理 $c$ 除以 $a$ 的余数为 $s$，$0<s<a$。正确。\n\n第3行：带余除法表达式 $b=ax+r$，$c=ay+s$。正确。\n\n第4行：展开 $bc=(ax+r)(ay+s)=a^2xy+axs+ayr+rs=a(axy+xs+yr)+rs$。代数运算正确。\n\n第5行：断言 $bc$ 除以 $a$ 的余数是 $rs$。这是错误所在！当 $rs\\geq a$ 时，$rs$ 并非余数，真正的余数应为 $rs\\bmod a$。例如 $a=6,r=2,s=3$，$rs=6=a$，余数为 $0$，此时 $a$ 恰好整除 $bc$。\n\n第6行：由 $r>0,s>0$ 得 $rs>0$。正确。\n\n第7行：若第5行正确则第7行也正确，但第5行已错。\n\n【快捷思路】\n关键是认识到 $rs$ 未必小于 $a$。只需一个反例 $a=6,r=2,s=3\\Rightarrow rs=6$，余数为 $0$，直接推翻第5行的断言。\n\n【正确答案】E",
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Proof"
+      "Proof",
+      "Counterexamples"
+    ],
+    "modules": [
+      "k_number_theory_combinatorics",
+      "l_proof_methods",
+      "h_logic_counterexamples"
+    ],
+    "sections": [
+      "k.divisibility_remainders",
+      "l.proof_error_identification",
+      "h.contrapositive_and_counterexample"
+    ],
+    "primary_section": "k.divisibility_remainders",
+    "skills": [
+      "division-algorithm",
+      "modular-remainder",
+      "proof-error-identification",
+      "contrapositive",
+      "counterexample-construction"
     ]
   },
   {
@@ -1132,12 +1374,27 @@ window.QUESTIONS = [
       "E": "$p = 4, q = 3, r = 2$ and $s = 1$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n给定四次多项式 $f(x)=ax^4+bx^3+cx^2+dx+e$，$f(x)=k$ 的实根个数等于曲线 $y=f(x)$ 与水平线 $y=k$ 的交点数。题目要求判断哪组 $(p,q,r,s)$ 取值不可能出现。\n\n【解题步骤】\n四次多项式 $f(x)$ 的图像形状取决于最高项系数 $a$ 的正负。\n\n当 $a>0$ 时，图像呈 W 形（两个局部极小、一个局部极大）或类抛物线形（一个局部极小）。当 $a<0$ 时，图像为上述形状的镜像。\n\n逐项检验：\n\n选项A（$p=1,q=2,r=4,s=3$）：取 $a>0$，令 $y=1$ 与曲线相切于极小值点得 $p=1$；适当调整极值高度可使 $y=2$ 交两点、$y=3$ 交四点、$y=4$ 交三点。可行。\n\n选项B（$p=1,q=3,r=2,s=4$）：$p=1$ 要求 $a>0$ 且 $y=1$ 为极小值切线。要使 $s=4$（$y=4$ 交四点），曲线必须是标准 W 形。但 W 形中 $y=3$ 的交点数不可能少于 $y=4$ 的交点数——当 $y=3$ 处于两个极小值之间时交四点，高于极大值时交两点。若 $r=2$，则两个极小值都高于 $y=3$，此时 $y=2$ 最多与每支各交一次，最多两个交点，不可能得到 $q=3$。矛盾，不可行。\n\n选项C、D、E 均可构造出对应的图像，在此略去具体草图。\n\n【快捷思路】\n核心是理解四次函数的 W 形特征：水平线从下往上移动时，交点数的变化模式受极值位置严格限制，不可能出现 B 中的跳变模式。\n\n【正确答案】B",
+    "analysis": "【题目分析】\n给定四次多项式 $f(x)=ax^4+bx^3+cx^2+dx+e$，$f(x)=k$ 的实根个数等于曲线 $y=f(x)$ 与水平线 $y=k$ 的交点数。题目要求判断哪组 $(p,q,r,s)$ 取值不可能出现。\n\n【解题步骤】\n四次多项式 $f(x)$ 的图像形状取决于最高项系数 $a$ 的正负。\n\n当 $a>0$ 时，图像呈 W 形（两个局部极小、一个局部极大）或类抛物线形（一个局部极小）。当 $a<0$ 时，图像为上述形状的镜像。\n\n逐项检验：\n\n选项A（$p=1,q=2,r=4,s=3$）：取 $a>0$，令 $y=1$ 与曲线相切于极小值点得 $p=1$；适当调整极值高度可使 $y=2$ 交两点、$y=3$ 交四点、$y=4$ 交三点。可行。\n\n选项B（$p=1,q=3,r=2,s=4$）：$p=1$ 要求某条水平线与曲线相切，只给出一个实根。要使 $s=4$（$y=4$ 交四点），曲线必须在该高度以下形成两个低谷和一个中间高峰。水平线从下往上移动时，交点数只能按“切线给 1 个、穿过两个分支给 2 个、穿过四个分支给 4 个、再降回 2 个或 0 个”的顺序变化；不可能在 $y=2,3,4$ 这三个递增高度上依次得到 $3,2,4$。因此 B 的根数跳变模式不可行。\n\n选项C、D、E 均可构造出对应的图像，在此略去具体草图。\n\n【快捷思路】\n核心是理解四次函数的 W 形特征：水平线从下往上移动时，交点数的变化模式受极值位置严格限制，不可能出现 B 中的跳变模式。\n\n【正确答案】B",
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Functions",
       "Differentiation"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "f_differentiation"
+    ],
+    "sections": [
+      "i.polynomial_root_counts",
+      "i.horizontal_line_intersections",
+      "f.stationary_points_extrema"
+    ],
+    "primary_section": "i.polynomial_root_counts",
+    "skills": [
+      "horizontal-line-counting",
+      "quartic-shape-analysis",
+      "extrema-ordering",
+      "impossibility-proof"
     ]
   },
   {
@@ -1161,6 +1418,21 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Functions"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.quadratic_roots_difference",
+      "a2.discriminant_parameter_range"
+    ],
+    "primary_section": "a2.quadratic_roots_difference",
+    "skills": [
+      "quadratic-formula",
+      "root-difference",
+      "strict-inequality-equivalence",
+      "option-equivalence"
     ]
   },
   {
@@ -1179,13 +1451,27 @@ window.QUESTIONS = [
       "E": "6"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n梯形 $PQRS$ 中 $PQ\\parallel SR$，$PQ=12\\text{ cm}$，$SR=3\\text{ cm}$。对角线 $PR$ 与 $QS$ 交于 $X$。过 $X$ 作 $UT\\parallel PQ$，$U$ 在 $SP$ 上，$T$ 在 $RQ$ 上。求 $UT$ 的长度。\n\n【解题步骤】\n图中存在多对相似三角形：$\\triangle SUX\\sim\\triangle SPQ$，$\\triangle RXT\\sim\\triangle RPQ$，$\\triangle XSR\\sim\\triangle XQP$。\n\n首先利用 $\\triangle XSR\\sim\\triangle XQP$。对应边 $SR=3$，$QP=12$，相似比为 $12/3=4$。因此从 $X$ 到 $QP$ 的高是从 $X$ 到 $SR$ 的高的 $4$ 倍。\n\n由此可得 $UP=4SU$（因为 $X$ 将对角线按 $4:1$ 分割），故 $SP=5SU$。\n\n再由 $\\triangle SUX\\sim\\triangle SPQ$，相似比为 $SU:SP=1:5$，所以 $UX=\\frac{1}{5}\\times 12=\\frac{12}{5}=2.4$。\n\n同理可得 $XT=2.4$。\n\n因此 $UT=UX+XT=2.4+2.4=4.8\\text{ cm}$。\n\n【快捷思路】\n对于梯形中过对角线交点且平行于底边的线段，有公式：\n$$\\frac{2}{UT}=\\frac{1}{PQ}+\\frac{1}{SR}$$\n即 $UT$ 是 $PQ$ 和 $SR$ 的调和平均数。代入得：\n$$UT=\\frac{2\\times 12\\times 3}{12+3}=\\frac{72}{15}=4.8\\text{ cm}$$\n\n【正确答案】C Geometry",
+    "analysis": "【题目分析】\n梯形 $PQRS$ 中 $PQ\\parallel SR$，$PQ=12\\text{ cm}$，$SR=3\\text{ cm}$。对角线 $PR$ 与 $QS$ 交于 $X$。过 $X$ 作 $UT\\parallel PQ$，$U$ 在 $SP$ 上，$T$ 在 $RQ$ 上。求 $UT$ 的长度。\n\n【解题步骤】\n图中存在多对相似三角形：$\\triangle SUX\\sim\\triangle SPQ$，$\\triangle RXT\\sim\\triangle RPQ$，$\\triangle XSR\\sim\\triangle XQP$。\n\n首先利用 $\\triangle XSR\\sim\\triangle XQP$。对应边 $SR=3$，$QP=12$，相似比为 $12/3=4$。因此从 $X$ 到 $QP$ 的高是从 $X$ 到 $SR$ 的高的 $4$ 倍。\n\n由此可得 $UP=4SU$（因为 $X$ 将对角线按 $4:1$ 分割），故 $SP=5SU$。\n\n再由 $\\triangle SUX\\sim\\triangle SPQ$，相似比为 $SU:SP=1:5$，所以 $UX=\\frac{1}{5}\\times 12=\\frac{12}{5}=2.4$。\n\n同理可得 $XT=2.4$。\n\n因此 $UT=UX+XT=2.4+2.4=4.8\\text{ cm}$。\n\n【快捷思路】\n对于梯形中过对角线交点且平行于底边的线段，有公式：\n$$\\frac{2}{UT}=\\frac{1}{PQ}+\\frac{1}{SR}$$\n即 $UT$ 是 $PQ$ 和 $SR$ 的调和平均数。代入得：\n$$UT=\\frac{2\\times 12\\times 3}{12+3}=\\frac{72}{15}=4.8\\text{ cm}$$\n\n【正确答案】C",
     "images": {
       "image": "2016 P2 Q16.png"
     },
     "has_image": true,
     "related_topics": [
       "Proof"
+    ],
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.trapezium_diagonal_intersection",
+      "d.similar_triangles_parallel_lines"
+    ],
+    "primary_section": "d.trapezium_diagonal_intersection",
+    "skills": [
+      "similar-triangles",
+      "parallel-line-ratios",
+      "harmonic-mean-length",
+      "diagram-ratio-chasing"
     ]
   },
   {
@@ -1211,7 +1497,22 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Graphs"
+      "Functions"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "e.sine_line_intersections",
+      "i.parameterised_graph_intersections"
+    ],
+    "primary_section": "e.sine_line_intersections",
+    "skills": [
+      "graph-intersection",
+      "parameter-shift",
+      "interval-root-counting",
+      "endpoint-analysis"
     ]
   },
   {
@@ -1235,7 +1536,26 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Integration"
+      "Integration",
+      "Differentiation"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "g_integration",
+      "f_differentiation"
+    ],
+    "sections": [
+      "h.counterexample_construction",
+      "g.integral_inequality",
+      "f.stationary_bounds"
+    ],
+    "primary_section": "h.counterexample_construction",
+    "skills": [
+      "counterexample-construction",
+      "endpoint-screening",
+      "odd-function-integral",
+      "bounding-by-derivative",
+      "integral-comparison"
     ]
   },
   {
@@ -1243,7 +1563,7 @@ window.QUESTIONS = [
     "year": 2016,
     "paper": 2,
     "num": 19,
-    "topic": "Sets",
+    "topic": "Combinatorics",
     "difficulty": 3,
     "question": "Some identical unit cubes are used to construct a three-dimensional object by gluing them together face to face.\n\nSketches of this object are made by looking at it from the right-hand side, from the front and from above. These sketches are called the side elevation, the front elevation, and the plan view respectively.\n\nHow many cubes were used to construct the object?",
     "options": {
@@ -1256,11 +1576,29 @@ window.QUESTIONS = [
       "G": "exactly 9"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n本题给出由单位正方体构成的三维物体的三视图（俯视图、前视图、侧视图），要求确定正方体数量。核心方法是通过三视图交叉约束，逐层逐格确定每个位置是否存在正方体。\n\n【解题步骤】\n物体容纳在 $3 \\times 3$ 底面网格内，最多三层。\n\n由俯视图知正方体分布在 L 形五个位置上，每位置至少一个。\n\n由前视图：左列两层高，底层和中层有正方体、顶层无。中列仅底层有。右列每层至少有一个。\n\n由侧视图：左列高为 $2$，顶层右后方无正方体。中列高为 $3$，三层均有。右列高为 $1$，仅底层有。\n\n至此大部分确定，尚余两个位置不确定。其中至少一个必须有正方体满足俯视图，另一个可有可无。故总数为 $8$ 或 $9$。\n\n【快捷思路】\n逐层分析法：俯视图定 L 形布局，前视图和侧视图定各层有无。注意两个悬格一个必选一个可选，故两种可能。\n\n【正确答案】F",
+    "analysis": "【题目分析】\n本题给出由单位正方体构成的三维物体的三视图（俯视图、前视图、侧视图），要求确定正方体数量。核心方法是通过三视图交叉约束，逐层逐格确定每个位置是否存在正方体。\n\n【解题步骤】\n物体容纳在 $3 \\times 3$ 底面网格内，最多三层。\n\n由俯视图知正方体分布在 L 形五个位置上，每位置至少一个。\n\n由前视图：左列两层高，底层和中层有正方体、顶层无。中列仅底层有。右列每层至少有一个。\n\n由侧视图：左列高为 $2$，顶层右后方无正方体。中列高为 $3$，三层均有。右列高为 $1$，仅底层有。\n\n把俯视图中的五个底面位置看作五个竖直柱。前视图和侧视图共同固定了其中三柱的高度，并要求剩余两柱中至少一柱存在来满足俯视图的 L 形占位；另一柱不会改变三个视图的最大高度，可以选择有或无。因此总数只能是 $8$ 或 $9$。\n\n【快捷思路】\n逐层分析法：俯视图先定 L 形底面占位，前视图和侧视图再定每行、每列的最高层数。最后只剩两个不会改变投影高度的位置，其中一个必选、一个可选，故两种可能。\n\n【正确答案】F",
     "images": {
       "image": "2016 P2 Q19.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Sets"
+    ],
+    "modules": [
+      "m_comprehensive_training",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "m.spatial_projection_constraints",
+      "k.constraint_counting"
+    ],
+    "primary_section": "m.spatial_projection_constraints",
+    "skills": [
+      "projection-constraint-grid",
+      "min-max-counting",
+      "case-analysis",
+      "spatial-visualisation"
+    ]
   },
   {
     "id": "2016-P2-Q20",
@@ -1281,11 +1619,29 @@ window.QUESTIONS = [
       "H": "infinitely many"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n正 $n$ 边形内角为 $180^\\circ - 360^\\circ/n$。题设：正 $n$ 边形内角为正 $m$ 边形内角的 $3/4$，求满足条件的正整数对 $(n,m)$ 组数，其中 $n, m \\geq 3$。\n\n【解题步骤】\n建立方程：$180 - 360/n = \\frac{3}{4}(180 - 360/m)$，化简得 $8/n - 6/m = 1$。\n\n由 $n \\geq 3$ 且 $8/n > 1$ 知 $n < 8$，枚举 $n = 3$ 到 $7$：\n- $n = 3$：$m = 18/5$，非整数\n- $n = 4$：$m = 6$ ✓\n- $n = 5$：$m = 10$ ✓\n- $n = 6$：$m = 18$ ✓\n- $n = 7$：$m = 42$ ✓\n\n共四组解。验证 $(4,6)$：正方形内角 $90^\\circ = \\frac{3}{4} \\times 120^\\circ$（正六边形）。\n\n【快捷思路】\n由 $8/n - 6/m = 1$ 得 $n = 8 - 48/(m+6)$，$m+6$ 须为 $48$ 的因数。$m \\geq 3$ 时仅 $12, 16, 24, 48$ 四种可能，对应四组解。\n\n【正确答案】E Theory",
+    "analysis": "【题目分析】\n正 $n$ 边形内角为 $180^\\circ - 360^\\circ/n$。题设：正 $n$ 边形内角为正 $m$ 边形内角的 $3/4$，求满足条件的正整数对 $(n,m)$ 组数，其中 $n, m \\geq 3$。\n\n【解题步骤】\n建立方程：$180 - 360/n = \\frac{3}{4}(180 - 360/m)$，化简得 $8/n - 6/m = 1$。\n\n由 $n \\geq 3$ 且 $8/n > 1$ 知 $n < 8$，枚举 $n = 3$ 到 $7$：\n- $n = 3$：$m = 18/5$，非整数\n- $n = 4$：$m = 6$ ✓\n- $n = 5$：$m = 10$ ✓\n- $n = 6$：$m = 18$ ✓\n- $n = 7$：$m = 42$ ✓\n\n共四组解。验证 $(4,6)$：正方形内角 $90^\\circ = \\frac{3}{4} \\times 120^\\circ$（正六边形）。\n\n【快捷思路】\n由 $8/n - 6/m = 1$ 得 $n = 8 - 48/(m+6)$，$m+6$ 须为 $48$ 的因数。$m \\geq 3$ 时仅 $12, 16, 24, 48$ 四种可能，对应四组解。\n\n【正确答案】E",
     "images": null,
     "has_image": false,
     "related_topics": [
+      "Coordinate Geometry",
       "Algebra"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "a2_equations_inequalities",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "d.regular_polygon_angles",
+      "a2.integer_parameter_equations",
+      "k.divisor_enumeration"
+    ],
+    "primary_section": "d.regular_polygon_angles",
+    "skills": [
+      "polygon-angle-formula",
+      "equation-modelling",
+      "integer-enumeration",
+      "divisor-condition"
     ]
   },
   {
