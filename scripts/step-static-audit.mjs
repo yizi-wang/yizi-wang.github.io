@@ -143,6 +143,17 @@ function checkLatexHazards(file, text, issues) {
     }
   }
 
+  const displayDelimiters = [...text.matchAll(/(?<!\\)\$\$/g)];
+  if (displayDelimiters.length % 2 !== 0) {
+    const last = displayDelimiters.at(-1);
+    issues.push({
+      severity: 'error',
+      file: rel(file),
+      line: lineForOffset(text, last.index),
+      message: 'unmatched display math delimiter $$',
+    });
+  }
+
   for (const match of text.matchAll(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g)) {
     issues.push({
       severity: 'error',
