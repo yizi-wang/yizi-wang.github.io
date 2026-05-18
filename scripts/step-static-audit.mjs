@@ -135,7 +135,6 @@ function checkLatexHazards(file, text, issues) {
   const patterns = [
     { re: /\\tag\{/g, severity: 'warning', message: 'KaTeX tag numbering may render awkwardly in Starlight content' },
     { re: /\\begin\{(align|aligned|array|cases)\*?\}/g, severity: 'warning', message: 'check multiline LaTeX visually in browser' },
-    { re: /\$[^$\n]*&[^$\n]*\$/g, severity: 'warning', message: 'inline math contains &: confirm it is intentional and renderable' },
     { re: /TODO|FIXME/g, severity: 'error', message: 'TODO/FIXME marker remains' },
   ];
 
@@ -146,6 +145,19 @@ function checkLatexHazards(file, text, issues) {
         file: rel(file),
         line: lineForOffset(text, match.index),
         message: pattern.message,
+      });
+    }
+  }
+
+  for (const match of text.matchAll(/^(?:[4-9]|[1-9]\d)$/gm)) {
+    const before = text.slice(Math.max(0, match.index - 12), match.index);
+    const after = text.slice(match.index + match[0].length, match.index + match[0].length + 12);
+    if (before.includes('---') || after.includes('<details>')) {
+      issues.push({
+        severity: 'error',
+        file: rel(file),
+        line: lineForOffset(text, match.index),
+        message: `standalone page-number artifact: ${match[0]}`,
       });
     }
   }
