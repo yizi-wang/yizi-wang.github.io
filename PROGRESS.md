@@ -53,7 +53,7 @@
 - [x] src/content/docs/step/step3-2007.md
 - [x] src/content/docs/step/step3-2006.md
 - [x] src/content/docs/step/step3-2005.md
-- [ ] src/content/docs/step/step3-2004.md
+- [x] src/content/docs/step/step3-2004.md
 - [ ] src/content/docs/step/step3-2003.md
 - [ ] src/content/docs/step/step3-2002.md
 - [ ] src/content/docs/step/step3-2001.md
