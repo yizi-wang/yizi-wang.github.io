@@ -121,9 +121,19 @@ function imageRefs(q) {
   return rawRefs
     .map((ref) => {
       if (typeof ref === 'string') return ref;
-      if (ref && typeof ref === 'object') return ref.src || ref.image || ref.path || ref.url || '';
+      if (ref && typeof ref === 'object') {
+        return [
+          ref.src,
+          ref.image,
+          ref.question_image,
+          ref.options_image,
+          ref.path,
+          ref.url,
+        ].filter(Boolean);
+      }
       return '';
     })
+    .flat()
     .filter(Boolean);
 }
 

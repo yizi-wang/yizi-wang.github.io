@@ -2425,6 +2425,20 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "f.power_rule",
+      "a1.algebraic_rearrangement"
+    ],
+    "primary_section": "f.power_rule",
+    "skills": [
+      "expand-before-differentiating",
+      "power-rule",
+      "negative-fractional-indices"
     ]
   },
   {
@@ -2443,9 +2457,22 @@ window.QUESTIONS = [
       "E": "$40$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n已知矩形 $PQRS$ 中 $P(0,6)$ 和 $Q(1,8)$，过 $Q$ 作 $PQ$ 的垂线交 $x$ 轴于 $R$，求矩形面积。本题综合考查坐标系中斜率、垂线方程、两点间距离公式以及矩形面积计算。\n\n【解题步骤】\n第一步：求 $PQ$ 的斜率和长度。\n$PQ$ 斜率 $m_{PQ} = \\dfrac{8-6}{1-0} = 2$，长度 $|PQ| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$。\n第二步：利用垂直关系求 $QR$ 斜率。$m_{QR} = -\\dfrac{1}{2}$。\n第三步：设 $R(r, 0)$，利用斜率公式 $\\dfrac{0-8}{r-1} = -\\dfrac{1}{2}$，解得 $r-1 = 16$，即 $r = 17$，故 $R(17, 0)$。\n第四步：求 $|QR| = \\sqrt{(17-1)^2 + (0-8)^2} = \\sqrt{256 + 64} = \\sqrt{320} = 8\\sqrt{5}$。\n第五步：矩形面积 $= |PQ| \\times |QR| = \\sqrt{5} \\times 8\\sqrt{5} = 40$。\n\n【快捷思路】\n不必先写完整垂线方程再令 $y=0$，直接利用斜率公式 $\\dfrac{y_Q - y_R}{x_Q - x_R} = -\\dfrac{1}{2}$ 即可求出 $r-1$，这正是计算 $|QR|$ 所需的全部信息，省去了求 $r$ 具体值的步骤。\n\n【正确答案】E Geometry",
+    "analysis": "【题目分析】\n已知矩形 $PQRS$ 中 $P(0,6)$ 和 $Q(1,8)$，过 $Q$ 作 $PQ$ 的垂线交 $x$ 轴于 $R$，求矩形面积。本题综合考查坐标系中斜率、垂线方程、两点间距离公式以及矩形面积计算。\n\n【解题步骤】\n第一步：求 $PQ$ 的斜率和长度。\n$PQ$ 斜率 $m_{PQ} = \\dfrac{8-6}{1-0} = 2$，长度 $|PQ| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$。\n第二步：利用垂直关系求 $QR$ 斜率。$m_{QR} = -\\dfrac{1}{2}$。\n第三步：设 $R(r, 0)$，利用斜率公式 $\\dfrac{0-8}{r-1} = -\\dfrac{1}{2}$，解得 $r-1 = 16$，即 $r = 17$，故 $R(17, 0)$。\n第四步：求 $|QR| = \\sqrt{(17-1)^2 + (0-8)^2} = \\sqrt{256 + 64} = \\sqrt{320} = 8\\sqrt{5}$。\n第五步：矩形面积 $= |PQ| \\times |QR| = \\sqrt{5} \\times 8\\sqrt{5} = 40$。\n\n【快捷思路】\n不必先写完整垂线方程再令 $y=0$，直接利用斜率公式 $\\dfrac{y_Q - y_R}{x_Q - x_R} = -\\dfrac{1}{2}$ 即可求出 $r-1$，这正是计算 $|QR|$ 所需的全部信息，省去了求 $r$ 具体值的步骤。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "d.perpendicular_lines",
+      "d.distance_and_area"
+    ],
+    "primary_section": "d.perpendicular_lines",
+    "skills": [
+      "perpendicular-gradient",
+      "distance-formula",
+      "rectangle-area"
+    ]
   },
   {
     "id": "2017-P2-Q3",
@@ -2465,11 +2492,27 @@ window.QUESTIONS = [
       "G": "$4(2\\sqrt{3} + 3)$"
     },
     "answer": "G",
-    "analysis": "【题目分析】\n已知等比数列首项 $a = 2\\sqrt{3}$，第四项为 $\\dfrac{9}{4}$，求无穷项之和。核心是先求公比 $r$，再验证 $|r| < 1$ 确保收敛，最后用公式 $S_{\\infty} = \\dfrac{a}{1-r}$ 计算。\n\n【解题步骤】\n第一步：由第四项求公比。$ar^3 = 2\\sqrt{3}\\,r^3 = \\dfrac{9}{4}$，得\n$$r^3 = \\frac{9}{4 \\cdot 2\\sqrt{3}} = \\frac{9}{8\\sqrt{3}} = \\frac{9\\sqrt{3}}{24} = \\frac{3\\sqrt{3}}{8}$$\n第二步：注意到 $\\dfrac{3\\sqrt{3}}{8} = \\dfrac{(\\sqrt{3})^3}{2^3} = \\left(\\dfrac{\\sqrt{3}}{2}\\right)^3$，故 $r = \\dfrac{\\sqrt{3}}{2}$。\n第三步：验证 $|r| = \\dfrac{\\sqrt{3}}{2} \\approx 0.866 < 1$，级数收敛。\n第四步：求无穷和\n$$S_{\\infty} = \\frac{2\\sqrt{3}}{1 - \\frac{\\sqrt{3}}{2}} = \\frac{4\\sqrt{3}}{2 - \\sqrt{3}}$$\n有理化分母：$\\dfrac{4\\sqrt{3}(2+\\sqrt{3})}{(2-\\sqrt{3})(2+\\sqrt{3})} = 4\\sqrt{3}(2+\\sqrt{3}) = 4(2\\sqrt{3}+3)$。\n\n【快捷思路】\n识别 $r^3 = \\dfrac{3\\sqrt{3}}{8}$ 为完全立方数是突破口，避免了用计算器开立方。分母有理化时注意 $(2-\\sqrt{3})(2+\\sqrt{3})=1$，结果直接就是 $4\\sqrt{3}(2+\\sqrt{3})$。\n\n【正确答案】G and Series",
+    "analysis": "【题目分析】\n已知等比数列首项 $a = 2\\sqrt{3}$，第四项为 $\\dfrac{9}{4}$，求无穷项之和。核心是先求公比 $r$，再验证 $|r| < 1$ 确保收敛，最后用公式 $S_{\\infty} = \\dfrac{a}{1-r}$ 计算。\n\n【解题步骤】\n第一步：由第四项求公比。$ar^3 = 2\\sqrt{3}\\,r^3 = \\dfrac{9}{4}$，得\n$$r^3 = \\frac{9}{4 \\cdot 2\\sqrt{3}} = \\frac{9}{8\\sqrt{3}} = \\frac{9\\sqrt{3}}{24} = \\frac{3\\sqrt{3}}{8}$$\n第二步：注意到 $\\dfrac{3\\sqrt{3}}{8} = \\dfrac{(\\sqrt{3})^3}{2^3} = \\left(\\dfrac{\\sqrt{3}}{2}\\right)^3$，故 $r = \\dfrac{\\sqrt{3}}{2}$。\n第三步：验证 $|r| = \\dfrac{\\sqrt{3}}{2} \\approx 0.866 < 1$，级数收敛。\n第四步：求无穷和\n$$S_{\\infty} = \\frac{2\\sqrt{3}}{1 - \\frac{\\sqrt{3}}{2}} = \\frac{4\\sqrt{3}}{2 - \\sqrt{3}}$$\n有理化分母：$\\dfrac{4\\sqrt{3}(2+\\sqrt{3})}{(2-\\sqrt{3})(2+\\sqrt{3})} = 4\\sqrt{3}(2+\\sqrt{3}) = 4(2\\sqrt{3}+3)$。\n\n【快捷思路】\n识别 $r^3 = \\dfrac{3\\sqrt{3}}{8}$ 为完全立方数是突破口，避免了用计算器开立方。分母有理化时注意 $(2-\\sqrt{3})(2+\\sqrt{3})=1$，结果直接就是 $4\\sqrt{3}(2+\\sqrt{3})$。\n\n【正确答案】G",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.geometric_series_infinity",
+      "c.geometric_ratio_from_terms",
+      "a1.surd_rationalisation"
+    ],
+    "primary_section": "c.geometric_series_infinity",
+    "skills": [
+      "geometric-progression",
+      "sum-to-infinity",
+      "recognise-perfect-cube",
+      "rationalise-denominator"
     ]
   },
   {
@@ -2490,12 +2533,28 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题是一道逻辑推理题。已知 $\\tan x = \\sqrt{3}$，学生给出 $\\sin 2x = \\dfrac{\\sqrt{3}}{2}$。需要判断该答案是否正确以及推理过程是否存在缺陷。关键在于理解三角函数的周期性和通解概念。\n\n【解题步骤】\n第一步：检查 $\\tan x = \\sqrt{3}$ 的解。$\\tan$ 的周期为 $180°$，因此通解为 $x = 60° + 180°n$（$n \\in \\mathbb{Z}$），而不仅仅是 $x = 60°$。学生只取了一个特解，推理不完整。\n第二步：检查 $\\sin 2x$ 的值是否唯一。\n由 $x = 60° + 180°n$ 得 $2x = 120° + 360°n$。由于 $\\sin$ 的周期为 $360°$，故 $\\sin(120° + 360°n) = \\sin 120° = \\dfrac{\\sqrt{3}}{2}$ 对所有整数 $n$ 成立。\n第三步：结论。$\\sin 2x$ 确实只有唯一值 $\\dfrac{\\sqrt{3}}{2}$，但学生应说明为何其他 $x$ 值不会改变结果。这恰好对应选项 B 的描述。\n\n【快捷思路】\n只需验证 $\\tan x = \\sqrt{3}$ 的所有解代入 $\\sin 2x$ 后是否相同。由于 $x$ 每增加 $180°$，$2x$ 增加 $360°$，而 $\\sin$ 周期恰为 $360°$，因此 $\\sin 2x$ 值不变。结论是答案唯一但推理不完整。\n\n【正确答案】B",
     "images": {
-      "page_image": "2017_p2_page4.png"
+      "image": "2017_p2_page4.png"
     },
     "has_image": true,
     "related_topics": [
       "Logic",
       "Proof"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "b_mathematical_logic_basics",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "e.trig_periodicity",
+      "e.trig_equations",
+      "l.proof_gap_identification"
+    ],
+    "primary_section": "e.trig_periodicity",
+    "skills": [
+      "general-solution",
+      "periodicity-check",
+      "proof-gap-identification"
     ]
   },
   {
@@ -2519,12 +2578,29 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n本题给出三个命题，要求判断 $91 = 7 \\times 13$ 能作为哪个命题的反例。核心考点是理解反例的逻辑定义：对于一个全称命题（形如\"对所有 $x$，某性质成立\"），反例必须满足命题的前提条件，但结论不成立。\n\n三个命题分别为：\n1. 当 $p$ 为奇素数时，$10p^2 + 1$ 和 $10p^2 - 1$ 都是素数。\n2. 每个大于 $5$ 的素数都是 $6n + 1$ 的形式。\n3. 任何大于 $7$ 的 $7$ 的倍数都不是素数。\n\n【解题步骤】\n先将命题1改写为\"若 $p$ 是奇素数，则 $10p^2 + 1$ 和 $10p^2 - 1$ 均为素数\"。\n若 $91$ 是反例，需存在某个奇素数 $p$ 使得 $10p^2 + 1 = 91$ 或 $10p^2 - 1 = 91$。\n解 $10p^2 + 1 = 91$，得 $p^2 = 9$，$p = 3$。$3$ 是奇素数，但 $91 = 7 \\times 13$ 不是素数，故命题1的结论不成立。$91$ 是命题1的反例。\n\n对命题2，反例需为大于 $5$ 的素数且不能写成 $6n + 1$ 形式。但 $91$ 本身不是素数，无法作为反例。\n\n对命题3，它是真命题（任何大于 $7$ 的 $7$ 的倍数均可分解为 $7 \\times k$，其中 $k \\geq 2$，故不是素数）。$91$ 是该命题的正面例证而非反例。\n\n【快捷思路】\n直接验证 $p = 3$（最小奇素数）：$10 \\times 3^2 + 1 = 91 = 7 \\times 13$，非素数，立即反驳命题1。命题3本身正确无需验证，命题2的反例需为素数而 $91$ 不是。\n【正确答案】B",
     "images": {
-      "page_image": "2017_p2_page4.png"
+      "image": "2017_p2_page5.png"
     },
     "has_image": true,
     "related_topics": [
       "Counterexamples",
       "Number Theory"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "b_mathematical_logic_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "h.counterexample_identification",
+      "b.universal_statement_logic",
+      "k.primes_and_factorisation"
+    ],
+    "primary_section": "h.counterexample_identification",
+    "skills": [
+      "counterexample-identification",
+      "premise-checking",
+      "prime-factorization",
+      "statement-evaluation"
     ]
   },
   {
@@ -2547,13 +2623,25 @@ window.QUESTIONS = [
     },
     "answer": "A",
     "analysis": "【题目分析】\n已知序列 $u_0 = 1$，$u_n = \\int_0^1 4x u_{n-1} \\, dx$（$n \\geq 1$），求 $u_{1000}$。\n\n关键点：虽然递推式含积分，但每次积分中 $u_{n-1}$ 是常数（与积分变量 $x$ 无关），因此积分结果仍为常数，可直接计算。\n\n【解题步骤】\n逐项计算寻找规律：\n$u_0 = 1$\n\n$u_1 = \\int_0^1 4x \\cdot u_0 \\, dx = \\int_0^1 4x \\, dx = \\left[ 2x^2 \\right]_0^1 = 2$\n\n$u_2 = \\int_0^1 4x \\cdot u_1 \\, dx = \\int_0^1 4x \\cdot 2 \\, dx = \\left[ 4x^2 \\right]_0^1 = 4$\n\n$u_3 = \\int_0^1 4x \\cdot u_2 \\, dx = \\int_0^1 4x \\cdot 4 \\, dx = \\left[ 8x^2 \\right]_0^1 = 8$\n\n规律为 $u_n = 2^n$。\n\n严格证明可用数学归纳法：假设 $u_k = 2^k$，则\n$u_{k+1} = \\int_0^1 4x \\cdot 2^k \\, dx = 2^k \\cdot \\left[ 2x^2 \\right]_0^1 = 2^k \\cdot 2 = 2^{k+1}$\n归纳成立，故 $u_n = 2^n$ 对所有 $n \\geq 0$ 成立。\n\n$u_{1000} = 2^{1000}$。\n\n【快捷思路】\n注意到 $u_{n-1}$ 与 $x$ 无关，提出积分号外：$u_n = u_{n-1} \\int_0^1 4x \\, dx = 2 u_{n-1}$。这是一个公比为 $2$ 的等比数列，首项为 $1$，故 $u_n = 2^n$。\n\n【正确答案】A",
-    "images": {
-      "page_image": "2017_p2_page4.png"
-    },
-    "has_image": true,
+    "images": null,
+    "has_image": false,
     "related_topics": [
       "Sequences and Series",
       "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "c_sequences_series"
+    ],
+    "sections": [
+      "g.definite_integral_constant_factor",
+      "c.geometric_recurrence"
+    ],
+    "primary_section": "g.definite_integral_constant_factor",
+    "skills": [
+      "pull-constant-from-integral",
+      "recurrence-recognition",
+      "geometric-sequence-formula"
     ]
   },
   {
@@ -2577,12 +2665,26 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n题目给出 $y = a^x$（实线）和 $y = f(x)$（虚线）的图像，$a > 0$。两曲线均过 $(0, 1)$，且在 $x > 0$ 时虚线高于实线，$x < 0$ 时虚线低于实线。要求判断哪几个陈述可能成立。\n\n四个陈述分别为：\n1. $f(x) = b^x$，其中 $b > a$\n2. $f(x) = b^x$，其中 $b < a$\n3. $f(x) = a^{kx}$，其中 $k > 1$\n4. $f(x) = a^{kx}$，其中 $k < 1$\n\n【解题步骤】\n从图像可知 $a > 1$（函数单调递增且过 $(0, 1)$）。取 $x = 1$ 分析：实线值为 $a$，虚线值 $f(1) > a$。\n\n对陈述1：$f(1) = b$，需 $b > a$。当 $b > a > 1$ 时，$x > 0$ 时 $b^x > a^x$，$x < 0$ 时 $b^x < a^x$，与图像一致。可能成立。\n\n对陈述2：$f(1) = b < a$，虚线在 $x = 1$ 处应低于实线，与图像矛盾。不可能成立。\n\n对陈述3：$f(1) = a^k$，需 $a^k > a$。由于 $a > 1$，这等价于 $k > 1$。此时 $f(x) = (a^k)^x$，底数 $a^k > a$，与陈述1等价。可能成立。\n\n对陈述4：$f(1) = a^k < a$（因 $a > 1$ 且 $k < 1$），与图像矛盾。不可能成立。\n\n此外，陈述1与3本质等价：$a^{kx} = (a^k)^x$，令 $b = a^k$，则 $b > a \\iff k > 1$。\n\n【快捷思路】\n直接看 $x = 1$ 处：虚线更高意味着\"有效底数\"更大。$b^x$ 的底数 $b > a$ 成立；$a^{kx}$ 的有效底数为 $a^k$，需 $a^k > a$ 即 $k > 1$（因 $a > 1$）。1和3成立。\n\n【正确答案】E",
     "images": {
-      "page_image": "2017_p2_page5.png"
+      "image": "2017 P2 Q7.png"
     },
     "has_image": true,
     "related_topics": [
       "Graphs",
       "Algebra"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a3.exponential_function_graphs",
+      "i.graph_comparison"
+    ],
+    "primary_section": "a3.exponential_function_graphs",
+    "skills": [
+      "effective-base-comparison",
+      "graph-inequality-reading",
+      "parameter-interpretation"
     ]
   },
   {
@@ -2605,8 +2707,24 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Trigonometry",
-      "Number Theory"
+      "Trigonometry"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a1_algebra_basics",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "a3.exponent_logarithm_comparison",
+      "a1.surd_rationalisation",
+      "e.special_angle_values"
+    ],
+    "primary_section": "a3.exponent_logarithm_comparison",
+    "skills": [
+      "value-comparison",
+      "bound-estimation",
+      "surd-rationalisation",
+      "special-angle-values"
     ]
   },
   {
@@ -2633,6 +2751,22 @@ window.QUESTIONS = [
     "related_topics": [
       "Algebra",
       "Number Theory"
+    ],
+    "modules": [
+      "l_proof_methods",
+      "a1_algebra_basics",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "l.proof_error_identification",
+      "a1.factorisation",
+      "k.integer_factorisation"
+    ],
+    "primary_section": "l.proof_error_identification",
+    "skills": [
+      "proof-line-audit",
+      "invalid-factor-splitting",
+      "counterexample-to-inference"
     ]
   },
   {
@@ -2655,8 +2789,25 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Functions",
-      "Graphs"
+      "Logic",
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "b_mathematical_logic_basics",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.definite_integral_symmetry",
+      "b.sufficient_conditions",
+      "i.function_symmetry"
+    ],
+    "primary_section": "g.definite_integral_symmetry",
+    "skills": [
+      "sufficient-condition-test",
+      "symmetry-about-centre",
+      "odd-function-shift",
+      "counterexample-checking"
     ]
   },
   {
@@ -2677,12 +2828,25 @@ window.QUESTIONS = [
       "G": "$R + 2(f(b) - f(a))f(b)$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n已知$R$是曲线$y=f(x)$与$x$轴在$x=a$和$x=b$之间围成的面积，$g(x)=f(x)+2f(b)$，求$y=g(x)$在相同区间内与$x$轴围成的面积。\n\n【解题步骤】\n首先注意到$a,b>0$且$a<b$。由于$f$是增函数（题目语境隐含），$f(x)>0$对$x>0$成立，因此面积可用积分直接表示：\n$R=\\int_a^b f(x)\\,dx$\n\n对于$g(x)=f(x)+2f(b)$，注意$2f(b)$是常数。由于$f(x)>0$且$f(b)>0$，$g(x)>0$恒成立，面积同样等于积分：\n$\\int_a^b g(x)\\,dx=\\int_a^b\\big[f(x)+2f(b)\\big]\\,dx=\\int_a^b f(x)\\,dx+\\int_a^b 2f(b)\\,dx$\n\n第一项为$R$。第二项中$2f(b)$是常数因子，可提出：\n$\\int_a^b 2f(b)\\,dx=2f(b)\\int_a^b 1\\,dx=2f(b)(b-a)$\n\n因此所求面积为$R+2(b-a)f(b)$。\n\n几何直观：$g(x)$的图像是将$f(x)$整体向上平移$2f(b)$个单位，新增的面积是一个宽为$b-a$、高为$2f(b)$的矩形。\n\n【快捷思路】\n积分的线性性质：$\\int_a^b[f(x)+C]\\,dx=\\int_a^b f(x)\\,dx+C(b-a)$，直接套用$C=2f(b)$即得答案。\n\n【正确答案】B",
+    "analysis": "【题目分析】\n已知$R$是曲线$y=f(x)$与$x$轴在$x=a$和$x=b$之间围成的面积，$g(x)=f(x)+2f(b)$，求$y=g(x)$在相同区间内与$x$轴围成的面积。\n\n【解题步骤】\n题目中的$R$表示原曲线在区间$[a,b]$内与$x$轴围成的面积。定义$g(x)=f(x)+2f(b)$，即把曲线$y=f(x)$整体向上平移$2f(b)$个单位；在本题图形语境下，新面积等于原面积加上一个宽为$b-a$、高为$2f(b)$的矩形面积。用积分线性也可写作：\n$R=\\int_a^b f(x)\\,dx$\n\n对于$g(x)=f(x)+2f(b)$，注意$2f(b)$是常数。面积变化为：\n$\\int_a^b g(x)\\,dx=\\int_a^b\\big[f(x)+2f(b)\\big]\\,dx=\\int_a^b f(x)\\,dx+\\int_a^b 2f(b)\\,dx$\n\n第一项为$R$。第二项中$2f(b)$是常数因子，可提出：\n$\\int_a^b 2f(b)\\,dx=2f(b)\\int_a^b 1\\,dx=2f(b)(b-a)$\n\n因此所求面积为$R+2(b-a)f(b)$。\n\n几何直观：$g(x)$的图像是将$f(x)$整体向上平移$2f(b)$个单位，新增的面积是一个宽为$b-a$、高为$2f(b)$的矩形。\n\n【快捷思路】\n积分的线性性质：$\\int_a^b[f(x)+C]\\,dx=\\int_a^b f(x)\\,dx+C(b-a)$，直接套用$C=2f(b)$即得答案。\n\n【正确答案】B",
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Functions",
-      "Graphs"
+      "Functions"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.definite_integral_area",
+      "i.vertical_graph_translation"
+    ],
+    "primary_section": "g.definite_integral_area",
+    "skills": [
+      "integral-linearity",
+      "area-under-curve",
+      "vertical-translation"
     ]
   },
   {
@@ -2709,6 +2873,21 @@ window.QUESTIONS = [
     "has_image": true,
     "related_topics": [
       "Graphs"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "e.trig_graphs",
+      "e.trig_inequality_ordering",
+      "i.graph_comparison"
+    ],
+    "primary_section": "e.trig_graphs",
+    "skills": [
+      "trig-graph-comparison",
+      "interval-analysis",
+      "graph-ordering"
     ]
   },
   {
@@ -2716,7 +2895,7 @@ window.QUESTIONS = [
     "year": 2017,
     "paper": 2,
     "num": 13,
-    "topic": "Number Theory",
+    "topic": "Algebra",
     "difficulty": 3,
     "question": "The positive real numbers $a \\times 10^{-3}$, $b \\times 10^{-2}$ and $c \\times 10^{-1}$ are each in standard form, and\n\n$$(a \\times 10^{-3}) + (b \\times 10^{-2}) = (c \\times 10^{-1}).$$\n\nWhich of the following statements (I, II, III, IV) **must** be true?\n\nI $a > 9$\n\nII $b > 9$\n\nIII $a < c$\n\nIV $b < c$",
     "options": {
@@ -2730,9 +2909,24 @@ window.QUESTIONS = [
       "H": "I, II, III and IV"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n本题考察标准形式下的加法运算与数位分析。三个正实数分别写成标准形式，满足$a \\times 10^{-3} + b \\times 10^{-2} = c \\times 10^{-1}$，其中标准形式要求$1 \\le a, b, c < 10$。需要判断四个命题中哪些必然成立。\n\n【解题步骤】\n将等式统一量纲，两边同乘$10^3$得：$a + 10b = 100c$。\n\n用竖式加法理解最为直观。将三个数写成小数：\n$0.00a_1a_2\\ldots + 0.0b_1b_2\\ldots = 0.c_1c_2\\ldots$\n\n由于$c \\ge 1$，结果小数点左移至少一位，意味着千分位和百分位之和必须向十分位进位。要产生进位，$b$的第一位数字必须为$9$且后面还有非零数字，即必须有$b > 9$，故命题II必成立。\n\n命题I不必要：可以取较小的数字组合仍能进位。\n\n对于命题III和IV：由于进位后$1 \\le c < 2$，而已证得$b > 9$，故$b > c$，IV不可能成立。$a$的值可以大于或小于$c$，III不必然成立。\n\n【快捷思路】\n统一量纲得$100c = a + 10b$。由于$a < 10$，要产生从十位到百位的进位，必须有$10b \\ge 91$，即$b \\ge 9.1$，故$b > 9$必成立。其余命题可用反例排除。\n\n【正确答案】B Theory",
+    "analysis": "【题目分析】\n本题考察标准形式下的加法运算与数位分析。三个正实数分别写成标准形式，满足$a \\times 10^{-3} + b \\times 10^{-2} = c \\times 10^{-1}$，其中标准形式要求$1 \\le a, b, c < 10$。需要判断四个命题中哪些必然成立。\n\n【解题步骤】\n将等式统一量纲，两边同乘$10^3$得：$a + 10b = 100c$。\n\n用竖式加法理解最为直观。将三个数写成小数：\n$0.00a_1a_2\\ldots + 0.0b_1b_2\\ldots = 0.c_1c_2\\ldots$\n\n由于$c \\ge 1$，结果小数点左移至少一位，意味着千分位和百分位之和必须向十分位进位。要产生进位，$b$的第一位数字必须为$9$且后面还有非零数字，即必须有$b > 9$，故命题II必成立。\n\n命题I不必要：可以取较小的数字组合仍能进位。\n\n对于命题III和IV：由于进位后$1 \\le c < 2$，而已证得$b > 9$，故$b > c$，IV不可能成立。$a$的值可以大于或小于$c$，III不必然成立。\n\n【快捷思路】\n统一量纲得$100c = a + 10b$。由于$a < 10$，要产生从十位到百位的进位，必须有$10b \\ge 91$，即$b \\ge 9.1$，故$b > 9$必成立。其余命题可用反例排除。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "a1_algebra_basics",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a1.standard_form",
+      "a2.inequality_reasoning"
+    ],
+    "primary_section": "a1.standard_form",
+    "skills": [
+      "standard-form-place-value",
+      "powers-of-ten-scaling",
+      "must-be-true-analysis",
+      "counterexample-elimination"
+    ]
   },
   {
     "id": "2017-P2-Q14",
@@ -2760,8 +2954,22 @@ window.QUESTIONS = [
     },
     "has_image": true,
     "related_topics": [
-      "Coordinate Geometry",
       "Functions"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.quadratic_parameter_effects",
+      "a2.completing_square"
+    ],
+    "primary_section": "i.quadratic_parameter_effects",
+    "skills": [
+      "completing-square",
+      "vertex-form",
+      "parameter-shift",
+      "y-intercept-invariance"
     ]
   },
   {
@@ -2781,9 +2989,24 @@ window.QUESTIONS = [
       "F": "$8$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n本题考察递归定义的数列周期性。函数$f$和$g$根据前一项的奇偶性分别采用不同的递推规则，需要计算$f(1000) - g(1000)$。这类问题通常先枚举前若干项寻找循环规律。\n\n【解题步骤】\n先计算数列的前几项：\n\n数列：\n$f(1) = 5$（奇）$\\to f(2) = 16$（偶）$\\to f(3) = 8$（偶）$\\to f(4) = 4$（偶）$\\to f(5) = 2$（偶）$\\to f(6) = 1$（奇）$\\to f(7) = 4$（偶）$\\to f(8) = 2$（偶）$\\to f(9) = 1$\n\n从第$6$项开始进入周期为$3$的循环：$1 \\to 4 \\to 2 \\to 1\\ldots$\n$1000 - 6 = 994$，$994 \\div 3$余$1$，故\n$f(1000) = f(7) = 4$\n\n数列：\n$g(1) = 3$（奇）$\\to g(2) = 8$（偶）$\\to g(3) = 4$（偶）$\\to g(4) = 2$（偶）$\\to g(5) = 1$（奇）$\\to g(6) = 6$（偶）$\\to g(7) = 3$\n\n从第$1$项开始进入周期为$6$的循环：$3 \\to 8 \\to 4 \\to 2 \\to 1 \\to 6 \\to 3\\ldots$\n$1000 \\div 6$余$4$，故\n$g(1000) = g(4) = 2$\n\n最终：$f(1000) - g(1000) = 4 - 2 = 2$\n\n【快捷思路】\n此类递推数列问题，先手算前几项找循环节。$f$的循环从第$6$项开始、周期为$3$；$g$从第$1$项开始、周期为$6$。利用余数直接定位第$1000$项的值。\n\n【正确答案】D and Series",
+    "analysis": "【题目分析】\n本题考察递归定义的数列周期性。函数$f$和$g$根据前一项的奇偶性分别采用不同的递推规则，需要计算$f(1000) - g(1000)$。这类问题通常先枚举前若干项寻找循环规律。\n\n【解题步骤】\n先计算数列的前几项：\n\n数列：\n$f(1) = 5$（奇）$\\to f(2) = 16$（偶）$\\to f(3) = 8$（偶）$\\to f(4) = 4$（偶）$\\to f(5) = 2$（偶）$\\to f(6) = 1$（奇）$\\to f(7) = 4$（偶）$\\to f(8) = 2$（偶）$\\to f(9) = 1$\n\n从第$6$项开始进入周期为$3$的循环：$1 \\to 4 \\to 2 \\to 1\\ldots$\n$1000 - 6 = 994$，$994 \\div 3$余$1$，故\n$f(1000) = f(7) = 4$\n\n数列：\n$g(1) = 3$（奇）$\\to g(2) = 8$（偶）$\\to g(3) = 4$（偶）$\\to g(4) = 2$（偶）$\\to g(5) = 1$（奇）$\\to g(6) = 6$（偶）$\\to g(7) = 3$\n\n从第$1$项开始进入周期为$6$的循环：$3 \\to 8 \\to 4 \\to 2 \\to 1 \\to 6 \\to 3\\ldots$\n$1000 \\div 6$余$4$，故\n$g(1000) = g(4) = 2$\n\n最终：$f(1000) - g(1000) = 4 - 2 = 2$\n\n【快捷思路】\n此类递推数列问题，先手算前几项找循环节。$f$的循环从第$6$项开始、周期为$3$；$g$从第$1$项开始、周期为$6$。利用余数直接定位第$1000$项的值。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "modules": [
+      "c_sequences_series",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "c.recurrence_cycles",
+      "k.parity_cases"
+    ],
+    "primary_section": "c.recurrence_cycles",
+    "skills": [
+      "recurrence-iteration",
+      "cycle-detection",
+      "parity-casework",
+      "modular-indexing"
+    ]
   },
   {
     "id": "2017-P2-Q16",
@@ -2805,6 +3028,25 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Differentiation"
+    ],
+    "modules": [
+      "h_logic_counterexamples",
+      "b_mathematical_logic_basics",
+      "l_proof_methods",
+      "f_differentiation"
+    ],
+    "sections": [
+      "h.function_counterexamples",
+      "b.counterexample_construction",
+      "l.disproof_by_counterexample",
+      "f.derivative_values"
+    ],
+    "primary_section": "h.function_counterexamples",
+    "skills": [
+      "counterexample-verification",
+      "integer-valued-function",
+      "differentiate-polynomial",
+      "test-special-values"
     ]
   },
   {
@@ -2832,6 +3074,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Sets",
       "Proof"
+    ],
+    "modules": [
+      "b_mathematical_logic_basics",
+      "h_logic_counterexamples",
+      "k_number_theory_combinatorics"
+    ],
+    "sections": [
+      "b.quantifier_negation",
+      "b.iff_definitions",
+      "k.prime_factor_divisibility"
+    ],
+    "primary_section": "b.quantifier_negation",
+    "skills": [
+      "quantifier-negation",
+      "definition-unpacking",
+      "prime-factor-divisibility",
+      "option-elimination"
     ]
   },
   {
@@ -2856,7 +3115,27 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Functions",
-      "Graphs"
+      "Graphs",
+      "Proof"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities",
+      "i_functions_graphs",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "a3.log_inequalities_base_less_than_one",
+      "a2.inequality_direction",
+      "i.monotonic_functions",
+      "l.proof_error_identification"
+    ],
+    "primary_section": "a3.log_inequalities_base_less_than_one",
+    "skills": [
+      "log-inequality",
+      "inequality-reversal",
+      "monotonicity-check",
+      "error-identification"
     ]
   },
   {
@@ -2878,12 +3157,32 @@ window.QUESTIONS = [
       "H": "$|a| = \\frac{3}{2}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n本题考察三次方程实根个数与参数取值范围的关系，属于微分学与函数的综合题。要求找出方程$x^3-3x^2+a=0$恰有一个实根的充分条件。充分条件的含义是：若该条件成立，则结论必然成立（但结论成立不一定需要该条件）。\n\n【解题步骤】\n设$f(x)=x^3-3x^2+a$。求驻点：\n$f'(x)=3x^2-6x=3x(x-2)=0$，得驻点$x=0$和$x=2$。\n\n计算函数值：\n$f(0)=a$（局部极大值点），$f(2)=8-12+a=a-4$（局部极小值点）。\n\n三次函数图像大致呈N型（首项系数为正）。方程恰有一个实根的充要条件是：局部极大值和局部极小值在$x$轴同侧。即：\n极大值$<0$：$a<0$；或\n极小值$>0$：$a-4>0$，即$a>4$。\n\n因此充要条件为$a<0$或$a>4$，但这不在选项中。题目要求充分条件，即选项给出的范围必须是上述范围的真子集。\n\n逐一检验：\nA：$a>0$包含$a=1$（此时两根），不充分。\nB：$a\\leq 0$包含$a=0$（此时$x=0$为重根，超过一个实根），不充分。\nC：$a\\geq 4$包含$a=4$（此时极大值在轴上，超过一个实根），不充分。\nD：$a<4$包含$a=1$，不充分。\nE：$|a|>4$等价于$a>4$或$a<-4$，均落在有效范围内，充分。\nG：$a=\\frac{9}{4}$落在$(0,4)$内，此时三个实根，不充分。\nH：$|a|=\\frac{3}{2}$包含正负值，正侧不充分。\n\n【快捷思路】\n先求出充要条件为$|a|>4$（即$a>4$或$a<0$），再找选项中的子集。E项$|a|>4$恰好是充要条件的一部分（排除了$-4\\leq a<0$），故为充分条件。\n【正确答案】E",
+    "analysis": "【题目分析】\n本题考察三次方程实根个数与参数取值范围的关系，属于微分学与函数的综合题。要求找出方程$x^3-3x^2+a=0$恰有一个实根的充分条件。充分条件的含义是：若该条件成立，则结论必然成立（但结论成立不一定需要该条件）。\n\n【解题步骤】\n设$f(x)=x^3-3x^2+a$。求驻点：\n$f'(x)=3x^2-6x=3x(x-2)=0$，得驻点$x=0$和$x=2$。\n\n计算函数值：\n$f(0)=a$（局部极大值点），$f(2)=8-12+a=a-4$（局部极小值点）。\n\n三次函数图像大致呈N型（首项系数为正）。方程恰有一个实根的充要条件是：局部极大值和局部极小值在$x$轴同侧。即：\n极大值$<0$：$a<0$；或\n极小值$>0$：$a-4>0$，即$a>4$。\n\n因此充要条件为$a<0$或$a>4$，但这不在选项中。题目要求充分条件，即选项给出的范围必须是上述范围的真子集。\n\n逐一检验：\nA：$a>0$包含$a=1$（此时两根），不充分。\nB：$a\\leq 0$包含$a=0$（此时$x=0$为重根，超过一个实根），不充分。\nC：$a\\geq 4$包含$a=4$（此时极大值在轴上，超过一个实根），不充分。\nD：$a<4$包含$a=1$，不充分。\nE：$|a|>4$等价于$a>4$或$a<-4$，均落在有效范围内，充分。\nG：$a=\\frac{9}{4}$落在$(0,4)$内，此时三个实根，不充分。\nH：$|a|=\\frac{3}{2}$包含正负值，正侧不充分。\n\n【快捷思路】\n先求出恰有一个实根的充要条件为$a<0$或$a>4$，再找选项中的子集。E项$|a|>4$即$a<-4$或$a>4$，完全落在该充要条件内，因此是充分条件。\n【正确答案】E",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Functions",
       "Graphs"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs",
+      "a2_equations_inequalities",
+      "l_proof_methods"
+    ],
+    "sections": [
+      "f.stationary_points_root_count",
+      "i.polynomial_root_count",
+      "a2.parameter_inequalities",
+      "l.sufficient_conditions"
+    ],
+    "primary_section": "f.stationary_points_root_count",
+    "skills": [
+      "stationary-points",
+      "root-counting",
+      "parameter-range",
+      "sufficient-condition",
+      "endpoint-check"
     ]
   },
   {
@@ -2908,6 +3207,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Logic",
       "Probability"
+    ],
+    "modules": [
+      "k_number_theory_combinatorics",
+      "j_sets_probability",
+      "b_mathematical_logic_basics"
+    ],
+    "sections": [
+      "k.permutation_counting",
+      "j.combinatorial_reasoning",
+      "b.case_analysis"
+    ],
+    "primary_section": "k.permutation_counting",
+    "skills": [
+      "candidate-enumeration",
+      "permutation-constraints",
+      "information-partition",
+      "case-analysis"
     ]
   },
   {
