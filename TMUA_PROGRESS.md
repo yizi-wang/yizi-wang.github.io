@@ -17,7 +17,7 @@
 - [x] 2020 Paper 2
 - [x] 2021 Paper 1
 - [x] 2021 Paper 2
-- [ ] 2022 Paper 1
+- [x] 2022 Paper 1
 - [ ] 2022 Paper 2
 - [ ] 2023 Paper 1
 - [ ] 2023 Paper 2

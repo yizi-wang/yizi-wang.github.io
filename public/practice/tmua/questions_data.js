@@ -9690,7 +9690,22 @@ window.QUESTIONS = [
     "has_image": false,
     "related_topics": [
       "Algebra"
-    ]
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.trig_equations_cosine_powers",
+      "a2.quadratic_substitution"
+    ],
+    "skills": [
+      "quadratic-substitution",
+      "factorisation",
+      "range-checking",
+      "endpoint-counting"
+    ],
+    "primary_section": "e.trig_equations_cosine_powers"
   },
   {
     "id": "2022-P1-Q2",
@@ -9709,12 +9724,26 @@ window.QUESTIONS = [
       "F": "all real values of $p$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n判断方程 $x^2 - 2px + y^2 - 6y - p^2 + 8p + 9 = 0$ 何时表示 $xy$ 平面上的圆。本质是圆的一般方程配方法，关键是半径平方必须为正数。\n\n【解题步骤】\n对方程分别对 $x$ 和 $y$ 配方：\n\n$(x - p)^2 - p^2 + (y - 3)^2 - 9 - p^2 + 8p + 9 = 0$\n\n整理得：\n$(x - p)^2 + (y - 3)^2 = 2p^2 - 8p$\n\n此式表示圆的条件是半径平方 $2p^2 - 8p > 0$（严格大于零，等于零时退化为一个点）。\n\n解不等式：\n$2p^2 - 8p > 0 \\Rightarrow 2p(p - 4) > 0 \\Rightarrow p(p - 4) > 0$\n\n二次不等式 $p(p - 4) > 0$ 的根为 $p = 0$ 和 $p = 4$，开口向上，因此解为 $p < 0$ 或 $p > 4$。\n\n【快捷思路】\n将方程视为圆的标准形式 $(x - a)^2 + (y - b)^2 = R^2$，配方后令右侧 $R^2 > 0$ 即可。注意区分 $R^2 > 0$（圆）、$R^2 = 0$（点）、$R^2 < 0$（无图形）三种情况。\n\n【正确答案】D Geometry",
+    "analysis": "【题目分析】\n判断方程 $x^2 - 2px + y^2 - 6y - p^2 + 8p + 9 = 0$ 何时表示 $xy$ 平面上的圆。本质是圆的一般方程配方法，关键是半径平方必须为正数。\n\n【解题步骤】\n对方程分别对 $x$ 和 $y$ 配方：\n\n$(x - p)^2 - p^2 + (y - 3)^2 - 9 - p^2 + 8p + 9 = 0$\n\n整理得：\n$(x - p)^2 + (y - 3)^2 = 2p^2 - 8p$\n\n此式表示圆的条件是半径平方 $2p^2 - 8p > 0$（严格大于零，等于零时退化为一个点）。\n\n解不等式：\n$2p^2 - 8p > 0 \\Rightarrow 2p(p - 4) > 0 \\Rightarrow p(p - 4) > 0$\n\n二次不等式 $p(p - 4) > 0$ 的根为 $p = 0$ 和 $p = 4$，开口向上，因此解为 $p < 0$ 或 $p > 4$。\n\n【快捷思路】\n将方程视为圆的标准形式 $(x - a)^2 + (y - b)^2 = R^2$，配方后令右侧 $R^2 > 0$ 即可。注意区分 $R^2 > 0$（圆）、$R^2 = 0$（点）、$R^2 < 0$（无图形）三种情况。\n\n【正确答案】D",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Algebra"
-    ]
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "d.circle_equation_completion_square",
+      "a2.quadratic_inequalities"
+    ],
+    "skills": [
+      "completing-the-square",
+      "radius-squared-condition",
+      "quadratic-inequality-solving"
+    ],
+    "primary_section": "d.circle_equation_completion_square"
   },
   {
     "id": "2022-P1-Q3",
@@ -9723,7 +9752,7 @@ window.QUESTIONS = [
     "num": 3,
     "topic": "Integration",
     "difficulty": 3,
-    "question": "*   $f''(x) = a$ for all $x$\n*   $f(0) = 1, f(1) = 2$\n*   $\\int_{0}^{1} f(x) dx = 1$\n\nfind the value of $a$.",
+    "question": "Given that\n\n*   $f''(x) = a$ for all $x$\n*   $f(0) = 1, f(1) = 2$\n*   $\\int_{0}^{1} f(x) dx = 1$\n\nfind the value of $a$.",
     "options": {
       "A": "$-6$",
       "B": "$-3$",
@@ -9739,7 +9768,24 @@ window.QUESTIONS = [
     "related_topics": [
       "Differentiation",
       "Algebra"
-    ]
+    ],
+    "modules": [
+      "g_integration",
+      "f_differentiation",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "g.integrating_second_derivative",
+      "f.second_derivative_constant",
+      "a1.simultaneous_linear_equations"
+    ],
+    "skills": [
+      "integrate-twice",
+      "use-boundary-conditions",
+      "definite-integral-constraint",
+      "solve-linear-system"
+    ],
+    "primary_section": "g.integrating_second_derivative"
   },
   {
     "id": "2022-P1-Q4",
@@ -9765,8 +9811,26 @@ window.QUESTIONS = [
     },
     "has_image": true,
     "related_topics": [
-      "Algebra"
-    ]
+      "Algebra",
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "d_coordinate_geometry",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "e.radian_sector_arc_area",
+      "d.similar_shapes_scale_factor",
+      "a1.forming_equations"
+    ],
+    "skills": [
+      "sector-arc-length",
+      "sector-area",
+      "similarity-scale-factor",
+      "equation-modelling"
+    ],
+    "primary_section": "e.radian_sector_arc_area"
   },
   {
     "id": "2022-P1-Q5",
@@ -9787,9 +9851,30 @@ window.QUESTIONS = [
       "H": "$13$"
     },
     "answer": "H",
-    "analysis": "【题目分析】\n本题给出一个分式递推关系 $x_{n+1} = \\dfrac{x_n + p}{x_n + q}$，已知前三项 $x_1 = 3$，$x_2 = 5$，$x_3 = 7$，要求第四项 $x_4$。核心思路是利用已知项反推参数 $p$ 和 $q$，再代入递推公式计算。\n\n【解题步骤】\n将 $n = 1$ 和 $n = 2$ 分别代入递推公式：\n\n由 $x_2 = 5$：$\\dfrac{3 + p}{3 + q} = 5$，即 $3 + p = 15 + 5q$，得 $p - 5q = 12$……①\n\n由 $x_3 = 7$：$\\dfrac{5 + p}{5 + q} = 7$，即 $5 + p = 35 + 7q$，得 $p - 7q = 30$……②\n\n①减②得 $2q = -18$，故 $q = -9$。代回①得 $p = -33$。\n\n再计算 $x_4 = \\dfrac{x_3 + p}{x_3 + q} = \\dfrac{7 - 33}{7 - 9} = \\dfrac{-26}{-2} = 13$。\n\n【快捷思路】\n不需要先解出 $p$、$q$ 的精确值。观察两个方程 $3+p = 5(3+q)$ 和 $5+p = 7(5+q)$，相减即可快速消去 $p$ 得到 $q$。得到 $p$、$q$ 后直接代入 $n=3$ 的公式即可。\n\n【正确答案】H and Series",
+    "analysis": "【题目分析】\n本题给出一个分式递推关系 $x_{n+1} = \\dfrac{x_n + p}{x_n + q}$，已知前三项 $x_1 = 3$，$x_2 = 5$，$x_3 = 7$，要求第四项 $x_4$。核心思路是利用已知项反推参数 $p$ 和 $q$，再代入递推公式计算。\n\n【解题步骤】\n将 $n = 1$ 和 $n = 2$ 分别代入递推公式：\n\n由 $x_2 = 5$：$\\dfrac{3 + p}{3 + q} = 5$，即 $3 + p = 15 + 5q$，得 $p - 5q = 12$……①\n\n由 $x_3 = 7$：$\\dfrac{5 + p}{5 + q} = 7$，即 $5 + p = 35 + 7q$，得 $p - 7q = 30$……②\n\n①减②得 $2q = -18$，故 $q = -9$。代回①得 $p = -33$。\n\n再计算 $x_4 = \\dfrac{x_3 + p}{x_3 + q} = \\dfrac{7 - 33}{7 - 9} = \\dfrac{-26}{-2} = 13$。\n\n【快捷思路】\n不需要先解出 $p$、$q$ 的精确值。观察两个方程 $3+p = 5(3+q)$ 和 $5+p = 7(5+q)$，相减即可快速消去 $p$ 得到 $q$。得到 $p$、$q$ 后直接代入 $n=3$ 的公式即可。\n\n【正确答案】H",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra",
+      "Functions"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "c.recurrence_relations",
+      "a1.simultaneous_equations",
+      "i.rational_function_iteration"
+    ],
+    "skills": [
+      "recurrence-substitution",
+      "parameter-solving",
+      "simultaneous-equations",
+      "rational-expression-evaluation"
+    ],
+    "primary_section": "c.recurrence_relations"
   },
   {
     "id": "2022-P1-Q6",
@@ -9811,7 +9896,24 @@ window.QUESTIONS = [
     "answer": "F",
     "analysis": "【题目分析】\n本题要求计算定积分 $\\displaystyle\\int_{\\log_2 5}^{\\log_2 20} x\\,dx$，并将结果表示为 $\\log_2 M$ 的形式，求 $M$。关键技巧在于利用对数运算性质化简差平方形式。\n\n【解题步骤】\n第一步：计算积分\n$$\\int x\\,dx = \\frac{x^2}{2}$$\n积分值为 $\\dfrac{1}{2}\\left[(\\log_2 20)^2 - (\\log_2 5)^2\\right]$。\n\n第二步：利用对数性质化简\n注意到 $\\log_2 20 = \\log_2(4 \\times 5) = 2 + \\log_2 5$，令 $a = \\log_2 5$，则：\n$$(\\log_2 20)^2 - (\\log_2 5)^2 = (2 + a)^2 - a^2 = 4 + 4a = 4 + 4\\log_2 5$$\n\n第三步：除以 2\n$$\\frac{1}{2}(4 + 4\\log_2 5) = 2 + 2\\log_2 5$$\n\n第四步：合并对数\n$$2 + 2\\log_2 5 = \\log_2 4 + \\log_2 25 = \\log_2(4 \\times 25) = \\log_2 100$$\n\n故 $M = 100$。\n\n【快捷思路】\n被积函数是 $x$ 的差平方结构 $(\\log_2 20)^2 - (\\log_2 5)^2$，直接用平方差公式 $(a+b)^2 - a^2 = b(2a+b)$ 也可以化简，但代换法更直观。\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "g.definite_integrals",
+      "a3.log_laws"
+    ],
+    "skills": [
+      "definite-integral",
+      "log-laws",
+      "difference-of-squares"
+    ],
+    "primary_section": "g.definite_integrals"
   },
   {
     "id": "2022-P1-Q7",
@@ -9832,7 +9934,28 @@ window.QUESTIONS = [
     "answer": "E",
     "analysis": "【题目分析】\n本题求曲线 $y = x^2 - 4|x| - 12$ 与 $x$ 轴（$y = 0$）所围成的有限区域面积。含绝对值的函数需要分段处理，注意图形关于 $y$ 轴对称，可以利用对称性简化计算。\n\n【解题步骤】\n第一步：去绝对值，分段表达\n当 $x \\geq 0$ 时：$y = x^2 - 4x - 12 = (x - 6)(x + 2)$\n当 $x < 0$ 时：$y = x^2 + 4x - 12 = (x + 6)(x - 2)$\n\n第二步：求与 $x$ 轴交点\n在 $x \\geq 0$ 范围内，令 $y = 0$ 得 $x = 6$（$x = -2$ 舍去）。\n在 $x < 0$ 范围内，令 $y = 0$ 得 $x = -6$（$x = 2$ 舍去）。\n故积分区间为 $[-6, 6]$。\n\n第三步：利用对称性计算面积\n图形关于 $y$ 轴对称，只需计算右半部分再乘以 2：\n$$\\int_0^6 (x^2 - 4x - 12)\\,dx = \\left[\\frac{x^3}{3} - 2x^2 - 12x\\right]_0^6 = 72 - 72 - 72 = -72$$\n\n曲线在 $x$ 轴下方，积分值为负，实际面积为 $72$。\n总面积 $= 2 \\times 72 = 144$。\n\n【快捷思路】\n设 $t = |x| \\geq 0$，方程变为 $t^2 - 4t - 12 = 0$，解得 $t = 6$（舍去负根），立刻得到交点 $x = \\pm 6$。对称性直接减半计算量。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "g.area_between_curve_and_axis",
+      "g.piecewise_absolute_area",
+      "i.absolute_value_graphs"
+    ],
+    "skills": [
+      "split-integral",
+      "use-symmetry",
+      "quadratic-zero-finding",
+      "area-from-negative-integral"
+    ],
+    "primary_section": "g.area_between_curve_and_axis"
   },
   {
     "id": "2022-P1-Q8",
@@ -9850,9 +9973,23 @@ window.QUESTIONS = [
       "E": "$2^{10}(2^{10} - 1)$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n等比数列首项为 $a$，公比为 $r$，其中 $a$、$r$ 均为正整数且 $r > 1$。已知 $S_{30} - S_{20} = k S_{10}$（$k$ 为正整数），求 $k$ 的最小可能值。核心在于利用等比数列求和公式化简后得到 $k$ 与 $r$ 的关系。\n\n【解题步骤】\n第一步：写出求和公式\n$$S_n = \\frac{a(r^n - 1)}{r - 1}$$\n\n第二步：代入条件\n$$S_{30} - S_{20} = \\frac{a(r^{30} - 1)}{r - 1} - \\frac{a(r^{20} - 1)}{r - 1} = \\frac{a(r^{30} - r^{20})}{r - 1}$$\n$$k S_{10} = k \\cdot \\frac{a(r^{10} - 1)}{r - 1}$$\n\n第三步：两边相等，消去公因子\n两边同乘 $r - 1$ 再除以 $a$（$a > 0$，可消去）：\n$$r^{30} - r^{20} = k(r^{10} - 1)$$\n\n左边提取公因式：$r^{20}(r^{10} - 1) = k(r^{10} - 1)$\n\n由于 $r > 1$，故 $r^{10} - 1 \\neq 0$，两边可约去，得 $k = r^{20}$。\n\n第四步：求最小值\n$r$ 是大于 1 的正整数，最小取 $r = 2$，故 $k_{\\min} = 2^{20}$。\n\n【快捷思路】\n注意到 $S_{30} - S_{20}$ 恰好是第 21 项到第 30 项之和，即 $a r^{20} + a r^{21} + \\cdots + a r^{29} = r^{20}(a + ar + \\cdots + ar^9) = r^{20} S_{10}$，直接看出 $k = r^{20}$，无需完整代入求和公式。\n\n【正确答案】B and Series",
+    "analysis": "【题目分析】\n等比数列首项为 $a$，公比为 $r$，其中 $a$、$r$ 均为正整数且 $r > 1$。已知 $S_{30} - S_{20} = k S_{10}$（$k$ 为正整数），求 $k$ 的最小可能值。核心在于利用等比数列求和公式化简后得到 $k$ 与 $r$ 的关系。\n\n【解题步骤】\n第一步：写出求和公式\n$$S_n = \\frac{a(r^n - 1)}{r - 1}$$\n\n第二步：代入条件\n$$S_{30} - S_{20} = \\frac{a(r^{30} - 1)}{r - 1} - \\frac{a(r^{20} - 1)}{r - 1} = \\frac{a(r^{30} - r^{20})}{r - 1}$$\n$$k S_{10} = k \\cdot \\frac{a(r^{10} - 1)}{r - 1}$$\n\n第三步：两边相等，消去公因子\n两边同乘 $r - 1$ 再除以 $a$（$a > 0$，可消去）：\n$$r^{30} - r^{20} = k(r^{10} - 1)$$\n\n左边提取公因式：$r^{20}(r^{10} - 1) = k(r^{10} - 1)$\n\n由于 $r > 1$，故 $r^{10} - 1 \\neq 0$，两边可约去，得 $k = r^{20}$。\n\n第四步：求最小值\n$r$ 是大于 1 的正整数，最小取 $r = 2$，故 $k_{\\min} = 2^{20}$。\n\n【快捷思路】\n注意到 $S_{30} - S_{20}$ 恰好是第 21 项到第 30 项之和，即 $a r^{20} + a r^{21} + \\cdots + a r^{29} = r^{20}(a + ar + \\cdots + ar^9) = r^{20} S_{10}$，直接看出 $k = r^{20}$，无需完整代入求和公式。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.geometric_sequences",
+      "c.geometric_series_finite_sum"
+    ],
+    "skills": [
+      "geometric-series-sum",
+      "factor-common-series",
+      "integer-minimisation"
+    ],
+    "primary_section": "c.geometric_series_finite_sum"
   },
   {
     "id": "2022-P1-Q9",
@@ -9878,14 +10015,31 @@ window.QUESTIONS = [
     "related_topics": [
       "Algebra",
       "Trigonometry"
-    ]
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.function_equations",
+      "i.range_of_functions",
+      "e.pythagorean_identity"
+    ],
+    "skills": [
+      "solve-quadratic-in-function",
+      "pythagorean-identity",
+      "range-analysis",
+      "compare-branches"
+    ],
+    "primary_section": "i.function_equations"
   },
   {
     "id": "2022-P1-Q10",
     "year": 2022,
     "paper": 1,
     "num": 10,
-    "topic": "Functions",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "A sequence of translations is applied to the graph of $y = x^3$\n\nWhich of the following graphs could be the result of this sequence of translations?\n\nI $y = x^3 - 3x^2 + 9x - 27$\n\nII $y = x^3 - 9x^2 + 27x - 3$\n\nIII $y = 27x^3 - 9x^2 + x - 3$",
     "options": {
@@ -9903,8 +10057,24 @@ window.QUESTIONS = [
     "images": null,
     "has_image": false,
     "related_topics": [
-      "Coordinate Geometry"
-    ]
+      "Functions",
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "i.graph_transformations.translations",
+      "i.cubic_graphs",
+      "a1.coefficient_matching"
+    ],
+    "skills": [
+      "translate-cubic-graph",
+      "compare-polynomial-coefficients",
+      "identify-transformation-invariants"
+    ],
+    "primary_section": "i.graph_transformations.translations"
   },
   {
     "id": "2022-P1-Q11",
@@ -9925,12 +10095,26 @@ window.QUESTIONS = [
       "H": "$1 + 5050 \\log_{10} 3$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n本题要求计算对数求和：$\\displaystyle\\sum_{n=1}^{100}\\log_{10}\\!\\left(3^{\\,1-n}\\right)$。解题的关键是利用对数性质将幂指数提取出来，将求和转化为等差数列求和。\n\n【解题步骤】\n第一步：利用对数性质 $\\log_b(a^k)=k\\log_b a$，将通项化简：\n$$\\log_{10}\\!\\left(3^{\\,1-n}\\right)=(1-n)\\log_{10}3$$\n\n第二步：将常数因子 $\\log_{10}3$ 提取到求和号外：\n$$\\sum_{n=1}^{100}(1-n)\\log_{10}3=\\left(\\sum_{n=1}^{100}(1-n)\\right)\\log_{10}3$$\n\n第三步：计算 $\\sum_{n=1}^{100}(1-n)$。展开各项：\n$$n=1:\\ 1-1=0,\\quad n=2:\\ 1-2=-1,\\quad n=3:\\ 1-3=-2,\\ \\ldots,\\quad n=100:\\ 1-100=-99$$\n即求 $0+(-1)+(-2)+\\cdots+(-99)$，共 $100$ 项，是首项为 $0$、末项为 $-99$ 的等差数列。\n\n第四步：用等差数列求和公式 $S_n=\\dfrac{n}{2}(a_1+a_n)$：\n$$S_{100}=\\frac{100}{2}(0+(-99))=50\\times(-99)=-4950$$\n\n第五步：代回原式，得最终结果 $-4950\\log_{10}3$。\n\n【快捷思路】\n$\\sum_{n=1}^{100}(1-n)=\\sum_{n=1}^{100}1-\\sum_{n=1}^{100}n=100-\\frac{100\\times 101}{2}=100-5050=-4950$。直接乘以 $\\log_{10}3$ 即可。这种拆项法比逐项展开更快。\n\n【正确答案】A and Series",
+    "analysis": "【题目分析】\n本题要求计算对数求和：$\\displaystyle\\sum_{n=1}^{100}\\log_{10}\\!\\left(3^{\\,1-n}\\right)$。解题的关键是利用对数性质将幂指数提取出来，将求和转化为等差数列求和。\n\n【解题步骤】\n第一步：利用对数性质 $\\log_b(a^k)=k\\log_b a$，将通项化简：\n$$\\log_{10}\\!\\left(3^{\\,1-n}\\right)=(1-n)\\log_{10}3$$\n\n第二步：将常数因子 $\\log_{10}3$ 提取到求和号外：\n$$\\sum_{n=1}^{100}(1-n)\\log_{10}3=\\left(\\sum_{n=1}^{100}(1-n)\\right)\\log_{10}3$$\n\n第三步：计算 $\\sum_{n=1}^{100}(1-n)$。展开各项：\n$$n=1:\\ 1-1=0,\\quad n=2:\\ 1-2=-1,\\quad n=3:\\ 1-3=-2,\\ \\ldots,\\quad n=100:\\ 1-100=-99$$\n即求 $0+(-1)+(-2)+\\cdots+(-99)$，共 $100$ 项，是首项为 $0$、末项为 $-99$ 的等差数列。\n\n第四步：用等差数列求和公式 $S_n=\\dfrac{n}{2}(a_1+a_n)$：\n$$S_{100}=\\frac{100}{2}(0+(-99))=50\\times(-99)=-4950$$\n\n第五步：代回原式，得最终结果 $-4950\\log_{10}3$。\n\n【快捷思路】\n$\\sum_{n=1}^{100}(1-n)=\\sum_{n=1}^{100}1-\\sum_{n=1}^{100}n=100-\\frac{100\\times 101}{2}=100-5050=-4950$。直接乘以 $\\log_{10}3$ 即可。这种拆项法比逐项展开更快。\n\n【正确答案】A",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Algebra"
-    ]
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "c.arithmetic_series",
+      "a3.logarithm_laws"
+    ],
+    "skills": [
+      "logarithm-power-rule",
+      "arithmetic-series-sum",
+      "sigma-notation"
+    ],
+    "primary_section": "c.arithmetic_series"
   },
   {
     "id": "2022-P1-Q12",
@@ -9948,12 +10132,29 @@ window.QUESTIONS = [
       "E": "$-9$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n题目给出一族抛物线 $y_k=2\\!\\left(x-\\dfrac{k}{2}\\right)^{\\!2}+\\dfrac{k^2}{2}+4k+3$，其中 $k$ 为任意实数。每条抛物线的顶点纵坐标随 $k$ 变化，要求在所有抛物线的所有顶点中，找到纵坐标最小的那个点 $(a,b)$，并计算 $a+b$。这是一个两层最值问题：先对每条抛物线求最小值，再在所有最小值中求最小值。\n\n【解题步骤】\n第一步：识别抛物线的顶点。$y_k$ 已给出完全平方形式 $y_k=2(x-\\frac{k}{2})^2+(\\frac{k^2}{2}+4k+3)$。由于二次项系数 $2>0$，每条抛物线开口向上，其最小值（顶点纵坐标）为：\n$$x=\\frac{k}{2},\\quad y=\\frac{k^2}{2}+4k+3$$\n即第 $k$ 条抛物线的顶点为 $\\left(\\dfrac{k}{2},\\ \\dfrac{k^2}{2}+4k+3\\right)$。\n\n第二步：求所有顶点中纵坐标的最小值。令 $h(k)=\\dfrac{k^2}{2}+4k+3$，对 $k$ 求最小值。可用配方法：\n$$h(k)=\\frac{1}{2}(k^2+8k+6)=\\frac{1}{2}\\bigl[(k+4)^2-10\\bigr]=\\frac{(k+4)^2}{2}-5$$\n当 $k=-4$ 时，$h(k)$ 取最小值 $-5$。\n\n第三步：求对应的横坐标。$k=-4$ 时，$x=\\dfrac{k}{2}=\\dfrac{-4}{2}=-2$。\n\n第四步：因此纵坐标最小的顶点为 $(-2,-5)$，即 $a=-2$，$b=-5$，故 $a+b=-7$。\n\n【快捷思路】\n$h(k)=\\frac{k^2}{2}+4k+3$ 对 $k$ 求导得 $h'(k)=k+4$，令 $h'(k)=0$ 得 $k=-4$，代入得最小值 $-5$，对应 $x=-2$，$a+b=-7$。求导法比配方法更直接。\n\n【正确答案】D Geometry",
+    "analysis": "【题目分析】\n题目给出一族抛物线 $y_k=2\\!\\left(x-\\dfrac{k}{2}\\right)^{\\!2}+\\dfrac{k^2}{2}+4k+3$，其中 $k$ 为任意实数。每条抛物线的顶点纵坐标随 $k$ 变化，要求在所有抛物线的所有顶点中，找到纵坐标最小的那个点 $(a,b)$，并计算 $a+b$。这是一个两层最值问题：先对每条抛物线求最小值，再在所有最小值中求最小值。\n\n【解题步骤】\n第一步：识别抛物线的顶点。$y_k$ 已给出完全平方形式 $y_k=2(x-\\frac{k}{2})^2+(\\frac{k^2}{2}+4k+3)$。由于二次项系数 $2>0$，每条抛物线开口向上，其最小值（顶点纵坐标）为：\n$$x=\\frac{k}{2},\\quad y=\\frac{k^2}{2}+4k+3$$\n即第 $k$ 条抛物线的顶点为 $\\left(\\dfrac{k}{2},\\ \\dfrac{k^2}{2}+4k+3\\right)$。\n\n第二步：求所有顶点中纵坐标的最小值。令 $h(k)=\\dfrac{k^2}{2}+4k+3$，对 $k$ 求最小值。可用配方法：\n$$h(k)=\\frac{1}{2}(k^2+8k+6)=\\frac{1}{2}\\bigl[(k+4)^2-10\\bigr]=\\frac{(k+4)^2}{2}-5$$\n当 $k=-4$ 时，$h(k)$ 取最小值 $-5$。\n\n第三步：求对应的横坐标。$k=-4$ 时，$x=\\dfrac{k}{2}=\\dfrac{-4}{2}=-2$。\n\n第四步：因此纵坐标最小的顶点为 $(-2,-5)$，即 $a=-2$，$b=-5$，故 $a+b=-7$。\n\n【快捷思路】\n$h(k)=\\frac{k^2}{2}+4k+3$ 对 $k$ 求导得 $h'(k)=k+4$，令 $h'(k)=0$ 得 $k=-4$，代入得最小值 $-5$，对应 $x=-2$，$a+b=-7$。求导法比配方法更直接。\n\n【正确答案】D",
     "images": null,
     "has_image": false,
     "related_topics": [
+      "Graphs",
       "Differentiation"
-    ]
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "i_functions_graphs",
+      "f_differentiation"
+    ],
+    "sections": [
+      "d.parabola_vertices",
+      "i.quadratic_graphs",
+      "f.optimisation"
+    ],
+    "skills": [
+      "vertex-form",
+      "parameter-minimisation",
+      "completing-the-square"
+    ],
+    "primary_section": "d.parabola_vertices"
   },
   {
     "id": "2022-P1-Q13",
@@ -9976,7 +10177,27 @@ window.QUESTIONS = [
     "answer": "A",
     "analysis": "【题目分析】\n已知 $(a^3 + \\frac{2}{b^3})(\\frac{2}{a^3} - b^3) = \\sqrt{2}$，其中 $a$、$b$ 为实数，求 $ab$ 的最小值。这是一道典型的代数题，通过展开括号后引入换元，将复杂表达式转化为可解的二次方程。\n\n【解题步骤】\n第一步，展开左边括号：\n$(a^3 + \\frac{2}{b^3})(\\frac{2}{a^3} - b^3) = 2 - a^3 b^3 + \\frac{4}{a^3 b^3} - 2 = \\frac{4}{a^3 b^3} - a^3 b^3$\n于是得到 $\\frac{4}{a^3 b^3} - a^3 b^3 = \\sqrt{2}$。\n\n第二步，令 $x = a^3 b^3$，则方程变为 $\\frac{4}{x} - x = \\sqrt{2}$。两边同乘 $x$ 整理得 $x^2 + \\sqrt{2}x - 4 = 0$。\n\n第三步，用求根公式解二次方程：\n$x = \\frac{-\\sqrt{2} \\pm \\sqrt{2 + 16}}{2} = \\frac{-\\sqrt{2} \\pm 3\\sqrt{2}}{2}$\n解得 $x = -2\\sqrt{2}$ 或 $x = \\sqrt{2}$。\n\n第四步，注意 $x = (ab)^3$，所以 $ab = x^{1/3}$。要使 $ab$ 最小，取 $x = -2\\sqrt{2} = -2^{3/2}$，于是 $ab = (-2^{3/2})^{1/3} = -2^{1/2} = -\\sqrt{2}$。\n\n【快捷思路】\n展开后直接看出只含 $a^3 b^3$ 这一整体量，换元 $x = a^3 b^3$ 一步到位转化为二次方程。求最小值时取负根即可，利用指数运算法则 $(2^{3/2})^{1/3} = 2^{1/2}$ 快速得出结果。\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a1_algebra_basics",
+      "a2_equations_inequalities",
+      "a3_exponents_logarithms"
+    ],
+    "sections": [
+      "a1.algebraic_substitution",
+      "a2.quadratic_equations",
+      "a3.indices_and_surds"
+    ],
+    "skills": [
+      "substitution",
+      "quadratic-solving",
+      "index-laws",
+      "least-value-from-roots"
+    ],
+    "primary_section": "a1.algebraic_substitution"
   },
   {
     "id": "2022-P1-Q14",
@@ -9985,7 +10206,7 @@ window.QUESTIONS = [
     "num": 14,
     "topic": "Trigonometry",
     "difficulty": 3,
-    "question": "A circle has centre $O$ and radius 6.\n\n$P, Q$ and $R$ are points on the circumference with angle $POQ \\geq \\frac{\\pi}{2}$\n\nThe area of the triangle $POQ$ is $9\\sqrt{3}$\n\nWhat is the greatest possible area of triangle $PRQ$?",
+    "question": "A circle has centre $O$ and radius 6.\n\n$P, Q$ and $R$ are points on the circumference with $\\angle POQ \\geq \\frac{\\pi}{2}$\n\nThe area of the triangle $POQ$ is $9\\sqrt{3}$\n\nWhat is the greatest possible area of triangle $PRQ$?",
     "options": {
       "A": "$18 + 9\\sqrt{3}$",
       "B": "$18\\sqrt{3}$",
@@ -9997,7 +10218,25 @@ window.QUESTIONS = [
     "answer": "D",
     "analysis": "【题目分析】\n圆 $O$ 半径为 $6$，$P$、$Q$、$R$ 在圆周上，$\\angle POQ \\geq \\frac{\\pi}{2}$，三角形 $POQ$ 面积为 $9\\sqrt{3}$。求三角形 $PRQ$ 面积的最大值。这是圆的几何与三角函数综合题。\n\n【解题步骤】\n第一步，利用三角形面积公式 $A = \\frac{1}{2}ab \\sin C$ 求 $\\angle POQ$。设 $\\angle POQ = 2\\theta$，则\n$\\frac{1}{2} \\times 6 \\times 6 \\times \\sin 2\\theta = 9\\sqrt{3}$，得 $\\sin 2\\theta = \\frac{\\sqrt{3}}{2}$。\n由 $2\\theta \\geq \\frac{\\pi}{2}$ 知 $2\\theta = \\frac{2\\pi}{3}$，即 $\\theta = \\frac{\\pi}{3}$。\n\n第二步，求弦 $PQ$ 的长度。作 $O$ 到 $PQ$ 的垂线交于 $S$，则 $PS = 6 \\sin\\theta = 6 \\sin\\frac{\\pi}{3} = 3\\sqrt{3}$，故 $PQ = 6\\sqrt{3}$。同时 $OS = 6 \\cos\\theta = 6 \\cos\\frac{\\pi}{3} = 3$。\n\n第三步，固定 $PQ$ 为底边，三角形 $PRQ$ 的面积为 $\\frac{1}{2} \\times PQ \\times h$，其中 $h$ 是 $R$ 到 $PQ$ 的距离。$R$ 在圆周上，$h$ 的最大值出现在 $R$ 位于 $PQ$ 对侧最远处，此时高为 $RO + OS = 6 + 3 = 9$。\n\n第四步，最大面积为 $\\frac{1}{2} \\times 6\\sqrt{3} \\times 9 = 27\\sqrt{3}$。\n\n【快捷思路】\n核心思想是固定底边 $PQ$ 后面积仅取决于高。圆上一点到固定弦的最大距离等于半径加弦心距，直接得到最大高为 $6+3=9$，一步算出结果。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "e.triangle_area_sine_rule",
+      "d.circle_chords"
+    ],
+    "skills": [
+      "area-with-sine",
+      "ambiguous-angle-selection",
+      "chord-length",
+      "maximise-height-to-fixed-chord"
+    ],
+    "primary_section": "e.triangle_area_sine_rule"
   },
   {
     "id": "2022-P1-Q15",
@@ -10020,7 +10259,28 @@ window.QUESTIONS = [
     "answer": "H",
     "analysis": "【题目分析】\n抛物线 $p(x) = 8 - 2x^2$ 和 $q(x) = x^2 - 2$ 围成区域内画一个边平行于坐标轴的矩形，求矩形面积的最大值。这是典型的优化问题，需要建立面积函数后用微积分求极值。\n\n【解题步骤】\n第一步，求两曲线交点。令 $8 - 2x^2 = x^2 - 2$，得 $3x^2 = 10$，即 $x = \\pm\\sqrt{\\frac{10}{3}}$。两曲线关于 $y$ 轴对称，围成一个上下封闭的区域。\n\n第二步，设矩形左右边界在 $x = \\pm a$（$0 < a < \\sqrt{\\frac{10}{3}}$）。矩形宽度为 $2a$，高度为 $(8 - 2a^2) - (a^2 - 2) = 10 - 3a^2$。\n\n第三步，面积函数为 $A(a) = 2a(10 - 3a^2) = 20a - 6a^3$。对 $a$ 求导得 $A'(a) = 20 - 18a^2$。\n\n第四步，令 $A'(a) = 0$，解得 $a = \\sqrt{\\frac{10}{9}} = \\frac{\\sqrt{10}}{3}$（取正值）。验证该值在允许范围内。\n\n第五步，代入求最大面积：\n$A = 2 \\cdot \\frac{\\sqrt{10}}{3} \\cdot (10 - 3 \\cdot \\frac{10}{9}) = \\frac{2\\sqrt{10}}{3} \\cdot \\frac{20}{3} = \\frac{40\\sqrt{10}}{9}$。\n\n【快捷思路】\n利用对称性只需一个变量 $a$ 描述矩形。面积函数 $A(a) = 20a - 6a^3$ 求导后 $a^2 = \\frac{10}{9}$ 代回时巧妙利用 $10 - 3a^2 = 10 - \\frac{10}{3} = \\frac{20}{3}$ 简化计算。\n\n【正确答案】H",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs",
+      "Coordinate Geometry"
+    ],
+    "modules": [
+      "f_differentiation",
+      "i_functions_graphs",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "f.optimisation",
+      "i.area_between_curves",
+      "d.axis_parallel_rectangles"
+    ],
+    "skills": [
+      "symmetry",
+      "area-function-modelling",
+      "differentiate-cubic",
+      "optimisation"
+    ],
+    "primary_section": "f.optimisation"
   },
   {
     "id": "2022-P1-Q16",
@@ -10041,7 +10301,27 @@ window.QUESTIONS = [
     "answer": "B",
     "analysis": "【题目分析】\n已知 $7x^4 - 6x^2 + 1 = 0$ 的解为 $\\pm\\cos\\theta$ 和 $\\pm\\cos\\beta$，求以 $\\pm\\sin\\theta$ 和 $\\pm\\sin\\beta$ 为解的方程。本题巧妙地将四次方程与三角恒等式结合，核心是利用 $\\sin^2 = 1 - \\cos^2$ 的关系做根的变换。\n\n【解题步骤】\n第一步，将原方程视为 $x^2$ 的二次方程。设 $y = x^2$，则 $7y^2 - 6y + 1 = 0$。\n\n第二步，求根公式得 $y = \\frac{6 \\pm \\sqrt{36 - 28}}{14} = \\frac{6 \\pm 2\\sqrt{2}}{14} = \\frac{3 \\pm \\sqrt{2}}{7}$。\n这两个值分别是 $\\cos^2\\theta$ 和 $\\cos^2\\beta$。\n\n第三步，利用 $\\sin^2\\theta = 1 - \\cos^2\\theta$ 和 $\\sin^2\\beta = 1 - \\cos^2\\beta$，得\n$\\sin^2\\theta$ 和 $\\sin^2\\beta$ 分别为 $\\frac{3 \\mp \\sqrt{2}}{7}$ 的补，即 $\\frac{4 \\mp \\sqrt{2}}{7}$。\n\n第四步，以 $\\pm\\sin\\theta$、$\\pm\\sin\\beta$ 为根的方程相当于 $x^2$ 的两个值为 $\\frac{4 \\pm \\sqrt{2}}{7}$。构造二次方程：\n$(x^2 - \\frac{4+\\sqrt{2}}{7})(x^2 - \\frac{4-\\sqrt{2}}{7}) = 0$\n\n第五步，展开：$x^4 - (\\frac{4+\\sqrt{2}}{7} + \\frac{4-\\sqrt{2}}{7})x^2 + \\frac{4+\\sqrt{2}}{7} \\cdot \\frac{4-\\sqrt{2}}{7} = 0$\n即 $x^4 - \\frac{8}{7}x^2 + \\frac{16-2}{49} = 0$，也就是 $x^4 - \\frac{8}{7}x^2 + \\frac{2}{7} = 0$。\n\n第六步，两边乘以 $7$ 得 $7x^4 - 8x^2 + 2 = 0$。\n\n【快捷思路】\n利用根与系数关系：原方程两根之和 $\\cos^2\\theta + \\cos^2\\beta = \\frac{6}{7}$，则 $\\sin^2\\theta + \\sin^2\\beta = 2 - \\frac{6}{7} = \\frac{8}{7}$。原方程两根之积 $\\cos^2\\theta \\cos^2\\beta = \\frac{1}{7}$，则 $\\sin^2\\theta \\sin^2\\beta = 1 - \\frac{6}{7} + \\frac{1}{7} = \\frac{2}{7}$。直接写出新方程 $x^4 - \\frac{8}{7}x^2 + \\frac{2}{7} = 0$，无需逐个求根。\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Trigonometry"
+    ],
+    "modules": [
+      "a1_algebra_basics",
+      "a2_equations_inequalities",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "a1.polynomial_root_transformations",
+      "a2.quadratic_in_disguise",
+      "e.pythagorean_identity"
+    ],
+    "skills": [
+      "substitution-x-squared",
+      "root-transformation",
+      "vieta-relations",
+      "pythagorean-identity"
+    ],
+    "primary_section": "a1.polynomial_root_transformations"
   },
   {
     "id": "2022-P1-Q17",
@@ -10060,14 +10340,29 @@ window.QUESTIONS = [
       "F": "$4 < x < 5$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n已知三角形两条边长分别为 $x-1$ 和 $-x^2+6x-5$，其中夹角为 $30^\\circ$，求使存在两个非全等三角形的 $x$ 的取值范围。这是典型的 SSA（两边及一非夹角）模糊情形问题。\n\n【解题步骤】\n首先确保两边长均为正：$x-1>0$ 得 $x>1$；$-x^2+6x-5=-(x-1)(x-5)>0$ 得 $1<x<5$。综合得 $1<x<5$。\n\n对于 SSA 模糊情形，设已知边 $a=x-1$（对已知角 $30^\\circ$），邻边 $b=-x^2+6x-5$。存在两个非全等三角形的条件是：\n1. $a<b$，即 $x-1<-x^2+6x-5$，整理得 $x^2-5x+4<0$，即 $(x-1)(x-4)<0$，故 $1<x<4$。\n2. $a>b\\sin 30^\\circ$，即 $x-1>\\frac{1}{2}(-x^2+6x-5)$，整理得 $2x-2>-x^2+6x-5$，即 $x^2-4x+3>0$，$(x-1)(x-3)>0$，故 $x<1$ 或 $x>3$。\n\n两个不等式联立得 $3<x<4$，该范围已在 $1<x<5$ 内，满足所有正性条件。\n\n【快捷思路】\n识别 SSA 模糊情形后直接套用条件：$b\\sin\\theta<a<b$。代入已知量解两个不等式即可，无需画图推导。\n\n【正确答案】D",
+    "analysis": "【题目分析】\n已知三角形两条边长分别为 $x-1$ 和 $-x^2+6x-5$，其中 $30^\\circ$ 是与边 $-x^2+6x-5$ 相邻、与边 $x-1$ 相对的角，求使存在两个非全等三角形的 $x$ 的取值范围。这是典型的 SSA（两边及一非夹角）模糊情形问题。\n\n【解题步骤】\n首先确保两边长均为正：$x-1>0$ 得 $x>1$；$-x^2+6x-5=-(x-1)(x-5)>0$ 得 $1<x<5$。综合得 $1<x<5$。\n\n对于 SSA 模糊情形，设已知边 $a=x-1$（对已知角 $30^\\circ$），邻边 $b=-x^2+6x-5$。存在两个非全等三角形的条件是：\n1. $a<b$，即 $x-1<-x^2+6x-5$，整理得 $x^2-5x+4<0$，即 $(x-1)(x-4)<0$，故 $1<x<4$。\n2. $a>b\\sin 30^\\circ$，即 $x-1>\\frac{1}{2}(-x^2+6x-5)$，整理得 $2x-2>-x^2+6x-5$，即 $x^2-4x+3>0$，$(x-1)(x-3)>0$，故 $x<1$ 或 $x>3$。\n\n两个不等式联立得 $3<x<4$，该范围已在 $1<x<5$ 内，满足所有正性条件。\n\n【快捷思路】\n识别 SSA 模糊情形后直接套用条件：$b\\sin\\theta<a<b$。代入已知量解两个不等式即可，无需画图推导。\n\n【正确答案】D",
     "images": {
       "image": "2022 P1 Q17.png"
     },
     "has_image": true,
     "related_topics": [
-      "Coordinate Geometry"
-    ]
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "e.sine_rule_ambiguous_case",
+      "a2.quadratic_inequalities"
+    ],
+    "skills": [
+      "ambiguous-case-sine-rule",
+      "triangle-existence",
+      "quadratic-inequality-solving",
+      "interval-intersection"
+    ],
+    "primary_section": "e.sine_rule_ambiguous_case"
   },
   {
     "id": "2022-P1-Q18",
@@ -10092,7 +10387,23 @@ window.QUESTIONS = [
     "related_topics": [
       "Functions",
       "Algebra"
-    ]
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "i.graph_intersections",
+      "i.polynomial_zero_multiplicity",
+      "a1.polynomial_sign_analysis"
+    ],
+    "skills": [
+      "graph-intersection-counting",
+      "zero-multiplicity",
+      "parameter-analysis",
+      "sign-analysis"
+    ],
+    "primary_section": "i.graph_intersections"
   },
   {
     "id": "2022-P1-Q19",
@@ -10111,12 +10422,28 @@ window.QUESTIONS = [
       "F": "$\\frac{24 - \\pi}{24}$"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n圆 $C_1:x^2+y^2=25$（半径 $5$，圆心原点），圆 $C_2$ 半径 $4$，圆心 $(a,b)$ 在矩形区域 $-2\\le a\\le 2$，$-3\\le b\\le 3$ 内均匀分布。求两圆相交的概率。\n\n【解题步骤】\n首先判断 $C_2$ 的圆心区域是否全部在 $C_1$ 内：矩形角点到原点最远距离为 $\\sqrt{2^2+3^2}=\\sqrt{13}<5$，因此整个矩形区域都在 $C_1$ 内部。\n\n两圆相交的条件：当 $C_2$ 的圆心 $(a,b)$ 完全在 $C_1$ 内部时，$C_2$ 不与 $C_1$ 相交当且仅当 $C_2$ 完全包含在 $C_1$ 内。由于 $C_1$ 半径为 $5$、$C_2$ 半径为 $4$，$C_2$ 完全在 $C_1$ 内部的条件是圆心距 $d<5-4=1$，即 $\\sqrt{a^2+b^2}<1$。\n\n反之，两圆相交当且仅当 $d\\ge 1$，即圆心 $(a,b)$ 不在半径为 $1$ 的小圆内。\n\n样本空间面积为矩形面积 $4\\times 6=24$。不相交区域是半径 $1$ 的圆，面积为 $\\pi$，且该小圆完全落在矩形内（因为半径 $1<2$）。因此相交区域面积为 $24-\\pi$。\n\n所求概率为 $\\frac{24-\\pi}{24}$。\n\n【快捷思路】\n利用两圆位置关系：内切时圆心距为 $R-r=1$。在 $C_1$ 内部且 $d\\ge 1$ 时两圆相交。直接计算几何概率：$(24-\\pi)/24$。\n\n【正确答案】F",
+    "analysis": "【题目分析】\n圆 $C_1:x^2+y^2=25$（半径 $5$，圆心原点），圆 $C_2$ 半径 $4$，圆心 $(a,b)$ 在矩形区域 $-2\\le a\\le 2$，$-3\\le b\\le 3$ 内均匀分布。求两圆相交的概率。\n\n【解题步骤】\n首先判断 $C_2$ 的圆心区域是否全部在 $C_1$ 内：矩形角点到原点最远距离为 $\\sqrt{2^2+3^2}=\\sqrt{13}<5$，因此整个矩形区域都在 $C_1$ 内部。\n\n两圆相交的条件：当 $C_2$ 的圆心 $(a,b)$ 完全在 $C_1$ 内部时，$C_2$ 不与 $C_1$ 相交当且仅当 $C_2$ 完全包含在 $C_1$ 内。由于 $C_1$ 半径为 $5$、$C_2$ 半径为 $4$，$C_2$ 完全在 $C_1$ 内部的条件是圆心距 $d<5-4=1$，即 $\\sqrt{a^2+b^2}<1$。\n\n反之，两圆相交（含相切）当且仅当 $d\\ge 1$，即圆心 $(a,b)$ 不在半径为 $1$ 的小圆内。\n\n样本空间面积为矩形面积 $4\\times 6=24$。不相交区域是半径 $1$ 的圆，面积为 $\\pi$，且该小圆完全落在矩形内（因为半径 $1<2$）。因此相交区域面积为 $24-\\pi$。\n\n所求概率为 $\\frac{24-\\pi}{24}$。\n\n【快捷思路】\n利用两圆位置关系：内切时圆心距为 $R-r=1$。在 $C_1$ 内部且 $d\\ge 1$ 时两圆相交。直接计算几何概率：$(24-\\pi)/24$。\n\n【正确答案】F",
     "images": null,
     "has_image": false,
     "related_topics": [
       "Coordinate Geometry"
-    ]
+    ],
+    "modules": [
+      "j_sets_probability",
+      "d_coordinate_geometry"
+    ],
+    "sections": [
+      "j.geometric_probability",
+      "d.circle_intersections",
+      "d.coordinate_regions"
+    ],
+    "skills": [
+      "geometric-probability",
+      "area-complement",
+      "circle-intersection-condition",
+      "rectangle-region-analysis"
+    ],
+    "primary_section": "j.geometric_probability"
   },
   {
     "id": "2022-P1-Q20",
@@ -10140,7 +10467,24 @@ window.QUESTIONS = [
     "related_topics": [
       "Functions",
       "Algebra"
-    ]
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.absolute_value_graphs",
+      "i.graph_intersections",
+      "i.parameter_cases",
+      "a2.equations_with_modulus"
+    ],
+    "skills": [
+      "absolute-value-graph-sketching",
+      "case-analysis",
+      "intersection-counting",
+      "parameter-analysis"
+    ],
+    "primary_section": "i.graph_intersections"
   },
   {
     "id": "2022-P2-Q1",
