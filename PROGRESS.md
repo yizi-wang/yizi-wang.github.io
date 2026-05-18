@@ -33,7 +33,7 @@
 - [x] src/content/docs/step/step2-2000.md
 - [x] src/content/docs/step/step2-1999.md
 - [x] src/content/docs/step/step2-1998.md
-- [ ] src/content/docs/step/step3-2024.md
+- [x] src/content/docs/step/step3-2024.md
 - [ ] src/content/docs/step/step3-2023.md
 - [ ] src/content/docs/step/step3-2022.md
 - [ ] src/content/docs/step/step3-2021.md
