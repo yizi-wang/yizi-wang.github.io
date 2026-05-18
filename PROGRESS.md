@@ -26,7 +26,7 @@
 - [x] src/content/docs/step/step2-2007.md
 - [x] src/content/docs/step/step2-2006.md
 - [x] src/content/docs/step/step2-2005.md
-- [ ] src/content/docs/step/step2-2004.md
+- [x] src/content/docs/step/step2-2004.md
 - [ ] src/content/docs/step/step2-2003.md
 - [ ] src/content/docs/step/step2-2002.md
 - [ ] src/content/docs/step/step2-2001.md
