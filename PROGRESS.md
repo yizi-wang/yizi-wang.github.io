@@ -42,7 +42,7 @@
 - [x] src/content/docs/step/step3-2018.md
 - [x] src/content/docs/step/step3-2017.md
 - [x] src/content/docs/step/step3-2016.md
-- [ ] src/content/docs/step/step3-2015.md
+- [x] src/content/docs/step/step3-2015.md
 - [ ] src/content/docs/step/step3-2014.md
 - [ ] src/content/docs/step/step3-2013.md
 - [ ] src/content/docs/step/step3-2012.md
