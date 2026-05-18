@@ -6437,9 +6437,27 @@ window.QUESTIONS = [
       "F": "$\\frac{3x^2 - 10x}{3\\sqrt{x}}$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n求 $f(x) = \\frac{x^3 - 5x^2}{2x\\sqrt{x}}$ 的导数。\n\n【解题步骤】\n先将表达式写成 $x$ 的幂次形式：\n\n$f(x) = \\frac{x^3 - 5x^2}{2x^{3/2}} = \\frac{x^3}{2x^{3/2}} - \\frac{5x^2}{2x^{3/2}} = \\frac{1}{2}x^{3/2} - \\frac{5}{2}x^{1/2}$\n\n对各项求导：\n\n$f'(x) = \\frac{1}{2} \\cdot \\frac{3}{2}x^{1/2} - \\frac{5}{2} \\cdot \\frac{1}{2}x^{-1/2} = \\frac{3}{4}x^{1/2} - \\frac{5}{4}x^{-1/2}$\n\n将结果整理为选项中的形式：\n\n$f'(x) = \\frac{3\\sqrt{x}}{4} - \\frac{5}{4\\sqrt{x}} = \\frac{3\\sqrt{x} \\cdot \\sqrt{x} - 5}{4\\sqrt{x}} = \\frac{3x - 5}{4\\sqrt{x}}$\n\n这对应选项 C。",
+    "analysis": "【题目分析】\n求 $f(x) = \\frac{x^3 - 5x^2}{2x\\sqrt{x}}$ 的导数。\n\n【解题步骤】\n先将表达式写成 $x$ 的幂次形式：\n\n$f(x) = \\frac{x^3 - 5x^2}{2x^{3/2}} = \\frac{x^3}{2x^{3/2}} - \\frac{5x^2}{2x^{3/2}} = \\frac{1}{2}x^{3/2} - \\frac{5}{2}x^{1/2}$\n\n对各项求导：\n\n$f'(x) = \\frac{1}{2} \\cdot \\frac{3}{2}x^{1/2} - \\frac{5}{2} \\cdot \\frac{1}{2}x^{-1/2} = \\frac{3}{4}x^{1/2} - \\frac{5}{4}x^{-1/2}$\n\n将结果整理为选项中的形式：\n\n$f'(x) = \\frac{3\\sqrt{x}}{4} - \\frac{5}{4\\sqrt{x}} = \\frac{3\\sqrt{x} \\cdot \\sqrt{x} - 5}{4\\sqrt{x}} = \\frac{3x - 5}{4\\sqrt{x}}$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "f_differentiation",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "f.power_function_derivatives",
+      "a1.index_laws"
+    ],
+    "primary_section": "f.power_function_derivatives",
+    "skills": [
+      "simplify-before-differentiating",
+      "index-laws",
+      "power-rule",
+      "fraction-rearrangement"
+    ]
   },
   {
     "id": "2020-P1-Q2",
@@ -6458,16 +6476,32 @@ window.QUESTIONS = [
       "F": "$10$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n$(2x+1)$ 和 $(x-2)$ 是 $2x^3+px^2+q$ 的因式。求 $2p+q$ 的值。\n\n【解题步骤】\n**Step 1:** 利用因式定理\n\n若 $(2x+1)$ 是因式，则 $x=-\\frac{1}{2}$ 时多项式为 0：\n$2(-\\frac{1}{2})^3 + p(-\\frac{1}{2})^2 + q = 0$\n$-\\frac{1}{4} + \\frac{p}{4} + q = 0$，即 $p + 4q = 1$ ……①\n\n若 $(x-2)$ 是因式，则 $x=2$ 时多项式为 0：\n$2(2)^3 + p(2)^2 + q = 0$\n$16 + 4p + q = 0$，即 $4p + q = -16$ ……②\n\n**Step 2:** 解方程组\n从①②相减消 $q$：$3p - 3q = -17$，即 $\\frac{15}{4}p = -\\frac{65}{4}$\n\n更直接：由② $q = -16 - 4p$，代入①：$p + 4(-16-4p) = 1$，$p - 64 - 16p = 1$，$-15p = 65$，$p = -\\frac{13}{3}$\n\n$q = -16 - 4(-\\frac{13}{3}) = -16 + \\frac{52}{3} = \\frac{4}{3}$\n\n**Step 3:** 求 $2p+q$\n$2p + q = 2(-\\frac{13}{3}) + \\frac{4}{3} = -\\frac{26}{3} + \\frac{4}{3} = -\\frac{22}{3}$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n$(2x+1)$ 和 $(x-2)$ 是 $2x^3+px^2+q$ 的因式。求 $2p+q$ 的值。\n\n【解题步骤】\n**Step 1:** 利用因式定理\n\n若 $(2x+1)$ 是因式，则 $x=-\\frac{1}{2}$ 时多项式为 0：\n$2(-\\frac{1}{2})^3 + p(-\\frac{1}{2})^2 + q = 0$\n$-\\frac{1}{4} + \\frac{p}{4} + q = 0$，即 $p + 4q = 1$ ……①\n\n若 $(x-2)$ 是因式，则 $x=2$ 时多项式为 0：\n$2(2)^3 + p(2)^2 + q = 0$\n$16 + 4p + q = 0$，即 $4p + q = -16$ ……②\n\n**Step 2:** 解方程组\n从①②相减消 $q$：$3p - 3q = -17$，即 $\\frac{15}{4}p = -\\frac{65}{4}$\n\n更直接：由② $q = -16 - 4p$，代入①：$p + 4(-16-4p) = 1$，$p - 64 - 16p = 1$，$-15p = 65$，$p = -\\frac{13}{3}$\n\n$q = -16 - 4(-\\frac{13}{3}) = -16 + \\frac{52}{3} = \\frac{4}{3}$\n\n**Step 3:** 求 $2p+q$\n$2p + q = 2(-\\frac{13}{3}) + \\frac{4}{3} = -\\frac{26}{3} + \\frac{4}{3} = -\\frac{22}{3}$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "a2_equations_inequalities",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a2.factor_theorem",
+      "a1.polynomial_factorisation"
+    ],
+    "primary_section": "a2.factor_theorem",
+    "skills": [
+      "factor-theorem",
+      "substitution-at-root",
+      "linear-system-solving",
+      "parameter-evaluation"
+    ]
   },
   {
     "id": "2020-P1-Q3",
     "year": 2020,
     "paper": 1,
     "num": 3,
-    "topic": "Trigonometry",
+    "topic": "Algebra",
     "difficulty": 3,
     "question": "Find the complete set of values of $x$ for which\n\n$$(x + 4)(x + 3)(1 - x) > 0 \\text{ and } (x + 2)(x - 2) < 0$$",
     "options": {
@@ -6480,16 +6514,31 @@ window.QUESTIONS = [
       "G": "$-4 < x < -2 \\text{ or } x > 1$"
     },
     "answer": "B",
-    "analysis": "【题目分析】\n求满足两个不等式的 $x$ 值：$(x+4)(x+3)(1-x) > 0$ 且 $(x+2)(x-2) < 0$\n\n【解题步骤】\n**分析第一个不等式** $(x+4)(x+3)(1-x) > 0$\n\n三个根：$x=-4$, $x=-3$, $x=1$\n\n用数轴法分析各区间乘积符号：\n\n| 区间 | $x+4$ | $x+3$ | $1-x$ | 乘积 |\n|------|-------|-------|-------|------|\n| $x < -4$ | $-$ | $-$ | $+$ | $+$ ✓ |\n| $-4 < x < -3$ | $+$ | $-$ | $+$ | $-$ |\n| $-3 < x < 1$ | $+$ | $+$ | $+$ | $+$ ✓ |\n| $x > 1$ | $+$ | $+$ | $-$ | $-$ |\n\n第一个不等式的解：$x < -4$ 或 $-3 < x < 1$\n\n**分析第二个不等式** $(x+2)(x-2) < 0$\n\n两个根：$x=-2$, $x=2$，乘积为负需一正一负，解为 $-2 < x < 2$\n\n**求交集**\n\n条件1：$x < -4$ 或 $-3 < x < 1$\n条件2：$-2 < x < 2$\n\n$\\{x < -4\\} \\cap \\{-2 < x < 2\\} = \\varnothing$\n\n$\\{-3 < x < 1\\} \\cap \\{-2 < x < 2\\} = -2 < x < 1$\n\n对应选项 B。",
+    "analysis": "【题目分析】\n求满足两个不等式的 $x$ 值：$(x+4)(x+3)(1-x) > 0$ 且 $(x+2)(x-2) < 0$\n\n【解题步骤】\n**分析第一个不等式** $(x+4)(x+3)(1-x) > 0$\n\n三个根：$x=-4$, $x=-3$, $x=1$\n\n用数轴法分析各区间乘积符号：\n\n| 区间 | $x+4$ | $x+3$ | $1-x$ | 乘积 |\n|------|-------|-------|-------|------|\n| $x < -4$ | $-$ | $-$ | $+$ | $+$ ✓ |\n| $-4 < x < -3$ | $+$ | $-$ | $+$ | $-$ |\n| $-3 < x < 1$ | $+$ | $+$ | $+$ | $+$ ✓ |\n| $x > 1$ | $+$ | $+$ | $-$ | $-$ |\n\n第一个不等式的解：$x < -4$ 或 $-3 < x < 1$\n\n**分析第二个不等式** $(x+2)(x-2) < 0$\n\n两个根：$x=-2$, $x=2$，乘积为负需一正一负，解为 $-2 < x < 2$\n\n**求交集**\n\n条件1：$x < -4$ 或 $-3 < x < 1$\n条件2：$-2 < x < 2$\n\n$\\{x < -4\\} \\cap \\{-2 < x < 2\\} = \\varnothing$\n\n$\\{-3 < x < 1\\} \\cap \\{-2 < x < 2\\} = -2 < x < 1$\n\n【正确答案】B",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a2.polynomial_inequalities",
+      "a2.inequality_intersections"
+    ],
+    "primary_section": "a2.inequality_intersections",
+    "skills": [
+      "sign-chart",
+      "critical-points",
+      "interval-intersection",
+      "compound-inequalities"
+    ]
   },
   {
     "id": "2020-P1-Q4",
     "year": 2020,
     "paper": 1,
     "num": 4,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "The 1<sup>st</sup>, 2<sup>nd</sup> and 3<sup>rd</sup> terms of a geometric progression are also the 1<sup>st</sup>, 4<sup>th</sup> and 6<sup>th</sup> terms, respectively, of an arithmetic progression.\n\nThe sum to infinity of the geometric progression is 12.\n\nFind the 1<sup>st</sup> term of the geometric progression.",
     "options": {
@@ -6501,16 +6550,33 @@ window.QUESTIONS = [
       "F": "6"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n几何数列前3项也是某算术数列的第1、4、6项。几何数列无穷和 $= 12$。求首项。\n\n【解题步骤】\n设几何数列首项 $a$，公比 $r$。前3项：$a$, $ar$, $ar^2$\n无穷和：$\\frac{a}{1-r} = 12$，即 $a = 12(1-r)$ ……①\n\n设算术数列首项 $a$，公差 $d$。第1、4、6项：$a$, $a+3d$, $a+5d$\n\n所以 $ar = a+3d$ ……②，$ar^2 = a+5d$ ……③\n\n消去 $d$：$5 \\times$② $- 3 \\times$③ 得 $5ar - 3ar^2 = 2a$\n除以 $a$（$a \\neq 0$）：$5r - 3r^2 = 2$，即 $3r^2 - 5r + 2 = 0$\n因式分解：$(3r-2)(r-1) = 0$，$r = \\frac{2}{3}$ 或 $r = 1$\n\n$r = 1$ 时无穷和发散，舍去。\n$r = \\frac{2}{3}$：$a = 12(1 - \\frac{2}{3}) = 12 \\cdot \\frac{1}{3} = 4$\n\n对应选项 D。",
+    "analysis": "【题目分析】\n几何数列前3项也是某算术数列的第1、4、6项。几何数列无穷和 $= 12$。求首项。\n\n【解题步骤】\n设几何数列首项 $a$，公比 $r$。前3项：$a$, $ar$, $ar^2$\n无穷和：$\\frac{a}{1-r} = 12$，即 $a = 12(1-r)$ ……①\n\n设算术数列首项 $a$，公差 $d$。第1、4、6项：$a$, $a+3d$, $a+5d$\n\n所以 $ar = a+3d$ ……②，$ar^2 = a+5d$ ……③\n\n消去 $d$：$5 \\times$② $- 3 \\times$③ 得 $5ar - 3ar^2 = 2a$\n除以 $a$（$a \\neq 0$）：$5r - 3r^2 = 2$，即 $3r^2 - 5r + 2 = 0$\n因式分解：$(3r-2)(r-1) = 0$，$r = \\frac{2}{3}$ 或 $r = 1$\n\n$r = 1$ 时无穷和发散，舍去。\n$r = \\frac{2}{3}$：$a = 12(1 - \\frac{2}{3}) = 12 \\cdot \\frac{1}{3} = 4$\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series"
+    ],
+    "sections": [
+      "c.arithmetic_geometric_links",
+      "c.geometric_series_infinite_sum"
+    ],
+    "primary_section": "c.arithmetic_geometric_links",
+    "skills": [
+      "arithmetic-geometric-link",
+      "geometric-series-sum",
+      "ratio-equation",
+      "exclude-divergent-ratio"
+    ]
   },
   {
     "id": "2020-P1-Q5",
     "year": 2020,
     "paper": 1,
     "num": 5,
-    "topic": "Algebra",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "The curve $S$ has equation\n\n$$y = px^2 + 6x - q$$\n\nwhere $p$ and $q$ are constants.\n\n$S$ has a line of symmetry at $x = -\\frac{1}{4}$ and touches the $x$-axis at exactly one point.\n\nWhat is the value of $p + 8q$?",
     "options": {
@@ -6521,9 +6587,28 @@ window.QUESTIONS = [
       "E": "38"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n$y = px^2 + 6x - q$，对称轴 $x = -\\frac{1}{4}$，与 $x$ 轴相切。求 $p + 8q$。\n\n【解题步骤】\n对称轴：$x = -\\frac{6}{2p} = -\\frac{3}{p} = -\\frac{1}{4}$，得 $p = 12$\n\n与 $x$ 轴相切：判别式 $= 0$\n$36 - 4p(-q) = 0$\n$36 + 4pq = 0$\n$36 + 4(12)q = 0$\n$q = -\\frac{36}{48} = -\\frac{3}{4}$\n\n$p + 8q = 12 + 8(-\\frac{3}{4}) = 12 - 6 = 6$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n$y = px^2 + 6x - q$，对称轴 $x = -\\frac{1}{4}$，与 $x$ 轴相切。求 $p + 8q$。\n\n【解题步骤】\n对称轴：$x = -\\frac{6}{2p} = -\\frac{3}{p} = -\\frac{1}{4}$，得 $p = 12$\n\n与 $x$ 轴相切：判别式 $= 0$\n$36 - 4p(-q) = 0$\n$36 + 4pq = 0$\n$36 + 4(12)q = 0$\n$q = -\\frac{36}{48} = -\\frac{3}{4}$\n\n$p + 8q = 12 + 8(-\\frac{3}{4}) = 12 - 6 = 6$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.quadratic_parameter_effects",
+      "i.graph_symmetry",
+      "a2.quadratic_discriminant"
+    ],
+    "primary_section": "i.quadratic_parameter_effects",
+    "skills": [
+      "axis-of-symmetry",
+      "discriminant-condition",
+      "quadratic-tangency",
+      "parameter-solving"
+    ]
   },
   {
     "id": "2020-P1-Q6",
@@ -6542,9 +6627,27 @@ window.QUESTIONS = [
       "F": "$7$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n$f(x) = \\frac{1}{5^{2x} - 4 \\cdot 5^x + 7}$，求最大值。\n\n【解题步骤】\n设 $u = 5^x > 0$，则\n\n$f = \\frac{1}{u^2 - 4u + 7} = \\frac{1}{(u-2)^2 + 3}$\n\n分母最小值在 $u = 2$ 时取得，最小值 $= 3$（此时 $5^x = 2$ 有实解）\n\n所以 $f(x)$ 最大值 $= \\frac{1}{3}$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n$f(x) = \\frac{1}{5^{2x} - 4 \\cdot 5^x + 7}$，求最大值。\n\n【解题步骤】\n设 $u = 5^x > 0$，则\n\n$f = \\frac{1}{u^2 - 4u + 7} = \\frac{1}{(u-2)^2 + 3}$\n\n分母最小值在 $u = 2$ 时取得，最小值 $= 3$（此时 $5^x = 2$ 有实解）\n\n所以 $f(x)$ 最大值 $= \\frac{1}{3}$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a3.exponential_substitution",
+      "a2.quadratic_vertex_form"
+    ],
+    "primary_section": "a3.exponential_substitution",
+    "skills": [
+      "exponential-substitution",
+      "complete-the-square",
+      "reciprocal-maximum",
+      "positive-domain-check"
+    ]
   },
   {
     "id": "2020-P1-Q7",
@@ -6553,7 +6656,7 @@ window.QUESTIONS = [
     "num": 7,
     "topic": "Algebra",
     "difficulty": 3,
-    "question": "$$2^{3x} = 8^{(y+3)}$$\n\nand\n\n$$4^{(x+1)} = \\frac{16^{(y+1)}}{8^{(y+3)}}$$\n\nwhat is the value of $x + y$?",
+    "question": "$$2^{3x} = 8^{(y+3)}$$\n\nand\n\n$$4^{(x+1)} = \\frac{16^{(y+1)}}{8^{(y+3)}}$$\n\nWhat is the value of $x + y$?",
     "options": {
       "A": "$-23$",
       "B": "$-22$",
@@ -6563,9 +6666,26 @@ window.QUESTIONS = [
       "F": "$-10$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n解方程组：$2^{3x} = 8^{y+3}$，$4^{x+1} = \\frac{16^{y+1}}{8^{y+3}}$，求 $x+y$。\n\n【解题步骤】\n**统一底数为2：**\n\n方程1：$2^{3x} = (2^3)^{y+3} = 2^{3(y+3)}$，得 $3x = 3(y+3)$，即 $x = y+3$ ……①\n\n方程2：$2^{2(x+1)} = \\frac{2^{4(y+1)}}{2^{3(y+3)}} = 2^{4y+4-3y-9} = 2^{y-5}$\n得 $2(x+1) = y - 5$，即 $2x = y - 7$ ……②\n\n**解方程组：**\n由① $x = y + 3$，代入②：$2(y+3) = y - 7$\n$2y + 6 = y - 7$，$y = -13$\n$x = -13 + 3 = -10$\n\n$x + y = -10 + (-13) = -23$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n解方程组：$2^{3x} = 8^{y+3}$，$4^{x+1} = \\frac{16^{y+1}}{8^{y+3}}$，求 $x+y$。\n\n【解题步骤】\n**统一底数为2：**\n\n方程1：$2^{3x} = (2^3)^{y+3} = 2^{3(y+3)}$，得 $3x = 3(y+3)$，即 $x = y+3$ ……①\n\n方程2：$2^{2(x+1)} = \\frac{2^{4(y+1)}}{2^{3(y+3)}} = 2^{4y+4-3y-9} = 2^{y-5}$\n得 $2(x+1) = y - 5$，即 $2x = y - 7$ ……②\n\n**解方程组：**\n由① $x = y + 3$，代入②：$2(y+3) = y - 7$\n$2y + 6 = y - 7$，$y = -13$\n$x = -13 + 3 = -10$\n\n$x + y = -10 + (-13) = -23$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a3.exponential_equations",
+      "a2.simultaneous_equations"
+    ],
+    "primary_section": "a3.exponential_equations",
+    "skills": [
+      "common-base-conversion",
+      "exponent-laws",
+      "simultaneous-linear-equations"
+    ]
   },
   {
     "id": "2020-P1-Q8",
@@ -6584,16 +6704,35 @@ window.QUESTIONS = [
       "F": "$-2 < p < 2$"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n$f(x) = (p-x)(x+2)$ 的最大值小于 4。求 $p$ 的范围。\n\n【解题步骤】\n展开：$f(x) = -x^2 + (p-2)x + 2p$\n\n开口向下的抛物线，最大值在顶点。配方法：\n\n$f(x) = -\\left(x - \\frac{p-2}{2}\\right)^2 + \\frac{(p-2)^2}{4} + 2p$\n\n最大值 $= \\frac{(p-2)^2}{4} + 2p$\n\n要求最大值 $< 4$：\n\n$\\frac{(p-2)^2}{4} + 2p < 4$\n\n$(p-2)^2 + 8p - 16 < 0$\n\n$p^2 + 4p - 12 < 0$\n\n$(p+6)(p-2) < 0$\n\n$-6 < p < 2$\n\n对应选项 D。",
+    "analysis": "【题目分析】\n$f(x) = (p-x)(x+2)$ 的最大值小于 4。求 $p$ 的范围。\n\n【解题步骤】\n展开：$f(x) = -x^2 + (p-2)x + 2p$\n\n开口向下的抛物线，最大值在顶点。配方法：\n\n$f(x) = -\\left(x - \\frac{p-2}{2}\\right)^2 + \\frac{(p-2)^2}{4} + 2p$\n\n最大值 $= \\frac{(p-2)^2}{4} + 2p$\n\n要求最大值 $< 4$：\n\n$\\frac{(p-2)^2}{4} + 2p < 4$\n\n$(p-2)^2 + 8p - 16 < 0$\n\n$p^2 + 4p - 12 < 0$\n\n$(p+6)(p-2) < 0$\n\n$-6 < p < 2$\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Graphs"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.quadratic_vertex_form",
+      "i.quadratic_parameter_effects"
+    ],
+    "primary_section": "a2.quadratic_vertex_form",
+    "skills": [
+      "quadratic-expansion",
+      "complete-the-square",
+      "maximum-value-condition",
+      "parameter-inequality"
+    ]
   },
   {
     "id": "2020-P1-Q9",
     "year": 2020,
     "paper": 1,
     "num": 9,
-    "topic": "Trigonometry",
+    "topic": "Algebra",
     "difficulty": 3,
     "question": "The quadratic expression $x^2 - 14x + 9$ factorises as $(x - \\alpha)(x - \\beta)$, where $\\alpha$ and $\\beta$ are positive real numbers.\n\nWhich quadratic expression can be factorised as $(x - \\sqrt{\\alpha})(x - \\sqrt{\\beta})$?",
     "options": {
@@ -6605,16 +6744,33 @@ window.QUESTIONS = [
       "F": "$x^2 + 196x + 81$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n$x^2 - 14x + 9 = (x-\\alpha)(x-\\beta)$，$\\alpha, \\beta$ 为正实数。求可分解为 $(x-\\sqrt{\\alpha})(x-\\sqrt{\\beta})$ 的二次表达式。\n\n【解题步骤——利用 $\\alpha$ 和 $\\beta$ 的性质】\n\n由原式展开：$(x-\\alpha)(x-\\beta) = x^2 - (\\alpha+\\beta)x + \\alpha\\beta = x^2 - 14x + 9$\n\n所以 $\\alpha + \\beta = 14$，$\\alpha\\beta = 9$。\n\n目标表达式：$(x-\\sqrt{\\alpha})(x-\\sqrt{\\beta}) = x^2 - (\\sqrt{\\alpha}+\\sqrt{\\beta})x + \\sqrt{\\alpha\\beta}$\n\n**求 $\\sqrt{\\alpha\\beta}$：** 由 $\\alpha\\beta = 9$，得 $\\sqrt{\\alpha\\beta} = \\sqrt{\\alpha} \\cdot \\sqrt{\\beta} = 3$\n\n**求 $\\sqrt{\\alpha}+\\sqrt{\\beta}$：**\n$(\\sqrt{\\alpha}+\\sqrt{\\beta})^2 = \\alpha + \\beta + 2\\sqrt{\\alpha\\beta} = 14 + 2 \\times 3 = 20$\n所以 $\\sqrt{\\alpha}+\\sqrt{\\beta} = \\sqrt{20}$\n\n目标表达式为 $x^2 - \\sqrt{20}\\,x + 3$，对应选项 C。",
+    "analysis": "【题目分析】\n$x^2 - 14x + 9 = (x-\\alpha)(x-\\beta)$，$\\alpha, \\beta$ 为正实数。求可分解为 $(x-\\sqrt{\\alpha})(x-\\sqrt{\\beta})$ 的二次表达式。\n\n【解题步骤——利用 $\\alpha$ 和 $\\beta$ 的性质】\n\n由原式展开：$(x-\\alpha)(x-\\beta) = x^2 - (\\alpha+\\beta)x + \\alpha\\beta = x^2 - 14x + 9$\n\n所以 $\\alpha + \\beta = 14$，$\\alpha\\beta = 9$。\n\n目标表达式：$(x-\\sqrt{\\alpha})(x-\\sqrt{\\beta}) = x^2 - (\\sqrt{\\alpha}+\\sqrt{\\beta})x + \\sqrt{\\alpha\\beta}$\n\n**求 $\\sqrt{\\alpha\\beta}$：** 由 $\\alpha\\beta = 9$，得 $\\sqrt{\\alpha\\beta} = \\sqrt{\\alpha} \\cdot \\sqrt{\\beta} = 3$\n\n**求 $\\sqrt{\\alpha}+\\sqrt{\\beta}$：**\n$(\\sqrt{\\alpha}+\\sqrt{\\beta})^2 = \\alpha + \\beta + 2\\sqrt{\\alpha\\beta} = 14 + 2 \\times 3 = 20$\n所以 $\\sqrt{\\alpha}+\\sqrt{\\beta} = \\sqrt{20}$\n\n目标表达式为 $x^2 - \\sqrt{20}\\,x + 3$，\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "a2.vieta_relations",
+      "a1.surds"
+    ],
+    "primary_section": "a2.vieta_relations",
+    "skills": [
+      "vieta-relations",
+      "surd-products",
+      "construct-quadratic-from-roots"
+    ]
   },
   {
     "id": "2020-P1-Q10",
     "year": 2020,
     "paper": 1,
     "num": 10,
-    "topic": "Algebra",
+    "topic": "Functions",
     "difficulty": 3,
     "question": "The following sequence of transformations is applied to the curve $y = 4x^2$\n\n1. Translation by $\\begin{pmatrix} 3 \\\\ -5 \\end{pmatrix}$\n\n2. Reflection in the $x$-axis\n\n3. Stretch parallel to the $x$-axis with scale factor 2\n\nWhat is the equation of the resulting curve?",
     "options": {
@@ -6628,16 +6784,36 @@ window.QUESTIONS = [
       "H": "$y = 16x^2 - 48x + 41$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n对 $y = 4x^2$ 依次进行三次变换，求最终方程。\n\n【解题步骤】\n从 $y = 4x^2$ 出发，逐步变换：\n\n**变换1：平移 $\\begin{pmatrix}3\\\\-5\\end{pmatrix}$**\n向右平移3，向下平移5：\n$y = 4(x-3)^2 - 5$\n\n**变换2：关于 $x$ 轴反射**\n$y$ 变为 $-y$：\n$y = -4(x-3)^2 + 5$\n\n**变换3：沿 $x$ 轴方向拉伸，scale factor 2**\n$x$ 用 $\\frac{x}{2}$ 替换：\n$y = -4\\left(\\frac{x}{2}-3\\right)^2 + 5 = -4 \\cdot \\frac{(x-6)^2}{4} + 5 = -(x-6)^2 + 5$\n\n展开：$y = -(x^2 - 12x + 36) + 5 = -x^2 + 12x - 31$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n对 $y = 4x^2$ 依次进行三次变换，求最终方程。\n\n【解题步骤】\n从 $y = 4x^2$ 出发，逐步变换：\n\n**变换1：平移 $\\begin{pmatrix}3\\\\-5\\end{pmatrix}$**\n向右平移3，向下平移5：\n$y = 4(x-3)^2 - 5$\n\n**变换2：关于 $x$ 轴反射**\n$y$ 变为 $-y$：\n$y = -4(x-3)^2 + 5$\n\n**变换3：沿 $x$ 轴方向拉伸，scale factor 2**\n$x$ 用 $\\frac{x}{2}$ 替换：\n$y = -4\\left(\\frac{x}{2}-3\\right)^2 + 5 = -4 \\cdot \\frac{(x-6)^2}{4} + 5 = -(x-6)^2 + 5$\n\n展开：$y = -(x^2 - 12x + 36) + 5 = -x^2 + 12x - 31$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra",
+      "Graphs"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.graph_transformations",
+      "a2.quadratic_vertex_form"
+    ],
+    "primary_section": "i.graph_transformations",
+    "skills": [
+      "graph-transformation-order",
+      "translation-vector",
+      "reflection-x-axis",
+      "horizontal-stretch",
+      "quadratic-expansion"
+    ]
   },
   {
     "id": "2020-P1-Q11",
     "year": 2020,
     "paper": 1,
     "num": 11,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The quadratic function shown passes through $(2, 0)$ and $(q, 0)$, where $q > 2$.\n\nWhat is the value of $q$ such that the area of region $R$ equals the area of region $S$?",
     "options": {
@@ -6649,11 +6825,31 @@ window.QUESTIONS = [
       "F": "$\\frac{33}{5}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n二次函数过 $(2,0)$ 和 $(q,0)$，$q > 2$。区域 $R$ 的面积等于区域 $S$ 的面积。求 $q$。\n\n【解题步骤】\n设二次函数为 $y = k(x-2)(x-q)$。$y$ 方向拉伸不改变 $q$，且 $R$ 和 $S$ 面积同时乘 $k$ 后仍相等，故可取 $k = 1$。\n\n**求 $R$ 的面积（$x$ 从 $0$ 到 $2$）：**\n\n$R = \\int_0^2 (x-2)(x-q)\\,dx = \\left[\\frac{x^3}{3} - \\frac{(q+2)x^2}{2} + 2qx\\right]_0^2 = 2q - \\frac{4}{3}$\n\n**求 $S$ 的面积（$x$ 从 $2$ 到 $q$）：**\n\n在 $[2,q]$ 上 $(x-2)(x-q) \\leq 0$，需取负：\n\n$S = -\\int_2^q (x-2)(x-q)\\,dx = \\frac{q^3}{6} - q^2 + 2q - \\frac{4}{3}$\n\n**令 $R = S$：**\n\n$2q - \\frac{4}{3} = \\frac{q^3}{6} - q^2 + 2q - \\frac{4}{3}$\n\n化简得 $\\frac{q^3}{6} - q^2 = 0$，即 $q^2\\left(\\frac{q}{6} - 1\\right) = 0$\n\n因 $q > 2$，得 $q = 6$。\n\n更简洁的方法：$R = S$ 意味着 $\\int_0^q (x-2)(x-q)\\,dx = 0$，直接计算得 $-\\frac{q^3}{6} + q^2 = 0$，同样得 $q = 6$。\n\n对应选项 E。",
+    "analysis": "【题目分析】\n二次函数过 $(2,0)$ 和 $(q,0)$，$q > 2$。区域 $R$ 的面积等于区域 $S$ 的面积。求 $q$。\n\n【解题步骤】\n设二次函数为 $y = k(x-2)(x-q)$。$y$ 方向拉伸不改变 $q$，且 $R$ 和 $S$ 面积同时乘 $k$ 后仍相等，故可取 $k = 1$。\n\n**求 $R$ 的面积（$x$ 从 $0$ 到 $2$）：**\n\n$R = \\int_0^2 (x-2)(x-q)\\,dx = \\left[\\frac{x^3}{3} - \\frac{(q+2)x^2}{2} + 2qx\\right]_0^2 = 2q - \\frac{4}{3}$\n\n**求 $S$ 的面积（$x$ 从 $2$ 到 $q$）：**\n\n在 $[2,q]$ 上 $(x-2)(x-q) \\leq 0$，需取负：\n\n$S = -\\int_2^q (x-2)(x-q)\\,dx = \\frac{q^3}{6} - q^2 + 2q - \\frac{4}{3}$\n\n**令 $R = S$：**\n\n$2q - \\frac{4}{3} = \\frac{q^3}{6} - q^2 + 2q - \\frac{4}{3}$\n\n化简得 $\\frac{q^3}{6} - q^2 = 0$，即 $q^2\\left(\\frac{q}{6} - 1\\right) = 0$\n\n因 $q > 2$，得 $q = 6$。\n\n更简洁的方法：$R = S$ 意味着 $\\int_0^q (x-2)(x-q)\\,dx = 0$，直接计算得 $-\\frac{q^3}{6} + q^2 = 0$，同样得 $q = 6$。\n\n【正确答案】E",
     "images": {
       "image": "2020 P1 Q11.png"
     },
-    "has_image": true
+    "has_image": true,
+    "related_topics": [
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.area_balance",
+      "g.definite_integral_area",
+      "i.quadratic_graphs"
+    ],
+    "primary_section": "g.area_balance",
+    "skills": [
+      "area-by-integration",
+      "quadratic-root-form",
+      "signed-area",
+      "parameter-solving"
+    ]
   },
   {
     "id": "2020-P1-Q12",
@@ -6673,16 +6869,35 @@ window.QUESTIONS = [
       "G": "infinitely many"
     },
     "answer": "D",
-    "analysis": "【题目分析】\n方程 $3\\cos x = \\sqrt{x}$（$x$ 为弧度）有多少实数解？\n\n【解题步骤】\n$y_1 = 3\\cos x$：周期 $2\\pi$，振幅 $3$\n$y_2 = \\sqrt{x}$：单调递增，定义域 $x \\geq 0$\n\n关键观察：\n- 左边 $\\in [-3, 3]$，右边 $\\geq 0$，故只需考虑 $0 \\leq x \\leq 9$（因 $\\sqrt{x} > 3$ 当 $x > 9$）\n- $3\\pi \\approx 9.5$，在 $[0, 9]$ 内约 1.5 个余弦周期\n- $3\\cos 9 < 0$\n\n画 $y = 3\\cos x$ 和 $y = \\sqrt{x}$ 的图像，观察交点：\n- 在 $[0, \\frac{\\pi}{2}]$ 内有一个交点（$3\\cos x$ 从3降到0，$\\sqrt{x}$ 从0升到约1.25）\n- 在 $[\\frac{3\\pi}{2}, 2\\pi]$ 内有一个交点（$3\\cos x$ 回升超过 $\\sqrt{x}$）\n- 在 $[2\\pi, \\frac{5\\pi}{2}]$ 内有一个交点\n\n共 3 个交点。\n\n对应选项 D。",
+    "analysis": "【题目分析】\n方程 $3\\cos x = \\sqrt{x}$（$x$ 为弧度）有多少实数解？\n\n【解题步骤】\n$y_1 = 3\\cos x$：周期 $2\\pi$，振幅 $3$\n$y_2 = \\sqrt{x}$：单调递增，定义域 $x \\geq 0$\n\n关键观察：\n- 左边 $\\in [-3, 3]$，右边 $\\geq 0$，故只需考虑 $0 \\leq x \\leq 9$（因 $\\sqrt{x} > 3$ 当 $x > 9$）\n- $3\\pi \\approx 9.5$，在 $[0, 9]$ 内约 1.5 个余弦周期\n- $3\\cos 9 < 0$\n\n画 $y = 3\\cos x$ 和 $y = \\sqrt{x}$ 的图像，观察交点：\n- 在 $[0, \\frac{\\pi}{2}]$ 内有一个交点（$3\\cos x$ 从3降到0，$\\sqrt{x}$ 从0升到约1.25）\n- 在 $[\\frac{3\\pi}{2}, 2\\pi]$ 内有一个交点（$3\\cos x$ 回升超过 $\\sqrt{x}$）\n- 在 $[2\\pi, \\frac{5\\pi}{2}]$ 内有一个交点\n\n共 3 个交点。\n\n【正确答案】D",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs",
+      "Functions"
+    ],
+    "modules": [
+      "e_trigonometry",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "e.trig_graph_intersections",
+      "i.graph_intersections"
+    ],
+    "primary_section": "e.trig_graph_intersections",
+    "skills": [
+      "domain-restriction",
+      "graph-intersection-counting",
+      "cosine-periodicity",
+      "range-bounding"
+    ]
   },
   {
     "id": "2020-P1-Q13",
     "year": 2020,
     "paper": 1,
     "num": 13,
-    "topic": "Algebra",
+    "topic": "Sequences and Series",
     "difficulty": 3,
     "question": "Find the coefficient of $x^2y^4$ in the expansion of $(1 + x + y^2)^7$",
     "options": {
@@ -6694,16 +6909,34 @@ window.QUESTIONS = [
       "F": "210"
     },
     "answer": "F",
-    "analysis": "【题目分析】\n求 $(1+x+y^2)^7$ 展开式中 $x^2y^4$ 的系数。\n\n【解题步骤】\n将 $(1+x+y^2)^7$ 写为 $(x + (1+y^2))^7$，这样 $x$ 和 $y$ 分离：\n\n$(1+x+y^2)^7 = \\binom{7}{5}x^2(1+y^2)^5 + \\cdots$\n\n只需考虑 $x^2$ 项，$\\binom{7}{5} = \\binom{7}{2} = 21$，所以 $x^2$ 项为 $21x^2(1+y^2)^5$\n\n再展开 $(1+y^2)^5$，求 $y^4$ 项：\n\n$\\binom{5}{2}y^4 = 10y^4$\n\n因此 $x^2y^4$ 项的系数 $= 21 \\times 10 = 210$\n\n对应选项 F。",
+    "analysis": "【题目分析】\n求 $(1+x+y^2)^7$ 展开式中 $x^2y^4$ 的系数。\n\n【解题步骤】\n将 $(1+x+y^2)^7$ 写为 $(x + (1+y^2))^7$，这样 $x$ 和 $y$ 分离：\n\n$(1+x+y^2)^7 = \\binom{7}{5}x^2(1+y^2)^5 + \\cdots$\n\n只需考虑 $x^2$ 项，$\\binom{7}{5} = \\binom{7}{2} = 21$，所以 $x^2$ 项为 $21x^2(1+y^2)^5$\n\n再展开 $(1+y^2)^5$，求 $y^4$ 项：\n\n$\\binom{5}{2}y^4 = 10y^4$\n\n因此 $x^2y^4$ 项的系数 $= 21 \\times 10 = 210$\n\n【正确答案】F",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "c_sequences_series",
+      "a1_algebra_basics"
+    ],
+    "sections": [
+      "c.multinomial_coefficients",
+      "c.binomial_expansion",
+      "a1.coefficient_extraction"
+    ],
+    "primary_section": "c.multinomial_coefficients",
+    "skills": [
+      "coefficient-extraction",
+      "binomial-expansion",
+      "multinomial-selection"
+    ]
   },
   {
     "id": "2020-P1-Q14",
     "year": 2020,
     "paper": 1,
     "num": 14,
-    "topic": "Algebra",
+    "topic": "Integration",
     "difficulty": 3,
     "question": "The area enclosed between the line $y = mx$ and the curve $y = x^3$ is 6.\n\nWhat is the value of $m$?",
     "options": {
@@ -6715,9 +6948,28 @@ window.QUESTIONS = [
       "F": "$2\\sqrt{6}$"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n$y = mx$ 与 $y = x^3$ 围成面积为 6。求 $m$。\n\n【解题步骤】\n$mx = x^3$ 得 $x(x^2 - m) = 0$，交点：$x = 0$, $x = \\pm\\sqrt{m}$\n\n由对称性，只需计算 $x > 0$ 区域的面积，再乘 2：\n\n面积 $= 2\\int_0^{\\sqrt{m}} (mx - x^3)\\,dx = 2\\left[\\frac{mx^2}{2} - \\frac{x^4}{4}\\right]_0^{\\sqrt{m}} = 2\\left(\\frac{m^2}{2} - \\frac{m^2}{4}\\right) = \\frac{m^2}{2}$\n\n$\\frac{m^2}{2} = 6$，$m^2 = 12$，$m = \\sqrt{12} = 2\\sqrt{3}$\n\n对应选项 E。",
+    "analysis": "【题目分析】\n$y = mx$ 与 $y = x^3$ 围成面积为 6。求 $m$。\n\n【解题步骤】\n$mx = x^3$ 得 $x(x^2 - m) = 0$，交点：$x = 0$, $x = \\pm\\sqrt{m}$\n\n由对称性，只需计算 $x > 0$ 区域的面积，再乘 2：\n\n面积 $= 2\\int_0^{\\sqrt{m}} (mx - x^3)\\,dx = 2\\left[\\frac{mx^2}{2} - \\frac{x^4}{4}\\right]_0^{\\sqrt{m}} = 2\\left(\\frac{m^2}{2} - \\frac{m^2}{4}\\right) = \\frac{m^2}{2}$\n\n$\\frac{m^2}{2} = 6$，$m^2 = 12$，$m = \\sqrt{12} = 2\\sqrt{3}$\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Graphs",
+      "Algebra"
+    ],
+    "modules": [
+      "g_integration",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "g.area_between_curves",
+      "i.curve_intersections"
+    ],
+    "primary_section": "g.area_between_curves",
+    "skills": [
+      "area-between-curves",
+      "symmetry",
+      "intersection-solving",
+      "parameter-solving"
+    ]
   },
   {
     "id": "2020-P1-Q15",
@@ -6736,16 +6988,34 @@ window.QUESTIONS = [
       "F": "$\\frac{257}{16}$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n解方程 $(\\log_2 x)^4 + 12\\left(\\log_2 \\frac{1}{x}\\right)^2 - 2^6 = 0$，求两个实数 $x$ 的正差。\n\n【解题步骤】\n\n首先化简：$\\log_2 \\frac{1}{x} = -\\log_2 x$，所以 $\\left(\\log_2 \\frac{1}{x}\\right)^2 = (\\log_2 x)^2$\n\n$2^6 = 64$，方程变为：\n\n$(\\log_2 x)^4 + 12(\\log_2 x)^2 - 64 = 0$\n\n设 $y = (\\log_2 x)^2 \\geq 0$，则：\n\n$y^2 + 12y - 64 = 0$\n\n因式分解：$(y + 16)(y - 4) = 0$\n\n$y = -16$（舍去）或 $y = 4$\n\n所以 $(\\log_2 x)^2 = 4$，得 $\\log_2 x = 2$ 或 $\\log_2 x = -2$\n\n$x = 2^2 = 4$ 或 $x = 2^{-2} = \\frac{1}{4}$\n\n正差 $= 4 - \\frac{1}{4} = \\frac{15}{4}$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n解方程 $(\\log_2 x)^4 + 12\\left(\\log_2 \\frac{1}{x}\\right)^2 - 2^6 = 0$，求两个实数 $x$ 的正差。\n\n【解题步骤】\n\n首先化简：$\\log_2 \\frac{1}{x} = -\\log_2 x$，所以 $\\left(\\log_2 \\frac{1}{x}\\right)^2 = (\\log_2 x)^2$\n\n$2^6 = 64$，方程变为：\n\n$(\\log_2 x)^4 + 12(\\log_2 x)^2 - 64 = 0$\n\n设 $y = (\\log_2 x)^2 \\geq 0$，则：\n\n$y^2 + 12y - 64 = 0$\n\n因式分解：$(y + 16)(y - 4) = 0$\n\n$y = -16$（舍去）或 $y = 4$\n\n所以 $(\\log_2 x)^2 = 4$，得 $\\log_2 x = 2$ 或 $\\log_2 x = -2$\n\n$x = 2^2 = 4$ 或 $x = 2^{-2} = \\frac{1}{4}$\n\n正差 $= 4 - \\frac{1}{4} = \\frac{15}{4}$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a3_exponents_logarithms",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a3.logarithmic_equations",
+      "a2.quadratic_substitution"
+    ],
+    "primary_section": "a3.logarithmic_equations",
+    "skills": [
+      "logarithm-laws",
+      "quadratic-substitution",
+      "extraneous-root-check",
+      "exponent-conversion"
+    ]
   },
   {
     "id": "2020-P1-Q16",
     "year": 2020,
     "paper": 1,
     "num": 16,
-    "topic": "Algebra",
+    "topic": "Coordinate Geometry",
     "difficulty": 3,
     "question": "The circle $C_1$ has equation $(x + 2)^2 + (y - 1)^2 = 3$\n\nThe circle $C_2$ has equation $(x - 4)^2 + (y - 1)^2 = 3$\n\nThe straight line $l$ is a tangent to both $C_1$ and $C_2$ and has positive gradient.\n\nThe acute angle between $l$ and the $x$-axis is $\\theta$\n\nFind the value of $\\tan \\theta$",
     "options": {
@@ -6759,16 +7029,35 @@ window.QUESTIONS = [
       "H": "$\\sqrt{3}$"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n两圆 $C_1: (x+2)^2 + (y-1)^2 = 3$，$C_2: (x-4)^2 + (y-1)^2 = 3$。公切线 $l$ 有正斜率，与 $x$ 轴夹角 $\\theta$。求 $\\tan\\theta$。\n\n【解题步骤】\n\n$C_1$ 圆心 $O_1 = (-2, 1)$，$C_2$ 圆心 $O_2 = (4, 1)$，两圆半径均为 $\\sqrt{3}$。\n\n两圆心距离 $= 4 - (-2) = 6$。\n\n作有正斜率的公切线 $l$，设切点为 $D$（在 $C_2$ 上），$E$ 为切线与 $O_1O_2$ 连线的交点：\n\n- $EO_2 = 3$（半心距）\n- $O_2D = \\sqrt{3}$（半径）\n- 半径 $O_2D \\perp$ 切线 $l$\n\n由勾股定理：$DE^2 = EO_2^2 - O_2D^2 = 9 - 3 = 6$，所以 $DE = \\sqrt{6}$\n\n$\\tan\\theta = \\frac{O_2D}{DE} = \\frac{\\sqrt{3}}{\\sqrt{6}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$\n\n对应选项 C。",
+    "analysis": "【题目分析】\n两圆 $C_1: (x+2)^2 + (y-1)^2 = 3$，$C_2: (x-4)^2 + (y-1)^2 = 3$。公切线 $l$ 有正斜率，与 $x$ 轴夹角 $\\theta$。求 $\\tan\\theta$。\n\n【解题步骤】\n\n$C_1$ 圆心 $O_1 = (-2, 1)$，$C_2$ 圆心 $O_2 = (4, 1)$，两圆半径均为 $\\sqrt{3}$。\n\n两圆心距离 $= 4 - (-2) = 6$。\n\n作有正斜率的公切线 $l$，设切点为 $D$（在 $C_2$ 上），$E$ 为切线与 $O_1O_2$ 连线的交点：\n\n- $EO_2 = 3$（半心距）\n- $O_2D = \\sqrt{3}$（半径）\n- 半径 $O_2D \\perp$ 切线 $l$\n\n由勾股定理：$DE^2 = EO_2^2 - O_2D^2 = 9 - 3 = 6$，所以 $DE = \\sqrt{6}$\n\n$\\tan\\theta = \\frac{O_2D}{DE} = \\frac{\\sqrt{3}}{\\sqrt{6}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Trigonometry"
+    ],
+    "modules": [
+      "d_coordinate_geometry",
+      "e_trigonometry"
+    ],
+    "sections": [
+      "d.common_circle_tangents",
+      "d.point_to_line_distance",
+      "e.tangent_of_angle"
+    ],
+    "primary_section": "d.common_circle_tangents",
+    "skills": [
+      "circle-centre-radius",
+      "common-tangent-geometry",
+      "distance-from-point-to-line",
+      "gradient-as-tangent"
+    ]
   },
   {
     "id": "2020-P1-Q17",
     "year": 2020,
     "paper": 1,
     "num": 17,
-    "topic": "Coordinate Geometry",
+    "topic": "Graphs",
     "difficulty": 3,
     "question": "Find the complete set of values of $m$ in terms of $c$ such that the graphs of $y = mx + c$ and $y = \\sqrt{x}$ have two points of intersection.",
     "options": {
@@ -6780,9 +7069,29 @@ window.QUESTIONS = [
       "F": "$m < 4c^2$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n直线 $y = mx + c$ 与曲线 $y = \\sqrt{x}$ 有两交点。求 $m$ 的范围（用 $c$ 表示）。\n\n【解题步骤】\n$mx + c = \\sqrt{x}$，设 $t = \\sqrt{x} > 0$，$x = t^2$\n\n$mt^2 - t + c = 0$，关于 $t$ 的二次方程\n\n有两个不同的非负解的条件：\n\n1. **判别式 $> 0$：** $1 - 4mc > 0$，即 $4mc < 1$\n2. **两根都 $> 0$：** 根为 $t = \\frac{1 \\pm \\sqrt{1-4mc}}{2m}$，需要 $m > 0$（否则中点 $\\frac{1}{2m} < 0$，至少一根为负）\n3. **$c > 0$：** 若 $c \\leq 0$，则 $1 - \\sqrt{1-4mc} \\leq 0$，最多一个非负根\n\n综上：$m > 0$ 且 $4mc < 1$，即 $0 < m < \\frac{1}{4c}$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n直线 $y = mx + c$ 与曲线 $y = \\sqrt{x}$ 有两交点。求 $m$ 的范围（用 $c$ 表示）。\n\n【解题步骤】\n$mx + c = \\sqrt{x}$，设 $t = \\sqrt{x} > 0$，$x = t^2$\n\n$mt^2 - t + c = 0$，关于 $t$ 的二次方程\n\n有两个不同的非负解的条件：\n\n1. **判别式 $> 0$：** $1 - 4mc > 0$，即 $4mc < 1$\n2. **两根都 $> 0$：** 根为 $t = \\frac{1 \\pm \\sqrt{1-4mc}}{2m}$，需要 $m > 0$（否则中点 $\\frac{1}{2m} < 0$，至少一根为负）\n3. **$c > 0$：** 若 $c \\leq 0$，则 $1 - \\sqrt{1-4mc} \\leq 0$，最多一个非负根\n\n本题选项形式默认 $c>0$；在此条件下，综上：$m > 0$ 且 $4mc < 1$，即 $0 < m < \\frac{1}{4c}$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions",
+      "Algebra"
+    ],
+    "modules": [
+      "i_functions_graphs",
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "i.graph_intersections",
+      "i.square_root_graphs",
+      "a2.parameter_discriminant"
+    ],
+    "primary_section": "i.graph_intersections",
+    "skills": [
+      "square-root-substitution",
+      "discriminant-condition",
+      "positive-roots",
+      "parameter-range"
+    ]
   },
   {
     "id": "2020-P1-Q18",
@@ -6801,9 +7110,26 @@ window.QUESTIONS = [
       "F": "Number of solutions = 4 Sum of solutions = $360^\\circ$"
     },
     "answer": "A",
-    "analysis": "【题目分析】\n方程 $1 - 2\\cos^2 x = |\\cos x|$，$x \\in [0°, 180°]$。求解的个数和总和。\n\n【解题步骤】\n分两种情况：\n\n**情况1：$\\cos x \\geq 0$（$x \\in [0°, 90°]$）**\n$|\\cos x| = \\cos x$，方程 $1 - 2\\cos^2 x = \\cos x$\n$2\\cos^2 x + \\cos x - 1 = 0$，$(2\\cos x - 1)(\\cos x + 1) = 0$\n$\\cos x = \\frac{1}{2}$（$\\cos x = -1$ 舍去），$x = 60°$\n\n**情况2：$\\cos x < 0$（$x \\in [90°, 180°]$）**\n$|\\cos x| = -\\cos x$，方程 $1 - 2\\cos^2 x = -\\cos x$\n$2\\cos^2 x - \\cos x - 1 = 0$，$(2\\cos x + 1)(\\cos x - 1) = 0$\n$\\cos x = -\\frac{1}{2}$（$\\cos x = 1$ 舍去），$x = 120°$\n\n解：$x = 60°$, $x = 120°$\n解数 $= 2$，总和 $= 180°$\n\n对应选项 A。",
+    "analysis": "【题目分析】\n方程 $1 - 2\\cos^2 x = |\\cos x|$，$x \\in [0°, 180°]$。求解的个数和总和。\n\n【解题步骤】\n分两种情况：\n\n**情况1：$\\cos x \\geq 0$（$x \\in [0°, 90°]$）**\n$|\\cos x| = \\cos x$，方程 $1 - 2\\cos^2 x = \\cos x$\n$2\\cos^2 x + \\cos x - 1 = 0$，$(2\\cos x - 1)(\\cos x + 1) = 0$\n$\\cos x = \\frac{1}{2}$（$\\cos x = -1$ 舍去），$x = 60°$\n\n**情况2：$\\cos x < 0$（$x \\in [90°, 180°]$）**\n$|\\cos x| = -\\cos x$，方程 $1 - 2\\cos^2 x = -\\cos x$\n$2\\cos^2 x - \\cos x - 1 = 0$，$(2\\cos x + 1)(\\cos x - 1) = 0$\n$\\cos x = -\\frac{1}{2}$（$\\cos x = 1$ 舍去），$x = 120°$\n\n解：$x = 60°$, $x = 120°$\n解数 $= 2$，总和 $= 180°$\n\n【正确答案】A",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Algebra"
+    ],
+    "modules": [
+      "e_trigonometry"
+    ],
+    "sections": [
+      "e.trig_equations.absolute_value",
+      "e.quadratic_trig_equations"
+    ],
+    "primary_section": "e.trig_equations.absolute_value",
+    "skills": [
+      "absolute-value-case-split",
+      "quadratic-trig-equation",
+      "reference-angle",
+      "solution-counting"
+    ]
   },
   {
     "id": "2020-P1-Q19",
@@ -6822,9 +7148,23 @@ window.QUESTIONS = [
       "F": "54"
     },
     "answer": "E",
-    "analysis": "【题目分析】\n找最小正整数使 $x^2 - 52x - 52 > 0$。\n\n【解题步骤】\n设 $f(x) = x^2 - 52x - 52$\n\n$f(0) = -52 < 0$\n\n注意到 $f(52) = 52^2 - 52^2 - 52 = -52 < 0$\n\n配方法：$f(x) = (x-26)^2 - 26^2 - 52$，对称轴 $x = 26$，$f(52) = -52$\n\n所以 $f(x) < 0$ 当 $0 \\leq x \\leq 52$\n\n检验 $f(53)$：\n$f(53) = 53^2 - 52 \\times 53 - 52 = 53^2 - 52 \\times 54$\n\n$52 \\times 54 = (53-1)(53+1) = 53^2 - 1$\n\n$f(53) = 53^2 - (53^2 - 1) = 1 > 0$ ✓\n\n所以 53 是满足条件的最小正整数。\n\n对应选项 E。",
+    "analysis": "【题目分析】\n找最小正整数使 $x^2 - 52x - 52 > 0$。\n\n【解题步骤】\n设 $f(x) = x^2 - 52x - 52$\n\n$f(0) = -52 < 0$\n\n注意到 $f(52) = 52^2 - 52^2 - 52 = -52 < 0$\n\n配方法：$f(x) = (x-26)^2 - 26^2 - 52$，对称轴 $x = 26$，$f(52) = -52$\n\n所以 $f(x) < 0$ 当 $0 \\leq x \\leq 52$\n\n检验 $f(53)$：\n$f(53) = 53^2 - 52 \\times 53 - 52 = 53^2 - 52 \\times 54$\n\n$52 \\times 54 = (53-1)(53+1) = 53^2 - 1$\n\n$f(53) = 53^2 - (53^2 - 1) = 1 > 0$ ✓\n\n所以 53 是满足条件的最小正整数。\n\n【正确答案】E",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [],
+    "modules": [
+      "a2_equations_inequalities"
+    ],
+    "sections": [
+      "a2.quadratic_inequalities",
+      "a2.integer_solution_threshold"
+    ],
+    "primary_section": "a2.quadratic_inequalities",
+    "skills": [
+      "quadratic-sign",
+      "integer-testing",
+      "completing-square"
+    ]
   },
   {
     "id": "2020-P1-Q20",
@@ -6843,9 +7183,27 @@ window.QUESTIONS = [
       "F": "more than 4"
     },
     "answer": "C",
-    "analysis": "【题目分析】\n方程 $(x-a)(x^2 - x + a) = 0$ 恰有两个不同的 $x$ 解。求满足条件的 $a$ 有多少个值。\n\n【解题步骤】\n\n方程的解为 $x = a$ 和 $x^2 - x + a = 0$ 的解。\n\n二次方程 $x^2 - x + a = 0$ 的解为 $x = \\frac{1 \\pm \\sqrt{1-4a}}{2}$。\n\n恰有两个不同解的情况有两种：\n\n**情况1：二次方程判别式 $= 0$**\n\n$1 - 4a = 0$，得 $a = \\frac{1}{4}$\n\n此时二次方程有重根 $x = \\frac{1}{2}$，与 $x = a = \\frac{1}{4}$ 不同。\n共有2个不同解：$x = \\frac{1}{4}$ 和 $x = \\frac{1}{2}$ ✓\n\n**情况2：$x = a$ 等于二次方程的某个解**\n\n将 $x = a$ 代入二次方程：$a^2 - a + a = 0$，$a^2 = 0$，$a = 0$\n\n检验 $a = 0$：方程变为 $x(x^2 - x) = 0$，即 $x(x-1) = 0$\n不同解：$x = 0$ 和 $x = 1$，共2个不同解 ✓\n\n当 $\\Delta > 0$ 时二次方程有两个不同解，要减到2个必须有 $a$ 等于其中一个解，只在 $a = 0$ 成立。\n当 $\\Delta < 0$ 时只有 $x = a$ 一个解，不满足。\n\n综上，满足条件的 $a$ 值有2个：$a = 0$ 和 $a = \\frac{1}{4}$。\n\n对应选项 C。",
+    "analysis": "【题目分析】\n方程 $(x-a)(x^2 - x + a) = 0$ 恰有两个不同的 $x$ 解。求满足条件的 $a$ 有多少个值。\n\n【解题步骤】\n\n方程的解为 $x = a$ 和 $x^2 - x + a = 0$ 的解。\n\n二次方程 $x^2 - x + a = 0$ 的解为 $x = \\frac{1 \\pm \\sqrt{1-4a}}{2}$。\n\n恰有两个不同解的情况有两种：\n\n**情况1：二次方程判别式 $= 0$**\n\n$1 - 4a = 0$，得 $a = \\frac{1}{4}$\n\n此时二次方程有重根 $x = \\frac{1}{2}$，与 $x = a = \\frac{1}{4}$ 不同。\n共有2个不同解：$x = \\frac{1}{4}$ 和 $x = \\frac{1}{2}$ ✓\n\n**情况2：$x = a$ 等于二次方程的某个解**\n\n将 $x = a$ 代入二次方程：$a^2 - a + a = 0$，$a^2 = 0$，$a = 0$\n\n检验 $a = 0$：方程变为 $x(x^2 - x) = x^2(x-1) = 0$，不同解仍只看不同的根。\n不同解：$x = 0$ 和 $x = 1$，共2个不同解 ✓\n\n当 $\\Delta > 0$ 时二次方程有两个不同解，要减到2个必须有 $a$ 等于其中一个解，只在 $a = 0$ 成立。\n当 $\\Delta < 0$ 时只有 $x = a$ 一个解，不满足。\n\n综上，满足条件的 $a$ 值有2个：$a = 0$ 和 $a = \\frac{1}{4}$。\n\n【正确答案】C",
     "images": null,
-    "has_image": false
+    "has_image": false,
+    "related_topics": [
+      "Functions"
+    ],
+    "modules": [
+      "a2_equations_inequalities",
+      "i_functions_graphs"
+    ],
+    "sections": [
+      "a2.quadratic_roots_parameter",
+      "i.root_counting"
+    ],
+    "primary_section": "a2.quadratic_roots_parameter",
+    "skills": [
+      "discriminant-condition",
+      "duplicate-root-check",
+      "parameter-case-analysis",
+      "distinct-root-counting"
+    ]
   },
   {
     "id": "2020-P2-Q1",

@@ -13,7 +13,7 @@
 - [x] 2018 Paper 2
 - [x] 2019 Paper 1
 - [x] 2019 Paper 2
-- [ ] 2020 Paper 1
+- [x] 2020 Paper 1
 - [ ] 2020 Paper 2
 - [ ] 2021 Paper 1
 - [ ] 2021 Paper 2
