@@ -22,7 +22,7 @@
 - [x] src/content/docs/step/step2-2011.md
 - [x] src/content/docs/step/step2-2010.md
 - [x] src/content/docs/step/step2-2009.md
-- [ ] src/content/docs/step/step2-2008.md
+- [x] src/content/docs/step/step2-2008.md
 - [ ] src/content/docs/step/step2-2007.md
 - [ ] src/content/docs/step/step2-2006.md
 - [ ] src/content/docs/step/step2-2005.md
