@@ -8,7 +8,7 @@
 - [x] src/content/docs/step/index.md
 - [x] src/content/docs/step/step2-2024.md
 - [x] src/content/docs/step/step2-2023.md
-- [ ] src/content/docs/step/step2-2022.md
+- [x] src/content/docs/step/step2-2022.md
 - [ ] src/content/docs/step/step2-2021.md
 - [ ] src/content/docs/step/step2-2020.md
 - [ ] src/content/docs/step/step2-2019.md

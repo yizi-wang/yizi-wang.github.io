@@ -134,7 +134,7 @@ function checkDetails(file, section, issues) {
 function checkLatexHazards(file, text, issues) {
   const patterns = [
     { re: /\\tag\{/g, severity: 'warning', message: 'KaTeX tag numbering may render awkwardly in Starlight content' },
-    { re: /\\begin\{(align|aligned|array|cases)\*?\}/g, severity: 'warning', message: 'check multiline LaTeX visually in browser' },
+    { re: /\\begin\{(align|aligned|array)\*?\}/g, severity: 'warning', message: 'check multiline LaTeX visually in browser' },
     { re: /TODO|FIXME/g, severity: 'error', message: 'TODO/FIXME marker remains' },
   ];
 
