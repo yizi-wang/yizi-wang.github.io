@@ -149,6 +149,15 @@ function checkLatexHazards(file, text, issues) {
     }
   }
 
+  for (const match of text.matchAll(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g)) {
+    issues.push({
+      severity: 'error',
+      file: rel(file),
+      line: lineForOffset(text, match.index),
+      message: `unexpected control character U+${match[0].charCodeAt(0).toString(16).toUpperCase().padStart(4, '0')}`,
+    });
+  }
+
   for (const match of text.matchAll(/^(?:[4-9]|[1-9]\d)$/gm)) {
     const before = text.slice(Math.max(0, match.index - 12), match.index);
     const after = text.slice(match.index + match[0].length, match.index + match[0].length + 12);
