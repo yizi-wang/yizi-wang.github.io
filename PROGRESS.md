@@ -39,7 +39,7 @@
 - [x] src/content/docs/step/step3-2021.md
 - [x] src/content/docs/step/step3-2020.md
 - [x] src/content/docs/step/step3-2019.md
-- [ ] src/content/docs/step/step3-2018.md
+- [x] src/content/docs/step/step3-2018.md
 - [ ] src/content/docs/step/step3-2017.md
 - [ ] src/content/docs/step/step3-2016.md
 - [ ] src/content/docs/step/step3-2015.md
