@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">教师网站 Agent 建站流程</title>
+  <desc id="desc">从需求整理到本地构建、GitHub、Vercel 和自定义域名的流程图。</desc>
+  <rect width="1400" height="620" fill="#f6f8f7"/>
+  <text x="700" y="72" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34" font-weight="700" fill="#1f2d2f">从一句需求到可发布网站</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#52616b"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <g transform="translate(70,160)">
+      <rect width="180" height="115" rx="16" fill="#fff6d9" stroke="#91722a" stroke-width="2"/>
+      <text x="90" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="#463a18">老师</text>
+      <text x="90" y="82" text-anchor="middle" font-size="18" fill="#463a18">内容和边界</text>
+    </g>
+    <line x1="260" y1="218" x2="350" y2="218" stroke="#52616b" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <g transform="translate(365,160)">
+      <rect width="210" height="115" rx="16" fill="#dceff1" stroke="#23656f" stroke-width="2"/>
+      <text x="105" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#163d43">本地 Agent</text>
+      <text x="105" y="78" text-anchor="middle" font-size="18" fill="#163d43">创建项目、修报错</text>
+    </g>
+    <line x1="585" y1="218" x2="675" y2="218" stroke="#52616b" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <g transform="translate(690,160)">
+      <rect width="210" height="115" rx="16" fill="#e7eadf" stroke="#607247" stroke-width="2"/>
+      <text x="105" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#314023">本地构建</text>
+      <text x="105" y="78" text-anchor="middle" font-size="18" fill="#314023">预览、build、检查</text>
+    </g>
+    <line x1="910" y1="218" x2="1000" y2="218" stroke="#52616b" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <g transform="translate(1015,160)">
+      <rect width="180" height="115" rx="16" fill="#eee7fb" stroke="#67538d" stroke-width="2"/>
+      <text x="90" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#3c3154">GitHub</text>
+      <text x="90" y="78" text-anchor="middle" font-size="18" fill="#3c3154">SSH 推送代码</text>
+    </g>
+    <line x1="1205" y1="218" x2="1295" y2="218" stroke="#52616b" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <g transform="translate(1130,380)">
+      <rect width="190" height="105" rx="16" fill="#f3dfcf" stroke="#8a4b2b" stroke-width="2"/>
+      <text x="95" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#563018">自购域名</text>
+      <text x="95" y="74" text-anchor="middle" font-size="18" fill="#563018">DNS 解析</text>
+    </g>
+    <g transform="translate(1015,70)">
+      <rect width="180" height="72" rx="14" fill="#ffffff" stroke="#9aa4aa"/>
+      <text x="90" y="44" text-anchor="middle" font-size="20" fill="#263238">Vercel 部署</text>
+    </g>
+    <line x1="1105" y1="145" x2="1105" y2="158" stroke="#52616b" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M1105 276 C1105 320, 1180 332, 1218 378" fill="none" stroke="#52616b" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <text x="700" y="545" text-anchor="middle" font-size="22" fill="#52616b">Agent 负责推进流程，老师负责账号、域名、发布和内容责任。</text>
+  </g>
+</svg>

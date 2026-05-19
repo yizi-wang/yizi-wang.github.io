@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="650" viewBox="0 0 1300 650" role="img" aria-labelledby="title desc">
+  <title id="title">网站发布链路</title>
+  <desc id="desc">本地项目通过 SSH 推送到 GitHub，再由 Vercel 部署，最后绑定自购域名。</desc>
+  <rect width="1300" height="650" fill="#f8f6ef"/>
+  <text x="650" y="75" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34" font-weight="700" fill="#263238">发布链路越简单，出问题越好查</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#52616b"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <rect x="90" y="190" width="230" height="145" rx="18" fill="#dceff1" stroke="#23656f" stroke-width="2"/>
+    <text x="205" y="245" text-anchor="middle" font-size="28" font-weight="700" fill="#163d43">本地项目</text>
+    <text x="205" y="285" text-anchor="middle" font-size="20" fill="#163d43">预览 + build</text>
+
+    <line x1="330" y1="262" x2="455" y2="262" stroke="#52616b" stroke-width="3" marker-end="url(#arrow2)"/>
+    <text x="392" y="235" text-anchor="middle" font-size="18" fill="#52616b">SSH push</text>
+
+    <rect x="470" y="190" width="230" height="145" rx="18" fill="#eee7fb" stroke="#67538d" stroke-width="2"/>
+    <text x="585" y="245" text-anchor="middle" font-size="28" font-weight="700" fill="#3c3154">GitHub</text>
+    <text x="585" y="285" text-anchor="middle" font-size="20" fill="#3c3154">版本记录</text>
+
+    <line x1="710" y1="262" x2="835" y2="262" stroke="#52616b" stroke-width="3" marker-end="url(#arrow2)"/>
+    <text x="772" y="235" text-anchor="middle" font-size="18" fill="#52616b">自动部署</text>
+
+    <rect x="850" y="190" width="230" height="145" rx="18" fill="#e7eadf" stroke="#607247" stroke-width="2"/>
+    <text x="965" y="245" text-anchor="middle" font-size="28" font-weight="700" fill="#314023">Vercel</text>
+    <text x="965" y="285" text-anchor="middle" font-size="20" fill="#314023">构建 + 托管</text>
+
+    <line x1="1090" y1="262" x2="1190" y2="262" stroke="#52616b" stroke-width="3" marker-end="url(#arrow2)"/>
+
+    <rect x="990" y="420" width="220" height="105" rx="18" fill="#f3dfcf" stroke="#8a4b2b" stroke-width="2"/>
+    <text x="1100" y="462" text-anchor="middle" font-size="26" font-weight="700" fill="#563018">自购域名</text>
+    <text x="1100" y="496" text-anchor="middle" font-size="19" fill="#563018">大陆访问更稳定</text>
+    <path d="M965 338 C965 375, 1035 380, 1080 416" fill="none" stroke="#52616b" stroke-width="3" marker-end="url(#arrow2)"/>
+
+    <rect x="90" y="430" width="600" height="80" rx="14" fill="#fffdf7" stroke="#c9b99b"/>
+    <text x="125" y="462" font-size="22" font-weight="700" fill="#263238">不要同时上太多部署链路</text>
+    <text x="125" y="495" font-size="20" fill="#5b6368">先让一条链路稳定，再考虑 GitHub Pages、备用部署或复杂 CI。</text>
+  </g>
+</svg>

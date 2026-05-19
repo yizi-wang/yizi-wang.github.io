@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">数学网站常见避坑规则</title>
+  <desc id="desc">四张卡片列出 Markdown、KaTeX、双语文件名和部署环境相关的避坑规则。</desc>
+  <rect width="1200" height="760" fill="#f5f6f1"/>
+  <text x="600" y="82" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34" font-weight="700" fill="#263238">数学网站不是普通博客，多几条硬规则</text>
+
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" fill="#263238">
+    <rect x="95" y="135" width="470" height="220" rx="18" fill="#fffdf7" stroke="#23656f" stroke-width="2"/>
+    <text x="135" y="190" font-size="28" font-weight="700" fill="#23656f">1. 优先用 .md</text>
+    <text x="135" y="235" font-size="23">MDX 会把 LaTeX 的大括号</text>
+    <text x="135" y="270" font-size="23">当成 JSX 表达式。</text>
+    <text x="135" y="315" font-size="20" fill="#5b6368">讲义和博客不需要组件时，别用 .mdx。</text>
+
+    <rect x="635" y="135" width="470" height="220" rx="18" fill="#fffdf7" stroke="#607247" stroke-width="2"/>
+    <text x="675" y="190" font-size="28" font-weight="700" fill="#607247">2. 公式单独成行</text>
+    <text x="675" y="235" font-size="23">$$、\begin{aligned}</text>
+    <text x="675" y="270" font-size="23">不要挤在同一行。</text>
+    <text x="675" y="315" font-size="20" fill="#5b6368">中文说明放在数学块外面。</text>
+
+    <rect x="95" y="405" width="470" height="220" rx="18" fill="#fffdf7" stroke="#67538d" stroke-width="2"/>
+    <text x="135" y="460" font-size="28" font-weight="700" fill="#67538d">3. 双语文件名一致</text>
+    <text x="135" y="505" font-size="23">英文和中文页面用同名文件，</text>
+    <text x="135" y="540" font-size="23">只通过目录区分语言。</text>
+    <text x="135" y="585" font-size="20" fill="#5b6368">否则侧边栏可能重复或配对失败。</text>
+
+    <rect x="635" y="405" width="470" height="220" rx="18" fill="#fffdf7" stroke="#8a4b2b" stroke-width="2"/>
+    <text x="675" y="460" font-size="28" font-weight="700" fill="#8a4b2b">4. 本地 ≠ 远端</text>
+    <text x="675" y="505" font-size="23">Node、npm、lockfile、缓存</text>
+    <text x="675" y="540" font-size="23">都可能让部署结果不同。</text>
+    <text x="675" y="585" font-size="20" fill="#5b6368">看构建日志，不要靠猜。</text>
+  </g>
+</svg>

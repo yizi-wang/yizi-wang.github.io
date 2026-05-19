@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Agent 与老师的职责边界</title>
+  <desc id="desc">左侧是 Agent 可以承担的施工工作，右侧是老师必须自己掌握的账号、内容和发布责任。</desc>
+  <rect width="1200" height="720" fill="#f7f4ec"/>
+  <rect x="70" y="60" width="1060" height="600" rx="18" fill="#fffdf7" stroke="#2f3a3f" stroke-width="2"/>
+  <text x="600" y="120" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34" font-weight="700" fill="#263238">AI Agent 可以施工，网站边界要自己拿着</text>
+  <line x1="600" y1="165" x2="600" y2="605" stroke="#c9b99b" stroke-width="2" stroke-dasharray="10 10"/>
+  <text x="330" y="190" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="28" font-weight="700" fill="#23656f">Agent 适合做</text>
+  <text x="870" y="190" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="28" font-weight="700" fill="#8a4b2b">老师必须做</text>
+
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="24" fill="#263238">
+    <rect x="140" y="230" width="380" height="62" rx="12" fill="#d9eef0" stroke="#23656f"/>
+    <text x="330" y="270" text-anchor="middle">创建项目、安装依赖</text>
+    <rect x="140" y="315" width="380" height="62" rx="12" fill="#d9eef0" stroke="#23656f"/>
+    <text x="330" y="355" text-anchor="middle">启动预览、修构建错误</text>
+    <rect x="140" y="400" width="380" height="62" rx="12" fill="#d9eef0" stroke="#23656f"/>
+    <text x="330" y="440" text-anchor="middle">整理 Markdown 和图片</text>
+    <rect x="140" y="485" width="380" height="62" rx="12" fill="#d9eef0" stroke="#23656f"/>
+    <text x="330" y="525" text-anchor="middle">准备 commit 和 push</text>
+
+    <rect x="680" y="230" width="380" height="62" rx="12" fill="#f3dfcf" stroke="#8a4b2b"/>
+    <text x="870" y="270" text-anchor="middle">注册账号、授权工具</text>
+    <rect x="680" y="315" width="380" height="62" rx="12" fill="#f3dfcf" stroke="#8a4b2b"/>
+    <text x="870" y="355" text-anchor="middle">购买域名、配置 DNS</text>
+    <rect x="680" y="400" width="380" height="62" rx="12" fill="#f3dfcf" stroke="#8a4b2b"/>
+    <text x="870" y="440" text-anchor="middle">审核版权和学生隐私</text>
+    <rect x="680" y="485" width="380" height="62" rx="12" fill="#f3dfcf" stroke="#8a4b2b"/>
+    <text x="870" y="525" text-anchor="middle">决定是否公开发布</text>
+  </g>
+
+  <text x="600" y="620" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" fill="#5b6368">规则越早写清楚，返工越少。</text>
+</svg>
