@@ -5,12 +5,21 @@ class TMUAQuiz {
         this.progress = {
             completed: [],
             correct: [],
-            wrong: []
+            wrong: [],
+            favorites: [],
+            generatedSets: []
         };
         this.filter = 'all';
         this.filteredQuestions = [];
+        this.baseFilteredQuestions = [];
+        this.questionIndex = null;
+        this.courseConfig = null;
         this.selectedYear = 'all';
         this.selectedPaper = 'all';
+        this.selectedTopic = '';
+        this.selectedModule = '';
+        this.selectedSection = '';
+        this.selectedSkill = '';
         this.currentMode = 'practice';
         this.mockSession = {
             active: false,
@@ -29,11 +38,19 @@ class TMUAQuiz {
         // 模拟考试选卷状态
         this.mockSelectedYear = null;
         this.mockSelectedPaper = null;
+        this.generatorReturnView = 'practice';
         // 回顾模式状态
         this.reviewMode = false;
         this.reviewIndex = 0;
         // 答错时延迟揭示正确答案：等打开解析面板时再显示
         this.pendingRevealCorrect = null;
+        this.generatedSession = {
+            active: false,
+            label: '',
+            durationSeconds: 0,
+            remainingSeconds: 0,
+            timerId: null
+        };
 
         this.init();
     }
@@ -45,13 +62,16 @@ class TMUAQuiz {
      *   ?year=2019&paper=1 → filter by year/paper
      */
     handleUrlParams() {
-        const params = new URLSearchParams(window.location.search);
-        if (!params.toString()) return false;
+        const route = parsePracticeRoute(window.location.search);
+        if (!route.hasParams) return false;
 
-        const targetId = params.get('id');
-        const topic = params.get('topic');
-        const year = params.get('year');
-        const paper = params.get('paper');
+        const targetId = route.id;
+        const topic = route.topic;
+        const module = route.module;
+        const section = route.section;
+        const skill = route.skill;
+        const year = route.year;
+        const paper = route.paper;
 
         if (targetId) {
             // Direct question ID: find it, set year/paper, jump to it
@@ -75,7 +95,7 @@ class TMUAQuiz {
             return false;
         }
 
-        if (year || paper || topic) {
+        if (year || paper || topic || module || section || skill) {
             if (year) {
                 this.selectedYear = year;
                 document.getElementById('yearSelect').value = year;
@@ -91,9 +111,27 @@ class TMUAQuiz {
                 });
                 document.getElementById('topicSelect').classList.remove('hidden');
                 document.getElementById('topicSelect').value = topic;
+                this.selectedTopic = topic;
+            }
+            if (module) {
+                this.filter = 'topic';
+                document.getElementById('moduleSelect').classList.remove('hidden');
+                document.getElementById('moduleSelect').value = module;
+                this.selectedModule = module;
+            }
+            if (section) {
+                this.filter = 'topic';
+                document.getElementById('sectionSelect').classList.remove('hidden');
+                document.getElementById('sectionSelect').value = section;
+                this.selectedSection = section;
+            }
+            if (skill) {
+                this.filter = 'topic';
+                document.getElementById('skillSelect').classList.remove('hidden');
+                document.getElementById('skillSelect').value = skill;
+                this.selectedSkill = skill;
             }
             this.showPracticeView();
-            // Use applyFilter with explicit topic value for reliable filtering
             this.applyFilter(topic || null);
             this.updateMockUI();
             return true;
@@ -104,10 +142,14 @@ class TMUAQuiz {
 
     init() {
         if (typeof window.QUESTIONS !== 'undefined') {
-            questions = window.QUESTIONS;
+            this.courseConfig = getPracticeConfig('tmua');
+            questions = normalizeQuestionBank(window.QUESTIONS, this.courseConfig);
+            this.questionIndex = buildQuestionIndex(questions);
             this.filteredQuestions = questions;
+            this.baseFilteredQuestions = questions;
             this.loadProgress();
             this.setupEventListeners();
+            this.populateCourseControls();
             this.applyDarkMode();
             this.updateStats();
             this.updateWelcomeProgress();
@@ -123,7 +165,9 @@ class TMUAQuiz {
     loadProgress() {
         const saved = localStorage.getItem('tmua_progress');
         if (saved) {
-            this.progress = JSON.parse(saved);
+            this.progress = normalizeProgress(JSON.parse(saved));
+        } else {
+            this.progress = normalizeProgress(this.progress);
         }
     }
     
@@ -153,31 +197,58 @@ class TMUAQuiz {
                 this.filter = btn.dataset.filter;
                 
                 const topicSelect = document.getElementById('topicSelect');
+                const moduleSelect = document.getElementById('moduleSelect');
+                const sectionSelect = document.getElementById('sectionSelect');
+                const skillSelect = document.getElementById('skillSelect');
                 if (this.filter === 'topic') {
                     topicSelect.classList.remove('hidden');
+                    moduleSelect.classList.remove('hidden');
+                    sectionSelect.classList.remove('hidden');
+                    skillSelect.classList.remove('hidden');
                 } else {
                     topicSelect.classList.add('hidden');
+                    moduleSelect.classList.add('hidden');
+                    sectionSelect.classList.add('hidden');
+                    skillSelect.classList.add('hidden');
                 }
                 
                 this.applyFilter();
             });
         });
         
-        // 知识点选择
+        // 标签选择
         const topicSelect = document.getElementById('topicSelect');
-        if (questions.length > 0) {
-            const topics = [...new Set(questions.map(q => q.topic))];
-            topics.forEach(topic => {
-                const option = document.createElement('option');
-                option.value = topic;
-                option.textContent = topic;
-                topicSelect.appendChild(option);
-            });
-        }
-        
         topicSelect.addEventListener('change', (e) => {
+            this.selectedTopic = e.target.value;
             this.applyFilter(e.target.value);
         });
+
+        document.getElementById('moduleSelect').addEventListener('change', (e) => {
+            this.selectedModule = e.target.value;
+            this.applyFilter();
+        });
+
+        document.getElementById('sectionSelect').addEventListener('change', (e) => {
+            this.selectedSection = e.target.value;
+            this.applyFilter();
+        });
+
+        document.getElementById('skillSelect').addEventListener('change', (e) => {
+            this.selectedSkill = e.target.value;
+            this.applyFilter();
+        });
+
+        const questionJumpSelect = document.getElementById('questionJumpSelect');
+        if (questionJumpSelect) {
+            questionJumpSelect.addEventListener('change', (e) => {
+                const targetId = e.target.value;
+                const index = this.filteredQuestions.findIndex(q => q.id === targetId);
+                if (index >= 0) {
+                    this.currentIndex = index;
+                    this.showQuestion();
+                }
+            });
+        }
         
         // 提交答案
         document.getElementById('submitBtn').addEventListener('click', () => {
@@ -220,11 +291,47 @@ class TMUAQuiz {
         });
 
         document.getElementById('startMockBtn').addEventListener('click', () => {
-            this.startMockMode();
+            this.showMockSelectView();
         });
 
         document.getElementById('startShuffleBtn').addEventListener('click', () => {
-            this.startShuffleMode();
+            this.startQuickRandomSession();
+        });
+
+        document.getElementById('openGeneratorBtn').addEventListener('click', () => {
+            this.showGeneratorSelectView('practice');
+        });
+
+        document.getElementById('startGeneratedSetBtn').addEventListener('click', () => {
+            this.startGeneratedSet(false);
+        });
+
+        document.getElementById('startTimedSetBtn').addEventListener('click', () => {
+            this.startGeneratedSet(true);
+        });
+
+        document.getElementById('downloadWorksheetBtn').addEventListener('click', () => {
+            this.exportCurrentWorksheet();
+        });
+
+        [
+            'generatedCountInput',
+            'generatedMinutesInput',
+            'generatedSourceSelect',
+            'generatorModuleSelect',
+            'generatorSectionSelect',
+            'generatorSkillSelect',
+            'generatorTopicSelect',
+            'exportIncludeAnswers',
+            'exportIncludeAnalysis',
+            'exportIncludeTags'
+        ].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) element.addEventListener('change', () => this.updateGeneratorPreview());
+        });
+
+        document.getElementById('favoriteBtn').addEventListener('click', () => {
+            this.toggleCurrentFavorite();
         });
 
         document.getElementById('submitMockBtn').addEventListener('click', () => {
@@ -233,7 +340,11 @@ class TMUAQuiz {
 
         // Mock 顶栏交卷按钮
         document.getElementById('mockSubmitTopBtn').addEventListener('click', () => {
-            this.finishMockMode();
+            if (this.currentMode === 'generated-set' || this.currentMode === 'timed-set') {
+                this.showResult();
+            } else {
+                this.finishMockMode();
+            }
         });
 
         // Mock 底部导航
@@ -273,6 +384,14 @@ class TMUAQuiz {
         // 选卷视图 - 返回首页
         document.getElementById('mockBackLink').addEventListener('click', () => {
             this.showWelcomeView();
+        });
+
+        document.getElementById('generatorBackLink').addEventListener('click', () => {
+            if (this.generatorReturnView === 'welcome') {
+                this.showWelcomeView();
+            } else {
+                this.showPracticeView();
+            }
         });
 
         // 选卷视图 - 年份卡片点击（事件委托）
@@ -358,10 +477,10 @@ class TMUAQuiz {
             status.classList.remove('hidden', 'success', 'error');
             if (result.success) {
                 status.classList.add('success');
-                status.textContent = '✅ 提交成功！老师已收到你的成绩。';
+                status.textContent = '提交成功，老师已收到你的成绩。';
             } else {
                 status.classList.add('error');
-                status.textContent = '❌ ' + result.error;
+                status.textContent = result.error;
             }
         });
 
@@ -407,6 +526,72 @@ class TMUAQuiz {
         });
     }
 
+    populateCourseControls() {
+        if (this.courseConfig) {
+            document.title = this.courseConfig.title;
+            const title = document.getElementById('welcomeTitle');
+            if (title) title.textContent = this.courseConfig.title.replace('练习系统', '训练系统');
+        }
+
+        const subtitle = document.getElementById('welcomeSubtitle');
+        if (subtitle && this.questionIndex) {
+            const firstYear = this.questionIndex.years[0];
+            const lastYear = this.questionIndex.years[this.questionIndex.years.length - 1];
+            subtitle.textContent = `${firstYear}–${lastYear} · ${questions.length} 题目 · 完整解析`;
+        }
+
+        this.populateSelect('yearSelect', this.questionIndex.years, '全部年份', value => value);
+        this.populateSelect('paperSelect', this.questionIndex.papers, '全部试卷', value => `Paper ${value}`);
+        this.populateSelect('topicSelect', this.questionIndex.topics, '选择知识点', value => value);
+        this.populateSelect('moduleSelect', this.questionIndex.modules, '选择讲义章节', value => value);
+        this.populateSelect('sectionSelect', this.questionIndex.sections, '选择细分概念', value => value);
+        this.populateSelect('skillSelect', this.questionIndex.skills, '选择解题技能', value => value);
+        this.populateSelect('generatorModuleSelect', this.questionIndex.modules, '全部讲义章节', value => value);
+        this.populateSelect('generatorSectionSelect', this.questionIndex.sections, '全部细分概念', value => value);
+        this.populateSelect('generatorSkillSelect', this.questionIndex.skills, '全部解题技能', value => value);
+        this.populateSelect('generatorTopicSelect', this.questionIndex.topics, '全部 Topic 分类', value => value);
+    }
+
+    populateSelect(id, values, placeholder, labeler) {
+        const select = document.getElementById(id);
+        if (!select) return;
+        select.innerHTML = '';
+        const allValue = id === 'yearSelect' || id === 'paperSelect' ? 'all' : '';
+        const first = document.createElement('option');
+        first.value = allValue;
+        first.textContent = placeholder;
+        select.appendChild(first);
+        values.forEach(value => {
+            const option = document.createElement('option');
+            option.value = String(value);
+            option.textContent = labeler(value);
+            select.appendChild(option);
+        });
+    }
+
+    setSelectOptions(id, values, placeholder, selectedValue = '') {
+        const select = document.getElementById(id);
+        if (!select) return '';
+        const normalizedValues = values.map(value => String(value));
+        const nextValue = selectedValue && normalizedValues.includes(String(selectedValue)) ? String(selectedValue) : '';
+        select.innerHTML = '';
+
+        const first = document.createElement('option');
+        first.value = '';
+        first.textContent = placeholder;
+        select.appendChild(first);
+
+        normalizedValues.forEach(value => {
+            const option = document.createElement('option');
+            option.value = value;
+            option.textContent = value;
+            select.appendChild(option);
+        });
+
+        select.value = nextValue;
+        return nextValue;
+    }
+
     getTotalQuestionCount() {
         return questions.length;
     }
@@ -435,15 +620,18 @@ class TMUAQuiz {
         const mockHeader = document.getElementById('mockHeader');
         const mockTimerLarge = document.getElementById('mockTimerLarge');
         const mockPaperLabel = document.getElementById('mockPaperLabel');
+        const mockSubmitTopBtn = document.getElementById('mockSubmitTopBtn');
 
         if (this.mockSession.active) {
             // 进入沉浸式考试模式
             practiceView.classList.add('mock-active');
+            practiceView.classList.remove('generated-active');
             mockHeader.classList.remove('hidden');
 
             // 更新 mock 顶栏数据
             mockPaperLabel.textContent = this.mockSession.paperLabel;
             mockTimerLarge.textContent = this.formatTime(this.mockSession.remainingSeconds);
+            mockSubmitTopBtn.textContent = '交卷';
 
             // 倒计时不足10分钟时闪烁警告
             if (this.mockSession.remainingSeconds <= 600) {
@@ -457,10 +645,25 @@ class TMUAQuiz {
             document.getElementById('skipBtn').classList.add('hidden');
             document.getElementById('analysisBtn').classList.add('hidden');
             document.getElementById('navButtons').classList.add('hidden');
+        } else if (this.generatedSession.active) {
+            practiceView.classList.remove('mock-active');
+            practiceView.classList.add('generated-active');
+            mockHeader.classList.remove('hidden');
+            mockPaperLabel.textContent = this.generatedSession.label || '组卷练习';
+            mockTimerLarge.textContent = this.generatedSession.durationSeconds > 0
+                ? this.formatTime(this.generatedSession.remainingSeconds)
+                : `${this.filteredQuestions.length} 题`;
+            mockTimerLarge.classList.toggle('warning', this.generatedSession.durationSeconds > 0 && this.generatedSession.remainingSeconds <= 300);
+            mockSubmitTopBtn.textContent = '结束练习';
+            document.getElementById('skipBtn').classList.remove('hidden');
+            document.getElementById('analysisBtn').classList.remove('hidden');
+            document.getElementById('navButtons').classList.remove('hidden');
         } else {
             // 退出考试模式，恢复普通界面
             practiceView.classList.remove('mock-active');
+            practiceView.classList.remove('generated-active');
             mockHeader.classList.add('hidden');
+            mockSubmitTopBtn.textContent = '交卷';
 
             // 恢复隐藏的按钮
             document.getElementById('skipBtn').classList.remove('hidden');
@@ -490,6 +693,8 @@ class TMUAQuiz {
         this.mockSession.paperLabel = `${this.selectedYear} Paper ${this.selectedPaper}`;
         this.currentAnswers = {};
         this.resetSessionProgress();
+        const answerCardPanel = document.getElementById('answerCardPanel');
+        if (answerCardPanel) answerCardPanel.open = true;
 
         if (this.mockSession.timerId) {
             clearInterval(this.mockSession.timerId);
@@ -526,6 +731,7 @@ class TMUAQuiz {
         // 隐藏所有视图，显示模拟结果页
         document.getElementById('welcomeView').classList.add('hidden');
         document.getElementById('mockSelectView').classList.add('hidden');
+        document.getElementById('generatorSelectView').classList.add('hidden');
         document.getElementById('practiceView').classList.add('hidden');
         document.getElementById('resultArea').classList.add('hidden');
         document.getElementById('mockResultView').classList.remove('hidden');
@@ -555,10 +761,10 @@ class TMUAQuiz {
         document.getElementById('mockRingFrac').textContent = correct + '/' + total;
 
         // 成绩评语
-        let msg = '继续努力！';
-        if (pct >= 90) msg = '🎉 太棒了！接近满分！';
-        else if (pct >= 70) msg = '👍 成绩不错，继续加油！';
-        else if (pct >= 50) msg = '💪 还有提升空间，继续练习！';
+        let msg = '需要加强基础，多做针对性练习。';
+        if (pct >= 90) msg = '接近满分，状态很好。';
+        else if (pct >= 70) msg = '成绩稳定，可以继续压缩用时。';
+        else if (pct >= 50) msg = '还有提升空间，建议回看薄弱维度。';
         document.getElementById('mockScoreMsg').textContent = msg;
 
         // 统计卡片
@@ -589,35 +795,113 @@ class TMUAQuiz {
         });
     }
 
+    getQuestionDimensionValues(question, dimension) {
+        if (dimension === 'topics') {
+            if (Array.isArray(question.search_topics) && question.search_topics.length > 0) {
+                return question.search_topics;
+            }
+            return [question.topic || '其他'];
+        }
+        if (dimension === 'modules') {
+            return Array.isArray(question.modules) && question.modules.length > 0
+                ? question.modules
+                : [question.topic || '未归类章节'];
+        }
+        if (dimension === 'sections') {
+            return Array.isArray(question.sections) ? question.sections : [];
+        }
+        if (dimension === 'skills') {
+            return Array.isArray(question.skills) ? question.skills : [];
+        }
+        return [];
+    }
+
+    buildSessionBreakdown(dimension) {
+        const stats = {};
+
+        this.filteredQuestions.forEach(q => {
+            const values = this.getQuestionDimensionValues(q, dimension);
+            values.forEach(label => {
+                if (!stats[label]) {
+                    stats[label] = { total: 0, correct: 0, wrong: 0 };
+                }
+                stats[label].total++;
+                if (this.sessionProgress.correct.includes(q.id)) stats[label].correct++;
+                if (this.sessionProgress.wrong.includes(q.id)) stats[label].wrong++;
+            });
+        });
+
+        return stats;
+    }
+
+    sortBreakdownEntries(breakdown) {
+        return Object.entries(breakdown)
+            .map(([label, data]) => ({
+                label,
+                ...data,
+                pct: data.total > 0 ? Math.round(data.correct / data.total * 100) : 0
+            }))
+            .sort((a, b) => {
+                if (a.pct !== b.pct) return a.pct - b.pct;
+                if (b.total !== a.total) return b.total - a.total;
+                return a.label.localeCompare(b.label);
+            });
+    }
+
+    renderMockDimensionGroup(container, title, breakdown, emptyText) {
+        const group = document.createElement('div');
+        group.className = 'mock-dimension-group';
+        group.innerHTML = `<h4 class="mock-dimension-title">${title}</h4>`;
+
+        const entries = this.sortBreakdownEntries(breakdown);
+        if (entries.length === 0) {
+            const empty = document.createElement('div');
+            empty.className = 'mock-topic-empty';
+            empty.textContent = emptyText;
+            group.appendChild(empty);
+            container.appendChild(group);
+            return;
+        }
+
+        entries.slice(0, 8).forEach(itemData => {
+            const barCls = itemData.pct < 40 ? 'low' : itemData.pct < 70 ? 'medium' : 'high';
+            const item = document.createElement('div');
+            item.className = 'mock-topic-item';
+            item.innerHTML = `
+                <span class="mock-topic-name">${itemData.label}</span>
+                <div class="mock-topic-bar-wrap">
+                    <div class="mock-topic-bar ${barCls}" style="width:${itemData.pct}%"></div>
+                </div>
+                <span class="mock-topic-count">${itemData.correct}/${itemData.total}（${itemData.pct}%）</span>
+            `;
+            group.appendChild(item);
+        });
+
+        container.appendChild(group);
+    }
+
     renderMockTopicBreakdown() {
         const list = document.getElementById('mockTopicList');
         list.innerHTML = '';
 
-        // 按知识点分组
-        const topicMap = {};
-        this.filteredQuestions.forEach((q, i) => {
-            const t = q.topic || '其他';
-            if (!topicMap[t]) topicMap[t] = { total: 0, correct: 0 };
-            topicMap[t].total++;
-            if (this.sessionProgress.correct.includes(q.id)) topicMap[t].correct++;
-        });
-
-        Object.keys(topicMap).forEach(topic => {
-            const data = topicMap[topic];
-            const pct = Math.round(data.correct / data.total * 100);
-            const barCls = pct < 40 ? 'low' : pct < 70 ? 'medium' : 'high';
-
-            const item = document.createElement('div');
-            item.className = 'mock-topic-item';
-            item.innerHTML = `
-                <span class="mock-topic-name">${topic}</span>
-                <div class="mock-topic-bar-wrap">
-                    <div class="mock-topic-bar ${barCls}" style="width:${pct}%"></div>
-                </div>
-                <span class="mock-topic-count">${data.correct}/${data.total}（${pct}%）</span>
-            `;
-            list.appendChild(item);
-        });
+        this.renderMockDimensionGroup(
+            list,
+            '讲义章节',
+            this.buildSessionBreakdown('modules'),
+            '暂无讲义章节数据'
+        );
+        this.renderMockDimensionGroup(
+            list,
+            '细分概念',
+            this.buildSessionBreakdown('sections'),
+            '这套题暂时没有细分概念标签'
+        );
+        this.renderMockDimensionGroup(
+            list,
+            '解题技能',
+            this.buildSessionBreakdown('skills'),
+            '这套题暂时没有解题技能标签'
+        );
     }
 
     // ===== QuickForm 数据提交 =====
@@ -632,14 +916,25 @@ class TMUAQuiz {
         const usedSeconds = this.mockSession.durationSeconds - this.mockSession.remainingSeconds;
         const avgSec = (correct + wrong) > 0 ? Math.round(usedSeconds / (correct + wrong)) : 0;
         
-        // 构建知识点分析
-        const topicBreakdown = {};
-        this.filteredQuestions.forEach(q => {
-            const t = q.topic || '其他';
-            if (!topicBreakdown[t]) topicBreakdown[t] = {total: 0, correct: 0};
-            topicBreakdown[t].total++;
-            if (this.sessionProgress.correct.includes(q.id)) topicBreakdown[t].correct++;
-        });
+        const topicBreakdown = this.buildSessionBreakdown('topics');
+        const moduleBreakdown = this.buildSessionBreakdown('modules');
+        const sectionBreakdown = this.buildSessionBreakdown('sections');
+        const skillBreakdown = this.buildSessionBreakdown('skills');
+        const questionResults = this.filteredQuestions.map((q, index) => ({
+            index: index + 1,
+            id: q.id,
+            year: q.year,
+            paper: q.paper,
+            num: q.num,
+            topic: q.topic || '',
+            modules: q.modules || [],
+            sections: q.sections || [],
+            skills: q.skills || [],
+            selected_answer: this.currentAnswers[q.id] || '',
+            correct_answer: q.answer,
+            is_answered: Boolean(this.currentAnswers[q.id]),
+            is_correct: this.sessionProgress.correct.includes(q.id)
+        }));
         
         const payload = {
             student_name: studentName,
@@ -652,7 +947,17 @@ class TMUAQuiz {
             time_seconds: usedSeconds,
             avg_seconds: avgSec,
             wrong_questions: this.sessionProgress.wrong,
-            topic_breakdown: topicBreakdown
+            topic_breakdown: topicBreakdown,
+            module_breakdown: moduleBreakdown,
+            section_breakdown: sectionBreakdown,
+            skill_breakdown: skillBreakdown,
+            taxonomy_breakdown: {
+                topics: topicBreakdown,
+                modules: moduleBreakdown,
+                sections: sectionBreakdown,
+                skills: skillBreakdown
+            },
+            question_results: questionResults
         };
         
         try {
@@ -735,6 +1040,7 @@ class TMUAQuiz {
         this.reviewMode = false;  // 修复：退出回顾模式
         this.currentMode = 'wrong-redo';
         this.mockSession.active = false;
+        this.stopGeneratedTimer();
         if (this.mockSession.timerId) {
             clearInterval(this.mockSession.timerId);
             this.mockSession.timerId = null;
@@ -743,13 +1049,50 @@ class TMUAQuiz {
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         const wrongBtn = document.querySelector('.filter-btn[data-filter="wrong"]');
         if (wrongBtn) wrongBtn.classList.add('active');
-        document.getElementById('topicSelect').classList.add('hidden');
+        ['topicSelect', 'moduleSelect', 'sectionSelect', 'skillSelect'].forEach(id => {
+            document.getElementById(id).classList.add('hidden');
+        });
 
         document.getElementById('questionArea').classList.remove('hidden');
         document.getElementById('resultArea').classList.add('hidden');
 
         this.showPracticeView();
         this.filteredQuestions = questions.filter(q => this.progress.wrong.includes(q.id));
+        this.currentIndex = 0;
+        this.currentAnswers = {};
+        this.resetSessionProgress();
+        this.updateMockUI();
+        this.showQuestion();
+    }
+
+    startFavoriteReview() {
+        if (this.progress.favorites.length === 0) {
+            alert('当前没有收藏题。可以先在题目页点击收藏。');
+            this.showWelcomeView();
+            return;
+        }
+
+        this.reviewMode = false;
+        this.currentMode = 'favorite-review';
+        this.mockSession.active = false;
+        this.stopGeneratedTimer();
+        if (this.mockSession.timerId) {
+            clearInterval(this.mockSession.timerId);
+            this.mockSession.timerId = null;
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        const favoriteBtn = document.querySelector('.filter-btn[data-filter="favorite"]');
+        if (favoriteBtn) favoriteBtn.classList.add('active');
+        ['topicSelect', 'moduleSelect', 'sectionSelect', 'skillSelect'].forEach(id => {
+            document.getElementById(id).classList.add('hidden');
+        });
+
+        document.getElementById('questionArea').classList.remove('hidden');
+        document.getElementById('resultArea').classList.add('hidden');
+
+        this.showPracticeView();
+        this.filteredQuestions = questions.filter(q => this.progress.favorites.includes(q.id));
         this.currentIndex = 0;
         this.currentAnswers = {};
         this.resetSessionProgress();
@@ -771,6 +1114,7 @@ class TMUAQuiz {
         this.reviewMode = false;  // 修复：退出回顾模式
         this.currentMode = 'shuffle';
         this.mockSession.active = false;
+        this.stopGeneratedTimer();
         if (this.mockSession.timerId) {
             clearInterval(this.mockSession.timerId);
             this.mockSession.timerId = null;
@@ -779,7 +1123,9 @@ class TMUAQuiz {
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
         if (allBtn) allBtn.classList.add('active');
-        document.getElementById('topicSelect').classList.add('hidden');
+        ['topicSelect', 'moduleSelect', 'sectionSelect', 'skillSelect'].forEach(id => {
+            document.getElementById(id).classList.add('hidden');
+        });
 
         document.getElementById('questionArea').classList.remove('hidden');
         document.getElementById('resultArea').classList.add('hidden');
@@ -793,69 +1139,321 @@ class TMUAQuiz {
         this.showQuestion();
     }
 
-    getTopicPerformance() {
+    startQuickRandomSession() {
+        const sourceSelect = document.getElementById('generatedSourceSelect');
+        const countInput = document.getElementById('generatedCountInput');
+        const minutesInput = document.getElementById('generatedMinutesInput');
+        if (sourceSelect) sourceSelect.value = 'all';
+        if (countInput) countInput.value = '20';
+        if (minutesInput) minutesInput.value = '0';
+        ['generatorModuleSelect', 'generatorSectionSelect', 'generatorSkillSelect', 'generatorTopicSelect'].forEach(id => {
+            const select = document.getElementById(id);
+            if (select) select.value = '';
+        });
+        this.startGeneratedSet(false);
+    }
+
+    startGeneratedSet(timed) {
+        this.reviewMode = false;
+        this.currentMode = timed ? 'timed-set' : 'generated-set';
+        this.mockSession.active = false;
+        if (this.mockSession.timerId) {
+            clearInterval(this.mockSession.timerId);
+            this.mockSession.timerId = null;
+        }
+        this.stopGeneratedTimer();
+
+        const countInput = document.getElementById('generatedCountInput');
+        const minutesInput = document.getElementById('generatedMinutesInput');
+        const requestedCount = Math.max(1, Math.min(50, parseInt(countInput.value || '20', 10)));
+        const minutes = Math.max(0, Math.min(180, parseInt(minutesInput.value || '0', 10)));
+        const pool = this.getGeneratorPool();
+        if (pool.length === 0) {
+            alert('当前组卷条件下没有可用题目。');
+            return;
+        }
+
+        this.filteredQuestions = this.shuffleArray(pool).slice(0, Math.min(requestedCount, pool.length));
+        this.currentIndex = 0;
+        this.currentAnswers = {};
+        this.resetSessionProgress();
+        this.showPracticeView();
+        const answerCardPanel = document.getElementById('answerCardPanel');
+        if (answerCardPanel) answerCardPanel.open = true;
+        document.getElementById('questionArea').classList.remove('hidden');
+        document.getElementById('resultArea').classList.add('hidden');
+
+        this.generatedSession.active = true;
+        this.generatedSession.label = this.buildGeneratedSessionLabel(timed, pool.length);
+        this.generatedSession.durationSeconds = timed && minutes > 0 ? minutes * 60 : 0;
+        this.generatedSession.remainingSeconds = this.generatedSession.durationSeconds;
+
+        if (this.generatedSession.durationSeconds > 0) {
+            this.generatedSession.timerId = setInterval(() => {
+                this.generatedSession.remainingSeconds--;
+                this.updateGeneratedTimerUI();
+                if (this.generatedSession.remainingSeconds <= 0) {
+                    this.stopGeneratedTimer();
+                    this.showResult();
+                }
+            }, 1000);
+        }
+
+        this.updateGeneratedTimerUI();
+        this.updateMockUI();
+        this.showQuestion();
+    }
+
+    showGeneratorSelectView(returnView = 'practice') {
+        this.generatorReturnView = returnView;
+        document.getElementById('welcomeView').classList.add('hidden');
+        document.getElementById('mockSelectView').classList.add('hidden');
+        document.getElementById('mockResultView').classList.add('hidden');
+        document.getElementById('practiceView').classList.add('hidden');
+        document.getElementById('generatorSelectView').classList.remove('hidden');
+        const backLink = document.getElementById('generatorBackLink');
+        if (backLink) {
+            backLink.textContent = returnView === 'welcome' ? '← 返回首页' : '← 返回练习';
+        }
+        this.updateGeneratorPreview();
+    }
+
+    openGeneratorPanel(mode = 'build') {
+        const panel = document.getElementById('generatorPanel');
+        if (panel) panel.dataset.mode = mode;
+        this.showGeneratorSelectView('practice');
+    }
+
+    getGeneratorCriteria() {
+        return {
+            source: document.getElementById('generatedSourceSelect')?.value || 'all',
+            module: document.getElementById('generatorModuleSelect')?.value || '',
+            section: document.getElementById('generatorSectionSelect')?.value || '',
+            skill: document.getElementById('generatorSkillSelect')?.value || '',
+            topic: document.getElementById('generatorTopicSelect')?.value || ''
+        };
+    }
+
+    getGeneratorBasePool(source = 'all') {
+        if (source === 'wrong') return questions.filter(q => this.progress.wrong.includes(q.id));
+        if (source === 'favorite') return questions.filter(q => this.progress.favorites.includes(q.id));
+        return questions;
+    }
+
+    filterGeneratorPool(criteria, ignoreKey = '') {
+        let pool = this.getGeneratorBasePool(criteria.source);
+        if (ignoreKey !== 'module') pool = pool.filter(q => questionMatchesTag(q, 'module', criteria.module));
+        if (ignoreKey !== 'section') pool = pool.filter(q => questionMatchesTag(q, 'section', criteria.section));
+        if (ignoreKey !== 'skill') pool = pool.filter(q => questionMatchesTag(q, 'skill', criteria.skill));
+        if (ignoreKey !== 'topic') pool = pool.filter(q => questionMatchesTag(q, 'topic', criteria.topic));
+        return pool;
+    }
+
+    syncGeneratorFilterOptions(criteria) {
+        const controls = [
+            { key: 'module', id: 'generatorModuleSelect', field: 'modules', placeholder: '全部讲义章节' },
+            { key: 'section', id: 'generatorSectionSelect', field: 'sections', placeholder: '全部细分概念' },
+            { key: 'skill', id: 'generatorSkillSelect', field: 'skills', placeholder: '全部解题技能' },
+            { key: 'topic', id: 'generatorTopicSelect', field: 'search_topics', placeholder: '全部 Topic 分类' }
+        ];
+
+        controls.forEach(control => {
+            const optionPool = this.filterGeneratorPool(criteria, control.key);
+            const values = uniqueSorted(optionPool.flatMap(q => q[control.field] || []));
+            criteria[control.key] = this.setSelectOptions(control.id, values, control.placeholder, criteria[control.key]);
+        });
+
+        return criteria;
+    }
+
+    getGeneratorPool() {
+        const criteria = this.syncGeneratorFilterOptions(this.getGeneratorCriteria());
+        return this.filterGeneratorPool(criteria);
+    }
+
+    buildGeneratedSessionLabel(timed, poolSize) {
+        const source = document.getElementById('generatedSourceSelect')?.value || 'all';
+        const sourceLabel = {
+            all: '全部题库',
+            wrong: '错题本',
+            favorite: '收藏'
+        }[source] || '全部题库';
+        const tagLabels = [
+            document.getElementById('generatorModuleSelect')?.value,
+            document.getElementById('generatorSectionSelect')?.value,
+            document.getElementById('generatorSkillSelect')?.value,
+            document.getElementById('generatorTopicSelect')?.value
+        ].filter(Boolean);
+        const tagText = tagLabels.length > 0 ? ` · ${tagLabels.join(' / ')}` : '';
+        return `${timed ? '限时练习' : '随机练习'} · ${sourceLabel}${tagText} · 题池 ${poolSize}`;
+    }
+
+    updateGeneratorPreview() {
+        const pool = this.getGeneratorPool();
+        const requestedCount = Math.max(1, Math.min(50, parseInt(document.getElementById('generatedCountInput')?.value || '20', 10)));
+        const selectedCount = Math.min(requestedCount, pool.length);
+        const minutes = Math.max(0, Math.min(180, parseInt(document.getElementById('generatedMinutesInput')?.value || '0', 10)));
+        const source = document.getElementById('generatedSourceSelect')?.value || 'all';
+        const sourceLabel = {
+            all: '全部题库',
+            wrong: '错题本',
+            favorite: '收藏'
+        }[source] || '全部题库';
+        const activeTags = [
+            document.getElementById('generatorModuleSelect')?.value,
+            document.getElementById('generatorSectionSelect')?.value,
+            document.getElementById('generatorSkillSelect')?.value,
+            document.getElementById('generatorTopicSelect')?.value
+        ].filter(Boolean);
+        const filterText = activeTags.length > 0 ? ` · ${activeTags.join(' / ')}` : '';
+        const poolSummary = document.getElementById('generatorPoolSummary');
+        const exportLabel = document.getElementById('exportPreviewLabel');
+        if (poolSummary) {
+            poolSummary.textContent = `${sourceLabel}${filterText}：${pool.length} 题，将抽取 ${selectedCount} 题${minutes > 0 ? `，限时 ${minutes} 分钟` : ''}`;
+        }
+        if (exportLabel) {
+            exportLabel.textContent = `预览：将下载 ${selectedCount} 题`;
+        }
+    }
+
+    stopGeneratedTimer() {
+        if (this.generatedSession.timerId) {
+            clearInterval(this.generatedSession.timerId);
+            this.generatedSession.timerId = null;
+        }
+        this.generatedSession.active = false;
+        const status = document.getElementById('mockStatus');
+        const timer = document.getElementById('mockTimer');
+        if (status && !this.mockSession.active) status.classList.add('hidden');
+        if (timer && !this.mockSession.active) timer.classList.add('hidden');
+        this.updateMockUI();
+    }
+
+    updateGeneratedTimerUI() {
+        const status = document.getElementById('mockStatus');
+        const timer = document.getElementById('mockTimer');
+        if (!status || !timer) return;
+        if (this.generatedSession.active) {
+            status.textContent = `当前模式: ${this.generatedSession.label}`;
+            status.classList.remove('hidden');
+            if (this.generatedSession.durationSeconds > 0) {
+                timer.textContent = this.formatTime(this.generatedSession.remainingSeconds);
+                timer.classList.remove('hidden');
+            } else {
+                timer.classList.add('hidden');
+            }
+            this.updateMockUI();
+        }
+    }
+
+    exportCurrentWorksheet() {
+        const generatorViewOpen = !document.getElementById('generatorSelectView')?.classList.contains('hidden');
+        const pool = generatorViewOpen ? this.getGeneratorPool() : this.buildFilteredQuestions();
+        const requestedCount = Math.max(1, Math.min(50, parseInt(document.getElementById('generatedCountInput')?.value || '20', 10)));
+        const set = generatorViewOpen
+            ? this.shuffleArray(pool).slice(0, Math.min(requestedCount, pool.length))
+            : (this.filteredQuestions.length > 0 ? this.filteredQuestions : pool);
+        if (set.length === 0) {
+            alert('当前组卷条件下没有可导出的题目。');
+            return;
+        }
+        const text = exportWorksheet(set, {
+            title: this.courseConfig?.title || '练习单',
+            includeAnswers: document.getElementById('exportIncludeAnswers')?.checked !== false,
+            includeAnalysis: document.getElementById('exportIncludeAnalysis')?.checked === true,
+            includeTags: document.getElementById('exportIncludeTags')?.checked !== false,
+            assetBase: new URL('.', window.location.href).href
+        });
+        const blob = new Blob([text], { type: 'text/html;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `practice-worksheet-${new Date().toISOString().slice(0, 10)}.html`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+    }
+
+    getDimensionPerformance(dimension) {
         const stats = {};
 
         questions.forEach(q => {
-            if (!stats[q.topic]) {
-                stats[q.topic] = {
-                    total: 0,
-                    completed: 0,
-                    correct: 0
-                };
-            }
+            const values = this.getQuestionDimensionValues(q, dimension);
+            values.forEach(label => {
+                if (!stats[label]) {
+                    stats[label] = {
+                        total: 0,
+                        completed: 0,
+                        correct: 0
+                    };
+                }
 
-            stats[q.topic].total++;
+                stats[label].total++;
 
-            if (this.progress.completed.includes(q.id)) {
-                stats[q.topic].completed++;
-            }
+                if (this.progress.completed.includes(q.id)) {
+                    stats[label].completed++;
+                }
 
-            if (this.progress.correct.includes(q.id)) {
-                stats[q.topic].correct++;
-            }
+                if (this.progress.correct.includes(q.id)) {
+                    stats[label].correct++;
+                }
+            });
         });
 
-        return Object.entries(stats).map(([topic, data]) => {
+        return Object.entries(stats).map(([label, data]) => {
             const accuracy = data.completed > 0 ? Math.round(data.correct / data.completed * 100) : null;
-            return { topic, ...data, accuracy };
+            return { label, ...data, accuracy };
         });
+    }
+
+    getTopicPerformance() {
+        return this.getDimensionPerformance('topics').map(item => ({
+            topic: item.label,
+            ...item
+        }));
     }
 
     renderInsights() {
         const topicStats = document.getElementById('topicStats');
         const weakTopics = document.getElementById('weakTopics');
-        const performance = this.getTopicPerformance();
+        const modulePerformance = this.getDimensionPerformance('modules');
+        const sectionPerformance = this.getDimensionPerformance('sections');
+        const skillPerformance = this.getDimensionPerformance('skills');
 
-        const sortedByCoverage = [...performance]
+        const sortedByCoverage = [...modulePerformance]
             .sort((a, b) => {
                 if (b.completed !== a.completed) return b.completed - a.completed;
-                return a.topic.localeCompare(b.topic);
+                return a.label.localeCompare(b.label);
             })
             .slice(0, 6);
 
-        if (performance.every(item => item.completed === 0)) {
+        if (modulePerformance.every(item => item.completed === 0)) {
             topicStats.innerHTML = '<div class="insight-empty">暂时没有可统计的数据</div>';
         } else {
             topicStats.innerHTML = sortedByCoverage.map(item => {
                 const accuracyText = item.accuracy === null ? '未作答' : `${item.accuracy}%`;
-                return `<div class="insight-item"><span>${item.topic}</span><span>${item.correct}/${item.completed}，正确率 ${accuracyText}</span></div>`;
+                return `<div class="insight-item"><span>${item.label}</span><span>${item.correct}/${item.completed}，正确率 ${accuracyText}</span></div>`;
             }).join('');
         }
 
-        const weakList = performance
+        const weakList = [
+            ...sectionPerformance.map(item => ({ ...item, kind: '概念' })),
+            ...skillPerformance.map(item => ({ ...item, kind: '技能' }))
+        ]
             .filter(item => item.completed > 0)
             .sort((a, b) => {
                 if (a.accuracy !== b.accuracy) return a.accuracy - b.accuracy;
-                return b.completed - a.completed;
+                if (b.completed !== a.completed) return b.completed - a.completed;
+                return a.label.localeCompare(b.label);
             })
-            .slice(0, 3);
+            .slice(0, 4);
 
         if (weakList.length === 0) {
-            weakTopics.innerHTML = '<div class="insight-empty">先做一些题目后，这里会显示你的薄弱点推荐</div>';
+            weakTopics.innerHTML = '<div class="insight-empty">先做一些题目后，这里会显示你的薄弱概念和技能</div>';
         } else {
             weakTopics.innerHTML = weakList.map(item => {
-                return `<div class="insight-item"><span>${item.topic}</span><span>建议优先复习，当前正确率 ${item.accuracy}%</span></div>`;
+                return `<div class="insight-item"><span>${item.kind} · ${item.label}</span><span>正确率 ${item.accuracy}%</span></div>`;
             }).join('');
         }
     }
@@ -863,13 +1461,14 @@ class TMUAQuiz {
     renderAnswerCard() {
         const container = document.getElementById('answerCardContainer');
         container.innerHTML = '';
+        const currentQuestion = this.filteredQuestions[this.currentIndex];
 
         if (this.currentMode === 'mock') {
             // 模拟模式：扁平列表
             const grid = document.createElement('div');
             grid.className = 'answer-card-grid';
             this.filteredQuestions.forEach((q, index) => {
-                this._appendAnswerCardItem(grid, q, index);
+                this._appendAnswerCardItem(grid, q, index, index + 1);
             });
             container.appendChild(grid);
         } else {
@@ -883,9 +1482,10 @@ class TMUAQuiz {
                 yearGroups[y][p].push({ q, index });
             });
 
-            const sortedYears = Object.keys(yearGroups).sort();
+            const sortedYears = Object.keys(yearGroups).sort((a, b) => Number(b) - Number(a));
 
             sortedYears.forEach(year => {
+                const isCurrentYear = currentQuestion && String(currentQuestion.year) === String(year);
                 const yearGroupEl = document.createElement('div');
                 yearGroupEl.className = 'answer-card-year';
 
@@ -898,6 +1498,10 @@ class TMUAQuiz {
 
                 const yearBodyEl = document.createElement('div');
                 yearBodyEl.className = 'answer-card-year-body';
+                if (!isCurrentYear) {
+                    yearTitleEl.classList.add('collapsed');
+                    yearBodyEl.style.display = 'none';
+                }
 
                 // 点击年份标题折叠/展开
                 yearTitleEl.addEventListener('click', () => {
@@ -909,6 +1513,7 @@ class TMUAQuiz {
                 const sortedPapers = Object.keys(yearGroups[year]).sort((a, b) => a - b);
 
                 sortedPapers.forEach(paper => {
+                    const isCurrentPaper = isCurrentYear && currentQuestion && String(currentQuestion.paper) === String(paper);
                     const items = yearGroups[year][paper];
                     const paperLabel = `P${paper}`;
 
@@ -923,6 +1528,10 @@ class TMUAQuiz {
                     const paperGridEl = document.createElement('div');
                     paperGridEl.className = 'answer-card-paper-grid';
                     paperGridEl.dataset.paper = paper;
+                    if (!isCurrentPaper) {
+                        paperTitleEl.classList.add('collapsed');
+                        paperGridEl.style.display = 'none';
+                    }
 
                     // 点击Paper标题折叠/展开
                     paperTitleEl.addEventListener('click', () => {
@@ -931,7 +1540,7 @@ class TMUAQuiz {
                     });
 
                     items.forEach(({ q, index }) => {
-                        this._appendAnswerCardItem(paperGridEl, q, index);
+                        this._appendAnswerCardItem(paperGridEl, q, index, `Q${q.num || index + 1}`);
                     });
 
                     paperGroupEl.appendChild(paperTitleEl);
@@ -946,13 +1555,18 @@ class TMUAQuiz {
         }
     }
 
-    _appendAnswerCardItem(parent, q, index) {
+    _appendAnswerCardItem(parent, q, index, label = index + 1) {
         const btn = document.createElement('button');
         btn.className = 'answer-card-item';
-        btn.textContent = index + 1;
+        btn.textContent = label;
+        btn.title = `${index + 1}. ${getQuestionLabel(q)}`;
 
         if (index === this.currentIndex) {
             btn.classList.add('current');
+        }
+
+        if (this.progress.favorites.includes(q.id)) {
+            btn.classList.add('favorite');
         }
 
         // Mock 模式下不显示正误，只区分已答/未答
@@ -985,65 +1599,44 @@ class TMUAQuiz {
     }
     
     applyYearPaperFilter() {
-        // 先按年份和paper筛选
-        let filtered = questions;
-        
-        if (this.selectedYear !== 'all') {
-            filtered = filtered.filter(q => q.year == this.selectedYear);
-        }
-        
-        if (this.selectedPaper !== 'all') {
-            filtered = filtered.filter(q => q.paper == this.selectedPaper);
-        }
-        
-        // 再应用其他筛选条件
-        if (this.filter === 'topic') {
-            const topicSelect = document.getElementById('topicSelect');
-            const topic = topicSelect.value;
-            if (topic) {
-                filtered = filtered.filter(q => q.topic === topic);
-            }
-        } else if (this.filter === 'wrong') {
-            filtered = filtered.filter(q => this.progress.wrong.includes(q.id));
-        } else if (this.filter === 'uncompleted') {
-            filtered = filtered.filter(q => !this.progress.completed.includes(q.id));
-        }
-        
+        this.applyFilter();
+    }
+    
+    applyFilter(topic = null) {
+        if (topic !== null) this.selectedTopic = topic;
+        let filtered = this.buildFilteredQuestions();
         this.filteredQuestions = filtered;
         this.currentIndex = 0;
         this.currentAnswers = {};
         this.resetSessionProgress();
         this.showQuestion();
     }
-    
-    applyFilter(topic = null) {
-        // 先按年份和paper筛选
+
+    buildFilteredQuestions() {
         let filtered = questions;
-        
+
         if (this.selectedYear !== 'all') {
             filtered = filtered.filter(q => q.year == this.selectedYear);
         }
-        
+
         if (this.selectedPaper !== 'all') {
             filtered = filtered.filter(q => q.paper == this.selectedPaper);
         }
-        
-        // 再应用其他筛选条件
-        if (this.filter === 'all') {
-            // 已经筛选过了
-        } else if (this.filter === 'topic' && topic) {
-            filtered = filtered.filter(q => q.topic === topic);
+
+        if (this.filter === 'topic') {
+            filtered = filtered.filter(q => questionMatchesTag(q, 'topic', this.selectedTopic));
+            filtered = filtered.filter(q => questionMatchesTag(q, 'module', this.selectedModule));
+            filtered = filtered.filter(q => questionMatchesTag(q, 'section', this.selectedSection));
+            filtered = filtered.filter(q => questionMatchesTag(q, 'skill', this.selectedSkill));
         } else if (this.filter === 'wrong') {
             filtered = filtered.filter(q => this.progress.wrong.includes(q.id));
+        } else if (this.filter === 'favorite') {
+            filtered = filtered.filter(q => this.progress.favorites.includes(q.id));
         } else if (this.filter === 'uncompleted') {
             filtered = filtered.filter(q => !this.progress.completed.includes(q.id));
         }
-        
-        this.filteredQuestions = filtered;
-        this.currentIndex = 0;
-        this.currentAnswers = {};
-        this.resetSessionProgress();
-        this.showQuestion();
+
+        return filtered;
     }
     
     showQuestion() {
@@ -1052,6 +1645,10 @@ class TMUAQuiz {
             document.getElementById('questionText').textContent = '没有符合条件的题目';
             document.getElementById('optionsArea').innerHTML = '';
             document.getElementById('questionCounter').textContent = '无题目';
+            document.getElementById('filteredCountLabel').textContent = '当前 0 题';
+            document.getElementById('questionTags').innerHTML = '';
+            this.updateQuestionJump();
+            this.updateActiveFilterSummary();
             document.getElementById('prevBtn').disabled = true;
             document.getElementById('nextBtn').disabled = true;
             document.getElementById('answerCardContainer').innerHTML = '';
@@ -1063,6 +1660,10 @@ class TMUAQuiz {
         // 更新题目计数器
         document.getElementById('questionCounter').textContent = 
             `第 ${this.currentIndex + 1} 题 / 共 ${this.filteredQuestions.length} 题`;
+        document.getElementById('filteredCountLabel').textContent = `当前筛选 ${this.filteredQuestions.length} 题`;
+        this.updateQuestionJump();
+        this.updateActiveFilterSummary();
+        this.updateGeneratorPreview();
         
         // 更新 mock 底部导航计数器
         document.getElementById('mockQuestionCounter').textContent = 
@@ -1076,6 +1677,8 @@ class TMUAQuiz {
         
         document.getElementById('questionId').textContent = `题目 #${q.id}`;
         document.getElementById('questionTopic').textContent = `知识点: ${q.topic}`;
+        this.renderQuestionTags(q);
+        this.updateFavoriteButton(q);
         
         // 显示图片标识（只对真正有图片的题目显示）
         const imageBadge = document.getElementById('questionImageBadge');
@@ -1193,6 +1796,113 @@ class TMUAQuiz {
             document.getElementById('analysisArea').open = true;
             this.updateReviewUI();
         }
+    }
+
+    updateQuestionJump() {
+        const select = document.getElementById('questionJumpSelect');
+        if (!select) return;
+        const currentId = this.filteredQuestions[this.currentIndex]?.id || '';
+        select.innerHTML = '<option value="">题目跳转</option>';
+        this.filteredQuestions.forEach((question, index) => {
+            const option = document.createElement('option');
+            option.value = question.id;
+            option.textContent = `${index + 1}. ${getQuestionLabel(question)}`;
+            select.appendChild(option);
+        });
+        select.value = currentId;
+    }
+
+    updateActiveFilterSummary() {
+        const summary = document.getElementById('activeFilterSummary');
+        if (!summary) return;
+
+        const parts = [];
+        if (this.selectedYear !== 'all') parts.push(this.selectedYear);
+        if (this.selectedPaper !== 'all') parts.push(`Paper ${this.selectedPaper}`);
+
+        if (this.filter === 'topic') {
+            if (this.selectedTopic) parts.push(this.selectedTopic);
+            if (this.selectedModule) parts.push(this.selectedModule);
+            if (this.selectedSection) parts.push(this.selectedSection);
+            if (this.selectedSkill) parts.push(this.selectedSkill);
+            if (parts.length === 0) parts.push('按知识点');
+        } else if (this.filter === 'wrong') {
+            parts.push('错题本');
+        } else if (this.filter === 'favorite') {
+            parts.push('收藏');
+        } else if (this.filter === 'uncompleted') {
+            parts.push('未完成');
+        } else if (parts.length === 0) {
+            parts.push('全部题目');
+        }
+
+        summary.textContent = `${parts.join(' · ')} · ${this.filteredQuestions.length} 题`;
+    }
+
+    renderQuestionTags(question) {
+        const container = document.getElementById('questionTags');
+        if (!container) return;
+        const chips = [];
+        chips.push({ label: question.topic, type: 'topic' });
+        (question.related_topics || []).forEach(value => chips.push({ label: value, type: 'related' }));
+        (question.modules || []).forEach(value => chips.push({ label: value, type: 'module' }));
+        (question.sections || []).forEach(value => chips.push({ label: value, type: 'section' }));
+        (question.skills || []).forEach(value => chips.push({ label: value, type: 'skill' }));
+        if (question.difficulty) chips.push({ label: `D${question.difficulty}`, type: 'difficulty' });
+
+        container.innerHTML = chips.map(chip => (
+            `<button class="tag-chip tag-${chip.type}" data-tag-type="${chip.type}" data-tag="${chip.label}">${chip.label}</button>`
+        )).join('');
+
+        container.querySelectorAll('.tag-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const type = chip.dataset.tagType;
+                const value = chip.dataset.tag;
+                if (type === 'topic' || type === 'related') {
+                    this.filter = 'topic';
+                    this.selectedTopic = value;
+                    document.getElementById('topicSelect').value = value;
+                } else if (type === 'module') {
+                    this.filter = 'topic';
+                    this.selectedModule = value;
+                    document.getElementById('moduleSelect').value = value;
+                } else if (type === 'section') {
+                    this.filter = 'topic';
+                    this.selectedSection = value;
+                    document.getElementById('sectionSelect').value = value;
+                } else if (type === 'skill') {
+                    this.filter = 'topic';
+                    this.selectedSkill = value;
+                    document.getElementById('skillSelect').value = value;
+                } else {
+                    return;
+                }
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.filter === 'topic');
+                });
+                ['topicSelect', 'moduleSelect', 'sectionSelect', 'skillSelect'].forEach(id => {
+                    document.getElementById(id).classList.remove('hidden');
+                });
+                this.applyFilter();
+            });
+        });
+    }
+
+    updateFavoriteButton(question) {
+        const btn = document.getElementById('favoriteBtn');
+        if (!btn || !question) return;
+        const isFavorite = this.progress.favorites.includes(question.id);
+        btn.classList.toggle('active', isFavorite);
+        btn.textContent = isFavorite ? '已收藏' : '收藏';
+    }
+
+    toggleCurrentFavorite() {
+        const q = this.getCurrentQuestion();
+        if (!q) return;
+        this.progress = toggleFavorite(this.progress, q.id);
+        this.saveProgress();
+        this.updateFavoriteButton(q);
+        this.renderAnswerCard();
     }
     
 
@@ -1345,6 +2055,15 @@ class TMUAQuiz {
     }
     
     showResult() {
+        if (this.generatedSession.timerId) {
+            clearInterval(this.generatedSession.timerId);
+            this.generatedSession.timerId = null;
+        }
+        const wasGeneratedMode = this.currentMode === 'generated-set' || this.currentMode === 'timed-set';
+        if (wasGeneratedMode) {
+            this.generatedSession.active = false;
+            this.updateMockUI();
+        }
         document.getElementById('questionArea').classList.add('hidden');
         document.getElementById('resultArea').classList.remove('hidden');
         
@@ -1360,6 +2079,9 @@ class TMUAQuiz {
 
         const resultModeText = document.getElementById('resultModeText');
         const mockSummaryText = document.getElementById('mockSummaryText');
+        const sessionSummaryBox = document.getElementById('sessionSummaryBox');
+        sessionSummaryBox.classList.add('hidden');
+        sessionSummaryBox.innerHTML = '';
 
         if (this.currentMode === 'mock') {
             resultModeText.textContent = `模式: 限时模拟（${this.mockSession.paperLabel}）`;
@@ -1369,13 +2091,54 @@ class TMUAQuiz {
         } else if (this.currentMode === 'wrong-redo') {
             resultModeText.textContent = '模式: 错题二刷';
             mockSummaryText.classList.add('hidden');
+        } else if (this.currentMode === 'favorite-review') {
+            resultModeText.textContent = '模式: 收藏复习';
+            mockSummaryText.classList.add('hidden');
         } else if (this.currentMode === 'shuffle') {
             resultModeText.textContent = '模式: 随机练习';
             mockSummaryText.classList.add('hidden');
+        } else if (this.currentMode === 'generated-set' || this.currentMode === 'timed-set') {
+            resultModeText.textContent = `模式: ${this.generatedSession.label || '组卷练习'}`;
+            if (this.generatedSession.durationSeconds > 0) {
+                const usedSeconds = this.generatedSession.durationSeconds - this.generatedSession.remainingSeconds;
+                mockSummaryText.textContent = `本次用时: ${this.formatTime(usedSeconds)}，设定时间: ${this.formatTime(this.generatedSession.durationSeconds)}`;
+                mockSummaryText.classList.remove('hidden');
+            } else {
+                mockSummaryText.classList.add('hidden');
+            }
+            this.renderSessionSummary(sessionSummaryBox);
         } else {
             resultModeText.textContent = '模式: 普通练习';
             mockSummaryText.classList.add('hidden');
         }
+    }
+
+    renderSessionSummary(container) {
+        if (!container) return;
+        const wrongQuestions = this.filteredQuestions.filter(q => this.sessionProgress.wrong.includes(q.id));
+        const moduleCounts = {};
+        wrongQuestions.forEach(q => {
+            (q.modules?.length ? q.modules : [q.topic || 'Unclassified']).forEach(tag => {
+                moduleCounts[tag] = (moduleCounts[tag] || 0) + 1;
+            });
+        });
+        const weakModules = Object.entries(moduleCounts)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 3);
+
+        const wrongText = wrongQuestions.length === 0
+            ? '本组没有错题，可以提高题量或切换更窄的技能筛选。'
+            : `错题：${wrongQuestions.map(q => getQuestionLabel(q)).join(', ')}`;
+        const weakText = weakModules.length === 0
+            ? '暂无明显薄弱模块。'
+            : `建议回看：${weakModules.map(([tag, count]) => `${tag} (${count})`).join('，')}`;
+
+        container.innerHTML = `
+            <strong>本组复盘</strong>
+            <p>${wrongText}</p>
+            <p>${weakText}</p>
+        `;
+        container.classList.remove('hidden');
     }
     
     restart() {
@@ -1386,6 +2149,7 @@ class TMUAQuiz {
 
         this.reviewMode = false;
         this.mockSession.active = false;
+        this.stopGeneratedTimer();
         this.currentMode = 'practice';
         this.currentAnswers = {};
         this.resetSessionProgress();
@@ -1415,7 +2179,9 @@ class TMUAQuiz {
         this.progress = {
             completed: [],
             correct: [],
-            wrong: []
+            wrong: [],
+            favorites: [],
+            generatedSets: []
         };
         this.saveProgress();
 
@@ -1450,12 +2216,14 @@ class TMUAQuiz {
 
         // 确保 mock-active 已移除
         document.getElementById('practiceView').classList.remove('mock-active');
+        document.getElementById('practiceView').classList.remove('generated-active');
         document.getElementById('mockHeader').classList.add('hidden');
 
         // 隐藏所有其他视图（包括模拟结果页）
         document.getElementById('mockResultView').classList.add('hidden');
         document.getElementById('practiceView').classList.add('hidden');
         document.getElementById('mockSelectView').classList.add('hidden');
+        document.getElementById('generatorSelectView').classList.add('hidden');
         document.getElementById('welcomeView').classList.remove('hidden');
         this.updateWelcomeProgress();
     }
@@ -1463,6 +2231,8 @@ class TMUAQuiz {
     showPracticeView() {
         document.getElementById('welcomeView').classList.add('hidden');
         document.getElementById('mockSelectView').classList.add('hidden');
+        document.getElementById('generatorSelectView').classList.add('hidden');
+        document.getElementById('mockResultView').classList.add('hidden');
         document.getElementById('practiceView').classList.remove('hidden');
     }
 
@@ -1490,6 +2260,8 @@ class TMUAQuiz {
     showMockSelectView() {
         document.getElementById('welcomeView').classList.add('hidden');
         document.getElementById('mockSelectView').classList.remove('hidden');
+        document.getElementById('generatorSelectView').classList.add('hidden');
+        document.getElementById('mockResultView').classList.add('hidden');
         document.getElementById('practiceView').classList.add('hidden');
 
         // 重置选择状态
@@ -1516,7 +2288,7 @@ class TMUAQuiz {
         const grid = document.getElementById('yearGrid');
         grid.innerHTML = '';
 
-        const years = [2016, 2017, 2018, 2019, 2020, 2021, 2022];
+        const years = this.questionIndex?.years || [];
 
         years.forEach(year => {
             const yearQuestions = questions.filter(q => q.year === year);
@@ -1524,11 +2296,11 @@ class TMUAQuiz {
             const completed = yearQuestions.filter(q => this.progress.completed.includes(q.id)).length;
             const correct = yearQuestions.filter(q => this.progress.correct.includes(q.id)).length;
 
-            let statusIcon = '⚪'; // 未开始
+            let statusIcon = '未开始';
             if (completed === total && total > 0) {
-                statusIcon = '✅'; // 已完成
+                statusIcon = '完成';
             } else if (completed > 0) {
-                statusIcon = '🔵'; // 进行中
+                statusIcon = '进行中';
             }
 
             const card = document.createElement('div');
@@ -1547,7 +2319,7 @@ class TMUAQuiz {
         const container = document.getElementById('paperCards');
         container.innerHTML = '';
 
-        [1, 2].forEach(paper => {
+        (this.questionIndex?.papers || [1, 2]).forEach(paper => {
             const paperQuestions = questions.filter(q => q.year === year && q.paper === paper);
             const total = paperQuestions.length;
             const completed = paperQuestions.filter(q => this.progress.completed.includes(q.id)).length;
@@ -1593,6 +2365,7 @@ class TMUAQuiz {
             this.reviewMode = false;  // 修复：退出回顾模式
             this.currentMode = 'practice';
             this.mockSession.active = false;
+            this.stopGeneratedTimer();
 
             // 重置年份/试卷选择为"全部"，避免停留在模拟考试的筛选
             this.selectedYear = 'all';
@@ -1612,8 +2385,12 @@ class TMUAQuiz {
                 return;
             }
             this.startWrongRedo();
+        } else if (mode === 'favorite') {
+            this.startFavoriteReview();
+        } else if (mode === 'builder') {
+            this.showGeneratorSelectView('welcome');
         } else if (mode === 'shuffle') {
-            this.startShuffleMode();
+            this.startQuickRandomSession();
         }
     }
 }

@@ -137,6 +137,29 @@ function imageRefs(q) {
     .filter(Boolean);
 }
 
+function pngDimensions(imagePath) {
+  try {
+    const buffer = fs.readFileSync(imagePath);
+    if (buffer.length < 24) return null;
+    const signature = buffer.subarray(0, 8).toString('hex');
+    if (signature !== '89504e470d0a1a0a') return null;
+    return {
+      width: buffer.readUInt32BE(16),
+      height: buffer.readUInt32BE(20),
+    };
+  } catch {
+    return null;
+  }
+}
+
+function looksLikeFullPageImage(ref, imagePath) {
+  if (/(^|[_\-\s])page\s*\d+/i.test(path.basename(ref))) return true;
+  const dimensions = pngDimensions(imagePath);
+  if (!dimensions) return false;
+  const ratio = dimensions.height / Math.max(dimensions.width, 1);
+  return dimensions.width >= 1000 && dimensions.height >= 1400 && ratio > 1.25;
+}
+
 function isLowerAsciiTag(value, separatorPattern) {
   return typeof value === 'string' && separatorPattern.test(value);
 }
@@ -230,8 +253,11 @@ function auditQuestion(q) {
       path.join(root, 'public', 'practice', 'tmua', ref),
       path.join(root, 'public', 'practice', 'tmua', 'images', ref),
     ];
-    if (!possiblePaths.some((imagePath) => fs.existsSync(imagePath))) {
+    const existingPath = possiblePaths.find((imagePath) => fs.existsSync(imagePath));
+    if (!existingPath) {
       add('error', id, `missing image reference: ${ref}`);
+    } else if (looksLikeFullPageImage(ref, existingPath)) {
+      add('error', id, `image reference looks like a full-page screenshot, not a question asset: ${ref}`);
     }
   }
 }

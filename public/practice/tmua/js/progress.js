@@ -2,19 +2,29 @@
 
 /**
  * 从 localStorage 加载进度数据
- * @returns {Object} 进度对象 { completed: [], correct: [], wrong: [] }
+ * @returns {Object} 进度对象 { completed: [], correct: [], wrong: [], favorites: [] }
  */
 function loadProgressFromStorage() {
     const saved = localStorage.getItem('tmua_progress');
     if (saved) {
         try {
-            return JSON.parse(saved);
+            return normalizeProgress(JSON.parse(saved));
         } catch (e) {
             console.error('Failed to parse progress:', e);
-            return { completed: [], correct: [], wrong: [] };
+            return normalizeProgress({});
         }
     }
-    return { completed: [], correct: [], wrong: [] };
+    return normalizeProgress({});
+}
+
+function normalizeProgress(progress) {
+    return {
+        completed: Array.isArray(progress.completed) ? progress.completed : [],
+        correct: Array.isArray(progress.correct) ? progress.correct : [],
+        wrong: Array.isArray(progress.wrong) ? progress.wrong : [],
+        favorites: Array.isArray(progress.favorites) ? progress.favorites : [],
+        generatedSets: Array.isArray(progress.generatedSets) ? progress.generatedSets : []
+    };
 }
 
 /**
@@ -38,7 +48,7 @@ function resetSessionProgress() {
  */
 function clearAllProgress() {
     localStorage.removeItem('tmua_progress');
-    return { completed: [], correct: [], wrong: [] };
+    return normalizeProgress({});
 }
 
 /**
@@ -84,4 +94,14 @@ function calculateAccuracy(progress) {
     const completed = progress.completed.length;
     const correct = progress.correct.length;
     return completed > 0 ? Math.round(correct / completed * 100) : 0;
+}
+
+function toggleFavorite(progress, questionId) {
+    const normalized = normalizeProgress(progress);
+    if (normalized.favorites.includes(questionId)) {
+        normalized.favorites = normalized.favorites.filter(id => id !== questionId);
+    } else {
+        normalized.favorites.push(questionId);
+    }
+    return normalized;
 }

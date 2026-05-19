@@ -29,7 +29,12 @@ function applyYearPaperFilter(questions, year, paper) {
  */
 function applyTopicFilter(questions, topic) {
     if (!topic) return questions;
-    return questions.filter(q => q.topic === topic);
+    return questions.filter(q => (q.search_topics || [q.topic]).includes(topic));
+}
+
+function applyTagFilter(questions, type, value) {
+    if (!value) return questions;
+    return questions.filter(q => questionMatchesTag(q, type, value));
 }
 
 /**
@@ -62,10 +67,15 @@ function applyCombinedFilter(questions, options, progress) {
     filtered = applyYearPaperFilter(filtered, options.year, options.paper);
     
     // 再按其他条件筛选
-    if (options.filter === 'topic' && options.topic) {
+    if (options.filter === 'topic') {
         filtered = applyTopicFilter(filtered, options.topic);
+        filtered = applyTagFilter(filtered, 'module', options.module);
+        filtered = applyTagFilter(filtered, 'section', options.section);
+        filtered = applyTagFilter(filtered, 'skill', options.skill);
     } else if (options.filter === 'wrong') {
         filtered = applyStatusFilter(filtered, progress, 'wrong');
+    } else if (options.filter === 'favorite') {
+        filtered = filtered.filter(q => (progress.favorites || []).includes(q.id));
     } else if (options.filter === 'uncompleted') {
         filtered = applyStatusFilter(filtered, progress, 'uncompleted');
     }
@@ -93,7 +103,7 @@ function shuffleArray(arr) {
  * @returns {Array} 知识点名称数组
  */
 function getAllTopics(questions) {
-    return [...new Set(questions.map(q => q.topic))];
+    return [...new Set(questions.flatMap(q => q.search_topics || [q.topic]))];
 }
 
 /**
