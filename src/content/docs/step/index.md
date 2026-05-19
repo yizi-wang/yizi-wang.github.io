@@ -7,6 +7,10 @@ tableOfContents: false
 
 Complete solutions and examiner commentary for STEP (Sixth Term Examination Paper) past papers, covering pure mathematics questions only. 54 papers, 1998–2024.
 
+## Teaching Outline
+
+- [STEP Lecture Outline](./step_lecture_outline) — a teaching sequence connecting audited STEP questions with FP2 and FP3 topics.
+
 ## STEP 2
 
 - [STEP 2 2024](./step2-2024) — Q1–Q8
