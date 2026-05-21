@@ -16,4 +16,11 @@ tableOfContents: false
 5. [东方数论](./lecture05_eastern_number_theory)
 6. [代数的突破](./lecture06_algebraic_breakthrough)
 7. [解析几何](./lecture07_analytic_geometry)
-8. [曲面与曲率](./lecture08_surface_curvature)
+8. [投影几何](./lecture08_projective_geometry)
+9. [微积分](./lecture09_calculus)
+10. [无穷级数](./lecture10_infinite_series)
+11. [数论复兴](./lecture11_number_theory_revival)
+
+## 专题补充
+
+- [曲面与曲率](./lecture08_surface_curvature)
