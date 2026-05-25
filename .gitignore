@@ -6,3 +6,4 @@ dist/
 
 .astro/
 __pycache__/
+*.log

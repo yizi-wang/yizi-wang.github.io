@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -61,6 +62,16 @@ export default defineConfig({
 					},
 				},
 			],
+		}),
+		sitemap({
+			i18n: {
+				defaultLocale: 'root',
+				locales: {
+					root: 'en',
+					zh: 'zh-CN',
+				},
+			},
+			filter: (page) => !new URL(page).pathname.includes('/review-drafts/'),
 		}),
 		mdx(),
 	],
