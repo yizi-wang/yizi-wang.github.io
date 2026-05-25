@@ -25,10 +25,7 @@ The key insight is that "uniform" means **constant density** - imagine a perfect
 
 Since the distribution is "uniform," the PDF must be some constant $k$ over $[a, b]$:
 
-$$f(x) = \begin{cases} 
-k & \text{if } a \leq x \leq b \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} k & \text{if } a \leq x \leq b \\ 0 & \text{otherwise} \end{cases}$$
 
 But what is this constant $k$? We use the fundamental requirement: total probability equals 1.
 
@@ -39,10 +36,7 @@ Therefore: $k = \frac{1}{b - a}$
 :::note[The Uniform PDF]
 For $X \sim \text{Uniform}(a, b)$:
 
-$$f(x) = \begin{cases} 
-\frac{1}{b - a} & \text{if } a \leq x \leq b \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} \frac{1}{b - a} & \text{if } a \leq x \leq b \\ 0 & \text{otherwise} \end{cases}$$
 
 **Geometric Interpretation:** This creates a rectangle with width $(b-a)$ and height $\frac{1}{b-a}$, giving area = 1.
 :::
@@ -52,10 +46,7 @@ Consider $X \sim \text{Uniform}(1, 5)$.
 
 **(a) Write down the PDF and sketch it**
 
-$$f(x) = \begin{cases} 
-\frac{1}{5-1} = \frac{1}{4} & \text{if } 1 \leq x \leq 5 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} \frac{1}{5-1} = \frac{1}{4} & \text{if } 1 \leq x \leq 5 \\ 0 & \text{otherwise} \end{cases}$$
 
 This creates a rectangle from $x = 1$ to $x = 5$ with height $\frac{1}{4}$.
 
@@ -94,11 +85,7 @@ $$F(x) = 1 \text{ (All probability accumulated)}$$
 :::note[The Uniform CDF]
 For $X \sim \text{Uniform}(a, b)$:
 
-$$F(x) = \begin{cases} 
-0 & \text{if } x < a \\
-\frac{x - a}{b - a} & \text{if } a \leq x \leq b \\
-1 & \text{if } x > b
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & \text{if } x < a \\ \frac{x - a}{b - a} & \text{if } a \leq x \leq b \\ 1 & \text{if } x > b \end{cases}$$
 
 **Key Properties:**
 
@@ -113,11 +100,7 @@ For $X \sim \text{Uniform}(-2, 6)$:
 
 **(a) Write down the CDF**
 
-$$F(x) = \begin{cases} 
-0 & \text{if } x < -2 \\
-\frac{x - (-2)}{6 - (-2)} = \frac{x + 2}{8} & \text{if } -2 \leq x \leq 6 \\
-1 & \text{if } x > 6
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & \text{if } x < -2 \\ \frac{x - (-2)}{6 - (-2)} = \frac{x + 2}{8} & \text{if } -2 \leq x \leq 6 \\ 1 & \text{if } x > 6 \end{cases}$$
 
 **(b) Find $P(0 < X \leq 4)$**
 
@@ -133,10 +116,7 @@ $$\frac{Q_1 + 2}{8} = 0.25 \Rightarrow Q_1 + 2 = 2 \Rightarrow Q_1 = 0$$
 
 The waiting times, in minutes, between flight take-offs at an airport are modelled by the continuous random variable $X$ with probability density function
 
-$$f(x) = \begin{cases}
-\frac{1}{5} & 2 \leq x \leq 7 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} \frac{1}{5} & 2 \leq x \leq 7 \\ 0 & \text{otherwise} \end{cases}$$
 
 1. Write down the name of this distribution.
 2. A randomly selected flight takes off at 9 am. Find the probability that the next flight takes off before 9:05 am.
@@ -152,11 +132,7 @@ For continuous random variables, we learned that expected value is the "center o
 
 For $X \sim \text{Uniform}(a, b)$:
 
-$$
-\begin{aligned}
-E(X) &= \int_a^b x \cdot \frac{1}{b - a} \, dx = \frac{1}{b - a} \int_a^b x \, dx = \frac{1}{b - a} \cdot \frac{x^2}{2}\Big|_a^b = \frac{b^2 - a^2}{2(b - a)} = \frac{(b - a)(b + a)}{2(b - a)} = \frac{a + b}{2}
-\end{aligned}
-$$
+$$\begin{aligned} E(X) &= \int_a^b x \cdot \frac{1}{b - a} \, dx = \frac{1}{b - a} \int_a^b x \, dx = \frac{1}{b - a} \cdot \frac{x^2}{2}\Big|_a^b = \frac{b^2 - a^2}{2(b - a)} = \frac{(b - a)(b + a)}{2(b - a)} = \frac{a + b}{2} \end{aligned}$$
 
 **Beautiful symmetry:** The expected value is exactly the midpoint of the interval!
 
@@ -247,11 +223,7 @@ A random sample of $30$ poles cut by this machine is taken.
 
 When a new machine cuts poles to a target length, the error, $X$ metres, is modelled by the cumulative distribution function $F(x)$ where
 
-$$F(x) = \begin{cases} 
-0 & x < 0 \\
-4x - 4x^2 & 0 \leq x \leq 0.5 \\
-1 & \text{otherwise}
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & x < 0 \\ 4x - 4x^2 & 0 \leq x \leq 0.5 \\ 1 & \text{otherwise} \end{cases}$$
 
 5. Using this model, find $P(X > 0.4)$ (2)
 
@@ -351,13 +323,7 @@ Substitute your answer from Question 3a into this formula and evaluate the integ
 
 **Step-by-step guidance:**
 
-$$
-\begin{aligned}
-P(\text{needle crosses}) &= \frac{1}{\frac{\pi}{2}} \int_0^{\pi/2} \_\_\_ \, d\theta \\
-&= \frac{2}{\pi} \int_0^{\pi/2} \_\_\_ \, d\theta \\
-&= \_\_\_
-\end{aligned}
-$$
+$$\begin{aligned} P(\text{needle crosses}) &= \frac{1}{\frac{\pi}{2}} \int_0^{\pi/2} \_\_\_ \, d\theta \\ &= \frac{2}{\pi} \int_0^{\pi/2} \_\_\_ \, d\theta \\ &= \_\_\_ \end{aligned}$$
 
 ### Step 4: Discover the Amazing Result
 

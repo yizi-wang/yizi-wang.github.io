@@ -175,11 +175,11 @@ This is the equation of a parabola!
 
 **Investigation Part 1: When does the projectile reach maximum height?**
 
-1. Write the equation for vertical velocity at time $t$: $v_y(t) = \text{___}$
+1. Write the equation for vertical velocity at time $t$: $v_y(t) = \underline{\phantom{v_{0y} - gt}}$
 2. At maximum height, what must be true about $v_y$? Why?
 3. Set up and solve the equation to find $t_{\text{max}}$:
 
-$$v_y = 0 \implies t_{\text{max}} = \text{___}$$
+$$v_y = 0 \implies t_{\text{max}} = \underline{\phantom{\frac{v_{0y}}{g}}}$$
 
 **Investigation Part 2: What IS the maximum height?**
 

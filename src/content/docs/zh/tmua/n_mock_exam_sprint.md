@@ -1378,7 +1378,7 @@ Let $T$ be a set of whole numbers. Which of the following is true **if and only 
 本题考察逻辑量词的否定运算，属于集合论与数理逻辑的结合题。题目定义了一个新概念stapled：集合$S$称为stapled，当且仅当对$S$中每个元素$a$，都存在$a$的某个质因子能整除$S$中至少一个其他数。要求找出$T$不是stapled的充要条件。解题核心在于准确地将复合逻辑命题进行否定。
 
 【解题步骤】
-原命题：$T$是stapled$\iff\forall a\in T,\;\exists p$( $p$是$a$的质因子$\;\land\;$$p$整除$T$中至少一个其他数)。
+原命题：$T$ 是 stapled $\iff \forall a\in T,\;\exists p$（$p$ 是 $a$ 的质因子，且 $p$ 整除 $T$ 中至少一个其他数）。
 
 否定过程分两步：
 第一步，否定外层全称量词$\forall$，变为存在量词$\exists$：

@@ -64,10 +64,7 @@ For a continuous random variable $X$, we describe its probability distribution u
 
 Consider a random variable $X$ with probability density function:
 
-$$f(x) = \begin{cases}
-\frac{2x}{9} & \text{if } 0 \leq x \leq 3 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} \frac{2x}{9} & \text{if } 0 \leq x \leq 3 \\ 0 & \text{otherwise} \end{cases}$$
 
 ---
 
@@ -128,11 +125,7 @@ This is the Fundamental Theorem of Calculus perfectly embodied in probability th
 
 A continuous random variable $X$ has cumulative distribution function:
 
-$$F(x) = \begin{cases}
-0 & x < 0 \\
-\frac{x^3}{8} & 0 \leq x \leq 2 \\
-1 & x > 2
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & x < 0 \\ \frac{x^3}{8} & 0 \leq x \leq 2 \\ 1 & x > 2 \end{cases}$$
 
 ---
 
@@ -158,14 +151,7 @@ $$\int_{-\infty}^{\infty} f(x) \, dx = \int_0^2 \frac{3x^2}{8} \, dx = \frac{3}{
 
 Using the CDF method: $P(0.5 < X < 1.5) = F(1.5) - F(0.5)$
 
-$$
-\begin{aligned}
-P(0.5 < X < 1.5) &= F(1.5) - F(0.5) \\
-&= \frac{(1.5)^3}{8} - \frac{(0.5)^3}{8} \\
-&= \frac{3.375 - 0.125}{8} \\
-&= \frac{3.25}{8} = \boxed{0.40625}
-\end{aligned}
-$$
+$$\begin{aligned} P(0.5 < X < 1.5) &= F(1.5) - F(0.5) \\ &= \frac{(1.5)^3}{8} - \frac{(0.5)^3}{8} \\ &= \frac{3.375 - 0.125}{8} \\ &= \frac{3.25}{8} = \boxed{0.40625} \end{aligned}$$
 
 ---
 
@@ -173,11 +159,7 @@ $$
 
 A continuous random variable $Y$ has the following cumulative distribution function:
 
-$$F(y) = \begin{cases}
-0 & y < 1 \\
-a(y-1)^2 & 1 \leq y \leq 3 \\
-1 & y > 3
-\end{cases}$$
+$$F(y) = \begin{cases} 0 & y < 1 \\ a(y-1)^2 & 1 \leq y \leq 3 \\ 1 & y > 3 \end{cases}$$
 
 where $a$ is a positive constant.
 
@@ -242,10 +224,7 @@ For a continuous random variable $X$ and constants $a$, $b$:
 
 Consider the continuous random variable $X$ with PDF:
 
-$$f(x) = \begin{cases}
-6x(1-x) & 0 \leq x \leq 1 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} 6x(1-x) & 0 \leq x \leq 1 \\ 0 & \text{otherwise} \end{cases}$$
 
 ---
 
@@ -255,13 +234,7 @@ $$f(x) = \begin{cases}
 
 Check that $\int_{-\infty}^{\infty} f(x) \, dx = 1$:
 
-$$
-\begin{aligned}
-\int_0^1 6x(1-x) \, dx &= 6\int_0^1 (x - x^2) \, dx \\
-&= 6\left[\frac{x^2}{2} - \frac{x^3}{3}\right]_0^1 \\
-&= 6\left(\frac{1}{2} - \frac{1}{3}\right) = 6 \cdot \frac{1}{6} = 1
-\end{aligned}
-$$
+$$\begin{aligned} \int_0^1 6x(1-x) \, dx &= 6\int_0^1 (x - x^2) \, dx \\ &= 6\left[\frac{x^2}{2} - \frac{x^3}{3}\right]_0^1 \\ &= 6\left(\frac{1}{2} - \frac{1}{3}\right) = 6 \cdot \frac{1}{6} = 1 \end{aligned}$$
 
 **Part (b): Calculate $E(X)$**
 
@@ -341,10 +314,7 @@ This is the most practical method for determining skewness:
 
 A continuous random variable $Z$ has probability density function:
 
-$$f(z) = \begin{cases}
-ce^{-2z} & z \geq 0 \\
-0 & z < 0
-\end{cases}$$
+$$f(z) = \begin{cases} ce^{-2z} & z \geq 0 \\ 0 & z < 0 \end{cases}$$
 
 where $c$ is a positive constant.
 
@@ -363,11 +333,7 @@ where $c$ is a positive constant.
 :::note[Jan15/2]
 A continuous random variable $X$ has cumulative distribution function
 
-$$F(x) = \begin{cases}
-0 & x < 1 \\
-\frac{1}{5}(x-1) & 1 \leq x \leq 6 \\
-1 & x > 6
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & x < 1 \\ \frac{1}{5}(x-1) & 1 \leq x \leq 6 \\ 1 & x > 6 \end{cases}$$
 
 1. Find P($X > 4$)
 2. Write down the value of P($X \neq 4$)
@@ -380,11 +346,7 @@ $$F(x) = \begin{cases}
 :::note[Jan15/5]
 The random variable $X$ has probability density function $f(x)$ given by
 
-$$f(x) = \begin{cases}
-k(x^2 + a) & -1 < x \leq 2 \\
-3k & 2 < x \leq 3 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} k(x^2 + a) & -1 < x \leq 2 \\ 3k & 2 < x \leq 3 \\ 0 & \text{otherwise} \end{cases}$$
 
 where $k$ and $a$ are constants.
 
@@ -397,11 +359,7 @@ Given that E($X$) = $\frac{17}{12}$
 :::note[June14/2]
 A random variable $X$ has cumulative distribution function F($x$) given by
 
-$$F(x) = \begin{cases}
-0 & x < 0 \\
-\frac{x^2}{20}(9-2x) & 0 \leq x \leq 2 \\
-1 & x > 2
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & x < 0 \\ \frac{x^2}{20}(9-2x) & 0 \leq x \leq 2 \\ 1 & x > 2 \end{cases}$$
 
 1. Verify that the median of $X$ lies between 1.23 and 1.24
 2. Specify fully the probability density function $f(x)$

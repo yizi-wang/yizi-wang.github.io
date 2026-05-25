@@ -64,10 +64,7 @@ $$P(a < X < b) = f(x) \text{ 在 } a \text{ 与 } b \text{ 之间的曲线下面
 
 考虑一个随机变量 $X$，其概率密度函数为：
 
-$$f(x) = \begin{cases}
-\frac{2x}{9} & \text{if } 0 \leq x \leq 3 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} \frac{2x}{9} & \text{if } 0 \leq x \leq 3 \\ 0 & \text{otherwise} \end{cases}$$
 
 ---
 
@@ -128,11 +125,7 @@ $$f(x) = \frac{d}{dx} F(x)$$
 
 连续型随机变量 $X$ 的累积分布函数为：
 
-$$F(x) = \begin{cases}
-0 & x < 0 \\
-\frac{x^3}{8} & 0 \leq x \leq 2 \\
-1 & x > 2
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & x < 0 \\ \frac{x^3}{8} & 0 \leq x \leq 2 \\ 1 & x > 2 \end{cases}$$
 
 ---
 
@@ -158,14 +151,7 @@ $$\int_{-\infty}^{\infty} f(x) \, dx = \int_0^2 \frac{3x^2}{8} \, dx = \frac{3}{
 
 用 CDF 方法：$P(0.5 < X < 1.5) = F(1.5) - F(0.5)$
 
-$$
-\begin{aligned}
-P(0.5 < X < 1.5) &= F(1.5) - F(0.5) \\
-&= \frac{(1.5)^3}{8} - \frac{(0.5)^3}{8} \\
-&= \frac{3.375 - 0.125}{8} \\
-&= \frac{3.25}{8} = \boxed{0.40625}
-\end{aligned}
-$$
+$$\begin{aligned} P(0.5 < X < 1.5) &= F(1.5) - F(0.5) \\ &= \frac{(1.5)^3}{8} - \frac{(0.5)^3}{8} \\ &= \frac{3.375 - 0.125}{8} \\ &= \frac{3.25}{8} = \boxed{0.40625} \end{aligned}$$
 
 ---
 
@@ -173,11 +159,7 @@ $$
 
 连续型随机变量 $Y$ 的累积分布函数为：
 
-$$F(y) = \begin{cases}
-0 & y < 1 \\
-a(y-1)^2 & 1 \leq y \leq 3 \\
-1 & y > 3
-\end{cases}$$
+$$F(y) = \begin{cases} 0 & y < 1 \\ a(y-1)^2 & 1 \leq y \leq 3 \\ 1 & y > 3 \end{cases}$$
 
 其中 $a$ 是一个正常数。
 
@@ -242,10 +224,7 @@ $$E[g(X)] = \int_{-\infty}^{\infty} g(x) f(x) \, dx$$
 
 考虑连续型随机变量 $X$，其 PDF 为：
 
-$$f(x) = \begin{cases}
-6x(1-x) & 0 \leq x \leq 1 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} 6x(1-x) & 0 \leq x \leq 1 \\ 0 & \text{otherwise} \end{cases}$$
 
 ---
 
@@ -255,13 +234,7 @@ $$f(x) = \begin{cases}
 
 检验 $\int_{-\infty}^{\infty} f(x) \, dx = 1$：
 
-$$
-\begin{aligned}
-\int_0^1 6x(1-x) \, dx &= 6\int_0^1 (x - x^2) \, dx \\
-&= 6\left[\frac{x^2}{2} - \frac{x^3}{3}\right]_0^1 \\
-&= 6\left(\frac{1}{2} - \frac{1}{3}\right) = 6 \cdot \frac{1}{6} = 1
-\end{aligned}
-$$
+$$\begin{aligned} \int_0^1 6x(1-x) \, dx &= 6\int_0^1 (x - x^2) \, dx \\ &= 6\left[\frac{x^2}{2} - \frac{x^3}{3}\right]_0^1 \\ &= 6\left(\frac{1}{2} - \frac{1}{3}\right) = 6 \cdot \frac{1}{6} = 1 \end{aligned}$$
 
 **（b）部分：计算 $E(X)$**
 
@@ -343,10 +316,7 @@ $$\frac{d}{dx} f(x) = 0, \quad \frac{d^2}{dx^2} f(x) < 0$$
 
 连续型随机变量 $Z$ 的概率密度函数为：
 
-$$f(z) = \begin{cases}
-ce^{-2z} & z \geq 0 \\
-0 & z < 0
-\end{cases}$$
+$$f(z) = \begin{cases} ce^{-2z} & z \geq 0 \\ 0 & z < 0 \end{cases}$$
 
 其中 $c$ 是一个正常数。
 
@@ -365,11 +335,7 @@ ce^{-2z} & z \geq 0 \\
 :::note[Jan15/2]
 连续型随机变量 $X$ 的累积分布函数为
 
-$$F(x) = \begin{cases}
-0 & x < 1 \\
-\frac{1}{5}(x-1) & 1 \leq x \leq 6 \\
-1 & x > 6
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & x < 1 \\ \frac{1}{5}(x-1) & 1 \leq x \leq 6 \\ 1 & x > 6 \end{cases}$$
 
 1. 求 P($X > 4$)
 2. 写出 P($X \neq 4$) 的值
@@ -382,11 +348,7 @@ $$F(x) = \begin{cases}
 :::note[Jan15/5]
 随机变量 $X$ 的概率密度函数 $f(x)$ 为
 
-$$f(x) = \begin{cases}
-k(x^2 + a) & -1 < x \leq 2 \\
-3k & 2 < x \leq 3 \\
-0 & \text{otherwise}
-\end{cases}$$
+$$f(x) = \begin{cases} k(x^2 + a) & -1 < x \leq 2 \\ 3k & 2 < x \leq 3 \\ 0 & \text{otherwise} \end{cases}$$
 
 其中 $k$ 和 $a$ 是常数。
 
@@ -399,11 +361,7 @@ k(x^2 + a) & -1 < x \leq 2 \\
 :::note[June14/2]
 随机变量 $X$ 的累积分布函数 F($x$) 为
 
-$$F(x) = \begin{cases}
-0 & x < 0 \\
-\frac{x^2}{20}(9-2x) & 0 \leq x \leq 2 \\
-1 & x > 2
-\end{cases}$$
+$$F(x) = \begin{cases} 0 & x < 0 \\ \frac{x^2}{20}(9-2x) & 0 \leq x \leq 2 \\ 1 & x > 2 \end{cases}$$
 
 1. 验证 $X$ 的中位数在 1.23 和 1.24 之间
 2. 完整写出概率密度函数 $f(x)$
