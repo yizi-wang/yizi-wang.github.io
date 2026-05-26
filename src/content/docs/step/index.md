@@ -10,6 +10,7 @@ Complete solutions and examiner commentary for STEP (Sixth Term Examination Pape
 ## Teaching Outline
 
 - [STEP Lecture Outline](./step_lecture_outline) — a teaching sequence connecting audited STEP questions with FP2 and FP3 topics.
+- [STEP Pure Notes](./pure-notes/) — topic-based student notes for core STEP pure mathematics ideas.
 
 ## STEP 2
 
