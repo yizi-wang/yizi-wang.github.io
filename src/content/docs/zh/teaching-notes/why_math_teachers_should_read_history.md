@@ -38,6 +38,13 @@ title: 数学老师为什么要读一点数学史
 
 数学史之所以有用，是因为它让老师有机会回到“之前”。它提醒我们：这个概念不是从天上掉下来的。它曾经也不自然，也不清楚，也不被轻易接受。今天学生的迟疑，未必是智力问题；很多时候，那是概念本身的历史阻力在课堂里重新出现。
 
+这几个例子可以继续展开看：
+
+- [指数不只是“乘几次”](./exponent_not_repeated_multiplication)：从正整数指数、负指数、分数指数、无理数指数，一路走到 $e^x$ 的微分性质。
+- [为什么矩阵乘法不是逐项相乘](./matrix_multiplication_not_entrywise)：从几何变换的复合解释行乘列和 $AB \ne BA$。
+- [auxiliary equation 到底省掉了什么](./auxiliary_equation_operator_factorization)：用微分算子的因式分解解释二阶常系数线性微分方程。
+- [从三次方程到复指数](./complex_numbers_to_complex_exponential)：从三次方程里的负数开平方讲到 $e^{i\theta}=\cos\theta+i\sin\theta$。
+
 ## 学生的错误，有时是旧直觉在反抗
 
 读过一点数学史的老师，面对学生错误时会慢一点下判断。
