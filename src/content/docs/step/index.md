@@ -5,7 +5,7 @@ tableOfContents: false
 
 ## STEP Past Papers — Pure Mathematics
 
-Complete solutions and examiner commentary for STEP (Sixth Term Examination Paper) past papers, covering pure mathematics questions only. 54 papers, 1998–2024.
+Complete solutions and examiner commentary for STEP (Sixth Term Examination Paper) past papers, covering pure mathematics questions only. 56 papers, 1998–2025.
 
 ## Teaching Outline
 
@@ -14,6 +14,7 @@ Complete solutions and examiner commentary for STEP (Sixth Term Examination Pape
 
 ## STEP 2
 
+- [STEP 2 2025](./step2-2025) — Q1–Q8
 - [STEP 2 2024](./step2-2024) — Q1–Q8
 - [STEP 2 2023](./step2-2023) — Q1–Q8
 - [STEP 2 2022](./step2-2022) — Q1–Q8
@@ -44,6 +45,7 @@ Complete solutions and examiner commentary for STEP (Sixth Term Examination Pape
 
 ## STEP 3
 
+- [STEP 3 2025](./step3-2025) — Q1–Q8
 - [STEP 3 2024](./step3-2024) — Q1–Q8
 - [STEP 3 2023](./step3-2023) — Q1–Q8
 - [STEP 3 2022](./step3-2022) — Q1–Q8

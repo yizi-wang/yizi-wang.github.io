@@ -51,7 +51,7 @@ function checkIndex(file, text) {
   const seen = new Set(links.map((m) => m[3]));
 
   for (const paper of [2, 3]) {
-    for (let year = 1998; year <= 2024; year += 1) {
+    for (let year = 1998; year <= 2025; year += 1) {
       const slug = `step${paper}-${year}`;
       if (!seen.has(slug)) {
         issues.push({ severity: 'error', file: rel(file), line: 1, message: `missing index link for ${slug}` });

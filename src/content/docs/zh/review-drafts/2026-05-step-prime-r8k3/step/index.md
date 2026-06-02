@@ -22,8 +22,8 @@ Feedback should be applied to the source Markdown after a copyright/publication 
 
 | Source Markdown | Planned review path | Status |
 |---|---|---|
-| `doc/todos/2026-05-step-a1-polynomial-roots-and-factors.md` | `step/a1_polynomial_roots_and_factors.md` | Paused: official STEP problem content risk |
-| `doc/todos/2026-05-step-a2-symmetric-expressions-and-vieta.md` | `step/a2_symmetric_expressions_and_vieta.md` | Paused: official STEP problem content risk |
-| `doc/todos/2026-05-step-a3-parameters-in-equations.md` | `step/a3_parameters_in_equations.md` | Paused: official STEP problem content risk |
-| `doc/todos/2026-05-step-a4-algebraic-inequalities.md` | `step/a4_algebraic_inequalities.md` | Paused: official STEP problem content risk |
-| `doc/todos/2026-05-step-a5-examples-and-counterexamples.md` | `step/a5_examples_and_counterexamples.md` | Paused: official STEP problem content risk |
+| `teaching-resources/STEP/notes/archive/2026-05-todo-algebra-drafts/a1_polynomial_roots_and_factors.todo-draft.md` | `step/a1_polynomial_roots_and_factors.md` | Paused: official STEP problem content risk |
+| `teaching-resources/STEP/notes/archive/2026-05-todo-algebra-drafts/a2_symmetric_expressions_and_vieta.todo-draft.md` | `step/a2_symmetric_expressions_and_vieta.md` | Paused: official STEP problem content risk |
+| `teaching-resources/STEP/notes/archive/2026-05-todo-algebra-drafts/a3_parameters_in_equations.todo-draft.md` | `step/a3_parameters_in_equations.md` | Paused: official STEP problem content risk |
+| `teaching-resources/STEP/notes/archive/2026-05-todo-algebra-drafts/a4_algebraic_inequalities.todo-draft.md` | `step/a4_algebraic_inequalities.md` | Paused: official STEP problem content risk |
+| `teaching-resources/STEP/notes/archive/2026-05-todo-algebra-drafts/a5_examples_and_counterexamples.todo-draft.md` | `step/a5_examples_and_counterexamples.md` | Paused: official STEP problem content risk |

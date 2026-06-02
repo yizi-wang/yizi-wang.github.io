@@ -6,6 +6,7 @@
 
 ## Next
 - [x] src/content/docs/step/index.md
+- [x] src/content/docs/step/step2-2025.md
 - [x] src/content/docs/step/step2-2024.md
 - [x] src/content/docs/step/step2-2023.md
 - [x] src/content/docs/step/step2-2022.md
@@ -33,6 +34,7 @@
 - [x] src/content/docs/step/step2-2000.md
 - [x] src/content/docs/step/step2-1999.md
 - [x] src/content/docs/step/step2-1998.md
+- [x] src/content/docs/step/step3-2025.md
 - [x] src/content/docs/step/step3-2024.md
 - [x] src/content/docs/step/step3-2023.md
 - [x] src/content/docs/step/step3-2022.md
