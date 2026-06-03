@@ -8,6 +8,7 @@ title: 教学博客
 
 ## 文章
 
+- [做 TMUA 题库，先管好数据，再做网页](./tmua_question_bank_workflow)
 - [数学老师为什么要读一点数学史](./why_math_teachers_should_read_history)
 - [指数不只是“乘几次”](./exponent_not_repeated_multiplication)
 - [为什么矩阵乘法不是逐项相乘](./matrix_multiplication_not_entrywise)

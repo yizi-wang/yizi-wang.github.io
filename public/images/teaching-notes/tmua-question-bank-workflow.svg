@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="860" viewBox="0 0 1320 860" role="img" aria-labelledby="title desc">
+  <title id="title">TMUA 题库建设流程图</title>
+  <desc id="desc">从目标设定、AI 起草、PDF 解析、Agent 执行、逐题审核、版本管理、本地验证，到学生测试和成绩回流的流程。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38506b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#1f2937" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .bg { fill: #f7f3ea; }
+      .title { font: 700 34px 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 17px 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif; fill: #617083; }
+      .lane { fill: #ffffff; stroke: #d9d5ca; stroke-width: 1.2; }
+      .lane-title { font: 700 18px 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif; fill: #435064; }
+      .box { filter: url(#shadow); stroke-width: 1.3; rx: 14; }
+      .data { fill: #fffaf0; stroke: #d7a94f; }
+      .agent { fill: #edf7f4; stroke: #5aa08e; }
+      .review { fill: #eef3ff; stroke: #6787c7; }
+      .release { fill: #f7eff8; stroke: #a06aaa; }
+      .text { font: 600 18px 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif; fill: #263244; }
+      .small { font: 400 14px 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif; fill: #526173; }
+      .arrow { stroke: #38506b; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .loop { stroke: #8b6f47; stroke-width: 2.2; fill: none; marker-end: url(#arrow); stroke-dasharray: 7 7; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1320" height="860"/>
+  <text class="title" x="70" y="72">TMUA 题库建设流程</text>
+  <text class="subtitle" x="70" y="105">先管好数据，再做网页；AI 负责执行，老师负责标准和验收。</text>
+
+  <rect class="lane" x="52" y="142" width="1216" height="142" rx="18"/>
+  <text class="lane-title" x="72" y="174">方案与标准</text>
+  <rect class="box data" x="210" y="170" width="230" height="76"/>
+  <text class="text" x="238" y="202">提出目标</text>
+  <text class="small" x="238" y="226">练习、诊断、讲义连接</text>
+  <rect class="box agent" x="545" y="170" width="230" height="76"/>
+  <text class="text" x="573" y="202">AI 起草方案</text>
+  <text class="small" x="573" y="226">功能、字段、风险</text>
+  <rect class="box review" x="880" y="170" width="230" height="76"/>
+  <text class="text" x="908" y="202">老师审核</text>
+  <text class="small" x="908" y="226">删功能，定分类标准</text>
+  <path class="arrow" d="M 440 208 L 535 208"/>
+  <path class="arrow" d="M 775 208 L 870 208"/>
+
+  <rect class="lane" x="52" y="326" width="1216" height="142" rx="18"/>
+  <text class="lane-title" x="72" y="358">数据生成</text>
+  <rect class="box data" x="135" y="354" width="230" height="76"/>
+  <text class="text" x="163" y="386">LlamaParse 解析</text>
+  <text class="small" x="163" y="410">题干、公式、图片</text>
+  <rect class="box agent" x="445" y="354" width="230" height="76"/>
+  <text class="text" x="473" y="386">多模态模型辅助</text>
+  <text class="small" x="473" y="410">解析、读图、标签建议</text>
+  <rect class="box agent" x="755" y="354" width="230" height="76"/>
+  <text class="text" x="783" y="386">Agent 批量改文件</text>
+  <text class="small" x="783" y="410">整理数据，调整页面</text>
+  <rect class="box review" x="1065" y="354" width="150" height="76"/>
+  <text class="text" x="1089" y="386">逐题审核</text>
+  <text class="small" x="1089" y="410">答案、图片、分类</text>
+  <path class="arrow" d="M 365 392 L 435 392"/>
+  <path class="arrow" d="M 675 392 L 745 392"/>
+  <path class="arrow" d="M 985 392 L 1055 392"/>
+  <path class="arrow" d="M 995 246 C 995 292, 250 292, 250 344"/>
+
+  <rect class="lane" x="52" y="510" width="1216" height="142" rx="18"/>
+  <text class="lane-title" x="72" y="542">发布前</text>
+  <rect class="box review" x="210" y="538" width="230" height="76"/>
+  <text class="text" x="238" y="570">GitHub 记录版本</text>
+  <text class="small" x="238" y="594">按 Paper 或问题类型提交</text>
+  <rect class="box review" x="545" y="538" width="230" height="76"/>
+  <text class="text" x="573" y="570">本地验证</text>
+  <text class="small" x="573" y="594">脚本、构建、浏览器查看</text>
+  <rect class="box release" x="880" y="538" width="230" height="76"/>
+  <text class="text" x="908" y="570">发布给学生使用</text>
+  <text class="small" x="908" y="594">练习、筛选、模拟考试</text>
+  <path class="arrow" d="M 1140 430 C 1140 488, 325 488, 325 528"/>
+  <path class="arrow" d="M 440 576 L 535 576"/>
+  <path class="arrow" d="M 775 576 L 870 576"/>
+
+  <rect class="lane" x="52" y="694" width="1216" height="110" rx="18"/>
+  <text class="lane-title" x="72" y="726">使用后的回流</text>
+  <rect class="box release" x="250" y="718" width="220" height="60"/>
+  <text class="text" x="278" y="754">学生完成模拟测试</text>
+  <rect class="box release" x="550" y="718" width="220" height="60"/>
+  <text class="text" x="578" y="754">QuickForm 提交成绩</text>
+  <rect class="box review" x="850" y="718" width="220" height="60"/>
+  <text class="text" x="878" y="754">老师查看薄弱点</text>
+  <path class="arrow" d="M 995 614 C 995 674, 360 674, 360 708"/>
+  <path class="arrow" d="M 470 748 L 540 748"/>
+  <path class="arrow" d="M 770 748 L 840 748"/>
+  <path class="loop" d="M 960 718 C 1250 650, 1238 214, 1120 208"/>
+</svg>
