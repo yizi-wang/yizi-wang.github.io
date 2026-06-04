@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TMUA 题目反馈数据大屏</title>
+  <style>
+    :root {
+      --bg: #121915;
+      --panel: #f8f0dc;
+      --panel-soft: #efe0bd;
+      --ink: #1d2822;
+      --muted: #657269;
+      --line: #27362f;
+      --green: #2f8a68;
+      --red: #b9473c;
+      --gold: #d8b65f;
+      --blue: #356985;
+      --violet: #73546e;
+      --shadow: 8px 8px 0 rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(216, 182, 95, 0.18), transparent 34%),
+        radial-gradient(circle at 86% 18%, rgba(53, 105, 133, 0.2), transparent 32%),
+        linear-gradient(135deg, #121915 0%, #1f2c25 52%, #171d1a 100%);
+      font-family: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+      line-height: 1.55;
+    }
+
+    button, input, select { font: inherit; }
+
+    .page {
+      width: min(1480px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 24px 0 42px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 20px;
+      color: #fff8df;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: #d8b65f;
+      font: 700 13px/1.2 Consolas, "Courier New", monospace;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 72px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .subline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      align-items: center;
+      color: #f3e8c8;
+      font: 700 14px/1.2 Consolas, "Courier New", monospace;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 2px solid rgba(248, 240, 220, 0.74);
+      background: rgba(248, 240, 220, 0.08);
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .pill.live::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: #61d692;
+      box-shadow: 0 0 0 5px rgba(97, 214, 146, 0.16);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 2px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      min-width: 0;
+    }
+
+    .metric {
+      min-height: 142px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font: 800 13px/1.2 Consolas, "Courier New", monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .metric .value {
+      margin-top: 12px;
+      font: 900 clamp(34px, 5vw, 58px)/1 Consolas, "Courier New", monospace;
+      color: var(--ink);
+    }
+
+    .metric .hint {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 14px;
+      border-bottom: 2px dotted rgba(39, 54, 47, 0.25);
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .small {
+      color: var(--muted);
+      font: 700 12px/1.2 Consolas, "Courier New", monospace;
+      text-transform: uppercase;
+    }
+
+    .bars { display: grid; gap: 12px; }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(130px, 1fr) minmax(160px, 2.2fr) 46px;
+      gap: 12px;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .bar-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .bar-track {
+      height: 16px;
+      border: 2px solid var(--line);
+      background: rgba(39, 54, 47, 0.08);
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--green), var(--gold));
+      transition: width 420ms ease;
+    }
+
+    .bar-count {
+      color: var(--red);
+      font: 900 16px/1 Consolas, "Courier New", monospace;
+      text-align: right;
+    }
+
+    .feed-list { display: grid; gap: 12px; }
+
+    .feed-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      padding: 14px;
+      border: 2px solid rgba(39, 54, 47, 0.62);
+      background: rgba(255, 251, 239, 0.64);
+    }
+
+    .feed-main { min-width: 0; }
+
+    .feed-title {
+      margin: 0 0 6px;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .feed-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font: 700 12px/1.3 Consolas, "Courier New", monospace;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 7px;
+      border: 1px solid rgba(39, 54, 47, 0.36);
+      background: rgba(216, 182, 95, 0.2);
+    }
+
+    .message {
+      margin-top: 8px;
+      color: #38453d;
+      overflow-wrap: anywhere;
+    }
+
+    .question-badge {
+      align-self: start;
+      min-width: 104px;
+      padding: 9px 10px;
+      border: 2px solid var(--line);
+      background: var(--red);
+      color: #fff8df;
+      text-align: center;
+      font: 900 14px/1.2 Consolas, "Courier New", monospace;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr auto;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .filters input, .filters select, .filters button {
+      min-height: 42px;
+      border: 2px solid var(--line);
+      background: #fffaf0;
+      color: var(--ink);
+      padding: 8px 10px;
+    }
+
+    .filters button {
+      cursor: pointer;
+      background: var(--ink);
+      color: #fff8df;
+      font-weight: 900;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fffaf0;
+      border: 2px solid var(--line);
+    }
+
+    th, td {
+      padding: 10px 11px;
+      border-bottom: 1px solid rgba(39, 54, 47, 0.2);
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--panel-soft);
+      color: #773830;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .status {
+      margin: 0 0 14px;
+      padding: 11px 13px;
+      border: 2px solid rgba(248, 240, 220, 0.48);
+      color: #fff8df;
+      background: rgba(248, 240, 220, 0.08);
+      font: 700 13px/1.4 Consolas, "Courier New", monospace;
+    }
+
+    .empty {
+      padding: 28px;
+      text-align: center;
+      color: var(--muted);
+      border: 2px dashed rgba(39, 54, 47, 0.32);
+    }
+
+    @media (max-width: 1100px) {
+      .span-3, .span-4, .span-5, .span-7, .span-8 { grid-column: span 6; }
+      header { grid-template-columns: 1fr; }
+      .subline { justify-content: flex-start; }
+    }
+
+    @media (max-width: 760px) {
+      .page { width: min(100vw - 20px, 720px); padding-top: 14px; }
+      .span-3, .span-4, .span-5, .span-7, .span-8, .span-12 { grid-column: span 12; }
+      .filters { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap: 6px; }
+      .bar-count { text-align: left; }
+      .feed-item { grid-template-columns: 1fr; }
+      .question-badge { width: fit-content; }
+      th, td { min-width: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="kicker">TMUA Feedback Observatory</p>
+        <h1>题目反馈数据大屏</h1>
+      </div>
+      <div class="subline">
+        <span class="pill live" id="liveState">LIVE</span>
+        <span class="pill">10s 自动刷新</span>
+        <span class="pill" id="lastUpdated">尚未加载</span>
+        <a class="pill" href="readme.html">返回说明页</a>
+      </div>
+    </header>
+
+    <div class="status" id="status">正在读取 QuickForm 反馈数据...</div>
+
+    <section class="grid" aria-label="概览指标">
+      <div class="card metric span-3"><div class="label">Total</div><div class="value" id="totalCount">-</div><div class="hint">全部反馈提交</div></div>
+      <div class="card metric span-3"><div class="label">Question</div><div class="value" id="questionCount">-</div><div class="hint">题目级反馈</div></div>
+      <div class="card metric span-3"><div class="label">Teachers</div><div class="value" id="teacherCount">-</div><div class="hint">去重姓名 + 学校</div></div>
+      <div class="card metric span-3"><div class="label">Today</div><div class="value" id="todayCount">-</div><div class="hint">按本地日期统计</div></div>
+    </section>
+
+    <section class="grid" style="margin-top:14px;" aria-label="反馈分析">
+      <div class="card span-4">
+        <div class="section-title"><h2>反馈类型</h2><span class="small">type</span></div>
+        <div class="bars" id="typeBars"></div>
+      </div>
+      <div class="card span-4">
+        <div class="section-title"><h2>高频 Topic</h2><span class="small">topic</span></div>
+        <div class="bars" id="topicBars"></div>
+      </div>
+      <div class="card span-4">
+        <div class="section-title"><h2>高频 Skills</h2><span class="small">skills</span></div>
+        <div class="bars" id="skillBars"></div>
+      </div>
+
+      <div class="card span-5">
+        <div class="section-title"><h2>热点题目</h2><span class="small">question id</span></div>
+        <div class="bars" id="questionBars"></div>
+      </div>
+      <div class="card span-7">
+        <div class="section-title"><h2>最新反馈</h2><span class="small" id="countdown">下次刷新 10s</span></div>
+        <div class="feed-list" id="latestList"></div>
+      </div>
+
+      <div class="card span-12">
+        <div class="section-title"><h2>反馈明细</h2><span class="small">search / filter</span></div>
+        <div class="filters">
+          <input id="searchInput" type="search" placeholder="搜索题号、老师、学校、内容、topic...">
+          <select id="typeFilter"><option value="all">全部类型</option></select>
+          <select id="topicFilter"><option value="all">全部 Topic</option></select>
+          <button id="refreshBtn">立即刷新</button>
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr><th>时间</th><th>题目</th><th>类型</th><th>反馈内容</th><th>老师 / 学校</th><th>Topic</th><th>技能</th></tr>
+            </thead>
+            <tbody id="detailRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const API_URL = 'https://quickform.cn/api/e2c8pe6qws/all';
+    const REFRESH_SECONDS = 10;
+    let submissions = [];
+    let countdown = REFRESH_SECONDS;
+    let timer = null;
+
+    const $ = (id) => document.getElementById(id);
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function asArray(value) {
+      if (Array.isArray(value)) return value.filter(Boolean);
+      if (!value) return [];
+      return [value];
+    }
+
+    function shortDate(value) {
+      if (!value) return '-';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return String(value);
+      return date.toLocaleString('zh-CN', { hour12: false });
+    }
+
+    function todayKey(date) {
+      return date.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' });
+    }
+
+    function countBy(items, getter) {
+      const map = new Map();
+      items.forEach((item) => {
+        const values = asArray(getter(item));
+        values.forEach((value) => {
+          const key = String(value || '').trim();
+          if (!key) return;
+          map.set(key, (map.get(key) || 0) + 1);
+        });
+      });
+      return [...map.entries()].sort((a, b) => b[1] - a[1]);
+    }
+
+    function renderBars(targetId, rows, emptyText) {
+      const target = $(targetId);
+      if (!rows.length) {
+        target.innerHTML = `<div class="empty">${escapeHtml(emptyText)}</div>`;
+        return;
+      }
+      const max = rows[0][1] || 1;
+      target.innerHTML = rows.slice(0, 8).map(([label, count]) => {
+        const pct = Math.max(8, Math.round(count / max * 100));
+        return `
+          <div class="bar-row">
+            <div class="bar-label" title="${escapeHtml(label)}">${escapeHtml(label)}</div>
+            <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+            <div class="bar-count">${count}</div>
+          </div>`;
+      }).join('');
+    }
+
+    function uniqueTeacherKey(item) {
+      return [item.teacher_name || '', item.school || '', item.contact || ''].join('|').trim();
+    }
+
+    function filteredData() {
+      const query = $('searchInput').value.trim().toLowerCase();
+      const type = $('typeFilter').value;
+      const topic = $('topicFilter').value;
+      return submissions.filter((item) => {
+        if (type !== 'all' && String(item.feedback_type || '') !== type) return false;
+        if (topic !== 'all' && String(item.topic || '') !== topic) return false;
+        if (!query) return true;
+        const haystack = [
+          item.question_id, item.feedback_type, item.message, item.teacher_name,
+          item.school, item.contact, item.topic, asArray(item.skills).join(' '),
+          asArray(item.sections).join(' '), asArray(item.modules).join(' ')
+        ].join(' ').toLowerCase();
+        return haystack.includes(query);
+      });
+    }
+
+    function renderFilters() {
+      const currentType = $('typeFilter').value;
+      const currentTopic = $('topicFilter').value;
+      const types = countBy(submissions, (item) => item.feedback_type).map(([label]) => label);
+      const topics = countBy(submissions, (item) => item.topic).map(([label]) => label);
+      $('typeFilter').innerHTML = '<option value="all">全部类型</option>' + types.map((label) => `<option value="${escapeHtml(label)}">${escapeHtml(label)}</option>`).join('');
+      $('topicFilter').innerHTML = '<option value="all">全部 Topic</option>' + topics.map((label) => `<option value="${escapeHtml(label)}">${escapeHtml(label)}</option>`).join('');
+      if (types.includes(currentType)) $('typeFilter').value = currentType;
+      if (topics.includes(currentTopic)) $('topicFilter').value = currentTopic;
+    }
+
+    function renderLatest(items) {
+      const latest = [...items]
+        .sort((a, b) => new Date(b.submitted_at || 0) - new Date(a.submitted_at || 0))
+        .slice(0, 6);
+      if (!latest.length) {
+        $('latestList').innerHTML = '<div class="empty">暂无反馈</div>';
+        return;
+      }
+      $('latestList').innerHTML = latest.map((item) => `
+        <article class="feed-item">
+          <div class="feed-main">
+            <p class="feed-title">${escapeHtml(item.feedback_type || '未分类反馈')}</p>
+            <div class="feed-meta">
+              <span class="tag">${escapeHtml(shortDate(item.submitted_at))}</span>
+              <span class="tag">${escapeHtml(item.teacher_name || '匿名')}</span>
+              <span class="tag">${escapeHtml(item.school || '未填学校')}</span>
+              <span class="tag">${escapeHtml(item.topic || '无 topic')}</span>
+            </div>
+            <div class="message">${escapeHtml(item.message || '无具体说明')}</div>
+          </div>
+          <div class="question-badge">${escapeHtml(item.question_id || item.feedback_kind || 'system')}</div>
+        </article>`).join('');
+    }
+
+    function renderTable(items) {
+      const rows = [...items]
+        .sort((a, b) => new Date(b.submitted_at || 0) - new Date(a.submitted_at || 0))
+        .slice(0, 100);
+      if (!rows.length) {
+        $('detailRows').innerHTML = '<tr><td colspan="7"><div class="empty">没有匹配的反馈</div></td></tr>';
+        return;
+      }
+      $('detailRows').innerHTML = rows.map((item) => `
+        <tr>
+          <td>${escapeHtml(shortDate(item.submitted_at))}</td>
+          <td><strong>${escapeHtml(item.question_id || '-')}</strong><br>${escapeHtml(item.year || '')} P${escapeHtml(item.paper || '')} Q${escapeHtml(item.num || '')}</td>
+          <td>${escapeHtml(item.feedback_type || '-')}</td>
+          <td>${escapeHtml(item.message || '')}</td>
+          <td>${escapeHtml(item.teacher_name || '匿名')}<br><span class="small">${escapeHtml(item.school || '')}</span></td>
+          <td>${escapeHtml(item.topic || '')}</td>
+          <td>${asArray(item.skills).map((skill) => `<span class="tag">${escapeHtml(skill)}</span>`).join(' ')}</td>
+        </tr>`).join('');
+    }
+
+    function render() {
+      const items = filteredData();
+      const today = todayKey(new Date());
+      const questionFeedback = submissions.filter((item) => item.feedback_kind === 'question' || item.question_id);
+      const teacherSet = new Set(submissions.map(uniqueTeacherKey).filter(Boolean));
+      const todayCount = submissions.filter((item) => item.submitted_at && todayKey(new Date(item.submitted_at)) === today).length;
+
+      $('totalCount').textContent = submissions.length;
+      $('questionCount').textContent = questionFeedback.length;
+      $('teacherCount').textContent = teacherSet.size;
+      $('todayCount').textContent = todayCount;
+
+      renderBars('typeBars', countBy(submissions, (item) => item.feedback_type), '暂无反馈类型');
+      renderBars('topicBars', countBy(submissions, (item) => item.topic), '暂无 topic 数据');
+      renderBars('skillBars', countBy(submissions, (item) => item.skills), '暂无 skill 数据');
+      renderBars('questionBars', countBy(submissions, (item) => item.question_id), '暂无题目反馈');
+      renderLatest(items);
+      renderTable(items);
+    }
+
+    async function loadData() {
+      $('status').textContent = '正在读取 QuickForm 反馈数据...';
+      try {
+        const response = await fetch(API_URL, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        submissions = Array.isArray(data.submissions) ? data.submissions : [];
+        renderFilters();
+        render();
+        countdown = REFRESH_SECONDS;
+        $('lastUpdated').textContent = '更新 ' + new Date().toLocaleTimeString('zh-CN', { hour12: false });
+        $('status').textContent = `已读取 ${submissions.length} 条反馈。数据源：${API_URL}`;
+      } catch (error) {
+        $('status').textContent = '读取失败：' + error.message + '。如果本地 file:// 被浏览器拦截，请用网页部署或允许该接口跨域访问。';
+      }
+    }
+
+    function startTimer() {
+      if (timer) clearInterval(timer);
+      timer = setInterval(() => {
+        countdown -= 1;
+        if (countdown <= 0) {
+          loadData();
+        }
+        $('countdown').textContent = `下次刷新 ${Math.max(countdown, 0)}s`;
+      }, 1000);
+    }
+
+    $('searchInput').addEventListener('input', render);
+    $('typeFilter').addEventListener('change', render);
+    $('topicFilter').addEventListener('change', render);
+    $('refreshBtn').addEventListener('click', loadData);
+
+    loadData();
+    startTimer();
+  </script>
+</body>
+</html>
