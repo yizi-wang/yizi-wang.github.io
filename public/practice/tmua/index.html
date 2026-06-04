@@ -69,6 +69,7 @@
             <div class="welcome-footer">
                 <a href="javascript:void(0)" id="welcomeContinueLink" class="hidden">继续上次练习 →</a>
                 <button class="btn btn-small" id="welcomeDarkModeBtn" onclick="window.quizApp && window.quizApp.toggleDarkMode()">切换主题</button>
+                <button class="btn btn-small btn-feedback" id="welcomeFeedbackBtn" type="button">反馈系统问题</button>
             </div>
         </div>
 
@@ -282,6 +283,7 @@
                 </div>
                 <div class="header-right">
                     <button class="btn btn-small" id="darkModeBtn" onclick="window.quizApp && window.quizApp.toggleDarkMode()">主题</button>
+                    <button class="btn btn-small btn-feedback" id="systemFeedbackBtn" type="button">反馈</button>
                     <button class="btn btn-small btn-danger" id="clearProgressBtn">清空进度</button>
                 </div>
             </header>
@@ -390,6 +392,7 @@
                         </div>
                         <div class="question-toolbar">
                             <button class="btn btn-small btn-favorite" id="favoriteBtn" type="button">收藏</button>
+                            <button class="btn btn-small btn-feedback" id="questionFeedbackBtn" type="button">反馈这题</button>
                             <span class="question-count-label" id="filteredCountLabel">当前 0 题</span>
                         </div>
                         <details class="question-taxonomy" id="questionTaxonomy">
@@ -472,6 +475,56 @@
 
     </div>
     
+
+
+    <div class="feedback-modal hidden" id="feedbackModal" role="dialog" aria-modal="true" aria-labelledby="feedbackModalTitle">
+        <div class="feedback-backdrop" id="feedbackBackdrop"></div>
+        <form class="feedback-dialog" id="feedbackForm">
+            <div class="feedback-header">
+                <div>
+                    <h2 id="feedbackModalTitle">提交反馈</h2>
+                    <p id="feedbackContext">系统问题</p>
+                </div>
+                <button type="button" class="feedback-close" id="feedbackCloseBtn" aria-label="关闭反馈表单">×</button>
+            </div>
+            <label>
+                问题类型
+                <select id="feedbackType" required>
+                    <option value="题干/公式显示错误">题干/公式显示错误</option>
+                    <option value="选项错误">选项错误</option>
+                    <option value="答案错误">答案错误</option>
+                    <option value="解析不清楚">解析不清楚</option>
+                    <option value="分类/标签不合适">分类/标签不合适</option>
+                    <option value="系统使用问题">系统使用问题</option>
+                    <option value="其他建议">其他建议</option>
+                </select>
+            </label>
+            <label>
+                说明
+                <textarea id="feedbackMessage" rows="5" placeholder="请简单说明哪里有问题，或你希望如何修改。" required></textarea>
+            </label>
+            <div class="feedback-grid">
+                <label>
+                    姓名
+                    <input id="feedbackTeacherName" type="text" autocomplete="name">
+                </label>
+                <label>
+                    学校
+                    <input id="feedbackSchool" type="text">
+                </label>
+                <label>
+                    联系方式
+                    <input id="feedbackContact" type="text" autocomplete="email">
+                </label>
+            </div>
+            <div class="feedback-actions">
+                <button type="submit" class="btn btn-primary" id="feedbackSubmitBtn">提交反馈</button>
+                <button type="button" class="btn btn-secondary" id="feedbackCopyBtn">复制反馈内容</button>
+                <span class="feedback-status" id="feedbackStatus"></span>
+            </div>
+        </form>
+    </div>
+
     <!-- 先加载题库数据 -->
     <script src="questions_data.js"></script>
     <!-- 再加载应用逻辑 -->
@@ -482,6 +535,7 @@
     <script src="js/timer.js"></script>
     <script src="js/export.js"></script>
     <script src="js/quiz.js"></script>
+    <script src="js/feedback.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

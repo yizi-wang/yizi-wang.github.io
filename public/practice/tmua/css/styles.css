@@ -3087,3 +3087,164 @@ body.dark-mode .back-link:hover {
 body.dark-mode header h1 {
     color: #e0e0e0;
 }
+
+
+/* ===== 教师反馈 QuickForm ===== */
+.btn-feedback {
+    border: 1px solid #2d7c5f;
+    background: #eaf6f1;
+    color: #1f6048;
+}
+
+.btn-feedback:hover {
+    background: #d8eee5;
+    color: #174936;
+}
+
+.feedback-modal.hidden {
+    display: none;
+}
+
+.feedback-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.feedback-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 28, 34, 0.52);
+}
+
+.feedback-dialog {
+    position: relative;
+    width: min(680px, 100%);
+    max-height: min(860px, calc(100vh - 40px));
+    overflow: auto;
+    background: var(--train-surface);
+    border: 1px solid var(--train-line-strong);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(31, 41, 51, 0.25);
+    padding: 22px;
+}
+
+.feedback-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.feedback-header h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
+.feedback-header p {
+    margin: 0;
+    color: var(--train-muted);
+    font-size: 13px;
+}
+
+.feedback-close {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--train-line);
+    border-radius: 6px;
+    background: var(--train-surface-soft);
+    color: var(--train-text);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.feedback-dialog label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 14px;
+    color: var(--train-text);
+    font-weight: 600;
+}
+
+.feedback-dialog input,
+.feedback-dialog select,
+.feedback-dialog textarea {
+    width: 100%;
+    border: 1px solid var(--train-line-strong);
+    border-radius: 6px;
+    padding: 10px 12px;
+    background: var(--train-surface);
+    color: var(--train-text);
+    font: inherit;
+    font-weight: 400;
+}
+
+.feedback-dialog textarea {
+    resize: vertical;
+    min-height: 118px;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.feedback-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.feedback-status {
+    color: var(--train-muted);
+    font-size: 13px;
+}
+
+.feedback-status.success {
+    color: #1d6f50;
+}
+
+.feedback-status.error {
+    color: var(--train-danger);
+}
+
+body.dark-mode .btn-feedback {
+    background: #18392e;
+    border-color: #2d7c5f;
+    color: #bce7d5;
+}
+
+body.dark-mode .feedback-dialog,
+body.dark-mode .feedback-dialog input,
+body.dark-mode .feedback-dialog select,
+body.dark-mode .feedback-dialog textarea {
+    background: #172033;
+    color: #eef3f8;
+    border-color: #31415f;
+}
+
+body.dark-mode .feedback-header p,
+body.dark-mode .feedback-status {
+    color: #aab7c7;
+}
+
+body.dark-mode .feedback-close {
+    background: #22304a;
+    color: #eef3f8;
+    border-color: #31415f;
+}
+
+@media (max-width: 720px) {
+    .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+}
