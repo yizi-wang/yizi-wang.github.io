@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A rotatable double-cone model with a tilting plane and Dandelin spheres.">
+  <title>Conic Sections and Dandelin Spheres</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="coordinate-instrument.css?v=20260713k">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="slicing-a-double-cone.js?v=20260713e"></script>
+</head>
+<body>
+  <main id="cone-slice-app" class="instrument-app cone-slice-app">
+    <header class="topbar">
+      <div class="identity"><a href="index.html">Further Mathematics</a><span class="identity-separator" aria-hidden="true">/</span><span class="identity-scene">Coordinate geometry instrument 08</span></div>
+      <div class="topbar-status" aria-label="Current construction step"><span id="step-number" class="step-number">01</span><span class="step-total">/ 08</span></div>
+    </header>
+    <nav class="step-rail" aria-label="Construction sequence">
+      <button class="step-tab" type="button" data-step="0" aria-current="step"><span class="step-tab-index">01</span><span class="step-tab-label">Rotate</span></button>
+      <button class="step-tab" type="button" data-step="1"><span class="step-tab-index">02</span><span class="step-tab-label">Plane</span></button>
+      <button class="step-tab" type="button" data-step="2"><span class="step-tab-index">03</span><span class="step-tab-label">Section</span></button>
+      <button class="step-tab" type="button" data-step="3"><span class="step-tab-index">04</span><span class="step-tab-label">One sphere</span></button>
+      <button class="step-tab" type="button" data-step="4"><span class="step-tab-index">05</span><span class="step-tab-label">Two spheres</span></button>
+      <button class="step-tab" type="button" data-step="5"><span class="step-tab-index">06</span><span class="step-tab-label">Predict</span></button>
+      <button class="step-tab" type="button" data-step="6"><span class="step-tab-index">07</span><span class="step-tab-label">Parallel limit</span></button>
+      <button class="step-tab" type="button" data-step="7"><span class="step-tab-index">08</span><span class="step-tab-label">Foci</span></button>
+    </nav>
+
+    <section class="workspace" aria-label="Rotatable conic-section instrument">
+      <div class="stage-shell"><div class="stage-frame">
+        <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-labelledby="geometry-title geometry-description">
+          <title id="geometry-title">A rotatable plane slices a double cone</title>
+          <desc id="geometry-description">Drag to rotate the model. Tilt the cutting plane to create the conic sections, then fit tangent spheres whose contact points are the foci.</desc>
+        </svg>
+      </div></div>
+      <aside class="ledger" aria-labelledby="step-title">
+        <p class="ledger-section-label">Conic-section rig</p>
+        <h1 id="step-title">Rotate the double cone</h1>
+        <p id="step-kicker" class="step-kicker">Inspect one surface from every side.</p>
+        <p id="step-description" class="step-description">Drag anywhere on the model. The two nappes meet at one vertex.</p>
+        <section id="prediction-panel" class="prediction-panel" aria-labelledby="prediction-question" hidden>
+          <p id="prediction-question" class="prediction-question">As the plane approaches parallel to a generator, what happens to the second sphere?</p>
+          <div class="choice-grid">
+            <button class="choice-button" type="button" data-choice="recedes" aria-pressed="false">It recedes without bound</button>
+            <button class="choice-button" type="button" data-choice="shrinks" aria-pressed="false">It shrinks to the vertex</button>
+            <button class="choice-button" type="button" data-choice="same" aria-pressed="false">It keeps the same size</button>
+            <button class="choice-button" type="button" data-choice="vanishes" aria-pressed="false">It vanishes instantly</button>
+          </div>
+        </section>
+        <p id="feedback-line" class="feedback-line" role="status" hidden></p>
+        <section id="math-ledger" class="math-ledger" aria-label="Mathematical record" hidden>
+          <div id="math-line-1" class="math-line"></div><div id="math-line-2" class="math-line"></div><div id="math-line-3" class="math-line is-result"></div>
+        </section>
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <dl class="cue-list">
+            <div><dt>Ask</dt><dd id="cue-ask">What remains unchanged as we rotate the view?</dd></div>
+            <div><dt>Look for</dt><dd id="cue-look">The cone itself; only our viewpoint changes.</dd></div>
+            <div><dt>Then</dt><dd id="cue-watch">Insert a cutting plane.</dd></div>
+          </dl>
+        </details>
+      </aside>
+    </section>
+
+    <footer class="instrument-rail">
+      <div class="parameter-stack">
+        <label class="parameter-control" for="angle-range">
+          <span class="parameter-label">Plane tilt <span class="parameter-value"><output id="angle-value">28.0</output>°</span></span>
+          <input id="angle-range" type="range" min="0" max="55" step="0.1" value="28" disabled>
+          <span class="range-extents" aria-hidden="true"><span>horizontal</span><span>through both nappes</span></span>
+        </label>
+        <label class="parameter-control" for="model-zoom-range">
+          <span class="parameter-label">Model zoom <span class="parameter-value"><output id="model-zoom-value">100%</output></span></span>
+          <input id="model-zoom-range" type="range" min="70" max="190" step="5" value="100">
+          <span class="range-extents" aria-hidden="true"><span>70%</span><span>190%</span></span>
+        </label>
+      </div>
+      <div class="mode-controls" aria-label="Section presets">
+        <label class="select-control" for="slice-preset">Section specimen
+          <select id="slice-preset" disabled><option value="0">0° · circle</option><option value="28" selected>28° · ellipse</option><option value="45">45° · parabola</option><option value="55">55° · hyperbola</option></select>
+        </label>
+        <label class="select-control" for="view-preset">Fixed view
+          <select id="view-preset"><option value="isometric" selected>Isometric overview</option><option value="side">Side section</option><option value="dandelin">Sphere tangency</option><option value="proof">Focal proof</option><option value="top">From above</option><option value="custom" disabled>Custom drag</option></select>
+        </label>
+        <details id="layer-menu" class="layer-menu">
+          <summary><span>Scene layers</span><span id="layer-count" class="layer-count" aria-live="polite">2 shown</span></summary>
+          <div class="layer-popover">
+            <p class="layer-popover-title">Visible on model</p>
+            <fieldset class="layer-controls cone-layer-controls">
+              <legend>Choose visible scene layers</legend>
+              <span class="layer-group-label">Scene objects</span>
+              <label class="layer-toggle"><input type="checkbox" data-layer="cone" checked><span class="layer-swatch is-cone" aria-hidden="true"></span><span>Cone body</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="plane" checked disabled><span class="layer-swatch is-plane" aria-hidden="true"></span><span>Cutting plane</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="section" checked disabled><span class="layer-swatch is-section" aria-hidden="true"></span><span>Section curve</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="spheres" checked disabled><span class="layer-swatch is-sphere" aria-hidden="true"></span><span>Dandelin spheres</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="foci" checked disabled><span class="layer-swatch is-focus" aria-hidden="true"></span><span>Focus points</span></label>
+              <label class="layer-toggle"><input type="checkbox" data-layer="labels" checked><span class="layer-swatch is-label" aria-hidden="true">Aa</span><span>Model labels</span></label>
+              <span class="layer-group-label is-proof-group">Focal proof segments</span>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="pf1" checked disabled><span class="layer-swatch is-proof-segment is-pair-one" aria-hidden="true"></span><span>PF₁</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="pa" checked disabled><span class="layer-swatch is-proof-segment is-pair-one is-tangent" aria-hidden="true"></span><span>PA</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="pf2" disabled><span class="layer-swatch is-proof-segment is-pair-two" aria-hidden="true"></span><span>PF₂</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="pb" disabled><span class="layer-swatch is-proof-segment is-pair-two is-tangent" aria-hidden="true"></span><span>PB</span></label>
+              <label class="layer-toggle is-unavailable"><input type="checkbox" data-layer="ab" disabled><span class="layer-swatch is-proof-segment is-fixed" aria-hidden="true"></span><span>AB fixed span</span></label>
+            </fieldset>
+          </div>
+        </details>
+      </div>
+      <div class="transport" aria-label="Construction controls">
+        <button id="reset-button" class="control-button" type="button"><span class="button-icon" aria-hidden="true">↺</span><span class="button-label">Reset</span></button>
+        <button id="back-button" class="control-button" type="button" disabled><span class="button-icon" aria-hidden="true">←</span><span class="button-label">Back</span></button>
+        <button id="play-button" class="control-button is-play" type="button" disabled><span class="button-icon" aria-hidden="true">▶</span><span class="button-label">Play</span></button>
+        <button id="next-button" class="control-button is-primary" type="button"><span class="button-label">Next</span><span class="button-icon" aria-hidden="true">→</span></button>
+      </div>
+      <p class="shortcut-note">Keyboard: left and right arrows change step, space controls motion, R resets. Drag the model to rotate it.</p>
+    </footer>
+    <p id="live-region" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>

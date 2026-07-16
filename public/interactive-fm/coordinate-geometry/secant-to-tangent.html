@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A staged secant-to-tangent limit for parametric differentiation.">
+  <title>Secant to Tangent Instrument</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="coordinate-instrument.css?v=20260713e">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="secant-to-tangent.js?v=20260713a"></script>
+</head>
+<body>
+  <main id="tangent-app" class="instrument-app tangent-app">
+    <header class="topbar">
+      <div class="identity">
+        <a href="index.html">Further Mathematics</a>
+        <span class="identity-separator" aria-hidden="true">/</span>
+        <span class="identity-scene">Coordinate geometry instrument 03</span>
+      </div>
+      <div class="topbar-status" aria-label="Current construction step">
+        <span id="step-number" class="step-number">01</span><span class="step-total">/ 08</span>
+      </div>
+    </header>
+
+    <nav class="step-rail" aria-label="Construction sequence">
+      <button class="step-tab" type="button" data-step="0" aria-current="step"><span class="step-tab-index">01</span><span class="step-tab-label">Plane</span></button>
+      <button class="step-tab" type="button" data-step="1"><span class="step-tab-index">02</span><span class="step-tab-label">Curve</span></button>
+      <button class="step-tab" type="button" data-step="2"><span class="step-tab-index">03</span><span class="step-tab-label">Anchor</span></button>
+      <button class="step-tab" type="button" data-step="3"><span class="step-tab-index">04</span><span class="step-tab-label">Secant</span></button>
+      <button class="step-tab" type="button" data-step="4"><span class="step-tab-index">05</span><span class="step-tab-label">Predict</span></button>
+      <button class="step-tab" type="button" data-step="5"><span class="step-tab-index">06</span><span class="step-tab-label">Approach</span></button>
+      <button class="step-tab" type="button" data-step="6"><span class="step-tab-index">07</span><span class="step-tab-label">Derivative</span></button>
+      <button class="step-tab" type="button" data-step="7"><span class="step-tab-index">08</span><span class="step-tab-label">Freeze</span></button>
+    </nav>
+
+    <section class="workspace" aria-label="Interactive secant construction">
+      <div class="stage-shell"><div class="stage-frame">
+        <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-labelledby="geometry-title geometry-description">
+          <title id="geometry-title">A secant approaches a tangent</title>
+          <desc id="geometry-description">Two points on a parametric curve approach until their secant settles into the tangent at the anchor point.</desc>
+        </svg>
+      </div></div>
+
+      <aside class="ledger" aria-labelledby="step-title">
+        <p class="ledger-section-label">Limit instrument</p>
+        <h1 id="step-title">Prepare the plane</h1>
+        <p id="step-kicker" class="step-kicker">A line needs two points.</p>
+        <p id="step-description" class="step-description">We will let the second point approach a fixed anchor without ever replacing the picture by a jump.</p>
+
+        <section id="prediction-panel" class="prediction-panel" aria-labelledby="prediction-question" hidden>
+          <p id="prediction-question" class="prediction-question">Which quantity approaches the tangent gradient?</p>
+          <div class="choice-grid">
+            <button class="choice-button" type="button" data-choice="dy" aria-pressed="false">Δy</button>
+            <button class="choice-button" type="button" data-choice="dx" aria-pressed="false">Δx</button>
+            <button class="choice-button" type="button" data-choice="ratio" aria-pressed="false">Δy / Δx</button>
+            <button class="choice-button" type="button" data-choice="h" aria-pressed="false">h</button>
+          </div>
+        </section>
+        <p id="feedback-line" class="feedback-line" role="status" hidden></p>
+
+        <section id="math-ledger" class="math-ledger" aria-label="Mathematical record" hidden>
+          <div id="math-line-1" class="math-line"></div>
+          <div id="math-line-2" class="math-line"></div>
+          <div id="math-line-3" class="math-line is-result"></div>
+        </section>
+
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <dl class="cue-list">
+            <div><dt>Ask</dt><dd id="cue-ask">What must happen before a secant can become a tangent?</dd></div>
+            <div><dt>Look for</dt><dd id="cue-look">Both coordinate changes tend to zero, but their ratio stabilises.</dd></div>
+            <div><dt>Then</dt><dd id="cue-watch">Return to the chain-rule quotient on the board.</dd></div>
+          </dl>
+        </details>
+      </aside>
+    </section>
+
+    <footer class="instrument-rail">
+      <label class="parameter-control" for="h-range">
+        <span class="parameter-label">Separation <span class="parameter-value">h = <output id="h-value">1.20</output></span></span>
+        <input id="h-range" type="range" min="0.03" max="0.75" step="0.01" value="0.75" disabled>
+        <span class="range-extents" aria-hidden="true"><span>0</span><span>0.75</span></span>
+      </label>
+      <div class="mode-controls" aria-label="Anchor setting">
+        <label class="select-control" for="anchor-select">Anchor parameter
+          <select id="anchor-select" disabled><option value="1">t₀ = 1</option></select>
+        </label>
+      </div>
+      <div class="transport" aria-label="Construction controls">
+        <button id="reset-button" class="control-button" type="button"><span class="button-icon" aria-hidden="true">↺</span><span class="button-label">Reset</span></button>
+        <button id="back-button" class="control-button" type="button" disabled><span class="button-icon" aria-hidden="true">←</span><span class="button-label">Back</span></button>
+        <button id="play-button" class="control-button is-play" type="button" disabled><span class="button-icon" aria-hidden="true">▶</span><span class="button-label">Play</span></button>
+        <button id="next-button" class="control-button is-primary" type="button"><span class="button-label">Next</span><span class="button-icon" aria-hidden="true">→</span></button>
+      </div>
+      <p class="shortcut-note">Keyboard: left and right arrows change step, space controls motion, R resets.</p>
+    </footer>
+    <p id="live-region" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>

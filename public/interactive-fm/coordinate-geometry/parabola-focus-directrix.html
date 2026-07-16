@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A staged focus-directrix construction of a parabola for Further Mathematics lessons.">
+  <title>Parabola Construction Instrument</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="coordinate-instrument.css?v=20260713d">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="parabola-focus-directrix.js?v=20260713b"></script>
+</head>
+<body>
+  <main id="parabola-app" class="instrument-app parabola-app">
+    <header class="topbar">
+      <div class="identity">
+        <a href="index.html">Further Mathematics</a>
+        <span class="identity-separator" aria-hidden="true">/</span>
+        <span class="identity-scene">Coordinate geometry instrument 01</span>
+      </div>
+      <div class="topbar-status" aria-label="Current construction step">
+        <span id="step-number" class="step-number">01</span>
+        <span class="step-total">/ 08</span>
+      </div>
+    </header>
+
+    <nav class="step-rail" aria-label="Construction sequence">
+      <button class="step-tab" type="button" data-step="0" aria-current="step">
+        <span class="step-tab-index">01</span><span class="step-tab-label">Plane</span>
+      </button>
+      <button class="step-tab" type="button" data-step="1">
+        <span class="step-tab-index">02</span><span class="step-tab-label">Rule</span>
+      </button>
+      <button class="step-tab" type="button" data-step="2">
+        <span class="step-tab-index">03</span><span class="step-tab-label">Point Q</span>
+      </button>
+      <button class="step-tab" type="button" data-step="3">
+        <span class="step-tab-index">04</span><span class="step-tab-label">Bisector</span>
+      </button>
+      <button class="step-tab" type="button" data-step="4">
+        <span class="step-tab-index">05</span><span class="step-tab-label">Point P</span>
+      </button>
+      <button class="step-tab" type="button" data-step="5">
+        <span class="step-tab-index">06</span><span class="step-tab-label">Predict</span>
+      </button>
+      <button class="step-tab" type="button" data-step="6">
+        <span class="step-tab-index">07</span><span class="step-tab-label">Trace</span>
+      </button>
+      <button class="step-tab" type="button" data-step="7">
+        <span class="step-tab-index">08</span><span class="step-tab-label">Equation</span>
+      </button>
+    </nav>
+
+    <section class="workspace" aria-label="Interactive construction">
+      <div class="stage-shell">
+        <div class="stage-frame">
+          <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-labelledby="geometry-title geometry-description">
+            <title id="geometry-title">Focus-directrix construction of a parabola</title>
+            <desc id="geometry-description">An empty equal-scale coordinate plane, ready for a staged geometric construction.</desc>
+          </svg>
+        </div>
+      </div>
+
+      <aside class="ledger" aria-labelledby="step-title">
+        <p class="ledger-section-label">Live construction</p>
+        <h1 id="step-title">Prepare the plane</h1>
+        <p id="step-kicker" class="step-kicker">Begin with an equal-scale coordinate system.</p>
+        <p id="step-description" class="step-description">One square represents one unit in both directions, so length and perpendicularity remain geometrically honest.</p>
+
+        <section id="prediction-panel" class="prediction-panel" aria-labelledby="prediction-question" hidden>
+          <p id="prediction-question" class="prediction-question">As Q moves, what path will P trace?</p>
+          <div class="choice-grid">
+            <button class="choice-button" type="button" data-choice="line" aria-pressed="false">A straight line</button>
+            <button class="choice-button" type="button" data-choice="circle" aria-pressed="false">A circle</button>
+            <button class="choice-button" type="button" data-choice="parabola" aria-pressed="false">A parabola</button>
+            <button class="choice-button" type="button" data-choice="other" aria-pressed="false">Another curve</button>
+          </div>
+        </section>
+
+        <p id="feedback-line" class="feedback-line" role="status" hidden></p>
+
+        <section id="math-ledger" class="math-ledger" aria-label="Mathematical record" hidden>
+          <div id="math-line-1" class="math-line"></div>
+          <div id="math-line-2" class="math-line"></div>
+          <div id="math-line-3" class="math-line is-result"></div>
+        </section>
+
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <dl class="cue-list">
+            <div><dt>Ask</dt><dd id="cue-ask">What must be preserved if this diagram is to support geometric reasoning?</dd></div>
+            <div><dt>Look for</dt><dd id="cue-look">Students noticing that equal units on both axes are essential.</dd></div>
+            <div><dt>Then</dt><dd id="cue-watch">Advance only after the coordinate system has been checked.</dd></div>
+          </dl>
+        </details>
+      </aside>
+    </section>
+
+    <footer class="instrument-rail">
+      <label class="parameter-control" for="a-range">
+        <span class="parameter-label">Focus offset <span class="parameter-value">a = <output id="a-value">2</output></span></span>
+        <input id="a-range" type="range" min="1" max="3.5" step="0.25" value="2">
+        <span class="range-extents" aria-hidden="true"><span>1</span><span>3.5</span></span>
+      </label>
+
+      <fieldset class="layer-controls">
+        <legend>Visible layers</legend>
+        <label class="layer-toggle"><input id="trace-toggle" type="checkbox" checked> Trace</label>
+        <label class="layer-toggle"><input id="construction-toggle" type="checkbox" checked> Construction</label>
+        <label class="layer-toggle"><input id="labels-toggle" type="checkbox" checked> Labels</label>
+      </fieldset>
+
+      <div class="transport" aria-label="Construction controls">
+        <button id="reset-button" class="control-button" type="button"><span class="button-icon" aria-hidden="true">↺</span><span class="button-label">Reset</span></button>
+        <button id="back-button" class="control-button" type="button" disabled><span class="button-icon" aria-hidden="true">←</span><span class="button-label">Back</span></button>
+        <button id="play-button" class="control-button is-play" type="button" disabled><span class="button-icon" aria-hidden="true">▶</span><span class="button-label">Play</span></button>
+        <button id="next-button" class="control-button is-primary" type="button"><span class="button-label">Next</span><span class="button-icon" aria-hidden="true">→</span></button>
+      </div>
+      <p class="shortcut-note">Keyboard: left and right arrows change step, space controls motion, R resets.</p>
+    </footer>
+
+    <p id="live-region" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>
