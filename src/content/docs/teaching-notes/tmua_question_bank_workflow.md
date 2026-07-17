@@ -46,7 +46,7 @@ If a question bank cannot answer these questions, it is just a relatively tidy f
 
 So when I made the TMUA question bank, the first thing I asked was: what information should each question carry? Technically these are often called "fields"; you can just think of them initially as columns in an Excel sheet. In the end, each question looks roughly like this:
 
-```js
+ ```js
 {
   id: "2016-P1-Q1",
   year: 2016,
@@ -61,7 +61,7 @@ So when I made the TMUA question bank, the first thing I asked was: what informa
   sections: ["a1.expansion_collection"],
   skills: ["coefficient-comparison"]
 }
-```
+``` 
 
 This string of things looks like technical details, but behind it is pedagogical judgment. Whether the frontend can filter, calculate statistics, and make recommendations basically depends on whether these fields were thought out in advance.
 

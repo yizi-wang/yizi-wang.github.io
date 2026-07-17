@@ -18,7 +18,7 @@ The initial workflow was a two-step process.
 
 First, I'd ask [DeepSeek](https://www.deepseek.com/) to generate a handout outline. The prompt had to include every detail upfront. For example, when planning a complex numbers unit:
 
-> I want to design a math handout. Students have already learned the modulus, argument, and conjugate of complex numbers. This unit covers the exponential form of complex numbers and de Moivre's theorem. The goals are: learning to find the nth roots of a complex number, deriving identities for n倍角三角函数, and deriving identities for powers of trigonometric functions. Use an engaging introduction style. The students' ultimate goal is to pass the international exam. Please summarize the key teaching points based on the provided past papers and give me a complete handout outline.
+> I want to design a math handout. Students have already learned the modulus, argument, and conjugate of complex numbers. This unit covers the exponential form of complex numbers and de Moivre's theorem. The goals are: learning to find the nth roots of a complex number, deriving identities for n times trigonometric functions, and deriving identities for powers of trigonometric functions. Use an engaging introduction style. The students' ultimate goal is to pass the international exam. Please summarize the key teaching points based on the provided past papers and give me a complete handout outline.
 
 Once I had the outline, I'd feed it to [Cursor](https://cursor.com/) to generate the full handout. Cursor is an AI coding tool — essentially a code editor with built-in AI chat. It's not designed for education, but since it can read files and output formatted content, I used it to write LaTeX handouts.
 

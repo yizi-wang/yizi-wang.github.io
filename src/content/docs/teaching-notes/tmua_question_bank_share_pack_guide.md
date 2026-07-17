@@ -38,7 +38,7 @@ One thing must be made clear first: my QuickForm API endpoints are by default no
 
 After unzipping, you will see a structure similar to the following:
 
-```text
+ ```text
 readme.html             Illustrated instruction manual, recommended to open first
 index.html              Entry point for the TMUA practice system
 questions_data.js       Question bank data
@@ -50,7 +50,7 @@ images/                 Question images
 AGENTS.md               Project rules for Agents / AI assistants to read
 skills/                 Task rule cards for Agents to use
 README.md               Plain text instructions
-```
+``` 
 
 The most commonly used are these three:
 
@@ -72,9 +72,9 @@ Do not double-click the HTML directly inside the compressed package. Many browse
 
 Enter the unzipped folder and double-click:
 
-```text
+ ```text
 readme.html
-```
+``` 
 
 After opening, you will see several entry points:
 
@@ -97,7 +97,7 @@ After entering the system, it is recommended to try in this order:
 5. View the analysis.
 6. Click "Feedback on this question" to confirm the feedback window opens.
 
-If formulas display as `$...$`, it usually means KaTeX hasn't loaded. In a networked environment, it will usually render automatically; if your local browser blocks the CDN, you can try the online version first:
+If formulas display as ` $...$ `, it usually means KaTeX hasn't loaded. In a networked environment, it will usually render automatically; if your local browser blocks the CDN, you can try the online version first:
 
 [https://www.mathw.cn/practice/tmua/](https://www.mathw.cn/practice/tmua/)
 
@@ -158,7 +158,7 @@ Do not come right out and say "Help me add a set of questions". Let the Agent re
 
 You can copy this paragraph:
 
-```text
+ ```text
 Please first read readme.html, AGENTS.md, and the skills/ directory in this folder.
 
 This is a local static TMUA practice system. It is required to remain usable by double-clicking index.html after unzipping.
@@ -170,7 +170,7 @@ Next, please modify the system according to my requests. After finishing, please
 2. Why these files were modified;
 3. How I should test it manually;
 4. Whether there are places that require my manual review.
-```
+``` 
 
 This step is very important. The `AGENTS.md` and `skills/` in the share pack are rule cards for the Agent to see. They tell the Agent: which files can be modified, which links need to be configured manually, and how to keep the question bank fields consistent.
 
@@ -178,28 +178,28 @@ This step is very important. The `AGENTS.md` and `skills/` in the share pack are
 
 If you want to modify questions, let the Agent use:
 
-```text
+ ```text
 skills/question-bank-importer/SKILL.md
-```
+``` 
 
 If you want to modify the local system or repackage, let the Agent use:
 
-```text
+ ```text
 skills/tmua-local-maintainer/SKILL.md
-```
+``` 
 
 If you want to modify QuickForm, feedback forms, grade submissions, or the dashboard, let the Agent use:
 
-```text
+ ```text
 skills/quickform-feedback-editor/SKILL.md
-```
+``` 
 
 You can say it like this:
 
-```text
+ ```text
 Please read and follow skills/question-bank-importer/SKILL.md.
 Next, I will give you a PDF and an answer key. Please do a sample of the first 5 questions first; do not import the entire exam paper at once.
-```
+``` 
 
 ## 6. Having the Agent correct a specific question
 
@@ -213,7 +213,7 @@ Suitable for this situation:
 
 The prompt is as follows:
 
-```text
+ ```text
 Please read and follow AGENTS.md and skills/question-bank-importer/SKILL.md.
 
 Please only check this question in questions_data.js:
@@ -228,13 +228,13 @@ Requirements:
 4. Do not guess uncertain information; mark it as needs_review.
 5. Tell me which fields you modified after finishing.
 6. Tell me how to open it with index.html?id=<Question ID> to review it.
-```
+``` 
 
 After modifying, manually open:
 
-```text
+ ```text
 index.html?id=<Question ID>
-```
+``` 
 
 If it is inconvenient to type in the browser's address bar, you can also open `index.html` first and then find that question by year and Paper.
 
@@ -246,7 +246,7 @@ It is recommended to do a 5-question sample first.
 
 The prompt is as follows:
 
-```text
+ ```text
 Please read and follow AGENTS.md and skills/question-bank-importer/SKILL.md.
 
 I want to add a new exam paper to this local practice system. Please add the questions into questions_data.js based on the PDF or per-question screenshots I provide.
@@ -266,7 +266,7 @@ Requirements:
 4. Put images in images/, and reference them correctly in the question fields.
 5. Mark uncertain information as needs_review; do not fabricate.
 6. Complete the first 5 questions as a sample first, and let me confirm the format before continuing.
-```
+``` 
 
 When confirming the sample, focus on five things:
 
@@ -294,13 +294,13 @@ The share pack by default does not hardcode specific QuickForm links. You need t
 
 You need to know five locations:
 
-```text
+ ```text
 js/feedback.js          Question feedback POST address
 feedback-dashboard.html Question feedback read address
 js/quiz.js              Grade submission POST address
 js/export.js            Old version grade submission helper logic; must be synced too
 dashboard.html          Grade dashboard read address
-```
+``` 
 
 Among them:
 
@@ -316,7 +316,7 @@ First, create a "Question Feedback" form in QuickForm.
 
 Suggested fields are as follows:
 
-```text
+ ```text
 feedback_kind
 feedback_type
 message
@@ -334,35 +334,35 @@ skills
 primary_section
 page_url
 submitted_at
-```
+``` 
 
 You don't necessarily have to create all the fields manually; it depends on how QuickForm receives them. Some form tools will automatically receive the fields in the POST. But you must at least know these fields will appear, so you won't get lost when exporting data later.
 
 Once created, fill the question feedback POST address into:
 
-```text
+ ```text
 js/feedback.js
-```
+``` 
 
 Find this line:
 
-```js
+ ```js
 const QUICKFORM_FEEDBACK_API_URL = '';
-```
+``` 
 
 Change it to your address.
 
 Then fill the question feedback read address into:
 
-```text
+ ```text
 feedback-dashboard.html
-```
+``` 
 
 Find this line:
 
-```js
+ ```js
 const API_URL = '';
-```
+``` 
 
 Change it to your read address.
 
@@ -372,7 +372,7 @@ If you want students to submit mock exam grades, create another "Grade Submissio
 
 Suggested fields are as follows:
 
-```text
+ ```text
 student_name
 exam_date
 paper
@@ -388,34 +388,34 @@ module_breakdown
 section_breakdown
 skill_breakdown
 question_results
-```
+``` 
 
 Once created, fill the grade submission POST address into two files:
 
-```text
+ ```text
 js/quiz.js
 js/export.js
-```
+``` 
 
 Look in these two files for:
 
-```js
+ ```js
 SCORE_QUICKFORM_API_URL
-```
+``` 
 
 Fill in your grade submission address.
 
 Then fill the grade dashboard read address into:
 
-```text
+ ```text
 dashboard.html
-```
+``` 
 
 Find:
 
-```js
+ ```js
 DASHBOARD_QUICKFORM_API_URL
-```
+``` 
 
 Fill in your read address.
 
@@ -425,7 +425,7 @@ You don't need to change it by hand yourself. Copy the addresses given to you by
 
 The prompt is as follows:
 
-```text
+ ```text
 Please read and follow AGENTS.md and skills/quickform-feedback-editor/SKILL.md.
 
 I have already created my own forms in QuickForm.
@@ -446,7 +446,7 @@ Requirements:
 - Do not modify questions_data.js.
 - Preserve the fallback function of copying feedback content when submission fails.
 - After modifying, tell me how to test one question feedback, one grade submission, and one dashboard read.
-```
+``` 
 
 ## 13. How to test after configuring QuickForm
 
@@ -486,7 +486,7 @@ Do not just send `index.html`.
 
 Prompt for the Agent:
 
-```text
+ ```text
 Please read and follow AGENTS.md and skills/tmua-local-maintainer/SKILL.md.
 
 Please repackage this local practice system into a zip for sending to other teachers or students.
@@ -496,7 +496,7 @@ Requirements:
 2. Do not pack temporary screenshots, browser caches, system files, or personal privacy data into the zip.
 3. Compress the entire directory, keeping relative paths unchanged.
 4. After packaging, tell me the zip file path and size.
-```
+``` 
 
 Before packaging, do at least one check yourself:
 
@@ -509,7 +509,7 @@ Before packaging, do at least one check yourself:
 
 ## 15. Frequently Asked Questions
 
-### Why do formulas display as `$...$` when opened locally?
+### Why do formulas display as ` $...$ ` when opened locally?
 
 Math formulas rely on KaTeX rendering. In a networked environment, it usually loads automatically. If your network blocks CDNs, or the browser has strict restrictions on local files, formulas might temporarily display as raw text.
 

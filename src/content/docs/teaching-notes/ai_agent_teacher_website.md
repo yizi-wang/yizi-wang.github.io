@@ -62,16 +62,16 @@ When I built this website for the first time, I fell into a trap early on: letti
 
 So now I tell the Agent directly:
 
-```text
+ ```text
 Please prioritize using the official starter/template; do not write framework configs by hand from scratch.
 If you need to change a config, first explain why the official template is insufficient.
-```
+``` 
 
 This sentence saves a lot of time. Agents easily have the urge to say "I can write it all," but building a website isn't an algorithm problem. If you can use an official template, use it first.
 
 You can ask the Agent like this:
 
-```text
+ ```text
 I am a high school math teacher wanting to build a personal teaching website.
 
 The website content includes:
@@ -90,7 +90,7 @@ Requirements:
 
 Please recommend a tech stack and explain the directory structure.
 Do not write code yet.
-```
+``` 
 
 Note the last sentence: Do not write code yet.
 
@@ -129,7 +129,7 @@ Another piece of experience: don't let long tasks drag on in one session for too
 
 You can give an Agent a task like this:
 
-```text
+ ```text
 Please create an Astro + Starlight teaching website in the current folder.
 
 Requirements:
@@ -147,7 +147,7 @@ Requirements:
 5. Create a sample blog page and a sample handout page
 6. After finishing, run the local dev server and tell me the access address
 7. Run the build command once more to confirm there are no errors
-```
+``` 
 
 If the Agent can run commands locally, it will handle many troublesome things itself. Like missing packages, config errors, wrong paths, build failures. You don't need to read the code line-by-line; you just need to check two results:
 
@@ -175,14 +175,14 @@ The Agent can help you run automated checks, but ultimately you still need to re
 
 I would have the Agent do this kind of check:
 
-```text
+ ```text
 Please check the current website:
 1. Do all internal links exist?
 2. Are there obvious Markdown formatting errors?
 3. Are there unclosed math formula symbols?
 4. Are there broken image paths?
 5. Run npm run build and fix all build errors
-```
+``` 
 
 This kind of task is very suitable for an Agent. It doesn't need to understand your pedagogical judgment; it just needs to check files and errors.
 
@@ -202,35 +202,35 @@ Second, block formulas must be written properly.
 
 This way is safer:
 
-```markdown
+ ```markdown
 $$
 \begin{aligned}
 x &= 1 \\
 y &= 2
 \end{aligned}
 $$
-```
+``` 
 
-Don't cram `$$\begin{aligned}` onto one line. Often it looks like a small issue locally, but it will explode during the build.
+Don't cram ` $$\begin{aligned}` onto one line. Often it looks like a small issue locally, but it will explode during the build.
 
-Third, do not put Chinese text inside `$$...$$` math blocks.
+Third, do not put Chinese text inside `$$ ...$$` math blocks.
 
 In KaTeX strict mode, mixing Chinese in math blocks easily causes errors. Put Chinese explanations outside the formula, and only put LaTeX inside.
 
 Fourth, keep filenames consistent across bilingual Chinese and English pages.
 
-If the English file is named `a1_algebra_basics.md`, the corresponding Chinese file should also be named `a1_algebra_basics.md`, just placed in the `zh/` directory. Do not write it as `a1_代数基础.md`. Starlight's i18n relies on path pairing; if the filenames are inconsistent, the sidebar might duplicate and pages won't match up.
+If the English file is named `a1_algebra_basics.md`, the corresponding Chinese file should also be named `a1_algebra_basics.md`, just placed in the `zh/` directory. Do not write it as `a1_Algebra Basics.md`. Starlight's i18n relies on path pairing; if the filenames are inconsistent, the sidebar might duplicate and pages won't match up.
 
 You can hand these rules to the Agent all at once:
 
-```text
+ ```text
 These are the content rules for the math website:
 1. Document pages default to using .md, do not use .mdx
 2. In block formulas, $$, \begin{aligned}, and \end{aligned} must be on separate lines
 3. Do not put Chinese explanations inside $$...$$ formula blocks
 4. Bilingual Chinese and English pages must use the same English filenames
 5. Run build checks after modifications
-```
+``` 
 
 The earlier the rules are written in, the less rework there is later.
 
@@ -252,7 +252,7 @@ GitHub's official repo creation guide is here: [Creating a new repository](https
 
 Once the repository is created, you can give the repository address to the Agent:
 
-```text
+ ```text
 I have already created an empty repository on GitHub:
 https://github.com/your-name/my-teaching-site
 
@@ -265,7 +265,7 @@ Requirements:
 4. Write the commit message as "initial teaching website"
 5. Push to the main branch
 6. Run a build check before pushing
-```
+``` 
 
 If you aren't logged into GitHub locally, the Agent might get stuck at the authentication step. Do not send your password directly to the Agent here. A safer way is:
 
@@ -282,18 +282,18 @@ I highly recommend configuring SSH for a local Agent. The process is roughly:
 2. Add the public key to your GitHub account.
 3. Use the SSH address when cloning or binding a repository, like:
 
-```text
+ ```text
 git@github.com:your-name/my-teaching-site.git
-```
+``` 
 
 This way, when the Agent executes `git push`, it uses local SSH authentication, and you don't need to send your GitHub token, API key, or password to it. Once configured, subsequent pushes will be much smoother.
 
 You can let the Agent help you check, but don't let it safeguard your keys:
 
-```text
+ ```text
 Please check if the git remote of the current project uses an SSH address.
 If not, please tell me what command I should change it to, but do not execute it yet.
-```
+``` 
 
 There is a bottom line here: `.env`, API keys, tokens, student data should not go into the repository. Even if the repo is private, do not develop this habit.
 
@@ -301,7 +301,7 @@ If you change computers or servers, your first task should also be reconfiguring
 
 You can have the Agent do a dedicated check once:
 
-```text
+ ```text
 Please check for sensitive information before committing:
 1. .env files
 2. API keys
@@ -310,7 +310,7 @@ Please check for sensitive information before committing:
 5. PDFs or images that should not be public
 
 Only report the results, do not automatically delete files.
-```
+``` 
 
 That last sentence is also important. When it involves deleting files, it's best not to let the Agent act on its own.
 
@@ -349,7 +349,7 @@ None of these issues look like code errors. They are environment differences.
 
 You can have the Agent specifically check the environment:
 
-```text
+ ```text
 Please check the deployment environment risks of the current project:
 1. Are the local Node version and package.json requirements consistent?
 2. Does package-lock.json contain non-official npm registries?
@@ -358,24 +358,24 @@ Please check the deployment environment risks of the current project:
 5. Do build cache directories like .astro or dist exist that shouldn't be committed?
 
 Only provide check results and suggestions; do not directly change files.
-```
+``` 
 
 If you don't know much about Node/npm, a simple rule is: make the local and deployment environments as consistent as possible. Don't have Node 24 on one side and Node 22 on the other; don't have npm v11 on one side and npm v10 on the other; don't take a lockfile with Chinese mirror addresses and run it directly in an overseas CI.
 
 You can ask like this:
 
-```text
+ ```text
 Here is the failed Vercel deployment log:
 
 (Paste log)
 
 Please determine the cause of the failure and modify the local project.
 After modifying, run npm run build to confirm the local build passes.
-```
+``` 
 
 After the local build passes, have the Agent commit and push again:
 
-```text
+ ```text
 Please commit the changes that just fixed the Vercel build issue to GitHub.
 
 Requirements:
@@ -383,7 +383,7 @@ Requirements:
 2. Only commit files related to this fix
 3. Write the commit message as "fix vercel build"
 4. Push to GitHub
-```
+``` 
 
 After that, Vercel will automatically redeploy. The official documentation also states that after connecting a Git repository, commits and pull requests can trigger deployments.
 
@@ -405,10 +405,10 @@ First approach: connect the domain to Vercel.
 
 In the Domains page of your Vercel project, add your domain, for example:
 
-```text
+ ```text
 example.com
 www.example.com
-```
+``` 
 
 Vercel will tell you what DNS records you need to add. You then go to your domain provider's backend to fill them in.
 
@@ -450,7 +450,7 @@ If there is a lot of content, it is best to use "batches" instead of throwing ev
 
 You can use this prompt:
 
-```text
+ ```text
 I want to add a new teaching blog post.
 
 Title: ...
@@ -465,11 +465,11 @@ Please:
 5. Do not modify unrelated files
 6. Run npm run build
 7. After the build passes, commit to GitHub, but let me confirm the commit content first
-```
+``` 
 
 Handout migration can be written like this:
 
-```text
+ ```text
 I want to convert a math handout into a website page.
 
 Requirements:
@@ -479,7 +479,7 @@ Requirements:
 4. Do not stuff TikZ diagrams directly into Markdown; remind me to convert them to SVG first
 5. After conversion, check if formulas are closed
 6. Run a build check
-```
+``` 
 
 The common ground of these tasks is: rules are clear, repetition is high, and a portion of errors can be caught through build checks. Agents do this very well.
 
