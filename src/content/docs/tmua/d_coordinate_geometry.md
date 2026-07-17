@@ -2,324 +2,324 @@
 title: "D Coordinate Geometry"
 ---
 
-## 模块 D：坐标几何
+## Module D: Coordinate Geometry
 
-> **对应考纲 Section 1**: MM3.1, MM3.2, MM3.3, MM8.3, MM8.7
-> **对应 Paper**: P1 重点（28/320 题），P2 涉及（逻辑推理型坐标题）
-> **建议课时**: 2 课时 | **目标题量**: 15-20 题
+> **Syllabus Correspondence Section 1**: MM3.1, MM3.2, MM3.3, MM8.3, MM8.7
+> **Paper Correspondence**: P1 Core (28/320 questions), P2 Involved (logical reasoning coordinate geometry questions)
+> **Recommended Class Time**: 2 classes | **Target Question Count**: 15-20 questions
 
 ---
 
-## 📋 模块概览
+## 📋 Module Overview
 
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
+| Section | Content | Syllabus | Past Paper Frequency | Class Time |
 |------|------|---------|-------------|------|
-| D1 | 直线方程与斜率 | MM3.1, MM8.3 | 8 年 10 次 | 0.5 |
-| D2 | 圆的方程（标准/一般/配方） | MM3.2, MM3.3 | 8 年 15 次 | 1 |
-| D3 | 直线与圆的位置关系 | MM3.3, MM8.7 | 8 年 8 次 | 0.5 |
+| D1 | Equations of Straight Lines and Gradients | MM3.1, MM8.3 | 10 times in 8 years | 0.5 |
+| D2 | Equation of a Circle (Standard/General/Completing the Square) | MM3.2, MM3.3 | 15 times in 8 years | 1 |
+| D3 | Intersection of a Line and a Circle | MM3.3, MM8.7 | 8 times in 8 years | 0.5 |
 
 ---
 
-## D1 直线方程与斜率 [MM3.1, MM8.3]
+## D1 Equations of Straight Lines and Gradients [MM3.1, MM8.3]
 
-### 1.1 斜率的几何意义
+### 1.1 Geometric Meaning of Gradient
 
-直线的斜率 $m$ 描述直线的『倾斜程度』，定义为纵坐标变化量与横坐标变化量之比：
+The gradient $m$ of a straight line describes its 'steepness', defined as the ratio of the change in the y-coordinate to the change in the x-coordinate:
 
 $$m = \frac{y_2 - y_1}{x_2 - x_1}$$
 
-**斜率的几何解读**：
-- $m > 0$：直线从左下到右上，越陡峭 $m$ 越大
-- $m < 0$：直线从左上到右下
-- $m = 0$：水平线
-- 斜率不存在（分母为零）：竖直线
+**Geometric Interpretation of Gradient**:
+- $m > 0$: The line goes from bottom-left to top-right; the steeper it is, the larger $m$ is.
+- $m < 0$: The line goes from top-left to bottom-right.
+- $m = 0$: Horizontal line.
+- Gradient is undefined (denominator is zero): Vertical line.
 
-### 1.2 三种直线方程形式
+### 1.2 Three Forms of the Equation of a Straight Line
 
-| 形式 | 公式 | 已知条件 | 何时使用 |
+| Form | Formula | Known Conditions | When to Use |
 |------|------|---------|---------|
-| 斜截式 | $y = mx + c$ | 斜率 $m$ 和 $y$-截距 $c$ | 最常用，直接读斜率 |
-| 点斜式 | $y - y_1 = m(x - x_1)$ | 一点 $(x_1, y_1)$ 和斜率 $m$ | 已知一点求方程 |
-| 一般式 | $ax + by + c = 0$ | 标准形式 | 两直线关系、距离公式 |
+| Gradient-Intercept Form | $y = mx + c$ | Gradient $m$ and $y$-intercept $c$ | Most commonly used, read gradient directly |
+| Point-Gradient Form | $y - y_1 = m(x - x_1)$ | A point $(x_1, y_1)$ and gradient $m$ | Given a point to find the equation |
+| General Form | $ax + by + c = 0$ | Standard form | Relationship between two lines, distance formula |
 
-**⚡ 快速识别斜率**：一般式 $ax + by + c = 0$ 的斜率 $m = -\frac{a}{b}$，直接读取，无需转换。
+**⚡ Quick Gradient Identification**: The gradient of the general form $ax + by + c = 0$ is $m = -\frac{a}{b}$, which can be read directly without conversion.
 
-### 1.3 两直线的平行与垂直
+### 1.3 Parallel and Perpendicular Lines
 
-**平行条件**：斜率相等 $m_1 = m_2$
+**Parallel condition**: Equal gradients $m_1 = m_2$
 
-**垂直条件**：斜率互为负倒数 $m_1 \cdot m_2 = -1$
+**Perpendicular condition**: Gradients are negative reciprocals $m_1 \cdot m_2 = -1$
 
-**推导垂直条件（理解而非记忆）**：
-设直线 $l_1$ 的斜率为 $m_1 = \tan\theta_1$，直线 $l_2$ 的斜率为 $m_2 = \tan\theta_2$。
-若 $l_1 \perp l_2$, 则 $\theta_2 = \theta_1 + 90°$, 所以
+**Derivation of the perpendicular condition (for understanding rather than memorizing)**:
+Let the gradient of line $l_1$ be $m_1 = \tan\theta_1$, and the gradient of line $l_2$ be $m_2 = \tan\theta_2$.
+If $l_1 \perp l_2$, then $\theta_2 = \theta_1 + 90^\circ$, so
 
-$$m_2 = \tan(\theta_1 + 90°) = -\frac{1}{\tan\theta_1} = -\frac{1}{m_1}$$
+$$m_2 = \tan(\theta_1 + 90^\circ) = -\frac{1}{\tan\theta_1} = -\frac{1}{m_1}$$
 
-因此 $m_1 \cdot m_2 = -1$。
+Therefore $m_1 \cdot m_2 = -1$.
 
-**⚠️ 垂直的特殊情况**：水平线（$m = 0$）与竖直线（斜率不存在）互相垂直，但不能直接用 $m_1 \cdot m_2 = -1$ 判断。
+**⚠️ Special case for perpendicularity**: A horizontal line ($m = 0$) and a vertical line (gradient is undefined) are perpendicular to each other, but this cannot be determined directly using $m_1 \cdot m_2 = -1$.
 
-### 1.4 点到直线的距离 [MM8.7]
+### 1.4 Perpendicular Distance from a Point to a Line [MM8.7]
 
-点 $(x_0, y_0)$ 到直线 $ax + by + c = 0$ 的距离：
+The distance from a point $(x_0, y_0)$ to the line $ax + by + c = 0$ is:
 
 $$d = \frac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}$$
 
-**核心应用**：圆的切线问题——切线到圆心的距离等于半径。
+**Core application**: Tangent to a circle problems — the distance from the tangent to the centre of the circle is equal to the radius.
 
 ---
 
-## D2 圆的方程 [MM3.2, MM3.3]
+## D2 Equation of a Circle [MM3.2, MM3.3]
 
-### 2.1 标准形式与一般形式
+### 2.1 Standard Form and General Form
 
-**标准形式**：
+**Standard Form**:
 $$(x - a)^2 + (y - b)^2 = r^2$$
-圆心 $(a, b)$, 半径 $r$。这是最直观的形式，一眼看出圆心和半径。
+Centre $(a, b)$, radius $r$. This is the most intuitive form, where the centre and radius can be seen at a glance.
 
-**一般形式**：
+**General Form**:
 $$x^2 + y^2 + 2gx + 2fy + c = 0$$
-圆心 $(-g, -f)$, 半径 $r = \sqrt{g^2 + f^2 - c}$。
+Centre $(-g, -f)$, radius $r = \sqrt{g^2 + f^2 - c}$.
 
-**⚠️ 符号陷阱**：圆心坐标是 $(-g, -f)$, **不是** $(g, f)$。一次项系数的符号要取反！
+**⚠️ Sign Trap**: The coordinates of the centre are $(-g, -f)$, **not** $(g, f)$. The signs of the coefficients of the linear terms must be reversed!
 
-### 2.2 配方——从一般到标准
+### 2.2 Completing the Square — From General to Standard
 
-给定 $x^2 + y^2 - 6x + 8y - 11 = 0$, 配方：
+Given $x^2 + y^2 - 6x + 8y - 11 = 0$, completing the square gives:
 
 $$(x^2 - 6x) + (y^2 + 8y) = 11$$
 $$(x^2 - 6x + 9) + (y^2 + 8y + 16) = 11 + 9 + 16$$
 $$(x - 3)^2 + (y + 4)^2 = 36$$
 
-所以圆心 $(3, -4)$, 半径 $6$。
+So the centre is $(3, -4)$ and the radius is $6$.
 
-**⚡ 快速配方口诀**：一次项系数除以 $-2$, 就是圆心坐标。
-- $x$ 项系数 $-6 \div (-2) = 3$ → 圆心横坐标
-- $y$ 项系数 $8 \div (-2) = -4$ → 圆心纵坐标
+**⚡ Quick Completing the Square Mnemonic**: Divide the coefficients of the linear terms by $-2$ to get the coordinates of the centre.
+- Coefficient of $x$ term $-6 \div (-2) = 3$ → $x$-coordinate of the centre
+- Coefficient of $y$ term $8 \div (-2) = -4$ → $y$-coordinate of the centre
 
-### 2.3 圆心到直线距离的应用 [MM3.3]
+### 2.3 Application of Distance from Centre to Line [MM3.3]
 
-| 关系 | 判定条件 | 几何含义 |
+| Relationship | Condition | Geometric Meaning |
 |------|---------|---------|
-| 相离 | $d > r$ | 直线与圆无交点 |
-| 相切 | $d = r$ | 直线与圆恰好一个交点 |
-| 相交 | $d < r$ | 直线与圆两个交点 |
+| Disjoint | $d > r$ | The line and the circle have no intersection points |
+| Tangent | $d = r$ | The line and the circle have exactly one intersection point |
+| Intersecting | $d < r$ | The line and the circle have two intersection points |
 
-其中 $d$ 是圆心到直线的距离, $r$ 是半径。
+Where $d$ is the distance from the centre to the line, and $r$ is the radius.
 
-**圆的常用性质**：
-1. 切点到圆心的连线垂直于切线
-2. 从圆外一点引两条切线，切线长度相等
-3. 切线与过切点的半径夹角为 $90°$
+**Common Properties of Circles**:
+1. The radius to the point of tangency is perpendicular to the tangent
+2. The lengths of two tangents drawn from an external point to a circle are equal
+3. The angle between the tangent and the radius at the point of tangency is $90^\circ$
 
 ---
 
-## D3 典型题型与解题策略 [MM8.7]
+## D3 Typical Question Types and Solving Strategies [MM8.7]
 
-### 题型 A：圆的变换
+### Question Type A: Circle Transformations
 
-圆经过平移、反射、缩放后，**跟踪圆心和半径的变化**即可，不需要重新配方。
+When a circle undergoes translation, reflection, or scaling, simply **track the changes to the centre and radius**; there is no need to complete the square again.
 
-| 变换 | 圆心变化 | 半径变化 |
+| Transformation | Change in Centre | Change in Radius |
 |------|---------|---------|
-| 平移 $(a, b)$ | $(h, k) \to (h+a, k+b)$ | 不变 |
-| 关于 $x$ 轴反射 | $(h, k) \to (h, -k)$ | 不变 |
-| 关于 $y$ 轴反射 | $(h, k) \to (-h, k)$ | 不变 |
-| 关于原点反射 | $(h, k) \to (-h, -k)$ | 不变 |
-| 缩放 $k$ 倍 | $(h, k)$ 不动 | $r \to kr$ |
+| Translation by $(a, b)$ | $(h, k) \to (h+a, k+b)$ | Unchanged |
+| Reflection in $x$-axis | $(h, k) \to (h, -k)$ | Unchanged |
+| Reflection in $y$-axis | $(h, k) \to (-h, k)$ | Unchanged |
+| Reflection in origin | $(h, k) \to (-h, -k)$ | Unchanged |
+| Scaling by scale factor $k$ | $(h, k)$ unchanged | $r \to kr$ |
 
-### 颔型 B：切线问题
+### Question Type B: Tangent Problems
 
-**三步法**：
-1. 设切线方程（通常设为 $y - y_0 = m(x - x_0)$）
-2. 利用『圆心到切线距离 = 半径』列方程
-3. 解出斜率 $m$, 写出切线方程
+**Three-Step Method**:
+1. Let the tangent equation be $y - y_0 = m(x - x_0)$
+2. Set up an equation using 'distance from centre to tangent = radius'
+3. Solve for the gradient $m$ and write down the tangent equation
 
-**注意**：从圆外一点通常可以引**两条**切线，要检查是否两个解都符合题意（如『与正 y 轴相交』）。
+**Note**: Usually **two** tangents can be drawn from an external point. Check if both solutions fit the context of the question (e.g., 'intersects the positive y-axis').
 
-### 题型 C：圆内接正多边形
+### Question Type C: Regular Polygons Inscribed in a Circle
 
-正 $n$ 边形外接圆半径为 $R$ 时：
+When the radius of the circumcircle of a regular $n$-gon is $R$:
 
 $$\text{Area} = \frac{n}{2} R^2 \sin\frac{2\pi}{n}$$
 
-常用特例：
-- 正三角形（$n=3$）：$\frac{3\sqrt{3}}{4} R^2$
-- 正六边形（$n=6$）：$\frac{3\sqrt{3}}{2} R^2$
-- 正方形（$n=4$）：$2R^2$
+Common special cases:
+- Equilateral triangle ($n=3$): $\frac{3\sqrt{3}}{4} R^2$
+- Regular hexagon ($n=6$): $\frac{3\sqrt{3}}{2} R^2$
+- Square ($n=4$): $2R^2$
 
 ---
 
-## ⚡ 速解技巧汇总
+## ⚡ Summary of Quick Solving Techniques
 
-| 场景 | 技巧 |
+| Scenario | Technique |
 |------|------|
-| 已知直径端点求圆 | 圆心是中点，半径是半长，一步到位 |
-| 圆的一般式读信息 | 一次项系数÷(-2) = 圆心, $r = \sqrt{g^2+f^2-c}$ |
-| 切线斜率 | 用『距离 = 半径』列方程，避免联立判别式 |
-| 垂直直线 | 斜率取负倒数, $m \to -\frac{1}{m}$ |
-| 两直线交点 | 联立方程，消元法最快 |
-| 判断圆的存在性 | 配方后令 $R^2 > 0$（$R^2 = 0$ 是点，$R^2 < 0$ 无图形） |
+| Finding the circle given the endpoints of a diameter | The centre is the midpoint, and the radius is half the length; done in one step |
+| Reading information from the general form of a circle | Coefficient of linear term $\div (-2)$ = centre, $r = \sqrt{g^2+f^2-c}$ |
+| Gradient of a tangent | Set up an equation using 'distance = radius' to avoid simultaneous equations with discriminant |
+| Perpendicular lines | Take the negative reciprocal of the gradient, $m \to -\frac{1}{m}$ |
+| Intersection of two lines | Solve simultaneous equations; elimination is the fastest |
+| Determining the existence of a circle | Complete the square and set $R^2 > 0$ ($R^2 = 0$ is a point, $R^2 < 0$ is no real locus) |
 
-## ⚠️ 易错警示
+## ⚠️ Common Pitfalls
 
-- ❌ 圆的一般式中，圆心是 $(-g, -f)$ **不是** $(g, f)$——一次项系数要变号
-- ❌ 垂直条件是 $m_1 \cdot m_2 = -1$, **不是** $m_1 = -m_2$
-- ❌ 正六边形面积系数是 $\frac{3\sqrt{3}}{2}$, **不是** $\frac{\sqrt{3}}{4}$（那是正三角形的）
-- ❌ 点到直线距离公式中，分母是 $\sqrt{a^2 + b^2}$, **不是** $a^2 + b^2$
-- ❌ 圆方程配方后半径平方 $R^2$ 必须为**正数**才能表示圆
+- ❌ In the general form of a circle, the centre is $(-g, -f)$ **not** $(g, f)$ — the signs of the coefficients of linear terms must be reversed
+- ❌ The perpendicular condition is $m_1 \cdot m_2 = -1$, **not** $m_1 = -m_2$
+- ❌ The area coefficient for a regular hexagon is $\frac{3\sqrt{3}}{2}$, **not** $\frac{\sqrt{3}}{4}$ (which is for an equilateral triangle)
+- ❌ In the perpendicular distance formula, the denominator is $\sqrt{a^2 + b^2}$, **not** $a^2 + b^2$
+- ❌ After completing the square for a circle's equation, the squared radius $R^2$ must be **positive** to represent a real circle
 
 ---
 
-## 📝 精选例题
+## 📝 Selected Examples
 
-### 例题 1（2016 P1 Q9 · 圆的变换）
+### Example 1 (2016 P1 Q9 · Circle Transformations)
 
-**题目**：连接点 $(3, 3)$ 和 $(7, 5)$ 的线段是圆的直径。该圆先向负 $x$ 方向平移 3 个单位，再关于 $x$ 轴反射，最后以所得圆心为中心放大 4 倍。求最终圆的方程。
+**Question**: The line segment connecting the points $(3, 3)$ and $(7, 5)$ is the diameter of a circle. The circle is first translated 3 units in the negative $x$-direction, then reflected in the $x$-axis, and finally enlarged by a scale factor of 4 with the resulting centre as the centre of enlargement. Find the final equation of the circle.
 
-【题目分析】
-本题考查圆的方程与几何变换的综合应用。已知直径两端点确定一个圆，依次经历平移、反射、位似放大三种变换，需要逐步跟踪圆心和半径的变化。
+【Question Analysis】
+This question tests the comprehensive application of circle equations and geometric transformations. Knowing the two endpoints of the diameter determines a circle. It successively undergoes three transformations: translation, reflection, and enlargement, requiring us to track the changes in the centre and radius step by step.
 
-【解题步骤】
-第一步：确定原圆的圆心和半径
+【Solving Steps】
+Step 1: Determine the centre and radius of the original circle
 
-直径端点为 $A(3, 3)$ 和 $B(7, 5)$。
+The endpoints of the diameter are $A(3, 3)$ and $B(7, 5)$.
 
-圆心为直径中点：
+The centre is the midpoint of the diameter:
 $$C = \left(\frac{3+7}{2}, \frac{3+5}{2}\right) = (5, 4)$$
 
-直径长度 $|AB| = \sqrt{(7-3)^2 + (5-3)^2} = \sqrt{16+4} = \sqrt{20}$。
+Length of the diameter $|AB| = \sqrt{(7-3)^2 + (5-3)^2} = \sqrt{16+4} = \sqrt{20}$.
 
-半径 $r = \frac{\sqrt{20}}{2} = \sqrt{5}$。
+Radius $r = \frac{\sqrt{20}}{2} = \sqrt{5}$.
 
-第二步：向负 $x$ 方向平移 3 个单位
+Step 2: Translate 3 units in the negative $x$-direction
 
-圆心横坐标减 3, 纵坐标不变，半径不变：
+The $x$-coordinate of the centre decreases by 3, the $y$-coordinate remains unchanged, and the radius remains unchanged:
 $$(5, 4) \to (2, 4)$$
 
-第三步：关于 $x$ 轴反射
+Step 3: Reflection in the $x$-axis
 
-反射只改变 $y$ 坐标的符号，半径不变：
+Reflection only changes the sign of the $y$-coordinate, while the radius remains unchanged:
 $$(2, 4) \to (2, -4)$$
 
-第四步：关于圆心位似放大，位似比为 4
+Step 4: Enlargement from the centre with a scale factor of 4
 
-以圆心为位似中心时，圆心位置保持不变，半径乘以位似比：
+When the centre of the circle is the centre of enlargement, the position of the centre remains unchanged, and the radius is multiplied by the scale factor:
 $$R = 4 \times \sqrt{5} = 4\sqrt{5}$$
 $$R^2 = (4\sqrt{5})^2 = 80$$
 
-最终圆心为 $(2, -4)$, 半径平方为 $80$, 方程为：
+The final centre is $(2, -4)$, and the squared radius is $80$. The equation is:
 $$(x-2)^2 + (y+4)^2 = 80$$
 
-【快捷思路】
-观察选项右侧只有 $320, 80, 20$ 三种可能。原半径平方为 5, 放大 4 倍后半径变为 $4\sqrt{5}$, 平方为 $80$, 排除其他选项。再由反射步骤知 $y$ 坐标变号得 $(y+4)$, 直接锁定答案。
+【Quick Approach】
+Observe that the right-hand side of the options can only be $320, 80, 20$. The original squared radius is 5, and after enlarging by a scale factor of 4, the radius becomes $4\sqrt{5}$, and its square is $80$, which eliminates other options. Then, from the reflection step, we know the sign of the $y$-coordinate changes, resulting in $(y+4)$, which directly locks in the answer.
 
-【正确答案】D
+【Correct Answer】D
 
-【知识点】Coordinate Geometry | **考纲**: MM3.2, MM8.2
+【Knowledge Point】Coordinate Geometry | **Syllabus**: MM3.2, MM8.2
 
 ---
 
-### 例题 2（2017 P1 Q6 · 圆的切线）
+### Example 2 (2017 P1 Q6 · Tangent to a Circle)
 
-**题目**：圆 $x^2 + y^2 = 144$ 的一条切线过点 $(20, 0)$ 且与正 $y$ 轴相交。求切线与 $y$ 轴交点的纵坐标。
+**Question**: A tangent to the circle $x^2 + y^2 = 144$ passes through the point $(20, 0)$ and intersects the positive $y$-axis. Find the $y$-coordinate of the intersection point of the tangent and the $y$-axis.
 
-【题目分析】
-圆 $x^2 + y^2 = 144$（半径 12, 圆心原点）的一条切线过 $(20, 0)$ 且与正 $y$ 轴相交。设切线斜率为 $m$, 求交点坐标。利用切线到圆心的距离等于半径这一核心几何条件求解。
+【Question Analysis】
+A tangent to the circle $x^2 + y^2 = 144$ (radius 12, centre at the origin) passes through $(20, 0)$ and intersects the positive $y$-axis. Let the gradient of the tangent be $m$, and find the coordinates of the intersection point. Solve this using the core geometric condition that the distance from the tangent to the centre equals the radius.
 
-【解题步骤】
-切线过 $(20, 0)$, 方程为 $y = m(x - 20)$。
+【Solving Steps】
+The tangent passes through $(20, 0)$, so its equation is $y = m(x - 20)$.
 
-圆心 $(0, 0)$ 到切线的距离等于半径 $12$。利用点到直线距离公式：
+The distance from the centre $(0, 0)$ to the tangent equals the radius $12$. Using the perpendicular distance formula:
 $$\frac{|m \cdot 0 - 0 - 20m|}{\sqrt{m^2 + 1}} = 12 \quad \Rightarrow \quad \frac{20|m|}{\sqrt{m^2 + 1}} = 12$$
 
-两边平方：$400m^2 = 144(m^2 + 1)$, 得 $256m^2 = 144$, 即 $m^2 = \frac{9}{16}$。
+Squaring both sides: $400m^2 = 144(m^2 + 1)$, which gives $256m^2 = 144$, i.e., $m^2 = \frac{9}{16}$.
 
-由于切线与**正** $y$ 轴相交，当 $x = 0$ 时 $y = -20m > 0$, 故 $m < 0$, 取 $m = -\frac{3}{4}$。
+Since the tangent intersects the **positive** $y$-axis, when $x = 0$, $y = -20m > 0$, so $m < 0$. Therefore, $m = -\frac{3}{4}$.
 
-交点 $y$ 坐标：$y = -20 \times \left(-\frac{3}{4}\right) = 15$。
+The $y$-coordinate of the intersection point is: $y = -20 \times \left(-\frac{3}{4}\right) = 15$.
 
-【快捷思路】
-利用相似三角形可更快求解：设切线与 $y$ 轴交点为 $P(0, k)$, 切点为 $Q$, 原点为 $O$。$\triangle OQP$ 中 $OP = 20$, $OQ = 12$, 由勾股定理得 $QP = 16$（3-4-5 三角形）。由 $\triangle PQO \sim \triangle OQP$, 得 $\frac{k}{12} = \frac{20}{16}$, 故 $k = 15$。
+【Quick Approach】
+Using similar triangles allows for a faster solution: Let the intersection point of the tangent and the $y$-axis be $P(0, k)$, the point of tangency be $Q$, and the origin be $O$. In $\triangle OQP$, $OP = 20$, $OQ = 12$, and by Pythagoras' theorem, $QP = 16$ (a 3-4-5 triangle). Since $\triangle PQO \sim \triangle OQP$, we have $\frac{k}{12} = \frac{20}{16}$, thus $k = 15$.
 
-【正确答案】B
+【Correct Answer】B
 
-【知识点】Coordinate Geometry | **考纲**: MM3.2, MM3.3
+【Knowledge Point】Coordinate Geometry | **Syllabus**: MM3.2, MM3.3
 
 ---
 
-### 例题 3（2017 P1 Q9 · 圆与正六边形）
+### Example 3 (2017 P1 Q9 · Circle and Regular Hexagon)
 
-**题目**：圆方程为 $x^2 + y^2 - 18x - 22y + 178 = 0$。圆内作正六边形且顶点均在圆上。求正六边形面积。
+**Question**: The equation of a circle is $x^2 + y^2 - 18x - 22y + 178 = 0$. A regular hexagon is inscribed in the circle such that all its vertices lie on the circle. Find the area of the regular hexagon.
 
-【题目分析】
-已知圆的一般方程，需先配方求圆心和半径，再利用正六边形面积公式（外接圆半径已知）。
+【Question Analysis】
+Given the general equation of a circle, we first need to complete the square to find the centre and radius, and then use the area formula for a regular hexagon (since the radius of its circumcircle is known).
 
-【解题步骤】
-第一步：将圆方程配方化为标准形式
+【Solving Steps】
+Step 1: Complete the square to convert the circle's equation into standard form
 
 $(x - 9)^2 + (y - 11)^2 - 9^2 - 11^2 + 178 = 0$
 $(x - 9)^2 + (y - 11)^2 = 81 + 121 - 178 = 24$
 
-圆心为 $(9, 11)$, 半径 $r = \sqrt{24}$。
+The centre is $(9, 11)$, and the radius is $r = \sqrt{24}$.
 
-第二步：分析正六边形的几何结构
+Step 2: Analyse the geometric structure of the regular hexagon
 
-正六边形内接于圆时，六条半径将其分割为 $6$ 个全等的等边三角形，每个三角形边长等于半径 $r$。
+When a regular hexagon is inscribed in a circle, its six radii divide it into 6 congruent equilateral triangles, each with a side length equal to the radius $r$.
 
-第三步：计算单个等边三角形面积
+Step 3: Calculate the area of a single equilateral triangle
 
-利用面积公式 $\frac{1}{2}ab\sin C$:
-$S_{\triangle} = \frac{1}{2} r^2 \sin 60° = \frac{1}{2} \cdot 24 \cdot \frac{\sqrt{3}}{2} = 6\sqrt{3}$
+Using the area formula $\frac{1}{2}ab\sin C$:
+$S_{\triangle} = \frac{1}{2} r^2 \sin 60^\circ = \frac{1}{2} \cdot 24 \cdot \frac{\sqrt{3}}{2} = 6\sqrt{3}$
 
-第四步：正六边形总面积
+Step 4: Total area of the regular hexagon
 
 $S = 6 \times 6\sqrt{3} = 36\sqrt{3}$
 
-【快捷思路】
-正六边形内接圆面积公式为 $\frac{3\sqrt{3}}{2}r^2$, 直接代入 $r^2 = 24$ 得 $36\sqrt{3}$。关键在于先用配方法求出半径平方，无需完整化简半径。
+【Quick Approach】
+The area formula for a regular hexagon inscribed in a circle is $\frac{3\sqrt{3}}{2}r^2$. Substituting $r^2 = 24$ directly gives $36\sqrt{3}$. The key is to use completing the square to find the squared radius first, without fully simplifying the radius.
 
-【正确答案】F
+【Correct Answer】F
 
-【知识点】Coordinate Geometry | **考纲**: MM3.2
+【Knowledge Point】Coordinate Geometry | **Syllabus**: MM3.2
 
 ---
 
-## 🏋️ 课后练习（限时 15 分钟）
+## 🏋️ After-Class Exercises (15 Minutes Time Limit)
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
+| # | Question | Topic | Syllabus | Difficulty |
 |---|------|------|---------|------|
-| 1 | 2016 P2 Q8 | 不等式区域 | MM1.5, MM3.1 | ⭐⭐⭐ |
-| 2 | 2016 P2 Q16 | 梯形对角线 | MM3.1, MM3.3 | ⭐⭐⭐ |
-| 3 | 2017 P1 Q3 | 垂直直线 + 面积 | MM3.1, MM8.3 | ⭐⭐⭐ |
-| 4 | 2017 P2 Q2 | 矩形 + 垂直 | MM3.1, MM3.3 | ⭐⭐⭐ |
-| 5 | 2018 P1 Q3 | 两圆最短距离 | MM3.2 | ⭐⭐⭐ |
-| 6 | 2019 P1 Q6 | 两圆相交 | MM3.2, MM3.3 | ⭐⭐⭐ |
-| 7 | 2022 P1 Q2 | 圆的存在性（参数） | MM3.2 | ⭐⭐⭐⭐ |
-| 8 | 2023 P1 Q2 | 直线与抛物线不相遇 | MM3.1, MM8.7 | ⭐⭐⭐ |
+| 1 | 2016 P2 Q8 | Inequality Regions | MM1.5, MM3.1 | ⭐⭐⭐ |
+| 2 | 2016 P2 Q16 | Trapezium Diagonals | MM3.1, MM3.3 | ⭐⭐⭐ |
+| 3 | 2017 P1 Q3 | Perpendicular Lines + Area | MM3.1, MM8.3 | ⭐⭐⭐ |
+| 4 | 2017 P2 Q2 | Rectangle + Perpendicularity | MM3.1, MM3.3 | ⭐⭐⭐ |
+| 5 | 2018 P1 Q3 | Shortest Distance Between Two Circles | MM3.2 | ⭐⭐⭐ |
+| 6 | 2019 P1 Q6 | Intersecting Circles | MM3.2, MM3.3 | ⭐⭐⭐ |
+| 7 | 2022 P1 Q2 | Existence of a Circle (Parameters) | MM3.2 | ⭐⭐⭐⭐ |
+| 8 | 2023 P1 Q2 | Line and Parabola Do Not Intersect | MM3.1, MM8.7 | ⭐⭐⭐ |
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+*For full solutions, please refer to the question database, where every question includes 【Solving Steps】 and 【Quick Approach】.*
 
 ---
 
-## 🎯 配套练习
+## 🎯 Supplementary Exercises
 
-学完本章？[→ 去做 Coordinate Geometry 相关练习题](/practice/tmua/?topic=Coordinate%20Geometry)
-
----
-
-**模块知识点覆盖率**：
-- 直线方程：MM3.1, MM8.3 ✓
-- 圆的标准方程：MM3.2 ✓
-- 圆的一般方程与配方：MM3.2 ✓
-- 圆的性质与切线：MM3.3 ✓
-- 图形交点与面积：MM8.7 ✓
-
-**建议教学顺序**：D1（直线）→ D2（圆）→ D3（综合题型），由浅入深，循序渐进。
+Finished this chapter? [→ Go to Coordinate Geometry practice questions](/practice/tmua/?topic=Coordinate%20Geometry)
 
 ---
 
-*讲义版本：v1.0 | 生成日期：2026-04-29*
+**Module Knowledge Point Coverage**:
+- Equations of Straight Lines: MM3.1, MM8.3 ✓
+- Standard Equation of a Circle: MM3.2 ✓
+- General Equation of a Circle and Completing the Square: MM3.2 ✓
+- Properties of Circles and Tangents: MM3.3 ✓
+- Intersection of Graphs and Area: MM8.7 ✓
+
+**Recommended Teaching Sequence**: D1 (Straight Lines) → D2 (Circles) → D3 (Comprehensive Question Types), progressing step by step from easy to difficult.
+
+---
+
+*Handout Version: v1.0 | Generated Date: 2026-04-29*

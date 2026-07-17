@@ -2,403 +2,403 @@
 title: "B Mathematical Logic Basics"
 ---
 
-## 模块 B：数学逻辑基础
+## Module B: Mathematical Logic Basics
 
-> **对应考纲 Section 2**: Arg1, Arg2, Arg3, Arg4, Prf1, Prf2, Err1, Err2
-> **对应 Paper**: P2 重点（19/320 题，全部来自 Paper 2）
-> **建议课时**: 2 课时 | **目标题量**: 15-20 题
+> **Corresponding Syllabus Section 2**: Arg1, Arg2, Arg3, Arg4, Prf1, Prf2, Err1, Err2
+> **Corresponding Paper**: P2 Focus (19/320 questions, all from Paper 2)
+> **Recommended Time**: 2 lessons | **Target Volume**: 15-20 questions
 
 ---
 
-## 📋 模块概览
+## 📋 Module Overview
 
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
+| Section | Content | Syllabus | Past Paper Frequency | Lessons |
 |------|------|---------|-------------|------|
-| B1 | 基本逻辑概念 | Arg1 | 8 年 8 次 | 0.5 |
-| B2 | 充分必要条件 | Arg2 | 8 年 5 次 | 0.5 |
-| B3 | 反例构造与否定 | Arg4, Prf1 | 8 年 11 次 | 1 |
+| B1 | Basic Logic Concepts | Arg1 | 8 times in 8 years | 0.5 |
+| B2 | Sufficient and Necessary Conditions | Arg2 | 5 times in 8 years | 0.5 |
+| B3 | Counterexamples and Negation | Arg4, Prf1 | 11 times in 8 years | 1 |
 
 ---
 
-## B1 基本逻辑概念 [Arg1]
+## B1 Basic Logic Concepts [Arg1]
 
-### 1.1 命题与真值
+### 1.1 Statements and Truth Values
 
-**命题（Statement）**：能够判断真假的陈述句。
+**Statement**: A declarative sentence that can be judged as true or false.
 
-例如：
-- 『三角形内角和为 $180°$』— 真命题
-- 『所有质数都是奇数』— 假命题（$2$ 是偶质数）
-- 『$x > 3$』— 不是命题（含变量，无法判断真假）
+For example:
+- "The sum of the interior angles of a triangle is $180^\circ$" — True statement
+- "All prime numbers are odd" — False statement ($2$ is an even prime number)
+- "$x > 3$" — Not a statement (contains a variable, truth value cannot be determined)
 
-**⚠️ 注意**：命题必须是陈述句，疑问句、感叹句、含变量的开语句都不是命题。
+**⚠️ Note**: A statement must be a declarative sentence. Interrogative sentences, exclamatory sentences, and open sentences containing variables are not statements.
 
-### 1.2 四种命题形式
+### 1.2 Four Types of Statements
 
-给定原命题『若 $P$ 则 $Q$』，可以衍生出四种形式：
+Given an original statement "If $P$ then $Q$", four forms can be derived:
 
-| 名称 | 形式 | 真值关系 |
+| Name | Form | Truth Value Relationship |
 |------|------|---------|
-| 原命题 | 若 $P$ 则 $Q$ | — |
-| 逆命题（Converse） | 若 $Q$ 则 $P$ | 与原命题真假**无关** |
-| 否命题（Inverse） | 若非 $P$ 则非 $Q$ | 与原命题真假**无关** |
-| **逆否命题（Contrapositive）** | 若非 $Q$ 则非 $P$ | 与原命题**同真假** |
+| Original Statement | If $P$ then $Q$ | — |
+| Converse | If $Q$ then $P$ | **Independent** of the original statement |
+| Inverse | If not $P$ then not $Q$ | **Independent** of the original statement |
+| **Contrapositive** | If not $Q$ then not $P$ | **Same truth value** as the original statement |
 
-**核心定理**：原命题与逆否命题逻辑等价，即：
-$$\text{『若 }P\text{ 则 }Q\text{』} \iff \text{『若非 }Q\text{ 则非 }P\text{』}$$
+**Core Theorem**: The original statement and its contrapositive are logically equivalent, i.e.:
+$$\text{"If }P\text{ then }Q\text{"} \iff \text{"If not }Q\text{ then not }P\text{"}$$
 
-**理解方式**：『下雨则地湿』等价于『地不湿则没下雨』，这是日常逻辑中最自然的推理。
+**Intuitive Understanding**: "If it rains, the ground is wet" is equivalent to "If the ground is not wet, it did not rain". This is the most natural deduction in everyday logic.
 
-**⚠️ 易错点**：
-- 逆命题和否命题的真假与原命题**无关**
-- 『所有奇数都是质数』是假命题，其逆命题『所有质数都是奇数』也是假命题（$2$），但它们没有必然联系
-- 原命题『若 $x > 2$ 则 $x^2 > 4$』为真，其逆命题『若 $x^2 > 4$ 则 $x > 2$』为假（$x = -3$ 时成立）
+**⚠️ Common Pitfalls**:
+- The truth values of the converse and inverse are **independent** of the original statement.
+- "All odd numbers are prime" is a false statement, and its converse "All prime numbers are odd" is also a false statement (due to $2$), but there is no inevitable connection between them.
+- The original statement "If $x > 2$ then $x^2 > 4$" is true, but its converse "If $x^2 > 4$ then $x > 2$" is false (e.g., when $x = -3$).
 
-### 1.3 逻辑连接词
+### 1.3 Logical Connectives
 
-| 连接词 | 含义 | 符号 | 真值规则 |
+| Connective | Meaning | Symbol | Truth Rule |
 |-------|------|------|---------|
-| 且（and） | 同时成立 | $P \land Q$ | 两者都真才为真 |
-| 或（or） | 至少一个成立（**包含或**） | $P \lor Q$ | 至少一个真即为真 |
-| 非（not） | 否定 | $\neg P$ | 真变假，假变真 |
+| and | Both are true | $P \land Q$ | True only if both are true |
+| or | At least one is true (**inclusive or**) | $P \lor Q$ | True if at least one is true |
+| not | Negation | $\neg P$ | True becomes false, false becomes true |
 
-**⚡ 包含或的含义**：『$P$ 或 $Q$』包括『$P$ 且 $Q$』的情况。例如『今天是周六或周日』包括『既是周六又是周日』（虽然不可能，但逻辑上允许）。
+**⚡ Meaning of Inclusive Or**: "$P$ or $Q$" includes the case of "$P$ and $Q$". For example, "Today is Saturday or Sunday" includes "It is both Saturday and Sunday" (although impossible in reality, it is logically permitted).
 
-### 1.4 量词
+### 1.4 Quantifiers
 
-| 量词 | 含义 | 符号 | 示例 |
+| Quantifier | Meaning | Symbol | Example |
 |------|------|------|------|
-| 对于所有（for all） | 全称量词 | $\forall$ | 『所有三角形内角和为 $180°$』$\forall$ 三角形 $T$，内角和$(T) = 180°$ |
-| 存在（there exists） | 存在量词 | $\exists$ | 『存在一个偶质数』$\exists$ 整数 $n$，$n$ 是偶数且 $n$ 是质数 |
+| for all | Universal quantifier | $\forall$ | "The sum of interior angles for all triangles is $180^\circ$": $\forall$ triangle $T$, interior angles sum$(T) = 180^\circ$ |
+| there exists | Existential quantifier | $\exists$ | "There exists an even prime number": $\exists$ integer $n$, $n$ is even and $n$ is prime |
 
-**⚠️ TMUA 不考符号**：考纲明确说明『考生不需识别或使用符号记号』，但需理解『对于所有』『存在』等措辞的逻辑含义。
+**⚠️ TMUA Does Not Test Symbols**: The syllabus clearly states "candidates will not be expected to recognise or use the symbols", but you must understand the logical meaning of phrases like "for all" and "there exists".
 
 ---
 
-## B2 充分必要条件 [Arg2]
+## B2 Sufficient and Necessary Conditions [Arg2]
 
-### 2.1 定义与判定
+### 2.1 Definition and Judgment
 
-| 条件类型 | 定义 | 符号表示 |
+| Condition Type | Definition | Notation |
 |---------|------|---------|
-| **充分条件** | 若 $P$ 成立则 $Q$ 必成立 | $P \Rightarrow Q$ |
-| **必要条件** | 若 $Q$ 成立则 $P$ 必成立 | $Q \Rightarrow P$（即 $P$ 是 $Q$ 的必要条件） |
-| **充要条件** | $P$ 与 $Q$ 相互推出 | $P \iff Q$ |
+| **Sufficient Condition** | If $P$ is true, then $Q$ must be true | $P \Rightarrow Q$ |
+| **Necessary Condition** | If $Q$ is true, then $P$ must be true | $Q \Rightarrow P$ (i.e., $P$ is a necessary condition for $Q$) |
+| **Necessary and Sufficient Condition** | $P$ and $Q$ imply each other | $P \iff Q$ |
 
-**直观理解**：
-- 『下雨』是『地湿』的**充分条件**：下雨 ⇒ 地湿
-- 『地湿』是『下雨』的**必要条件**：若没下雨，地未必不湿（可能泼水了）
-- 『下雨且无遮挡』是『地湿』的充要条件（在特定情境下）
+**Intuitive Understanding**:
+- "Raining" is a **sufficient condition** for "the ground being wet": Raining ⇒ Ground is wet
+- "The ground being wet" is a **necessary condition** for "raining": If it didn't rain, the ground might not be dry (water could have been spilled)
+- "Raining and no cover" is a necessary and sufficient condition for "the ground being wet" (in a specific context)
 
-### 2.2 判定技巧
+### 2.2 Judgment Techniques
 
-**⚡ 速判口诀**：
-- 有 $P$ 必有 $Q$ → $P$ 是 $Q$ 的充分条件
-- 无 $P$ 可能无 $Q$ → $P$ 是 $Q$ 的必要条件（逆否命题：有 $Q$ 必有 $P$）
+**⚡ Quick Judgment Rule**:
+- Having $P$ guarantees $Q$ → $P$ is a sufficient condition for $Q$
+- Without $P$ there might not be $Q$ → $P$ is a necessary condition for $Q$ (Contrapositive: having $Q$ guarantees $P$)
 
-**例**：『$x > 2$』是『$x^2 > 4$』的什么条件？
-- 检验：$x > 2$ ⇒ $x^2 > 4$ ✓（充分）
-- 反例：$x = -3$ 时 $x^2 > 4$ 但 $x \ngtr 2$ ✗（不必要）
-- 结论：充分但不必要
+**Example**: "$x > 2$" is what condition for "$x^2 > 4$"?
+- Check: $x > 2$ ⇒ $x^2 > 4$ ✓ (Sufficient)
+- Counterexample: When $x = -3$, $x^2 > 4$ but $x \ngtr 2$ ✗ (Not necessary)
+- Conclusion: Sufficient but not necessary
 
-**例**：『$a = b$』是『$a^2 = b^2$』的什么条件？
-- 检验：$a = b$ ⇒ $a^2 = b^2$ ✓（充分）
-- 反例：$a = 2, b = -2$ 时 $a^2 = b^2$ 但 $a \neq b$ ✗（不必要）
-- 结论：充分但不必要
+**Example**: "$a = b$" is what condition for "$a^2 = b^2$"?
+- Check: $a = b$ ⇒ $a^2 = b^2$ ✓ (Sufficient)
+- Counterexample: When $a = 2, b = -2$, $a^2 = b^2$ but $a \neq b$ ✗ (Not necessary)
+- Conclusion: Sufficient but not necessary
 
-### 2.3 常见等价表述
+### 2.3 Common Equivalent Expressions
 
-| 表述 | 逻辑含义 |
+| Expression | Logical Meaning |
 |------|---------|
-| 『$P$ 仅当 $Q$』 | $P \Rightarrow Q$（$Q$ 是 $P$ 的必要条件） |
-| 『$P$ 当 $Q$』 | $Q \Rightarrow P$（$Q$ 是 $P$ 的充分条件） |
-| 『$P$ 当且仅当 $Q$』 | $P \iff Q$（充要条件） |
+| "$P$ only if $Q$" | $P \Rightarrow Q$ ($Q$ is a necessary condition for $P$) |
+| "$P$ if $Q$" | $Q \Rightarrow P$ ($Q$ is a sufficient condition for $P$) |
+| "$P$ if and only if $Q$" | $P \iff Q$ (Necessary and sufficient condition) |
 
 ---
 
-## B3 反例构造与否定 [Arg4, Prf1]
+## B3 Counterexamples and Negation [Arg4, Prf1]
 
-### 3.1 反例的作用
+### 3.1 The Role of Counterexamples
 
-**反例（Counterexample）**：满足命题前提但使结论不成立的实例，用于**否定全称命题**。
+**Counterexample**: An instance that satisfies the premise of a statement but makes the conclusion false. It is used to **negate universal statements**.
 
-**逻辑依据**：
-- 全称命题『所有 $x$ 都满足性质 $A$』的否定是『存在某个 $x$ 不满足 $A$』
-- 一个反例即可推翻全称命题（**一例否全称**）
+**Logical Basis**:
+- The negation of a universal statement "All $x$ satisfy property $A$" is "There exists some $x$ that does not satisfy $A$".
+- A single counterexample can refute a universal statement (**one example refutes a universal statement**).
 
-**⚠️ 特例不证真**：『$2$ 是偶质数』不能证明『所有质数都是偶数』。存在性命题需构造证明，全称命题需反例否定。
+**⚠️ Specific Cases Do Not Prove Truth**: "$2$ is an even prime number" cannot prove "All prime numbers are even". Existential statements require a constructive proof, while universal statements require a counterexample for negation.
 
-### 3.2 反例构造技巧
+### 3.2 Counterexample Construction Techniques
 
-**步骤**：
-1. 明确命题形式：『若 $P$ 则 $Q$』或『所有满足 $P$ 的对象都满足 $Q$』
-2. 找一个满足 $P$ 但不满足 $Q$ 的实例
-3. 验证实例确实满足前提且结论不成立
+**Steps**:
+1. Identify the statement form: "If $P$ then $Q$" or "All objects satisfying $P$ also satisfy $Q$"
+2. Find an instance that satisfies $P$ but does not satisfy $Q$
+3. Verify that the instance indeed satisfies the premise and the conclusion is false
 
-**例**：否定『若 $x^2 > 4$ 则 $x > 2$』
-- 前提：$x^2 > 4$
-- 结论：$x > 2$
-- 反例：$x = -3$ 时 $(-3)^2 = 9 > 4$ ✓，但 $-3 \ngtr 2$ ✗
-- 结论：原命题假
+**Example**: Negate "If $x^2 > 4$ then $x > 2$"
+- Premise: $x^2 > 4$
+- Conclusion: $x > 2$
+- Counterexample: When $x = -3$, $(-3)^2 = 9 > 4$ ✓, but $-3 \ngtr 2$ ✗
+- Conclusion: The original statement is false
 
-**例**：否定『所有大于 $3$ 的质数都是奇数』
-- 前提：大于 $3$ 的质数
-- 结论：是奇数
-- 反例：不存在！（所有大于 $3$ 的质数确实都是奇数）
-- 结论：原命题真，无法否定
+**Example**: Negate "All prime numbers greater than $3$ are odd"
+- Premise: Prime numbers greater than $3$
+- Conclusion: Are odd
+- Counterexample: None exists! (All prime numbers greater than $3$ are indeed odd)
+- Conclusion: The original statement is true and cannot be negated
 
-### 3.3 常见否定形式
+### 3.3 Common Negation Forms
 
-| 原命题形式 | 否定形式 |
+| Original Statement Form | Negation Form |
 |-----------|---------|
-| 所有 $x$ 都满足 $A$ | 存在某个 $x$ 不满足 $A$ |
-| 存在某个 $x$ 满足 $A$ | 所有 $x$ 都不满足 $A$ |
-| $P$ 且 $Q$ | 非 $P$ 或 非 $Q$（德摩根律） |
-| $P$ 或 $Q$ | 非 $P$ 且 非 $Q$（德摩根律） |
-| 若 $P$ 则 $Q$ | $P$ 且 非 $Q$ |
+| All $x$ satisfy $A$ | There exists some $x$ that does not satisfy $A$ |
+| There exists some $x$ satisfying $A$ | All $x$ do not satisfy $A$ |
+| $P$ and $Q$ | Not $P$ or not $Q$ (De Morgan's Laws) |
+| $P$ or $Q$ | Not $P$ and not $Q$ (De Morgan's Laws) |
+| If $P$ then $Q$ | $P$ and not $Q$ |
 
-**德摩根律（De Morgan's Laws）**：
+**De Morgan's Laws**:
 $$\neg(P \land Q) = \neg P \lor \neg Q$$
 $$\neg(P \lor Q) = \neg P \land \neg Q$$
 
-**理解**：『既不高也不矮』的否定是『高或矮』。
+**Understanding**: The negation of "Neither tall nor short" is "Tall or short".
 
-### 3.4 多层量词否定
+### 3.4 Multi-level Quantifier Negation
 
-**规则**：否定时，量词逐层翻转（$\forall \to \exists$, $\exists \to \forall$），内部命题取反。
+**Rule**: When negating, flip the quantifiers layer by layer ($\forall \to \exists$, $\exists \to \forall$), and negate the inner statement.
 
-**例**：否定『对于所有正整数 $N$，存在正整数 $K$，使得对所有正整数 $m$，$N(Km+1)-1$ 不是质数』
+**Example**: Negate "For all positive integers $N$, there exists a positive integer $K$ such that for all positive integers $m$, $N(Km+1)-1$ is not prime."
 
-结构：$\forall N \; \exists K \; \forall m \; \neg\text{质数}(N(Km+1)-1)$
+Structure: $\forall N \; \exists K \; \forall m \; \neg\text{Prime}(N(Km+1)-1)$
 
-否定：$\exists N \; \forall K \; \exists m \; \text{质数}(N(Km+1)-1)$
+Negation: $\exists N \; \forall K \; \exists m \; \text{Prime}(N(Km+1)-1)$
 
-即：『存在某个正整数 $N$，对于所有正整数 $K$，都存在某个正整数 $m$，使得 $N(Km+1)-1$ 是质数』
-
----
-
-## 🎯 典型题型与解题策略
-
-### 题型 A：唯一真命题推理
-
-**特点**：多个命题中恰有一个为真，需推理找出。
-
-**策略**：
-1. 列出各命题对应条件的集合
-2. 检验不同情况下的真值
-3. 找唯一无矛盾的情形
-
-**例**（2016 P2 Q4）：五个瓮各有一条陈述，恰一条为真，找哪个瓮。
-- 各瓮陈述对应的球数集合：$P:\{1,4\}$, $Q:\{2,4\}$, $R:\{3,4\}$, $S:\{1,2\}$, $T:\{1,2\}$
-- 当 $n=1$：$P$ 和 $S$ 同时真 ✗
-- 当 $n=2$：$Q$, $S$, $T$ 同时真 ✗
-- 当 $n=3$：仅 $R$ 真 ✓
-- 当 $n=4$：$P$ 和 $Q$ 同时真 ✗
-- 答案：Urn $R$
-
-### 题型 B：反例构造
-
-**特点**：找出满足前提但结论不成立的实例。
-
-**策略**：
-1. 明确前提与结论
-2. 从简单值开始枚举（$0, 1, -1, 2$ 等）
-3. 验证前件真、后件假
-
-**例**（2016 P2 Q5）：命题『$6k \pm 1$ 形式的数都是质数』
-- 检验 $0 < n < 50$ 中的 $6k \pm 1$ 形式数：$1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49$
-- 非质数：$1$（定义上不是质数）、$25=5^2$、$35=5\times 7$、$49=7^2$
-- 反例数：$4$ 个
-
-### 颢型 C：量词否定
-
-**特点**：将含『所有』『存在』的命题改写为否定形式。
-
-**策略**：
-1. 标记量词层次（$\forall \to \exists$, $\exists \to \forall$）
-2. 内部命题取反
-3. 用自然语言表达
-
-**例**（2018 P2 Q12）：否定『对所有 $N$ 存在 $K$ 使对所有 $m$，$N(Km+1)-1$ 不是质数』
-- 三层量词：$\forall \exists \forall$
-- 否定后：$\exists \forall \exists$
-- 『存在某个 $N$，对所有 $K$，存在某个 $m$，使 $N(Km+1)-1$ 是质数』
+That is: "There exists a positive integer $N$ such that for all positive integers $K$, there exists a positive integer $m$ such that $N(Km+1)-1$ is prime."
 
 ---
 
-## ⚡ 速解技巧汇总
+## 🎯 Typical Question Types and Strategies
 
-| 场景 | 技巧 |
+### Type A: Unique True Statement Reasoning
+
+**Characteristics**: Among multiple statements, exactly one is true, requiring logical reasoning to find it.
+
+**Strategy**:
+1. List the sets of conditions corresponding to each statement
+2. Check the truth values under different cases
+3. Find the unique scenario with no contradictions
+
+**Example** (2016 P2 Q4): Five sealed urns each have a statement, and exactly one is true. Find which urn it is.
+- Sets of number of balls corresponding to each urn's statement: $P:\{1,4\}$, $Q:\{2,4\}$, $R:\{3,4\}$, $S:\{1,2\}$, $T:\{1,2\}$
+- When $n=1$: Both $P$ and $S$ are true ✗
+- When $n=2$: $Q$, $S$, and $T$ are true ✗
+- When $n=3$: Only $R$ is true ✓
+- When $n=4$: Both $P$ and $Q$ are true ✗
+- Answer: Urn $R$
+
+### Type B: Counterexample Construction
+
+**Characteristics**: Find an instance that satisfies the premise but makes the conclusion false.
+
+**Strategy**:
+1. Clarify the premise and conclusion
+2. Start enumerating from simple values ($0, 1, -1, 2$, etc.)
+3. Verify that the antecedent is true and the consequent is false
+
+**Example** (2016 P2 Q5): Statement "Numbers of the form $6k \pm 1$ are all prime".
+- Check numbers of the form $6k \pm 1$ in $0 < n < 50$: $1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49$
+- Non-primes: $1$ (not a prime by definition), $25=5^2$, $35=5\times 7$, $49=7^2$
+- Number of counterexamples: $4$
+
+### Type C: Quantifier Negation
+
+**Characteristics**: Rewrite statements containing "for all" and "there exists" into their negated forms.
+
+**Strategy**:
+1. Mark the quantifier levels ($\forall \to \exists$, $\exists \to \forall$)
+2. Negate the inner statement
+3. Express in natural language
+
+**Example** (2018 P2 Q12): Negate "For all $N$, there exists $K$ such that for all $m$, $N(Km+1)-1$ is not prime".
+- Three quantifier levels: $\forall \exists \forall$
+- After negation: $\exists \forall \exists$
+- "There exists some $N$ such that for all $K$, there exists some $m$ where $N(Km+1)-1$ is prime"
+
+---
+
+## ⚡ Quick Solution Tips Summary
+
+| Scenario | Technique |
 |------|------|
-| 判断充分/必要 | 『有 $P$ 必有 $Q$』$\Rightarrow$ $P$ 是 $Q$ 的充分条件 |
-| 判断命题真假 | 构造反例：找满足前件但后件假的实例 |
-| 否定全称命题 | 『所有』改为『存在某个不』 |
-| 否定存在命题 | 『存在』改为『所有都不』 |
-| 原命题等价 | 逆否命题必同真假，直接转化 |
-| 德摩根律 | 『且』否为『或』，『或』否为『且』 |
-| 多层量词否定 | 量词逐层翻转，内部取反 |
+| Judging Sufficient/Necessary | "Having $P$ guarantees $Q$" $\Rightarrow$ $P$ is a sufficient condition for $Q$ |
+| Judging Truth of a Statement | Construct a counterexample: find an instance where the antecedent is true but the consequent is false |
+| Negating Universal Statements | Change "All" to "There exists some that do not" |
+| Negating Existential Statements | Change "There exists" to "All do not" |
+| Original Statement Equivalence | The contrapositive always has the same truth value, transform directly |
+| De Morgan's Laws | Negation of "and" is "or", negation of "or" is "and" |
+| Multi-level Quantifier Negation | Flip quantifiers layer by layer, negate the inner part |
 
-## ⚠️ 易错警示
+## ⚠️ Common Mistakes Warning
 
-- ❌ 『所有质数都是奇数』的否定**不是**『所有质数都是偶数』，而是『存在某个质数不是奇数』（即存在偶质数）
-- ❌ 反例必须满足**前件真、后件假**，单满足前件不算反例
-- ❌ 逆命题和否命题的真假与原命题**无关**，只有逆否命题同真假
-- ❌ 『$P$ 仅当 $Q$』意味着 $P \Rightarrow Q$，『仅当』引出必要条件
-- ❌ 存在性命题（『存在 $x$ 满足 $A$』）不能用一个例子否定，需要证明『所有 $x$ 都不满足 $A$』
+- ❌ The negation of "All prime numbers are odd" is **not** "All prime numbers are even", but "There exists some prime number that is not odd" (i.e., there exists an even prime number).
+- ❌ A counterexample must satisfy **antecedent true and consequent false**. Satisfying only the antecedent is not a counterexample.
+- ❌ The truth values of the converse and inverse are **independent** of the original statement; only the contrapositive shares the same truth value.
+- ❌ "$P$ only if $Q$" means $P \Rightarrow Q$. "Only if" introduces a necessary condition.
+- ❌ An existential statement ("There exists $x$ satisfying $A$") cannot be negated with a single example; you must prove "All $x$ do not satisfy $A$".
 
 ---
 
-## 📝 精选例题
+## 📝 Selected Examples
 
-### 例题 1（2016 P2 Q4 · 逻辑推理）
+### Example 1 (2016 P2 Q4 · Logical Reasoning)
 
-**题目**：五个密封的瓮 $P, Q, R, S, T$ 各装有相同数量的球（非零）。每个瓮有一条陈述，恰有一条陈述为真。找出哪条陈述为真。
+**Question**: Five sealed urns $P, Q, R, S, T$ each contain the same number of balls (non-zero). Each urn has a statement, and exactly one statement is true. Determine which statement is true.
 
-- Urn P: 有 1 或 4 个球
-- Urn Q: 有 2 或 4 个球
-- Urn R: 有多于 2 个少于 5 个球
-- Urn S: 有 1 或 2 个球
-- Urn T: 有少于 3 个球
+- Urn P: Contains 1 or 4 balls
+- Urn Q: Contains 2 or 4 balls
+- Urn R: Contains more than 2 and fewer than 5 balls
+- Urn S: Contains 1 or 2 balls
+- Urn T: Contains fewer than 3 balls
 
-【题目分析】
-本题考查逻辑推理中的唯一真命题判定。五个瓮装有相同数量 $n$ 个球，需找出唯一使某条陈述为真而其余为假的 $n$ 值。
+【Question Analysis】
+This question tests the determination of a unique true statement in logical reasoning. Five urns contain the same number of balls $n$, and we need to find the unique value of $n$ that makes exactly one statement true and the rest false.
 
-【解题步骤】
-第一步：将各陈述转化为 $n$ 的取值集合。
+【Solution Steps】
+Step 1: Convert each statement into a set of values for $n$.
 - $P$: $n \in \{1, 4\}$
 - $Q$: $n \in \{2, 4\}$
-- $R$: $n \in \{3, 4\}$（多于 2 少于 5）
+- $R$: $n \in \{3, 4\}$ (more than 2, fewer than 5)
 - $S$: $n \in \{1, 2\}$
-- $T$: $n \in \{1, 2\}$（少于 3）
+- $T$: $n \in \{1, 2\}$ (fewer than 3)
 
-第二步：逐一检验各 $n$ 值的真命题数。
-- $n = 1$: $P$ 真、$S$ 真、$T$ 真 → 3 条真 ✗
-- $n = 2$: $Q$ 真、$S$ 真、$T$ 真 → 3 条真 ✗
-- $n = 3$: 仅 $R$ 真 ✓
-- $n = 4$: $P$ 真、$Q$ 真、$R$ 真 → 3 条真 ✗
+Step 2: Check the number of true statements for each value of $n$ one by one.
+- $n = 1$: $P$ true, $S$ true, $T$ true → 3 true statements ✗
+- $n = 2$: $Q$ true, $S$ true, $T$ true → 3 true statements ✗
+- $n = 3$: Only $R$ is true ✓
+- $n = 4$: $P$ true, $Q$ true, $R$ true → 3 true statements ✗
 
-第三步：唯一无矛盾情形为 $n = 3$，此时仅 Urn $R$ 的陈述为真。
+Step 3: The only scenario without contradiction is $n = 3$, at which point only the statement on Urn $R$ is true.
 
-【快捷思路】
-观察各集合的交集关系：$S$ 和 $T$ 集合相同，故它们不能同时为唯一真命题。$P, Q, R$ 都含 $4$，故 $n = 4$ 时三者同时真。排除 $n = 1, 2, 4$ 后，唯一可能为 $n = 3$，验证 $R$ 为真其余为假。
+【Quick Shortcut】
+Observe the intersection relationships of the sets: the sets for $S$ and $T$ are identical, so they cannot be the uniquely true statement at the same time. $P, Q, R$ all contain $4$, so when $n = 4$, all three are true. After eliminating $n = 1, 2, 4$, the only possibility is $n = 3$. Verify that $R$ is true and the rest are false.
 
-【正确答案】C（Urn R）
+【Correct Answer】C (Urn R)
 
-【知识点】Logic | **考纲**: Arg1, Arg2
+【Knowledge Point】Logic | **Syllabus**: Arg1, Arg2
 
 ---
 
-### 例题 2（2016 P2 Q5 · 反例构造）
+### Example 2 (2016 P2 Q5 · Counterexample Construction)
 
-**题目**：命题『若整数 $n$ 比 6 的倍数少 1 或少 5（即 $n = 6k \pm 1$），则 $n$ 是质数』。求在 $0 < n < 50$ 范围内的反例个数。
+**Question**: Statement: "If an integer $n$ is 1 less or 5 less than a multiple of 6 (i.e., $n = 6k \pm 1$), then $n$ is a prime number." Find the number of counterexamples in the range $0 < n < 50$.
 
-【题目分析】
-本题考查反例构造。命题形式为全称命题『所有 $6k \pm 1$ 形式的数都是质数』，反例即满足形式但非质数的数。
+【Question Analysis】
+This question tests counterexample construction. The statement form is a universal statement "All numbers of the form $6k \pm 1$ are prime". A counterexample is a number that satisfies the form but is not prime.
 
-【解题步骤】
-第一步：列出 $0 < n < 50$ 中的 $6k \pm 1$ 形式数。
+【Solution Steps】
+Step 1: List the numbers of the form $6k \pm 1$ in $0 < n < 50$.
 $$1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49$$
-共 17 个数。
+A total of 17 numbers.
 
-第二步：判断每个数是否为质数。
-- $1$: 定义上不是质数 ✓ 反例
-- $25 = 5 \times 5$: 合数 ✓ 反例
-- $35 = 5 \times 7$: 合数 ✓ 反例
-- $49 = 7 \times 7$: 合数 ✓ 反例
+Step 2: Determine whether each number is a prime number.
+- $1$: Not a prime by definition ✓ Counterexample
+- $25 = 5 \times 5$: Composite number ✓ Counterexample
+- $35 = 5 \times 7$: Composite number ✓ Counterexample
+- $49 = 7 \times 7$: Composite number ✓ Counterexample
 
-第三步：其余 13 个数均为质数，故反例共 $4$ 个。
+Step 3: The remaining 13 numbers are all prime, so there are $4$ counterexamples in total.
 
-【快捷思路】
-$6k \pm 1$ 形式数中，合数必由 $6m \pm 1$ 形式的因子构成（因为 $2, 3$ 不是该形式）。在 $< 50$ 范围内，平方数 $25 = 5^2$、$49 = 7^2$（$5, 7$ 都是 $6k \pm 1$ 形式），以及 $35 = 5 \times 7$ 都在该形式内。加上 $1$，共 $4$ 个反例。
+【Quick Shortcut】
+Among numbers of the form $6k \pm 1$, composite numbers must be composed of factors of the form $6m \pm 1$ (since $2, 3$ are not of this form). Within the $< 50$ range, the square numbers $25 = 5^2$, $49 = 7^2$ ($5$ and $7$ are both of the form $6k \pm 1$), and $35 = 5 \times 7$ are all within this form. Adding $1$, there are $4$ counterexamples.
 
-【正确答案】C（4 个）
+【Correct Answer】C (4)
 
-【知识点】Counterexamples | **考纲**: Arg4, Prf1
+【Knowledge Point】Counterexamples | **Syllabus**: Arg4, Prf1
 
 ---
 
-### 例题 3（2018 P2 Q12 · 量词否定）
+### Example 3 (2018 P2 Q12 · Quantifier Negation)
 
-**题目**：命题『对所有正整数 $N$，存在正整数 $K$，使得对所有正整数 $m$，$N(Km+1)-1$ 不是质数』。找出其否定形式。
+**Question**: Statement: "For all positive integers $N$, there exists a positive integer $K$ such that for all positive integers $m$, $N(Km+1)-1$ is not a prime number." Find its negation form.
 
-【题目分析】
-本题考查多层量词的否定。原命题含三层量词 $\forall \exists \forall$，否定时需逐层翻转并内部取反。
+【Question Analysis】
+This question tests the negation of multi-level quantifiers. The original statement contains three levels of quantifiers $\forall \exists \forall$. When negating, it is necessary to flip layer by layer and negate the inner part.
 
-【解题步骤】
-第一步：分析原命题结构。
+【Solution Steps】
+Step 1: Analyze the structure of the original statement.
 $$\forall N \in \mathbb{Z}^+ \; \exists K \in \mathbb{Z}^+ \; \forall m \in \mathbb{Z}^+ \; \neg\text{Prime}(N(Km+1)-1)$$
 
-第二步：逐层否定。
+Step 2: Negate layer by layer.
 - $\forall N \to \exists N$
 - $\exists K \to \forall K$
 - $\forall m \to \exists m$
-- 『不是质数』否定为『是质数』
+- "is not a prime number" negates to "is a prime number"
 
-第三步：组合成否定命题。
+Step 3: Combine into the negated statement.
 $$\exists N \in \mathbb{Z}^+ \; \forall K \in \mathbb{Z}^+ \; \exists m \in \mathbb{Z}^+ \; \text{Prime}(N(Km+1)-1)$$
 
-用自然语言表达：
-『存在某个正整数 $N$，使得对所有正整数 $K$，都存在某个正整数 $m$，使得 $N(Km+1)-1$ 是质数』
+Expressed in natural language:
+"There exists some positive integer $N$ such that for all positive integers $K$, there exists some positive integer $m$ such that $N(Km+1)-1$ is a prime number"
 
-【快捷思路】
-量词否定口诀：『所有』变『存在』，『存在』变『所有』，内部命题取反。三层量词依次翻转即可。
+【Quick Shortcut】
+Quantifier negation mnemonic: "All" becomes "exists", "exists" becomes "all", negate the inner statement. The three levels of quantifiers flip sequentially.
 
-【正确答案】F（对应选项为『存在 $N$ 对所有 $K$ 存在 $m$ 使其为质数』）
+【Correct Answer】F (Corresponding to the option "there exists $N$ such that for all $K$ there exists $m$ such that it is a prime number")
 
-【知识点】Logic | **考纲**: Arg3, Arg4
+【Knowledge Point】Logic | **Syllabus**: Arg3, Arg4
 
 ---
 
-## 🏋️ 课后练习（限时 15 分钟）
+## 🏋️ After-Class Exercises (15 Minutes Time Limit)
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
+| # | Question | Topic | Syllabus | Difficulty |
 |---|------|------|---------|------|
-| 1 | 2017 P2 Q5 | 反例识别 | Arg4, Prf1 | ⭐⭐⭐ |
-| 2 | 2017 P2 Q16 | 函数反例 | Arg4, Prf1 | ⭐⭐⭐ |
-| 3 | 2017 P2 Q17 | 命题真假判定 | Arg1, Arg2 | ⭐⭐⭐ |
-| 4 | 2018 P2 Q3 | 平均速度反例 | Arg4 | ⭐⭐⭐ |
-| 5 | 2018 P2 Q5 | 充分必要条件 | Arg2 | ⭐⭐⭐ |
-| 6 | 2018 P2 Q6 | 逻辑推理 | Arg1 | ⭐⭐⭐ |
-| 7 | 2018 P2 Q17 | 逻辑命题否定 | Arg4 | ⭐⭐⭐ |
-| 8 | 2022 P2 Q3 | 反例构造 | Arg4, Prf1 | ⭐⭐⭐ |
-| 9 | 2022 P2 Q6 | 唯一真命题 | Arg1 | ⭐⭐⭐ |
-| 10 | 2022 P2 Q9 | 命题否定 | Arg4 | ⭐⭐⭐ |
-| 11 | 2022 P2 Q10 | 逻辑推理 | Arg1, Arg2 | ⭐⭐⭐ |
-| 12 | 2022 P2 Q13 | 充分必要 | Arg2 | ⭐⭐⭐ |
-| 13 | 2022 P2 Q16 | 函数反例 | Arg4 | ⭐⭐⭐ |
+| 1 | 2017 P2 Q5 | Counterexample Identification | Arg4, Prf1 | ⭐⭐⭐ |
+| 2 | 2017 P2 Q16 | Function Counterexample | Arg4, Prf1 | ⭐⭐⭐ |
+| 3 | 2017 P2 Q17 | Statement Truth Judgment | Arg1, Arg2 | ⭐⭐⭐ |
+| 4 | 2018 P2 Q3 | Average Speed Counterexample | Arg4 | ⭐⭐⭐ |
+| 5 | 2018 P2 Q5 | Sufficient and Necessary Conditions | Arg2 | ⭐⭐⭐ |
+| 6 | 2018 P2 Q6 | Logical Reasoning | Arg1 | ⭐⭐⭐ |
+| 7 | 2018 P2 Q17 | Logical Statement Negation | Arg4 | ⭐⭐⭐ |
+| 8 | 2022 P2 Q3 | Counterexample Construction | Arg4, Prf1 | ⭐⭐⭐ |
+| 9 | 2022 P2 Q6 | Unique True Statement | Arg1 | ⭐⭐⭐ |
+| 10 | 2022 P2 Q9 | Statement Negation | Arg4 | ⭐⭐⭐ |
+| 11 | 2022 P2 Q10 | Logical Reasoning | Arg1, Arg2 | ⭐⭐⭐ |
+| 12 | 2022 P2 Q13 | Sufficient and Necessary | Arg2 | ⭐⭐⭐ |
+| 13 | 2022 P2 Q16 | Function Counterexample | Arg4 | ⭐⭐⭐ |
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+*For full explanations, see the question bank database. Each question includes [Solution Steps] and [Quick Shortcut].*
 
 ---
 
-## 📚 考纲映射详表
+## 📚 Syllabus Mapping Detailed Table
 
-| 考纲编号 | 内容描述 | 对应知识点 |
+| Syllabus Code | Content Description | Corresponding Topic |
 |---------|---------|-----------|
-| Arg1 | 真假、且或非、命题形式、逆命题、逆否命题 | B1.1-B1.4 |
-| Arg2 | 必要、充分条件 | B2.1-B2.3 |
-| Arg3 | 对于所有、存在、存在至少一个 | B1.4 |
-| Arg4 | 否定含上述术语的命题 | B3.3-B3.4 |
-| Prf1 | 反例否定命题 | B3.1-B3.2 |
-| Prf2 | 推导蕴含关系 | B1.2, B2.1 |
-| Err1 | 识别证明中的错误 | B3.1 |
-| Err2 | 常见数学错误（如 $\sin A = \sin B \Rightarrow A = B$） | B3.2 |
+| Arg1 | True/false, and/or/not, statement forms, converse, contrapositive | B1.1-B1.4 |
+| Arg2 | Necessary, sufficient conditions | B2.1-B2.3 |
+| Arg3 | For all, there exists, there exists at least one | B1.4 |
+| Arg4 | Negating statements containing the above terms | B3.3-B3.4 |
+| Prf1 | Counterexample to negate statements | B3.1-B3.2 |
+| Prf2 | Deducing implications | B1.2, B2.1 |
+| Err1 | Identifying flaws in proofs | B3.1 |
+| Err2 | Common mathematical errors (e.g., $\sin A = \sin B \Rightarrow A = B$) | B3.2 |
 
 ---
 
-## 🎯 配套练习
+## 🎯 Accompanying Exercises
 
-学完本章？[→ 去做 Logic 相关练习题](/practice/tmua/?topic=Logic)
+Finished this chapter? [→ Go to Logic related exercises](/practice/tmua/?topic=Logic)
 
 ---
 
-**讲义特点**：
-- ✅ 考纲全覆盖（Arg1-Arg4, Prf1, Prf2, Err1, Err2）
-- ✅ 19道真题精选（Logic 8题 + Counterexamples 11题）
-- ✅ 三道详解例题（逻辑推理、反例构造、量词否定三大题型）
-- ✅ 易错警示明确（量词否定、反例验证、命题等价）
-- ✅ 速解技巧表格化（便于记忆与应用）
+**Lecture Notes Features**:
+- ✅ Full syllabus coverage (Arg1-Arg4, Prf1, Prf2, Err1, Err2)
+- ✅ 19 selected past paper questions (Logic 8 Qs + Counterexamples 11 Qs)
+- ✅ Three detailed examples (Logical Reasoning, Counterexample Construction, Quantifier Negation)
+- ✅ Clear warnings on common mistakes (Quantifier Negation, Counterexample Verification, Statement Equivalence)
+- ✅ Tabularized quick solution tips (easy to memorize and apply)
 
-*讲义完成日期：2026-04-29*
+*Lecture Notes Completion Date: 2026-04-29*
