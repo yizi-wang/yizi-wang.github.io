@@ -9,7 +9,7 @@ Lecture notes for Edexcel IAL Further Mathematics, covering Mechanics 2, Statist
 
 ## Interactive classroom instruments
 
-- [Coordinate Geometry Interactive Instruments](./coordinate_geometry_instruments)
+- [Coordinate Geometry — nine staged visual tools](./interactive-coordinate-geometry)
 
 ## S2 — Statistics 2
 
