@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A moving-point exploration of eccentricity, focus displacement, and the distance invariants of ellipses and hyperbolas.">
+  <title>Eccentricity and Distance Invariants</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="coordinate-instrument.css?v=20260713i">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="eccentricity-unifies-conics.js?v=20260713b"></script>
+</head>
+<body>
+  <main id="eccentricity-app" class="instrument-app eccentricity-app">
+    <header class="topbar">
+      <div class="identity"><a href="index.html">Further Mathematics</a><span class="identity-separator" aria-hidden="true">/</span><span class="identity-scene">Coordinate geometry instrument 07</span></div>
+      <div class="topbar-status" aria-label="Current construction step"><span id="step-number" class="step-number">01</span><span class="step-total">/ 08</span></div>
+    </header>
+    <nav class="step-rail" aria-label="Construction sequence">
+      <button class="step-tab" type="button" data-step="0" aria-current="step"><span class="step-tab-index">01</span><span class="step-tab-label">Centre</span></button>
+      <button class="step-tab" type="button" data-step="1"><span class="step-tab-index">02</span><span class="step-tab-label">Measure</span></button>
+      <button class="step-tab" type="button" data-step="2"><span class="step-tab-index">03</span><span class="step-tab-label">Reshape</span></button>
+      <button class="step-tab" type="button" data-step="3"><span class="step-tab-index">04</span><span class="step-tab-label">Move P</span></button>
+      <button class="step-tab" type="button" data-step="4"><span class="step-tab-index">05</span><span class="step-tab-label">Predict</span></button>
+      <button class="step-tab" type="button" data-step="5"><span class="step-tab-index">06</span><span class="step-tab-label">Ellipse proof</span></button>
+      <button class="step-tab" type="button" data-step="6"><span class="step-tab-index">07</span><span class="step-tab-label">Hyperbola proof</span></button>
+      <button class="step-tab" type="button" data-step="7"><span class="step-tab-index">08</span><span class="step-tab-label">The name</span></button>
+    </nav>
+
+    <section class="workspace" aria-label="Eccentricity and distance-invariant instrument">
+      <div class="stage-shell"><div class="stage-frame">
+        <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-labelledby="geometry-title geometry-description">
+          <title id="geometry-title">Eccentricity measures the focus displacement and controls conic shape</title>
+          <desc id="geometry-description">The focus moves away from the centre as eccentricity changes. A point moves around an ellipse or along a hyperbola while both focal distances are measured.</desc>
+        </svg>
+      </div></div>
+      <aside class="ledger" aria-labelledby="step-title">
+        <p class="ledger-section-label">Eccentricity laboratory</p>
+        <h1 id="step-title">Fix the centre and scale</h1>
+        <p id="step-kicker" class="step-kicker">Keep the semi-major length fixed.</p>
+        <p id="step-description" class="step-description">The centre C and vertices set a stable reference length a.</p>
+        <section id="prediction-panel" class="prediction-panel" aria-labelledby="prediction-question" hidden>
+          <p id="prediction-question" class="prediction-question">Which pair of distance invariants is correct?</p>
+          <div class="choice-grid">
+            <button class="choice-button" type="button" data-choice="sum-difference" aria-pressed="false">Ellipse: sum<br>Hyperbola: difference</button>
+            <button class="choice-button" type="button" data-choice="difference-sum" aria-pressed="false">Ellipse: difference<br>Hyperbola: sum</button>
+            <button class="choice-button" type="button" data-choice="both-sum" aria-pressed="false">Both use a fixed sum</button>
+            <button class="choice-button" type="button" data-choice="neither" aria-pressed="false">Neither is fixed</button>
+          </div>
+        </section>
+        <p id="feedback-line" class="feedback-line" role="status" hidden></p>
+        <section id="math-ledger" class="math-ledger" aria-label="Mathematical record" hidden>
+          <div id="math-line-1" class="math-line"></div><div id="math-line-2" class="math-line"></div><div id="math-line-3" class="math-line is-result"></div>
+        </section>
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <dl class="cue-list">
+            <div><dt>Ask</dt><dd id="cue-ask">Which length should be the reference scale?</dd></div>
+            <div><dt>Look for</dt><dd id="cue-look">The semi-major length a from centre to vertex.</dd></div>
+            <div><dt>Then</dt><dd id="cue-watch">Place the foci symmetrically.</dd></div>
+          </dl>
+        </details>
+      </aside>
+    </section>
+
+    <footer class="instrument-rail">
+      <div class="parameter-stack">
+        <label class="parameter-control" for="e-range">
+          <span class="parameter-label">Eccentricity <span class="parameter-value">e = <output id="e-value">0.65</output></span></span>
+          <input id="e-range" type="range" min="0" max="1.60" step="0.01" value="0.65" disabled>
+        </label>
+        <label class="parameter-control" for="position-range">
+          <span class="parameter-label">Point position <span class="parameter-value"><output id="position-value">18</output>%</span></span>
+          <input id="position-range" type="range" min="0" max="1" step="0.002" value="0.18" disabled>
+        </label>
+      </div>
+      <div class="mode-controls" aria-label="Conic presets">
+        <label class="select-control" for="e-preset">Specimen
+          <select id="e-preset" disabled><option value="0">e = 0.00 · circle</option><option value="0.65" selected>e = 0.65 · ellipse</option><option value="1">e = 1.00 · parabola boundary</option><option value="1.35">e = 1.35 · hyperbola</option></select>
+        </label>
+      </div>
+      <div class="transport" aria-label="Construction controls">
+        <button id="reset-button" class="control-button" type="button"><span class="button-icon" aria-hidden="true">↺</span><span class="button-label">Reset</span></button>
+        <button id="back-button" class="control-button" type="button" disabled><span class="button-icon" aria-hidden="true">←</span><span class="button-label">Back</span></button>
+        <button id="play-button" class="control-button is-play" type="button" disabled><span class="button-icon" aria-hidden="true">▶</span><span class="button-label">Play</span></button>
+        <button id="next-button" class="control-button is-primary" type="button"><span class="button-label">Next</span><span class="button-icon" aria-hidden="true">→</span></button>
+      </div>
+      <p class="shortcut-note">Keyboard: left and right arrows change step, space controls motion, R resets.</p>
+    </footer>
+    <p id="live-region" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>

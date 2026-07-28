@@ -1,0 +1,1953 @@
+:root {
+  color-scheme: light;
+  --paper: #f4f7fa;
+  --plot: #fbfcfe;
+  --panel: #ffffff;
+  --panel-alt: #eef3f7;
+  --ink: #102331;
+  --ink-soft: #405462;
+  --muted: #71818d;
+  --rule: #cfd9e1;
+  --grid-minor: #edf1f4;
+  --grid-major: #dce4ea;
+  --fixed: #5c6b76;
+  --construction: #1c6ff2;
+  --moving: #e5682d;
+  --locus: #168a61;
+  --locus-soft: #dff2ea;
+  --focus-ring: #ffe6d8;
+  --danger: #b83a31;
+  --display: Cambria, "Times New Roman", serif;
+  --body: "Segoe UI Variable Text", Aptos, "Segoe UI", sans-serif;
+  --utility: Bahnschrift, "Arial Narrow", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+}
+
+button,
+input,
+summary {
+  font: inherit;
+}
+
+button,
+input[type="range"],
+input[type="checkbox"],
+summary {
+  accent-color: var(--construction);
+}
+
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(28, 111, 242, 0.28);
+  outline-offset: 3px;
+}
+
+.instrument-app {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  height: 100svh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.topbar {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 30px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--panel);
+}
+
+.identity {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--utility);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.identity a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.identity-separator,
+.identity-scene {
+  color: var(--muted);
+}
+
+.topbar-status {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-family: var(--utility);
+}
+
+.step-number {
+  min-width: 28px;
+  color: var(--construction);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.step-total {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.step-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0;
+  padding: 0 30px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--panel);
+}
+
+.step-rail::before {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  left: 30px;
+  height: 2px;
+  background: var(--rule);
+  content: "";
+}
+
+.step-tab {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 58px;
+  place-content: center start;
+  gap: 2px;
+  padding: 8px 10px 10px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+}
+
+.step-tab:hover {
+  color: var(--ink);
+}
+
+.step-tab[aria-current="step"] {
+  border-bottom-color: var(--construction);
+  color: var(--ink);
+}
+
+.step-tab-index {
+  font-family: var(--utility);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.step-tab-label {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 27vw);
+  min-height: 0;
+}
+
+.stage-shell {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  place-items: center;
+  overflow: hidden;
+  padding: 18px 20px 14px 28px;
+  border-right: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.stage-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--plot);
+  box-shadow: 0 12px 32px rgba(24, 48, 66, 0.07);
+}
+
+.stage-frame::after {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(92, 107, 118, 0.12);
+  border-radius: 2px;
+  content: "";
+  pointer-events: none;
+}
+
+.geometry-stage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.geometry-stage text {
+  fill: var(--ink);
+  font-family: var(--utility);
+  font-size: 18px;
+  font-weight: 500;
+  paint-order: stroke;
+  stroke: var(--plot);
+  stroke-linejoin: round;
+  stroke-width: 6px;
+}
+
+.geometry-stage .axis-label,
+.geometry-stage .tick-label {
+  fill: var(--muted);
+  font-family: var(--body);
+  font-size: 15px;
+  font-weight: 400;
+  stroke-width: 5px;
+}
+
+.geometry-stage .minor-grid {
+  stroke: var(--grid-minor);
+  stroke-width: 1;
+}
+
+.geometry-stage .major-grid {
+  stroke: var(--grid-major);
+  stroke-width: 1.25;
+}
+
+.geometry-stage .axis {
+  stroke: var(--ink-soft);
+  stroke-width: 1.7;
+}
+
+.geometry-stage .fixed-line {
+  fill: none;
+  stroke: var(--fixed);
+  stroke-dasharray: 11 9;
+  stroke-width: 2.8;
+}
+
+.geometry-stage .fixed-point {
+  fill: var(--plot);
+  stroke: var(--fixed);
+  stroke-width: 3.5;
+}
+
+.geometry-stage .focus-halo {
+  fill: var(--focus-ring);
+  opacity: 0.85;
+}
+
+.geometry-stage .construction-line {
+  fill: none;
+  stroke: var(--construction);
+  stroke-width: 2.6;
+}
+
+.geometry-stage .construction-guide {
+  fill: none;
+  stroke: var(--construction);
+  stroke-dasharray: 7 7;
+  stroke-width: 2;
+  opacity: 0.78;
+}
+
+.geometry-stage .right-angle {
+  fill: none;
+  stroke: var(--construction);
+  stroke-width: 2.2;
+}
+
+.geometry-stage .moving-point {
+  fill: var(--plot);
+  stroke: var(--moving);
+  stroke-width: 4;
+}
+
+.geometry-stage .moving-core {
+  fill: var(--moving);
+}
+
+.geometry-stage .locus-line {
+  fill: none;
+  stroke: var(--locus);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+.geometry-stage .history-dot {
+  fill: var(--locus);
+  opacity: 0.24;
+}
+
+.geometry-stage .distance-line,
+.geometry-stage .distance-tick {
+  fill: none;
+  stroke: var(--locus);
+  stroke-width: 2.8;
+}
+
+.geometry-stage .projection-line {
+  fill: none;
+  stroke: var(--construction);
+  stroke-dasharray: 5 6;
+  stroke-width: 2;
+  opacity: 0.76;
+}
+
+.geometry-stage .sample-point {
+  fill: var(--plot);
+  stroke: var(--moving);
+  stroke-width: 3;
+}
+
+.geometry-stage .sample-point.is-origin {
+  fill: var(--moving);
+}
+
+.geometry-stage .sample-label {
+  fill: var(--moving);
+  font-size: 15px;
+  stroke-width: 5px;
+}
+
+.geometry-stage .locus-preview {
+  fill: none;
+  stroke: var(--locus);
+  stroke-dasharray: 6 7;
+  stroke-linecap: round;
+  stroke-width: 3;
+  opacity: 0.3;
+}
+
+.geometry-stage .telemetry-rule {
+  stroke: var(--rule);
+  stroke-width: 1.2;
+}
+
+.geometry-stage .telemetry-label,
+.geometry-stage .telemetry-value {
+  font-family: var(--utility);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  stroke-width: 5px;
+}
+
+.geometry-stage .telemetry-label {
+  fill: var(--muted);
+}
+
+.geometry-stage .telemetry-value {
+  fill: var(--construction);
+  font-weight: 700;
+}
+
+.geometry-stage .secondary-locus {
+  fill: none;
+  stroke: var(--construction);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.geometry-stage .reflected-locus {
+  fill: none;
+  stroke: var(--construction);
+  stroke-dasharray: 10 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.2;
+  opacity: 0.62;
+}
+
+.geometry-stage .secant-line {
+  fill: none;
+  stroke: var(--moving);
+  stroke-width: 3.2;
+}
+
+.geometry-stage .tangent-line {
+  fill: none;
+  stroke: var(--locus);
+  stroke-width: 4;
+}
+
+.geometry-stage .asymptote-line,
+.geometry-stage .directrix-line {
+  fill: none;
+  stroke: var(--fixed);
+  stroke-dasharray: 10 8;
+  stroke-width: 2.2;
+}
+
+.geometry-stage .directrix-line.is-paired {
+  stroke: var(--construction);
+  stroke-dasharray: 6 6;
+  stroke-width: 2;
+  opacity: 0.78;
+}
+
+.geometry-stage .directrix-label,
+.geometry-stage .directrix-note {
+  fill: var(--construction);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  stroke-width: 5px;
+}
+
+.geometry-stage .directrix-note {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.geometry-stage .directrix-distance {
+  fill: none;
+  stroke: var(--construction);
+  stroke-dasharray: 5 5;
+  stroke-width: 2.2;
+}
+
+.geometry-stage .directrix-distance.is-second {
+  stroke: var(--moving);
+}
+
+.geometry-stage .directrix-foot {
+  fill: var(--plot);
+  stroke: var(--construction);
+  stroke-width: 2.4;
+}
+
+.geometry-stage .directrix-foot-label,
+.geometry-stage .directrix-measure {
+  fill: var(--construction);
+  font-size: 13px;
+  font-weight: 700;
+  stroke-width: 5px;
+}
+
+.geometry-stage .directrix-measure {
+  fill: var(--ink-soft);
+  font-size: 12px;
+}
+
+.geometry-stage .feature-marker {
+  fill: var(--plot);
+  stroke: var(--construction);
+  stroke-width: 3;
+}
+
+.geometry-stage .feature-marker.is-focus {
+  fill: var(--moving);
+  stroke: var(--plot);
+}
+
+.geometry-stage .panel-divider,
+.geometry-stage .formula-rule {
+  stroke: var(--rule);
+  stroke-width: 1.4;
+}
+
+.geometry-stage .panel-title,
+.geometry-stage .formula-label,
+.geometry-stage .clue-label {
+  fill: var(--muted);
+  font-family: var(--utility);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  stroke-width: 5px;
+}
+
+.geometry-stage .live-measure {
+  fill: var(--moving);
+  font-family: var(--utility);
+  font-size: 16px;
+  font-weight: 700;
+  stroke-width: 5px;
+}
+
+.geometry-stage .result-measure {
+  fill: var(--locus);
+  font-family: var(--utility);
+  font-size: 17px;
+  font-weight: 700;
+  stroke-width: 5px;
+}
+
+.geometry-stage .clue-plate {
+  fill: var(--panel);
+  stroke: var(--rule);
+  stroke-width: 1.5;
+}
+
+.geometry-stage .clue-plate.is-live {
+  fill: #f1f6ff;
+  stroke: var(--construction);
+  stroke-width: 2;
+}
+
+.geometry-stage .clue-value {
+  fill: var(--ink);
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 400;
+  stroke-width: 6px;
+}
+
+.geometry-stage .answer-seal {
+  fill: var(--locus-soft);
+  stroke: var(--locus);
+  stroke-width: 2.5;
+}
+
+.geometry-stage .answer-label {
+  fill: var(--locus);
+  font-family: var(--utility);
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  stroke-width: 5px;
+}
+
+.geometry-stage .svg-math {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 8px 14px;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  text-align: center;
+}
+
+.geometry-stage .svg-math .katex {
+  font-size: 1.18em;
+}
+
+.geometry-stage .svg-math.is-sealed {
+  color: var(--muted);
+  font-family: var(--utility);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.geometry-stage .classification-zone {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.geometry-stage .classification-zone.is-ellipse {
+  fill: var(--locus-soft);
+}
+
+.geometry-stage .classification-zone.is-neutral {
+  fill: var(--panel-alt);
+}
+
+.geometry-stage .classification-zone.is-boundary {
+  fill: var(--focus-ring);
+}
+
+.geometry-stage .classification-zone.is-hyperbola {
+  fill: #e9f1ff;
+}
+
+.geometry-stage .classification-marker {
+  fill: var(--moving);
+  stroke: var(--plot);
+  stroke-width: 2;
+}
+
+.geometry-stage .ratio-ray {
+  fill: none;
+  stroke: var(--moving);
+  stroke-width: 2.8;
+}
+
+.geometry-stage .cone-wire,
+.geometry-stage .cone-rim {
+  fill: none;
+  stroke: var(--fixed);
+  stroke-width: 1.6;
+  opacity: 0.42;
+}
+
+.geometry-stage .cone-facet {
+  fill: url(#cone-light);
+  stroke: none;
+  pointer-events: none;
+}
+
+.geometry-stage .cone-facet.is-front {
+  opacity: 0.13;
+}
+
+.geometry-stage .cone-facet.is-back {
+  opacity: 0.035;
+}
+
+.geometry-stage .cone-wire.is-front {
+  opacity: 0.54;
+}
+
+.geometry-stage .cone-wire.is-back {
+  opacity: 0.18;
+}
+
+.geometry-stage .cone-rim {
+  stroke-width: 2.2;
+  opacity: 0.7;
+}
+
+.geometry-stage .cone-generator {
+  fill: none;
+  stroke: var(--moving);
+  stroke-dasharray: 7 6;
+  stroke-width: 2.5;
+}
+
+.geometry-stage .plane-surface {
+  fill: url(#plane-light);
+  fill-opacity: 0.2;
+  stroke: var(--construction);
+  stroke-width: 2.2;
+}
+
+.geometry-stage .intersection-curve {
+  fill: none;
+  stroke: var(--moving);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+  filter: url(#curve-glow);
+}
+
+.geometry-stage .section-frame {
+  fill: var(--panel);
+  fill-opacity: 0.42;
+  stroke: var(--rule);
+  stroke-width: 1.5;
+}
+
+.geometry-stage .section-curve {
+  fill: none;
+  stroke: var(--locus);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4.5;
+}
+
+/* Scene 07: eccentricity and focal-distance invariants */
+.geometry-stage .feature-marker.is-centre {
+  fill: var(--ink);
+  stroke: var(--plot);
+  stroke-width: 2;
+}
+
+.geometry-stage .feature-marker.is-vertex {
+  fill: var(--plot);
+  stroke: var(--fixed);
+  stroke-width: 2.5;
+}
+
+.geometry-stage .feature-label,
+.geometry-stage .moving-label {
+  fill: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 700;
+  stroke-width: 5px;
+}
+
+.geometry-stage .feature-label.is-focus,
+.geometry-stage .moving-label {
+  fill: var(--moving);
+}
+
+.geometry-stage .dimension-base,
+.geometry-stage .dimension-focus {
+  stroke-linecap: round;
+}
+
+.geometry-stage .dimension-base {
+  stroke: var(--construction);
+  stroke-width: 5;
+}
+
+.geometry-stage .dimension-focus {
+  stroke: var(--moving);
+  stroke-width: 4;
+}
+
+.geometry-stage .dimension-centre,
+.geometry-stage .dimension-vertex {
+  fill: var(--plot);
+  stroke: var(--construction);
+  stroke-width: 2.5;
+}
+
+.geometry-stage .dimension-focus-dot {
+  fill: var(--moving);
+  stroke: var(--plot);
+  stroke-width: 2;
+}
+
+.geometry-stage .dimension-label {
+  fill: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  stroke-width: 4px;
+}
+
+.geometry-stage .dimension-label.is-focus {
+  fill: var(--moving);
+}
+
+.geometry-stage .distance-line.is-first {
+  stroke: var(--construction);
+}
+
+.geometry-stage .distance-line.is-second {
+  stroke: var(--moving);
+  stroke-dasharray: 8 5;
+}
+
+.geometry-stage .distance-readout {
+  fill: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 700;
+  stroke-width: 5px;
+}
+
+.geometry-stage .proof-seal {
+  fill: var(--panel);
+  stroke: var(--locus);
+  stroke-width: 1.7;
+}
+
+.geometry-stage .proof-seal-label {
+  fill: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  stroke-width: 4px;
+}
+
+.geometry-stage .proof-seal-value {
+  fill: var(--locus);
+  font-size: 15px;
+  font-weight: 700;
+  stroke-width: 4px;
+}
+
+.geometry-stage .eccentricity-name {
+  fill: var(--construction);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  stroke-width: 5px;
+}
+
+/* Scene 08: rotatable cone and Dandelin spheres */
+.cone-slice-app .geometry-stage {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.cone-slice-app .geometry-stage.is-dragging {
+  cursor: grabbing;
+}
+
+.geometry-stage .spatial-backdrop {
+  fill: url(#stage-light);
+  fill-opacity: 0.72;
+  stroke: var(--rule);
+  stroke-width: 1.2;
+}
+
+.geometry-stage .cone-apex {
+  fill: var(--ink);
+  stroke: var(--plot);
+  stroke-width: 2;
+}
+
+.geometry-stage .plane-grid {
+  fill: none;
+  stroke: var(--construction);
+  stroke-width: 1;
+  opacity: 0.28;
+}
+
+.geometry-stage .dandelin-sphere {
+  fill: url(#sphere-light-a);
+  fill-opacity: 0.46;
+  stroke: var(--construction);
+  stroke-width: 2.6;
+  filter: url(#sphere-shadow);
+}
+
+.geometry-stage .dandelin-sphere.is-secondary {
+  fill: url(#sphere-light-b);
+  fill-opacity: 0.34;
+  stroke: var(--moving);
+}
+
+.geometry-stage .sphere-centre {
+  fill: var(--ink);
+  stroke: var(--plot);
+  stroke-width: 2;
+}
+
+.geometry-stage .sphere-label,
+.geometry-stage .focus-label,
+.geometry-stage .tangent-label {
+  fill: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 700;
+  stroke-width: 5px;
+}
+
+.geometry-stage .sphere-radius {
+  stroke: var(--fixed);
+  stroke-dasharray: 4 4;
+  stroke-width: 1.8;
+}
+
+.geometry-stage .focus-contact {
+  fill: var(--moving);
+  stroke: var(--plot);
+  stroke-width: 2.5;
+}
+
+.geometry-stage .focus-label {
+  fill: var(--moving);
+}
+
+.geometry-stage .focus-contact.is-pair-one,
+.geometry-stage .tangent-contact.is-pair-one {
+  fill: var(--locus);
+  stroke: var(--plot);
+}
+
+.geometry-stage .focus-contact.is-pair-two,
+.geometry-stage .tangent-contact.is-pair-two {
+  fill: var(--moving);
+  stroke: var(--plot);
+}
+
+.geometry-stage .focus-label.is-pair-one,
+.geometry-stage .tangent-label.is-pair-one {
+  fill: var(--locus);
+}
+
+.geometry-stage .focus-label.is-pair-two,
+.geometry-stage .tangent-label.is-pair-two {
+  fill: var(--moving);
+}
+
+.geometry-stage .focal-proof-line {
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.geometry-stage .tangent-proof-line {
+  stroke-dasharray: 7 5;
+  stroke-width: 3.4;
+  stroke-linecap: round;
+}
+
+.geometry-stage .focal-proof-line.is-pair-one,
+.geometry-stage .tangent-proof-line.is-pair-one,
+.geometry-stage .proof-equality-tick.is-pair-one {
+  stroke: var(--locus);
+}
+
+.geometry-stage .focal-proof-line.is-pair-two,
+.geometry-stage .tangent-proof-line.is-pair-two,
+.geometry-stage .proof-equality-tick.is-pair-two {
+  stroke: var(--moving);
+}
+
+.geometry-stage .proof-equality-tick {
+  stroke-width: 3.4;
+  stroke-linecap: round;
+}
+
+.geometry-stage .proof-fixed-line {
+  stroke: var(--fixed);
+  stroke-linecap: round;
+  stroke-width: 8px;
+  opacity: 0.28;
+}
+
+.geometry-stage .proof-segment-label {
+  fill: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  paint-order: stroke fill;
+  stroke: var(--plot);
+  stroke-width: 6px;
+  stroke-linejoin: round;
+}
+
+.geometry-stage .proof-segment-label.is-fixed {
+  fill: var(--fixed);
+}
+
+.geometry-stage .proof-visual-note {
+  fill: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  paint-order: stroke fill;
+  stroke: var(--plot);
+  stroke-width: 5px;
+}
+
+.geometry-stage .proof-visual-note.is-secondary {
+  fill: var(--locus);
+}
+
+.geometry-stage .tangent-contact {
+  fill: var(--plot);
+  stroke: var(--locus);
+  stroke-width: 2.5;
+}
+
+.geometry-stage.is-proof-view .cone-facet.is-front {
+  opacity: 0.045;
+}
+
+.geometry-stage.is-proof-view .cone-facet.is-back {
+  opacity: 0.008;
+}
+
+.geometry-stage.is-proof-view .cone-wire.is-front {
+  opacity: 0.14;
+}
+
+.geometry-stage.is-proof-view .cone-wire.is-back {
+  opacity: 0.035;
+}
+
+.geometry-stage.is-proof-view .cone-rim {
+  opacity: 0.22;
+}
+
+.geometry-stage.is-proof-view .plane-surface {
+  fill-opacity: 0.07;
+  stroke-width: 1.2;
+}
+
+.geometry-stage.is-proof-view .plane-grid {
+  opacity: 0.045;
+}
+
+.geometry-stage.is-proof-view .cone-generator {
+  opacity: 0.45;
+}
+
+.geometry-stage .receding-plate {
+  fill: var(--panel);
+  stroke: var(--moving);
+  stroke-width: 1.5;
+}
+
+.geometry-stage .receding-label {
+  fill: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  stroke-width: 4px;
+}
+
+.geometry-stage .receding-value {
+  fill: var(--moving);
+  font-size: 15px;
+  font-weight: 700;
+  stroke-width: 4px;
+}
+
+.geometry-stage .view-hint {
+  fill: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  stroke-width: 4px;
+}
+
+.ledger {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  overflow: auto;
+  padding: 28px 28px 22px;
+  background: var(--panel);
+}
+
+.ledger-section-label {
+  margin: 0 0 14px;
+  color: var(--construction);
+  font-family: var(--utility);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ledger h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(30px, 3.1vw, 48px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.step-kicker {
+  margin: 20px 0 7px;
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.step-description {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.math-ledger {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 18px 0 18px 16px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  border-left: 3px solid var(--construction);
+}
+
+.math-ledger[hidden],
+.prediction-panel[hidden],
+.feedback-line[hidden] {
+  display: none;
+}
+
+.math-line {
+  min-height: 29px;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.math-line.is-result {
+  color: var(--locus);
+  font-size: 20px;
+}
+
+.math-line .katex {
+  font-size: 1.08em;
+}
+
+.cone-slice-app.is-proof-step .math-ledger {
+  gap: 14px;
+  margin-top: 20px;
+  padding-block: 22px;
+  border-left-width: 4px;
+}
+
+.cone-slice-app.is-proof-step .math-line {
+  min-height: 34px;
+  font-size: 19px;
+}
+
+.cone-slice-app.is-proof-step .math-line.is-result {
+  font-size: 19px;
+}
+
+.cone-slice-app.is-proof-step .math-line .katex {
+  font-size: 1.08em;
+}
+
+.eccentricity-app .math-line .katex {
+  font-size: 0.9em;
+}
+
+.prediction-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+
+.prediction-question {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.choice-button {
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.choice-button:hover {
+  border-color: var(--construction);
+  background: #f1f6ff;
+}
+
+.choice-button[aria-pressed="true"] {
+  border-color: var(--construction);
+  background: #e9f1ff;
+  box-shadow: inset 3px 0 0 var(--construction);
+}
+
+.feedback-line {
+  margin: 16px 0 0;
+  padding: 11px 12px;
+  border-left: 3px solid var(--locus);
+  background: var(--locus-soft);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.teacher-cue {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+
+.teacher-cue summary {
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--utility);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cue-list {
+  display: grid;
+  gap: 10px;
+  margin: 15px 0 0;
+}
+
+.cue-list div {
+  display: grid;
+  gap: 2px;
+}
+
+.cue-list dt {
+  color: var(--muted);
+  font-family: var(--utility);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cue-list dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.instrument-rail {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto auto;
+  gap: 26px;
+  align-items: center;
+  padding: 14px 28px 16px;
+  border-top: 1px solid var(--rule);
+  background: var(--panel-alt);
+}
+
+.parameter-control {
+  display: grid;
+  grid-template-columns: auto minmax(150px, 1fr);
+  gap: 5px 18px;
+  align-items: center;
+}
+
+.parameter-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--ink);
+  font-family: var(--utility);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.parameter-value {
+  color: var(--construction);
+  font-size: 18px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.parameter-control input[type="range"] {
+  width: 100%;
+  min-width: 140px;
+  margin: 0;
+}
+
+.parameter-stack {
+  display: grid;
+  min-width: 300px;
+  gap: 7px;
+}
+
+.parameter-stack .parameter-control {
+  grid-template-columns: 118px minmax(150px, 1fr);
+}
+
+.parameter-stack .range-extents {
+  display: none;
+}
+
+.instrument-rail.is-compact {
+  grid-template-columns: minmax(300px, 1fr) auto;
+}
+
+.instrument-rail.is-compact .transport {
+  justify-self: end;
+}
+
+.range-extents {
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: var(--utility);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
+.layer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.mode-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+
+/* Scene 08: a compact drafting-style layer palette for teacher-controlled reveals. */
+.layer-menu {
+  position: relative;
+  align-self: end;
+  font-family: var(--utility);
+}
+
+.layer-menu summary {
+  display: flex;
+  min-width: 138px;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 11px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--utility);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.layer-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.layer-menu summary::after {
+  color: var(--construction);
+  content: "▾";
+  font-size: 12px;
+}
+
+.layer-menu[open] summary {
+  border-color: var(--construction);
+  box-shadow: inset 0 -3px 0 var(--construction);
+}
+
+.layer-menu[open] summary::after {
+  content: "▴";
+}
+
+.layer-count {
+  color: var(--construction);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.layer-popover {
+  position: absolute;
+  z-index: 12;
+  right: 0;
+  bottom: calc(100% + 10px);
+  width: 316px;
+  padding: 15px 16px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--panel);
+  box-shadow: 0 14px 34px rgba(24, 48, 66, 0.16);
+}
+
+.layer-popover-title {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cone-layer-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px 14px;
+}
+
+.cone-slice-app .layer-popover {
+  width: 360px;
+  max-width: calc(100vw - 36px);
+}
+
+.cone-layer-controls > .layer-group-label {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-family: var(--utility);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.cone-layer-controls > .layer-group-label.is-proof-group {
+  margin-top: 3px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+}
+
+.cone-layer-controls .layer-toggle {
+  min-width: 0;
+  font-size: 12px;
+}
+
+.cone-layer-controls .layer-toggle.is-unavailable {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.layer-swatch {
+  display: inline-grid;
+  width: 19px;
+  height: 16px;
+  flex: 0 0 19px;
+  place-items: center;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.layer-swatch.is-cone {
+  border-right: 1px solid var(--fixed);
+  border-left: 1px solid var(--fixed);
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 35% 50%);
+  background: rgba(92, 107, 118, 0.16);
+}
+
+.layer-swatch.is-plane {
+  border: 1px solid var(--construction);
+  background: rgba(28, 111, 242, 0.12);
+  transform: skew(-14deg);
+}
+
+.layer-swatch.is-section {
+  height: 8px;
+  border-bottom: 3px solid var(--moving);
+  border-radius: 50%;
+}
+
+.layer-swatch.is-sphere {
+  width: 16px;
+  flex-basis: 19px;
+  border: 2px solid var(--construction);
+  border-radius: 50%;
+  background: rgba(28, 111, 242, 0.1);
+}
+
+.layer-swatch.is-focus {
+  width: 9px;
+  height: 9px;
+  margin-inline: 4px 6px;
+  flex-basis: 9px;
+  border-radius: 50%;
+  background: var(--locus);
+  box-shadow: 0 0 0 3px var(--locus-soft);
+}
+
+.layer-swatch.is-proof {
+  color: var(--moving);
+  font-size: 14px;
+}
+
+.layer-swatch.is-proof-segment {
+  position: relative;
+}
+
+.layer-swatch.is-proof-segment::before {
+  width: 19px;
+  border-top: 3px solid var(--locus);
+  content: "";
+}
+
+.layer-swatch.is-proof-segment.is-pair-two::before {
+  border-top-color: var(--moving);
+}
+
+.layer-swatch.is-proof-segment.is-tangent::before {
+  border-top-style: dashed;
+}
+
+.layer-swatch.is-proof-segment.is-fixed::before {
+  border-top: 6px solid rgba(92, 107, 118, 0.28);
+}
+
+.layer-swatch.is-label {
+  color: var(--ink-soft);
+  font-family: var(--display);
+  font-size: 11px;
+}
+
+.select-control {
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+  font-family: var(--utility);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.select-control select {
+  min-width: 132px;
+  min-height: 42px;
+  padding: 0 34px 0 11px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.select-control select:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.layer-controls legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.layer-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.layer-toggle input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+}
+
+.transport {
+  display: flex;
+  gap: 7px;
+  justify-content: flex-end;
+}
+
+.control-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 14px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--utility);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.control-button:hover:not(:disabled) {
+  border-color: var(--ink-soft);
+}
+
+.control-button.is-primary {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.control-button.is-play {
+  border-color: var(--construction);
+  color: var(--construction);
+}
+
+.control-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.button-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.shortcut-note {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 1050px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) 310px;
+  }
+
+  .step-tab-label {
+    display: none;
+  }
+
+  .instrument-rail {
+    grid-template-columns: minmax(240px, 1fr) auto;
+  }
+
+  .transport {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .instrument-app {
+    display: block;
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .identity-scene,
+  .identity-separator {
+    display: none;
+  }
+
+  .step-rail {
+    padding: 0 12px;
+  }
+
+  .step-rail::before {
+    right: 12px;
+    left: 12px;
+  }
+
+  .step-tab {
+    min-height: 48px;
+    place-content: center;
+    padding-inline: 4px;
+    text-align: center;
+  }
+
+  .workspace {
+    display: block;
+  }
+
+  .stage-shell {
+    padding: 12px;
+    border-right: 0;
+    overflow: visible;
+  }
+
+  .geometry-stage {
+    height: auto;
+    aspect-ratio: 25 / 16;
+  }
+
+  .stage-frame {
+    height: auto;
+  }
+
+  .ledger {
+    min-height: 360px;
+    padding: 24px 18px;
+    border-top: 1px solid var(--rule);
+    overflow: visible;
+  }
+
+  .ledger h1 {
+    font-size: 34px;
+  }
+
+  .instrument-rail {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .mode-controls,
+  .layer-menu,
+  .layer-menu summary {
+    width: 100%;
+  }
+
+  .layer-popover {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: none;
+  }
+
+  .parameter-control {
+    grid-template-columns: 1fr;
+  }
+
+  .parameter-stack {
+    min-width: 0;
+  }
+
+  .parameter-stack .parameter-control {
+    grid-template-columns: 1fr;
+  }
+
+  .instrument-rail.is-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .instrument-rail.is-compact .transport {
+    justify-self: stretch;
+  }
+
+  .range-extents {
+    grid-column: 1;
+  }
+
+  .transport {
+    grid-column: 1;
+    justify-content: stretch;
+  }
+
+  .control-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 470px) {
+  .cone-layer-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-button .button-label {
+    display: none;
+  }
+
+  .control-button {
+    min-width: 44px;
+    padding-inline: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+.conic-layer-controls {
+  display: grid;
+  gap: 10px;
+  padding: 14px 0 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 18px 0 0;
+}
+
+.conic-layer-controls legend {
+  padding: 0 10px 0 0;
+  color: var(--construction);
+  font-family: var(--utility);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.geometry-stage .conic-level-set {
+  fill: none;
+  stroke: var(--rule);
+  stroke-dasharray: 5 8;
+  stroke-width: 1.5;
+}
+
+.geometry-stage .conic-main-curve {
+  fill: none;
+  stroke: var(--construction);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4.5;
+}
+
+.geometry-stage .conic-stage-heading,
+.geometry-stage .conic-component-label,
+.geometry-stage .conic-vector-label {
+  font-family: var(--utility);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.geometry-stage .conic-stage-heading {
+  fill: var(--muted);
+  font-size: 14px;
+}
+
+.geometry-stage .conic-contact {
+  fill: var(--panel);
+  stroke: var(--moving);
+  stroke-width: 4;
+}
+
+.geometry-stage .conic-neighbour {
+  fill: var(--moving);
+  stroke: var(--panel);
+  stroke-width: 3;
+}
+
+.geometry-stage .conic-point-label {
+  fill: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: var(--plot);
+  stroke-width: 5px;
+}
+
+.geometry-stage .conic-secant,
+.geometry-stage .conic-parameter-gap {
+  fill: none;
+  stroke: var(--moving);
+}
+
+.geometry-stage .conic-secant {
+  stroke-width: 3;
+}
+
+.geometry-stage .conic-parameter-gap {
+  stroke-dasharray: 4 5;
+  stroke-width: 2;
+}
+
+.geometry-stage .conic-component-guide {
+  fill: none;
+  stroke: var(--fixed);
+  stroke-dasharray: 5 5;
+  stroke-width: 2;
+}
+
+.geometry-stage .conic-component-label {
+  fill: var(--fixed);
+  font-size: 12px;
+}
+
+.geometry-stage .conic-normal-vector,
+.geometry-stage .conic-normal-line {
+  fill: none;
+  stroke: var(--locus);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.geometry-stage .conic-normal-vector {
+  stroke-width: 4.5;
+}
+
+.geometry-stage .conic-normal-line {
+  stroke-dasharray: 9 7;
+  stroke-width: 2.6;
+}
+
+.geometry-stage .conic-tangent-line {
+  fill: none;
+  stroke: var(--moving);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.geometry-stage .conic-tangent-family {
+  fill: none;
+  stroke: var(--moving);
+  stroke-width: 1.4;
+  opacity: 0.22;
+}
+
+.geometry-stage .conic-arrowhead {
+  fill: none;
+}
+
+.geometry-stage .conic-vector-label {
+  fill: var(--locus);
+  font-size: 14px;
+  paint-order: stroke;
+  stroke: var(--plot);
+  stroke-width: 5px;
+}
+
+.geometry-stage .conic-right-angle {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.2;
+}
+
+.geometry-stage .conic-invariant-card rect {
+  fill: rgba(255, 255, 255, 0.88);
+  stroke: var(--rule);
+}
+
+.geometry-stage .conic-invariant-card text {
+  fill: var(--ink-soft);
+  font-family: var(--utility);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  paint-order: stroke;
+  stroke: var(--panel);
+  stroke-width: 4px;
+}

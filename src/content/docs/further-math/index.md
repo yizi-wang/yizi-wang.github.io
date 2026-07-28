@@ -7,6 +7,10 @@ tableOfContents: false
 
 Lecture notes for Edexcel IAL Further Mathematics, covering Mechanics 2, Statistics 2, Statistics 3, Further Pure 2, and Further Pure 3.
 
+## Interactive classroom instruments
+
+- [Coordinate Geometry Interactive Instruments](./coordinate_geometry_instruments)
+
 ## S2 — Statistics 2
 
 1. [The Binomial Distribution](./s2/chapter01_binomial)

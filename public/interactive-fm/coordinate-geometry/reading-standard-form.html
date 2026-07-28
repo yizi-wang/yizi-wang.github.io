@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A live standard-form reader for ellipse and hyperbola data.">
+  <title>Reading the Standard Form Instrument</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="coordinate-instrument.css?v=20260713e">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="reading-standard-form.js?v=20260713a"></script>
+</head>
+<body>
+  <main id="standard-form-app" class="instrument-app standard-form-app">
+    <header class="topbar">
+      <div class="identity"><a href="index.html">Further Mathematics</a><span class="identity-separator" aria-hidden="true">/</span><span class="identity-scene">Coordinate geometry instrument 05</span></div>
+      <div class="topbar-status" aria-label="Current construction step"><span id="step-number" class="step-number">01</span><span class="step-total">/ 08</span></div>
+    </header>
+    <nav class="step-rail" aria-label="Construction sequence">
+      <button class="step-tab" type="button" data-step="0" aria-current="step"><span class="step-tab-index">01</span><span class="step-tab-label">Form</span></button>
+      <button class="step-tab" type="button" data-step="1"><span class="step-tab-index">02</span><span class="step-tab-label">Axes</span></button>
+      <button class="step-tab" type="button" data-step="2"><span class="step-tab-index">03</span><span class="step-tab-label">Curve</span></button>
+      <button class="step-tab" type="button" data-step="3"><span class="step-tab-index">04</span><span class="step-tab-label">Vertices</span></button>
+      <button class="step-tab" type="button" data-step="4"><span class="step-tab-index">05</span><span class="step-tab-label">Foci</span></button>
+      <button class="step-tab" type="button" data-step="5"><span class="step-tab-index">06</span><span class="step-tab-label">Predict</span></button>
+      <button class="step-tab" type="button" data-step="6"><span class="step-tab-index">07</span><span class="step-tab-label">Guides</span></button>
+      <button class="step-tab" type="button" data-step="7"><span class="step-tab-index">08</span><span class="step-tab-label">Summary</span></button>
+    </nav>
+
+    <section class="workspace" aria-label="Standard-form feature reader">
+      <div class="stage-shell"><div class="stage-frame">
+        <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-labelledby="geometry-title geometry-description">
+          <title id="geometry-title">Reading geometric data from standard form</title>
+          <desc id="geometry-description">An equal-scale coordinate plane shows how a and b determine vertices, foci, directrices, eccentricity, and hyperbola asymptotes.</desc>
+        </svg>
+      </div></div>
+      <aside class="ledger" aria-labelledby="step-title">
+        <p class="ledger-section-label">Feature reader</p>
+        <h1 id="step-title">Choose a family</h1>
+        <p id="step-kicker" class="step-kicker">The sign is structural.</p>
+        <p id="step-description" class="step-description">Start with the standard form, then build every visible feature from a and b.</p>
+        <section id="prediction-panel" class="prediction-panel" aria-labelledby="prediction-question" hidden>
+          <p id="prediction-question" class="prediction-question">If b increases while a stays fixed, where do the foci move?</p>
+          <div class="choice-grid">
+            <button class="choice-button" type="button" data-choice="inward" aria-pressed="false">Towards the centre</button>
+            <button class="choice-button" type="button" data-choice="outward" aria-pressed="false">Away from the centre</button>
+            <button class="choice-button" type="button" data-choice="fixed" aria-pressed="false">They stay fixed</button>
+            <button class="choice-button" type="button" data-choice="vanish" aria-pressed="false">They disappear</button>
+          </div>
+        </section>
+        <p id="feedback-line" class="feedback-line" role="status" hidden></p>
+        <section id="math-ledger" class="math-ledger" aria-label="Mathematical record" hidden>
+          <div id="math-line-1" class="math-line"></div><div id="math-line-2" class="math-line"></div><div id="math-line-3" class="math-line is-result"></div>
+        </section>
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <dl class="cue-list">
+            <div><dt>Ask</dt><dd id="cue-ask">What does the sign between the squared terms decide?</dd></div>
+            <div><dt>Look for</dt><dd id="cue-look">Closed ellipse versus open hyperbola.</dd></div>
+            <div><dt>Then</dt><dd id="cue-watch">Read a and b before calculating c.</dd></div>
+          </dl>
+        </details>
+      </aside>
+    </section>
+
+    <footer class="instrument-rail">
+      <div class="parameter-stack" aria-label="Conic parameters">
+        <label class="parameter-control" for="a-range"><span class="parameter-label">Horizontal <span class="parameter-value">a = <output id="a-value">5.0</output></span></span><input id="a-range" type="range" min="3" max="5.5" step="0.1" value="5" disabled><span class="range-extents" aria-hidden="true"><span>3</span><span>5.5</span></span></label>
+        <label class="parameter-control" for="b-range"><span class="parameter-label">Vertical <span class="parameter-value">b = <output id="b-value">3.0</output></span></span><input id="b-range" type="range" min="1" max="4.8" step="0.1" value="3" disabled><span class="range-extents" aria-hidden="true"><span>1</span><span>4.8</span></span></label>
+      </div>
+      <div class="mode-controls" aria-label="Conic family">
+        <label class="select-control" for="family-select">Standard form
+          <select id="family-select"><option value="ellipse">Ellipse: plus</option><option value="hyperbola">Hyperbola: minus</option></select>
+        </label>
+      </div>
+      <div class="transport" aria-label="Construction controls">
+        <button id="reset-button" class="control-button" type="button"><span class="button-icon" aria-hidden="true">↺</span><span class="button-label">Reset</span></button>
+        <button id="back-button" class="control-button" type="button" disabled><span class="button-icon" aria-hidden="true">←</span><span class="button-label">Back</span></button>
+        <button id="play-button" class="control-button is-play" type="button" disabled><span class="button-icon" aria-hidden="true">▶</span><span class="button-label">Play</span></button>
+        <button id="next-button" class="control-button is-primary" type="button"><span class="button-label">Next</span><span class="button-icon" aria-hidden="true">→</span></button>
+      </div>
+      <p class="shortcut-note">Keyboard: left and right arrows change step, R resets. This scene has no automatic motion.</p>
+    </footer>
+    <p id="live-region" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>

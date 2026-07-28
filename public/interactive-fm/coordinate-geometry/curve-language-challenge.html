@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A staged whole-class challenge matching four languages for a conic.">
+  <title>Curve-Language Challenge</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="coordinate-instrument.css?v=20260713f">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="curve-language-challenge.js?v=20260713a"></script>
+</head>
+<body>
+  <main id="language-app" class="instrument-app language-app">
+    <header class="topbar">
+      <div class="identity"><a href="index.html">Further Mathematics</a><span class="identity-separator" aria-hidden="true">/</span><span class="identity-scene">Coordinate geometry instrument 06</span></div>
+      <div class="topbar-status" aria-label="Current construction step"><span id="step-number" class="step-number">01</span><span class="step-total">/ 08</span></div>
+    </header>
+    <nav class="step-rail" aria-label="Challenge sequence">
+      <button class="step-tab" type="button" data-step="0" aria-current="step"><span class="step-tab-index">01</span><span class="step-tab-label">Object</span></button>
+      <button class="step-tab" type="button" data-step="1"><span class="step-tab-index">02</span><span class="step-tab-label">Construction</span></button>
+      <button class="step-tab" type="button" data-step="2"><span class="step-tab-index">03</span><span class="step-tab-label">Equation</span></button>
+      <button class="step-tab" type="button" data-step="3"><span class="step-tab-index">04</span><span class="step-tab-label">Parameter</span></button>
+      <button class="step-tab" type="button" data-step="4"><span class="step-tab-index">05</span><span class="step-tab-label">Predict</span></button>
+      <button class="step-tab" type="button" data-step="5"><span class="step-tab-index">06</span><span class="step-tab-label">Graph</span></button>
+      <button class="step-tab" type="button" data-step="6"><span class="step-tab-index">07</span><span class="step-tab-label">Match</span></button>
+      <button class="step-tab" type="button" data-step="7"><span class="step-tab-index">08</span><span class="step-tab-label">Languages</span></button>
+    </nav>
+
+    <section class="workspace" aria-label="Curve-language matching challenge">
+      <div class="stage-shell"><div class="stage-frame">
+        <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-labelledby="geometry-title geometry-description">
+          <title id="geometry-title">Three clues and a generated graph</title>
+          <desc id="geometry-description">Construction, Cartesian equation, and parametrisation are revealed before a graph is generated and the common conic is named.</desc>
+        </svg>
+      </div></div>
+      <aside class="ledger" aria-labelledby="step-title">
+        <p class="ledger-section-label">Representation challenge</p>
+        <h1 id="step-title">Hide the object</h1>
+        <p id="step-kicker" class="step-kicker">One curve, four languages.</p>
+        <p id="step-description" class="step-description">Reveal the descriptions one at a time. The class must keep one geometric object in mind.</p>
+        <section id="prediction-panel" class="prediction-panel" aria-labelledby="prediction-question" hidden>
+          <p id="prediction-question" class="prediction-question">Which curve do all three clues describe?</p>
+          <div class="choice-grid">
+            <button class="choice-button" type="button" data-choice="parabola" aria-pressed="false">Parabola</button>
+            <button class="choice-button" type="button" data-choice="ellipse" aria-pressed="false">Ellipse</button>
+            <button class="choice-button" type="button" data-choice="hyperbola" aria-pressed="false">Hyperbola</button>
+            <button class="choice-button" type="button" data-choice="mismatch" aria-pressed="false">The clues mismatch</button>
+          </div>
+        </section>
+        <p id="feedback-line" class="feedback-line" role="status" hidden></p>
+        <section id="math-ledger" class="math-ledger" aria-label="Revealed mathematical clues" hidden>
+          <div id="math-line-1" class="math-line"></div><div id="math-line-2" class="math-line"></div><div id="math-line-3" class="math-line is-result"></div>
+        </section>
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <dl class="cue-list">
+            <div><dt>Ask</dt><dd id="cue-ask">Which representation gives the fastest identification?</dd></div>
+            <div><dt>Look for</dt><dd id="cue-look">Students translate rather than pattern-match a single symbol.</dd></div>
+            <div><dt>Then</dt><dd id="cue-watch">Demand one check using a second representation.</dd></div>
+          </dl>
+        </details>
+      </aside>
+    </section>
+
+    <footer class="instrument-rail">
+      <label class="parameter-control" for="trace-range">
+        <span class="parameter-label">Graph trace <span class="parameter-value"><output id="trace-value">0</output>%</span></span>
+        <input id="trace-range" type="range" min="0" max="1" step="0.005" value="0" disabled>
+        <span class="range-extents" aria-hidden="true"><span>hidden</span><span>complete</span></span>
+      </label>
+      <div class="mode-controls" aria-label="Challenge selection">
+        <label class="select-control" for="round-select">Challenge set
+          <select id="round-select"><option value="parabola">Set A</option><option value="ellipse">Set B</option><option value="hyperbola">Set C</option></select>
+        </label>
+      </div>
+      <div class="transport" aria-label="Challenge controls">
+        <button id="reset-button" class="control-button" type="button"><span class="button-icon" aria-hidden="true">↺</span><span class="button-label">Reset</span></button>
+        <button id="back-button" class="control-button" type="button" disabled><span class="button-icon" aria-hidden="true">←</span><span class="button-label">Back</span></button>
+        <button id="play-button" class="control-button is-play" type="button" disabled><span class="button-icon" aria-hidden="true">▶</span><span class="button-label">Play</span></button>
+        <button id="next-button" class="control-button is-primary" type="button"><span class="button-label">Next</span><span class="button-icon" aria-hidden="true">→</span></button>
+      </div>
+      <p class="shortcut-note">Keyboard: left and right arrows change step, space controls the graph trace, R resets.</p>
+    </footer>
+    <p id="live-region" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>

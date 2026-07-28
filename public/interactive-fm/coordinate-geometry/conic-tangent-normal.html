@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A staged link between conic equations, secant limits, gradients, tangents and normals.">
+  <title>Conic Tangent and Normal Instrument</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="coordinate-instrument.css?v=20260728b13">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="conic-tangent-normal.js?v=20260728b13"></script>
+</head>
+<body>
+  <main id="conic-tangent-app" class="instrument-app conic-tangent-app">
+    <header class="topbar">
+      <div class="identity">
+        <a href="index.html">Further Mathematics</a>
+        <span class="identity-separator" aria-hidden="true">/</span>
+        <span class="identity-scene">Coordinate geometry instrument 09</span>
+      </div>
+      <div class="topbar-status" aria-label="Current construction step">
+        <span id="step-number" class="step-number">01</span><span class="step-total">/ 08</span>
+      </div>
+    </header>
+
+    <nav class="step-rail" aria-label="Construction sequence">
+      <button class="step-tab" type="button" data-step="0" aria-current="step"><span class="step-tab-index">01</span><span class="step-tab-label">Level set</span></button>
+      <button class="step-tab" type="button" data-step="1"><span class="step-tab-index">02</span><span class="step-tab-label">Conic</span></button>
+      <button class="step-tab" type="button" data-step="2"><span class="step-tab-index">03</span><span class="step-tab-label">Contact</span></button>
+      <button class="step-tab" type="button" data-step="3"><span class="step-tab-index">04</span><span class="step-tab-label">Secant</span></button>
+      <button class="step-tab" type="button" data-step="4"><span class="step-tab-index">05</span><span class="step-tab-label">Limit</span></button>
+      <button class="step-tab" type="button" data-step="5"><span class="step-tab-index">06</span><span class="step-tab-label">Gradient</span></button>
+      <button class="step-tab" type="button" data-step="6"><span class="step-tab-index">07</span><span class="step-tab-label">Perpendicular</span></button>
+      <button class="step-tab" type="button" data-step="7"><span class="step-tab-index">08</span><span class="step-tab-label">Move P</span></button>
+    </nav>
+
+    <section class="workspace" aria-label="Interactive conic tangent and normal construction">
+      <div class="stage-shell"><div class="stage-frame">
+        <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-labelledby="geometry-title geometry-description">
+          <title id="geometry-title">A conic tangent and normal generated from its equation</title>
+          <desc id="geometry-description">A secant approaches a moving conic point. The gradient of the level-set equation generates the normal and its perpendicular generates the tangent.</desc>
+        </svg>
+      </div></div>
+
+      <aside class="ledger" aria-labelledby="step-title">
+        <p class="ledger-section-label">Conic contact laboratory</p>
+        <h1 id="step-title">Read a level set</h1>
+        <p id="step-kicker" class="step-kicker">One equation labels a family of curves.</p>
+        <p id="step-description" class="step-description">The conic is the level set where F(x,y)=1. Nearby levels make the gradient direction visible later.</p>
+
+        <section id="math-ledger" class="math-ledger" aria-label="Mathematical record">
+          <div id="math-line-1" class="math-line"></div>
+          <div id="math-line-2" class="math-line"></div>
+          <div id="math-line-3" class="math-line is-result"></div>
+        </section>
+
+        <fieldset class="conic-layer-controls" aria-label="Teacher layers">
+          <legend>Teacher layers</legend>
+          <label class="layer-toggle"><input type="checkbox" data-layer="levels" checked><span>Nearby level sets</span></label>
+          <label class="layer-toggle"><input type="checkbox" data-layer="components" checked><span>Gradient components</span></label>
+          <label class="layer-toggle"><input type="checkbox" data-layer="family"><span>Tangent family</span></label>
+        </fieldset>
+
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <dl class="cue-list">
+            <div><dt>Ask</dt><dd id="cue-ask">What does F(x,y)=1 select from the plane?</dd></div>
+            <div><dt>Look for</dt><dd id="cue-look">A curve is one level of a two-variable function.</dd></div>
+            <div><dt>Then</dt><dd id="cue-watch">Keep the full implicit differentiation on the board.</dd></div>
+          </dl>
+        </details>
+      </aside>
+    </section>
+
+    <footer class="instrument-rail">
+      <label class="parameter-control" for="point-range">
+        <span class="parameter-label">Contact parameter <span class="parameter-value"><output id="point-value">0.92</output></span></span>
+        <input id="point-range" type="range" min="0.3" max="2.65" step="0.01" value="0.92" disabled>
+        <span class="range-extents" aria-hidden="true"><span id="range-min">0.30</span><span id="range-max">2.65</span></span>
+      </label>
+      <div class="mode-controls" aria-label="Conic selection">
+        <label class="select-control" for="conic-select">Conic
+          <select id="conic-select">
+            <option value="ellipse">Ellipse</option>
+            <option value="hyperbola">Hyperbola</option>
+          </select>
+        </label>
+      </div>
+      <div class="transport" aria-label="Construction controls">
+        <button id="reset-button" class="control-button" type="button"><span class="button-icon" aria-hidden="true">↺</span><span class="button-label">Reset</span></button>
+        <button id="back-button" class="control-button" type="button" disabled><span class="button-icon" aria-hidden="true">←</span><span class="button-label">Back</span></button>
+        <button id="play-button" class="control-button is-play" type="button" disabled><span class="button-icon" aria-hidden="true">▶</span><span class="button-label">Play</span></button>
+        <button id="next-button" class="control-button is-primary" type="button"><span class="button-label">Next</span><span class="button-icon" aria-hidden="true">→</span></button>
+      </div>
+      <p class="shortcut-note">Keyboard: left and right arrows change step, space controls motion, R resets.</p>
+    </footer>
+    <p id="live-region" class="sr-only" aria-live="polite"></p>
+  </main>
+</body>
+</html>
