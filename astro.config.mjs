@@ -12,6 +12,9 @@ export default defineConfig({
 		starlight({
 			title: "Yizi's Math Notes",
 			description: 'Mathematics teaching resources and TMUA study materials',
+			components: {
+				Header: './src/components/BannerHeader.astro',
+			},
 			defaultLocale: 'root',
 			locales: {
 				root: { label: 'English', lang: 'en' },
