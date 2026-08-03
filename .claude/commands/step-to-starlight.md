@@ -11,7 +11,7 @@ Parse the exam and year from $ARGUMENTS (e.g. "step2-2018" → exam=STEP2, year=
 Run the generator script:
 
 ```bash
-cd "C:\Users\46537\OneDrive\claude workspace\teaching-resources\STEP\handouts"
+cd "D:\cw\teaching-resources\STEP\handouts"
 python -X utf8 generate_starlight.py STEP2 2018
 ```
 
@@ -37,7 +37,7 @@ Restart the dev server and open the page in browser:
 ```bash
 # Kill old server, start new one
 powershell -Command "Get-Process -Name node -ErrorAction SilentlyContinue | Stop-Process -Force"
-cd "C:\Users\46537\OneDrive\claude workspace\web-projects\yizi-wang.github.io"
+cd "D:\cw\web-projects\yizi-wang.github.io"
 npm run dev
 # Open http://localhost:4321/step/<slug>/
 ```

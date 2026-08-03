@@ -1,10 +1,12 @@
 ---
 title: Interactive Coordinate Geometry
-description: Eight teacher-controlled visual instruments for coordinate geometry and conic sections.
+description: Nine teacher-controlled visual instruments for coordinate geometry and conic sections.
 tableOfContents: false
 ---
 
-This collection contains eight short, teacher-controlled instruments for moments when a board diagram needs motion. Each scene is designed to be built in stages: predict first, reveal the construction, then return to the algebra.
+This collection contains nine short, teacher-controlled instruments for
+moments when a board diagram needs motion. Each scene is built in stages:
+predict first, reveal the construction, then return to the algebra.
 
 [Open the Coordinate Geometry instruments →](/interactive-fm/coordinate-geometry/)
 
@@ -18,5 +20,8 @@ This collection contains eight short, teacher-controlled instruments for moments
 6. **Curve-Language Challenge** — match constructions, equations, parametrisations and graphs.
 7. **Eccentricity and Distance Invariants** — connect focus-directrix definitions with ellipse and hyperbola distance properties.
 8. **Conic Sections and Dandelin Spheres** — rotate a double cone and reveal how tangent spheres locate the foci.
+9. **Conic Tangents and Normals** — connect secant limits, gradients, tangent lines, and normal lines.
 
-The instruments work best on a classroom display or laptop. They also include compact layouts for smaller screens.
+The instruments work best on a classroom display or laptop. They also include
+compact layouts for smaller screens, and all formula-rendering assets are
+stored with the collection.

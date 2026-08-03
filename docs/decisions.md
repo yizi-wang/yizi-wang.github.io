@@ -35,3 +35,16 @@ Do not transfer completion status between these files without local evidence.
 
 Publishing happens through the repository hosting flow after a push. That is a
 red-line operation and requires explicit user confirmation.
+
+## TMUA practice data ownership
+
+- `public/practice/tmua/questions_data.js` is the deployment-enriched live
+  source and the only TMUA source imported by Question Bank Manager.
+- `web-projects/TMUA-Practice` is a distributable standalone baseline. The two
+  datasets must keep the same 320 year/paper/question identities, but their
+  hashes are expected to differ because the live source owns additional
+  taxonomy and deployment features.
+- Real QuickForm endpoints, feedback pages, and deployment-only configuration
+  stay in the live site. Do not overwrite them from the standalone package.
+- Run `question-bank-manager/scripts/check_tmua_source_contract.py` from the
+  workspace before a data-sync or manager-import batch.

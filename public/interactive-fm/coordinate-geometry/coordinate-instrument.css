@@ -1791,3 +1791,163 @@ a:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
+
+.conic-layer-controls {
+  display: grid;
+  gap: 10px;
+  padding: 14px 0 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 18px 0 0;
+}
+
+.conic-layer-controls legend {
+  padding: 0 10px 0 0;
+  color: var(--construction);
+  font-family: var(--utility);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.geometry-stage .conic-level-set {
+  fill: none;
+  stroke: var(--rule);
+  stroke-dasharray: 5 8;
+  stroke-width: 1.5;
+}
+
+.geometry-stage .conic-main-curve {
+  fill: none;
+  stroke: var(--construction);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4.5;
+}
+
+.geometry-stage .conic-stage-heading,
+.geometry-stage .conic-component-label,
+.geometry-stage .conic-vector-label {
+  font-family: var(--utility);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.geometry-stage .conic-stage-heading {
+  fill: var(--muted);
+  font-size: 14px;
+}
+
+.geometry-stage .conic-contact {
+  fill: var(--panel);
+  stroke: var(--moving);
+  stroke-width: 4;
+}
+
+.geometry-stage .conic-neighbour {
+  fill: var(--moving);
+  stroke: var(--panel);
+  stroke-width: 3;
+}
+
+.geometry-stage .conic-point-label {
+  fill: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: var(--plot);
+  stroke-width: 5px;
+}
+
+.geometry-stage .conic-secant,
+.geometry-stage .conic-parameter-gap {
+  fill: none;
+  stroke: var(--moving);
+}
+
+.geometry-stage .conic-secant {
+  stroke-width: 3;
+}
+
+.geometry-stage .conic-parameter-gap {
+  stroke-dasharray: 4 5;
+  stroke-width: 2;
+}
+
+.geometry-stage .conic-component-guide {
+  fill: none;
+  stroke: var(--fixed);
+  stroke-dasharray: 5 5;
+  stroke-width: 2;
+}
+
+.geometry-stage .conic-component-label {
+  fill: var(--fixed);
+  font-size: 12px;
+}
+
+.geometry-stage .conic-normal-vector,
+.geometry-stage .conic-normal-line {
+  fill: none;
+  stroke: var(--locus);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.geometry-stage .conic-normal-vector {
+  stroke-width: 4.5;
+}
+
+.geometry-stage .conic-normal-line {
+  stroke-dasharray: 9 7;
+  stroke-width: 2.6;
+}
+
+.geometry-stage .conic-tangent-line {
+  fill: none;
+  stroke: var(--moving);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.geometry-stage .conic-tangent-family {
+  fill: none;
+  stroke: var(--moving);
+  stroke-width: 1.4;
+  opacity: 0.22;
+}
+
+.geometry-stage .conic-arrowhead {
+  fill: none;
+}
+
+.geometry-stage .conic-vector-label {
+  fill: var(--locus);
+  font-size: 14px;
+  paint-order: stroke;
+  stroke: var(--plot);
+  stroke-width: 5px;
+}
+
+.geometry-stage .conic-right-angle {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.2;
+}
+
+.geometry-stage .conic-invariant-card rect {
+  fill: rgba(255, 255, 255, 0.88);
+  stroke: var(--rule);
+}
+
+.geometry-stage .conic-invariant-card text {
+  fill: var(--ink-soft);
+  font-family: var(--utility);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  paint-order: stroke;
+  stroke: var(--panel);
+  stroke-width: 4px;
+}
