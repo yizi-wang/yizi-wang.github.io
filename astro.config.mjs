@@ -12,9 +12,6 @@ export default defineConfig({
 		starlight({
 			title: "Yizi's Math Notes",
 			description: 'Mathematics teaching resources and TMUA study materials',
-			components: {
-				Header: './src/components/BannerHeader.astro',
-			},
 			defaultLocale: 'root',
 			locales: {
 				root: { label: 'English', lang: 'en' },
@@ -53,6 +50,11 @@ export default defineConfig({
 					label: 'Teaching Blog',
 					translations: { zh: '教学博客' },
 					autogenerate: { directory: 'teaching-notes' },
+				},
+				{
+					label: '🌐 English Translation by The-CerealDev',
+					link: 'https://github.com/The-CerealDev',
+					attrs: { target: '_blank', rel: 'noopener', style: 'color: var(--sl-color-text-accent); font-weight: bold; margin-top: 1rem;' },
 				},
 			],
 			customCss: ['./src/styles/custom.css'],
