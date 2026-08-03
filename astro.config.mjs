@@ -18,8 +18,11 @@ export default defineConfig({
 				zh: { label: '中文', lang: 'zh-CN' },
 			},
 			social: [
-				{ icon: 'github', href: 'https://github.com/yizi-wang', label: 'GitHub' },
+				{ icon: 'github', href: 'https://github.com/The-CerealDev', label: 'GitHub' },
 			],
+			editLink: {
+				baseUrl: 'https://github.com/The-CerealDev/yizi-wang.github.io/edit/translate-teaching-notes/',
+			},
 			sidebar: [
 				{
 					label: 'About',
