@@ -14,23 +14,37 @@ import Default from '@astrojs/starlight/components/Header.astro';
     left: 0;
     width: 100%;
     height: 36px;
-    background-color: var(--sl-color-text-accent);
-    color: var(--sl-color-black);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
     font-size: 14px;
     z-index: 10;
+    
+    /* Subtle default for content pages */
+    background-color: var(--sl-color-bg-nav);
+    color: var(--sl-color-gray-3);
+    border-bottom: 1px solid var(--sl-color-hairline-shade);
   }
   .cereal-banner a {
-    color: var(--sl-color-black);
+    color: var(--sl-color-gray-2);
     text-decoration: underline;
     margin-left: 0.5rem;
-    font-weight: bold;
+    font-weight: normal;
   }
   .cereal-banner a:hover {
     color: var(--sl-color-white);
+  }
+
+  /* Bright version for the home page */
+  :global([data-has-hero]) .cereal-banner {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-bottom: none;
+  }
+  :global([data-has-hero]) .cereal-banner a {
+    color: #ffffff;
+    font-weight: bold;
   }
   :global(:root) {
     /* Increase the global nav height so Starlight automatically pushes down the sidebar and main content */
