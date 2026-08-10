@@ -1,0 +1,996 @@
+@import url("../coordinate-geometry/coordinate-instrument.css");
+
+.complex-app { --complex-violet: #6951b8; --complex-soft: #ece9fa; }
+.complex-app .step-number, .complex-app .ledger-section-label { color: var(--complex-violet); }
+.complex-app .step-tab[aria-current="step"] { border-bottom-color: var(--complex-violet); }
+.complex-app .workspace { min-height: 0; }
+.complex-app .stage-frame { background: var(--panel); }
+.complex-app .geometry-stage text { paint-order: stroke; stroke: var(--panel); stroke-width: 5px; stroke-linejoin: round; }
+.complex-app .argand-grid { stroke: var(--rule); stroke-width: 1; }
+.complex-app .axis { stroke: var(--ink-soft); stroke-width: 2; }
+.complex-app .unit-circle { fill: none; stroke: var(--rule); stroke-dasharray: 7 6; stroke-width: 2; }
+.complex-app .vector { stroke: var(--construction); stroke-linecap: round; stroke-width: 5; }
+.complex-app .vector.is-result { stroke: var(--complex-violet); }
+.complex-app .vector.is-conjugate { stroke: var(--locus); }
+.complex-app .vector.is-guide { stroke: var(--moving); stroke-dasharray: 8 6; stroke-width: 3; }
+.complex-app .translation-parallelogram { fill: var(--complex-soft); fill-opacity: .5; stroke: none; }
+.complex-app .translation-track { stroke: var(--moving); stroke-dasharray: 8 6; stroke-linecap: round; stroke-width: 3; }
+.complex-app .translation-track.is-head-track { stroke-width: 4; }
+.complex-app .translation-arrowhead { fill: var(--moving); stroke: var(--panel); stroke-width: 1.5; }
+.complex-app .translation-copy { stroke: var(--complex-violet); stroke-linecap: round; stroke-width: 7; }
+.complex-app .translation-tail { fill: var(--panel); stroke: var(--complex-violet); stroke-width: 4; }
+.complex-app .translation-head { fill: var(--complex-violet); }
+.complex-app .sum-result { stroke: var(--ink-soft); stroke-dasharray: 10 7; stroke-width: 3.5; }
+.complex-app .translation-copy-label,
+.complex-app .translation-shift-label { fill: var(--complex-violet); font-size: 15px; font-weight: 700; }
+.complex-app .translation-shift-label { fill: var(--moving); font-size: 14px; }
+.complex-app .point { fill: var(--construction); stroke: var(--panel); stroke-width: 3; }
+.complex-app .point.is-result { fill: var(--complex-violet); }
+.complex-app .point.is-conjugate { fill: var(--locus); }
+.complex-app .vector.is-comparison { stroke: var(--moving); stroke-dasharray: 9 6; }
+.complex-app .point.is-comparison { fill: var(--moving); }
+.loci-app .locus-boundary { fill: none; stroke: var(--complex-violet); stroke-width: 4; }
+.loci-app .locus-boundary.closed, .loci-app .ray.closed { stroke-linecap: round; }
+.loci-app .locus-boundary.open { stroke-dasharray: 10 8; }
+.loci-app .ray { stroke: var(--complex-violet); stroke-width: 4; }
+.loci-app .ray.open { stroke-dasharray: 10 8; }
+.loci-app .excluded-point { fill: var(--panel); stroke: var(--moving); stroke-width: 4; }
+.loci-app .equal-arm { fill: none; stroke: var(--complex-violet); stroke-width: 3; }
+.loci-app .modulus-arm { stroke: var(--locus); stroke-linecap: round; stroke-width: 4; }
+.loci-app .modulus-arm-label { fill: var(--locus); font-size: 15px; font-weight: 800; }
+.loci-app .equal-tick { stroke: var(--moving); stroke-width: 4; stroke-linecap: round; }
+.loci-app .excluded-boundary { stroke: var(--moving); stroke-width: 3; stroke-dasharray: 10 8; }
+.loci-app .locus-region, .loci-app .sector-region, .loci-app .combined-region { fill: var(--complex-soft); fill-opacity: .65; stroke: none; }
+.loci-app .outside-region { fill: var(--complex-soft); fill-opacity: .45; }
+.loci-app .combined-region { fill: var(--locus-soft); fill-opacity: .48; }
+.loci-app .combined-region.secondary { fill: var(--focus-ring); fill-opacity: .38; }
+.loci-app .exact-intersection { fill: var(--locus-soft); fill-opacity: .82; stroke: none; }
+.loci-app .admissible-arc { fill: none; stroke: var(--moving); stroke-width: 8; stroke-linecap: round; }
+.loci-app .ratio-guide, .loci-app .radius-guide, .loci-app .exception-guide { fill: none; stroke: var(--moving); stroke-dasharray: 8 6; stroke-width: 3; }
+.loci-app .radius-guide.is-before { stroke: var(--complex-violet); }
+.loci-app .radius-guide.is-after { stroke: var(--locus); }
+.loci-app .mapped-curve { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 4; }
+.loci-app .mapped-curve.source { stroke: var(--complex-violet); }
+.loci-app .mapped-curve.image { stroke: var(--locus); }
+.loci-app .plane-divider { stroke: var(--rule); stroke-width: 2; }
+.loci-app .plane-label, .loci-app .mapping-summary { fill: var(--muted); font-size: 16px; font-weight: 700; letter-spacing: .08em; }
+.loci-app .plane-window { fill: none; stroke: var(--rule); stroke-width: 1.5; }
+.loci-app .set-boundary { stroke: var(--complex-violet); stroke-linecap: round; stroke-width: 3.5; }
+.loci-app .set-boundary.image { stroke: var(--locus); }
+.loci-app .set-boundary.open { stroke-dasharray: 9 7; }
+.loci-app .locus-open-marker { stroke-width: 2.5; }
+.loci-app .transform-region,
+.loci-app .source-transform-region,
+.loci-app .image-transform-region,
+.loci-app .mapped-region { stroke: none; }
+.loci-app .source-transform-region,
+.loci-app .mapped-region.source-region { fill: var(--complex-soft); fill-opacity: .62; }
+.loci-app .image-transform-region,
+.loci-app .mapped-region.image-region { fill: var(--locus-soft); fill-opacity: .52; }
+.loci-app .transform-ghost { fill: none; stroke: var(--fixed); stroke-dasharray: 7 7; stroke-width: 2.5; opacity: .52; }
+.loci-app .mapped-curve.progress-boundary { stroke-width: 8; }
+.loci-app .mapped-curve.progress-boundary.source { stroke: var(--complex-violet); }
+.loci-app .mapped-curve.progress-boundary.image { stroke: var(--locus); }
+.loci-app .operation-guide,
+.loci-app .infinity-guide { fill: none; stroke: var(--moving); stroke-dasharray: 8 6; stroke-width: 3; }
+.loci-app .transform-centre { fill: var(--panel); stroke: var(--moving); stroke-width: 4; }
+.loci-app .probe-point.source { fill: var(--complex-violet); }
+.loci-app .probe-point.image { fill: var(--locus); }
+.loci-app .probe-point { stroke: var(--panel); stroke-width: 1.5; }
+.loci-app .operation-strip { fill: var(--panel); stroke: var(--rule); stroke-width: 1.5; }
+.loci-app .operation-title { fill: var(--ink); font-size: 24px; font-weight: 800; }
+.loci-app .operation-stage { fill: var(--ink-soft); font-size: 17px; font-weight: 800; }
+.loci-app .operation-arrow { fill: none; stroke: var(--moving); stroke-linecap: round; stroke-width: 3; }
+.loci-app .substitution-arrow { stroke: var(--rule-strong); stroke-width: 3; }
+.loci-app .substitution-arrow-head { fill: var(--rule-strong); stroke: none; }
+.loci-app .substitution-badge { fill: var(--panel); stroke: var(--moving); stroke-width: 3; }
+.loci-app .substitution-symbol { fill: var(--moving); font-size: 17px; font-weight: 900; }
+.loci-app .substitution-title { fill: var(--muted); font-size: 11px; font-weight: 900; letter-spacing: .08em; }
+.loci-app .chain-card { fill: var(--panel-alt); stroke: var(--rule-strong); stroke-width: 1.5; }
+.loci-app .chain-card.source-card { fill: var(--complex-soft); stroke: var(--complex-violet); }
+.loci-app .chain-card.result-card { fill: var(--locus-soft); stroke: var(--locus); }
+.loci-app .chain-link { stroke: var(--rule-strong); stroke-width: 2.5; }
+.loci-app .chain-variable { fill: var(--complex-violet); font-size: 24px; font-style: italic; font-weight: 900; }
+.loci-app .chain-operation { fill: var(--ink-soft); font-size: 15px; font-weight: 850; letter-spacing: .08em; }
+.loci-app .locus-live-plate { fill-opacity: .97; }
+.complex-app .point-label { fill: var(--ink); font-size: 18px; font-weight: 700; }
+.complex-app .stage-note { fill: var(--muted); font-size: 14px; font-weight: 700; letter-spacing: .08em; }
+.complex-app .arc { fill: none; stroke: var(--moving); stroke-width: 3; }
+.complex-app .root-polygon { fill: var(--complex-soft); fill-opacity: .55; stroke: var(--complex-violet); stroke-width: 2.5; }
+.complex-app .root-polygon.is-building { fill: none; }
+.complex-app .construction-arm,
+.complex-app .reflection-track,
+.complex-app .correspondence-arm { fill: none; stroke: var(--moving); stroke-dasharray: 8 6; stroke-linecap: round; stroke-width: 3; }
+.complex-app .correspondence-arm.image { stroke: var(--locus); }
+.complex-app .reflection-track { stroke: var(--locus); }
+.complex-app .reflection-axis-mark { stroke: var(--ink-soft); stroke-width: 4; }
+.complex-app .angle-arc,
+.complex-app .target-angle-arc,
+.complex-app .advance-ring { fill: none; stroke: var(--moving); stroke-linecap: round; stroke-width: 5; }
+.complex-app .target-angle-arc { stroke: var(--complex-violet); stroke-dasharray: 8 6; stroke-width: 3; }
+.complex-app .advance-ring { stroke-dasharray: 10 6; stroke-width: 4; }
+.complex-app .live-plate { fill: var(--panel); fill-opacity: .94; stroke: var(--rule); stroke-width: 1.5; }
+.complex-app .live-value,
+.complex-app .key-line,
+.complex-app .key-result { fill: var(--ink-soft); font-size: 16px; font-weight: 700; stroke-width: 5px; }
+.complex-app .key-result { fill: var(--moving); font-size: 14px; }
+.complex-app .source-ghost { stroke: var(--fixed); stroke-dasharray: 7 6; stroke-width: 3; opacity: .55; }
+.complex-app .source-ghost-point { fill: var(--panel); stroke: var(--fixed); stroke-width: 3; opacity: .7; }
+.complex-app .wheel-backdrop,
+.complex-app .generated-radius-circle,
+.complex-app .verification-circle { fill: none; stroke: var(--rule); stroke-width: 2; }
+.complex-app .generated-radius-circle { stroke: var(--complex-violet); stroke-dasharray: 8 5; stroke-width: 4; }
+.complex-app .root-ray,
+.complex-app .target-direction { stroke: var(--complex-violet); stroke-linecap: round; stroke-width: 4; }
+.complex-app .root-ray.is-conjugate { stroke: var(--locus); }
+.complex-app .root-ray.is-comparison { stroke: var(--moving); }
+.complex-app .target-direction { stroke: var(--moving); stroke-width: 5; }
+.complex-app .root-index { fill: var(--ink); font-size: 17px; font-weight: 700; }
+.complex-app .moving-construction-point { fill: var(--moving); stroke: var(--panel); stroke-width: 3; }
+.complex-app .power-trace { fill: none; stroke: var(--complex-violet); stroke-linecap: round; stroke-linejoin: round; stroke-width: 3.2; opacity: .68; }
+.complex-app .power-trace:nth-of-type(even) { stroke: var(--locus); }
+.complex-app .power-marker { fill: var(--moving); fill-opacity: .72; stroke: var(--panel); stroke-width: 2.5; }
+.complex-app .power-gauge-base { stroke: var(--rule); stroke-width: 8; stroke-linecap: round; }
+.complex-app .power-gauge { stroke: var(--moving); stroke-width: 8; stroke-linecap: round; }
+.complex-app .power-panel-title { fill: var(--ink); font-size: 17px; font-weight: 800; letter-spacing: .08em; }
+.complex-app .power-ring-explainer,
+.complex-app .power-map-label { fill: var(--muted); font-size: 14px; font-weight: 700; letter-spacing: .03em; }
+.complex-app .power-axis { stroke: var(--rule); stroke-width: 1.5; }
+.complex-app .power-source-wheel { fill: none; stroke: var(--rule); stroke-width: 2; }
+.complex-app .power-source-polygon { fill-opacity: .32; }
+.complex-app .power-source-ray { stroke-linecap: round; stroke-width: 4; opacity: .9; }
+.complex-app .power-source-label { font-size: 14px; }
+.complex-app .power-map-arrow { fill: none; stroke: var(--ink-soft); stroke-width: 3; stroke-linecap: round; }
+.complex-app .power-map-arrowhead { fill: var(--ink-soft); stroke: var(--panel); stroke-width: 1.5; }
+.complex-app .power-modulus-ring { fill: none; stroke: var(--rule); stroke-width: 1.5; }
+.complex-app .power-modulus-ring[data-power-level="5"] { stroke: var(--ink-soft); stroke-width: 2; }
+.complex-app .power-ring-label { fill: var(--muted); font-size: 13px; font-weight: 800; }
+.complex-app .power-target-halo { fill: none; stroke: var(--ink-soft); stroke-width: 2; stroke-dasharray: 4 3; }
+.complex-app .power-target-label { fill: var(--ink); font-size: 18px; font-weight: 800; }
+.complex-app .power-live-readout { fill: var(--ink-soft); font-size: 18px; font-weight: 800; }
+.complex-app .power-return-result { fill: var(--locus); font-size: 17px; font-weight: 800; letter-spacing: .05em; }
+.complex-app .power-exponent-stage rect { fill: var(--panel); stroke: var(--rule); stroke-width: 1.5; }
+.complex-app .power-exponent-stage text { fill: var(--muted); font-size: 16px; font-weight: 800; }
+.complex-app .power-exponent-stage.is-complete rect { fill: var(--complex-soft); stroke: var(--complex-violet); }
+.complex-app .power-exponent-stage.is-complete text { fill: var(--complex-violet); }
+.complex-app .power-exponent-stage.is-current rect { fill: var(--focus-ring); stroke: var(--moving); stroke-width: 3; }
+.complex-app .power-exponent-stage.is-current text { fill: var(--moving); }
+.complex-app .power-trace[data-power-trace="0"],
+.complex-app .power-source-ray[data-root-index="0"] { stroke: #6951b8; }
+.complex-app .power-trace[data-power-trace="1"],
+.complex-app .power-source-ray[data-root-index="1"] { stroke: #148b78; }
+.complex-app .power-trace[data-power-trace="2"],
+.complex-app .power-source-ray[data-root-index="2"] { stroke: #d56a3a; }
+.complex-app .power-trace[data-power-trace="3"],
+.complex-app .power-source-ray[data-root-index="3"] { stroke: #2f70b7; }
+.complex-app .power-trace[data-power-trace="4"],
+.complex-app .power-source-ray[data-root-index="4"] { stroke: #a94f73; }
+.complex-app .source-power-root[data-root-index="0"] { fill: #6951b8; }
+.complex-app .source-power-root[data-root-index="1"] { fill: #148b78; }
+.complex-app .source-power-root[data-root-index="2"] { fill: #d56a3a; }
+.complex-app .source-power-root[data-root-index="3"] { fill: #2f70b7; }
+.complex-app .source-power-root[data-root-index="4"] { fill: #a94f73; }
+.complex-app .power-marker[data-power-image="0"] { fill: #6951b8; stroke: #6951b8; }
+.complex-app .power-marker[data-power-image="1"] { fill: #148b78; stroke: #148b78; }
+.complex-app .power-marker[data-power-image="2"] { fill: #d56a3a; stroke: #d56a3a; }
+.complex-app .power-marker[data-power-image="3"] { fill: #2f70b7; stroke: #2f70b7; }
+.complex-app .power-marker[data-power-image="4"] { fill: #a94f73; stroke: #a94f73; }
+.complex-app .power-marker.is-converged { fill: none; fill-opacity: 1; stroke-width: 3.5; }
+.complex-app .result-statement { fill: var(--locus); font-size: 18px; font-weight: 700; letter-spacing: .04em; }
+body[data-scene="roots"] .complex-app .step-rail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.complex-app .root-solution-title,
+.complex-app .root-symmetry-result { fill: var(--ink); font-size: 20px; font-weight: 850; letter-spacing: .08em; }
+.complex-app .root-solution-note { fill: var(--locus); font-size: 17px; font-weight: 800; letter-spacing: .05em; }
+.complex-app .power-scale-ring { fill: none; stroke: var(--rule); stroke-width: 1.5; }
+.complex-app .power-scale-ring[data-power-ring="5"] { stroke: var(--ink-soft); stroke-width: 2; }
+.complex-app .power-scale-label { fill: var(--muted); font-size: 14px; font-weight: 750; }
+.complex-app .power-camera-tick { stroke: var(--ink-soft); stroke-width: 2; }
+.complex-app .power-camera-label { fill: var(--ink-soft); font-size: 14px; font-weight: 800; paint-order: stroke; stroke: var(--panel); stroke-width: 5px; stroke-linejoin: round; }
+.complex-app .power-length-label { fill: var(--ink); font-size: 15px; font-weight: 850; letter-spacing: .035em; paint-order: stroke; stroke: var(--panel); stroke-width: 7px; stroke-linejoin: round; }
+.complex-app .single-root-power-trace { fill: none; stroke: var(--complex-violet); stroke-linecap: round; stroke-linejoin: round; stroke-width: 5; }
+.complex-app .power-current-vector { stroke: var(--complex-violet); stroke-linecap: round; stroke-width: 6; }
+.complex-app .power-history-point { fill: var(--panel); stroke: var(--complex-violet); stroke-width: 3; }
+.complex-app .power-history-point.is-current,
+.complex-app .power-moving-point { fill: var(--moving); stroke: var(--panel); stroke-width: 3; }
+.complex-app .power-history-label { fill: var(--ink); font-size: 16px; font-weight: 800; }
+.complex-app .power-click-sequence circle { fill: var(--panel); stroke: var(--rule-strong); stroke-width: 2; }
+.complex-app .power-click-sequence circle.is-complete { fill: var(--complex-violet); stroke: var(--complex-violet); }
+.complex-app .power-click-sequence circle.is-current { fill: var(--moving); stroke: var(--moving); }
+.complex-app .power-click-sequence text { fill: var(--ink-soft); font-size: 14px; font-weight: 800; }
+.complex-app .power-inset-source { stroke: var(--fixed); stroke-dasharray: 7 6; stroke-width: 4; }
+.complex-app .power-inset-image { stroke: var(--complex-violet); stroke-linecap: round; stroke-width: 6; }
+.complex-app .power-inset-title { fill: var(--ink); font-size: 17px; font-weight: 850; letter-spacing: .08em; }
+.complex-app .power-inset-label { fill: var(--moving); font-size: 15px; font-weight: 800; }
+.complex-app .power-inset-arc { stroke-width: 4; }
+.complex-app .symmetry-moving-ray { stroke: var(--moving); }
+.complex-app .root-symmetry-result { fill: var(--locus); }
+.complex-app .arm-label { fill: var(--ink-soft); font-size: 15px; font-weight: 700; }
+.complex-app .sample-status-label { fill: var(--moving); font-size: 15px; font-weight: 700; }
+.complex-app .mapping-summary.secondary-summary { font-size: 14px; letter-spacing: .04em; }
+.complex-app .transition-circle { stroke-dasharray: 9 6; }
+.complex-app .mapping-marker { stroke: var(--panel); stroke-width: 3; }
+.complex-app .mapping-marker.source { fill: var(--complex-violet); }
+.complex-app .mapping-marker.image { fill: var(--locus); }
+.complex-app .offscreen-indicator { fill: var(--moving); stroke: var(--panel); stroke-width: 2; }
+.complex-app .offscreen-label { fill: var(--moving); font-size: 14px; font-weight: 700; }
+.complex-app .curve-label { font-size: 14px; font-weight: 700; }
+.complex-app .curve-label.source { fill: var(--complex-violet); }
+.complex-app .curve-label.image { fill: var(--locus); }
+.complex-app .mapped-curve.secondary { stroke-dasharray: 8 6; opacity: .78; }
+.complex-app .math-ledger { border-left-color: var(--complex-violet); }
+.complex-app .scene-options { display: flex; min-width: 0; flex-wrap: wrap; gap: 10px 18px; margin: 16px 0 0; padding: 14px 0 0; border: 0; border-top: 1px solid var(--rule); }
+.complex-app .scene-options[hidden], .complex-app .scene-options label[hidden] { display: none; }
+.complex-app .scene-options legend { padding: 0; color: var(--complex-violet); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.complex-app .scene-options label { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-soft); font-size: 12px; }
+.complex-app .scene-options input { accent-color: var(--complex-violet); }
+.complex-app .instrument-rail { grid-template-columns: 1fr auto; }
+.complex-app .transport { grid-column: 2; }
+.complex-app .shortcut-note { grid-column: 1 / -1; }
+.complex-app #play-button:disabled { border-style: dashed; color: var(--muted); opacity: .76; }
+body[data-scene="pairs"] .complex-app .step-rail { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+.complex-app .horner-point.is-alpha,
+.complex-app .horner-summary-node.is-alpha,
+.complex-app .horner-root.is-real { fill: var(--complex-violet); }
+.complex-app .horner-point.is-conjugate,
+.complex-app .horner-summary-node.is-conjugate { fill: var(--locus); }
+.complex-app .horner-point-label,
+.complex-app .horner-shared-label,
+.complex-app .horner-origin-label { fill: var(--ink); font-size: 16px; font-weight: 800; }
+.complex-app .horner-shared-label,
+.complex-app .horner-origin-label { fill: var(--locus); font-size: 17px; }
+.complex-app .horner-vector { stroke-linecap: round; stroke-width: 6; }
+.complex-app .horner-vector.is-alpha { stroke: var(--complex-violet); }
+.complex-app .horner-vector.is-conjugate { stroke: var(--locus); stroke-dasharray: 10 5; }
+.complex-app .horner-vector.is-source { stroke: var(--fixed); stroke-dasharray: 7 6; stroke-width: 3; opacity: .46; }
+.complex-app .horner-vector.is-resultant { stroke-width: 3.5; opacity: .78; }
+.complex-app .horner-vector.is-start { stroke: var(--ink-soft); }
+.complex-app .horner-mirror-guide { stroke: var(--rule-strong); stroke-dasharray: 6 7; stroke-width: 2; }
+.complex-app .horner-multiply-trace { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5; opacity: .72; }
+.complex-app .horner-multiply-trace.is-alpha { stroke: var(--complex-violet); }
+.complex-app .horner-multiply-trace.is-conjugate { stroke: var(--locus); stroke-dasharray: 10 5; }
+.complex-app .horner-shift-track { stroke: var(--moving); stroke-dasharray: 7 6; stroke-linecap: round; stroke-width: 3; }
+.complex-app .horner-rigid-copy,
+.complex-app .horner-summary-translate { stroke-linecap: round; stroke-width: 7; }
+.complex-app .horner-rigid-copy.is-alpha { stroke: var(--complex-violet); }
+.complex-app .horner-rigid-copy.is-conjugate { stroke: var(--locus); stroke-dasharray: 12 5; }
+.complex-app .horner-summary-translate { stroke: var(--moving); opacity: .78; }
+.complex-app .horner-summary-translate.is-conjugate { stroke-dasharray: 11 5; }
+.complex-app .horner-zero-target { fill: var(--panel); stroke: var(--locus); stroke-width: 5; }
+.complex-app .horner-start-point { fill: var(--panel); stroke: var(--ink-soft); stroke-width: 4; }
+.complex-app .horner-summary-title { fill: var(--locus); font-size: 18px; font-weight: 900; letter-spacing: .06em; }
+.complex-app .horner-operation-badge rect { fill: var(--complex-soft); fill-opacity: .92; stroke: var(--complex-violet); stroke-width: 2; }
+.complex-app .horner-operation-badge.is-translate rect { fill: var(--focus-ring); stroke: var(--moving); }
+.complex-app .horner-operation-badge text { fill: var(--complex-violet); font-size: 15px; font-weight: 850; letter-spacing: .04em; }
+.complex-app .horner-operation-badge.is-translate text { fill: var(--moving); }
+.complex-app .horner-operation-strip rect { stroke-width: 2; }
+.complex-app .horner-operation-strip text { font-size: 16px; font-weight: 900; }
+.complex-app .horner-operation-strip .is-multiply rect { fill: var(--complex-soft); stroke: var(--complex-violet); }
+.complex-app .horner-operation-strip .is-multiply text { fill: var(--complex-violet); }
+.complex-app .horner-operation-strip .is-translate rect { fill: var(--focus-ring); stroke: var(--moving); }
+.complex-app .horner-operation-strip .is-translate text { fill: var(--moving); }
+@media (max-width: 760px) { .complex-app .instrument-rail { grid-template-columns: 1fr; } .complex-app .transport { grid-column: 1; } }
+@media (max-width: 470px) {
+  .complex-app .step-tab { min-width: 0; overflow: hidden; white-space: nowrap; }
+  .complex-app .step-tab[data-short] { font-size: 0; }
+  .complex-app .step-tab[data-short]::after { content: attr(data-short); font-size: 11px; }
+  .complex-app .workspace, .complex-app .ledger, .complex-app .math-ledger { max-width: 100%; overflow-x: hidden; }
+  .complex-app .math-line { font-size: 14px; }
+  .complex-app .math-line .katex { font-size: .88em; }
+  .loci-app .math-line { font-size: 16px; }
+  .loci-app .math-line .katex { font-size: 1em; }
+  .complex-app .point-label, .complex-app .root-index, .complex-app .sample-status-label, .complex-app .arm-label, .complex-app .curve-label, .complex-app .translation-copy-label { font-size: 22px; }
+  .complex-app .translation-shift-label { font-size: 22px; }
+  .complex-app .stage-note { font-size: 19px; }
+  .complex-app .plane-label { font-size: 22px; }
+  .loci-app .substitution-symbol { font-size: 24px; }
+  .loci-app .substitution-title { font-size: 17px; }
+  .loci-app .chain-variable { font-size: 30px; }
+  .loci-app .chain-operation { font-size: 21px; }
+  .complex-app .mapping-summary { font-size: 22px; }
+  .complex-app .mapping-summary.secondary-summary { font-size: 19px; }
+  .complex-app .live-value, .complex-app .key-line { font-size: 20px; }
+  .complex-app .key-result { font-size: 18px; }
+  .complex-app .offscreen-label { font-size: 22px; }
+  .complex-app .power-panel-title, .complex-app .power-target-label, .complex-app .power-live-readout, .complex-app .power-return-result { font-size: 23px; }
+  .complex-app .power-ring-explainer, .complex-app .power-map-label, .complex-app .power-ring-label, .complex-app .power-source-label { font-size: 19px; }
+  .complex-app .power-exponent-stage text { font-size: 22px; }
+  .complex-app .root-solution-title, .complex-app .root-symmetry-result { font-size: 25px; }
+  .complex-app .root-solution-note, .complex-app .power-history-label, .complex-app .power-scale-label, .complex-app .power-camera-label, .complex-app .power-click-sequence text { font-size: 21px; }
+  .complex-app .power-length-label { font-size: 22px; }
+  .complex-app [data-live-readout="single-root-power-live"] .live-value, .complex-app [data-live-readout="root-symmetry-live"] .live-value { font-size: 26px; }
+  .complex-app .power-inset-title { font-size: 24px; }
+  .complex-app .power-inset-label { font-size: 22px; }
+  .complex-app .horner-point-label, .complex-app .horner-shared-label, .complex-app .horner-origin-label { font-size: 26px; }
+  .complex-app .horner-operation-badge text, .complex-app .horner-operation-strip text { font-size: 21px; }
+  .complex-app .horner-summary-title { font-size: 23px; }
+}
+
+/* Instrument 08: stereographic projection and the Riemann sphere */
+.sphere-app {
+  --sphere-blue: #2f70b7;
+  --sphere-blue-soft: #dce8f7;
+  --sphere-green: #148b78;
+  --sphere-orange: #d56a3a;
+}
+.sphere-app .step-rail { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.sphere-app .math-line .katex { font-size: .83em; }
+.sphere-app .stage-frame { background: linear-gradient(145deg, #fbfcff 0%, #eef3fa 100%); }
+.sphere-app .geometry-stage {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.sphere-app .geometry-stage.is-dragging { cursor: grabbing; }
+.sphere-app .geometry-stage.is-angle-step { cursor: default; }
+.sphere-app .geometry-stage text {
+  font-family: var(--utility);
+  paint-order: stroke fill;
+  stroke: rgba(251, 252, 255, .96);
+  stroke-width: 6px;
+  stroke-linejoin: round;
+}
+.sphere-app .sphere-shadow {
+  fill: rgba(24, 48, 74, .1);
+  filter: blur(8px);
+}
+.sphere-app .sphere-body {
+  fill: url(#sphere-surface);
+  stroke: #496b95;
+  stroke-width: 3;
+  filter: url(#sphere-glow);
+}
+.sphere-app .sphere-grid-line {
+  fill: none;
+  stroke: #5379a7;
+  stroke-width: 1.7;
+  opacity: .48;
+}
+.sphere-app .sphere-grid-line.is-back {
+  stroke-dasharray: 5 6;
+  opacity: .2;
+}
+.sphere-app .sphere-grid-line.is-front { opacity: .56; }
+.sphere-app .north-pole {
+  fill: var(--sphere-orange);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.sphere-app .sphere-label {
+  fill: var(--ink);
+  font-size: 16px;
+  font-weight: 800;
+}
+.sphere-app .north-label {
+  fill: var(--sphere-orange);
+  font-size: 15px;
+}
+.sphere-app .stereo-plane {
+  fill: #f3e8df;
+  fill-opacity: .72;
+  stroke: var(--sphere-orange);
+  stroke-width: 2.5;
+}
+.sphere-app .stereo-axis {
+  stroke: #826b62;
+  stroke-width: 2;
+  opacity: .72;
+}
+.sphere-app .plane-axis-label { fill: #73584d; }
+.sphere-app .projection-ray {
+  stroke: var(--sphere-orange);
+  stroke-width: 4;
+  stroke-dasharray: 9 7;
+  stroke-linecap: round;
+}
+.sphere-app .infinity-ray { opacity: .72; }
+.sphere-app .plane-address,
+.sphere-app .local-source-point,
+.sphere-app .sphere-map-point.source {
+  fill: var(--sphere-orange);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.sphere-app .sphere-address,
+.sphere-app .local-image-point,
+.sphere-app .sphere-map-point.image {
+  fill: var(--sphere-green);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.sphere-app .point-caption { font-size: 17px; }
+.sphere-app .plane-generated-curve,
+.sphere-app .plane-circle-curve {
+  fill: none;
+  stroke: var(--complex-violet);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+.sphere-app .plane-generated-curve { stroke-dasharray: 10 7; }
+.sphere-app .sphere-generated-curve,
+.sphere-app .sphere-circle-lift {
+  fill: none;
+  stroke: var(--complex-violet);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sphere-app .sphere-generated-curve.is-back,
+.sphere-app .sphere-circle-lift.is-back,
+.sphere-app .sphere-line-lift.is-back,
+.sphere-app .source-sphere-circle.is-back,
+.sphere-app .image-sphere-circle.is-back,
+.sphere-app .sphere-limit-path.is-back {
+  stroke-dasharray: 8 7;
+  opacity: .34;
+}
+.sphere-app .sphere-limit-path {
+  fill: none;
+  stroke: var(--sphere-green);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+.sphere-app .plane-escape-track {
+  stroke: var(--sphere-orange);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+.sphere-app .is-offstage-proxy { fill: none; }
+.sphere-app .plane-line-curve {
+  fill: none;
+  stroke: var(--sphere-green);
+  stroke-width: 5;
+  stroke-dasharray: 10 7;
+}
+.sphere-app .sphere-line-lift,
+.sphere-app .image-sphere-circle {
+  fill: none;
+  stroke: var(--sphere-green);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sphere-app .sphere-line-lift { stroke-dasharray: 10 7; }
+.sphere-app .sphere-section-plane {
+  fill-opacity: .18;
+  stroke-width: 2.5;
+  stroke-dasharray: 8 7;
+}
+.sphere-app .sphere-section-plane.is-circle-section {
+  fill: var(--complex-soft);
+  stroke: var(--complex-violet);
+}
+.sphere-app .sphere-section-plane.is-line-section {
+  fill: #dcefe9;
+  stroke: var(--sphere-green);
+}
+.sphere-app .plane-mobius-source-line,
+.sphere-app .source-sphere-circle {
+  fill: none;
+  stroke: var(--complex-violet);
+  stroke-width: 5;
+  stroke-dasharray: 10 7;
+  stroke-linecap: round;
+}
+.sphere-app .plane-mobius-image-circle,
+.sphere-app .image-sphere-circle {
+  fill: none;
+  stroke: var(--sphere-green);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sphere-app .sphere-rotation-trace {
+  fill: none;
+  stroke: var(--sphere-orange);
+  stroke-width: 3;
+  stroke-dasharray: 6 6;
+  stroke-linecap: round;
+}
+.sphere-app .sphere-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+.sphere-app .sphere-controls label {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.sphere-app .sphere-controls select,
+.sphere-app .sphere-controls input {
+  width: 100%;
+  min-width: 0;
+}
+.sphere-app .sphere-controls select {
+  padding: 7px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+  text-transform: none;
+}
+.sphere-app .sphere-controls output {
+  justify-self: end;
+  color: var(--complex-violet);
+}
+.sphere-app .sphere-controls p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .sphere-app .sphere-controls { grid-template-columns: 1fr; }
+  .sphere-app .sphere-controls p { grid-column: 1; }
+}
+
+@media (max-width: 470px) {
+  .sphere-app .geometry-stage text { font-size: 23px; }
+  .sphere-app .sphere-label,
+  .sphere-app .north-label { font-size: 20px; }
+}
+
+/* Instrument 07: plane-first Möbius properties and construction shortcuts */
+.mobius-toolkit-app {
+  --mobius-source: #6758c8;
+  --mobius-source-2: #3579b7;
+  --mobius-image: #138a78;
+  --mobius-image-2: #2e70b3;
+  --mobius-pole: #d66b3b;
+  --mobius-construct: #d0952c;
+}
+.mobius-toolkit-app .step-rail { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.mobius-toolkit-app .math-line .katex { font-size: .82em; }
+.mobius-toolkit-app .stage-frame {
+  background:
+    radial-gradient(circle at 25% 30%, rgba(103, 88, 200, .08), transparent 26%),
+    radial-gradient(circle at 74% 62%, rgba(19, 138, 120, .08), transparent 30%),
+    #f7f9fc;
+}
+.mobius-toolkit-app .geometry-stage text {
+  font-family: var(--utility);
+  paint-order: stroke fill;
+  stroke: rgba(247, 249, 252, .97);
+  stroke-width: 6px;
+  stroke-linejoin: round;
+}
+.mobius-toolkit-app #mobius-arrow path { fill: var(--ink-soft); stroke: none; }
+.mobius-toolkit-app .mobius-plane-field {
+  fill: rgba(255, 255, 255, .7);
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+.mobius-toolkit-app .mobius-plane-grid line {
+  stroke: var(--rule);
+  stroke-width: 1;
+  opacity: .78;
+}
+.mobius-toolkit-app .mobius-axis {
+  stroke: var(--ink-soft);
+  stroke-width: 2.2;
+}
+.mobius-toolkit-app .mobius-plane-title {
+  fill: var(--ink);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+.mobius-toolkit-app .mobius-axis-label {
+  fill: var(--muted);
+  font-size: 15px;
+  font-weight: 800;
+}
+.mobius-toolkit-app .mobius-map-bridge line {
+  stroke: var(--mobius-pole);
+  stroke-width: 4;
+}
+.mobius-toolkit-app .mobius-map-bridge text {
+  fill: var(--mobius-pole);
+  font-family: var(--display);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 800;
+}
+.mobius-toolkit-app .mobius-stage-claim {
+  fill: var(--ink);
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: .05em;
+}
+.mobius-toolkit-app .mobius-source-locus,
+.mobius-toolkit-app .mobius-image-locus {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mobius-toolkit-app .mobius-source-locus {
+  stroke: var(--mobius-source);
+  stroke-width: 5;
+}
+.mobius-toolkit-app .mobius-source-locus.is-second {
+  stroke: var(--mobius-source-2);
+}
+.mobius-toolkit-app .mobius-image-locus {
+  stroke: var(--mobius-image);
+  stroke-width: 6;
+}
+.mobius-toolkit-app .mobius-image-locus.mobius-proof-base-locus {
+  stroke: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-image-locus.is-second {
+  stroke: var(--mobius-image-2);
+}
+.mobius-toolkit-app .mobius-image-locus.is-limit-line {
+  stroke-width: 7;
+  stroke-dasharray: 12 8;
+}
+.mobius-toolkit-app .mobius-conformal-circle {
+  stroke-linecap: butt;
+}
+.mobius-toolkit-app .mobius-source-locus.mobius-correspondence-one,
+.mobius-toolkit-app .mobius-image-locus.mobius-correspondence-one,
+.mobius-toolkit-app .mobius-tangent-guide.mobius-correspondence-one {
+  stroke: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-source-locus.mobius-correspondence-two,
+.mobius-toolkit-app .mobius-image-locus.mobius-correspondence-two,
+.mobius-toolkit-app .mobius-tangent-guide.mobius-correspondence-two {
+  stroke: var(--mobius-source-2);
+  stroke-dasharray: 10 7;
+}
+.mobius-toolkit-app .mobius-angle-intersection-point circle {
+  fill: var(--mobius-construct);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-angle-intersection-point text {
+  fill: #966619;
+  font-size: 17px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-pole-point circle,
+.mobius-toolkit-app .mobius-infinity-badge rect {
+  fill: var(--mobius-pole);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-pole-point text {
+  fill: var(--mobius-pole);
+  font-size: 17px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-image-point circle,
+.mobius-toolkit-app .mobius-centre-point circle {
+  fill: var(--mobius-image);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-image-point text,
+.mobius-toolkit-app .mobius-centre-point text {
+  fill: var(--mobius-image);
+  font-size: 17px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-source-centre-point circle {
+  fill: var(--mobius-source-2);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-source-centre-point text {
+  fill: var(--mobius-source-2);
+  font-size: 17px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-reflected-point circle,
+.mobius-toolkit-app .mobius-sample-point circle {
+  fill: var(--mobius-construct);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-reflected-point text,
+.mobius-toolkit-app .mobius-sample-point text {
+  fill: #966619;
+  font-size: 16px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-pole-image-point circle {
+  fill: var(--mobius-pole);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-pole-image-point text {
+  fill: var(--mobius-pole);
+  font-size: 16px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-reflected-image-point circle {
+  fill: var(--mobius-construct);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-reflected-image-point text {
+  fill: #966619;
+  font-size: 16px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-infinity-badge text {
+  fill: #fff;
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 900;
+  stroke: none;
+}
+.mobius-toolkit-app .mobius-infinity-badge.is-source rect {
+  fill: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-exception-arrow {
+  fill: none;
+  stroke: var(--mobius-pole);
+  stroke-width: 3.5;
+  stroke-dasharray: 9 7;
+}
+.mobius-toolkit-app .mobius-exception-arrow.is-secondary {
+  stroke: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-right-angle {
+  fill: none;
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+}
+.mobius-toolkit-app .mobius-tangent-guide {
+  stroke: var(--mobius-image);
+  stroke-width: 4;
+  stroke-dasharray: 8 6;
+}
+.mobius-toolkit-app .mobius-tangent-guide.is-second {
+  stroke: var(--mobius-image-2);
+}
+.mobius-toolkit-app .mobius-angle-label {
+  fill: var(--mobius-construct);
+  font-size: 20px;
+  font-weight: 950;
+}
+.mobius-toolkit-app .mobius-sample-link line {
+  stroke: var(--mobius-pole);
+  stroke-width: 2.5;
+  stroke-dasharray: 7 7;
+  opacity: .58;
+}
+.mobius-toolkit-app .mobius-sample-link text {
+  fill: var(--mobius-pole);
+  font-size: 15px;
+  font-weight: 850;
+}
+.mobius-toolkit-app .mobius-kind-readout rect,
+.mobius-toolkit-app .mobius-result-readout rect {
+  fill: rgba(255, 255, 255, .95);
+  stroke: var(--mobius-image);
+  stroke-width: 2;
+}
+.mobius-toolkit-app .mobius-kind-readout.is-line rect {
+  fill: #fff1ea;
+  stroke: var(--mobius-pole);
+}
+.mobius-toolkit-app .mobius-result-readout.is-waiting rect {
+  fill: #fff8ea;
+  stroke: var(--mobius-construct);
+}
+.mobius-toolkit-app .mobius-kind-readout text,
+.mobius-toolkit-app .mobius-result-readout text {
+  fill: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .045em;
+}
+.mobius-toolkit-app .mobius-kind-readout.is-line text { fill: var(--mobius-pole); }
+.mobius-toolkit-app .mobius-locus-label,
+.mobius-toolkit-app .mobius-product-label {
+  fill: var(--ink-soft);
+  font-size: 16px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-reflection-line,
+.mobius-toolkit-app .mobius-inversion-ray {
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+  stroke-dasharray: 10 7;
+}
+.mobius-toolkit-app .mobius-image-reflection-line {
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+  stroke-dasharray: 10 7;
+}
+.mobius-toolkit-app .mobius-radius-line {
+  stroke: var(--mobius-image);
+  stroke-width: 4;
+}
+.mobius-toolkit-app .mobius-auxiliary-circle {
+  fill: rgba(208, 149, 44, .055);
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+  stroke-dasharray: 10 7;
+}
+.mobius-toolkit-app .mobius-auxiliary-circle-history {
+  fill: none;
+  stroke: var(--mobius-construct);
+  stroke-width: 2.5;
+  opacity: .28;
+}
+.mobius-toolkit-app .mobius-proof-normal {
+  stroke: var(--mobius-image);
+  stroke-width: 5;
+  stroke-dasharray: 11 7;
+}
+.mobius-toolkit-app .mobius-proof-normal-history {
+  stroke: var(--mobius-image);
+  stroke-width: 3;
+  opacity: .42;
+}
+.mobius-toolkit-app .mobius-proof-trace-circle {
+  fill: none;
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+}
+.mobius-toolkit-app .mobius-proof-trace-line {
+  stroke: var(--mobius-image);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+}
+.mobius-toolkit-app .mobius-proof-trace-circle.pair-one,
+.mobius-toolkit-app .mobius-proof-trace-line.pair-one {
+  stroke: var(--mobius-construct);
+}
+.mobius-toolkit-app .mobius-proof-trace-circle.pair-two,
+.mobius-toolkit-app .mobius-proof-trace-line.pair-two {
+  stroke: var(--mobius-source-2);
+}
+.mobius-toolkit-app .mobius-proof-trace-circle.pair-two.is-settled,
+.mobius-toolkit-app .mobius-proof-trace-line.pair-two.is-settled {
+  stroke-dasharray: .075 .045;
+}
+.mobius-toolkit-app .mobius-proof-trace-circle.pair-moving,
+.mobius-toolkit-app .mobius-proof-trace-line.pair-moving {
+  stroke: var(--mobius-image);
+}
+.mobius-toolkit-app .mobius-proof-trace-circle.is-history,
+.mobius-toolkit-app .mobius-proof-trace-line.is-history {
+  opacity: .38;
+  stroke-width: 2.5;
+}
+.mobius-toolkit-app .mobius-sample-point.is-history,
+.mobius-toolkit-app .mobius-image-point.is-history {
+  opacity: .4;
+}
+.mobius-toolkit-app [data-proof-pair="1"] .mobius-sample-point circle,
+.mobius-toolkit-app [data-proof-pair="1"] .mobius-image-point circle {
+  fill: var(--mobius-construct);
+}
+.mobius-toolkit-app [data-proof-pair="2"] .mobius-sample-point circle,
+.mobius-toolkit-app [data-proof-pair="2"] .mobius-image-point circle {
+  fill: var(--mobius-source-2);
+}
+.mobius-toolkit-app [data-proof-pair="moving"] .mobius-sample-point circle,
+.mobius-toolkit-app [data-proof-pair="moving"] .mobius-image-point circle {
+  fill: var(--mobius-image);
+}
+.mobius-toolkit-app .mobius-infinity-point {
+  fill: #fff;
+  stroke-width: 4;
+}
+.mobius-toolkit-app .mobius-infinity-point.is-source {
+  stroke: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-infinity-point.is-image {
+  stroke: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-infinity-label {
+  fill: var(--mobius-source);
+  font-size: 18px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-infinity-label.is-image {
+  fill: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-proof-point-history {
+  fill: var(--mobius-construct);
+  opacity: .48;
+}
+.mobius-toolkit-app .mobius-proof-point-history.is-image {
+  fill: var(--mobius-image);
+}
+.mobius-toolkit-app .mobius-proof-tangent {
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+}
+.mobius-toolkit-app .mobius-proof-tangent.is-image {
+  stroke: var(--mobius-image);
+}
+.mobius-toolkit-app .mobius-proof-radius {
+  stroke: var(--mobius-construct);
+  stroke-width: 2.5;
+  opacity: .55;
+}
+.mobius-toolkit-app .mobius-reflection-tick {
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+}
+.mobius-toolkit-app .mobius-proof-label {
+  fill: #966619;
+  font-size: 16px;
+  font-weight: 900;
+}
+.mobius-toolkit-app .mobius-proof-label.is-image {
+  fill: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-diameter-selector {
+  stroke: var(--mobius-construct);
+  stroke-width: 4;
+  stroke-dasharray: 10 7;
+}
+.mobius-toolkit-app .mobius-image-locus.mobius-diameter-base-circle {
+  stroke: var(--mobius-source);
+}
+.mobius-toolkit-app .mobius-diameter-image-trace {
+  fill: none;
+  stroke: var(--mobius-construct);
+  stroke-width: 5;
+  stroke-dasharray: 10 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mobius-toolkit-app .mobius-diameter-image-trace.is-diameter {
+  stroke: var(--mobius-construct);
+  stroke-width: 6;
+  stroke-dasharray: 10 7;
+}
+.mobius-toolkit-app .mobius-correspondence-a-point circle,
+.mobius-toolkit-app .mobius-correspondence-b-point circle,
+.mobius-toolkit-app .mobius-neutral-point circle {
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mobius-toolkit-app .mobius-correspondence-a-point circle { fill: var(--mobius-source-2); }
+.mobius-toolkit-app .mobius-correspondence-b-point circle { fill: var(--mobius-pole); }
+.mobius-toolkit-app .mobius-neutral-point circle { fill: var(--ink-soft); }
+.mobius-toolkit-app .mobius-correspondence-a-point text { fill: var(--mobius-source-2); }
+.mobius-toolkit-app .mobius-correspondence-b-point text { fill: var(--mobius-pole); }
+.mobius-toolkit-app .mobius-neutral-point text { fill: var(--ink-soft); }
+.mobius-toolkit-app .mobius-correspondence-a-point text,
+.mobius-toolkit-app .mobius-correspondence-b-point text,
+.mobius-toolkit-app .mobius-neutral-point text {
+  font-size: 17px;
+  font-weight: 900;
+}
+
+@media (max-width: 470px) {
+  .mobius-toolkit-app .geometry-stage text { font-size: 22px; }
+  .mobius-toolkit-app .mobius-plane-title,
+  .mobius-toolkit-app .mobius-stage-claim,
+  .mobius-toolkit-app .mobius-angle-label { font-size: 25px; }
+  .mobius-toolkit-app .mobius-axis-label,
+  .mobius-toolkit-app .mobius-pole-point text,
+  .mobius-toolkit-app .mobius-image-point text,
+  .mobius-toolkit-app .mobius-centre-point text,
+  .mobius-toolkit-app .mobius-source-centre-point text,
+  .mobius-toolkit-app .mobius-reflected-point text,
+  .mobius-toolkit-app .mobius-sample-point text,
+  .mobius-toolkit-app .mobius-kind-readout text,
+  .mobius-toolkit-app .mobius-result-readout text,
+  .mobius-toolkit-app .mobius-locus-label,
+  .mobius-toolkit-app .mobius-product-label,
+  .mobius-toolkit-app .mobius-proof-label { font-size: 21px; }
+}
