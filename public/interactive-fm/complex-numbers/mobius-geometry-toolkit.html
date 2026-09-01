@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Möbius Geometry Toolkit</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="complex-instrument.css?v=r33">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="loci-runtime.js"></script>
+  <script defer src="mobius-geometry-scenes.js?v=r33"></script>
+</head>
+<body data-scene="mobius-toolkit">
+  <main class="instrument-app complex-app mobius-toolkit-app">
+    <header class="topbar">
+      <div class="identity"><a href="index.html">Further Mathematics</a><span>/</span><span>Complex instrument 07</span></div>
+      <div class="topbar-status"><span id="step-number" class="step-number">01</span><span>/ 05</span></div>
+    </header>
+    <nav class="step-rail" aria-label="Möbius geometry problem-solving sequence">
+      <button class="step-tab" data-step="0" data-short="01" aria-current="step">01 Special points</button>
+      <button class="step-tab" data-step="1" data-short="02">02 Line or circle?</button>
+      <button class="step-tab" data-step="2" data-short="03">03 Right angles</button>
+      <button class="step-tab" data-step="3" data-short="04">04 Reflect the pole</button>
+      <button class="step-tab" data-step="4" data-short="05">05 Find a diameter</button>
+    </nav>
+    <section class="workspace">
+      <div class="stage-shell">
+        <div class="stage-frame">
+          <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-label="A source and image Argand plane showing Möbius angle preservation, line and circle images, and reflected-pole and diameter constructions"></svg>
+        </div>
+      </div>
+      <aside class="ledger">
+        <p class="ledger-section-label">Möbius problem-solving bench</p>
+        <h1 id="step-title">Locate the two exceptional addresses</h1>
+        <p class="step-kicker">Start every mapping question with the pole and infinity.</p>
+        <p class="step-description">The denominator locates the pole; the ratio of leading coefficients locates the image of infinity.</p>
+        <section class="math-ledger">
+          <div id="math-line-1" class="math-line"></div>
+          <div id="math-line-2" class="math-line"></div>
+          <div id="math-line-3" class="math-line is-result"></div>
+        </section>
+        <fieldset class="scene-options mobius-layers">
+          <legend>Teacher layers</legend>
+          <label data-steps="0,1,2,3,4"><input type="checkbox" data-layer-toggle="labels" checked> Points and labels</label>
+          <label data-steps="1,2,3,4"><input type="checkbox" data-layer-toggle="loci" checked> Source and image loci</label>
+          <label data-steps="2,3"><input type="checkbox" data-layer-toggle="angle-guides" checked> Angle and normal guides</label>
+          <label data-steps="0,1,3,4"><input type="checkbox" data-layer-toggle="pole-construction" checked> Pole construction</label>
+          <label data-steps="1,2,3,4"><input type="checkbox" data-layer-toggle="sample-links"> Sample correspondences</label>
+        </fieldset>
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <p id="teacher-cue-text">Ask for the pole and the image of infinity before students manipulate an equation.</p>
+        </details>
+      </aside>
+    </section>
+    <footer class="instrument-rail">
+      <div></div>
+      <div class="transport">
+        <button id="reset-button" class="control-button">Reset</button>
+        <button id="back-button" class="control-button" disabled>Back</button>
+        <button id="play-button" class="control-button is-play" aria-pressed="false" aria-label="This is a static construction step" disabled>Static</button>
+        <button id="next-button" class="control-button is-primary">Next</button>
+      </div>
+      <p class="shortcut-note">Keyboard: arrows change step, space plays or pauses motion, R resets.</p>
+    </footer>
+  </main>
+</body>
+</html>

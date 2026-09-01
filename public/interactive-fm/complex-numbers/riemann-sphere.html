@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>The Riemann Sphere</title>
+  <link rel="stylesheet" href="../../exports/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="complex-instrument.css?v=r35">
+  <script defer src="../../exports/vendor/katex/katex.min.js"></script>
+  <script defer src="loci-runtime.js"></script>
+  <script defer src="../spatial-vectors/spatial-runtime.js"></script>
+  <script defer src="riemann-sphere-scenes.js?v=r35"></script>
+</head>
+<body data-scene="riemann-sphere">
+  <main class="instrument-app complex-app sphere-app">
+    <header class="topbar">
+      <div class="identity"><a href="index.html">Further Mathematics</a><span>/</span><span>Complex instrument 08</span></div>
+      <div class="topbar-status"><span id="step-number" class="step-number">01</span><span>/ 04</span></div>
+    </header>
+    <nav class="step-rail" aria-label="Riemann sphere explanation sequence">
+      <button class="step-tab" data-step="0" data-short="01" aria-current="step">01 Point correspondence</button>
+      <button class="step-tab" data-step="1" data-short="02">02 Infinity</button>
+      <button class="step-tab" data-step="2" data-short="03">03 Lines &amp; circles</button>
+      <button class="step-tab" data-step="3" data-short="04">04 Möbius rotation</button>
+    </nav>
+    <section class="workspace">
+      <div class="stage-shell">
+        <div class="stage-frame">
+          <svg id="geometry-stage" class="geometry-stage" viewBox="0 0 1000 640" role="img" aria-label="A tangent complex plane and Riemann sphere showing stereographic point correspondence, infinity, generalised circles, and a rigid Möbius rotation"></svg>
+        </div>
+      </div>
+      <aside class="ledger">
+        <p class="ledger-section-label">Extended complex plane laboratory</p>
+        <h1 id="step-title">Match a moving plane point to the sphere</h1>
+        <p class="step-kicker">One projection ray gives the same point two addresses.</p>
+        <p class="step-description">The complex plane is tangent at the south pole. The ray from the north pole through P(z) meets the sphere once, at S(z).</p>
+        <section class="math-ledger">
+          <div id="math-line-1" class="math-line"></div>
+          <div id="math-line-2" class="math-line"></div>
+          <div id="math-line-3" class="math-line is-result"></div>
+        </section>
+        <fieldset class="scene-options sphere-layers">
+          <legend>Teacher layers</legend>
+          <label data-steps="0,1,2,3"><input type="checkbox" data-layer-toggle="sphere-grid" checked> Sphere grid</label>
+          <label data-steps="0,1,3"><input type="checkbox" data-layer-toggle="projection-rays" checked> Projection / rotation traces</label>
+          <label data-steps="0,1,2,3"><input type="checkbox" data-layer-toggle="plane-curves" checked> Plane and sphere loci</label>
+          <label data-steps="0,1,3"><input type="checkbox" data-layer-toggle="correspondence-points" checked> Corresponding points</label>
+          <label data-steps="2"><input type="checkbox" data-layer-toggle="section-planes"> Section planes</label>
+        </fieldset>
+        <div class="sphere-controls">
+          <label>Fixed view
+            <select id="sphere-view">
+              <option value="projection">Projection rig</option>
+              <option value="front">Face-on sphere</option>
+              <option value="pole">Pole over plane</option>
+            </select>
+          </label>
+          <label>Model zoom <output id="sphere-zoom-output" for="sphere-zoom">100%</output>
+            <input id="sphere-zoom" type="range" min="80" max="130" step="5" value="100">
+          </label>
+          <p>Drag to rotate the model. The tangent plane, sphere and loci remain one fixed geometric construction.</p>
+        </div>
+        <details class="teacher-cue">
+          <summary>Teacher cue</summary>
+          <p>On step 03, ask which sphere circle contains N. On step 04, distinguish the displayed rigid rotation from a general Möbius transformation before returning to the general circle theorem.</p>
+        </details>
+      </aside>
+    </section>
+    <footer class="instrument-rail">
+      <div></div>
+      <div class="transport">
+        <button id="reset-button" class="control-button">Reset</button>
+        <button id="back-button" class="control-button" disabled>Back</button>
+        <button id="play-button" class="control-button is-play" aria-pressed="false" aria-label="Play the mathematical construction">Play</button>
+        <button id="next-button" class="control-button is-primary">Next</button>
+      </div>
+      <p class="shortcut-note">Keyboard: arrows change step, space plays or pauses motion, R resets.</p>
+    </footer>
+  </main>
+</body>
+</html>
