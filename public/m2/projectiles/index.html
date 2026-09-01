@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Four teacher-led Predict to Reveal demonstrations for Edexcel IAL M2 projectiles.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://yizi-wang.github.io/m2/projectiles/">
+    <meta property="og:title" content="Chapter 1 Projectile Intros · M2 Classroom Lab">
+    <meta property="og:description" content="Four short Predict → Reveal demonstrations for Edexcel IAL M2 projectiles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yizi-wang.github.io/m2/projectiles/">
+    <meta property="og:image" content="https://yizi-wang.github.io/m2/projectiles/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chapter 1 Projectile Intros · M2 Classroom Lab">
+    <meta name="twitter:description" content="Four short Predict → Reveal demonstrations for Edexcel IAL M2 projectiles.">
+    <meta name="twitter:image" content="https://yizi-wang.github.io/m2/projectiles/og.png">
+    <title>Chapter 1 Projectile Intros · M2 Classroom Lab</title>
+    <link rel="stylesheet" href="classroom.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-phase="predict" data-reveal-state="idle">
+    <main class="lab-shell">
+      <header class="lab-header">
+        <div class="title-lockup">
+          <span class="chapter-stamp" aria-hidden="true">01</span>
+          <div>
+            <p class="eyebrow">Edexcel IAL M2 · Chapter intro deck</p>
+            <h1>Projectiles</h1>
+          </div>
+        </div>
+
+        <nav class="scene-tabs" aria-label="Chapter 1 lesson intros">
+          <button class="scene-tab" type="button" data-scene="horizontal-clock" aria-selected="true">
+            <span>01</span> Horizontal clock
+          </button>
+          <button class="scene-tab" type="button" data-scene="balcony-range" aria-selected="false">
+            <span>02</span> Balcony range
+          </button>
+          <button class="scene-tab" type="button" data-scene="tracker-check" aria-selected="false">
+            <span>03</span> Tracker check
+          </button>
+          <button class="scene-tab" type="button" data-scene="target-choice" aria-selected="false">
+            <span>04</span> Target choice
+          </button>
+        </nav>
+      </header>
+
+      <section class="classroom-grid">
+        <section class="stage" aria-label="Projectile reveal diagram">
+          <div class="stage-bar">
+            <span id="phaseBadge" class="phase-badge">Predict</span>
+            <span id="stagePrompt">Hold the launch. Take the vote first.</span>
+          </div>
+          <canvas id="stageCanvas" width="1280" height="720" role="img" aria-label="Two balls waiting at the same height"></canvas>
+          <div class="stage-caption" aria-live="polite">
+            <strong id="stageTitle">Which ball lands first?</strong>
+            <span id="stageText">One is dropped. One is launched horizontally.</span>
+          </div>
+        </section>
+
+        <aside class="teacher-panel">
+          <div class="phase-track" aria-label="Two-stage interaction">
+            <span class="phase-node" data-phase-node="predict">Predict</span>
+            <span class="phase-arrow" aria-hidden="true">→</span>
+            <span class="phase-node" data-phase-node="reveal">Reveal</span>
+          </div>
+
+          <section class="panel-section prediction-section">
+            <p class="panel-kicker">Predict</p>
+            <h2 id="sceneQuestion">Which ball lands first?</h2>
+            <div id="predictionChoices" class="prediction-choices"></div>
+            <p id="predictionStatus" class="prediction-status" aria-live="polite">Take a class vote before revealing the model.</p>
+          </section>
+
+          <section class="panel-section action-section">
+            <button id="revealButton" class="primary-action reveal-action" type="button" disabled>Reveal the shared clock</button>
+            <button id="resetButton" class="quiet-action" type="button">Reset prediction</button>
+            <p class="shortcut-note">Keys: 1–4 lesson · Space reveal/replay · R reset</p>
+          </section>
+
+          <section id="equationPanel" class="panel-section equation-panel" hidden aria-live="polite">
+            <p class="panel-kicker">Reveal</p>
+            <div id="equationLines" class="equation-lines"></div>
+            <p id="sceneConclusion" class="scene-conclusion"></p>
+            <p id="predictionResult" class="prediction-result"></p>
+          </section>
+
+          <details class="teacher-cue">
+            <summary>Teacher cue</summary>
+            <p id="teacherCueText"></p>
+          </details>
+
+          <footer class="worksheet-link">
+            <span>Continue in the handout</span>
+            <strong id="worksheetAnchor">Lesson 01 · Horizontal Projection</strong>
+          </footer>
+        </aside>
+      </section>
+    </main>
+
+    <script src="classroom-runtime.js"></script>
+    <script src="projectile-model.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
