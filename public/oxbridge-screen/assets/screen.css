@@ -328,6 +328,13 @@ body.display-page {
   line-height: 1.05;
 }
 
+.brief-title-en {
+  margin: 1.1rem 0 0;
+  color: var(--muted);
+  font: 700 1.35rem/1 var(--utility);
+  letter-spacing: 0.16em;
+}
+
 .brief-heading .standfirst {
   margin: 0 0 0.3rem;
   font-size: 2.05rem;
@@ -389,16 +396,30 @@ body.display-page {
 .brief-card h2 {
   margin: 0;
   color: var(--paper);
-  font: 700 3.05rem/1.24 var(--display-serif);
+  font: 700 2.85rem/1.2 var(--display-serif);
   letter-spacing: -0.02em;
   text-wrap: balance;
+}
+
+.brief-headline-en {
+  margin: 0.65rem 0 0;
+  color: var(--brief-accent);
+  font: 650 1.55rem/1.3 var(--utility);
+  letter-spacing: 0.01em;
 }
 
 .brief-summary {
   margin: 0.8rem 0 0;
   color: var(--paper-dim);
-  font: 450 1.9rem/1.48 var(--display-sans);
+  font: 450 1.72rem/1.42 var(--display-sans);
   letter-spacing: 0.015em;
+}
+
+.brief-summary-en {
+  margin: 0.55rem 0 0;
+  color: #aebbc3;
+  font: 450 1.4rem/1.4 var(--utility);
+  letter-spacing: 0.01em;
 }
 
 .brief-source {
@@ -432,11 +453,20 @@ body.display-page {
 
 .interview-question {
   max-width: 72rem;
-  margin: 4rem 0 3.4rem;
+  margin: 4rem 0 1.8rem;
   color: var(--paper);
-  font: 700 5.55rem/1.17 var(--display-serif);
+  font: 700 5.15rem/1.17 var(--display-serif);
   letter-spacing: -0.04em;
   white-space: pre-line;
+  text-wrap: balance;
+}
+
+.interview-question-en {
+  max-width: 72rem;
+  margin: 0 0 3.2rem;
+  color: var(--paper-dim);
+  font: 520 2.15rem/1.45 var(--utility);
+  letter-spacing: 0.005em;
   text-wrap: balance;
 }
 
@@ -515,9 +545,15 @@ body.display-page {
 }
 
 .estimation-answer strong {
-  margin-top: 4rem;
+  margin-top: 3rem;
   color: var(--paper);
   font: 700 5rem/1.15 var(--display-serif);
+}
+
+.estimation-answer small {
+  margin-top: 1.6rem;
+  color: var(--paper-dim);
+  font: 520 1.8rem/1.35 var(--utility);
 }
 
 .interview-origin {

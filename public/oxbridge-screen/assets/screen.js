@@ -94,6 +94,7 @@
           <div class="estimation-answer" aria-hidden="true">
             <span>ESTIMATE</span>
             <strong>${escapeHtml(challenge.answer_unit || "约 ______")}</strong>
+            <small>${escapeHtml(challenge.answer_unit_en || "")}</small>
           </div>
         </div>`;
     }
@@ -140,8 +141,10 @@
             </div>
             <div class="brief-copy">
               <h2>${escapeHtml(item.headline)}</h2>
+              <p class="brief-headline-en" lang="en">${escapeHtml(item.headline_en)}</p>
               <p class="brief-summary">${escapeHtml(item.summary)}</p>
-              <p class="brief-source">来源 · ${escapeHtml(item.source.name)}${sourceUrl ? "" : " · 链接待核查"}</p>
+              <p class="brief-summary-en" lang="en">${escapeHtml(item.summary_en)}</p>
+              <p class="brief-source">来源 / SOURCE · ${escapeHtml(item.source.name)}${sourceUrl ? "" : " · 链接待核查"}</p>
             </div>
           </article>`;
       }).join("");
@@ -161,10 +164,13 @@
           <div class="brief-intro">
             <div class="brief-intro-topline">
               <p class="eyebrow">${escapeHtml(daily.eyebrow)}</p>
-              <span class="brief-page-count">NEWS ${firstItem}–${lastItem} / ${daily.items.length}</span>
+              <span class="brief-page-count">NEWS ${firstItem}-${lastItem} / ${daily.items.length}</span>
             </div>
             <div class="brief-heading${standfirst ? " has-standfirst" : ""}">
-              <h1 class="headline">${escapeHtml(daily.headline)}</h1>
+              <div>
+                <h1 class="headline">${escapeHtml(daily.headline)}</h1>
+                <p class="brief-title-en" lang="en">${escapeHtml(daily.headline_en)}</p>
+              </div>
               ${standfirst}
             </div>
           </div>
@@ -177,7 +183,7 @@
       slides.push(makeFrame(data, {
         rail: railLabels[challenge.visual] || "QUESTION",
         accent: challenge.accent || "coral",
-        section: challenge.subject
+        section: `${challenge.subject} · ${challenge.subject_en}`
       }, `
         <section class="content interview-slide" data-question-kind="${escapeHtml(challenge.visual || "network")}">
           <div class="interview-topline">
@@ -185,6 +191,7 @@
             <span class="question-count">QUESTION ${String(index + 1).padStart(2, "0")} / ${String(challenges.length).padStart(2, "0")}</span>
           </div>
           <h2 class="interview-question">${escapeHtml(challenge.headline)}</h2>
+          <p class="interview-question-en" lang="en">${escapeHtml(challenge.headline_en)}</p>
           ${challengeVisual(challenge)}
         </section>`));
     });

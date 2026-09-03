@@ -13,12 +13,15 @@
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
     "headline": "9月3日\n晨间简报",
+    "headline_en": "MORNING BRIEF",
     "items": [
       {
         "id": "brief-01",
         "category": "太空 / SPACE",
         "headline": "水星任务今晚20:00分离巡航模块",
+        "headline_en": "BepiColombo cruise module separates at 20:00 tonight",
         "summary": "这个模块已经工作八年。按ESA时间表，地球最快要到21:53收到分离后的首轮信号。",
+        "summary_en": "The module has been flying for eight years. ESA expects the first signal after separation to reach Earth no earlier than 21:53.",
         "source": {
           "name": "欧洲空间局（ESA）",
           "url": "https://www.esa.int/Enabling_Support/Operations/Watch_live_BepiColombo_begins_its_arrival_at_Mercury",
@@ -30,7 +33,9 @@
         "id": "brief-02",
         "category": "气候 / CLIMATE",
         "headline": "最乐观的情景下，升温峰值仍约为1.8°C",
+        "headline_en": "Even the most optimistic path puts peak warming near 1.8°C",
         "summary": "环境署称，未来几年突破1.5°C已难避免。峰值有多高、会持续多久，取决于接下来的减排。",
+        "summary_en": "UNEP says a temporary rise above 1.5°C is now hard to avoid. How high it goes, and for how long, depends on near-term emissions cuts.",
         "source": {
           "name": "联合国环境署（UNEP）",
           "url": "https://www.unep.org/zh-hans/xinwenyuziyuan/xinwengao-60",
@@ -42,7 +47,9 @@
         "id": "brief-03",
         "category": "天文 / ASTRONOMY",
         "headline": "中国天眼：气体还在，恒星却越造越慢",
+        "headline_en": "China's FAST telescope finds plenty of gas, but fewer new stars",
         "summary": "约250万个星系的观测显示：45亿年前造星速度是今天的2.5倍，中性氢却只有1.4倍。问题可能出在气体转成恒星的过程。",
+        "summary_en": "Data from about 2.5 million galaxies show that star formation was 2.5 times faster 4.5 billion years ago, while neutral hydrogen was only 1.4 times more abundant.",
         "source": {
           "name": "中国科学院（转引《中国科学报》）",
           "url": "https://www.cas.cn/cm/202609/t20260902_5119555.shtml",
@@ -54,7 +61,9 @@
         "id": "brief-04",
         "category": "经济 / ECONOMY",
         "headline": "IMF：全球公共债务已接近全球GDP总量",
+        "headline_en": "IMF says global public debt is nearing the size of world GDP",
         "summary": "IMF称今年全球增长约3%，公共债务却已接近GDP的100%；利率上升后，低收入国家借新还旧更吃力。",
+        "summary_en": "The IMF puts global growth near 3% this year, while public debt approaches 100% of GDP. Higher rates make refinancing harder for low-income countries.",
         "source": {
           "name": "国际货币基金组织（IMF）",
           "url": "https://www.imf.org/en/news/articles/2026/09/01/pr26284-imf-md-statement-conclusion-g20-finance-ministers-central-bank-governors-meeting",
@@ -66,7 +75,9 @@
         "id": "brief-05",
         "category": "技术 / TECHNOLOGY",
         "headline": "MIT给自动驾驶系统加了一层“解释器”",
+        "headline_en": "MIT builds an interpreter for self-driving systems",
         "summary": "CW-Net把车辆的判断换成人能读懂的概念。测试中，安全员更容易预判车辆什么时候会犯错。",
+        "summary_en": "CW-Net translates a vehicle's decisions into concepts people can understand. In tests, safety drivers could better predict when the car would make a mistake.",
         "source": {
           "name": "麻省理工学院新闻办公室（MIT News）",
           "url": "https://news.mit.edu/2026/system-helps-humans-predict-when-self-driving-cars-will-make-mistakes-0902",
@@ -78,7 +89,9 @@
         "id": "brief-06",
         "category": "政策 / POLICY",
         "headline": "英国扩大免费校餐，覆盖逾300万名儿童",
+        "headline_en": "UK expands free school meals to more than 3 million children",
         "summary": "英国教育部称，领取综合福利家庭的孩子现可获得免费校餐；今年9月另有1400所学校开设免费早餐。",
+        "summary_en": "Children in families receiving Universal Credit are now eligible. Another 1,400 schools are offering free breakfasts from September.",
         "source": {
           "name": "英国教育部（GOV.UK）",
           "url": "https://www.gov.uk/government/news/breathing-space-for-families-as-government-eases-school-costs",
@@ -93,30 +106,37 @@
     "challenges": [
       {
         "id": "proof-ramsey",
-        "eyebrow": "每周思考题",
+        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
         "headline": "六个人参加晚餐。\n证明：总能找到三个人，\n彼此认识或彼此都不认识。",
+        "headline_en": "Six people are at dinner. Prove that there are three who all know one another, or three who are all strangers to one another.",
         "subject": "本周证明题",
+        "subject_en": "PROOF",
         "origin": "经典 Ramsey 问题 · 教学改写",
         "visual": "network",
         "accent": "coral"
       },
       {
         "id": "oxbridge-rope",
-        "eyebrow": "每周思考题",
+        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
         "headline": "在一根绳子上随机选两个位置，\n各剪一刀。三段能围成三角形的概率是多少？",
+        "headline_en": "Pick two points independently and uniformly at random along a piece of string. Cut the string at those points. What is the probability that the three pieces can form a triangle?",
         "subject": "本周概率题",
+        "subject_en": "PROBABILITY",
         "origin": "牛剑面试风格 · 原创改编",
         "visual": "rope",
         "accent": "aqua"
       },
       {
         "id": "local-estimation-01",
-        "eyebrow": "每周思考题",
+        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
         "headline": "北滘镇一个工作日，\n大约会有多少单外卖？",
+        "headline_en": "Roughly how many food-delivery orders are placed in Beijiao on a typical weekday?",
         "subject": "本地数量估算",
+        "subject_en": "LOCAL ESTIMATION",
         "origin": "本地估算题库 · 原创",
         "visual": "estimation",
         "answer_unit": "约 ______ 单 / 工作日",
+        "answer_unit_en": "about ______ orders per weekday",
         "accent": "gold"
       }
     ]
