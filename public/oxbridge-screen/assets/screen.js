@@ -45,7 +45,6 @@
       tone = "ink",
       section = "ACADEMIC DISPLAY"
     } = options;
-    const reviewLabel = data.status === "approved" ? "人工已审核" : "待审核预览";
     const demoStamp = data.demo ? '<div class="demo-stamp">演示样例 · 非正式发布</div>' : "";
 
     return `
@@ -59,13 +58,11 @@
             </div>
             <div class="issue-block">
               <span class="issue-date">${formatDate(data.content_date)}</span>
-              <span class="issue-edition">${escapeHtml(data.edition)}</span>
             </div>
           </header>
           ${body}
           <footer class="footer">
             <span>${escapeHtml(section)}</span>
-            <span class="footer-status">${reviewLabel}</span>
           </footer>
         </div>
         ${demoStamp}
