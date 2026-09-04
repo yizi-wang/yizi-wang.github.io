@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-03",
-  "edition": "正式候选 · 001",
+  "content_date": "2026-09-04",
+  "edition": "2026-09-04 待审",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月3日\n晨间简报",
+    "headline": "9月4日\n晨间简报",
     "headline_en": "MORNING BRIEF",
     "items": [
       {
         "id": "brief-01",
-        "category": "太空 / SPACE",
-        "headline": "水星任务今晚20:00分离巡航模块",
-        "headline_en": "BepiColombo cruise module separates at 20:00 tonight",
-        "summary": "这个模块已经工作八年。按ESA时间表，地球最快要到21:53收到分离后的首轮信号。",
-        "summary_en": "The module has been flying for eight years. ESA expects the first signal after separation to reach Earth no earlier than 21:53.",
+        "category": "政治 / POLITICS",
+        "headline": "中埃签署20余份合作文件",
+        "headline_en": "China and Egypt sign more than 20 cooperation documents",
+        "summary": "两国元首会谈后，双方签署20余份合作文件，涉及数字经济、科技、教育和交通；今年是中埃建交70周年。",
+        "summary_en": "The agreements cover the digital economy, science, education and transport. This year marks 70 years of diplomatic relations between China and Egypt.",
         "source": {
-          "name": "欧洲空间局（ESA）",
-          "url": "https://www.esa.int/Enabling_Support/Operations/Watch_live_BepiColombo_begins_its_arrival_at_Mercury",
-          "published": "2026-08-27"
+          "name": "中国政府网（新华社）",
+          "url": "https://english.www.gov.cn/news/202609/02/content_WS6a983165c6d00ca5f9a0cf86.html",
+          "published": "2026-09-02"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-02",
         "category": "气候 / CLIMATE",
-        "headline": "最乐观的情景下，升温峰值仍约为1.8°C",
-        "headline_en": "Even the most optimistic path puts peak warming near 1.8°C",
-        "summary": "环境署称，未来几年突破1.5°C已难避免。峰值有多高、会持续多久，取决于接下来的减排。",
-        "summary_en": "UNEP says a temporary rise above 1.5°C is now hard to avoid. How high it goes, and for how long, depends on near-term emissions cuts.",
+        "headline": "WMO：厄尔尼诺几乎确定持续至明年2月",
+        "headline_en": "WMO says El Niño is almost certain to persist through February",
+        "summary": "世界气象组织预计其未来数月继续增强，全球洪水、干旱和极端高温风险上升；具体影响仍因地区和季节而异。",
+        "summary_en": "WMO expects El Niño to strengthen, raising global risks of floods, drought and extreme heat. Local effects will still vary by place and season.",
         "source": {
-          "name": "联合国环境署（UNEP）",
-          "url": "https://www.unep.org/zh-hans/xinwenyuziyuan/xinwengao-60",
-          "published": "2026-09-02"
+          "name": "世界气象组织（WMO）",
+          "url": "https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027",
+          "published": "2026-09-03"
         },
         "accent": "gold"
       },
       {
         "id": "brief-03",
-        "category": "天文 / ASTRONOMY",
-        "headline": "中国天眼：气体还在，恒星却越造越慢",
-        "headline_en": "China's FAST telescope finds plenty of gas, but fewer new stars",
-        "summary": "约250万个星系的观测显示：45亿年前造星速度是今天的2.5倍，中性氢却只有1.4倍。问题可能出在气体转成恒星的过程。",
-        "summary_en": "Data from about 2.5 million galaxies show that star formation was 2.5 times faster 4.5 billion years ago, while neutral hydrogen was only 1.4 times more abundant.",
+        "category": "技术 / TECHNOLOGY",
+        "headline": "MIT提出双部件量子比特架构",
+        "headline_en": "MIT proposes a two-part qubit architecture",
+        "summary": "新设计用一个部件保存信息、另一个部件连接电路。模拟结果显示，它能提高运算速度和准确率，但仍处于早期研究阶段。",
+        "summary_en": "One component stores information while the other connects to the circuit. Simulations show faster, more accurate operations, but the work is still early-stage.",
         "source": {
-          "name": "中国科学院（转引《中国科学报》）",
-          "url": "https://www.cas.cn/cm/202609/t20260902_5119555.shtml",
-          "published": "2026-09-02"
+          "name": "麻省理工学院新闻办公室（MIT News）",
+          "url": "https://news.mit.edu/2026/new-qubit-architecture-enables-faster-more-accurate-operations-0903",
+          "published": "2026-09-03"
         },
         "accent": "coral"
       },
       {
         "id": "brief-04",
-        "category": "经济 / ECONOMY",
-        "headline": "IMF：全球公共债务已接近全球GDP总量",
-        "headline_en": "IMF says global public debt is nearing the size of world GDP",
-        "summary": "IMF称今年全球增长约3%，公共债务却已接近GDP的100%；利率上升后，低收入国家借新还旧更吃力。",
-        "summary_en": "The IMF puts global growth near 3% this year, while public debt approaches 100% of GDP. Higher rates make refinancing harder for low-income countries.",
+        "category": "健康 / HEALTH",
+        "headline": "刚果（金）埃博拉病例超过6000例",
+        "headline_en": "Ebola cases in DR Congo pass 6,000",
+        "summary": "WHO称，此轮疫情已造成3000人死亡，波及6个省60个卫生区；多数死亡仍发生在社区，而非治疗中心。",
+        "summary_en": "WHO says the outbreak has caused 3,000 deaths across 60 health zones in six provinces. Most deaths are still occurring outside treatment centres.",
         "source": {
-          "name": "国际货币基金组织（IMF）",
-          "url": "https://www.imf.org/en/news/articles/2026/09/01/pr26284-imf-md-statement-conclusion-g20-finance-ministers-central-bank-governors-meeting",
-          "published": "2026-09-01"
+          "name": "世界卫生组织（WHO）",
+          "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing---2-september-2026",
+          "published": "2026-09-02"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-05",
-        "category": "技术 / TECHNOLOGY",
-        "headline": "MIT给自动驾驶系统加了一层“解释器”",
-        "headline_en": "MIT builds an interpreter for self-driving systems",
-        "summary": "CW-Net把车辆的判断换成人能读懂的概念。测试中，安全员更容易预判车辆什么时候会犯错。",
-        "summary_en": "CW-Net translates a vehicle's decisions into concepts people can understand. In tests, safety drivers could better predict when the car would make a mistake.",
+        "category": "天文 / ASTRONOMY",
+        "headline": "哈勃在土星南极看到十边形大气波",
+        "headline_en": "Hubble spots a ten-sided wave at Saturn's south pole",
+        "summary": "这个十边形结构贯穿多层大气，与土星北极长期存在的六边形不同。研究人员正观察它会稳定下来，还是继续变化。",
+        "summary_en": "The decagon spans several atmospheric layers and differs from Saturn's long-lived northern hexagon. Researchers are watching how it develops.",
         "source": {
-          "name": "麻省理工学院新闻办公室（MIT News）",
-          "url": "https://news.mit.edu/2026/system-helps-humans-predict-when-self-driving-cars-will-make-mistakes-0902",
+          "name": "美国国家航空航天局（NASA）",
+          "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/",
           "published": "2026-09-02"
         },
         "accent": "gold"
       },
       {
         "id": "brief-06",
-        "category": "政策 / POLICY",
-        "headline": "英国扩大免费校餐，覆盖逾300万名儿童",
-        "headline_en": "UK expands free school meals to more than 3 million children",
-        "summary": "英国教育部称，领取综合福利家庭的孩子现可获得免费校餐；今年9月另有1400所学校开设免费早餐。",
-        "summary_en": "Children in families receiving Universal Credit are now eligible. Another 1,400 schools are offering free breakfasts from September.",
+        "category": "经济 / ECONOMY",
+        "headline": "北交所上市公司增至339家",
+        "headline_en": "Beijing Stock Exchange now has 339 listed companies",
+        "summary": "今年上半年，这些公司合计营收1385.66亿元，同比增长15.11%；总市值目前约8500亿元。",
+        "summary_en": "The companies reported combined first-half revenue of 138.57 billion yuan, up 15.11%. Their total market value is about 850 billion yuan.",
         "source": {
-          "name": "英国教育部（GOV.UK）",
-          "url": "https://www.gov.uk/government/news/breathing-space-for-families-as-government-eases-school-costs",
-          "published": "2026-09-01"
+          "name": "北京市政府门户网站（北京日报）",
+          "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202609/t20260903_4848468.html",
+          "published": "2026-09-03"
         },
         "accent": "coral"
       }
@@ -143,8 +143,8 @@
   },
   "review": {
     "reviewer": "王逸孜",
-    "approved_at": "2026-09-03T13:17:31+08:00",
+    "approved_at": "2026-09-03T17:15:34+08:00",
     "note": "",
-    "generated_at": "2026-09-03T13:20:00+08:00"
+    "generated_at": "2026-09-03T16:26:08+08:00"
   }
 }
