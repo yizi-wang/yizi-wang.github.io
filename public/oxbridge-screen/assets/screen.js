@@ -71,7 +71,47 @@
   };
 
   const challengeVisual = (challenge) => {
+    if (challenge.id === "proof-mutilated-chessboard") {
+      const cells = Array.from({ length: 64 }, (_, index) => {
+        const removed = index === 0 || index === 63;
+        return `<span class="chess-cell${removed ? " is-removed" : ""}"></span>`;
+      }).join("");
+      return `
+        <div class="interview-visual chessboard-visual" aria-hidden="true">
+          <div class="neutral-chessboard">${cells}</div>
+        </div>`;
+    }
+
+    if (challenge.id === "oxbridge-best-applicant") {
+      const applicants = Array.from({ length: 30 }, (_, index) =>
+        `<span>${String(index + 1).padStart(2, "0")}</span>`
+      ).join("");
+      return `
+        <div class="interview-visual applicant-visual" aria-hidden="true">
+          <div class="applicant-sequence">${applicants}</div>
+        </div>`;
+    }
+
     if (challenge.visual === "rope") {
+      if (challenge.id === "oxbridge-two-stage-rope") {
+        return `
+          <div class="interview-visual rope-visual two-stage-rope" aria-hidden="true">
+            <svg viewBox="0 0 760 300" role="img">
+              <line class="rope-base" x1="70" y1="78" x2="690" y2="78"></line>
+              <line class="rope-cut" x1="398" y1="38" x2="398" y2="118"></line>
+              <circle cx="70" cy="78" r="9"></circle>
+              <circle cx="690" cy="78" r="9"></circle>
+              <path class="rope-arrow" d="M380 132 L380 174 M365 160 L380 175 L395 160"></path>
+              <line class="rope-base rope-selected" x1="70" y1="228" x2="398" y2="228"></line>
+              <line class="rope-base rope-unselected" x1="430" y1="228" x2="690" y2="228"></line>
+              <line class="rope-cut second-cut" x1="226" y1="188" x2="226" y2="268"></line>
+              <circle cx="70" cy="228" r="9"></circle>
+              <circle cx="398" cy="228" r="9"></circle>
+              <circle cx="430" cy="228" r="9"></circle>
+              <circle cx="690" cy="228" r="9"></circle>
+            </svg>
+          </div>`;
+      }
       return `
         <div class="interview-visual rope-visual" aria-hidden="true">
           <svg viewBox="0 0 760 260" role="img">
@@ -119,6 +159,7 @@
     const slides = [];
     const daily = data.daily;
     const weekly = data.weekly;
+    const previousAnswers = Array.isArray(weekly.previous_answers) ? weekly.previous_answers : [];
     const challenges = Array.isArray(weekly.challenges)
       ? weekly.challenges
       : weekly.challenge
@@ -175,6 +216,31 @@
             </div>
           </div>
           <div class="brief-list">${dailyCards}</div>
+        </section>`));
+    });
+
+    previousAnswers.forEach((answer, index) => {
+      slides.push(makeFrame(data, {
+        rail: "ANSWER",
+        accent: answer.accent || "aqua",
+        tone: "paper",
+        section: `${answer.subject} · ${answer.subject_en}`
+      }, `
+        <section class="content answer-slide" data-answer-kind="${escapeHtml(answer.visual || "network")}">
+          <div class="answer-topline">
+            <p class="eyebrow">${escapeHtml(answer.eyebrow)}</p>
+            <span class="answer-count">ANSWER ${String(index + 1).padStart(2, "0")} / ${String(previousAnswers.length).padStart(2, "0")}</span>
+          </div>
+          <h2 class="answer-question">${escapeHtml(answer.headline)}</h2>
+          <p class="answer-question-en" lang="en">${escapeHtml(answer.headline_en)}</p>
+          <div class="answer-result">
+            <strong>${escapeHtml(answer.result)}</strong>
+            <span lang="en">${escapeHtml(answer.result_en)}</span>
+          </div>
+          <div class="answer-copy">
+            <p>${escapeHtml(answer.explanation)}</p>
+            <p lang="en">${escapeHtml(answer.explanation_en)}</p>
+          </div>
         </section>`));
     });
 

@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-04",
-  "edition": "2026-09-04 待审",
+  "content_date": "2026-09-07",
+  "edition": "2026-09-07 定稿",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,139 +12,184 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月4日\n晨间简报",
-    "headline_en": "MORNING BRIEF",
+    "headline": "9月7日\n每日简报",
+    "headline_en": "DAILY BRIEF",
     "items": [
       {
         "id": "brief-01",
-        "category": "政治 / POLITICS",
-        "headline": "中埃签署20余份合作文件",
-        "headline_en": "China and Egypt sign more than 20 cooperation documents",
-        "summary": "两国元首会谈后，双方签署20余份合作文件，涉及数字经济、科技、教育和交通；今年是中埃建交70周年。",
-        "summary_en": "The agreements cover the digital economy, science, education and transport. This year marks 70 years of diplomatic relations between China and Egypt.",
+        "category": "健康 / HEALTH",
+        "headline": "中国将扩大创新药医保覆盖",
+        "headline_en": "China plans wider insurance coverage for innovative drugs",
+        "summary": "国家医保局表示，将优先支持癌症、慢性病、罕见病和儿童疾病创新药。2018年以来，已有199种创新药进入国家医保目录。",
+        "summary_en": "China plans wider insurance coverage for drugs targeting cancer, chronic and rare diseases, and childhood illnesses. Since 2018, 199 innovative drugs have entered the national list.",
         "source": {
           "name": "中国政府网（新华社）",
-          "url": "https://english.www.gov.cn/news/202609/02/content_WS6a983165c6d00ca5f9a0cf86.html",
-          "published": "2026-09-02"
+          "url": "https://english.www.gov.cn/news/202609/04/content_WS6a9a7481c6d00ca5f9a0d02f.html",
+          "published": "2026-09-04"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-02",
-        "category": "气候 / CLIMATE",
-        "headline": "WMO：厄尔尼诺几乎确定持续至明年2月",
-        "headline_en": "WMO says El Niño is almost certain to persist through February",
-        "summary": "世界气象组织预计其未来数月继续增强，全球洪水、干旱和极端高温风险上升；具体影响仍因地区和季节而异。",
-        "summary_en": "WMO expects El Niño to strengthen, raising global risks of floods, drought and extreme heat. Local effects will still vary by place and season.",
+        "category": "教育 / EDUCATION",
+        "headline": "国际扫盲日迎来60周年",
+        "headline_en": "International Literacy Day marks 60 years",
+        "summary": "联合国教科文组织将于9月8日至9日在墨西哥举行全球纪念活动。该组织估计，全球仍有至少7.39亿人缺乏基本读写能力。",
+        "summary_en": "UNESCO will hold the global event in Mexico on 8 and 9 September. It estimates that at least 739 million people worldwide still lack basic literacy skills.",
         "source": {
-          "name": "世界气象组织（WMO）",
-          "url": "https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027",
-          "published": "2026-09-03"
+          "name": "联合国教科文组织（UNESCO）",
+          "url": "https://www.unesco.org/en/articles/unesco-celebrates-60th-international-literacy-day-chiapas-mexico?hub=80094",
+          "published": "2026-08-28"
         },
         "accent": "gold"
       },
       {
         "id": "brief-03",
-        "category": "技术 / TECHNOLOGY",
-        "headline": "MIT提出双部件量子比特架构",
-        "headline_en": "MIT proposes a two-part qubit architecture",
-        "summary": "新设计用一个部件保存信息、另一个部件连接电路。模拟结果显示，它能提高运算速度和准确率，但仍处于早期研究阶段。",
-        "summary_en": "One component stores information while the other connects to the circuit. Simulations show faster, more accurate operations, but the work is still early-stage.",
+        "category": "经济 / ECONOMY",
+        "headline": "8月制造业PMI回升至49.8",
+        "headline_en": "China's manufacturing PMI rises to 49.8 in August",
+        "summary": "指数比7月上升0.6个百分点，但仍低于50的荣枯线。生产指数为50.4，新订单指数为50.6，就业指数为48.7。",
+        "summary_en": "The index rose 0.6 points from July but remained below the 50 mark. Production reached 50.4, new orders 50.6 and employment 48.7.",
         "source": {
-          "name": "麻省理工学院新闻办公室（MIT News）",
-          "url": "https://news.mit.edu/2026/new-qubit-architecture-enables-faster-more-accurate-operations-0903",
-          "published": "2026-09-03"
+          "name": "国家统计局",
+          "url": "https://www.stats.gov.cn/english/PressRelease/202609/t20260901_1965170.html",
+          "published": "2026-09-01"
         },
         "accent": "coral"
       },
       {
         "id": "brief-04",
-        "category": "健康 / HEALTH",
-        "headline": "刚果（金）埃博拉病例超过6000例",
-        "headline_en": "Ebola cases in DR Congo pass 6,000",
-        "summary": "WHO称，此轮疫情已造成3000人死亡，波及6个省60个卫生区；多数死亡仍发生在社区，而非治疗中心。",
-        "summary_en": "WHO says the outbreak has caused 3,000 deaths across 60 health zones in six provinces. Most deaths are still occurring outside treatment centres.",
+        "category": "气候 / CLIMATE",
+        "headline": "东北太平洋风暴活动高于常年",
+        "headline_en": "Storm activity in the eastern Pacific is running above average",
+        "summary": "截至9月3日，该海域已出现15个命名风暴和6个飓风；同期大西洋有5个命名风暴，尚无飓风。",
+        "summary_en": "By 3 September, the eastern Pacific had recorded 15 named storms and six hurricanes. The Atlantic had five named storms and no hurricanes.",
         "source": {
-          "name": "世界卫生组织（WHO）",
-          "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing---2-september-2026",
-          "published": "2026-09-02"
+          "name": "NASA Earth Observatory",
+          "url": "https://science.nasa.gov/earth/earth-observatory/a-trio-of-tropical-cyclones-in-the-pacific/",
+          "published": "2026-09-04"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-05",
-        "category": "天文 / ASTRONOMY",
-        "headline": "哈勃在土星南极看到十边形大气波",
-        "headline_en": "Hubble spots a ten-sided wave at Saturn's south pole",
-        "summary": "这个十边形结构贯穿多层大气，与土星北极长期存在的六边形不同。研究人员正观察它会稳定下来，还是继续变化。",
-        "summary_en": "The decagon spans several atmospheric layers and differs from Saturn's long-lived northern hexagon. Researchers are watching how it develops.",
+        "category": "科学 / SCIENCE",
+        "headline": "活细胞可以反复“报告”基因活动",
+        "headline_en": "Living cells can repeatedly report their gene activity",
+        "summary": "MIT团队让细胞把RNA装入类病毒颗粒并释放到培养液中，无需杀死细胞，就能连续追踪基因表达变化。",
+        "summary_en": "The team engineered cells to release RNA in virus-like particles. Researchers can then track gene activity over time without killing the cells.",
         "source": {
-          "name": "美国国家航空航天局（NASA）",
-          "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/",
-          "published": "2026-09-02"
+          "name": "麻省理工学院新闻办公室（MIT News）",
+          "url": "https://news.mit.edu/2026/new-method-allows-following-gene-activity-over-time-same-cells-0904",
+          "published": "2026-09-04"
         },
         "accent": "gold"
       },
       {
         "id": "brief-06",
-        "category": "经济 / ECONOMY",
-        "headline": "北交所上市公司增至339家",
-        "headline_en": "Beijing Stock Exchange now has 339 listed companies",
-        "summary": "今年上半年，这些公司合计营收1385.66亿元，同比增长15.11%；总市值目前约8500亿元。",
-        "summary_en": "The companies reported combined first-half revenue of 138.57 billion yuan, up 15.11%. Their total market value is about 850 billion yuan.",
+        "category": "体育 / SPORTS",
+        "headline": "安东内利从第19位发车赢得意大利大奖赛",
+        "headline_en": "Antonelli wins at Monza after starting 19th",
+        "summary": "安东内利因引擎处罚从第19位起步，最终反超队友拉塞尔夺冠。拉塞尔落后3.857秒获得第二，维斯塔潘排名第三。",
+        "summary_en": "Kimi Antonelli started 19th after an engine penalty and passed teammate George Russell to win. Russell finished 3.857 seconds behind, with Max Verstappen third.",
         "source": {
-          "name": "北京市政府门户网站（北京日报）",
-          "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202609/t20260903_4848468.html",
-          "published": "2026-09-03"
+          "name": "世界一级方程式锦标赛（Formula 1）",
+          "url": "https://www.formula1.com/en/latest/article/antonelli-beats-russell-to-italian-grand-prix-win-with-stunning-comeback-drive.15WtFEBT5JEe4drdeO88t2.15WtFEBT5JEe4drdeO88t2",
+          "published": "2026-09-06"
         },
         "accent": "coral"
       }
     ]
   },
   "weekly": {
-    "week": "2026-W36",
-    "challenges": [
+    "week": "2026-W37",
+    "previous_week": "2026-W36",
+    "previous_answers": [
       {
-        "id": "proof-ramsey",
-        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "六个人参加晚餐。\n证明：总能找到三个人，\n彼此认识或彼此都不认识。",
-        "headline_en": "Six people are at dinner. Prove that there are three who all know one another, or three who are all strangers to one another.",
-        "subject": "本周证明题",
-        "subject_en": "PROOF",
-        "origin": "经典 Ramsey 问题 · 教学改写",
+        "id": "answer-proof-ramsey",
+        "eyebrow": "上周思考题 · 参考解答 / LAST WEEK · ANSWER",
+        "headline": "六个人中，为什么一定能找到三位熟人，\n或三位互不认识的人？",
+        "headline_en": "Why must six people contain three mutual acquaintances or three mutual strangers?",
+        "result": "总能找到这样三个人",
+        "result_en": "Such a trio must exist",
+        "explanation": "任选一人 A。其余五人中，至少有三人都认识 A，或至少有三人都不认识 A。\n\n若 A 认识 B、C、D，其中任何两人认识，就与 A 组成三位熟人；若三人之间无人相识，B、C、D 就是三位陌生人。若 A 不认识 B、C、D，其中有两人互不认识，他们与 A 组成三位陌生人；否则 B、C、D 彼此认识。",
+        "explanation_en": "Choose any person A. Among the other five, at least three all know A, or at least three all do not.\n\nIf A knows B, C and D, a connected pair among them gives three mutual acquaintances with A. If there is no such pair, B, C and D are mutual strangers. If A knows none of them, an unconnected pair gives three mutual strangers with A; otherwise B, C and D all know one another.",
+        "subject": "上周证明题",
+        "subject_en": "PROOF ANSWER",
         "visual": "network",
         "accent": "coral"
       },
       {
-        "id": "oxbridge-rope",
-        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "在一根绳子上随机选两个位置，\n各剪一刀。三段能围成三角形的概率是多少？",
-        "headline_en": "Pick two points independently and uniformly at random along a piece of string. Cut the string at those points. What is the probability that the three pieces can form a triangle?",
-        "subject": "本周概率题",
-        "subject_en": "PROBABILITY",
-        "origin": "牛剑面试风格 · 原创改编",
+        "id": "answer-oxbridge-rope",
+        "eyebrow": "上周思考题 · 参考解答 / LAST WEEK · ANSWER",
+        "headline": "单位长绳随机剪两刀，\n三段能围成三角形的概率是多少？",
+        "headline_en": "A unit string is cut at two random points. What is the probability that the three pieces form a triangle?",
+        "result": "1 / 4",
+        "result_en": "The probability is 1/4",
+        "explanation": "设两刀位置为 0 < x < y < 1，三段长度为 x、y - x、1 - y。三段能成三角形，当且仅当每段都小于 1/2。\n\n所有 (x, y) 构成面积为 1/2 的三角形。满足 x < 1/2、y > 1/2、y < x + 1/2 的区域面积为 1/8。因此概率为 (1/8) ÷ (1/2) = 1/4。",
+        "explanation_en": "Let the cuts be 0 < x < y < 1. The pieces have lengths x, y - x and 1 - y. They form a triangle exactly when every piece is shorter than 1/2.\n\nAll possible pairs (x, y) fill a triangle of area 1/2. The region satisfying x < 1/2, y > 1/2 and y < x + 1/2 has area 1/8. The probability is therefore (1/8) ÷ (1/2) = 1/4.",
+        "subject": "上周概率题",
+        "subject_en": "PROBABILITY ANSWER",
         "visual": "rope",
         "accent": "aqua"
       },
       {
-        "id": "local-estimation-01",
-        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
+        "id": "answer-local-estimation-01",
+        "eyebrow": "上周思考题 · 示例估算 / LAST WEEK · SAMPLE ESTIMATE",
         "headline": "北滘镇一个工作日，\n大约会有多少单外卖？",
-        "headline_en": "Roughly how many food-delivery orders are placed in Beijiao on a typical weekday?",
+        "headline_en": "Roughly how many food-delivery orders are placed in Beijiao on a weekday?",
+        "result": "约 5 万单 / 工作日",
+        "result_en": "About 50,000 orders per weekday",
+        "explanation": "一组假设：北滘工作日常住及通勤人口约25万，其中60%会用外卖；这部分人平均每周点2单，按5个工作日均摊。\n\n25万 × 60% × 2 ÷ 5 = 6万单。再用约1800名活跃骑手、每人每天25单核对，得到4.5万单。因此可估为约5万单，合理范围是4万到6万单。",
+        "explanation_en": "One set of assumptions: about 250,000 residents and commuters are in Beijiao on a weekday; 60% use food delivery and place two orders per working week. This gives 250,000 × 60% × 2 ÷ 5 = 60,000 orders.\n\nA cross-check using 1,800 active riders at 25 orders each gives 45,000. A reasonable estimate is therefore about 50,000, with a range of 40,000 to 60,000.",
+        "subject": "上周本地估算",
+        "subject_en": "SAMPLE ESTIMATE",
+        "visual": "estimation",
+        "accent": "gold"
+      }
+    ],
+    "challenges": [
+      {
+        "id": "proof-mutilated-chessboard",
+        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
+        "headline": "从8×8棋盘上删去\n两个相对的角格。\n证明：剩下的62格不能用\n1×2骨牌完全覆盖。",
+        "headline_en": "Two opposite corner squares are removed from an 8 by 8 chessboard. Prove that the remaining 62 squares cannot be tiled by 1 by 2 dominoes.",
+        "subject": "本周证明题",
+        "subject_en": "PROOF",
+        "origin": "离散数学",
+        "visual": "network",
+        "accent": "coral"
+      },
+      {
+        "id": "oxbridge-best-applicant",
+        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
+        "headline": "30名申请者随机到场，\n实力各不相同。\n面试完一人后，必须立即决定\n录用或淘汰，且只能录用一人。\n怎样提高录用最强者的概率？",
+        "headline_en": "Thirty applicants of different ability arrive randomly. After each interview, you must hire or reject immediately and may hire only one. How can you maximise the chance of choosing the best?",
+        "subject": "本周建模题",
+        "subject_en": "DECISION MODEL",
+        "origin": "顺序决策",
+        "visual": "rope",
+        "accent": "aqua"
+      },
+      {
+        "id": "local-estimation-17",
+        "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
+        "headline": "中国高铁列车一天合计\n大约行驶多少万公里？\n给出一个数值或数量级，\n并说明主要假设。",
+        "headline_en": "Roughly how many tens of thousands of kilometres do China's high-speed trains travel in total each day? Give a number or order of magnitude and state your main assumptions.",
         "subject": "本地数量估算",
         "subject_en": "LOCAL ESTIMATION",
         "origin": "本地估算题库 · 原创",
         "visual": "estimation",
-        "answer_unit": "约 ______ 单 / 工作日",
-        "answer_unit_en": "about ______ orders per weekday",
+        "answer_unit": "约 ______ 万公里 / 日",
+        "answer_unit_en": "about ______ 10,000 km per day",
         "accent": "gold"
       }
     ]
   },
   "review": {
     "reviewer": "王逸孜",
-    "approved_at": "2026-09-03T17:15:34+08:00",
-    "note": "",
-    "generated_at": "2026-09-03T16:26:08+08:00"
+    "approved_at": "2026-09-07T12:09:13+08:00",
+    "note": "栏目标题已统一为每日简报",
+    "generated_at": "2026-09-07T12:08:38+08:00"
   }
 }
