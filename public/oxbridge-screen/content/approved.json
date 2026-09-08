@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-07",
-  "edition": "2026-09-07 定稿",
+  "content_date": "2026-09-08",
+  "edition": "2026-09-08 定稿",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月7日\n每日简报",
+    "headline": "9月8日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
         "id": "brief-01",
-        "category": "健康 / HEALTH",
-        "headline": "中国将扩大创新药医保覆盖",
-        "headline_en": "China plans wider insurance coverage for innovative drugs",
-        "summary": "国家医保局表示，将优先支持癌症、慢性病、罕见病和儿童疾病创新药。2018年以来，已有199种创新药进入国家医保目录。",
-        "summary_en": "China plans wider insurance coverage for drugs targeting cancer, chronic and rare diseases, and childhood illnesses. Since 2018, 199 innovative drugs have entered the national list.",
+        "category": "国际政治 / WORLD AFFAIRS",
+        "headline": "第81届联合国大会今天开幕",
+        "headline_en": "The 81st UN General Assembly opens today",
+        "summary": "第81届联合国大会将于纽约时间9月8日15时开幕，由孟加拉国外交官拉赫曼主持。联合国193个会员国在大会均有一票。",
+        "summary_en": "The 81st session opens in New York at 3 p.m. on 8 September, chaired by Bangladesh's Khalilur Rahman. Each of the UN's 193 member states has one vote.",
         "source": {
-          "name": "中国政府网（新华社）",
-          "url": "https://english.www.gov.cn/news/202609/04/content_WS6a9a7481c6d00ca5f9a0d02f.html",
-          "published": "2026-09-04"
+          "name": "United Nations Web TV",
+          "url": "https://webtv.un.org/en/asset/k1a/k1abxf5gju",
+          "published": "2026-09-08"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-02",
-        "category": "教育 / EDUCATION",
-        "headline": "国际扫盲日迎来60周年",
-        "headline_en": "International Literacy Day marks 60 years",
-        "summary": "联合国教科文组织将于9月8日至9日在墨西哥举行全球纪念活动。该组织估计，全球仍有至少7.39亿人缺乏基本读写能力。",
-        "summary_en": "UNESCO will hold the global event in Mexico on 8 and 9 September. It estimates that at least 739 million people worldwide still lack basic literacy skills.",
+        "category": "产业 / INDUSTRY",
+        "headline": "中国为传统产业设下2028年目标",
+        "headline_en": "China sets 2028 targets for traditional industries",
+        "summary": "六部门首次为丝绸、茶、陶瓷等传统产业发布全国性政策，提出到2028年培育50家年营收超100亿元的企业，并用AI记录工艺、改进生产。",
+        "summary_en": "China issued its first national policy for silk, tea and porcelain. It targets 50 firms with annual revenue above 10 billion yuan by 2028 and wider use of AI in craft records and production.",
         "source": {
-          "name": "联合国教科文组织（UNESCO）",
-          "url": "https://www.unesco.org/en/articles/unesco-celebrates-60th-international-literacy-day-chiapas-mexico?hub=80094",
-          "published": "2026-08-28"
+          "name": "中国政府网 / 新华社",
+          "url": "https://english.www.gov.cn/news/202609/08/content_WS6a9f602bc6d00ca5f9a0d0ed.html",
+          "published": "2026-09-08"
         },
         "accent": "gold"
       },
       {
         "id": "brief-03",
-        "category": "经济 / ECONOMY",
-        "headline": "8月制造业PMI回升至49.8",
-        "headline_en": "China's manufacturing PMI rises to 49.8 in August",
-        "summary": "指数比7月上升0.6个百分点，但仍低于50的荣枯线。生产指数为50.4，新订单指数为50.6，就业指数为48.7。",
-        "summary_en": "The index rose 0.6 points from July but remained below the 50 mark. Production reached 50.4, new orders 50.6 and employment 48.7.",
+        "category": "神经科学 / NEUROSCIENCE",
+        "headline": "新工具从三维脑成像中提取神经元",
+        "headline_en": "New tool extracts neurons from 3D brain imaging",
+        "summary": "DeepWonder3D可从多视角三维钙成像中定位神经元。论文称，它把计算成本降至约十分之一，并能在数小时内处理小鼠皮层数万个神经元。",
+        "summary_en": "DeepWonder3D extracts neurons from multiview calcium imaging. The paper reports one tenth of the computing cost of leading methods and processes tens of thousands of neurons within hours.",
         "source": {
-          "name": "国家统计局",
-          "url": "https://www.stats.gov.cn/english/PressRelease/202609/t20260901_1965170.html",
-          "published": "2026-09-01"
+          "name": "Nature Methods",
+          "url": "https://www.nature.com/articles/s41592-026-03215-6",
+          "published": "2026-09-07"
         },
         "accent": "coral"
       },
       {
         "id": "brief-04",
-        "category": "气候 / CLIMATE",
-        "headline": "东北太平洋风暴活动高于常年",
-        "headline_en": "Storm activity in the eastern Pacific is running above average",
-        "summary": "截至9月3日，该海域已出现15个命名风暴和6个飓风；同期大西洋有5个命名风暴，尚无飓风。",
-        "summary_en": "By 3 September, the eastern Pacific had recorded 15 named storms and six hurricanes. The Atlantic had five named storms and no hurricanes.",
+        "category": "空气质量 / AIR QUALITY",
+        "headline": "极端山火烟霾事件较上世纪90年代增至三倍",
+        "headline_en": "Extreme wildfire smoke events have tripled since the 1990s",
+        "summary": "世界气象组织新公报援引研究称，全球极端山火烟霾事件已增至上世纪90年代的三倍，2010至2018年间每年或额外造成近10万人死亡。",
+        "summary_en": "A WMO bulletin cites research finding that extreme wildfire-smoke events have tripled since the 1990s and may have caused nearly 100,000 extra deaths a year from 2010 to 2018.",
         "source": {
-          "name": "NASA Earth Observatory",
-          "url": "https://science.nasa.gov/earth/earth-observatory/a-trio-of-tropical-cyclones-in-the-pacific/",
-          "published": "2026-09-04"
+          "name": "World Meteorological Organization",
+          "url": "https://wmo.int/media/news/wmo-bulletin-shows-air-quality-and-climate-interlinkages",
+          "published": "2026-09-07"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-05",
-        "category": "科学 / SCIENCE",
-        "headline": "活细胞可以反复“报告”基因活动",
-        "headline_en": "Living cells can repeatedly report their gene activity",
-        "summary": "MIT团队让细胞把RNA装入类病毒颗粒并释放到培养液中，无需杀死细胞，就能连续追踪基因表达变化。",
-        "summary_en": "The team engineered cells to release RNA in virus-like particles. Researchers can then track gene activity over time without killing the cells.",
+        "category": "教育 / EDUCATION",
+        "headline": "联合国教科文组织召开AI教育周",
+        "headline_en": "UNESCO opens a global week on AI in education",
+        "summary": "9月8日至11日，25名以上教育部长与教师、学生、技术行业代表在巴黎讨论AI安全、年龄适宜性和采购，会议预计通过联合部长声明。",
+        "summary_en": "More than 25 education ministers will meet teachers, students and technology representatives in Paris. Topics include AI safety, age limits and procurement. A joint statement is planned.",
         "source": {
-          "name": "麻省理工学院新闻办公室（MIT News）",
-          "url": "https://news.mit.edu/2026/new-method-allows-following-gene-activity-over-time-same-cells-0904",
-          "published": "2026-09-04"
+          "name": "UNESCO",
+          "url": "https://www.unesco.org/en/articles/education-age-ai-ministerial-statement-be-adopted-unescos-digital-learning-week?hub=687",
+          "published": "2026-09-02"
         },
         "accent": "gold"
       },
       {
         "id": "brief-06",
-        "category": "体育 / SPORTS",
-        "headline": "安东内利从第19位发车赢得意大利大奖赛",
-        "headline_en": "Antonelli wins at Monza after starting 19th",
-        "summary": "安东内利因引擎处罚从第19位起步，最终反超队友拉塞尔夺冠。拉塞尔落后3.857秒获得第二，维斯塔潘排名第三。",
-        "summary_en": "Kimi Antonelli started 19th after an engine penalty and passed teammate George Russell to win. Russell finished 3.857 seconds behind, with Max Verstappen third.",
+        "category": "体育治理 / SPORTS GOVERNANCE",
+        "headline": "世界田联给自有赛事设可持续标准",
+        "headline_en": "World Athletics sets a sustainability standard for its events",
+        "summary": "世界田联规定，2026年下半年起，所有自有赛事须达到可持续办赛标准。55项评估包括采购、废弃物、能源、食物、用水、出行和无障碍安排。",
+        "summary_en": "From late 2026, all World Athletics-owned events must meet its sustainability standard. Its 55 action areas cover procurement, waste, energy, food, water, travel and accessibility.",
         "source": {
-          "name": "世界一级方程式锦标赛（Formula 1）",
-          "url": "https://www.formula1.com/en/latest/article/antonelli-beats-russell-to-italian-grand-prix-win-with-stunning-comeback-drive.15WtFEBT5JEe4drdeO88t2.15WtFEBT5JEe4drdeO88t2",
-          "published": "2026-09-06"
+          "name": "World Athletics",
+          "url": "https://worldathletics.org/athletics-better-world/sustainability/abw-standard-certified-events",
+          "published": "2026-09-07"
         },
         "accent": "coral"
       }
@@ -188,8 +188,8 @@
   },
   "review": {
     "reviewer": "王逸孜",
-    "approved_at": "2026-09-07T12:09:13+08:00",
-    "note": "栏目标题已统一为每日简报",
-    "generated_at": "2026-09-07T12:08:38+08:00"
+    "approved_at": "2026-09-08T11:07:22+08:00",
+    "note": "选择 N1A、N2A、N3A、N4B、N5A、N6C，允许正式发布。",
+    "generated_at": "2026-09-08T10:56:27+08:00"
   }
 }
