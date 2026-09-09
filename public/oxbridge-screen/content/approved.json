@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-08",
-  "edition": "2026-09-08 定稿",
+  "content_date": "2026-09-09",
+  "edition": "2026-09-09 定稿",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,89 +12,89 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月8日\n每日简报",
+    "headline": "9月9日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
         "id": "brief-01",
-        "category": "国际政治 / WORLD AFFAIRS",
-        "headline": "第81届联合国大会今天开幕",
-        "headline_en": "The 81st UN General Assembly opens today",
-        "summary": "第81届联合国大会将于纽约时间9月8日15时开幕，由孟加拉国外交官拉赫曼主持。联合国193个会员国在大会均有一票。",
-        "summary_en": "The 81st session opens in New York at 3 p.m. on 8 September, chaired by Bangladesh's Khalilur Rahman. Each of the UN's 193 member states has one vote.",
+        "category": "公共事务 / PUBLIC AFFAIRS",
+        "headline": "加沙近四分之一家庭由女性担任户主",
+        "headline_en": "Women now head nearly one in four Gaza households",
+        "summary": "联合国妇女署估计，加沙约8.63万个家庭由女性担任户主，比例约为2023年10月前的两倍；其中近七成缺少合适住所。",
+        "summary_en": "UN Women estimates that women now head about 86,290 Gaza households, twice the pre-October 2023 rate. Nearly seven in ten lack adequate shelter.",
         "source": {
-          "name": "United Nations Web TV",
-          "url": "https://webtv.un.org/en/asset/k1a/k1abxf5gju",
+          "name": "联合国日内瓦办事处 / UN Geneva",
+          "url": "https://www.ungeneva.org/en/news-media/press-briefing/2026/09/un-geneva-press-briefing-1",
           "published": "2026-09-08"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-02",
-        "category": "产业 / INDUSTRY",
-        "headline": "中国为传统产业设下2028年目标",
-        "headline_en": "China sets 2028 targets for traditional industries",
-        "summary": "六部门首次为丝绸、茶、陶瓷等传统产业发布全国性政策，提出到2028年培育50家年营收超100亿元的企业，并用AI记录工艺、改进生产。",
-        "summary_en": "China issued its first national policy for silk, tea and porcelain. It targets 50 firms with annual revenue above 10 billion yuan by 2028 and wider use of AI in craft records and production.",
+        "category": "外贸 / FOREIGN TRADE",
+        "headline": "前八个月中国货物贸易增长17.6%",
+        "headline_en": "China's goods trade grows 17.6% through August",
+        "summary": "海关数据显示，前八个月货物进出口总值34.78万亿元；出口增长14.6%，进口增长22%，集成电路出口额增长95.4%。",
+        "summary_en": "China's goods trade reached 34.78 trillion yuan through August. Exports rose 14.6%, imports 22%, and integrated-circuit exports 95.4% year on year.",
         "source": {
           "name": "中国政府网 / 新华社",
-          "url": "https://english.www.gov.cn/news/202609/08/content_WS6a9f602bc6d00ca5f9a0d0ed.html",
+          "url": "https://english.www.gov.cn/archive/statistics/202609/08/content_WS6aa002e6c6d00ca5f9a0d112.html",
           "published": "2026-09-08"
         },
         "accent": "gold"
       },
       {
         "id": "brief-03",
-        "category": "神经科学 / NEUROSCIENCE",
-        "headline": "新工具从三维脑成像中提取神经元",
-        "headline_en": "New tool extracts neurons from 3D brain imaging",
-        "summary": "DeepWonder3D可从多视角三维钙成像中定位神经元。论文称，它把计算成本降至约十分之一，并能在数小时内处理小鼠皮层数万个神经元。",
-        "summary_en": "DeepWonder3D extracts neurons from multiview calcium imaging. The paper reports one tenth of the computing cost of leading methods and processes tens of thousands of neurons within hours.",
+        "category": "生命科学 / LIFE SCIENCE",
+        "headline": "AI绘出90亿种DNA变化的预测图",
+        "headline_en": "AI maps 9 billion possible DNA letter changes",
+        "summary": "DeepMind发布AlphaGenome Atlas，预测约90亿种人类DNA单碱基变化的分子影响。工具供学术研究免费使用，但仍需实验验证。",
+        "summary_en": "DeepMind's AlphaGenome Atlas predicts the molecular effects of about 9 billion possible single-letter DNA changes. It is free for academic research, but still requires experimental checks.",
         "source": {
-          "name": "Nature Methods",
-          "url": "https://www.nature.com/articles/s41592-026-03215-6",
-          "published": "2026-09-07"
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+          "published": "2026-09-08"
         },
         "accent": "coral"
       },
       {
         "id": "brief-04",
-        "category": "空气质量 / AIR QUALITY",
-        "headline": "极端山火烟霾事件较上世纪90年代增至三倍",
-        "headline_en": "Extreme wildfire smoke events have tripled since the 1990s",
-        "summary": "世界气象组织新公报援引研究称，全球极端山火烟霾事件已增至上世纪90年代的三倍，2010至2018年间每年或额外造成近10万人死亡。",
-        "summary_en": "A WMO bulletin cites research finding that extreme wildfire-smoke events have tripled since the 1990s and may have caused nearly 100,000 extra deaths a year from 2010 to 2018.",
+        "category": "气候 / CLIMATE",
+        "headline": "强厄尔尼诺可能持续到明年2月",
+        "headline_en": "Strong El Niño may persist through February",
+        "summary": "世界气象组织预测，厄尔尼诺持续到2027年2月的概率接近100%，并可能在年底达到很强水平，增加洪水、干旱和极端高温风险。",
+        "summary_en": "WMO puts the chance of El Niño lasting through February 2027 at nearly 100%. It may become very strong by year-end, increasing the risk of floods, drought and extreme heat.",
         "source": {
           "name": "World Meteorological Organization",
-          "url": "https://wmo.int/media/news/wmo-bulletin-shows-air-quality-and-climate-interlinkages",
-          "published": "2026-09-07"
+          "url": "https://wmo.int/media/news/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027",
+          "published": "2026-09-03"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-05",
         "category": "教育 / EDUCATION",
-        "headline": "联合国教科文组织召开AI教育周",
-        "headline_en": "UNESCO opens a global week on AI in education",
-        "summary": "9月8日至11日，25名以上教育部长与教师、学生、技术行业代表在巴黎讨论AI安全、年龄适宜性和采购，会议预计通过联合部长声明。",
-        "summary_en": "More than 25 education ministers will meet teachers, students and technology representatives in Paris. Topics include AI safety, age limits and procurement. A joint statement is planned.",
+        "headline": "2025年全球学校遇袭事件增加33%",
+        "headline_en": "Verified attacks on schools rose 33% in 2025",
+        "summary": "联合国教科文组织称，2025年经联合国核实的学校遇袭事件有1680起，比2024年增加33%。9月9日是保护教育免受攻击国际日。",
+        "summary_en": "UNESCO says the UN verified 1,680 attacks on schools in 2025, up 33% from 2024. The figures mark the 9 September day protecting education from attack.",
         "source": {
           "name": "UNESCO",
-          "url": "https://www.unesco.org/en/articles/education-age-ai-ministerial-statement-be-adopted-unescos-digital-learning-week?hub=687",
-          "published": "2026-09-02"
+          "url": "https://www.unesco.org/en/articles/attacks-schools-rise-33-2025-unesco-calls-stronger-protection-education",
+          "published": "2026-09-08"
         },
         "accent": "gold"
       },
       {
         "id": "brief-06",
-        "category": "体育治理 / SPORTS GOVERNANCE",
-        "headline": "世界田联给自有赛事设可持续标准",
-        "headline_en": "World Athletics sets a sustainability standard for its events",
-        "summary": "世界田联规定，2026年下半年起，所有自有赛事须达到可持续办赛标准。55项评估包括采购、废弃物、能源、食物、用水、出行和无障碍安排。",
-        "summary_en": "From late 2026, all World Athletics-owned events must meet its sustainability standard. Its 55 action areas cover procurement, waste, energy, food, water, travel and accessibility.",
+        "category": "足球 / FOOTBALL",
+        "headline": "中国U20女足世界杯首战5比0取胜",
+        "headline_en": "China open U-20 Women's World Cup with a 5-0 win",
+        "summary": "中国队在U20女足世界杯小组赛首战5比0击败新喀里多尼亚。黄嘉欣12分钟内上演帽子戏法，替补陈瑞琳贡献4次助攻。",
+        "summary_en": "China opened the U-20 Women's World Cup with a 5-0 win over New Caledonia. Huang Jiaxin scored a 12-minute hat-trick and substitute Chen Ruilin made four assists.",
         "source": {
-          "name": "World Athletics",
-          "url": "https://worldathletics.org/athletics-better-world/sustainability/abw-standard-certified-events",
+          "name": "亚洲足球联合会 / AFC",
+          "url": "https://www.the-afc.com/en/more/fifa_u-20_womens_world_cup.html/news/group-f-new-caledonia-0-5-china-pr",
           "published": "2026-09-07"
         },
         "accent": "coral"
@@ -163,8 +163,8 @@
       {
         "id": "oxbridge-best-applicant",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "30名申请者随机到场，\n实力各不相同。\n面试完一人后，必须立即决定\n录用或淘汰，且只能录用一人。\n怎样提高录用最强者的概率？",
-        "headline_en": "Thirty applicants of different ability arrive randomly. After each interview, you must hire or reject immediately and may hire only one. How can you maximise the chance of choosing the best?",
+        "headline": "30名申请者随机到场，\n实力各不相同。\n面试后须立即录用或淘汰，\n且只能录用一人。\n怎样做最可能录用最强者？\n估计成功概率。",
+        "headline_en": "Thirty applicants of different ability arrive randomly. Accept or reject each immediately, and hire only once. What strategy is most likely to choose the best, and what is its success rate?",
         "subject": "本周建模题",
         "subject_en": "DECISION MODEL",
         "origin": "顺序决策",
@@ -188,8 +188,8 @@
   },
   "review": {
     "reviewer": "王逸孜",
-    "approved_at": "2026-09-08T11:07:22+08:00",
-    "note": "选择 N1A、N2A、N3A、N4B、N5A、N6C，允许正式发布。",
-    "generated_at": "2026-09-08T10:56:27+08:00"
+    "approved_at": "2026-09-09T11:59:39+08:00",
+    "note": "已明确选定 N1C、N2A、N3B、N4B、N5A、N6C、P02、M06、E17；内容与竖屏图示已核查。",
+    "generated_at": "2026-09-09T11:42:00+08:00"
   }
 }
