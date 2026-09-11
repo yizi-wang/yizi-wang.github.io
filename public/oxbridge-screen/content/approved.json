@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-09",
-  "edition": "2026-09-09 定稿",
+  "content_date": "2026-09-11",
+  "edition": "2026-09-11 定稿",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月9日\n每日简报",
+    "headline": "9月11日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
         "id": "brief-01",
-        "category": "公共事务 / PUBLIC AFFAIRS",
-        "headline": "加沙近四分之一家庭由女性担任户主",
-        "headline_en": "Women now head nearly one in four Gaza households",
-        "summary": "联合国妇女署估计，加沙约8.63万个家庭由女性担任户主，比例约为2023年10月前的两倍；其中近七成缺少合适住所。",
-        "summary_en": "UN Women estimates that women now head about 86,290 Gaza households, twice the pre-October 2023 rate. Nearly seven in ten lack adequate shelter.",
+        "category": "货币政策 / MONETARY POLICY",
+        "headline": "央行：无意靠人民币贬值争取贸易优势",
+        "headline_en": "PBOC rules out seeking a trade edge through depreciation",
+        "summary": "央行副行长陆磊表示，中国将继续实行有管理的浮动汇率制度，由市场决定汇率，同时防范羊群效应和非理性预期。",
+        "summary_en": "PBOC Deputy Governor Lu Lei said China would retain a managed floating exchange-rate regime, let markets play the decisive role and guard against herd behaviour.",
         "source": {
-          "name": "联合国日内瓦办事处 / UN Geneva",
-          "url": "https://www.ungeneva.org/en/news-media/press-briefing/2026/09/un-geneva-press-briefing-1",
-          "published": "2026-09-08"
+          "name": "国务院新闻办公室 / SCIO",
+          "url": "https://www.csrc.gov.cn/csrc/c100028/c7657861/content.shtml",
+          "published": "2026-09-10"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-02",
-        "category": "外贸 / FOREIGN TRADE",
-        "headline": "前八个月中国货物贸易增长17.6%",
-        "headline_en": "China's goods trade grows 17.6% through August",
-        "summary": "海关数据显示，前八个月货物进出口总值34.78万亿元；出口增长14.6%，进口增长22%，集成电路出口额增长95.4%。",
-        "summary_en": "China's goods trade reached 34.78 trillion yuan through August. Exports rose 14.6%, imports 22%, and integrated-circuit exports 95.4% year on year.",
+        "category": "国际金融 / GLOBAL FINANCE",
+        "headline": "日本8月外汇储备减少795.75亿美元",
+        "headline_en": "Japan's reserves fall by $79.6 billion in August",
+        "summary": "日本财务省公布，8月底外汇储备为1.2075万亿美元，较7月底减少795.75亿美元；其中证券资产降至8395.59亿美元。",
+        "summary_en": "Japan's reserves stood at $1.2075 trillion at the end of August, down $79.6 billion from July. Securities holdings fell to $839.6 billion.",
         "source": {
-          "name": "中国政府网 / 新华社",
-          "url": "https://english.www.gov.cn/archive/statistics/202609/08/content_WS6aa002e6c6d00ca5f9a0d112.html",
-          "published": "2026-09-08"
+          "name": "日本财务省 / Japan Ministry of Finance",
+          "url": "https://www.mof.go.jp/english/policy/international_policy/reference/official_reserve_assets/e0808.html",
+          "published": "2026-09-07"
         },
         "accent": "gold"
       },
       {
         "id": "brief-03",
-        "category": "生命科学 / LIFE SCIENCE",
-        "headline": "AI绘出90亿种DNA变化的预测图",
-        "headline_en": "AI maps 9 billion possible DNA letter changes",
-        "summary": "DeepMind发布AlphaGenome Atlas，预测约90亿种人类DNA单碱基变化的分子影响。工具供学术研究免费使用，但仍需实验验证。",
-        "summary_en": "DeepMind's AlphaGenome Atlas predicts the molecular effects of about 9 billion possible single-letter DNA changes. It is free for academic research, but still requires experimental checks.",
+        "category": "数学与AI / MATH AND AI",
+        "headline": "OpenAI公布纳维—斯托克斯证明稿",
+        "headline_en": "OpenAI publishes a proposed Navier-Stokes proof",
+        "summary": "OpenAI称内部模型构造出有限时间奇点，并公开论文和Lean形式化版本。该结果仍待数学界独立审查，尚不能视为正式获奖解答。",
+        "summary_en": "OpenAI says an internal model constructed a finite-time singularity and released a paper with a Lean formalisation. Independent mathematical review is still needed.",
         "source": {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/navier-stokes-solution/",
           "published": "2026-09-08"
         },
         "accent": "coral"
       },
       {
         "id": "brief-04",
-        "category": "气候 / CLIMATE",
-        "headline": "强厄尔尼诺可能持续到明年2月",
-        "headline_en": "Strong El Niño may persist through February",
-        "summary": "世界气象组织预测，厄尔尼诺持续到2027年2月的概率接近100%，并可能在年底达到很强水平，增加洪水、干旱和极端高温风险。",
-        "summary_en": "WMO puts the chance of El Niño lasting through February 2027 at nearly 100%. It may become very strong by year-end, increasing the risk of floods, drought and extreme heat.",
+        "category": "教育数据 / EDUCATION DATA",
+        "headline": "PISA：OECD阅读和数学平均分创新低",
+        "headline_en": "OECD reading and maths scores hit record lows",
+        "summary": "PISA 2025覆盖91个国家和经济体、76万名15岁学生。OECD平均阅读分比2022年低14分，数学低9分；科学成绩总体持平。",
+        "summary_en": "PISA 2025 assessed 760,000 students in 91 countries and economies. Across the OECD, reading fell 14 points and mathematics 9 since 2022, while science was broadly stable.",
         "source": {
-          "name": "World Meteorological Organization",
-          "url": "https://wmo.int/media/news/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027",
-          "published": "2026-09-03"
+          "name": "经济合作与发展组织 / OECD",
+          "url": "https://www.oecd.org/en/about/news/press-releases/2026/09/pisa-2025-students-reading-and-mathematics-performance-declined-sharply-across-the-oecd.html",
+          "published": "2026-09-08"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-05",
-        "category": "教育 / EDUCATION",
-        "headline": "2025年全球学校遇袭事件增加33%",
-        "headline_en": "Verified attacks on schools rose 33% in 2025",
-        "summary": "联合国教科文组织称，2025年经联合国核实的学校遇袭事件有1680起，比2024年增加33%。9月9日是保护教育免受攻击国际日。",
-        "summary_en": "UNESCO says the UN verified 1,680 attacks on schools in 2025, up 33% from 2024. The figures mark the 9 September day protecting education from attack.",
+        "category": "公共安全 / PUBLIC SAFETY",
+        "headline": "青岛货轮检修火灾造成25人死亡",
+        "headline_en": "Qingdao ship fire kills 25 during maintenance",
+        "summary": "9月10日，一艘外籍货船在青岛北海造船检修时起火。船上42人中，12人撤离、5人受伤，另有25人死亡。事故原因尚未公布。",
+        "summary_en": "A foreign cargo ship caught fire during maintenance at Qingdao Beihai Shipbuilding on 10 September. Of 42 people aboard, 25 died, five were injured and 12 escaped.",
         "source": {
-          "name": "UNESCO",
-          "url": "https://www.unesco.org/en/articles/attacks-schools-rise-33-2025-unesco-calls-stronger-protection-education",
-          "published": "2026-09-08"
+          "name": "新华社 / Xinhua",
+          "url": "https://www.news.cn/politics/20260910/dfee19f865354a59b6d6af9bb7aa9115/c.html",
+          "published": "2026-09-10"
         },
         "accent": "gold"
       },
       {
         "id": "brief-06",
-        "category": "足球 / FOOTBALL",
-        "headline": "中国U20女足世界杯首战5比0取胜",
-        "headline_en": "China open U-20 Women's World Cup with a 5-0 win",
-        "summary": "中国队在U20女足世界杯小组赛首战5比0击败新喀里多尼亚。黄嘉欣12分钟内上演帽子戏法，替补陈瑞琳贡献4次助攻。",
-        "summary_en": "China opened the U-20 Women's World Cup with a 5-0 win over New Caledonia. Huang Jiaxin scored a 12-minute hat-trick and substitute Chen Ruilin made four assists.",
+        "category": "国际关系 / INTERNATIONAL",
+        "headline": "阿尔及利亚宣布与阿联酋断交",
+        "headline_en": "Algeria cuts diplomatic ties with the UAE",
+        "summary": "阿尔及利亚外交部9月10日宣布，即日起与阿联酋断绝外交关系，并已通知阿联酋驻阿大使，要求其在48小时内遵守这一决定。",
+        "summary_en": "Algeria announced on 10 September that it was cutting diplomatic ties with the UAE and gave the Emirati ambassador 48 hours to comply with the decision.",
         "source": {
-          "name": "亚洲足球联合会 / AFC",
-          "url": "https://www.the-afc.com/en/more/fifa_u-20_womens_world_cup.html/news/group-f-new-caledonia-0-5-china-pr",
-          "published": "2026-09-07"
+          "name": "新华社 / Xinhua",
+          "url": "https://www1.xinhuanet.com/20260910/965885cf254f4624880baa439b8677e3/c.html",
+          "published": "2026-09-10"
         },
         "accent": "coral"
       }
@@ -188,8 +188,8 @@
   },
   "review": {
     "reviewer": "王逸孜",
-    "approved_at": "2026-09-09T11:59:39+08:00",
-    "note": "已明确选定 N1C、N2A、N3B、N4B、N5A、N6C、P02、M06、E17；内容与竖屏图示已核查。",
-    "generated_at": "2026-09-09T11:42:00+08:00"
+    "approved_at": "2026-09-11T09:35:27+08:00",
+    "note": "用户确认正式推送和发布。",
+    "generated_at": "2026-09-11T09:31:09+08:00"
   }
 }
