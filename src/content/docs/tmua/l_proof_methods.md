@@ -2,345 +2,345 @@
 title: "L Proof Methods"
 ---
 
-## 模块 L：证明方法
+## Module L: Proof Methods
 
-> **对应考纲 Section 2**: Prf1, Prf2, Prf3, Prf4, Prf5, Err1, Err2
-> **对应 Paper**: P2 核心（8/320 题），P1 涉及（逻辑推理型题目）
-> **建议课时**: 2 课时 | **目标题量**: 12-15 题
-
----
-
-## 📋 模块概览
-
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
-|------|------|---------|-------------|------|
-| L1 | 直接证明与分情况证明 | Prf1 | 8 年 3 次 | 0.5 |
-| L2 | 反证法与反例证伪 | Prf1, Err1 | 8 年 5 次 | 1 |
-| L3 | 证明审查与错误识别 | Err1, Err2 | 8 年 6 次 | 0.5 |
+> **Corresponding Syllabus Section 2**: Prf1, Prf2, Prf3, Prf4, Prf5, Err1, Err2
+> **Corresponding Paper**: P2 Core (8/320 questions), P1 Involved (logical reasoning questions)
+> **Suggested Lessons**: 2 Lessons | **Target Question Count**: 12-15 Questions
 
 ---
 
-## L1 直接证明与分情况证明 [Prf1]
+## 📋 Module Overview
 
-### 1.1 直接证明的基本结构
-
-**直接证明（Direct Proof）**是最基础的证明方法，其结构为：
-
-> 假设 A 成立，通过一系列逻辑推导，得出 B 成立，从而证明「若 A 则 B」。
-
-**标准格式**：
-$$\text{假设条件 A} \quad \Rightarrow \quad \text{中间步骤} \quad \Rightarrow \quad \text{结论 B}$$
-
-**关键要素**：
-1. **起点明确**：清楚地陈述假设条件
-2. **链条完整**：每一步推导都有逻辑依据
-3. **终点清晰**：最终到达要证明的结论
-
-**⚠️ 常见错误**：
-- 跳跃式推理：中间步骤缺失，直接从假设跳到结论
-- 循环论证：在证明过程中使用了要证明的结论
-
-### 1.2 分情况证明（Proof by Cases）
-
-当命题涉及多种可能性时，可以**分类讨论**，证明每种情况都成立。
-
-**适用场景**：
-- 整数的奇偶性
-- 正负数的符号
-- 函数的分段定义
-- 几何图形的不同形态
-
-**经典例子**：证明任意整数 $n$ 满足 $n^2 \geq n$。
-
-**分情况证明**：
-- **Case 1**: $n \geq 1$ 时，$n^2 - n = n(n-1) \geq 0$ ✓
-- **Case 2**: $n \leq 0$ 时，$n^2 \geq 0$ 且 $n < 0$，故 $n^2 - n > 0$ ✓
-- **Case 3**: $n = 0$ 或 $n = 1$ 时，$n^2 = n$ ✓
-
-三种情况覆盖所有整数，命题成立。
-
-**⚡ 分情况证明的技巧**：
-- 分类要**穷尽**（覆盖所有可能）
-- 各类情况要**互斥**（不重叠）
-- 每种情况的证明尽可能**统一格式**
+| Section | Content | Corresponding Syllabus | Historical Frequency | Lessons |
+|---------|---------|------------------------|----------------------|---------|
+| L1 | Direct Proof and Proof by Cases | Prf1 | 3 times in 8 years | 0.5 |
+| L2 | Proof by Contradiction and Disproof by Counterexample | Prf1, Err1 | 5 times in 8 years | 1 |
+| L3 | Proof Evaluation and Error Identification | Err1, Err2 | 6 times in 8 years | 0.5 |
 
 ---
 
-## L2 反证法与反例证伪 [Prf1, Err1]
+## L1 Direct Proof and Proof by Cases [Prf1]
 
-### 2.1 反证法的逻辑结构
+### 1.1 Basic Structure of Direct Proof
 
-**反证法（Proof by Contradiction）**：假设命题不成立，推导出矛盾，从而证明命题成立。
+**Direct Proof** is the most fundamental proof method. Its structure is:
 
-**逻辑基础**：
-$$\text{假设「非 B」} \quad \Rightarrow \quad \text{推导出矛盾} \quad \Rightarrow \quad \text{「非 B」不成立} \quad \Rightarrow \quad \text{B 成立}$$
+> Assuming A holds, through a series of logical deductions, conclude that B holds, thereby proving "If A, then B".
 
-**适用场景**：
-- 证明「不存在」类型的命题（如费马大定理）
-- 证明「不可能」类型的命题
-- 直接证明难以入手的问题
+**Standard Format**:
+$$\text{Assumption A} \quad \Rightarrow \quad \text{Intermediate Steps} \quad \Rightarrow \quad \text{Conclusion B}$$
 
-**经典例子**：证明 $\sqrt{2}$ 是无理数。
+**Key Elements**:
+1. **Clear Starting Point**: Clearly state the assumption or condition.
+2. **Complete Chain**: Every deduction step must have a logical basis.
+3. **Clear Ending Point**: Finally arrive at the conclusion to be proved.
 
-**反证法证明**：
-- 假设 $\sqrt{2}$ 是有理数，设 $\sqrt{2} = \frac{p}{q}$（$p, q$ 互素）
-- 两边平方：$2 = \frac{p^2}{q^2}$，即 $p^2 = 2q^2$
-- $p^2$ 是偶数，故 $p$ 是偶数，设 $p = 2k$
-- 代入：$4k^2 = 2q^2$，得 $q^2 = 2k^2$
-- $q^2$ 是偶数，故 $q$ 是偶数
-- $p, q$ 都是偶数，与「互素」矛盾 ✓
+**⚠️ Common Errors**:
+- Jumping to conclusions: Missing intermediate steps, jumping directly from assumption to conclusion.
+- Circular reasoning: Using the conclusion to be proved as part of the proof process.
 
-### 2.2 反例证伪（Disproof by Counterexample）
+### 1.2 Proof by Cases
 
-**反例**：满足命题条件但不满足命题结论的具体实例。
+When a proposition involves multiple possibilities, you can **discuss by categories**, proving that it holds for each case.
 
-**适用场景**：
-- 推翻「所有...都...」类型的全称命题
-- 检验猜想是否正确
-- 找出命题的边界条件
+**Applicable Scenarios**:
+- Parity (even/odd) of integers
+- Signs of positive/negative numbers
+- Piecewise defined functions
+- Different shapes in geometric figures
 
-**经典例子**：命题「形如 $6k \pm 1$ 的整数都是素数」。
+**Classic Example**: Prove that any integer $n$ satisfies $n^2 \geq n$.
 
-**反例**：
-- $25 = 6 \times 4 + 1 = 5^2$（合数）
-- $35 = 6 \times 6 - 1 = 5 \times 7$（合数）
-- $49 = 6 \times 8 + 1 = 7^2$（合数）
+**Proof by Cases**:
+- **Case 1**: When $n \geq 1$, $n^2 - n = n(n-1) \geq 0$ ✓
+- **Case 2**: When $n \leq 0$, $n^2 \geq 0$ and $n < 0$, so $n^2 - n > 0$ ✓
+- **Case 3**: When $n = 0$ or $n = 1$, $n^2 = n$ ✓
 
-**⚠️ 反例的构造技巧**：
-- 从**小数值**开始检验
-- 关注**边界情况**（如 $n = 1, 2, 3$）
-- 注意**特殊数值**（如平方数、立方数）
+The three cases cover all integers, so the proposition holds.
 
-### 2.3 必要条件与充分条件 [Arg2]
+**⚡ Tips for Proof by Cases**:
+- Categories must be **exhaustive** (covering all possibilities).
+- Categories must be **mutually exclusive** (non-overlapping).
+- Keep the proof format for each case as **consistent** as possible.
 
-**必要条件（Necessary）**：若 B 成立必须有 A 成立，记作「B $\Rightarrow$ A」。
-**充分条件（Sufficient）**：若 A 成立则 B 必成立，记作「A $\Rightarrow$ B」。
+---
 
-| 关系 | 逻辑表述 | 等价表述 |
-|------|---------|---------|
-| A 是 B 的必要条件 | B $\Rightarrow$ A | 没有 A 就没有 B |
-| A 是 B 的充分条件 | A $\Rightarrow$ B | 有 A 就有 B |
-| A 是 B 的充要条件 | A $\Leftrightarrow$ B | A 与 B 等价 |
+## L2 Proof by Contradiction and Disproof by Counterexample [Prf1, Err1]
 
-**经典例子**：判断「$k$ 是 $\pi$ 的整数倍」对「$\int_0^k \sin 2x\,dx = 0$」的逻辑关系。
+### 2.1 Logical Structure of Proof by Contradiction
 
-**分析**：
+**Proof by Contradiction**: Assume the proposition does not hold, deduce a contradiction, and thereby prove that the proposition holds.
+
+**Logical Foundation**:
+$$\text{Assume "Not B"} \quad \Rightarrow \quad \text{Deduce a contradiction} \quad \Rightarrow \quad \text{"Not B" is false} \quad \Rightarrow \quad \text{B is true}$$
+
+**Applicable Scenarios**:
+- Proving "non-existence" propositions (e.g., Fermat's Last Theorem).
+- Proving "impossibility" propositions.
+- Problems that are difficult to start with a direct proof.
+
+**Classic Example**: Prove that $\sqrt{2}$ is irrational.
+
+**Proof by Contradiction**:
+- Assume $\sqrt{2}$ is a rational number. Let $\sqrt{2} = \frac{p}{q}$ (where $p$ and $q$ are coprime).
+- Square both sides: $2 = \frac{p^2}{q^2}$, which gives $p^2 = 2q^2$.
+- $p^2$ is even, so $p$ is even. Let $p = 2k$.
+- Substitute: $4k^2 = 2q^2$, which gives $q^2 = 2k^2$.
+- $q^2$ is even, so $q$ is even.
+- Both $p$ and $q$ are even, contradicting the assumption that they are "coprime". ✓
+
+### 2.2 Disproof by Counterexample
+
+**Counterexample**: A specific instance that satisfies the conditions of the proposition but does not satisfy its conclusion.
+
+**Applicable Scenarios**:
+- Overturning "all... are..." universal propositions.
+- Testing whether a conjecture is correct.
+- Finding the boundary conditions of a proposition.
+
+**Classic Example**: The proposition "Integers of the form $6k \pm 1$ are all prime numbers".
+
+**Counterexamples**:
+- $25 = 6 \times 4 + 1 = 5^2$ (composite number)
+- $35 = 6 \times 6 - 1 = 5 \times 7$ (composite number)
+- $49 = 6 \times 8 + 1 = 7^2$ (composite number)
+
+**⚠️ Tips for Constructing Counterexamples**:
+- Test starting from **small values**.
+- Pay attention to **boundary cases** (like $n = 1, 2, 3$).
+- Note **special values** (like perfect squares, perfect cubes).
+
+### 2.3 Necessary and Sufficient Conditions [Arg2]
+
+**Necessary Condition**: If B is true, A must be true. Denoted as "B $\Rightarrow$ A".
+**Sufficient Condition**: If A is true, B must be true. Denoted as "A $\Rightarrow$ B".
+
+| Relationship | Logical Expression | Equivalent Expression |
+|--------------|--------------------|-----------------------|
+| A is a necessary condition for B | B $\Rightarrow$ A | Without A, there is no B |
+| A is a sufficient condition for B | A $\Rightarrow$ B | With A, there is B |
+| A is a necessary and sufficient condition for B | A $\Leftrightarrow$ B | A and B are equivalent |
+
+**Classic Example**: Determine the logical relationship between "$k$ is an integer multiple of $\pi$" and "$\int_0^k \sin 2x\,dx = 0$".
+
+**Analysis**:
 $$\int_0^k \sin 2x\,dx = -\frac{1}{2}(\cos 2k - 1) = \frac{1 - \cos 2k}{2}$$
 
-令积分值为零：$\cos 2k = 1$，得 $2k = 2n\pi$，即 $k = n\pi$。
+Set the integral value to zero: $\cos 2k = 1$, which gives $2k = 2n\pi$, so $k = n\pi$.
 
-结论：两者**充要**。
-
----
-
-## L3 证明审查与错误识别 [Err1, Err2]
-
-### 3.1 证明审查的核心方法
-
-TMUA P2 中常见题型：**审查给出的证明，找出第一个错误所在的行**。
-
-**审查步骤**：
-1. **逐行检查**：从第一行开始，逐一验证每一步推导
-2. **逻辑链条**：确认每一步都有充分依据
-3. **边界情况**：特别关注特殊值是否被遗漏
-4. **隐含假设**：检查是否有未声明的假设
-
-### 3.2 常见证明错误类型 [Err2]
-
-| 错误类型 | 典型表现 | 示例 |
-|---------|---------|------|
-| **代数运算错误** | 符号错误、展开遗漏 | $\sin(A) = \sin(B) \Rightarrow A = B$ ✗ |
-| **逻辑跳跃** | 从乘积直接拆分因子 | $ab = ac \Rightarrow b = c$（忽略 $a = 0$）✗ |
-| **忽略边界** | 未检验特殊情况 | 「3 的倍数都不是素数」（忽略 3 本身）✗ |
-| **假等价** | 误以为等价实际单向 | 代数式不可分解 $\Rightarrow$ 值为素数 ✗ |
-| **定义域遗漏** | 未检验条件前提 | 对数方程未检验 $x > 0$ |
-
-### 3.3 典型错误分析案例
-
-**案例 1**：费马大定理 $n=3$ 的错误证明
-
-**错误行**：Line III
-> 由 $a^3 = (c-b)(c^2+cb+b^2)$ 推出 $a = c-b$ 且 $a^2 = c^2+cb+b^2$
-
-**错误原因**：乘积等式不能直接拆分因子相等。反例：$a = 6$，则 $a^3 = 216 = 3 \times 72$，此时 $a \neq c-b$。
-
-**案例 2**：连续立方数之差是否为素数
-
-**错误行**：Line IV
-> 代数式不可因式分解 $\Rightarrow$ 代入整数后是素数
-
-**错误原因**：代数不可分解不等价于值为素数。反例：$x^2 + 1$ 代数不可分解，但 $x = 3$ 时 $x^2 + 1 = 10 = 2 \times 5$。
-
-**案例 3**：连续奇素数最大个数
-
-**错误行**：Line VI
-> 其中一个整数是 3 的倍数，因此不是素数
-
-**错误原因**：忽略了 3 本身既是 3 的倍数又是素数。当 $n = 3$ 时，三数为 $1, 3, 5$，其中 3 是 3 的倍数但也是素数。
-
-**⚡ 审查技巧汇总**：
-- **运算行**：逐项检查符号和展开
-- **推理行**：确认「$\Rightarrow$」是否有充分依据
-- **结论行**：检验是否考虑所有特殊情况
-- **涉及素数/整除**：必须检查小素数倍数（2, 3, 5）
+Conclusion: They are **necessary and sufficient (equivalent)**.
 
 ---
 
-## ⚡ 速解技巧汇总
+## L3 Proof Evaluation and Error Identification [Err1, Err2]
 
-| 场景 | 技巧 |
-|------|------|
-| 直接证明 | 写清楚起点、每步推导、终点，避免跳跃 |
-| 分情况证明 | 分类穷尽且互斥，格式统一 |
-| 反证法 | 假设否定，找矛盾点，注意矛盾要明确 |
-| 反例构造 | 从小数值、边界值、特殊值入手 |
-| 证明审查 | 逐行检查，重点关注运算行和推理行 |
-| 涉及素数 | 单独检验 2、3、5 等小素数 |
-| 乘积拆分 | 不能从 $ab = cd$ 直接得 $a = c, b = d$ |
-| 代数不可分解 | 不等于值为素数，需验证反例 |
+### 3.1 Core Methods of Proof Evaluation
 
-## ⚠️ 易错警示
+Common question type in TMUA P2: **Evaluate the given proof and identify the line containing the first error**.
 
-- ❌ $\sin A = \sin B \Rightarrow A = B$（忽略了 $A + B = 180°$）
-- ❌ $ab = ac \Rightarrow b = c$（忽略了 $a = 0$ 的特殊情况）
-- ❌ 「3 的倍数不是素数」（忽略了 3 本身）
-- ❌ 代数式不可分解 $\Rightarrow$ 值为素数（忽略了代数式可取合数值）
-- ❌ 反证法中矛盾不明确（必须指出具体矛盾点）
-- ❌ 分情况遗漏（如只考虑正负忘记零）
+**Evaluation Steps**:
+1. **Line-by-line Check**: Starting from the first line, verify each deduction step one by one.
+2. **Logical Chain**: Confirm every step has a solid justification.
+3. **Boundary Cases**: Pay special attention to whether special values are omitted.
+4. **Implicit Assumptions**: Check if there are unstated assumptions.
 
----
+### 3.2 Common Types of Proof Errors [Err2]
 
-## 📝 精选例题
+| Error Type | Typical Manifestation | Example |
+|------------|-----------------------|---------|
+| **Algebraic Error** | Sign errors, missing expansion terms | $\sin(A) = \sin(B) \Rightarrow A = B$ ✗ |
+| **Logical Leap** | Splitting factors directly from a product | $ab = ac \Rightarrow b = c$ (ignoring $a = 0$) ✗ |
+| **Ignoring Boundaries** | Failing to check special cases | "Multiples of 3 are not primes" (ignoring 3 itself) ✗ |
+| **False Equivalence** | Mistaking a one-way implication for equivalence | Algebraic expression irreducible $\Rightarrow$ Value is prime ✗ |
+| **Missing Domain** | Failing to check conditions/premises | Logarithmic equation failing to check $x > 0$ |
 
-### 例题 1（2017 P2 Q9 · 证明审查）
+### 3.3 Typical Error Analysis Cases
 
-**题目**：审查费马大定理 $n=3$ 情形的错误证明，找出第一个错误所在的行。
+**Case 1**: Erroneous proof of Fermat's Last Theorem for $n=3$
 
-【题目分析】
-题目给出一段证明 $a^3 + b^3 = c^3$ 无正整数解的推理，要求识别第一个逻辑错误。核心方法是逐行检查代数运算和逻辑推导。
+**Error Line**: Line III
+> From $a^3 = (c-b)(c^2+cb+b^2)$, deduce that $a = c-b$ and $a^2 = c^2+cb+b^2$.
 
-【解题步骤】
-**Line I**：$a^3 = c^3 - b^3$，仅是移项，正确。
+**Reason for Error**: A product equality cannot be directly split into equal factors. Counterexample: If $a = 6$, then $a^3 = 216 = 3 \times 72$, but $a \neq c-b$.
 
-**Line II**：$a^3 = (c-b)(c^2+cb+b^2)$，立方差公式展开，正确。
+**Case 2**: Whether the difference of consecutive cubes is prime
 
-**Line III**：声称由乘积等式直接拆分因子：
-$$a^3 = (c-b)(c^2+cb+b^2) \Rightarrow a = c-b \text{ 且 } a^2 = c^2+cb+b^2$$
+**Error Line**: Line IV
+> Algebraic expression cannot be factorised $\Rightarrow$ Its value after substituting an integer is prime.
 
-这是致命错误！从 $A = BC$ 不能因为 $A \leq B^2$ 且 $C \geq B$ 就断言 $A = B$ 且 $A^2 = B^2$。
+**Reason for Error**: Algebraic irreducibility does not equate to the value being prime. Counterexample: $x^2 + 1$ is irreducible over integers, but when $x = 3$, $x^2 + 1 = 10 = 2 \times 5$.
 
-**反例**：设 $a = 6$，则 $a^3 = 216 = 3 \times 72$。完全可以令 $c - b = 3$、$c^2+cb+b^2 = 72$，此时 $a \neq c-b$。
+**Case 3**: Maximum number of consecutive odd primes
 
-【快捷思路】
-前两步是代数恒等变形不会出错。第三步从乘积式直接拆分因子相等，违反基本逻辑。定位 Line III。
+**Error Line**: Line VI
+> One of the integers is a multiple of 3, therefore it is not prime.
 
-【正确答案】D（Line III）
+**Reason for Error**: Ignores the fact that 3 itself is both a multiple of 3 and a prime. When $n = 3$, the three numbers are $1, 3, 5$, where 3 is a multiple of 3 but also prime.
 
-【知识点】Proof | **考纲**: Err1, Err2
-
----
-
-### 例题 2（2022 P2 Q7 · 代数不可分解谬误）
-
-**题目**：审查「连续立方数之差总是素数」的证明，找出第一个错误。
-
-【题目分析】
-证明声称 $3x^2 + 3x + 1$ 代数不可分解，故其值为素数。需要识别这个推理的漏洞。
-
-【解题步骤】
-**Line I-III**：代数展开和判别式计算均正确。
-
-**Line IV**：从「代数式不可因式分解」推出「代入整数后不能分解」。
-
-这是逻辑跳跃！**代数不可分解 ≠ 值为素数**。
-
-**反例**：$x = 6$ 时，$3 \times 36 + 18 + 1 = 127$（素数）；但 $x = 7$ 时，$3 \times 49 + 21 + 1 = 169 = 13^2$（合数）。
-
-或检验经典反例：$x^2 + 1$ 代数不可分解，但 $x = 3$ 时值为 $10 = 2 \times 5$。
-
-【快捷思路】
-记住经典反例 $x^2 + 1$：代数不可分解，代入 $x = 3$ 得合数。类似结构 $3x^2 + 3x + 1$ 同样可能取合数值。
-
-【正确答案】F（Line IV）
-
-【知识点】Proof, Counterexamples | **考纲**: Err1, Err2
+**⚡ Summary of Evaluation Tips**:
+- **Calculation lines**: Check signs and expansions term by term.
+- **Reasoning lines**: Confirm whether "$\Rightarrow$" has sufficient grounds.
+- **Conclusion lines**: Check whether all special cases have been considered.
+- **Involving primes/divisibility**: Must check multiples of small primes (2, 3, 5).
 
 ---
 
-### 例题 3（2016 P2 Q9 · 全等判定）
+## ⚡ Quick Solving Tips Summary
 
-**题目**：已知 $\triangle ABC$ 与 $\triangle XYZ$ 面积相等，判断三个额外条件中哪些能独立推出全等。
+| Scenario | Tip |
+|----------|-----|
+| Direct Proof | Clearly write starting point, each deduction step, and ending point. Avoid logical leaps. |
+| Proof by Cases | Categories must be exhaustive and mutually exclusive. Keep formatting uniform. |
+| Proof by Contradiction | Negate the assumption, find a contradiction. Ensure the contradiction is clear. |
+| Constructing Counterexamples | Start with small values, boundary values, and special values. |
+| Proof Evaluation | Check line by line. Focus heavily on calculation and reasoning lines. |
+| Involving Primes | Test small primes like 2, 3, and 5 individually. |
+| Splitting Products | Cannot deduce $a = c, b = d$ directly from $ab = cd$. |
+| Algebraic Irreducibility | Does not mean the value is prime; need to verify with counterexamples. |
 
-【题目分析】
-结合面积公式与全等判定定理（SAS、ASA），判断条件的充分性。核心是面积相等本身不保证全等。
+## ⚠️ Common Pitfalls
 
-【解题步骤】
-**条件（1）**：$AB = XY$ 且 $BC = YZ$。
-
-由面积公式 $\frac{1}{2} AB \cdot BC \sin B = \frac{1}{2} XY \cdot YZ \sin Y$，两边相等得 $\sin B = \sin Y$。
-
-但 $\sin B = \sin Y$ 不能推出 $B = Y$，因为可能有 $Y = 180° - B$（互补角）。
-
-**反例**：两边相等但夹角互补，三角形不全等。
-
-**条件（2）**：$AB = XY$ 且 $\angle B = \angle Y$。
-
-已知一角相等，面积公式直接定出第二边 $BC = YZ$。凑成 SAS，**推出全等** ✓
-
-**条件（3）**：$\angle B = \angle Y$ 且 $\angle C = \angle Z$。
-
-两角相等则第三角也相等，两三角形相似。相似比 $k$ 由面积关系确定：$k^2 = 1$，故 $k = 1$，即全等 ✓
-
-【快捷思路】
-条件（1）中正弦相等可能对应互补角；条件（2）已知一角相等，面积定边凑 SAS；条件（3）相似 + 面积等锁定相似比为 1。
-
-【正确答案】D（条件 2 和 3 都推出全等）
-
-【知识点】Proof, Coordinate Geometry | **考纲**: Prf1, M5.4
+- ❌ $\sin A = \sin B \Rightarrow A = B$ (Ignores $A + B = 180^\circ$)
+- ❌ $ab = ac \Rightarrow b = c$ (Ignores the special case $a = 0$)
+- ❌ "Multiples of 3 are not primes" (Ignores 3 itself)
+- ❌ Algebraic expression irreducible $\Rightarrow$ Value is prime (Ignores that the expression can yield composite values)
+- ❌ Unclear contradiction in proof by contradiction (Must point out the specific contradiction)
+- ❌ Missing cases in proof by cases (e.g., considering positive and negative but forgetting zero)
 
 ---
 
-## 🏋️ 课后练习（限时 15 分钟）
+## 📝 Selected Example Questions
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
-|---|------|------|---------|------|
-| 1 | 2016 P2 Q5 | 反例构造 | Prf1, Err1 | ⭐⭐⭐ |
-| 2 | 2020 P2 Q3 | 代数运算错误 | Err1, Err2 | ⭐⭐⭐ |
-| 3 | 2020 P2 Q4 | 反例判断 | Prf1, Err1 | ⭐⭐⭐ |
-| 4 | 2023 P2 Q4 | 边界遗漏 | Err1, Err2 | ⭐⭐⭐⭐ |
-| 5 | 2023 P2 Q8 | 几何证明 | Prf1, Prf5 | ⭐⭐⭐⭐ |
-| 6 | 2023 P2 Q5 | 充要条件 | Arg2, Prf2 | ⭐⭐⭐ |
-| 7 | 2017 P2 Q11 | 多项式性质 | Prf1, Prf5 | ⭐⭐⭐⭐ |
-| 8 | 2022 P2 Q9 | 逻辑条件 | Arg2, Prf2 | ⭐⭐⭐ |
+### Example 1 (2017 P2 Q9 · Proof Evaluation)
 
----
+**Question**: Evaluate the erroneous proof of Fermat's Last Theorem for the $n=3$ case, and identify the line containing the first error.
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+【Question Analysis】
+The question provides a deductive proof that $a^3 + b^3 = c^3$ has no positive integer solutions, asking you to identify the first logical error. The core method is to check algebraic calculations and logical deductions line by line.
 
----
+【Solution Steps】
+**Line I**: $a^3 = c^3 - b^3$, just rearranging terms. Correct.
 
-## 📚 补充说明
+**Line II**: $a^3 = (c-b)(c^2+cb+b^2)$, expanding using difference of cubes. Correct.
 
-### Paper 2 证明题特点
+**Line III**: Claims to split factors directly from a product equality:
+$$a^3 = (c-b)(c^2+cb+b^2) \Rightarrow a = c-b \text{ and } a^2 = c^2+cb+b^2$$
 
-1. **题型多样**：证明审查、反例构造、几何推理、逻辑判断
-2. **阅读量大**：需要仔细阅读给出的证明过程
-3. **陷阱隐蔽**：错误往往在看似合理的推理中
-4. **时间紧张**：建议每题控制在 3-4 分钟
+This is a fatal error! From $A = BC$, you cannot assert $A = B$ and $A^2 = B^2$ just because $A \leq B^2$ and $C \geq B$.
 
-### 备考建议
+**Counterexample**: Let $a = 6$, then $a^3 = 216 = 3 \times 72$. We can easily set $c - b = 3$ and $c^2+cb+b^2 = 72$, in which case $a \neq c-b$.
 
-1. **熟悉常见错误类型**：运算错误、逻辑跳跃、边界遗漏、假等价
-2. **掌握反例构造技巧**：从小数值、边界值入手
-3. **练习逐行审查**：养成逐行检查的习惯
-4. **积累经典反例**：$x^2 + 1$、$\sin A = \sin B$、3 的倍数等
+【Quick Thinking】
+The first two steps are algebraic identities and won't go wrong. The third step splits factors directly from a product expression, violating basic logic. Target Line III.
+
+【Correct Answer】D (Line III)
+
+【Knowledge Points】Proof | **Syllabus**: Err1, Err2
 
 ---
 
-## 🎯 配套练习
+### Example 2 (2022 P2 Q7 · Algebraic Irreducibility Fallacy)
 
-学完本章？[→ 去做 Proof 相关练习题](/practice/tmua/?topic=Proof)
+**Question**: Evaluate the proof that "the difference between consecutive cubes is always prime", and identify the first error.
+
+【Question Analysis】
+The proof claims that since $3x^2 + 3x + 1$ is algebraically irreducible, its value must be prime. We need to identify the flaw in this reasoning.
+
+【Solution Steps】
+**Line I-III**: Algebraic expansions and discriminant calculation are correct.
+
+**Line IV**: Deduces "cannot be factorised after substituting integers" from "algebraic expression cannot be factorised".
+
+This is a logical leap! **Algebraic irreducibility $\neq$ Value is prime**.
+
+**Counterexample**: When $x = 6$, $3 \times 36 + 18 + 1 = 127$ (prime); but when $x = 7$, $3 \times 49 + 21 + 1 = 169 = 13^2$ (composite).
+
+Or test the classic counterexample: $x^2 + 1$ is algebraically irreducible, but when $x = 3$, its value is $10 = 2 \times 5$.
+
+【Quick Thinking】
+Remember the classic counterexample $x^2 + 1$: algebraically irreducible, but yields a composite number when $x = 3$. The similar structure $3x^2 + 3x + 1$ can also take composite values.
+
+【Correct Answer】F (Line IV)
+
+【Knowledge Points】Proof, Counterexamples | **Syllabus**: Err1, Err2
 
 ---
 
-*模块 L 讲义完成 | 最后更新: 2026-04-29*
+### Example 3 (2016 P2 Q9 · Congruence Criteria)
+
+**Question**: Given that $\triangle ABC$ and $\triangle XYZ$ have equal areas, determine which of the three additional conditions can independently prove congruence.
+
+【Question Analysis】
+Combine the area formula and congruence criteria (SAS, ASA) to judge the sufficiency of the conditions. The core idea is that equal areas alone do not guarantee congruence.
+
+【Solution Steps】
+**Condition (1)**: $AB = XY$ and $BC = YZ$.
+
+From the area formula $\frac{1}{2} AB \cdot BC \sin B = \frac{1}{2} XY \cdot YZ \sin Y$, equating both sides gives $\sin B = \sin Y$.
+
+However, $\sin B = \sin Y$ does not deduce $B = Y$, because it's possible that $Y = 180^\circ - B$ (supplementary angles).
+
+**Counterexample**: Two sides are equal but the included angles are supplementary. The triangles are not congruent.
+
+**Condition (2)**: $AB = XY$ and $\angle B = \angle Y$.
+
+Knowing one angle is equal, the area formula directly determines the second side $BC = YZ$. This forms SAS, **deducing congruence**. ✓
+
+**Condition (3)**: $\angle B = \angle Y$ and $\angle C = \angle Z$.
+
+Two angles being equal means the third angles are also equal, making the two triangles similar. The scale factor $k$ is determined by the area relationship: $k^2 = 1$, so $k = 1$, meaning they are congruent. ✓
+
+【Quick Thinking】
+In Condition (1), equal sines could correspond to supplementary angles; in Condition (2), knowing one angle is equal, the area fixes the side to form SAS; in Condition (3), similarity + equal area locks the scale factor to 1.
+
+【Correct Answer】D (Both conditions 2 and 3 deduce congruence)
+
+【Knowledge Points】Proof, Coordinate Geometry | **Syllabus**: Prf1, M5.4
+
+---
+
+## 🏋️ After-Class Exercises (Time limit: 15 minutes)
+
+| # | Question ID | Topic | Corresponding Syllabus | Difficulty |
+|---|-------------|-------|------------------------|------------|
+| 1 | 2016 P2 Q5 | Constructing Counterexamples | Prf1, Err1 | ⭐⭐⭐ |
+| 2 | 2020 P2 Q3 | Algebraic Errors | Err1, Err2 | ⭐⭐⭐ |
+| 3 | 2020 P2 Q4 | Evaluating Counterexamples | Prf1, Err1 | ⭐⭐⭐ |
+| 4 | 2023 P2 Q4 | Missing Boundaries | Err1, Err2 | ⭐⭐⭐⭐ |
+| 5 | 2023 P2 Q8 | Geometric Proof | Prf1, Prf5 | ⭐⭐⭐⭐ |
+| 6 | 2023 P2 Q5 | Necessary and Sufficient Conditions | Arg2, Prf2 | ⭐⭐⭐ |
+| 7 | 2017 P2 Q11 | Polynomial Properties | Prf1, Prf5 | ⭐⭐⭐⭐ |
+| 8 | 2022 P2 Q9 | Logical Conditions | Arg2, Prf2 | ⭐⭐⭐ |
+
+---
+
+*For full solutions, see the question bank database. Each question includes 【Solution Steps】 and 【Quick Thinking】.*
+
+---
+
+## 📚 Supplementary Notes
+
+### Characteristics of Paper 2 Proof Questions
+
+1. **Diverse Types**: Proof evaluation, constructing counterexamples, geometric reasoning, logical judgment.
+2. **Heavy Reading**: Requires careful reading of the provided proof processes.
+3. **Hidden Traps**: Errors often lie in seemingly reasonable deductions.
+4. **Tight Timing**: Recommended to spend 3-4 minutes per question.
+
+### Exam Preparation Advice
+
+1. **Familiarize with Common Error Types**: Algebraic errors, logical leaps, missing boundaries, false equivalences.
+2. **Master Counterexample Construction Techniques**: Start with small values and boundary values.
+3. **Practice Line-by-Line Evaluation**: Develop the habit of checking step-by-step.
+4. **Collect Classic Counterexamples**: $x^2 + 1$, $\sin A = \sin B$, multiples of 3, etc.
+
+---
+
+## 🎯 Companion Exercises
+
+Finished this chapter? [→ Go to Proof Practice Questions](/practice/tmua/?topic=Proof)
+
+---
+
+*Module L Notes Completed | Last Updated: 2026-04-29*

@@ -12,96 +12,96 @@ These handouts are organized by topic, covering all 15 knowledge areas tested in
 
 ---
 
-### 📝 在线练习系统
+### 📝 Online Practice System
 
-完成讲义后进入 [TMUA 练习系统](/practice/tmua/)，支持按年份、知识点筛选和模拟考试。
+After completing the handouts, head over to the [TMUA Practice System](/practice/tmua/). It allows you to filter questions by year and topic, and take mock exams.
 
 ---
 
-### 模块列表
+### Module List
 
-#### A 代数基础
+#### A Algebra Basics
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| A1 | 代数运算基础（指数法则、根式、多项式） | [A1 Algebra Basics](./a1_algebra_basics/) |
-| A2 | 方程与不等式 | [A2 Equations & Inequalities](./a2_equations_inequalities/) |
-| A3 | 指数与对数 | [A3 Exponents & Logarithms](./a3_exponents_logarithms/) |
+| A1 | Algebra Basics (Index Laws, Surds, Polynomials) | [A1 Algebra Basics](./a1_algebra_basics/) |
+| A2 | Equations & Inequalities | [A2 Equations & Inequalities](./a2_equations_inequalities/) |
+| A3 | Exponents & Logarithms | [A3 Exponents & Logarithms](./a3_exponents_logarithms/) |
 
-#### B 逻辑基础
+#### B Logic Basics
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| B | 数学逻辑基础（命题逻辑、量词） | [B Mathematical Logic](./b_mathematical_logic_basics/) |
+| B | Mathematical Logic Basics (Propositional Logic, Quantifiers) | [B Mathematical Logic](./b_mathematical_logic_basics/) |
 
-#### C 数列
+#### C Sequences & Series
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| C | 数列与级数（等差、等比、递推） | [C Sequences & Series](./c_sequences_series/) |
+| C | Sequences & Series (Arithmetic, Geometric, Recurrence Relations) | [C Sequences & Series](./c_sequences_series/) |
 
-#### D 坐标几何
+#### D Coordinate Geometry
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| D | 坐标几何（直线、圆、二次曲线） | [D Coordinate Geometry](./d_coordinate_geometry/) |
+| D | Coordinate Geometry (Lines, Circles, Conics) | [D Coordinate Geometry](./d_coordinate_geometry/) |
 
-#### E 三角函数
+#### E Trigonometry
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| E | 三角函数与恒等变换 | [E Trigonometry](./e_trigonometry/) |
+| E | Trigonometry & Identities | [E Trigonometry](./e_trigonometry/) |
 
-#### F 微分
+#### F Differentiation
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| F | 微分学（求导、切线、单调性） | [F Differentiation](./f_differentiation/) |
+| F | Differentiation (Derivatives, Tangents, Monotonicity) | [F Differentiation](./f_differentiation/) |
 
-#### G 积分
+#### G Integration
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| G | 积分学（不定积分、定积分、面积） | [G Integration](./g_integration/) |
+| G | Integration (Indefinite Integrals, Definite Integrals, Areas) | [G Integration](./g_integration/) |
 
-#### H 逻辑与反例
+#### H Logic & Counterexamples
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| H | 逻辑与反例（充分必要条件、反例构造） | [H Logic & Counterexamples](./h_logic_counterexamples/) |
+| H | Logic & Counterexamples (Necessary and Sufficient Conditions, Constructing Counterexamples) | [H Logic & Counterexamples](./h_logic_counterexamples/) |
 
-#### I 函数与图像
+#### I Functions & Graphs
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| I | 函数与函数图像（变换、对称） | [I Functions & Graphs](./i_functions_graphs/) |
+| I | Functions & Graphs (Transformations, Symmetry) | [I Functions & Graphs](./i_functions_graphs/) |
 
-#### J 集合与概率
+#### J Sets & Probability
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| J | 集合与概率基础 | [J Sets & Probability](./j_sets_probability/) |
+| J | Basics of Sets & Probability | [J Sets & Probability](./j_sets_probability/) |
 
-#### K 数论与组合
+#### K Number Theory & Combinatorics
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| K | 数论基础与组合计数 | [K Number Theory & Combinatorics](./k_number_theory_combinatorics/) |
+| K | Basics of Number Theory & Combinatorics | [K Number Theory & Combinatorics](./k_number_theory_combinatorics/) |
 
-#### L 证明方法
+#### L Proof Methods
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| L | 证明方法（直接证明、反证法、数学归纳法） | [L Proof Methods](./l_proof_methods/) |
+| L | Proof Methods (Direct Proof, Proof by Contradiction, Mathematical Induction) | [L Proof Methods](./l_proof_methods/) |
 
-#### M 综合训练
+#### M Comprehensive Training
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| M | 综合训练（跨模块题目） | [M Comprehensive Training](./m_comprehensive_training/) |
+| M | Comprehensive Training (Cross-module Questions) | [M Comprehensive Training](./m_comprehensive_training/) |
 
-#### N 模拟考试冲刺
+#### N Mock Exam Sprint
 
-| 模块 | 内容 | 链接 |
+| Module | Content | Link |
 |------|------|------|
-| N | 模拟考试与冲刺训练 | [N Mock Exam Sprint](./n_mock_exam_sprint/) |
+| N | Mock Exams & Sprint Training | [N Mock Exam Sprint](./n_mock_exam_sprint/) |

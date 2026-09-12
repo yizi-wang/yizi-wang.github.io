@@ -16,7 +16,7 @@ The route follows Stillwell Chapter 8: perspective, anamorphosis, Desargues, cro
 
 ## Entry Problem: Why Do Tiles Shrink in a Perspective Drawing?
 
-Draw a horizon line and choose a vanishing point $V$. Draw a baseline below it, mark equally spaced points, and connect them to $V$. These lines represent tile edges going away from the viewer.
+Draw a horizon line and choose a vanishing point  $V$ . Draw a baseline below it, mark equally spaced points, and connect them to  $V$ . These lines represent tile edges going away from the viewer.
 
 Now ask: how should the horizontal tile lines be drawn so that the drawing represents equal square tiles on the actual floor?
 
@@ -32,7 +32,7 @@ Geometry has shifted from measuring to tracking relations.
 
 ## 1. Perspective as a Mathematical Transformation
 
-Alberti's veil can be modeled as follows: the eye is fixed at a point $O$, the canvas is a plane, and each point $P$ in space is sent to the intersection of the line $OP$ with the canvas.
+Alberti's veil can be modeled as follows: the eye is fixed at a point  $O$ , the canvas is a plane, and each point  $P$  in space is sent to the intersection of the line  $OP$  with the canvas.
 
 Two facts follow:
 
@@ -43,7 +43,7 @@ These facts are enough to construct a tiled floor without measuring equal distan
 
 Class pause: decide which properties survive perspective.
 
-- $A,B,C$ are collinear.
+-  $A,B,C$  are collinear.
 - Two lines are parallel.
 - Two lines are perpendicular.
 - A quadrilateral is a square.
@@ -61,29 +61,29 @@ So projective geometry is not merely a theory of realistic painting. It studies 
 
 ## 3. Desargues: Understanding a Plane Figure Through Space
 
-Suppose two triangles $A_1B_1C_1$ and $A_2B_2C_2$ satisfy
+Suppose two triangles  $A_1B_1C_1$  and  $A_2B_2C_2$  satisfy
 
-$$
+ $$
 A_1A_2,\quad B_1B_2,\quad C_1C_2
-$$
+$$ 
 
-all passing through one point $O$. The triangles are in perspective from $O$.
+all passing through one point  $O$ . The triangles are in perspective from  $O$ .
 
 Desargues's theorem states: the intersections of corresponding sides are collinear. If
 
-$$
+ $$
 X=A_1B_1\cap A_2B_2,
-$$
+$$ 
 
-$$
+ $$
 Y=B_1C_1\cap B_2C_2,
-$$
+$$ 
 
-$$
+ $$
 Z=C_1A_1\cap C_2A_2,
-$$
+$$ 
 
-then $X,Y,Z$ lie on one line.
+then  $X,Y,Z$  lie on one line.
 
 If the triangles actually lie in two planes in space, the result is natural: those points lie on the intersection line of the two planes. The subtle part is proving the planar theorem by interpreting the configuration spatially.
 
@@ -104,87 +104,87 @@ This does not add a curiosity for its own sake. It removes exceptions and lets t
 
 Projection does not preserve length or ratios of lengths. Three points on a line still give no numerical invariant, because a projectivity can send any three collinear points to any other three.
 
-Four points are different. For four points $A,B,C,D$ on a number line, define
+Four points are different. For four points  $A,B,C,D$  on a number line, define
 
-$$
+ $$
 (A,B;C,D)=\frac{(C-A)(D-B)}{(C-B)(D-A)}.
-$$
+$$ 
 
 Conventions vary, but the central fact is stable: cross-ratio is preserved by projective transformations.
 
 Example:
 
-$$
+ $$
 A=1,\quad B=2,\quad C=3,\quad D=5.
-$$
+$$ 
 
 Then
 
-$$
+ $$
 (A,B;C,D)=\frac{(3-1)(5-2)}{(3-2)(5-1)}=\frac32.
-$$
+$$ 
 
-Students can check that the transformation $x\mapsto 1/x$ changes all ordinary distances but preserves the cross-ratio.
+Students can check that the transformation  $x\mapsto 1/x$  changes all ordinary distances but preserves the cross-ratio.
 
 The invariance is not magic. On a projective line, a basic projective transformation has the form
 
-$$
+ $$
 f(x)=\frac{ax+b}{cx+d},\quad ad-bc\ne 0.
-$$
+$$ 
 
 A direct subtraction gives
 
-$$
+ $$
 f(u)-f(v)=\frac{(ad-bc)(u-v)}{(cu+d)(cv+d)}.
-$$
+$$ 
 
-When this expression is substituted into the cross-ratio, all factors from $ad-bc$ and all denominator factors cancel. The original cross-ratio remains. This small calculation is worth doing: it shows that a projective invariant is forced by the algebraic form of projection.
+When this expression is substituted into the cross-ratio, all factors from  $ad-bc$  and all denominator factors cancel. The original cross-ratio remains. This small calculation is worth doing: it shows that a projective invariant is forced by the algebraic form of projection.
 
 ## 6. Conics at Infinity
 
 Greek geometry views ellipses, parabolas, and hyperbolas as sections of a cone. Analytic geometry unifies them by quadratic equations. Projective geometry compares them by how they meet the line at infinity.
 
-Use homogeneous coordinates $[X:Y:Z]$. The ordinary plane is $Z\ne 0$, often normalized by $Z=1$. The line at infinity is $Z=0$.
+Use homogeneous coordinates  $[X:Y:Z]$ . The ordinary plane is  $Z\ne 0$ , often normalized by  $Z=1$ . The line at infinity is  $Z=0$ .
 
 Consider three projective conics.
 
 1. Circle/ellipse type:
 
-$$
+ $$
 X^2+Y^2=Z^2.
-$$
+$$ 
 
-At infinity, $Z=0$, so
+At infinity,  $Z=0$ , so
 
-$$
+ $$
 X^2+Y^2=0.
-$$
+$$ 
 
 There is no nonzero real solution. No real points at infinity.
 
 2. Parabola type:
 
-$$
+ $$
 X^2=YZ.
-$$
+$$ 
 
-At infinity, $Z=0$, so $X=0$. There is one point at infinity:
+At infinity,  $Z=0$ , so  $X=0$ . There is one point at infinity:
 
-$$
+ $$
 [0:1:0].
-$$
+$$ 
 
 3. Hyperbola type:
 
-$$
+ $$
 XY=Z^2.
-$$
+$$ 
 
-At infinity, $Z=0$, so $XY=0$. There are two points at infinity:
+At infinity,  $Z=0$ , so  $XY=0$ . There are two points at infinity:
 
-$$
+ $$
 [1:0:0],\quad [0:1:0].
-$$
+$$ 
 
 This classifies conics by their behavior at infinity rather than by their visible shape.
 
@@ -192,31 +192,31 @@ This classifies conics by their behavior at infinity rather than by their visibl
 
 The rule for homogeneous coordinates is
 
-$$
+ $$
 [X:Y:Z]=[\lambda X:\lambda Y:\lambda Z],\quad \lambda\ne 0.
-$$
+$$ 
 
 A projective point is not a single triple, but a whole line through the origin in three-dimensional coordinate space.
 
-Ordinary points $(x,y)$ correspond to
+Ordinary points  $(x,y)$  correspond to
 
-$$
+ $$
 [x:y:1].
-$$
+$$ 
 
-Points at infinity have $Z=0$.
+Points at infinity have  $Z=0$ .
 
-For example, the affine parabola $y=x^2$ becomes
+For example, the affine parabola  $y=x^2$  becomes
 
-$$
+ $$
 X^2=YZ.
-$$
+$$ 
 
-When $Z=1$, this is $y=x^2$. When $Z=0$, it contains its point at infinity. This is why projective language is useful in Bezout-type counting: intersections at infinity must be included.
+When  $Z=1$ , this is  $y=x^2$ . When  $Z=0$ , it contains its point at infinity. This is why projective language is useful in Bezout-type counting: intersections at infinity must be included.
 
-Homogeneous coordinates also give a uniform form for projective transformations. A plane projective transformation can be represented by an invertible $3\times 3$ matrix:
+Homogeneous coordinates also give a uniform form for projective transformations. A plane projective transformation can be represented by an invertible  $3\times 3$  matrix:
 
-$$
+ $$
 \begin{bmatrix}
 X'\\Y'\\Z'
 \end{bmatrix}
@@ -225,9 +225,9 @@ H
 \begin{bmatrix}
 X\\Y\\Z
 \end{bmatrix}.
-$$
+$$ 
 
-Since $[X:Y:Z]$ is defined only up to scale, the matrix $H$ is also determined only up to a nonzero scalar. In a nondegenerate situation, four point correspondences determine a plane homography. This is the mathematics behind document rectification: the software recovers a projective relation on a plane, not all real lengths and angles automatically.
+Since  $[X:Y:Z]$  is defined only up to scale, the matrix  $H$  is also determined only up to a nonzero scalar. In a nondegenerate situation, four point correspondences determine a plane homography. This is the mathematics behind document rectification: the software recovers a projective relation on a plane, not all real lengths and angles automatically.
 
 ## 8. Pascal, Pappus, and Brianchon
 
@@ -271,55 +271,55 @@ The goal is not a polished drawing. It is to make "parallel lines meet at infini
 
 On the number line, take
 
-$$
+ $$
 A=1,\quad B=2,\quad C=3,\quad D=5.
-$$
+$$ 
 
 Compute
 
-$$
+ $$
 (A,B;C,D)=\frac{(C-A)(D-B)}{(C-B)(D-A)}.
-$$
+$$ 
 
 Now apply the projective transformation
 
-$$
+ $$
 f(x)=\frac{x}{x+1}.
-$$
+$$ 
 
 The four points become
 
-$$
+ $$
 f(A)=\frac12,\quad f(B)=\frac23,\quad f(C)=\frac34,\quad f(D)=\frac56.
-$$
+$$ 
 
 Compute
 
-$$
+ $$
 (f(A),f(B);f(C),f(D)).
-$$
+$$ 
 
 Students should find that ordinary distances have changed, but the cross-ratio has not. Then ask: why are three collinear points not enough to produce such an invariant?
 
 ### Activity C: Use the Line at Infinity to Classify Conics
 
-Set $Z=0$ in
+Set  $Z=0$  in
 
-$$
+ $$
 X^2+Y^2=Z^2,
-$$
+$$ 
 
-$$
+ $$
 X^2=YZ,
-$$
+$$ 
 
-$$
+ $$
 XY=Z^2.
-$$
+$$ 
 
 Students should write the full reasoning:
 
-1. What equation remains after setting $Z=0$?
+1. What equation remains after setting  $Z=0$ ?
 2. How many nonzero real projective solutions are there?
 3. Why do the answers correspond to ellipse, parabola, and hyperbola?
 
@@ -351,6 +351,6 @@ This connects homogeneous coordinates with computer vision, but the mathematics 
 
 - Renaissance perspective: Brunelleschi, Alberti, and Durer.
 - Anamorphosis: Holbein and Niceron.
-- Projective transformations and linear fractional maps on $\mathbb{RP}^1$.
+- Projective transformations and linear fractional maps on  $\mathbb{RP}^1$ .
 - Homogeneous polynomials, the line at infinity, and Bezout's theorem.
 - Pascal, Pappus, and Brianchon: drawing, duality, and algebraic proof.

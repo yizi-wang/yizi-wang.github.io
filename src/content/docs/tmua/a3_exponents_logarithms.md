@@ -2,45 +2,45 @@
 title: "A3 Exponents and Logarithms"
 ---
 
-## 模块 A3：指数与对数
+## Module A3: Exponents and Logarithms
 
-> **对应考纲 Section 1**: MM5.1, MM5.2, MM5.3
-> **对应 Paper**: P1 重点（约 15/320 题），P2 涉及（逻辑推理型指数对数题）
-> **建议课时**: 1 课时 | **目标题量**: 10-15 题
+> **Corresponding Syllabus Section 1**: MM5.1, MM5.2, MM5.3
+> **Corresponding Paper**: P1 Main Focus (Approx. 15/320 questions), P2 Involves (Logical reasoning questions on exponents and logarithms)
+> **Recommended Time**: 1 lesson | **Target Number of Questions**: 10-15 questions
 
 ---
 
-## 📋 模块概览
+## 📋 Module Overview
 
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
+| Section | Content | Syllabus | Past Paper Frequency | Lessons |
 |------|------|---------|-------------|------|
-| A3.1 | 指数函数与图像 | MM5.1 | 8 年 8 次 | 0.25 |
-| A3.2 | 对数运算法则 | MM5.2 | 8 年 12 次 | 0.25 |
-| A3.3 | 指数与对数方程求解 | MM5.3 | 8 年 15 次 | 0.5 |
+| A3.1 | Exponential Functions and Graphs | MM5.1 | 8 times in 8 years | 0.25 |
+| A3.2 | Laws of Logarithms | MM5.2 | 12 times in 8 years | 0.25 |
+| A3.3 | Solving Exponential and Logarithmic Equations | MM5.3 | 15 times in 8 years | 0.5 |
 
 ---
 
-## A3.1 指数函数与图像 [MM5.1]
+## A3.1 Exponential Functions and Graphs [MM5.1]
 
-### 1.1 指数函数的定义
+### 1.1 Definition of Exponential Functions
 
-指数函数的形式为 $y = a^x$，其中 $a > 0$ 且 $a \neq 1$。
+An exponential function takes the form $y = a^x$, where $a > 0$ and $a \neq 1$.
 
-**⚠️ 为什么要求 $a \neq 1$？** 当 $a = 1$ 时，$y = 1^x = 1$ 是常数函数，没有指数增长或衰减的特性。
+**⚠️ Why do we require $a \neq 1$?** When $a = 1$, $y = 1^x = 1$ is a constant function and does not exhibit characteristics of exponential growth or decay.
 
-### 1.2 指数函数的图像特征
+### 1.2 Graphical Characteristics of Exponential Functions
 
-| 底数 $a$ | 函数性质 | 图像特征 | 关键点 |
+| Base $a$ | Function Property | Graphical Characteristics | Key Points |
 |---------|---------|---------|--------|
-| $a > 1$ | 严格递增 | 从左下到右上，过 $(0,1)$ | $x \to +\infty$ 时 $y \to +\infty$ |
-| $0 < a < 1$ | 严格递减 | 从左上到右下，过 $(0,1)$ | $x \to +\infty$ 时 $y \to 0$ |
+| $a > 1$ | Strictly increasing | From bottom-left to top-right, passing through $(0,1)$ | As $x \to +\infty$, $y \to +\infty$ |
+| $0 < a < 1$ | Strictly decreasing | From top-left to bottom-right, passing through $(0,1)$ | As $x \to +\infty$, $y \to 0$ |
 
-**共同特征**：
-- 必过点 $(0, 1)$（因为 $a^0 = 1$）
-- 恒在 $x$ 轴上方（$y > 0$）
-- 无零点、无对称性
+**Common Characteristics**:
+- Always passes through the point $(0, 1)$ (since $a^0 = 1$)
+- Always lies above the $x$-axis ($y > 0$)
+- No roots (x-intercepts) and no symmetry
 
-### 1.3 指数法则回顾 [MM1.1]
+### 1.3 Review of the Laws of Indices [MM1.1]
 
 $$a^m \cdot a^n = a^{m+n}$$
 
@@ -52,27 +52,27 @@ $$a^{-n} = \frac{1}{a^n}$$
 
 $$a^{m/n} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m$$
 
-**⚡ 常用特例**：$a^{x} \cdot a^{-x} = 1$，即 $a^{-x} = \frac{1}{a^x}$。
+**⚡ Common Special Case**: $a^{x} \cdot a^{-x} = 1$, which means $a^{-x} = \frac{1}{a^x}$.
 
 ---
 
-## A3.2 对数运算法则 [MM5.2]
+## A3.2 Laws of Logarithms [MM5.2]
 
-### 2.1 对数的定义
+### 2.1 Definition of Logarithms
 
-若 $a^b = c$（$a > 0$, $a \neq 1$, $c > 0$），则 $b = \log_a c$。
+If $a^b = c$ (where $a > 0$, $a \neq 1$, $c > 0$), then $b = \log_a c$.
 
-**本质理解**：对数是指数的逆运算，$\log_a c$ 回答的问题是「$a$ 的多少次幂等于 $c$？」
+**Fundamental Understanding**: A logarithm is the inverse operation of exponentiation. $\log_a c$ answers the question: "To what power must $a$ be raised, to produce $c$?"
 
-### 2.2 对数基本性质
+### 2.2 Basic Properties of Logarithms
 
-| 性质 | 公式 | 推导 |
+| Property | Formula | Derivation |
 |------|------|------|
-| 对数恒等式 | $\log_a a = 1$ | $a^1 = a$ |
-| 对数零值 | $\log_a 1 = 0$ | $a^0 = 1$ |
-| 指数还原 | $a^{\log_a x} = x$ | 定义直接得出 |
+| Logarithmic Identity | $\log_a a = 1$ | $a^1 = a$ |
+| Logarithm of One | $\log_a 1 = 0$ | $a^0 = 1$ |
+| Exponential Inversion | $a^{\log_a x} = x$ | Derived directly from the definition |
 
-### 2.3 对数运算法则
+### 2.3 Laws of Logarithms
 
 $$\log_a x + \log_a y = \log_a(xy)$$
 
@@ -80,245 +80,245 @@ $$\log_a x - \log_a y = \log_a\left(\frac{x}{y}\right)$$
 
 $$k \log_a x = \log_a(x^k)$$
 
-**特例**：
+**Special Cases**:
 
 $$\log_a\left(\frac{1}{x}\right) = -\log_a x$$
 
 $$\log_a \sqrt{x} = \frac{1}{2}\log_a x$$
 
-**⚠️ 常见错误**：
+**⚠️ Common Mistakes**:
 - $\log_a(x + y) \neq \log_a x + \log_a y$
 - $\log_a(xy) \neq (\log_a x)(\log_a y)$
-- 对数只对乘法、除法、幂运算有简化作用，对加减法无效
+- Logarithms only simplify multiplication, division, and exponentiation; they are not distributive over addition or subtraction.
 
-### 2.4 换底公式（考试不要求，但了解有助于理解）
+### 2.4 Change of Base Formula (Not required for the exam, but helpful for understanding)
 
 $$\log_a b = \frac{\log_c b}{\log_c a}$$
 
-**⚡ 常用形式**：$\log_2 3 = \frac{\log_{10} 3}{\log_{10} 2}$。
+**⚡ Common Form**: $\log_2 3 = \frac{\log_{10} 3}{\log_{10} 2}$.
 
 ---
 
-## A3.3 指数与对数方程求解 [MM5.3]
+## A3.3 Solving Exponential and Logarithmic Equations [MM5.3]
 
-### 3.1 指数方程求解策略
+### 3.1 Strategies for Solving Exponential Equations
 
-**核心思想**：通过换元将指数方程转化为熟悉的代数方程。
+**Core Idea**: Use substitution to convert the exponential equation into a familiar algebraic equation.
 
-**典型模式**：
-- $a^{2x} + b a^x + c = 0$ → 设 $u = a^x$，化为 $u^2 + bu + c = 0$
+**Typical Patterns**:
+- $a^{2x} + b a^x + c = 0$ → Let $u = a^x$, then convert it to $u^2 + bu + c = 0$
 - $a^x = b$ → $x = \log_a b$
-- $a^x = a^y$ → $x = y$（底数相同时指数相等）
+- $a^x = a^y$ → $x = y$ (Equating the exponents when the bases are the same)
 
-### 3.2 对数方程求解策略
+### 3.2 Strategies for Solving Logarithmic Equations
 
-**核心思想**：利用对数运算法则化为简单形式，再取指数还原。
+**Core Idea**: Use the laws of logarithms to simplify the expression, then apply exponentiation to solve.
 
-**典型步骤**：
-1. 利用运算法则合并/拆分对数项
-2. 化为 $\log_a A = \log_a B$ 的形式
-3. 去对数得 $A = B$
-4. **检验定义域**：对数要求真数 $> 0$
+**Typical Steps**:
+1. Use the laws of logarithms to combine/expand logarithmic terms.
+2. Convert it to the form $\log_a A = \log_a B$.
+3. Remove the logarithms to get $A = B$.
+4. **Check the Domain**: Logarithms require their arguments to be strictly positive ($> 0$).
 
-**⚠️ 易错警示**：去对数后必须检验真数是否为正，排除增根。
+**⚠️ Common Pitfall**: After removing the logarithms, you must verify that the argument is positive to eliminate any extraneous roots.
 
-### 3.3 对数不等式的陷阱
+### 3.3 Traps in Logarithmic Inequalities
 
-当对数底数 $a > 1$ 时，函数递增，不等号方向不变：
+When the base of the logarithm is $a > 1$, the function is strictly increasing, so the direction of the inequality remains unchanged:
 $$\log_a x > \log_a y \iff x > y$$
 
-当对数底数 $0 < a < 1$ 时，函数递减，**不等号反转**：
+When the base of the logarithm is $0 < a < 1$, the function is strictly decreasing, so the **inequality sign must be reversed**:
 $$\log_a x > \log_a y \iff x < y$$
 
 ---
 
-## ⚡ 速解技巧汇总
+## ⚡ Quick Solving Techniques Summary
 
-| 场景 | 技巧 |
+| Scenario | Technique |
 |------|------|
-| 指数方程 $a^{2x} + ba^x + c = 0$ | 设 $u = a^x$，化为二次方程 |
-| 比较 $a^x$ 与 $b^x$ 的大小 | 看 $x > 0$ 还是 $x < 0$，利用单调性 |
-| 对数合并 | $\log(xy) = \log x + \log y$，反之亦可拆分 |
-| 求解 $\log_a x = k$ | 直接写 $x = a^k$，一步到位 |
-| 判断 $f(x) = a^{kx}$ 的图像 | 有效底数为 $a^k$，与 $b^x$ 比较 |
-| 对数底数小于 1 的不等式 | 不等号必须反转 |
+| Exponential equation $a^{2x} + ba^x + c = 0$ | Let $u = a^x$ to convert it into a quadratic equation |
+| Comparing the sizes of $a^x$ and $b^x$ | Check whether $x > 0$ or $x < 0$ and use monotonicity |
+| Combining logarithms | $\log(xy) = \log x + \log y$, and vice versa |
+| Solving $\log_a x = k$ | Write $x = a^k$ directly in one step |
+| Determining the graph of $f(x) = a^{kx}$ | The effective base is $a^k$; compare it with $b^x$ |
+| Logarithmic inequalities with a base less than 1 | The inequality sign must be reversed |
 
-## ⚠️ 易错警示
+## ⚠️ Common Pitfalls
 
-- ❌ $\log(x+y) \neq \log x + \log y$ — 对数不能拆解加法
-- ❌ $\log(xy) \neq (\log x)(\log y)$ — 对数乘积不是对数的乘积
-- ❌ 指数方程换元后，$u = a^x$ 必须 $> 0$，排除负根
-- ❌ 底数 $< 1$ 的对数不等式，不等号必须反转
-- ❌ $a^{x+y} = a^x \cdot a^y$，不是 $(a^x)^y$（后者等于 $a^{xy}$）
+- ❌ $\log(x+y) \neq \log x + \log y$ — Logarithms cannot be split over addition.
+- ❌ $\log(xy) \neq (\log x)(\log y)$ — The logarithm of a product is not the product of the logarithms.
+- ❌ After substituting in an exponential equation, $u = a^x$ must be $> 0$; negative roots must be excluded.
+- ❌ In logarithmic inequalities with a base $< 1$, the inequality sign must be reversed.
+- ❌ $a^{x+y} = a^x \cdot a^y$, not $(a^x)^y$ (the latter equals $a^{xy}$).
 
 ---
 
-## 📝 精选例题
+## 📝 Selected Worked Examples
 
-### 例题 1（2016 P1 Q11 · 指数方程求解）
+### Example 1 (2016 P1 Q11 · Solving Exponential Equations)
 
-**题目**：方程 $4^{2x} + 12 = 2^{2x+3}$ 的两个实根为 $p$ 和 $q$（$p > q$），求 $p - q$ 的值。
+**Question**: The equation $4^{2x} + 12 = 2^{2x+3}$ has two real roots, $p$ and $q$ (where $p > q$). Find the value of $p - q$.
 
-【题目分析】
-本题考查指数方程的换元求解。核心在于识别底数关系 $4 = 2^2$，将方程转化为同一底数的指数形式，再通过换元化为二次方程。
+【Question Analysis】
+This question tests solving exponential equations via substitution. The key is to recognise the base relationship $4 = 2^2$, convert the equation into exponential forms with the same base, and then use substitution to convert it into a quadratic equation.
 
-【解题步骤】
-第一步：统一底数
+【Solving Steps】
+Step 1: Unify the bases
 
 $$4^{2x} = (2^2)^{2x} = 2^{4x} = (2^{2x})^2$$
 
 $$2^{2x+3} = 2^{2x} \cdot 2^3 = 8 \cdot 2^{2x}$$
 
-第二步：设 $u = 2^{2x}$（$u > 0$），方程化为：
+Step 2: Let $u = 2^{2x}$ ($u > 0$). The equation becomes:
 
 $$u^2 + 12 = 8u$$
 
 $$u^2 - 8u + 12 = 0$$
 
-第三步：解二次方程
+Step 3: Solve the quadratic equation
 
 $$(u-6)(u-2) = 0$$
 
-得 $u = 6$ 或 $u = 2$（均为正，符合要求）。
+This yields $u = 6$ or $u = 2$ (both are positive, so they are valid).
 
-第四步：还原求 $x$
+Step 4: Substitute back to find $x$
 
-当 $u = 6$ 时：$2^{2x} = 6$，即 $2x = \log_2 6$，故 $x = \frac{1}{2}\log_2 6$。
+When $u = 6$: $2^{2x} = 6$, which means $2x = \log_2 6$, thus $x = \frac{1}{2}\log_2 6$.
 
-当 $u = 2$ 时：$2^{2x} = 2$，即 $2x = 1$，故 $x = \frac{1}{2}$。
+When $u = 2$: $2^{2x} = 2$, which means $2x = 1$, thus $x = \frac{1}{2}$.
 
-第五步：计算 $p - q$
+Step 5: Calculate $p - q$
 
 $$p - q = \frac{1}{2}\log_2 6 - \frac{1}{2} = \frac{1}{2}(\log_2 6 - \log_2 2) = \frac{1}{2}\log_2 3$$
 
-利用换底公式 $\log_2 3 = \frac{\log_{10} 3}{\log_{10} 2}$ 及 $2\log_{10} 2 = \log_{10} 4$：
+Using the change of base formula $\log_2 3 = \frac{\log_{10} 3}{\log_{10} 2}$ and $2\log_{10} 2 = \log_{10} 4$:
 
 $$p - q = \frac{\log_{10} 3}{\log_{10} 4}$$
 
-【快捷思路】
-换元 $u = 2^{2x}$ 后二次方程两根为 6 和 2。两 $x$ 值之差为 $\frac{1}{2}\log_2\frac{6}{2} = \frac{1}{2}\log_2 3$。选项均为 $\log_{10}$ 形式，利用换底公式一步匹配。
+【Shortcut Method】
+After substituting $u = 2^{2x}$, the roots of the quadratic equation are 6 and 2. The difference between the two values of $x$ is $\frac{1}{2}\log_2\frac{6}{2} = \frac{1}{2}\log_2 3$. Since the options are all given in terms of $\log_{10}$, applying the change of base formula matches the correct answer in one step.
 
-【正确答案】E（$\frac{\log_{10} 3}{\log_{10} 4}$）
+【Correct Answer】E ($\frac{\log_{10} 3}{\log_{10} 4}$)
 
-【知识点】Algebra（指数方程） | **考纲**: MM5.3
+【Topic】Algebra (Exponential Equations) | **Syllabus**: MM5.3
 
 ---
 
-### 例题 2（2017 P1 Q14 · 指数方程组）
+### Example 2 (2017 P1 Q14 · Simultaneous Exponential Equations)
 
-**题目**：解方程组 $\begin{cases} 2^x + 3 \times 2^y = 3 \\ 2^{2x} - 9 \times 2^{2y} = 6 \end{cases}$，设解为 $x = p$, $y = q$，求 $p - q$。
+**Question**: Solve the simultaneous equations $\begin{cases} 2^x + 3 \times 2^y = 3 \\ 2^{2x} - 9 \times 2^{2y} = 6 \end{cases}$. If the solution is given by $x = p$, $y = q$, find the value of $p - q$.
 
-【题目分析】
-本题考查含指数变量的方程组求解。关键在于识别第二个方程可以利用平方差公式化简，避免复杂的代入消元。
+【Question Analysis】
+This question tests solving simultaneous equations with exponential variables. The key is to recognise that the second equation can be simplified using the difference of two squares, avoiding complex substitution and elimination.
 
-【解题步骤】
-第一步：设 $u = 2^x$, $v = 2^y$（$u > 0$, $v > 0$）
+【Solving Steps】
+Step 1: Let $u = 2^x$, $v = 2^y$ ($u > 0$, $v > 0$).
 
-方程组化为：
+The equations become:
 $$u + 3v = 3$$
 $$u^2 - 9v^2 = 6$$
 
-第二步：第二个方程利用平方差公式
+Step 2: Apply the difference of two squares to the second equation
 
 $$u^2 - 9v^2 = (u + 3v)(u - 3v) = 6$$
 
-将第一式 $u + 3v = 3$ 代入：
+Substitute the first equation $u + 3v = 3$ into this:
 
 $$3(u - 3v) = 6 \quad \Rightarrow \quad u - 3v = 2$$
 
-第三步：解简化后的方程组
+Step 3: Solve the simplified simultaneous equations
 
 $$\begin{cases} u + 3v = 3 \\ u - 3v = 2 \end{cases}$$
 
-相加得 $2u = 5$，故 $u = \frac{5}{2}$。
+Adding the two equations yields $2u = 5$, hence $u = \frac{5}{2}$.
 
-相减得 $6v = 1$，故 $v = \frac{1}{6}$。
+Subtracting the two equations yields $6v = 1$, hence $v = \frac{1}{6}$.
 
-第四步：还原求 $x$ 和 $y$
+Step 4: Substitute back to find $x$ and $y$
 
 $$x = \log_2 u = \log_2\frac{5}{2}$$
 
 $$y = \log_2 v = \log_2\frac{1}{6}$$
 
-第五步：计算 $p - q$
+Step 5: Calculate $p - q$
 
 $$p - q = \log_2\frac{5}{2} - \log_2\frac{1}{6} = \log_2\left(\frac{5}{2} \div \frac{1}{6}\right) = \log_2 15$$
 
-【快捷思路】
-关键在于识别 $u^2 - 9v^2 = (u+3v)(u-3v)$，利用第一个方程直接得到 $u-3v$，无需展开代入。两步即可解出 $u$ 和 $v$，最后用对数法则合并。
+【Shortcut Method】
+The crucial step is recognising $u^2 - 9v^2 = (u+3v)(u-3v)$, which allows you to use the first equation to obtain $u-3v$ directly, removing the need for expanding and substituting. Solving for $u$ and $v$ then takes two easy steps, and the final result can be combined using the laws of logarithms.
 
-【正确答案】F（$\log_2 15$）
+【Correct Answer】F ($\log_2 15$)
 
-【知识点】Algebra（指数方程组） | **考纲**: MM5.3
+【Topic】Algebra (Simultaneous Exponential Equations) | **Syllabus**: MM5.3
 
 ---
 
-### 例题 3（2017 P1 Q18 · 对数函数图像变换）
+### Example 3 (2017 P1 Q18 · Transformations of Logarithmic Graphs)
 
-**题目**：将 $y = \log_{10} x$ 的图像向上平移 2 个单位，这一平移等价于沿 $x$ 轴方向拉伸因子 $k$。求 $k$ 的值。
+**Question**: Translating the graph of $y = \log_{10} x$ upwards by 2 units is equivalent to stretching it parallel to the $x$-axis by a scale factor $k$. Find the value of $k$.
 
-【题目分析】
-本题考查对数函数的特殊性质：上下平移可以等价于水平伸缩。这是因为 $\log x + c = \log(10^c \cdot x)$。
+【Question Analysis】
+This question tests a special property of logarithmic functions: a vertical translation is equivalent to a horizontal stretch. This is because $\log x + c = \log(10^c \cdot x)$.
 
-【解题步骤】
-第一步：写出平移后的函数
+【Solving Steps】
+Step 1: Write down the function after translation
 
-向上平移 2 个单位：$y = \log_{10} x + 2$
+Upward translation by 2 units: $y = \log_{10} x + 2$
 
-第二步：利用对数法则化简
+Step 2: Simplify using the laws of logarithms
 
 $$y = \log_{10} x + \log_{10} 100 = \log_{10}(100x)$$
 
-第三步：比较拉伸变换
+Step 3: Compare with the stretch transformation
 
-沿 $x$ 轴拉伸因子 $k$ 后，函数变为 $y = f\left(\frac{x}{k}\right)$：
+After a stretch by a scale factor $k$ parallel to the $x$-axis, the function becomes $y = f\left(\frac{x}{k}\right)$:
 
 $$y = \log_{10}\left(\frac{x}{k}\right) = \log_{10} x - \log_{10} k$$
 
-第四步：令两式恒等
+Step 4: Equate the two expressions
 
 $$\log_{10}(100x) = \log_{10} x - \log_{10} k$$
 
-比较常数项：$-\log_{10} k = 2$，即 $\log_{10} k = -2$。
+Comparing the constant terms: $-\log_{10} k = 2$, which means $\log_{10} k = -2$.
 
-因此 $k = 10^{-2} = 0.01$。
+Therefore, $k = 10^{-2} = 0.01$.
 
-【快捷思路】
-取特殊点验证：原函数过 $(1, 0)$，平移后变为 $(1, 2)$。同时原图像上点 $(0.01, -2)$ 平移到 $(0.01, 0)$。沿 $x$ 轴拉伸将 $x$-截距从 1 变为 $k$，故 $k = 0.01$。
+【Shortcut Method】
+Verify using a specific point: The original function passes through $(1, 0)$, and after translation, this becomes $(1, 2)$. Concurrently, the point $(0.01, -2)$ on the original graph translates to $(0.01, 0)$. A stretch parallel to the $x$-axis changes the $x$-intercept from 1 to $k$, hence $k = 0.01$.
 
-【正确答案】A（$0.01$）
+【Correct Answer】A ($0.01$)
 
-【知识点】Functions（对数函数图像） | **考纲**: MM5.1, MM8.2
+【Topic】Functions (Graphs of Logarithmic Functions) | **Syllabus**: MM5.1, MM8.2
 
 ---
 
-## 🏋️ 课后练习（限时 15 分钟）
+## 🏋️ End-of-Chapter Exercises (Time limit: 15 minutes)
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
+| # | Question ID | Topic | Syllabus | Difficulty |
 |---|------|------|---------|------|
-| 1 | 2016 P1 Q16 | 对数方程组 | MM5.2, MM5.3 | ⭐⭐⭐ |
-| 2 | 2017 P2 Q7 | 指数函数图像比较 | MM5.1 | ⭐⭐⭐ |
-| 3 | 2018 P1 Q14 | 对数与直线 | MM5.2 | ⭐⭐ |
-| 4 | 2018 P1 Q15 | 指数方程换元 | MM5.3 | ⭐⭐⭐ |
-| 5 | 2019 P1 Q11 | 对数方程组 | MM5.2, MM5.3 | ⭐⭐⭐⭐ |
-| 6 | 2019 P1 Q15 | 指数方程（嵌套） | MM5.3 | ⭐⭐⭐⭐ |
-| 7 | 2020 P1 Q15 | 对数高次方程 | MM5.3 | ⭐⭐⭐⭐ |
-| 8 | 2021 P1 Q4 | 指数函数最小值 | MM5.1 | ⭐⭐⭐ |
-| 9 | 2021 P1 Q10 | 对数积分 | MM5.2, MM7.5 | ⭐⭐⭐ |
-| 10 | 2021 P2 Q17 | 嵌套对数比较 | MM5.2 | ⭐⭐⭐⭐⭐ |
+| 1 | 2016 P1 Q16 | Simultaneous Logarithmic Equations | MM5.2, MM5.3 | ⭐⭐⭐ |
+| 2 | 2017 P2 Q7 | Comparing Exponential Graphs | MM5.1 | ⭐⭐⭐ |
+| 3 | 2018 P1 Q14 | Logarithms and Straight Lines | MM5.2 | ⭐⭐ |
+| 4 | 2018 P1 Q15 | Substitution in Exponential Equations | MM5.3 | ⭐⭐⭐ |
+| 5 | 2019 P1 Q11 | Simultaneous Logarithmic Equations | MM5.2, MM5.3 | ⭐⭐⭐⭐ |
+| 6 | 2019 P1 Q15 | Exponential Equations (Nested) | MM5.3 | ⭐⭐⭐⭐ |
+| 7 | 2020 P1 Q15 | Higher-Degree Logarithmic Equations | MM5.3 | ⭐⭐⭐⭐ |
+| 8 | 2021 P1 Q4 | Minimum Value of Exponential Functions | MM5.1 | ⭐⭐⭐ |
+| 9 | 2021 P1 Q10 | Logarithmic Integrals | MM5.2, MM7.5 | ⭐⭐⭐ |
+| 10 | 2021 P2 Q17 | Comparing Nested Logarithms | MM5.2 | ⭐⭐⭐⭐⭐ |
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+*For complete step-by-step solutions, please refer to the question bank database. Each question includes 【Solving Steps】 and 【Shortcut Method】.*
 
 ---
 
-## 🎯 配套练习
+## 🎯 Complementary Practice
 
-学完本章？[→ 去做 Algebra 相关练习题](/practice/tmua/?topic=Algebra)
+Finished this chapter? [→ Go to practice Algebra related questions](/practice/tmua/?topic=Algebra)
 
 ---
 
-**制作时间**: 2026-04-29  
-**数据来源**: TMUA 题库数据库（2016-2022）  
-**适用对象**: TMUA 备考学生
+**Creation Date**: 2026-04-29  
+**Data Source**: TMUA Question Bank Database (2016-2022)  
+**Target Audience**: Students preparing for the TMUA

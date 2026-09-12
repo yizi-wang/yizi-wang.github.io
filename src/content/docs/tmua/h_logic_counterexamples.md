@@ -2,349 +2,349 @@
 title: "H Logic and Counterexamples"
 ---
 
-## 模块 H：逻辑与反例
+## Module H: Logic and Counterexamples
 
-> **对应考纲 Section 2**: MR1.1-MR1.8（Arg1-Arg4, Prf1, Err1）
-> **对应 Paper**: P2 核心（逻辑推理与证明）
-> **建议课时**: 2 课时 | **目标题量**: 23 题
+> **Syllabus Section 2**: MR1.1-MR1.8 (Arg1-Arg4, Prf1, Err1)
+> **Target Paper**: P2 Core (Logical Reasoning and Proofs)
+> **Recommended Time**: 2 hours | **Target Questions**: 23 questions
 
 ---
 
-## 📋 模块概览
+## 📋 Module Overview
 
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
+| Section | Content | Syllabus | Frequency in Past Papers | Hours |
 |------|------|---------|-------------|------|
-| H1 | 命题逻辑基础 | Arg1 | 8 年 11 次 | 0.5 |
-| H2 | 充分必要条件 | Arg2 | 8 年 6 次 | 0.5 |
-| H3 | 反例构造 | Prf1, Err1 | 8 年 12 次 | 1 |
+| H1 | Basics of Propositional Logic | Arg1 | 11 times in 8 years | 0.5 |
+| H2 | Necessary and Sufficient Conditions | Arg2 | 6 times in 8 years | 0.5 |
+| H3 | Constructing Counterexamples | Prf1, Err1 | 12 times in 8 years | 1 |
 
 ---
 
-## H1 命题逻辑基础 [Arg1]
+## H1 Basics of Propositional Logic [Arg1]
 
-### 1.1 命题与逻辑联结词
+### 1.1 Propositions and Logical Connectives
 
-**命题**：能够判断真假的陈述句。
+**Proposition**: A declarative sentence that can be judged as either true or false.
 
-TMUA 考纲涉及的逻辑联结词：
+Logical connectives covered in the TMUA syllabus:
 
-| 联结词 | 含义 | 数学表示 |
+| Connective | Meaning | Mathematical Notation |
 |-------|------|---------|
-| **and** | 同时成立 | $A \land B$ |
-| **or**（inclusive） | 至少一个成立 | $A \lor B$ |
-| **not** | 否定 | $\neg A$ |
+| **and** | Both are true simultaneously | $A \land B$ |
+| **or** (inclusive) | At least one is true | $A \lor B$ |
+| **not** | Negation | $\neg A$ |
 
-**⚠️ 注意**：TMUA 的 `or` 是**包含性或**（inclusive or），即 $A$ 或 $B$ 或两者都成立。
+**⚠️ Note**: The `or` in TMUA is an **inclusive or**, meaning either $A$ is true, or $B$ is true, or both are true.
 
-### 1.2 条件命题的真假关系
+### 1.2 Truth Relationships of Conditional Propositions
 
-考纲明确要求的四种条件命题形式：
+Four forms of conditional propositions explicitly required by the syllabus:
 
-| 形式 | 含义 | 数学表示 |
+| Form | Meaning | Mathematical Notation |
 |------|------|---------|
-| **if A then B** | A 成立时 B 必成立 | $A \Rightarrow B$ |
-| **A if B** | B 成立时 A 必成立 | $B \Rightarrow A$（注意反向！） |
-| **A only if B** | A 成立仅当 B 成立 | $A \Rightarrow B$ |
-| **A if and only if B** | A 与 B 同时成立或同时不成立 | $A \Leftrightarrow B$ |
+| **if A then B** | If A is true, B must be true | $A \Rightarrow B$ |
+| **A if B** | If B is true, A must be true | $B \Rightarrow A$ (Note the reverse direction!) |
+| **A only if B** | A is true only when B is true | $A \Rightarrow B$ |
+| **A if and only if B** | A and B are true together, or false together | $A \Leftrightarrow B$ |
 
-**⚡ 关键记忆**：
-- `A only if B` 等价于 `if A then B`（A 成立 → B 必成立）
-- `A if B` 等价于 `if B then A`（B 成立 → A 必成立）
-- `if and only if` 要求双向成立，即**等价**
+**⚡ Key Memorization**:
+- `A only if B` is equivalent to `if A then B` (If A is true → B must be true)
+- `A if B` is equivalent to `if B then A` (If B is true → A must be true)
+- `if and only if` requires bi-directional truth, i.e., **equivalence**
 
-### 1.3 逆命题、否命题、逆否命题
+### 1.3 Converse, Inverse, and Contrapositive
 
-给定原命题 $A \Rightarrow B$：
+Given the original proposition $A \Rightarrow B$:
 
-| 命题类型 | 形式 | 与原命题真假关系 |
+| Type of Proposition | Form | Relationship with Original Proposition |
 |---------|------|----------------|
-| **逆命题**（converse） | $B \Rightarrow A$ | **无关**：原命题真，逆命题未必真 |
-| **否命题** | $\neg A \Rightarrow \neg B$ | **无关**：原命题真，否命题未必真 |
-| **逆否命题**（contrapositive） | $\neg B \Rightarrow \neg A$ | **等价**：原命题与逆否命题同真同假 |
+| **Converse** | $B \Rightarrow A$ | **Unrelated**: If the original is true, the converse is not necessarily true |
+| **Inverse** | $\neg A \Rightarrow \neg B$ | **Unrelated**: If the original is true, the inverse is not necessarily true |
+| **Contrapositive** | $\neg B \Rightarrow \neg A$ | **Equivalent**: The original proposition and its contrapositive are both true or both false |
 
-**推导逆否命题等价性**（理解而非记忆）：
+**Deriving the Equivalence of the Contrapositive** (understand rather than memorize):
 
-原命题 `if A then B` 为真，意味着 A 成立时 B 必成立。若 B 不成立，则 A 必不成立（否则会推出 B 成立），即 `if not B then not A`。
+If the original proposition `if A then B` is true, it means whenever A is true, B must be true. If B is false, then A must be false (otherwise it would imply B is true), which gives `if not B then not A`.
 
-**⚠️ 易错点**：学生常混淆 `not A implies not B`（否命题）与 `not B implies not A`（逆否命题）。记住：**逆否命题要反转 A 和 B 的位置**。
+**⚠️ Common Mistake**: Students often confuse `not A implies not B` (inverse) with `not B implies not A` (contrapositive). Remember: **the contrapositive requires reversing the positions of A and B**.
 
-### 1.4 全称命题与存在命题 [Arg3, Arg4]
+### 1.4 Universal and Existential Propositions [Arg3, Arg4]
 
-| 命题类型 | 含义 | 数学表示 |
+| Type of Proposition | Meaning | Mathematical Notation |
 |---------|------|---------|
-| **for all** | 对所有元素成立 | $\forall$ |
-| **for some** | 至少存在一个成立 | $\exists$（至少一个） |
-| **there exists** | 存在 | $\exists$ |
+| **for all** | True for all elements | $\forall$ |
+| **for some** | True for at least one element | $\exists$ (at least one) |
+| **there exists** | There exists | $\exists$ |
 
-**否定规则**：
+**Rules for Negation**:
 
-| 原命题 | 否定 |
+| Original Proposition | Negation |
 |-------|------|
 | for all $x$, $P(x)$ | there exists $x$ such that not $P(x)$ |
 | there exists $x$ such that $P(x)$ | for all $x$, not $P(x)$ |
 | for some $x$, $P(x)$ | for all $x$, not $P(x)$ |
 
-**⚡ 快速记忆**：否定时，`for all` 变 `there exists`，`there exists` 变 `for all`，结论取反。
+**⚡ Quick Memorization**: When negating, `for all` becomes `there exists`, `there exists` becomes `for all`, and the conclusion is negated.
 
 ---
 
-## H2 充分必要条件 [Arg2]
+## H2 Necessary and Sufficient Conditions [Arg2]
 
-### 2.1 充分条件与必要条件
+### 2.1 Sufficient and Necessary Conditions
 
-**定义**：
-- **A 是 B 的充分条件**：A 成立 ⇒ B 成立（$A \Rightarrow B$）
-- **A 是 B 的必要条件**：B 成立 ⇒ A 成立（$B \Rightarrow A$），即 A 不成立则 B 必不成立
-- **A 是 B 的充要条件**：A ⇔ B，双向成立
+**Definitions**:
+- **A is a sufficient condition for B**: If A is true ⇒ B is true ($A \Rightarrow B$)
+- **A is a necessary condition for B**: If B is true ⇒ A is true ($B \Rightarrow A$), which means if A is false, B must be false
+- **A is a necessary and sufficient condition for B**: A ⇔ B, true in both directions
 
-**形象理解**：
-- 充分条件：有 A 就够了（充分保证 B）
-- 必要条件：没 A 就不行（B 必须依赖 A）
+**Intuitive Understanding**:
+- Sufficient condition: Having A is enough (sufficiently guarantees B)
+- Necessary condition: Cannot do without A (B must rely on A)
 
-### 2.2 判断充分性与必要性
+### 2.2 Evaluating Sufficiency and Necessity
 
-**判断步骤**：
-1. 明确命题方向：条件 ⇒ 结论
-2. 验证正向：条件成立时结论是否必成立？
-3. 验证反向：结论成立时条件是否必成立？
+**Evaluation Steps**:
+1. Clarify the direction of the proposition: Condition ⇒ Conclusion
+2. Verify the forward direction: If the condition is true, must the conclusion be true?
+3. Verify the reverse direction: If the conclusion is true, must the condition be true?
 
-**⚡ 快速判断技巧**：
+**⚡ Quick Evaluation Techniques**:
 
-| 问题 | 判断方法 |
+| Question | Evaluation Method |
 |------|---------|
-| A 是否充分？ | 验证 $A \Rightarrow B$ 是否成立 |
-| A 是否必要？ | 验证 $\neg A \Rightarrow \neg B$（或 $B \Rightarrow A$）是否成立 |
-| A 是否充要？ | 验证 $A \Leftrightarrow B$ 双向是否都成立 |
+| Is A sufficient? | Verify if $A \Rightarrow B$ holds true |
+| Is A necessary? | Verify if $\neg A \Rightarrow \neg B$ (or $B \Rightarrow A$) holds true |
+| Is A necessary and sufficient? | Verify if $A \Leftrightarrow B$ holds true in both directions |
 
-### 2.3 常见陷阱
+### 2.3 Common Pitfalls
 
-**⚠️ 典型错误**：
-- 混淆 `if A then B` 与 `A if B`
-- 认为 `A sufficient for B` 等价于 `A necessary for B`
-- 忽略隐含条件（如定义域、前提假设）
+**⚠️ Typical Errors**:
+- Confusing `if A then B` with `A if B`
+- Thinking `A sufficient for B` is equivalent to `A necessary for B`
+- Ignoring implicit conditions (e.g., domain, underlying assumptions)
 
-**例子**：
-命题：`If $x^2 = 4$, then $x = 2$.`
-- $x^2 = 4$ 是 $x = 2$ 的**必要条件**吗？否。$x = -2$ 也满足 $x^2 = 4$。
-- $x^2 = 4$ 是 $x = 2$ 的**充分条件**吗？否。$x = -2$ 也满足 $x^2 = 4$。
-- $x = 2$ 是 $x^2 = 4$ 的**充分条件**吗？是。$x = 2$ ⇒ $x^2 = 4$。
+**Example**:
+Proposition: `If $x^2 = 4$, then $x = 2$.`
+- Is $x^2 = 4$ a **necessary condition** for $x = 2$? No. $x = -2$ also satisfies $x^2 = 4$.
+- Is $x^2 = 4$ a **sufficient condition** for $x = 2$? No. $x = -2$ also satisfies $x^2 = 4$.
+- Is $x = 2$ a **sufficient condition** for $x^2 = 4$? Yes. $x = 2$ ⇒ $x^2 = 4$.
 
 ---
 
-## H3 反例构造 [Prf1, Err1]
+## H3 Constructing Counterexamples [Prf1, Err1]
 
-### 3.1 什么是反例
+### 3.1 What is a Counterexample?
 
-**反例**：满足命题假设但不满足结论的实例。
+**Counterexample**: An instance that satisfies the hypothesis of a proposition but not the conclusion.
 
-作用：**一个反例足以推翻一个全称命题**。
+Purpose: **A single counterexample is sufficient to disprove a universal proposition**.
 
-**适用场景**：
-- 原命题形式：`for all x, P(x)` 或 `if A then B`
-- 需要证明命题不成立时，构造反例即可
+**Applicable Scenarios**:
+- Form of the original proposition: `for all x, P(x)` or `if A then B`
+- When you need to prove a proposition is false, simply construct a counterexample
 
-### 3.2 反例构造策略
+### 3.2 Strategies for Constructing Counterexamples
 
-**策略一：边界值法**
-取定义域边界或特殊值（如 $x = 0, 1, -1$）。
+**Strategy 1: Boundary Value Method**
+Pick boundary points of the domain or special values (e.g., $x = 0, 1, -1$).
 
-**策略二：极端值法**
-取使条件取极端值的数（如极大、极小、无穷）。
+**Strategy 2: Extreme Value Method**
+Pick values that make the conditions extreme (e.g., maximum, minimum, infinity).
 
-**策略三：分段验证法**
-对分段定义的命题，在各段内分别找反例。
+**Strategy 3: Piecewise Verification Method**
+For propositions defined in segments, find counterexamples within each segment.
 
-**策略四：奇偶性检验法**
-涉及整数命题时，检验奇偶性差异。
+**Strategy 4: Parity Check Method**
+When dealing with propositions about integers, test for differences in parity (odd/even).
 
-**⚡ TMUA 常见反例类型**：
+**⚡ Common Types of Counterexamples in TMUA**:
 
-| 命题类型 | 常用反例 |
+| Type of Proposition | Common Counterexamples |
 |---------|---------|
-| 函数性质命题 | $f(x) = x$ 或 $f(x) = x^2$（简单函数） |
-| 数论命题 | $n = 1, 2, 3$ 或合数 $n = 4, 6$ |
-| 代数不等式命题 | 取边界值或使不等式反转的值 |
-| 几何命题 | 特殊三角形（等边、等腰） |
+| Properties of functions | $f(x) = x$ or $f(x) = x^2$ (simple functions) |
+| Number theory | $n = 1, 2, 3$ or composite numbers like $n = 4, 6$ |
+| Algebraic inequalities | Pick boundary values or values that reverse the inequality |
+| Geometry | Special triangles (equilateral, isosceles) |
 
-### 3.3 识别证明中的错误 [Err1, Err2]
+### 3.3 Identifying Errors in Proofs [Err1, Err2]
 
-TMUA 要求识别伪证明中的逻辑错误。
+TMUA requires you to identify logical errors in false proofs.
 
-**常见错误类型**：
+**Common Types of Errors**:
 
-| 错误类型 | 例子 |
+| Error Type | Example |
 |---------|------|
-| **等式除法错误** | $ab = ac$ ⇒ $b = c$（当 $a = 0$ 时失效） |
-| **三角函数推断错误** | $\sin A = \sin B$ ⇒ $A = B$（实际 $A = B$ 或 $A + B = 180°$） |
-| **不等式乘法错误** | $a < b, c < d$ ⇒ $ac < bd$（当含负数时失效） |
-| **遗漏前提条件** | 忽略定义域限制、隐含假设 |
-| **循环论证** | 用结论证明结论 |
-| **逆命题误用** | 用逆命题代替原命题 |
+| **Division by zero** | $ab = ac$ ⇒ $b = c$ (fails when $a = 0$) |
+| **Trigonometric inference error** | $\sin A = \sin B$ ⇒ $A = B$ (actually $A = B$ or $A + B = 180^\circ$) |
+| **Inequality multiplication error** | $a < b, c < d$ ⇒ $ac < bd$ (fails when negative numbers are involved) |
+| **Missing prerequisites** | Ignoring domain restrictions or implicit assumptions |
+| **Circular reasoning** | Using the conclusion to prove the conclusion |
+| **Misuse of the converse** | Substituting the converse for the original proposition |
 
 ---
 
-## ⚡ 速解技巧汇总
+## ⚡ Summary of Quick Solving Techniques
 
-| 场景 | 技巧 |
+| Scenario | Technique |
 |------|------|
-| 判断命题真假 | 验证逆否命题（同真同假），比直接验证更容易 |
-| 判断充分/必要 | 画双向箭头：充分 ⇒ 向前，必要 ⇐ 向后 |
-| 推翻全称命题 | 一个反例即可，优先试边界值 $n = 0, 1, 2$ |
-| `if and only if` 命题 | 需双向验证，只验证单向会漏判 |
-| 含 `or` 的命题 | TMUA 的 `or` 是包含性，三个情况都要考虑 |
-| 否定命题 | `for all` ⇌ `there exists`，结论取反 |
+| Judging truth of a proposition | Verify the contrapositive (same truth value), often easier than direct verification |
+| Judging sufficient/necessary | Draw bi-directional arrows: Sufficient ⇒ forward, Necessary ⇐ backward |
+| Disproving universal propositions | One counterexample is enough, try boundary values first like $n = 0, 1, 2$ |
+| `if and only if` propositions | Requires bi-directional verification, checking only one way leads to misjudgment |
+| Propositions with `or` | `or` in TMUA is inclusive, all three cases must be considered |
+| Negating propositions | `for all` ⇌ `there exists`, negate the conclusion |
 
 ---
 
-## ⚠️ 易错警示
+## ⚠️ Common Mistake Warnings
 
-- ❌ `A only if B` 等价于 `if A then B`，**不是** `A if B`
-- ❌ `A if B` 等价于 `if B then A`，**不是** `if A then B`
-- ❌ 逆命题与原命题真假**无关**，逆否命题才等价
-- ❌ 反例推翻的是**全称命题**，存在命题需要证明无反例
-- ❌ $\sin A = \sin B$ **不推出** $A = B$（还有 $A + B = 180°$）
-- ❌ $ab = ac$ **不推出** $b = c$（当 $a = 0$ 时）
+- ❌ `A only if B` is equivalent to `if A then B`, **NOT** `A if B`
+- ❌ `A if B` is equivalent to `if B then A`, **NOT** `if A then B`
+- ❌ The truth of the converse is **unrelated** to the original proposition; only the contrapositive is equivalent
+- ❌ A counterexample disproves a **universal proposition**; an existential proposition requires proving no counterexamples exist
+- ❌ $\sin A = \sin B$ **does not imply** $A = B$ (there is also $A + B = 180^\circ$)
+- ❌ $ab = ac$ **does not imply** $b = c$ (when $a = 0$)
 
 ---
 
-## 📝 精选例题
+## 📝 Selected Examples
 
-### 例题 1（2016 P2 Q4 · 逻辑推理）
+### Example 1 (2016 P2 Q4 · Logical Reasoning)
 
-**题目**：五个密封瓮 P, Q, R, S, T 各装有相同数量 $n$ 的球（$n > 0$）。各瓮附有陈述如下：
+**Question**: Five sealed urns P, Q, R, S, T each contain the same number $n$ of balls ($n > 0$). Each urn has a statement attached as follows:
 
-- P：装有 1 或 4 个球
-- Q：装有 2 或 4 个球
-- R：装有超过 2 个且少于 5 个球
-- S：装有 1 或 2 个球
-- T：装有少于 3 个球
+- P: contains 1 or 4 balls
+- Q: contains 2 or 4 balls
+- R: contains more than 2 and fewer than 5 balls
+- S: contains 1 or 2 balls
+- T: contains fewer than 3 balls
 
-**恰好一个瓮的陈述为真**。找出是哪个瓮。
+**Exactly one urn's statement is true**. Find out which urn it is.
 
-【题目分析】
-本题考查逻辑推理。五个瓮装有相同数量 $n$，每个陈述对应 $n$ 的取值集合。恰有一条为真意味着其余四条必须为假。关键观察各陈述集合的重叠关系。
+【Question Analysis】
+This question tests logical reasoning. The five urns contain the same number $n$, and each statement corresponds to a set of possible values for $n$. Exactly one being true means the other four must be false. The key is to observe the overlapping sets of the statements.
 
-【解题步骤】
-第一步：将各陈述转化为取值集合。
+【Solving Steps】
+Step 1: Convert each statement into a set of values.
 
-| 瓮 | 陈述含义 | $n$ 的取值集合 |
+| Urn | Statement Meaning | Set of values for $n$ |
 |---|---------|---------------|
-| P | 1 或 4 | $\{1, 4\}$ |
-| Q | 2 或 4 | $\{2, 4\}$ |
-| R | $>2$ 且 $<5$ | $\{3, 4\}$ |
-| S | 1 或 2 | $\{1, 2\}$ |
+| P | 1 or 4 | $\{1, 4\}$ |
+| Q | 2 or 4 | $\{2, 4\}$ |
+| R | $>2$ and $<5$ | $\{3, 4\}$ |
+| S | 1 or 2 | $\{1, 2\}$ |
 | T | $<3$ | $\{1, 2\}$ |
 
-第二步：逐值验证，找出仅使一条陈述为真的 $n$。
+Step 2: Verify value by value to find the $n$ that makes only one statement true.
 
-- $n = 1$：P 真，S 真，T 真（三真，矛盾）
-- $n = 2$：Q 真，S 真，T 真（三真，矛盾）
-- $n = 3$：R 真，其余全假（P 假：$3 \notin \{1,4\}$；Q 假：$3 \notin \{2,4\}$；S 假：$3 \notin \{1,2\}$；T 假：$3 \ge 3$）
-- $n = 4$：P 真，Q 真，R 真（三真，矛盾）
+- $n = 1$: P is true, S is true, T is true (three true, contradiction)
+- $n = 2$: Q is true, S is true, T is true (three true, contradiction)
+- $n = 3$: R is true, the rest are all false (P false: $3 \notin \{1,4\}$; Q false: $3 \notin \{2,4\}$; S false: $3 \notin \{1,2\}$; T false: $3 \ge 3$)
+- $n = 4$: P is true, Q is true, R is true (three true, contradiction)
 
-第三步：仅 $n = 3$ 时恰有一条陈述（R 的陈述）为真。
+Step 3: Only when $n = 3$ is exactly one statement (R's statement) true.
 
-【快捷思路】
-注意到 S 和 T 的集合 $\{1, 2\}$ 相同，故若 $n = 1$ 或 $n = 2$，两者同真。排除。再排除 $n = 4$（P、Q、R 同真）。唯有 $n = 3$。
+【Quick Thought】
+Notice that the sets for S and T are identically $\{1, 2\}$, so if $n = 1$ or $n = 2$, both are true. Eliminate. Also eliminate $n = 4$ (P, Q, R are all true). The only possibility is $n = 3$.
 
-【正确答案】C（Urn R）
+【Correct Answer】C (Urn R)
 
-【知识点】Logic | **考纲**: Arg1
-
----
-
-### 例题 2（2016 P2 Q5 · 反例计数）
-
-**题目**：命题：若整数 $n$ 比 6 的倍数少 1 或少 5（即 $n \equiv 1$ 或 $5 \pmod{6}$），则 $n$ 是质数。在 $0 < n < 50$ 范围内有多少个反例？
-
-【题目分析】
-命题形式为全称命题：所有形如 $6k \pm 1$ 的整数都是质数。反例即满足 $n \equiv 1$ 或 $5 \pmod{6}$ 但不是质数的数。
-
-【解题步骤】
-第一步：列出 $0 < n < 50$ 中形如 $6k \pm 1$ 的数。
-
-这些数为：$1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49$
-
-第二步：判断哪些不是质数。
-
-- $n = 1$：不是质数（定义规定 1 不是质数）
-- $n = 25 = 5 \times 5$：合数
-- $n = 35 = 5 \times 7$：合数
-- $n = 49 = 7 \times 7$：合数
-
-第三步：统计反例数。共 4 个反例。
-
-【快捷思路】
-形如 $6k \pm 1$ 包含所有大于 3 的质数，但并非所有这类数都是质数。只需找该范围内的合数形式：$25, 35, 49$，加上 $1$，共 4 个。注意 1 既不是质数也不是合数，但作为反例有效（满足条件但不是质数）。
-
-【正确答案】C（4 个）
-
-【知识点】Counterexamples | **考纲**: Prf1
+【Knowledge Point】Logic | **Syllabus**: Arg1
 
 ---
 
-### 例题 3（2017 P2 Q16 · 函数反例）
+### Example 2 (2016 P2 Q5 · Counting Counterexamples)
 
-**题目**：命题：若 $f(x)$ 对所有整数 $x$ 取整数值，则 $f'(x)$ 对所有整数 $x$ 也取整数值。找出反例。
+**Question**: Proposition: If an integer $n$ is 1 less or 5 less than a multiple of 6 (i.e., $n \equiv 1$ or $5 \pmod{6}$), then $n$ is prime. How many counterexamples are there in the range $0 < n < 50$?
 
-【题目分析】
-命题形式：整数上取整值的函数 ⇒ 导数在整数上取整值。需找函数使前件真（整数输入得整数输出）但后件假（整数输入的导数非整数）。
+【Question Analysis】
+The form of the proposition is a universal proposition: All integers of the form $6k \pm 1$ are prime. A counterexample is a number that satisfies $n \equiv 1$ or $5 \pmod{6}$ but is not a prime number.
 
-【解题步骤】
-检验选项中的函数：
+【Solving Steps】
+Step 1: List the numbers of the form $6k \pm 1$ in $0 < n < 50$.
 
-- $f(x) = x^2/2$：$f(0) = 0$（整数），$f(1) = 1/2$（非整数）→ 前件假，不是反例
-- $f(x) = x^3/3$：$f(0) = 0$，$f(1) = 1/3$（非整数）→ 前件假
-- $f(x) = (x^2 + x)/2 = x(x+1)/2$：对任意整数 $x$，$x$ 和 $x+1$ 一奇一偶，乘积必偶，故 $f(x)$ 恒为整数。前件真。$f'(x) = (2x+1)/2$：当 $x$ 为整数时，$2x+1$ 为奇数，$f'(x)$ 不是整数。后件假。此为反例。
+These numbers are: $1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49$
 
-【快捷思路】
-关键观察 $x(x+1)/2$：相邻两整数必一奇一偶，乘积偶，除以 2 得整数。但导数 $(2x+1)/2$ 恒为奇数半值，非整数。一正一负，反例成立。
+Step 2: Determine which are not prime.
 
-【正确答案】C
+- $n = 1$: Not prime (by definition, 1 is not a prime number)
+- $n = 25 = 5 \times 5$: Composite
+- $n = 35 = 5 \times 7$: Composite
+- $n = 49 = 7 \times 7$: Composite
 
-【知识点】Counterexamples | **考纲**: Prf1, Err1
+Step 3: Count the counterexamples. There are 4 counterexamples in total.
+
+【Quick Thought】
+The form $6k \pm 1$ includes all primes greater than 3, but not all such numbers are primes. Simply find the composite numbers of this form in the range: $25, 35, 49$, plus $1$, making 4 in total. Note that 1 is neither prime nor composite, but it is a valid counterexample (satisfies the condition but is not prime).
+
+【Correct Answer】C (4 counterexamples)
+
+【Knowledge Point】Counterexamples | **Syllabus**: Prf1
 
 ---
 
-## 🏋️ 课后练习（限时 15 分钟）
+### Example 3 (2017 P2 Q16 · Function Counterexample)
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
+**Question**: Proposition: If $f(x)$ takes integer values for all integer $x$, then $f'(x)$ also takes integer values for all integer $x$. Find a counterexample.
+
+【Question Analysis】
+Proposition form: Function taking integer values on integers ⇒ Derivative taking integer values on integers. We need to find a function where the antecedent is true (integer inputs yield integer outputs) but the consequent is false (derivative at integer inputs is not an integer).
+
+【Solving Steps】
+Examine the functions in the options (assuming options were provided):
+
+- $f(x) = x^2/2$: $f(0) = 0$ (integer), $f(1) = 1/2$ (non-integer) → Antecedent is false, not a counterexample
+- $f(x) = x^3/3$: $f(0) = 0$, $f(1) = 1/3$ (non-integer) → Antecedent is false
+- $f(x) = (x^2 + x)/2 = x(x+1)/2$: For any integer $x$, one of $x$ and $x+1$ is even and the other is odd, their product must be even, so $f(x)$ is always an integer. Antecedent is true. $f'(x) = (2x+1)/2$: When $x$ is an integer, $2x+1$ is odd, so $f'(x)$ is not an integer. Consequent is false. This is a counterexample.
+
+【Quick Thought】
+The key is to observe $x(x+1)/2$: The product of two adjacent integers must be even, so dividing by 2 yields an integer. But the derivative $(2x+1)/2$ is always half of an odd number, not an integer. The true-false pairing makes it a valid counterexample.
+
+【Correct Answer】C
+
+【Knowledge Point】Counterexamples | **Syllabus**: Prf1, Err1
+
+---
+
+## 🏋️ After-Class Practice (15 Minutes Limit)
+
+| # | Question No. | Topic | Syllabus | Difficulty |
 |---|------|------|---------|------|
-| 1 | 2016 P2 Q18 | 函数积分反例 | Prf1 | ⭐⭐⭐ |
-| 2 | 2017 P2 Q5 | 命题真假判断 | Arg1 | ⭐⭐⭐ |
-| 3 | 2017 P2 Q17 | 逻辑定义 | Arg1, Arg2 | ⭐⭐⭐⭐ |
-| 4 | 2018 P2 Q3 | 不等式反例 | Prf1 | ⭐⭐⭐ |
-| 5 | 2018 P2 Q5 | 充分必要判断 | Arg2 | ⭐⭐⭐ |
-| 6 | 2018 P2 Q6 | 数论反例 | Prf1 | ⭐⭐⭐ |
-| 7 | 2018 P2 Q12 | 命题逻辑 | Arg1 | ⭐⭐⭐ |
-| 8 | 2022 P2 Q6 | 条件命题 | Arg1 | ⭐⭐⭐ |
-| 9 | 2022 P2 Q13 | 充要条件 | Arg2 | ⭐⭐⭐ |
-| 10 | 2023 P2 Q3 | 反例构造 | Prf1 | ⭐⭐⭐ |
+| 1 | 2016 P2 Q18 | Function integral counterexample | Prf1 | ⭐⭐⭐ |
+| 2 | 2017 P2 Q5 | True/false judgment of propositions | Arg1 | ⭐⭐⭐ |
+| 3 | 2017 P2 Q17 | Logical definitions | Arg1, Arg2 | ⭐⭐⭐⭐ |
+| 4 | 2018 P2 Q3 | Inequality counterexample | Prf1 | ⭐⭐⭐ |
+| 5 | 2018 P2 Q5 | Sufficiency and necessity judgment | Arg2 | ⭐⭐⭐ |
+| 6 | 2018 P2 Q6 | Number theory counterexample | Prf1 | ⭐⭐⭐ |
+| 7 | 2018 P2 Q12 | Propositional logic | Arg1 | ⭐⭐⭐ |
+| 8 | 2022 P2 Q6 | Conditional propositions | Arg1 | ⭐⭐⭐ |
+| 9 | 2022 P2 Q13 | Necessary and sufficient conditions | Arg2 | ⭐⭐⭐ |
+| 10 | 2023 P2 Q3 | Constructing counterexamples | Prf1 | ⭐⭐⭐ |
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+*Full explanations are available in the question bank database; each question includes [Solving Steps] and [Quick Thought].*
 
 ---
 
-## 📚 考纲映射表
+## 📚 Syllabus Mapping Table
 
-| 考纲编号 | 内容描述 | 本模块对应章节 |
+| Syllabus Number | Content Description | Corresponding Section in this Module |
 |---------|---------|---------------|
-| Arg1 | 命题逻辑、条件命题、逆命题/逆否命题 | H1.1-H1.3 |
-| Arg2 | 充分条件、必要条件 | H2 |
-| Arg3 | 全称命题、存在命题 | H1.4 |
-| Arg4 | 命题否定 | H1.4 |
-| Prf1 | 反例证明 | H3 |
-| Err1 | 识别证明错误 | H3.3 |
-| Err2 | 常见数学推断错误 | H3.3 |
+| Arg1 | Propositional logic, conditional propositions, converse/contrapositive | H1.1-H1.3 |
+| Arg2 | Sufficient conditions, necessary conditions | H2 |
+| Arg3 | Universal propositions, existential propositions | H1.4 |
+| Arg4 | Negation of propositions | H1.4 |
+| Prf1 | Proof by counterexample | H3 |
+| Err1 | Identifying errors in proofs | H3.3 |
+| Err2 | Common mathematical inference errors | H3.3 |
 
 ---
 
-## 🎯 配套练习
+## 🎯 Companion Practice
 
-学完本章？[→ 去做 Counterexamples 相关练习题](/practice/tmua/?topic=Counterexamples)
+Finished this chapter? [→ Go to Counterexamples Practice Questions](/practice/tmua/?topic=Counterexamples)
 
 ---
 
-*模块 H 讲义完成。2026-04-29*
+*Module H notes completed. 2026-04-29*
