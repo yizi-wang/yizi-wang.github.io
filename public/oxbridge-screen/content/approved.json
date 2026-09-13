@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-11",
-  "edition": "2026-09-11 定稿",
+  "content_date": "2026-09-14",
+  "edition": "2026-09-14 试运行待审",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,136 +12,136 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月11日\n每日简报",
+    "headline": "9月14日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
         "id": "brief-01",
-        "category": "货币政策 / MONETARY POLICY",
-        "headline": "央行：无意靠人民币贬值争取贸易优势",
-        "headline_en": "PBOC rules out seeking a trade edge through depreciation",
-        "summary": "央行副行长陆磊表示，中国将继续实行有管理的浮动汇率制度，由市场决定汇率，同时防范羊群效应和非理性预期。",
-        "summary_en": "PBOC Deputy Governor Lu Lei said China would retain a managed floating exchange-rate regime, let markets play the decisive role and guard against herd behaviour.",
+        "category": "能源价格 / ENERGY",
+        "headline": "国内汽柴油每吨上调260元和250元",
+        "headline_en": "China raises petrol and diesel prices by 260 and 250 yuan per tonne",
+        "summary": "国家发改委9月11日公布临时调控：汽、柴油每吨实际上调260元、250元，低于按现行机制计算的435元、420元。",
+        "summary_en": "The NDRC announced temporary controls: petrol and diesel rise by 260 and 250 yuan per tonne, below the formula-based increases of 435 and 420 yuan.",
         "source": {
-          "name": "国务院新闻办公室 / SCIO",
-          "url": "https://www.csrc.gov.cn/csrc/c100028/c7657861/content.shtml",
-          "published": "2026-09-10"
+          "name": "国家发展改革委 / NDRC",
+          "url": "https://www.ndrc.gov.cn/xwdt/xwfb/202609/t20260911_1407564.html",
+          "published": "2026-09-11"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-02",
-        "category": "国际金融 / GLOBAL FINANCE",
-        "headline": "日本8月外汇储备减少795.75亿美元",
-        "headline_en": "Japan's reserves fall by $79.6 billion in August",
-        "summary": "日本财务省公布，8月底外汇储备为1.2075万亿美元，较7月底减少795.75亿美元；其中证券资产降至8395.59亿美元。",
-        "summary_en": "Japan's reserves stood at $1.2075 trillion at the end of August, down $79.6 billion from July. Securities holdings fell to $839.6 billion.",
+        "category": "气候观测 / CLIMATE",
+        "headline": "世界气象组织：全球经历最热8月",
+        "headline_en": "WMO reports the hottest August on record",
+        "summary": "世界气象组织汇总多机构报告：2026年8月为有记录以来最热8月，北半球6至8月也创夏季高温纪录。",
+        "summary_en": "WMO reports that August 2026 was the hottest August on record, while June–August was the Northern Hemisphere's warmest summer.",
         "source": {
-          "name": "日本财务省 / Japan Ministry of Finance",
-          "url": "https://www.mof.go.jp/english/policy/international_policy/reference/official_reserve_assets/e0808.html",
-          "published": "2026-09-07"
+          "name": "世界气象组织 / WMO",
+          "url": "https://wmo.int/media/news/earth-has-hottest-august-record",
+          "published": "2026-09-11"
         },
         "accent": "gold"
       },
       {
         "id": "brief-03",
-        "category": "数学与AI / MATH AND AI",
-        "headline": "OpenAI公布纳维—斯托克斯证明稿",
-        "headline_en": "OpenAI publishes a proposed Navier-Stokes proof",
-        "summary": "OpenAI称内部模型构造出有限时间奇点，并公开论文和Lean形式化版本。该结果仍待数学界独立审查，尚不能视为正式获奖解答。",
-        "summary_en": "OpenAI says an internal model constructed a finite-time singularity and released a paper with a Lean formalisation. Independent mathematical review is still needed.",
+        "category": "公共卫生 / HEALTH",
+        "headline": "世卫预认证多剂量包装RSV孕妇疫苗",
+        "headline_en": "WHO prequalifies a multi-dose maternal RSV vaccine",
+        "summary": "世卫组织宣布，孕妇用RSV疫苗的多剂量包装通过预认证；该疫苗借助母体传递的抗体保护出生后前六个月的婴儿。",
+        "summary_en": "WHO prequalified a multi-dose maternal RSV vaccine. Antibodies transferred before birth protect infants during their first six months.",
         "source": {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/navier-stokes-solution/",
-          "published": "2026-09-08"
+          "name": "世界卫生组织 / WHO",
+          "url": "https://www.who.int/news/item/09-09-2026-who-prequalifies-multi-dose-rsv-vaccine-vial--paving-the-way-to-protecting-more-infants-globally",
+          "published": "2026-09-09"
         },
         "accent": "coral"
       },
       {
         "id": "brief-04",
-        "category": "教育数据 / EDUCATION DATA",
-        "headline": "PISA：OECD阅读和数学平均分创新低",
-        "headline_en": "OECD reading and maths scores hit record lows",
-        "summary": "PISA 2025覆盖91个国家和经济体、76万名15岁学生。OECD平均阅读分比2022年低14分，数学低9分；科学成绩总体持平。",
-        "summary_en": "PISA 2025 assessed 760,000 students in 91 countries and economies. Across the OECD, reading fell 14 points and mathematics 9 since 2022, while science was broadly stable.",
+        "category": "货币政策 / MONETARY POLICY",
+        "headline": "欧洲央行宣布三项关键利率上调0.25个百分点",
+        "headline_en": "ECB raises its three key interest rates by 0.25 percentage points",
+        "summary": "欧洲央行9月10日宣布加息；其工作人员预测2026年通胀率为3.0%、经济增长率为0.9%，并强调前景高度不确定。",
+        "summary_en": "The ECB raised rates on 10 September. Staff project 3.0% inflation and 0.9% growth in 2026; the bank stresses that the outlook remains highly uncertain.",
         "source": {
-          "name": "经济合作与发展组织 / OECD",
-          "url": "https://www.oecd.org/en/about/news/press-releases/2026/09/pisa-2025-students-reading-and-mathematics-performance-declined-sharply-across-the-oecd.html",
-          "published": "2026-09-08"
+          "name": "欧洲中央银行 / ECB",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
+          "published": "2026-09-10"
         },
         "accent": "aqua"
       },
       {
         "id": "brief-05",
-        "category": "公共安全 / PUBLIC SAFETY",
-        "headline": "青岛货轮检修火灾造成25人死亡",
-        "headline_en": "Qingdao ship fire kills 25 during maintenance",
-        "summary": "9月10日，一艘外籍货船在青岛北海造船检修时起火。船上42人中，12人撤离、5人受伤，另有25人死亡。事故原因尚未公布。",
-        "summary_en": "A foreign cargo ship caught fire during maintenance at Qingdao Beihai Shipbuilding on 10 September. Of 42 people aboard, 25 died, five were injured and 12 escaped.",
+        "category": "文化历史 / CULTURE",
+        "headline": "教科文组织公布非洲历史展览安排",
+        "headline_en": "UNESCO announces an exhibition on African history",
+        "summary": "教科文组织宣布9月17至22日在巴黎总部展出非洲对人类进步的贡献，展览以《非洲通史》为基础，使用档案、地图等材料。",
+        "summary_en": "UNESCO announced a 17–22 September exhibition in Paris on Africa's contributions to humanity, drawing on its General History of Africa and archival materials.",
         "source": {
-          "name": "新华社 / Xinhua",
-          "url": "https://www.news.cn/politics/20260910/dfee19f865354a59b6d6af9bb7aa9115/c.html",
-          "published": "2026-09-10"
+          "name": "联合国教科文组织 / UNESCO",
+          "url": "https://www.unesco.org/en/articles/general-history-africa-unesco-opens-exhibition-its-landmark-editorial-project",
+          "published": "2026-09-11"
         },
         "accent": "gold"
       },
       {
         "id": "brief-06",
-        "category": "国际关系 / INTERNATIONAL",
-        "headline": "阿尔及利亚宣布与阿联酋断交",
-        "headline_en": "Algeria cuts diplomatic ties with the UAE",
-        "summary": "阿尔及利亚外交部9月10日宣布，即日起与阿联酋断绝外交关系，并已通知阿联酋驻阿大使，要求其在48小时内遵守这一决定。",
-        "summary_en": "Algeria announced on 10 September that it was cutting diplomatic ties with the UAE and gave the Emirati ambassador 48 hours to comply with the decision.",
+        "category": "航天科研 / SPACE",
+        "headline": "NASA公布空间站乘组返航前记者会安排",
+        "headline_en": "NASA announces a pre-return briefing for its station crew",
+        "summary": "NASA宣布Crew-12乘组将于9月16日在空间站举行记者会；乘组须待Crew-13抵达并完成短期交接后才离站。",
+        "summary_en": "NASA announced a 16 September briefing from the station by Crew-12. The crew will leave after Crew-13 arrives and a short handover is completed.",
         "source": {
-          "name": "新华社 / Xinhua",
-          "url": "https://www1.xinhuanet.com/20260910/965885cf254f4624880baa439b8677e3/c.html",
-          "published": "2026-09-10"
+          "name": "美国国家航空航天局 / NASA",
+          "url": "https://www.nasa.gov/news-release/nasas-spacex-crew-12-to-discuss-station-mission-upcoming-return/",
+          "published": "2026-09-11"
         },
         "accent": "coral"
       }
     ]
   },
   "weekly": {
-    "week": "2026-W37",
-    "previous_week": "2026-W36",
+    "week": "2026-W38",
+    "previous_week": "2026-W37",
     "previous_answers": [
       {
-        "id": "answer-proof-ramsey",
+        "id": "answer-proof-mutilated-chessboard",
         "eyebrow": "上周思考题 · 参考解答 / LAST WEEK · ANSWER",
-        "headline": "六个人中，为什么一定能找到三位熟人，\n或三位互不认识的人？",
-        "headline_en": "Why must six people contain three mutual acquaintances or three mutual strangers?",
-        "result": "总能找到这样三个人",
-        "result_en": "Such a trio must exist",
-        "explanation": "任选一人 A。其余五人中，至少有三人都认识 A，或至少有三人都不认识 A。\n\n若 A 认识 B、C、D，其中任何两人认识，就与 A 组成三位熟人；若三人之间无人相识，B、C、D 就是三位陌生人。若 A 不认识 B、C、D，其中有两人互不认识，他们与 A 组成三位陌生人；否则 B、C、D 彼此认识。",
-        "explanation_en": "Choose any person A. Among the other five, at least three all know A, or at least three all do not.\n\nIf A knows B, C and D, a connected pair among them gives three mutual acquaintances with A. If there is no such pair, B, C and D are mutual strangers. If A knows none of them, an unconnected pair gives three mutual strangers with A; otherwise B, C and D all know one another.",
+        "headline": "从8×8棋盘上删去\n两个相对的角格。\n证明：剩下的62格不能用\n1×2骨牌完全覆盖。",
+        "headline_en": "Two opposite corner squares are removed from an 8 by 8 chessboard. Prove that the remaining 62 squares cannot be tiled by 1 by 2 dominoes.",
+        "result": "不能完全覆盖",
+        "result_en": "A complete tiling is impossible",
+        "explanation": "把棋盘按相邻格异色染成黑白两色，原来各32格。相对的两个角格同色，删去后两色分别剩30格、32格。每块1×2骨牌必覆盖一黑一白；31块骨牌必覆盖31黑、31白，与剩余格数矛盾。因此不能完全覆盖。",
+        "explanation_en": "Colour adjacent squares black and white. Initially there are 32 of each colour. Opposite corners have the same colour, so removing them leaves 30 of one colour and 32 of the other. Every domino covers one square of each colour. Thus 31 dominoes would require 31 black and 31 white squares, a contradiction.",
         "subject": "上周证明题",
         "subject_en": "PROOF ANSWER",
         "visual": "network",
         "accent": "coral"
       },
       {
-        "id": "answer-oxbridge-rope",
+        "id": "answer-oxbridge-best-applicant",
         "eyebrow": "上周思考题 · 参考解答 / LAST WEEK · ANSWER",
-        "headline": "单位长绳随机剪两刀，\n三段能围成三角形的概率是多少？",
-        "headline_en": "A unit string is cut at two random points. What is the probability that the three pieces form a triangle?",
-        "result": "1 / 4",
-        "result_en": "The probability is 1/4",
-        "explanation": "设两刀位置为 0 < x < y < 1，三段长度为 x、y - x、1 - y。三段能成三角形，当且仅当每段都小于 1/2。\n\n所有 (x, y) 构成面积为 1/2 的三角形。满足 x < 1/2、y > 1/2、y < x + 1/2 的区域面积为 1/8。因此概率为 (1/8) ÷ (1/2) = 1/4。",
-        "explanation_en": "Let the cuts be 0 < x < y < 1. The pieces have lengths x, y - x and 1 - y. They form a triangle exactly when every piece is shorter than 1/2.\n\nAll possible pairs (x, y) fill a triangle of area 1/2. The region satisfying x < 1/2, y > 1/2 and y < x + 1/2 has area 1/8. The probability is therefore (1/8) ÷ (1/2) = 1/4.",
-        "subject": "上周概率题",
-        "subject_en": "PROBABILITY ANSWER",
+        "headline": "30名申请者随机到场，\n实力各不相同。\n面试后须立即录用或淘汰，\n且只能录用一人。\n怎样做最可能录用最强者？\n估计成功概率。",
+        "headline_en": "Thirty applicants of different ability arrive randomly. Accept or reject each immediately, and hire only once. What strategy is most likely to choose the best, and what is its success rate?",
+        "result": "先淘汰11人，成功率约37.9%",
+        "result_en": "Reject the first 11; success is about 37.9%",
+        "explanation": "假设只知道已面试者的相对排名。非当前最强者不可能胜出。令V_k为淘汰前k人后继续的最优成功率，V_30=0。第k人以1/k概率为当前最强，录用其获胜概率为k/30，故V_{k-1}=V_k+max(0,k/30−V_k)/k。倒推得先淘汰11人，再录用首位刷新纪录者；若无则录用最后一人。成功率=(11/30)×(1/11+…+1/29)≈37.9%。",
+        "explanation_en": "Assume only relative ranks are observed. Non-records cannot win. Let V_k be the optimal success chance after rejecting k applicants; V_30=0. Backwards, V_{k-1}=V_k+max(0,k/30-V_k)/k: applicant k is a record with probability 1/k; accepting it wins with probability k/30. This gives 11 initial rejections, then acceptance of the next record (or the last applicant). Success is (11/30)sum_{j=11}^{29}1/j, about 37.9%.",
+        "subject": "上周建模题",
+        "subject_en": "MODEL ANSWER",
         "visual": "rope",
         "accent": "aqua"
       },
       {
-        "id": "answer-local-estimation-01",
+        "id": "answer-local-estimation-17",
         "eyebrow": "上周思考题 · 示例估算 / LAST WEEK · SAMPLE ESTIMATE",
-        "headline": "北滘镇一个工作日，\n大约会有多少单外卖？",
-        "headline_en": "Roughly how many food-delivery orders are placed in Beijiao on a weekday?",
-        "result": "约 5 万单 / 工作日",
-        "result_en": "About 50,000 orders per weekday",
-        "explanation": "一组假设：北滘工作日常住及通勤人口约25万，其中60%会用外卖；这部分人平均每周点2单，按5个工作日均摊。\n\n25万 × 60% × 2 ÷ 5 = 6万单。再用约1800名活跃骑手、每人每天25单核对，得到4.5万单。因此可估为约5万单，合理范围是4万到6万单。",
-        "explanation_en": "One set of assumptions: about 250,000 residents and commuters are in Beijiao on a weekday; 60% use food delivery and place two orders per working week. This gives 250,000 × 60% × 2 ÷ 5 = 60,000 orders.\n\nA cross-check using 1,800 active riders at 25 orders each gives 45,000. A reasonable estimate is therefore about 50,000, with a range of 40,000 to 60,000.",
+        "headline": "中国高铁列车一天合计\n大约行驶多少万公里？\n给出一个数值或数量级，\n并说明主要假设。",
+        "headline_en": "Roughly how many tens of thousands of kilometres do China's high-speed trains travel in total each day? Give a number or order of magnitude and state your main assumptions.",
+        "result": "示例估算：约800万公里/日",
+        "result_en": "Sample estimate: about 8 million km per day",
+        "explanation": "示例估算：只计中国高铁载客列车的运行距离，不计乘客人数，也不计空车调动。假设每天开行1万趟单程列车，每趟平均800公里，则1万×800=800万公里/日，量级为每日千万公里。两项输入均为估算假设，不是核实后的运营统计；改变假设会改变结果，并无唯一答案。",
+        "explanation_en": "Sample estimate: count train-kilometres for passenger services on China's high-speed railways, excluding empty movements. Assume 10,000 one-way services per day, averaging 800 km each. Then 10,000 × 800 = 8 million km per day, of order 10 million. Both inputs are assumptions, not verified operating statistics. Different assumptions give different answers.",
         "subject": "上周本地估算",
         "subject_en": "SAMPLE ESTIMATE",
         "visual": "estimation",
@@ -150,46 +150,57 @@
     ],
     "challenges": [
       {
-        "id": "proof-mutilated-chessboard",
+        "id": "proof-divisible-pair-2026-w38",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "从8×8棋盘上删去\n两个相对的角格。\n证明：剩下的62格不能用\n1×2骨牌完全覆盖。",
-        "headline_en": "Two opposite corner squares are removed from an 8 by 8 chessboard. Prove that the remaining 62 squares cannot be tiled by 1 by 2 dominoes.",
+        "headline": "从1到100的整数中，\n任意选出51个不同的数。\n证明：其中必有两个数，\n一个是另一个的整数倍。",
+        "headline_en": "Choose any 51 distinct integers from 1 to 100. Prove that one of the chosen numbers must be an integer multiple of another.",
         "subject": "本周证明题",
         "subject_en": "PROOF",
-        "origin": "离散数学",
+        "origin": "整数与整除",
         "visual": "network",
         "accent": "coral"
       },
       {
-        "id": "oxbridge-best-applicant",
+        "id": "probability-coin-race-2026-w38",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "30名申请者随机到场，\n实力各不相同。\n面试后须立即录用或淘汰，\n且只能录用一人。\n怎样做最可能录用最强者？\n估计成功概率。",
-        "headline_en": "Thirty applicants of different ability arrive randomly. Accept or reject each immediately, and hire only once. What strategy is most likely to choose the best, and what is its success rate?",
-        "subject": "本周建模题",
-        "subject_en": "DECISION MODEL",
-        "origin": "顺序决策",
+        "headline": "反复独立抛一枚公平硬币。\n“正正”和“反正”中，\n哪一种更可能先连续出现？\n求两者各自先出现的概率。",
+        "headline_en": "Toss a fair coin independently. Which consecutive pattern appears first: HH or TH (H=heads, T=tails)? Find the probability for each pattern.",
+        "subject": "本周概率题",
+        "subject_en": "PROBABILITY",
+        "origin": "随机过程",
         "visual": "rope",
         "accent": "aqua"
       },
       {
-        "id": "local-estimation-17",
+        "id": "local-estimation-13",
+        "source_bank_id": "local-estimation-13",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "中国高铁列车一天合计\n大约行驶多少万公里？\n给出一个数值或数量级，\n并说明主要假设。",
-        "headline_en": "Roughly how many tens of thousands of kilometres do China's high-speed trains travel in total each day? Give a number or order of magnitude and state your main assumptions.",
+        "headline": "北滘一所大型中学的屋顶，\n在一场50毫米暴雨中，\n大约能收集多少吨雨水？\n给出数值或数量级，\n并说明主要假设。",
+        "headline_en": "Estimate the tonnes of rainwater collected by the roofs of a large secondary school in Beijiao during a 50 mm rainstorm. State your assumptions.",
         "subject": "本地数量估算",
         "subject_en": "LOCAL ESTIMATION",
         "origin": "本地估算题库 · 原创",
         "visual": "estimation",
-        "answer_unit": "约 ______ 万公里 / 日",
-        "answer_unit_en": "about ______ 10,000 km per day",
+        "answer_unit": "约 ______ 吨 / 场暴雨",
+        "answer_unit_en": "about ______ tonnes per rainstorm",
         "accent": "gold"
       }
     ]
   },
+  "editorial_notes": [
+    "本批次按定时模式生成2026-09-14周一待审稿。六条主候选覆盖能源、气候、卫生、货币政策、文化和航天；三条备选仅供人工挑选。",
+    "本次检索未凑齐过去48小时内且满足领域覆盖的九条原始来源，采用9月8日至11日发布的报道。9月11日来源也不能仅凭日期保证处于生成时刻前48小时内；所有published均保留页面实际发布日期。",
+    "展览、记者会与AI工具均为已经正式公布的未来安排，未写成已经举办、返航或发布。欧洲央行通胀与增长数字为预测，不是实际结果。",
+    "学校遇袭报道首次发布于9月8日、更新于9月9日；AI治理工具报道首次发布于9月9日、更新于9月11日。published使用首次发布日期。",
+    "上周申请者题未明确可观察信息，参考解答采用仅知道相对排名的经典模型；若可观察绝对能力且已知其分布，最优策略可能不同。高铁解答中的趟数和平均距离均为示例假设。",
+    "本周估算题选自运行器提供的可用条目local-estimation-13，并保留source_bank_id。运行器应在草稿进入审核时将题库记录标为in_review；本次未修改题库或服务器状态。",
+    "已检查九条新闻的标题和摘要长度、来源页面唯一性，以及三篇参考解答的长度限制。未使用本地文件或shell工具，未执行项目校验脚本；docs/automation-architecture.md全文未在上下文提供。",
+    "主候选原始来源：[国家发改委调价公告](https://www.ndrc.gov.cn/xwdt/xwfb/202609/t20260911_1407564.html)、[世界气象组织8月气候报告](https://wmo.int/media/news/earth-has-hottest-august-record)、[世卫组织疫苗预认证公告](https://www.who.int/news/item/09-09-2026-who-prequalifies-multi-dose-rsv-vaccine-vial--paving-the-way-to-protecting-more-infants-globally)、[欧洲央行货币政策决定](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html)、[教科文组织非洲历史展览公告](https://www.unesco.org/en/articles/general-history-africa-unesco-opens-exhibition-its-landmark-editorial-project)、[NASA乘组记者会公告](https://www.nasa.gov/news-release/nasas-spacex-crew-12-to-discuss-station-mission-upcoming-return/)。",
+    "备选原始来源：[教科文组织AI治理工具预告](https://www.unesco.org/en/articles/unesco-launches-new-tools-reinforce-ethical-ai-governance-global-forum-riyadh-saudi-arabia)、[教科文组织学校遇袭统计](https://www.unesco.org/en/articles/attacks-schools-rise-33-2025-unesco-calls-stronger-protection-education)、[NASA发射服务合同公告](https://www.nasa.gov/news-release/nasa-adds-relativity-spaces-terran-r-to-launch-services-contract/)。"
+  ],
   "review": {
     "reviewer": "王逸孜",
-    "approved_at": "2026-09-11T09:35:27+08:00",
-    "note": "用户确认正式推送和发布。",
-    "generated_at": "2026-09-11T09:31:09+08:00"
+    "approved_at": "2026-09-13T22:39:15.359000+08:00",
+    "note": "Approved through Feishu; published at scheduled time"
   }
 }
