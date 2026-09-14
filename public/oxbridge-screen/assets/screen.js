@@ -92,8 +92,9 @@
         </div>`;
     }
 
-    if (challenge.visual === "rope") {
-      if (challenge.id === "oxbridge-two-stage-rope") {
+    // A question category is not an illustration: only explicitly adapted
+    // questions may use a scene. New probability questions must not get ropes.
+    if (challenge.id === "oxbridge-two-stage-rope") {
         return `
           <div class="interview-visual rope-visual two-stage-rope" aria-hidden="true">
             <svg viewBox="0 0 760 300" role="img">
@@ -111,21 +112,6 @@
               <circle cx="690" cy="228" r="9"></circle>
             </svg>
           </div>`;
-      }
-      return `
-        <div class="interview-visual rope-visual" aria-hidden="true">
-          <svg viewBox="0 0 760 260" role="img">
-            <line class="rope-base" x1="70" y1="112" x2="690" y2="112"></line>
-            <line class="rope-cut" x1="278" y1="66" x2="278" y2="158"></line>
-            <line class="rope-cut" x1="510" y1="66" x2="510" y2="158"></line>
-            <circle cx="70" cy="112" r="9"></circle>
-            <circle cx="690" cy="112" r="9"></circle>
-            <text x="62" y="202">0</text>
-            <text x="268" y="202">x</text>
-            <text x="500" y="202">y</text>
-            <text x="681" y="202">1</text>
-          </svg>
-        </div>`;
     }
 
     if (challenge.visual === "estimation") {
@@ -139,20 +125,7 @@
         </div>`;
     }
 
-    return `
-      <div class="interview-visual network-visual" aria-hidden="true">
-        <svg viewBox="0 0 760 320" role="img">
-          <ellipse class="network-table" cx="380" cy="160" rx="170" ry="92"></ellipse>
-          <g class="network-nodes">
-            <circle cx="230" cy="52" r="28"></circle>
-            <circle cx="530" cy="52" r="28"></circle>
-            <circle cx="632" cy="160" r="28"></circle>
-            <circle cx="530" cy="268" r="28"></circle>
-            <circle cx="230" cy="268" r="28"></circle>
-            <circle cx="128" cy="160" r="28"></circle>
-          </g>
-        </svg>
-      </div>`;
+    return "";
   };
 
   const buildSlides = (data) => {
