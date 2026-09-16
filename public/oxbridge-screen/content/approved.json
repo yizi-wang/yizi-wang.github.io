@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-15",
-  "edition": "2026-09-15 试运行待审",
+  "content_date": "2026-09-17",
+  "edition": "2026-09-17 试运行待审",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,89 +12,89 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月15日\n每日简报",
+    "headline": "9月17日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "brief-20260915-coal-outlook",
-        "category": "能源供需 / ENERGY",
-        "headline": "国际能源署上调2026年全球煤炭需求预测",
-        "headline_en": "IEA raises its forecast for global coal demand in 2026",
-        "summary": "国际能源署9月10日预测，2026年全球煤炭需求将增长1.2%。天然气涨价推动部分地区增加燃煤发电；全年结果尚未确定。",
-        "summary_en": "On 10 September, the IEA forecast 1.2% growth in global coal demand in 2026 as higher gas prices encourage coal-fired power. This is a projection, not a full-year result.",
+        "id": "brief-20260917-roman-instrument",
+        "category": "航天科研 / SPACE",
+        "headline": "罗曼望远镜启动三亿像素红外相机",
+        "headline_en": "Roman telescope activates its 300-megapixel infrared camera",
+        "summary": "NASA9月15日报告，罗曼望远镜已启动广域成像仪，并完成日冕仪初步测试；首批科学图像仍计划于2027年初发布。",
+        "summary_en": "NASA reported on 15 September that Roman's main camera was activated and its coronagraph passed initial tests. First science images remain planned for early 2027.",
         "source": {
-          "name": "国际能源署 / IEA",
-          "url": "https://www.iea.org/news/global-coal-demand-set-to-increase-this-year-amid-middle-east-conflict",
+          "name": "美国国家航空航天局 / NASA",
+          "url": "https://science.nasa.gov/blogs/roman/2026/09/15/nasa-activates-romans-primary-instrument-checks-out-coronagraph/",
+          "published": "2026-09-15"
+        },
+        "accent": "aqua"
+      },
+      {
+        "id": "brief-20260917-health-partnership",
+        "category": "公共卫生 / HEALTH",
+        "headline": "世卫与英联邦秘书处续签四年合作备忘录",
+        "headline_en": "WHO and Commonwealth Secretariat renew partnership for four years",
+        "summary": "世卫与英联邦秘书处9月15日续签四年合作备忘录，将围绕基层医疗、医疗保障和气候韧性卫生系统开展合作。",
+        "summary_en": "WHO and the Commonwealth Secretariat renewed a four-year agreement on 15 September, covering primary care, health coverage and climate-resilient health systems.",
+        "source": {
+          "name": "世界卫生组织 / WHO",
+          "url": "https://www.who.int/news/item/15-09-2026-who-and-commonwealth-secretariat-renew-partnership-to-strengthen-health-systems-and-advance-universal-health-coverage",
+          "published": "2026-09-15"
+        },
+        "accent": "coral"
+      },
+      {
+        "id": "brief-20260917-madagascar-training",
+        "category": "职业教育 / EDUCATION",
+        "headline": "马达加斯加职业培训结合谋生技能与护林",
+        "headline_en": "Madagascar training links practical job skills with forest protection",
+        "summary": "教科文组织9月14日报道，马达加斯加社区培训涵盖建筑、创业与养鱼，帮助居民探索替代生计；鱼饲料短缺仍是难题。",
+        "summary_en": "UNESCO reported on 14 September that training in Madagascar covers construction, business and fish farming to support alternative livelihoods. Fish-feed shortages remain a barrier.",
+        "source": {
+          "name": "联合国教科文组织 / UNESCO",
+          "url": "https://www.unesco.org/en/articles/unesco-vocational-training-helps-communities-build-livelihoods-while-protecting-madagascars-forests",
+          "published": "2026-09-14"
+        },
+        "accent": "gold"
+      },
+      {
+        "id": "brief-20260917-ecb-rates",
+        "category": "货币政策 / MONETARY POLICY",
+        "headline": "欧洲央行加息生效，存款利率升至2.50%",
+        "headline_en": "ECB rate rise takes effect; deposit rate reaches 2.50%",
+        "summary": "欧洲央行9月10日宣布三项关键利率各上调0.25个百分点，9月16日生效；存款便利利率升至2.50%。",
+        "summary_en": "The ECB announced a 0.25-percentage-point rise in its three key rates on 10 September, effective 16 September. The deposit facility rate rises to 2.50%.",
+        "source": {
+          "name": "欧洲中央银行 / ECB",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
           "published": "2026-09-10"
         },
         "accent": "aqua"
       },
       {
-        "id": "brief-20260915-africa-early-warnings",
-        "category": "气候预警 / CLIMATE",
-        "headline": "非洲预警论坛呼吁让灾害警报抵达每个人",
-        "headline_en": "African forum calls for disaster warnings that reach everyone",
-        "summary": "世气组织9月7日公布非洲预警论坛行动呼吁，要求加强观测、资金和社区传播，让居民收到、理解警报并及时行动。",
-        "summary_en": "On 7 September, WMO published an African forum's call to improve monitoring, funding and community communication so people can receive, understand and act on disaster warnings.",
+        "id": "brief-20260917-air-quality",
+        "category": "气候环境 / CLIMATE",
+        "headline": "世气组织报告关注野火、热浪与空气污染",
+        "headline_en": "WMO report examines wildfire, heatwave and air pollution links",
+        "summary": "世气组织9月7日发布报告，指出野火与热浪增加空气污染风险，呼吁加强颗粒物等监测，并协调空气质量与气候政策。",
+        "summary_en": "WMO's 7 September report warns that wildfires and heatwaves raise air pollution risks. It calls for better monitoring and coordinated air quality and climate policies.",
         "source": {
           "name": "世界气象组织 / WMO",
-          "url": "https://public.wmo.int/media/news/addis-ababa-call-action-early-warnings-africa",
+          "url": "https://wmo.int/media/news/wmo-bulletin-shows-air-quality-and-climate-interlinkages",
           "published": "2026-09-07"
         },
         "accent": "gold"
       },
       {
-        "id": "brief-20260915-bhutan-rabies",
-        "category": "公共卫生 / HEALTH",
-        "headline": "世卫确认不丹消除犬传人狂犬病公共卫生问题",
-        "headline_en": "WHO validates Bhutan's elimination of dog-transmitted rabies as a public health problem",
-        "summary": "世卫9月4日宣布验证结果：不丹自2023年6月以来无犬传人狂犬病死亡病例，仍将持续开展犬只免疫、监测和暴露后预防。",
-        "summary_en": "WHO announced validation on 4 September. Bhutan has recorded no human deaths from dog-transmitted rabies since June 2023 and will sustain vaccination, surveillance and post-exposure care.",
-        "source": {
-          "name": "世界卫生组织 / WHO",
-          "url": "https://www.who.int/news/item/04-09-2026-who-validates-bhutan-for-eliminating-dog-transmitted-human-rabies",
-          "published": "2026-09-04"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "brief-20260915-canada-rate-hold",
-        "category": "货币政策 / MONETARY POLICY",
-        "headline": "加拿大央行维持政策利率在2.25%",
-        "headline_en": "Bank of Canada holds its policy rate at 2.25%",
-        "summary": "加拿大央行9月2日决定维持隔夜利率目标在2.25%，指出通胀上行风险增加，新增关税也让经济增长前景更加不确定。",
-        "summary_en": "On 2 September, the Bank of Canada held its overnight rate target at 2.25%, citing increased upside risks to inflation and greater uncertainty over growth from new tariffs.",
-        "source": {
-          "name": "加拿大银行 / Bank of Canada",
-          "url": "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
-          "published": "2026-09-02"
-        },
-        "accent": "aqua"
-      },
-      {
-        "id": "brief-20260915-museums-living-heritage",
+        "id": "brief-20260917-living-heritage",
         "category": "文化传承 / CULTURE",
-        "headline": "中亚博物馆工作坊探讨如何保护活态遗产",
-        "headline_en": "Central Asian museums explore ways to safeguard living heritage",
-        "summary": "教科文组织9月11日报道，9月8至10日举行的工作坊帮助中亚博物馆人员设计非遗保护方案，涵盖展览、研究和记录。",
-        "summary_en": "UNESCO reported on 11 September that a workshop held on 8–10 September helped Central Asian museum staff develop living heritage plans covering exhibitions, research and documentation.",
+        "headline": "中亚博物馆工作坊设计活态遗产保护方案",
+        "headline_en": "Central Asian museum workshop develops living heritage plans",
+        "summary": "教科文组织9月11日报道，9月8至10日的工作坊让中亚博物馆人员围绕展览、修复、研究与记录设计非遗保护方案。",
+        "summary_en": "UNESCO reported on 11 September that a workshop held on 8–10 September helped Central Asian museum staff plan living heritage work in exhibitions, conservation, research and records.",
         "source": {
           "name": "联合国教科文组织 / UNESCO",
           "url": "https://www.unesco.org/en/articles/workshop-safeguarding-intangible-cultural-heritage-through-museums-central-asia",
-          "published": "2026-09-11"
-        },
-        "accent": "gold"
-      },
-      {
-        "id": "brief-20260915-artifact-inspector",
-        "category": "航天科研 / SPACE",
-        "headline": "NASA邀公众帮助识别空间望远镜数据伪影",
-        "headline_en": "NASA invites the public to spot artifacts in space telescope data",
-        "summary": "NASA9月11日介绍公众科学项目，参与者可识别欧几里得望远镜数据中的伪影，帮助改进AI工具；罗曼望远镜数据计划2027年初加入。",
-        "summary_en": "NASA's 11 September article invites volunteers to identify artifacts in Euclid telescope data and improve AI tools. Roman telescope data is planned to join in early 2027.",
-        "source": {
-          "name": "美国国家航空航天局 / NASA",
-          "url": "https://science.nasa.gov/get-involved/citizen-science/help-refine-data-from-space-telescopes-with-artifact-inspector/",
           "published": "2026-09-11"
         },
         "accent": "coral"
@@ -188,20 +188,21 @@
     ]
   },
   "editorial_notes": [
-    "按运行器最终定时模式生成2026-09-15周二待审稿。六条主候选覆盖能源、气候、卫生、货币政策、文化和航天六个领域；三条备选独立返回，仅供人工挑选。未批准、未发布，已移除review及旧审批元数据。",
-    "实时检索并打开九个不同的原始机构页面核实正文。本次未凑齐过去48小时内的合适来源，采用9月8日至11日发布的报道；六条主候选与模板报道相同，仅重新核实并调整表述，不能视为九月十五日新发生的事件。请人工重点评估时效和重复展示问题。",
-    "所有published保留来源首次发布日期。学校遇袭报道首次发布于9月8日、更新于9月9日；AI治理工具预告首次发布于9月9日、更新于9月11日。未把目标内容日期或更新日期当成首次发布日期。",
-    "欧洲央行加息决定9月10日公布、9月16日生效；通胀和增长数字是工作人员预测。展览、乘组记者会和AI工具发布均按已公布的安排表述，未写成已经完成。Terran R纳入合同不等于已经执行发射。",
-    "weekly完整沿用模板，包括上周解答、本周三题及source_bank_id；未新选估算题，未修改题库轮换记录。显示参数保持不变。",
-    "用户建议仅询问HTML预览，不包含可核实的新闻事件，未作为新闻采用。本次输出为JSON草稿，未生成HTML预览。",
-    "按要求未使用shell或本地文件工具，未执行项目校验脚本；docs/automation-architecture.md全文未提供，无法核对其中未给出的要求。",
-    "能源、气候和利率依据：[国家发改委调价公告](https://www.ndrc.gov.cn/xwdt/xwfb/202609/t20260911_1407564.html)、[世界气象组织8月气候报告](https://wmo.int/media/news/earth-has-hottest-august-record)、[欧洲央行货币政策决定](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html)。",
-    "卫生、文化和乘组安排依据：[世卫组织疫苗预认证公告](https://www.who.int/news/item/09-09-2026-who-prequalifies-multi-dose-rsv-vaccine-vial--paving-the-way-to-protecting-more-infants-globally)、[教科文组织非洲历史展览公告](https://www.unesco.org/en/articles/general-history-africa-unesco-opens-exhibition-its-landmark-editorial-project)、[NASA乘组记者会公告](https://www.nasa.gov/news-release/nasas-spacex-crew-12-to-discuss-station-mission-upcoming-return/)。",
-    "备选依据：[教科文组织AI治理工具预告](https://www.unesco.org/en/articles/unesco-launches-new-tools-reinforce-ethical-ai-governance-global-forum-riyadh-saudi-arabia)、[教科文组织学校遇袭统计](https://www.unesco.org/en/articles/attacks-schools-rise-33-2025-unesco-calls-stronger-protection-education)、[NASA发射服务合同公告](https://www.nasa.gov/news-release/nasa-adds-relativity-spaces-terran-r-to-launch-services-contract/)。"
+    "按最终SCHEDULED MODE生成2026-09-17周四待审稿，edition标为试运行待审。六条主候选覆盖航天、卫生、教育、货币政策、气候环境、文化六个领域。另附三条备选，仅供人工挑选，不参与播放。未批准、未发布，已移除review及旧审批元数据。",
+    "本次实时检索并打开九个不同的原始机构报道页面核实正文。未凑齐全部发表于过去48小时内的来源：九条报道首次发布日期为9月7日至15日；主稿仅NASA仪器进展与世卫合作报道发表于9月15日。请人工重点判断较旧报道是否适合次日展示。",
+    "中亚博物馆报道与模板主稿重复，煤炭备选也与模板重复；重新核实不代表新事件。欧洲央行报道首次发布于9月10日，9月16日是利率生效日期，未用生效日替代发布日期。",
+    "NASA报道确认仪器启动与初步测试，首批科学图像仍属计划。世卫合作备忘录列出合作方向，不能据此认定医疗服务已经改善。马达加斯加报道是项目特写，缺少可独立比较的就业与护林成效统计，未写成量化成效。",
+    "AI备选依据9月9日首次发布、9月11日更新的预告；该页面仍使用未来时，不能确认9月16日工具发布已完成。煤炭需求增长1.2%是国际能源署预测，不是全年实际结果。",
+    "weekly完整沿用模板，包括上周解答、本周三题及source_bank_id；display保持不变。未新选估算题，未修改题库轮换记录。用户建议列表为空，suggestions_considered返回空数组。",
+    "按要求未使用shell或本地文件工具，未运行项目校验脚本。docs/automation-architecture.md全文未提供，无法核对其中未给出的要求。",
+    "航天与卫生依据：[NASA仪器进展](https://science.nasa.gov/blogs/roman/2026/09/15/nasa-activates-romans-primary-instrument-checks-out-coronagraph/)、[世卫合作备忘录](https://www.who.int/news/item/15-09-2026-who-and-commonwealth-secretariat-renew-partnership-to-strengthen-health-systems-and-advance-universal-health-coverage)。",
+    "教育与货币政策依据：[马达加斯加职业培训](https://www.unesco.org/en/articles/unesco-vocational-training-helps-communities-build-livelihoods-while-protecting-madagascars-forests)、[欧洲央行利率决定](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html)。",
+    "气候与文化依据：[世气组织空气质量报告](https://wmo.int/media/news/wmo-bulletin-shows-air-quality-and-climate-interlinkages)、[中亚博物馆工作坊](https://www.unesco.org/en/articles/workshop-safeguarding-intangible-cultural-heritage-through-museums-central-asia)。",
+    "备选依据：[智利狂犬病验证](https://www.who.int/news/item/14-09-2026-chile-becomes-first-country-in-south-america-validated-for-eliminating-dog-transmitted-rabies-as-a-public-health-problem)、[AI治理工具预告](https://www.unesco.org/en/articles/unesco-launches-new-tools-reinforce-ethical-ai-governance-global-forum-riyadh-saudi-arabia)、[国际能源署煤炭预测](https://www.iea.org/news/global-coal-demand-set-to-increase-this-year-amid-middle-east-conflict)。"
   ],
   "review": {
     "reviewer": "王逸孜",
-    "approved_at": "2026-09-14T22:18:31.541000+08:00",
+    "approved_at": "2026-09-16T20:04:48.339000+08:00",
     "note": "Approved through Feishu; published at scheduled time"
   }
 }
