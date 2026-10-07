@@ -3,7 +3,7 @@
   "status": "approved",
   "demo": false,
   "content_date": "2026-10-08",
-  "edition": "2026-10-08 v2",
+  "edition": "2026-10-08 v2（含上期解答）",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -103,7 +103,50 @@
   },
   "weekly": {
     "week": "2026-W41",
-    "previous_answers": [],
+    "previous_answers": [
+      {
+        "id": "answer-proof-divisible-pair-2026-w38",
+        "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
+        "headline": "从1到100的整数中，\n任意选出51个不同的数。\n证明：其中必有两个数，\n一个是另一个的整数倍。",
+        "headline_en": "Choose any 51 distinct integers from 1 to 100. Prove that one of the chosen numbers must be an integer multiple of another.",
+        "result": "按“奇数部分”分组",
+        "result_en": "Group the numbers by their odd parts",
+        "explanation": "把每个数不断除以2，直到剩下奇数。最多只有50种奇数结果，因此51个数中必有两个得到同一个奇数；这两个原数相差若干次乘2，较小数就整除较大数。",
+        "explanation_en": "Repeatedly divide each number by 2 until an odd number remains. There are at most 50 possible odd results, so two of the 51 selected numbers must share one. Their original values differ by factors of 2, so the smaller divides the larger.",
+        "subject": "W38 · 证明题解答",
+        "subject_en": "W38 · PROOF ANSWER",
+        "visual": "network",
+        "accent": "coral"
+      },
+      {
+        "id": "answer-probability-coin-race-2026-w38",
+        "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
+        "headline": "反复独立抛一枚公平硬币。\n“正正”和“反正”中，\n哪一种更可能先连续出现？\n求两者各自先出现的概率。",
+        "headline_en": "Toss a fair coin independently. Which consecutive pattern appears first: HH or TH (H=heads, T=tails)? Find the probability for each pattern.",
+        "result": "正正：1/4；反正：3/4",
+        "result_en": "HH: 1/4; TH: 3/4",
+        "explanation": "HH先出现的概率是1/4，TH是3/4。HH想赢，开头两次必须就是HH；否则先出现了T，之后第一次出现H时，TH就已经赢了。",
+        "explanation_en": "HH wins with probability 1/4; TH wins with probability 3/4. HH can win only if the first two tosses are HH. Otherwise, a T occurs before any HH, and the first subsequent H completes TH.",
+        "subject": "W38 · 概率题解答",
+        "subject_en": "W38 · PROBABILITY ANSWER",
+        "visual": "rope",
+        "accent": "aqua"
+      },
+      {
+        "id": "answer-local-estimation-13-w38",
+        "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
+        "headline": "北滘一所大型中学的屋顶，\n在一场50毫米暴雨中，\n大约能收集多少吨雨水？\n给出数值或数量级，\n并说明主要假设。",
+        "headline_en": "Estimate the tonnes of rainwater collected by the roofs of a large secondary school in Beijiao during a 50 mm rainstorm. State your assumptions.",
+        "result": "示例估算：约400吨／场",
+        "result_en": "Sample estimate: about 400 tonnes per rainstorm",
+        "explanation": "示例约400吨：假设屋顶水平投影总面积1万平方米、收集率80%，水量为10000×0.05×0.8＝400立方米，约400吨。这是估算示例，面积和收集率并非学校实测数据。",
+        "explanation_en": "Sample estimate: about 400 tonnes. Assume a total horizontal roof area of 10,000 m² and an 80% collection rate. Collected water is 10,000×0.05×0.8=400 m³, approximately 400 tonnes. The area and collection rate are illustrative assumptions, not measurements of an actual school.",
+        "subject": "W38 · 本地估算解答",
+        "subject_en": "W38 · LOCAL ESTIMATE",
+        "visual": "estimation",
+        "accent": "gold"
+      }
+    ],
     "challenges": [
       {
         "id": "reasoning-nine-grid-2026-w41",
@@ -138,7 +181,8 @@
         "visual": "network",
         "accent": "coral"
       }
-    ]
+    ],
+    "previous_week": "2026-W38"
   },
   "editorial_notes": [
     "六条双语新闻及2026-W41三道思考题，经内容所有者在聊天中确认后发布。提示及教师解答不包含在公开播放内容中。",
@@ -146,11 +190,12 @@
     "电动车数据比较2026上半年与2025下半年；用电量为轻型纯电及插电混动车的模型估算。mRNA配方仍为动物实验，蛋白质水印仍为概念验证。",
     "厄尔尼诺条目为区域性电力风险分析，不代表已发生全面停电。NOAA气候状态依据2026-10-05周报。",
     "NISAR的17次观测覆盖2025-12-25至2026-08-17，构成变化记录，并非连续视频或喷发预报。",
-    "W41题目依次为九宫格选数、垃圾信息筛选条件概率、五个传感器几何证明。previous_answers为空，不展示过期周次或即时解答。"
+    "新增实际被换下的2026-W38三题中英参考解答；页面称“上期”而非“上周”。证明题用奇数部分分类；硬币题HH为1/4、TH为3/4；集雨示例400吨，输入为假设而非学校实测。",
+    "六条新闻、2026-W41三道新题及display保持不变。W41提示和答案仍不包含在公开播放内容中。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-07T13:34Z",
-    "note": "Approved in direct chat; publication requested."
+    "approved_at": "2026-10-07",
+    "note": "Approved in direct chat, including W38 reference answers; publication requested."
   }
 }
