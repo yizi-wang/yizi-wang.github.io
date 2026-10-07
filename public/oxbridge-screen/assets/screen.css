@@ -570,6 +570,29 @@ body.display-page {
   overflow: visible;
 }
 
+.number-grid-visual {
+  flex-shrink: 0;
+}
+
+.number-grid {
+  display: grid;
+  width: 36rem;
+  aspect-ratio: 1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 0.2rem;
+  padding: 0.2rem;
+  background: var(--paper-dim);
+}
+
+.number-grid span {
+  display: grid;
+  place-items: center;
+  color: var(--paper);
+  background: var(--ink-deep);
+  font: 700 5.4rem/1 var(--utility);
+}
+
 .neutral-chessboard {
   display: grid;
   width: 32rem;

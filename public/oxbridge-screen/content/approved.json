@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-09-17",
-  "edition": "2026-09-17 试运行待审",
+  "content_date": "2026-10-08",
+  "edition": "2026-10-08 v2",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,197 +12,145 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "9月17日\n每日简报",
+    "headline": "10月8日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "brief-20260917-roman-instrument",
-        "category": "航天科研 / SPACE",
-        "headline": "罗曼望远镜启动三亿像素红外相机",
-        "headline_en": "Roman telescope activates its 300-megapixel infrared camera",
-        "summary": "NASA9月15日报告，罗曼望远镜已启动广域成像仪，并完成日冕仪初步测试；首批科学图像仍计划于2027年初发布。",
-        "summary_en": "NASA reported on 15 September that Roman's main camera was activated and its coronagraph passed initial tests. First science images remain planned for early 2027.",
+        "id": "brief-20261008-chemistry-nobel",
+        "category": "化学与制药 / CHEMISTRY",
+        "headline": "诺贝尔化学奖：分子的“左右手”",
+        "headline_en": "Chemistry Nobel: Why Molecular Handedness Matters",
+        "summary": "许多分子像左右手，互为镜像却可能药效不同。10月7日揭晓的诺贝尔化学奖，表彰将微小手性偏向放大的反应研究，帮助合成更多所需的一种。",
+        "summary_en": "Many molecules have mirror-image forms with different biological effects. The chemistry Nobel, announced on 7 October, honours reactions that amplify a small preference for one form, helping chemists make the version they need.",
         "source": {
-          "name": "美国国家航空航天局 / NASA",
-          "url": "https://science.nasa.gov/blogs/roman/2026/09/15/nasa-activates-romans-primary-instrument-checks-out-coronagraph/",
-          "published": "2026-09-15"
+          "name": "瑞典皇家科学院 / KVA",
+          "url": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+          "published": "2026-10-07"
         },
         "accent": "aqua"
       },
       {
-        "id": "brief-20260917-health-partnership",
-        "category": "公共卫生 / HEALTH",
-        "headline": "世卫与英联邦秘书处续签四年合作备忘录",
-        "headline_en": "WHO and Commonwealth Secretariat renew partnership for four years",
-        "summary": "世卫与英联邦秘书处9月15日续签四年合作备忘录，将围绕基层医疗、医疗保障和气候韧性卫生系统开展合作。",
-        "summary_en": "WHO and the Commonwealth Secretariat renewed a four-year agreement on 15 September, covering primary care, health coverage and climate-resilient health systems.",
+        "id": "brief-20261008-mrna-stability",
+        "category": "疫苗与冷链 / HEALTH",
+        "headline": "AI找到耐热mRNA疫苗新配方",
+        "headline_en": "AI Helps RNA Vaccines Withstand Heat",
+        "summary": "研究者用AI调配保护成分，让干燥mRNA疫苗在室温保存一年后，仍能在小鼠中诱发免疫反应。若经人体试验验证，或能降低偏远地区的疫苗配送门槛。",
+        "summary_en": "AI optimized protective ingredients around mRNA-carrying particles. After a year at room temperature, dried vaccines still triggered immune responses in mice. Human validation is needed, but the approach could ease cold-chain barriers to vaccination.",
         "source": {
-          "name": "世界卫生组织 / WHO",
-          "url": "https://www.who.int/news/item/15-09-2026-who-and-commonwealth-secretariat-renew-partnership-to-strengthen-health-systems-and-advance-universal-health-coverage",
-          "published": "2026-09-15"
+          "name": "麻省理工学院 / MIT",
+          "url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+          "published": "2026-09-28"
         },
         "accent": "coral"
       },
       {
-        "id": "brief-20260917-madagascar-training",
-        "category": "职业教育 / EDUCATION",
-        "headline": "马达加斯加职业培训结合谋生技能与护林",
-        "headline_en": "Madagascar training links practical job skills with forest protection",
-        "summary": "教科文组织9月14日报道，马达加斯加社区培训涵盖建筑、创业与养鱼，帮助居民探索替代生计；鱼饲料短缺仍是难题。",
-        "summary_en": "UNESCO reported on 14 September that training in Madagascar covers construction, business and fish farming to support alternative livelihoods. Fish-feed shortages remain a barrier.",
+        "id": "brief-20261008-ev-stocks-flows",
+        "category": "能源与数据 / ENERGY",
+        "headline": "美电动车销量降，用电为何仍升？",
+        "headline_en": "EV Sales Fall, So Why Does Electricity Use Rise?",
+        "summary": "2026上半年，美国电动车新车销量比前半年降19%，轻型电动车用电量估算却增8%。此前售出的车仍在跑：新增销量与在用车队，是不同的概念。",
+        "summary_en": "In January–June 2026, U.S. EV sales fell 19% from July–December 2025, but estimated light-duty EV electricity use rose 8%. Existing vehicles still need charging; new sales do not measure the whole fleet.",
         "source": {
-          "name": "联合国教科文组织 / UNESCO",
-          "url": "https://www.unesco.org/en/articles/unesco-vocational-training-helps-communities-build-livelihoods-while-protecting-madagascars-forests",
-          "published": "2026-09-14"
+          "name": "美国能源信息署 / EIA",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=68224",
+          "published": "2026-09-30"
         },
         "accent": "gold"
       },
       {
-        "id": "brief-20260917-ecb-rates",
-        "category": "货币政策 / MONETARY POLICY",
-        "headline": "欧洲央行加息生效，存款利率升至2.50%",
-        "headline_en": "ECB rate rise takes effect; deposit rate reaches 2.50%",
-        "summary": "欧洲央行9月10日宣布三项关键利率各上调0.25个百分点，9月16日生效；存款便利利率升至2.50%。",
-        "summary_en": "The ECB announced a 0.25-percentage-point rise in its three key rates on 10 September, effective 16 September. The deposit facility rate rises to 2.50%.",
+        "id": "brief-20261008-el-nino-grid",
+        "category": "气候与电网 / CLIMATE",
+        "headline": "厄尔尼诺增强，电网为何承压？",
+        "headline_en": "How Can El Niño Put Power Supplies Under Pressure?",
+        "summary": "NOAA周报显示厄尔尼诺正在增强。IEA指出，部分拉美地区少雨会减少水库来水，高温又增加空调用电；发电减少、需求增加，可能同时挤压电网。",
+        "summary_en": "NOAA’s latest update shows El Niño strengthening. The IEA explains the double squeeze on parts of Latin America: reduced rainfall can cut hydropower, while heat increases cooling demand. Weather can disrupt both electricity supply and demand.",
         "source": {
-          "name": "欧洲中央银行 / ECB",
-          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
-          "published": "2026-09-10"
+          "name": "国际能源署 / IEA",
+          "url": "https://www.iea.org/commentaries/how-electricity-systems-across-latin-america-can-strengthen-preparedness-for-el-nino",
+          "published": "2026-10-07"
         },
         "accent": "aqua"
       },
       {
-        "id": "brief-20260917-air-quality",
-        "category": "气候环境 / CLIMATE",
-        "headline": "世气组织报告关注野火、热浪与空气污染",
-        "headline_en": "WMO report examines wildfire, heatwave and air pollution links",
-        "summary": "世气组织9月7日发布报告，指出野火与热浪增加空气污染风险，呼吁加强颗粒物等监测，并协调空气质量与气候政策。",
-        "summary_en": "WMO's 7 September report warns that wildfires and heatwaves raise air pollution risks. It calls for better monitoring and coordinated air quality and climate policies.",
+        "id": "brief-20261008-protein-watermark",
+        "category": "AI与科学溯源 / AI",
+        "headline": "AI设计的蛋白质也能加水印",
+        "headline_en": "AI-Designed Proteins Can Carry Watermarks",
+        "summary": "研究者微调氨基酸选择，为AI设计的蛋白质嵌入可检测水印，同时保留实验中的结合功能。这为追踪合成生物来源提供新方法，但水印仍可能被刻意移除。",
+        "summary_en": "Researchers embedded detectable signatures in AI-designed protein sequences while preserving binding function in laboratory tests. Biological watermarking could help trace synthetic designs and protect scientific databases, but the proof of concept remains vulnerable to deliberate removal.",
         "source": {
-          "name": "世界气象组织 / WMO",
-          "url": "https://wmo.int/media/news/wmo-bulletin-shows-air-quality-and-climate-interlinkages",
-          "published": "2026-09-07"
-        },
-        "accent": "gold"
-      },
-      {
-        "id": "brief-20260917-living-heritage",
-        "category": "文化传承 / CULTURE",
-        "headline": "中亚博物馆工作坊设计活态遗产保护方案",
-        "headline_en": "Central Asian museum workshop develops living heritage plans",
-        "summary": "教科文组织9月11日报道，9月8至10日的工作坊让中亚博物馆人员围绕展览、修复、研究与记录设计非遗保护方案。",
-        "summary_en": "UNESCO reported on 11 September that a workshop held on 8–10 September helped Central Asian museum staff plan living heritage work in exhibitions, conservation, research and records.",
-        "source": {
-          "name": "联合国教科文组织 / UNESCO",
-          "url": "https://www.unesco.org/en/articles/workshop-safeguarding-intangible-cultural-heritage-through-museums-central-asia",
-          "published": "2026-09-11"
+          "name": "Google DeepMind / Nature",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+          "published": "2026-09-30"
         },
         "accent": "coral"
+      },
+      {
+        "id": "brief-20261008-nisar-volcano",
+        "category": "地球观测 / EARTH",
+        "headline": "雷达卫星把火山变化连成时间序列",
+        "headline_en": "Radar Satellites Track How Volcanoes Change",
+        "summary": "NASA发布的NISAR成果用17次雷达观测记录熔岩扩展。卫星主动发射微波、接收回波成像，规律重访同一区域，让缺少地面仪器的火山也能持续积累变化记录。",
+        "summary_en": "NASA released NISAR results tracking spreading lava through 17 radar observations. The satellite sends microwaves and measures echoes, repeatedly revisiting the same area to build records of changes even where ground instruments are scarce.",
+        "source": {
+          "name": "美国航天局 / NASA",
+          "url": "https://svs.gsfc.nasa.gov/5675",
+          "published": "2026-09-24"
+        },
+        "accent": "gold"
       }
     ]
   },
   "weekly": {
-    "week": "2026-W38",
-    "previous_week": "2026-W37",
-    "previous_answers": [
-      {
-        "id": "answer-proof-mutilated-chessboard",
-        "eyebrow": "上周思考题 · 参考解答 / LAST WEEK · ANSWER",
-        "headline": "从8×8棋盘上删去\n两个相对的角格。\n证明：剩下的62格不能用\n1×2骨牌完全覆盖。",
-        "headline_en": "Two opposite corner squares are removed from an 8 by 8 chessboard. Prove that the remaining 62 squares cannot be tiled by 1 by 2 dominoes.",
-        "result": "不能完全覆盖",
-        "result_en": "A complete tiling is impossible",
-        "explanation": "把棋盘按相邻格异色染成黑白两色，原来各32格。相对的两个角格同色，删去后两色分别剩30格、32格。每块1×2骨牌必覆盖一黑一白；31块骨牌必覆盖31黑、31白，与剩余格数矛盾。因此不能完全覆盖。",
-        "explanation_en": "Colour adjacent squares black and white. Initially there are 32 of each colour. Opposite corners have the same colour, so removing them leaves 30 of one colour and 32 of the other. Every domino covers one square of each colour. Thus 31 dominoes would require 31 black and 31 white squares, a contradiction.",
-        "subject": "上周证明题",
-        "subject_en": "PROOF ANSWER",
-        "visual": "network",
-        "accent": "coral"
-      },
-      {
-        "id": "answer-oxbridge-best-applicant",
-        "eyebrow": "上周思考题 · 参考解答 / LAST WEEK · ANSWER",
-        "headline": "30名申请者随机到场，\n实力各不相同。\n面试后须立即录用或淘汰，\n且只能录用一人。\n怎样做最可能录用最强者？\n估计成功概率。",
-        "headline_en": "Thirty applicants of different ability arrive randomly. Accept or reject each immediately, and hire only once. What strategy is most likely to choose the best, and what is its success rate?",
-        "result": "先淘汰11人，成功率约37.9%",
-        "result_en": "Reject the first 11; success is about 37.9%",
-        "explanation": "假设只知道已面试者的相对排名。非当前最强者不可能胜出。令V_k为淘汰前k人后继续的最优成功率，V_30=0。第k人以1/k概率为当前最强，录用其获胜概率为k/30，故V_{k-1}=V_k+max(0,k/30−V_k)/k。倒推得先淘汰11人，再录用首位刷新纪录者；若无则录用最后一人。成功率=(11/30)×(1/11+…+1/29)≈37.9%。",
-        "explanation_en": "Assume only relative ranks are observed. Non-records cannot win. Let V_k be the optimal success chance after rejecting k applicants; V_30=0. Backwards, V_{k-1}=V_k+max(0,k/30-V_k)/k: applicant k is a record with probability 1/k; accepting it wins with probability k/30. This gives 11 initial rejections, then acceptance of the next record (or the last applicant). Success is (11/30)sum_{j=11}^{29}1/j, about 37.9%.",
-        "subject": "上周建模题",
-        "subject_en": "MODEL ANSWER",
-        "visual": "rope",
-        "accent": "aqua"
-      },
-      {
-        "id": "answer-local-estimation-17",
-        "eyebrow": "上周思考题 · 示例估算 / LAST WEEK · SAMPLE ESTIMATE",
-        "headline": "中国高铁列车一天合计\n大约行驶多少万公里？\n给出一个数值或数量级，\n并说明主要假设。",
-        "headline_en": "Roughly how many tens of thousands of kilometres do China's high-speed trains travel in total each day? Give a number or order of magnitude and state your main assumptions.",
-        "result": "示例估算：约800万公里/日",
-        "result_en": "Sample estimate: about 8 million km per day",
-        "explanation": "示例估算：只计中国高铁载客列车的运行距离，不计乘客人数，也不计空车调动。假设每天开行1万趟单程列车，每趟平均800公里，则1万×800=800万公里/日，量级为每日千万公里。两项输入均为估算假设，不是核实后的运营统计；改变假设会改变结果，并无唯一答案。",
-        "explanation_en": "Sample estimate: count train-kilometres for passenger services on China's high-speed railways, excluding empty movements. Assume 10,000 one-way services per day, averaging 800 km each. Then 10,000 × 800 = 8 million km per day, of order 10 million. Both inputs are assumptions, not verified operating statistics. Different assumptions give different answers.",
-        "subject": "上周本地估算",
-        "subject_en": "SAMPLE ESTIMATE",
-        "visual": "estimation",
-        "accent": "gold"
-      }
-    ],
+    "week": "2026-W41",
+    "previous_answers": [],
     "challenges": [
       {
-        "id": "proof-divisible-pair-2026-w38",
+        "id": "reasoning-nine-grid-2026-w41",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "从1到100的整数中，\n任意选出51个不同的数。\n证明：其中必有两个数，\n一个是另一个的整数倍。",
-        "headline_en": "Choose any 51 distinct integers from 1 to 100. Prove that one of the chosen numbers must be an integer multiple of another.",
-        "subject": "本周证明题",
-        "subject_en": "PROOF",
-        "origin": "整数与整除",
-        "visual": "network",
-        "accent": "coral"
+        "headline": "把1至9按顺序写成3×3方格：第一行1、2、3，第二行4、5、6，第三行7、8、9。圈出3个数，每行、每列恰好一个。总和最大能是多少？为什么？",
+        "headline_en": "Write 1–9 in a 3×3 grid, with rows 1,2,3; 4,5,6; and 7,8,9. Circle three numbers, exactly one in each row and column. What is the largest possible sum? Why?",
+        "subject": "入门 · 九宫格选数",
+        "subject_en": "STARTER · GRID PUZZLE",
+        "origin": "数阵与不变量 · 教学改写",
+        "visual": "question",
+        "accent": "gold"
       },
       {
-        "id": "probability-coin-race-2026-w38",
+        "id": "probability-spam-filter-2026-w41",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "反复独立抛一枚公平硬币。\n“正正”和“反正”中，\n哪一种更可能先连续出现？\n求两者各自先出现的概率。",
-        "headline_en": "Toss a fair coin independently. Which consecutive pattern appears first: HH or TH (H=heads, T=tails)? Find the probability for each pattern.",
-        "subject": "本周概率题",
-        "subject_en": "PROBABILITY",
-        "origin": "随机过程",
-        "visual": "rope",
+        "headline": "模拟测试：10000条消息中有100条垃圾信息。筛选器标记了其中90条，又误标其余9900条中的1%。从被标记的消息中等概率抽一条，它真是垃圾信息的概率是多少？",
+        "headline_en": "A simulated test has 10,000 messages, including 100 spam messages. A filter flags 90 of the spam messages and 1% of the other 9,900 messages. Pick uniformly from the flagged messages. What is the probability it is actually spam?",
+        "subject": "进阶 · 数据判断",
+        "subject_en": "DEVELOPING · DATA REASONING",
+        "origin": "原创教学模型 · 条件概率",
+        "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "local-estimation-13",
-        "source_bank_id": "local-estimation-13",
+        "id": "proof-five-sensors-2026-w41",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "北滘一所大型中学的屋顶，\n在一场50毫米暴雨中，\n大约能收集多少吨雨水？\n给出数值或数量级，\n并说明主要假设。",
-        "headline_en": "Estimate the tonnes of rainwater collected by the roofs of a large secondary school in Beijiao during a 50 mm rainstorm. State your assumptions.",
-        "subject": "本地数量估算",
-        "subject_en": "LOCAL ESTIMATION",
-        "origin": "本地估算题库 · 原创",
-        "visual": "estimation",
-        "answer_unit": "约 ______ 吨 / 场暴雨",
-        "answer_unit_en": "about ______ tonnes per rainstorm",
-        "accent": "gold"
+        "headline": "在边长10米的正方形内或边界上任放5个传感器。证明：至少两个的直线距离不超过5√2米。能保证不超过7米吗？请说明理由。",
+        "headline_en": "Place five sensors anywhere inside or on a square of side 10 m. Prove that some pair is at most 5√2 m apart. Can you always guarantee a pair at most 7 m apart? Justify your answer.",
+        "subject": "挑战 · 几何证明",
+        "subject_en": "CHALLENGE · GEOMETRIC PROOF",
+        "origin": "几何与鸽巢原理 · 教学改写",
+        "visual": "network",
+        "accent": "coral"
       }
     ]
   },
   "editorial_notes": [
-    "按最终SCHEDULED MODE生成2026-09-17周四待审稿，edition标为试运行待审。六条主候选覆盖航天、卫生、教育、货币政策、气候环境、文化六个领域。另附三条备选，仅供人工挑选，不参与播放。未批准、未发布，已移除review及旧审批元数据。",
-    "本次实时检索并打开九个不同的原始机构报道页面核实正文。未凑齐全部发表于过去48小时内的来源：九条报道首次发布日期为9月7日至15日；主稿仅NASA仪器进展与世卫合作报道发表于9月15日。请人工重点判断较旧报道是否适合次日展示。",
-    "中亚博物馆报道与模板主稿重复，煤炭备选也与模板重复；重新核实不代表新事件。欧洲央行报道首次发布于9月10日，9月16日是利率生效日期，未用生效日替代发布日期。",
-    "NASA报道确认仪器启动与初步测试，首批科学图像仍属计划。世卫合作备忘录列出合作方向，不能据此认定医疗服务已经改善。马达加斯加报道是项目特写，缺少可独立比较的就业与护林成效统计，未写成量化成效。",
-    "AI备选依据9月9日首次发布、9月11日更新的预告；该页面仍使用未来时，不能确认9月16日工具发布已完成。煤炭需求增长1.2%是国际能源署预测，不是全年实际结果。",
-    "weekly完整沿用模板，包括上周解答、本周三题及source_bank_id；display保持不变。未新选估算题，未修改题库轮换记录。用户建议列表为空，suggestions_considered返回空数组。",
-    "按要求未使用shell或本地文件工具，未运行项目校验脚本。docs/automation-architecture.md全文未提供，无法核对其中未给出的要求。",
-    "航天与卫生依据：[NASA仪器进展](https://science.nasa.gov/blogs/roman/2026/09/15/nasa-activates-romans-primary-instrument-checks-out-coronagraph/)、[世卫合作备忘录](https://www.who.int/news/item/15-09-2026-who-and-commonwealth-secretariat-renew-partnership-to-strengthen-health-systems-and-advance-universal-health-coverage)。",
-    "教育与货币政策依据：[马达加斯加职业培训](https://www.unesco.org/en/articles/unesco-vocational-training-helps-communities-build-livelihoods-while-protecting-madagascars-forests)、[欧洲央行利率决定](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html)。",
-    "气候与文化依据：[世气组织空气质量报告](https://wmo.int/media/news/wmo-bulletin-shows-air-quality-and-climate-interlinkages)、[中亚博物馆工作坊](https://www.unesco.org/en/articles/workshop-safeguarding-intangible-cultural-heritage-through-museums-central-asia)。",
-    "备选依据：[智利狂犬病验证](https://www.who.int/news/item/14-09-2026-chile-becomes-first-country-in-south-america-validated-for-eliminating-dog-transmitted-rabies-as-a-public-health-problem)、[AI治理工具预告](https://www.unesco.org/en/articles/unesco-launches-new-tools-reinforce-ethical-ai-governance-global-forum-riyadh-saudi-arabia)、[国际能源署煤炭预测](https://www.iea.org/news/global-coal-demand-set-to-increase-this-year-amid-middle-east-conflict)。"
+    "六条双语新闻及2026-W41三道思考题，经内容所有者在聊天中确认后发布。提示及教师解答不包含在公开播放内容中。",
+    "新闻来源发布日期为2026-09-24至2026-10-07；实验与观测时间不等同报道日期。",
+    "电动车数据比较2026上半年与2025下半年；用电量为轻型纯电及插电混动车的模型估算。mRNA配方仍为动物实验，蛋白质水印仍为概念验证。",
+    "厄尔尼诺条目为区域性电力风险分析，不代表已发生全面停电。NOAA气候状态依据2026-10-05周报。",
+    "NISAR的17次观测覆盖2025-12-25至2026-08-17，构成变化记录，并非连续视频或喷发预报。",
+    "W41题目依次为九宫格选数、垃圾信息筛选条件概率、五个传感器几何证明。previous_answers为空，不展示过期周次或即时解答。"
   ],
   "review": {
-    "reviewer": "王逸孜",
-    "approved_at": "2026-09-16T20:04:48.339000+08:00",
-    "note": "Approved through Feishu; published at scheduled time"
+    "reviewer": "content owner",
+    "approved_at": "2026-10-07T13:34Z",
+    "note": "Approved in direct chat; publication requested."
   }
 }

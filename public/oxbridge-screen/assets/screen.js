@@ -71,6 +71,16 @@
   };
 
   const challengeVisual = (challenge) => {
+    if (challenge.id === "reasoning-nine-grid-2026-w41") {
+      const cells = Array.from({ length: 9 }, (_, index) =>
+        `<span>${index + 1}</span>`
+      ).join("");
+      return `
+        <div class="interview-visual number-grid-visual" aria-hidden="true">
+          <div class="number-grid">${cells}</div>
+        </div>`;
+    }
+
     if (challenge.id === "proof-mutilated-chessboard") {
       const cells = Array.from({ length: 64 }, (_, index) => {
         const removed = index === 0 || index === 63;
