@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-08",
-  "edition": "2026-10-08 v2（含上期解答）",
+  "content_date": "2026-10-09",
+  "edition": "2026-10-09 v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月8日\n每日简报",
+    "headline": "10月9日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "brief-20261008-chemistry-nobel",
+        "id": "brief-20261009-sando",
+        "category": "机器人与数学 / ROBOTICS",
+        "headline": "无人机避障，也要算“下一秒”",
+        "headline_en": "Drone Safety Must Account for What Moves Next",
+        "summary": "MIT的SANDO系统在12次实机试飞中避开动态障碍。它依据障碍物速度上限，预留随时间变化的安全通道，为救援导航提供新思路；安全保证依赖模型假设。",
+        "summary_en": "MIT’s SANDO avoided moving obstacles in 12 drone test flights. It uses their maximum speed to reserve a safety corridor that changes over time. This could aid rescue navigation, but its safety guarantee depends on the model’s assumptions.",
+        "source": {
+          "name": "麻省理工学院 / MIT",
+          "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
+          "published": "2026-10-07"
+        },
+        "accent": "aqua"
+      },
+      {
+        "id": "brief-20261009-arctic-minimum",
+        "category": "气候与观测 / CLIMATE",
+        "headline": "北极海冰：非最低纪录，仍处低位",
+        "headline_en": "Arctic Sea Ice Stays Low Without Setting a Record",
+        "summary": "NASA公布，北极海冰9月12日达到今年最小范围，约460万平方公里，并列卫星记录第十低。微波传感器能透云区分海冰与海水；判断气候变化，要看多年趋势。",
+        "summary_en": "NASA reports that Arctic sea ice reached its 2026 minimum extent on 12 September: about 4.6 million km², tied for tenth lowest in the satellite record. Microwave sensors distinguish ice from water through clouds. Climate assessment requires long-term trends.",
+        "source": {
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/earth/earth-observatory/arctic-sea-ice-shrinks-to-its-2026-minimum/",
+          "published": "2026-10-07"
+        },
+        "accent": "coral"
+      },
+      {
+        "id": "brief-20261009-asean-energy",
+        "category": "能源与社会 / ENERGY",
+        "headline": "东南亚用电增长，供能如何更稳？",
+        "headline_en": "How Can Southeast Asia Meet Rising Electricity Demand?",
+        "summary": "IEA预计，2026至2030年东南亚用电需求年均增长约5.4%。制冷、数据中心和工业推高需求；节能、灵活调节用电和跨境互联，可帮助减轻燃料进口与供电压力。",
+        "summary_en": "The IEA projects Southeast Asian electricity demand to grow about 5.4% annually in 2026–2030, driven by cooling, data centres and industry. Efficiency, flexible demand and cross-border connections can help reduce pressure on fuel imports and electricity supplies.",
+        "source": {
+          "name": "国际能源署 / IEA",
+          "url": "https://www.iea.org/reports/asean-energy-security-review/executive-summary",
+          "published": "2026-10-06"
+        },
+        "accent": "gold"
+      },
+      {
+        "id": "brief-20261009-brown-dwarf",
+        "category": "天文与证据 / ASTRONOMY",
+        "headline": "恒星“慢慢吃”：褐矮星物质在转移",
+        "headline_en": "A Star Slowly Draws Matter from a Brown Dwarf",
+        "summary": "天文学家发现，约300光年外的红矮星正吸积近邻褐矮星的物质。观测与模拟表明，物质撞向星面形成热点，产生周期亮度变化，为研究近距离双星演化提供新样本。",
+        "summary_en": "Astronomers found a red dwarf drawing matter from a brown dwarf about 300 light-years away. Observations and simulations indicate that infalling material creates a surface hot spot, producing periodic brightness changes. The system offers a new test of close-binary evolution.",
+        "source": {
+          "name": "麻省理工学院 / MIT",
+          "url": "https://news.mit.edu/2026/astronomers-catch-star-slowly-snacking-on-brown-dwarf-1005",
+          "published": "2026-10-05"
+        },
+        "accent": "aqua"
+      },
+      {
+        "id": "brief-20261009-chemistry-nobel",
         "category": "化学与制药 / CHEMISTRY",
-        "headline": "诺贝尔化学奖：分子的“左右手”",
-        "headline_en": "Chemistry Nobel: Why Molecular Handedness Matters",
-        "summary": "许多分子像左右手，互为镜像却可能药效不同。10月7日揭晓的诺贝尔化学奖，表彰将微小手性偏向放大的反应研究，帮助合成更多所需的一种。",
-        "summary_en": "Many molecules have mirror-image forms with different biological effects. The chemistry Nobel, announced on 7 October, honours reactions that amplify a small preference for one form, helping chemists make the version they need.",
+        "headline": "诺奖续看：放大分子的“左右”差别",
+        "headline_en": "Nobel Follow-up: Amplifying Molecular Handedness",
+        "summary": "2026年诺贝尔化学奖表彰不对称合成中的非线性效应与自催化研究：起初微小的“左右手”偏向可以被放大。这帮助化学家选择性制备分子，也为生命为何偏用一种手性提供线索。",
+        "summary_en": "The 2026 chemistry Nobel honours nonlinear effects and autocatalysis in asymmetric synthesis. These processes can amplify a small initial preference for one mirror-image form. They help chemists make selected molecular forms and investigate how biological handedness could arise.",
         "source": {
           "name": "瑞典皇家科学院 / KVA",
           "url": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
           "published": "2026-10-07"
         },
-        "accent": "aqua"
+        "accent": "coral"
       },
       {
-        "id": "brief-20261008-mrna-stability",
-        "category": "疫苗与冷链 / HEALTH",
-        "headline": "AI找到耐热mRNA疫苗新配方",
-        "headline_en": "AI Helps RNA Vaccines Withstand Heat",
-        "summary": "研究者用AI调配保护成分，让干燥mRNA疫苗在室温保存一年后，仍能在小鼠中诱发免疫反应。若经人体试验验证，或能降低偏远地区的疫苗配送门槛。",
-        "summary_en": "AI optimized protective ingredients around mRNA-carrying particles. After a year at room temperature, dried vaccines still triggered immune responses in mice. Human validation is needed, but the approach could ease cold-chain barriers to vaccination.",
+        "id": "brief-20261009-mrna-stability",
+        "category": "疫苗与实验 / HEALTH",
+        "headline": "疫苗耐热突破，离应用还有多远？",
+        "headline_en": "Heat-Stable RNA Vaccines: What Has Been Demonstrated?",
+        "summary": "MIT团队借助AI优化保护配方，使干燥mRNA疫苗在室温存放一年后，仍能在小鼠中引发免疫反应。它有望减轻冷链负担，但动物实验结果不等于人体效果已获验证。",
+        "summary_en": "MIT researchers used AI to optimize protective ingredients for dried mRNA vaccines. After a year at room temperature, the vaccines still produced immune responses in mice. The approach could ease cold-chain needs, but human effectiveness has not been established.",
         "source": {
           "name": "麻省理工学院 / MIT",
           "url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
           "published": "2026-09-28"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "brief-20261008-ev-stocks-flows",
-        "category": "能源与数据 / ENERGY",
-        "headline": "美电动车销量降，用电为何仍升？",
-        "headline_en": "EV Sales Fall, So Why Does Electricity Use Rise?",
-        "summary": "2026上半年，美国电动车新车销量比前半年降19%，轻型电动车用电量估算却增8%。此前售出的车仍在跑：新增销量与在用车队，是不同的概念。",
-        "summary_en": "In January–June 2026, U.S. EV sales fell 19% from July–December 2025, but estimated light-duty EV electricity use rose 8%. Existing vehicles still need charging; new sales do not measure the whole fleet.",
-        "source": {
-          "name": "美国能源信息署 / EIA",
-          "url": "https://www.eia.gov/todayinenergy/detail.php?id=68224",
-          "published": "2026-09-30"
-        },
-        "accent": "gold"
-      },
-      {
-        "id": "brief-20261008-el-nino-grid",
-        "category": "气候与电网 / CLIMATE",
-        "headline": "厄尔尼诺增强，电网为何承压？",
-        "headline_en": "How Can El Niño Put Power Supplies Under Pressure?",
-        "summary": "NOAA周报显示厄尔尼诺正在增强。IEA指出，部分拉美地区少雨会减少水库来水，高温又增加空调用电；发电减少、需求增加，可能同时挤压电网。",
-        "summary_en": "NOAA’s latest update shows El Niño strengthening. The IEA explains the double squeeze on parts of Latin America: reduced rainfall can cut hydropower, while heat increases cooling demand. Weather can disrupt both electricity supply and demand.",
-        "source": {
-          "name": "国际能源署 / IEA",
-          "url": "https://www.iea.org/commentaries/how-electricity-systems-across-latin-america-can-strengthen-preparedness-for-el-nino",
-          "published": "2026-10-07"
-        },
-        "accent": "aqua"
-      },
-      {
-        "id": "brief-20261008-protein-watermark",
-        "category": "AI与科学溯源 / AI",
-        "headline": "AI设计的蛋白质也能加水印",
-        "headline_en": "AI-Designed Proteins Can Carry Watermarks",
-        "summary": "研究者微调氨基酸选择，为AI设计的蛋白质嵌入可检测水印，同时保留实验中的结合功能。这为追踪合成生物来源提供新方法，但水印仍可能被刻意移除。",
-        "summary_en": "Researchers embedded detectable signatures in AI-designed protein sequences while preserving binding function in laboratory tests. Biological watermarking could help trace synthetic designs and protect scientific databases, but the proof of concept remains vulnerable to deliberate removal.",
-        "source": {
-          "name": "Google DeepMind / Nature",
-          "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-          "published": "2026-09-30"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "brief-20261008-nisar-volcano",
-        "category": "地球观测 / EARTH",
-        "headline": "雷达卫星把火山变化连成时间序列",
-        "headline_en": "Radar Satellites Track How Volcanoes Change",
-        "summary": "NASA发布的NISAR成果用17次雷达观测记录熔岩扩展。卫星主动发射微波、接收回波成像，规律重访同一区域，让缺少地面仪器的火山也能持续积累变化记录。",
-        "summary_en": "NASA released NISAR results tracking spreading lava through 17 radar observations. The satellite sends microwaves and measures echoes, repeatedly revisiting the same area to build records of changes even where ground instruments are scarce.",
-        "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://svs.gsfc.nasa.gov/5675",
-          "published": "2026-09-24"
         },
         "accent": "gold"
       }
@@ -185,17 +185,20 @@
     "previous_week": "2026-W38"
   },
   "editorial_notes": [
-    "六条双语新闻及2026-W41三道思考题，经内容所有者在聊天中确认后发布。提示及教师解答不包含在公开播放内容中。",
-    "新闻来源发布日期为2026-09-24至2026-10-07；实验与观测时间不等同报道日期。",
-    "电动车数据比较2026上半年与2025下半年；用电量为轻型纯电及插电混动车的模型估算。mRNA配方仍为动物实验，蛋白质水印仍为概念验证。",
-    "厄尔尼诺条目为区域性电力风险分析，不代表已发生全面停电。NOAA气候状态依据2026-10-05周报。",
-    "NISAR的17次观测覆盖2025-12-25至2026-08-17，构成变化记录，并非连续视频或喷发预报。",
-    "新增实际被换下的2026-W38三题中英参考解答；页面称“上期”而非“上周”。证明题用奇数部分分类；硬币题HH为1/4、TH为3/4；集雨示例400吨，输入为假设而非学校实测。",
-    "六条新闻、2026-W41三道新题及display保持不变。W41提示和答案仍不包含在公开播放内容中。"
+    "2026-10-09 v1，经内容所有者在聊天中确认并要求发布。",
+    "核查截止2026-10-08 UTC；来源发布日期为2026-09-28至2026-10-07。四条新选题，化学诺奖及耐热mRNA为续看。",
+    "SANDO为数学分析、模拟与12次实机试飞；安全保证须满足模型假设，包括障碍物最大速度边界，不代表任何真实环境绝对不撞。",
+    "北极海冰最小范围观测日为2026-09-12，报道日为2026-10-07；约460万平方公里，并列第十低，非历史最低。范围不等于体积或厚度。",
+    "IEA东南亚用电需求年均5.4%为2026至2030年预测，不是已实现增长；各国能源结构与风险不同。",
+    "褐矮星条目为天文观测结合物理模拟的解释；页面配图为艺术想象图，本稿未使用该图。亮度变化并非直接近距离拍摄。",
+    "化学诺奖报道日为2026-10-07，获奖研究跨越多年；手性放大提供生命同手性起源线索，不等于生命起源已被解释。",
+    "耐热mRNA为干燥制剂、细胞及小鼠实验；室温一年不应外推为所有mRNA疫苗均可常温保存，不能据此更改现有疫苗储存要求。",
+    "weekly及display完整继承2026-10-08 v2；W41三道题保持不变，实际上一期为W38，继续展示三条中英参考解析，使用上期而非上周。",
+    "W41提示与教师答案不包含在本JSON中；审阅文件的教师部分也不得公开播放。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-07",
-    "note": "Approved in direct chat, including W38 reference answers; publication requested."
+    "approved_at": "2026-10-09",
+    "note": "Approved in direct chat; publication requested for 2026-10-09 v1."
   }
 }
