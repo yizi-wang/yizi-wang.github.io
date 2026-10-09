@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-09",
-  "edition": "2026-10-09 v1",
+  "content_date": "2026-10-10",
+  "edition": "2026-10-10 v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月9日\n每日简报",
+    "headline": "10月10日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "brief-20261009-sando",
-        "category": "机器人与数学 / ROBOTICS",
-        "headline": "无人机避障，也要算“下一秒”",
-        "headline_en": "Drone Safety Must Account for What Moves Next",
-        "summary": "MIT的SANDO系统在12次实机试飞中避开动态障碍。它依据障碍物速度上限，预留随时间变化的安全通道，为救援导航提供新思路；安全保证依赖模型假设。",
-        "summary_en": "MIT’s SANDO avoided moving obstacles in 12 drone test flights. It uses their maximum speed to reserve a safety corridor that changes over time. This could aid rescue navigation, but its safety guarantee depends on the model’s assumptions.",
+        "id": "brief-20261010-el-nino",
+        "category": "气候与预测 / CLIMATE",
+        "headline": "厄尔尼诺增强，降雨格局怎样变？",
+        "headline_en": "El Niño Strengthens and Shifts Rainfall Risks",
+        "summary": "世界气象组织预计，正在增强的厄尔尼诺将在12月前后达峰。热带太平洋海温变化会影响全球降雨，增加不同地区的旱涝风险；季节预测并非某地某天的天气预报。",
+        "summary_en": "WMO expects the strengthening El Niño to peak around December. Changing tropical Pacific sea temperatures can shift global rainfall, raising drought and flood risks in different regions. A seasonal outlook describes broad probabilities rather than the weather at one place on a particular day.",
         "source": {
-          "name": "麻省理工学院 / MIT",
-          "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
-          "published": "2026-10-07"
+          "name": "世界气象组织 / WMO",
+          "url": "https://wmo.int/news/media-centre/sea-surface-temperatures-reflect-strengthening-el-nino",
+          "published": "2026-10-08"
         },
         "accent": "aqua"
       },
       {
-        "id": "brief-20261009-arctic-minimum",
-        "category": "气候与观测 / CLIMATE",
-        "headline": "北极海冰：非最低纪录，仍处低位",
-        "headline_en": "Arctic Sea Ice Stays Low Without Setting a Record",
-        "summary": "NASA公布，北极海冰9月12日达到今年最小范围，约460万平方公里，并列卫星记录第十低。微波传感器能透云区分海冰与海水；判断气候变化，要看多年趋势。",
-        "summary_en": "NASA reports that Arctic sea ice reached its 2026 minimum extent on 12 September: about 4.6 million km², tied for tenth lowest in the satellite record. Microwave sensors distinguish ice from water through clouds. Climate assessment requires long-term trends.",
+        "id": "brief-20261010-soft-shape-sensing",
+        "category": "材料与传感 / SENSORS",
+        "headline": "软薄片怎样“读出”自己的弯曲？",
+        "headline_en": "A Soft Sheet Senses Its Own Shape",
+        "summary": "MIT展示一种柔软传感薄片：内嵌光纤随弯曲改变透光量，算法据此重建三维形状。原型有望记录康复动作；研究仍处于实验验证阶段，尚未证实临床效果。",
+        "summary_en": "MIT demonstrated a soft sensing sheet whose embedded optical fibres change light transmission as they bend. An algorithm reconstructs its three-dimensional shape from these signals. The prototype could track rehabilitation movements, but clinical benefits have not yet been demonstrated.",
         "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/earth/earth-observatory/arctic-sea-ice-shrinks-to-its-2026-minimum/",
-          "published": "2026-10-07"
+          "name": "麻省理工学院 / MIT",
+          "url": "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008",
+          "published": "2026-10-08"
         },
         "accent": "coral"
       },
       {
-        "id": "brief-20261009-asean-energy",
-        "category": "能源与社会 / ENERGY",
-        "headline": "东南亚用电增长，供能如何更稳？",
-        "headline_en": "How Can Southeast Asia Meet Rising Electricity Demand?",
-        "summary": "IEA预计，2026至2030年东南亚用电需求年均增长约5.4%。制冷、数据中心和工业推高需求；节能、灵活调节用电和跨境互联，可帮助减轻燃料进口与供电压力。",
-        "summary_en": "The IEA projects Southeast Asian electricity demand to grow about 5.4% annually in 2026–2030, driven by cooling, data centres and industry. Efficiency, flexible demand and cross-border connections can help reduce pressure on fuel imports and electricity supplies.",
+        "id": "brief-20261010-bacteria-sensor",
+        "category": "生物与免疫 / BIOLOGY",
+        "headline": "病毒的“剪刀”，触发细菌警报",
+        "headline_en": "A Viral Enzyme Triggers a Bacterial Alarm",
+        "summary": "研究发现，部分噬菌体的蛋白酶会切开细菌感应蛋白，启动抗病毒防线。受感染细菌随后可死亡，阻止病毒扩散。这揭示一种免疫识别机制，为噬菌体疗法提供线索，仍属基础研究。",
+        "summary_en": "Researchers found that proteases in some bacteriophages cut a bacterial sensor, activating antiviral defences. The infected bacterium can then die before the virus spreads. This immune-sensing mechanism may inform phage therapies, but the findings remain basic research.",
         "source": {
-          "name": "国际能源署 / IEA",
-          "url": "https://www.iea.org/reports/asean-energy-security-review/executive-summary",
-          "published": "2026-10-06"
+          "name": "犹他大学 / University of Utah",
+          "url": "https://attheu.utah.edu/health-medicine/research-uncovers-how-bacteria-fight-viruses-opening-the-door-to-better-virus-based-antibiotics/",
+          "published": "2026-10-02"
         },
         "accent": "gold"
       },
       {
-        "id": "brief-20261009-brown-dwarf",
-        "category": "天文与证据 / ASTRONOMY",
-        "headline": "恒星“慢慢吃”：褐矮星物质在转移",
-        "headline_en": "A Star Slowly Draws Matter from a Brown Dwarf",
-        "summary": "天文学家发现，约300光年外的红矮星正吸积近邻褐矮星的物质。观测与模拟表明，物质撞向星面形成热点，产生周期亮度变化，为研究近距离双星演化提供新样本。",
-        "summary_en": "Astronomers found a red dwarf drawing matter from a brown dwarf about 300 light-years away. Observations and simulations indicate that infalling material creates a surface hot spot, producing periodic brightness changes. The system offers a new test of close-binary evolution.",
+        "id": "brief-20261010-fiber-motor",
+        "category": "工程与运动 / ENGINEERING",
+        "headline": "像线一样细的电机，靠静电滑动",
+        "headline_en": "A Thread-Like Motor Moves Using Electrostatic Forces",
+        "summary": "EPFL团队做出直径约1至3毫米的柔性电机：静电力使内外两层纤维相对滑动。实验中，四根电机合力提起46克巧克力；未来或可用于助力衣物，但性能和耐久性仍需改进。",
+        "summary_en": "EPFL researchers built flexible motors about 1–3 millimetres in diameter. Electrostatic forces slide two nested fibres past each other. In laboratory tests, four motors lifted a 46-gram chocolate bar. Wearable assistance is a possible future use; performance and durability still need improvement.",
         "source": {
-          "name": "麻省理工学院 / MIT",
-          "url": "https://news.mit.edu/2026/astronomers-catch-star-slowly-snacking-on-brown-dwarf-1005",
-          "published": "2026-10-05"
+          "name": "洛桑联邦理工学院 / EPFL",
+          "url": "https://news.epfl.ch/news/researchers-design-a-motor-that-looks-like-a-thr-2/",
+          "published": "2026-10-07"
         },
         "accent": "aqua"
       },
       {
-        "id": "brief-20261009-chemistry-nobel",
-        "category": "化学与制药 / CHEMISTRY",
-        "headline": "诺奖续看：放大分子的“左右”差别",
-        "headline_en": "Nobel Follow-up: Amplifying Molecular Handedness",
-        "summary": "2026年诺贝尔化学奖表彰不对称合成中的非线性效应与自催化研究：起初微小的“左右手”偏向可以被放大。这帮助化学家选择性制备分子，也为生命为何偏用一种手性提供线索。",
-        "summary_en": "The 2026 chemistry Nobel honours nonlinear effects and autocatalysis in asymmetric synthesis. These processes can amplify a small initial preference for one mirror-image form. They help chemists make selected molecular forms and investigate how biological handedness could arise.",
+        "id": "brief-20261010-frb-host",
+        "category": "天文与证据 / ASTRONOMY",
+        "headline": "射电暴来源，线索藏在宿主星系",
+        "headline_en": "A Radio Burst's Host Offers Clues to Its Origin",
+        "summary": "韦布望远镜测得一处快速射电暴宿主星系红移为2.148，对应宇宙约30亿岁时。星系中年轻的恒星群更支持磁星来源解释，但射电暴的产生机制仍未确定。",
+        "summary_en": "Webb measured a fast radio burst's host galaxy at redshift 2.148, corresponding to when the universe was about three billion years old. Its young stellar population favours a magnetar origin, but the mechanism producing the burst remains uncertain.",
         "source": {
-          "name": "瑞典皇家科学院 / KVA",
-          "url": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
-          "published": "2026-10-07"
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/",
+          "published": "2026-10-08"
         },
         "accent": "coral"
       },
       {
-        "id": "brief-20261009-mrna-stability",
-        "category": "疫苗与实验 / HEALTH",
-        "headline": "疫苗耐热突破，离应用还有多远？",
-        "headline_en": "Heat-Stable RNA Vaccines: What Has Been Demonstrated?",
-        "summary": "MIT团队借助AI优化保护配方，使干燥mRNA疫苗在室温存放一年后，仍能在小鼠中引发免疫反应。它有望减轻冷链负担，但动物实验结果不等于人体效果已获验证。",
-        "summary_en": "MIT researchers used AI to optimize protective ingredients for dried mRNA vaccines. After a year at room temperature, the vaccines still produced immune responses in mice. The approach could ease cold-chain needs, but human effectiveness has not been established.",
+        "id": "brief-20261010-thailand-floods",
+        "category": "地理与遥感 / EARTH OBSERVATION",
+        "headline": "换一组颜色，看清泰国洪水范围",
+        "headline_en": "False Colour Reveals the Extent of Thailand's Flooding",
+        "summary": "NASA公布的Landsat影像显示，泰国邦巴功河沿岸农田和养殖区10月2日被洪水淹没。把不同波段组合成假彩色图，可更清楚地区分水体与植被，并与去年同期影像比较。",
+        "summary_en": "Landsat images released by NASA show flooding across farmland and aquaculture sites along Thailand's Bang Pakong River on 2 October. Combining different wavelength bands into false-colour images distinguishes water from vegetation more clearly and enables comparison with imagery from the same season last year.",
         "source": {
-          "name": "麻省理工学院 / MIT",
-          "url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
-          "published": "2026-09-28"
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand/",
+          "published": "2026-10-09"
         },
         "accent": "gold"
       }
@@ -185,20 +185,20 @@
     "previous_week": "2026-W38"
   },
   "editorial_notes": [
-    "2026-10-09 v1，经内容所有者在聊天中确认并要求发布。",
-    "核查截止2026-10-08 UTC；来源发布日期为2026-09-28至2026-10-07。四条新选题，化学诺奖及耐热mRNA为续看。",
-    "SANDO为数学分析、模拟与12次实机试飞；安全保证须满足模型假设，包括障碍物最大速度边界，不代表任何真实环境绝对不撞。",
-    "北极海冰最小范围观测日为2026-09-12，报道日为2026-10-07；约460万平方公里，并列第十低，非历史最低。范围不等于体积或厚度。",
-    "IEA东南亚用电需求年均5.4%为2026至2030年预测，不是已实现增长；各国能源结构与风险不同。",
-    "褐矮星条目为天文观测结合物理模拟的解释；页面配图为艺术想象图，本稿未使用该图。亮度变化并非直接近距离拍摄。",
-    "化学诺奖报道日为2026-10-07，获奖研究跨越多年；手性放大提供生命同手性起源线索，不等于生命起源已被解释。",
-    "耐热mRNA为干燥制剂、细胞及小鼠实验；室温一年不应外推为所有mRNA疫苗均可常温保存，不能据此更改现有疫苗储存要求。",
-    "weekly及display完整继承2026-10-08 v2；W41三道题保持不变，实际上一期为W38，继续展示三条中英参考解析，使用上期而非上周。",
-    "W41提示与教师答案不包含在本JSON中；审阅文件的教师部分也不得公开播放。"
+    "2026-10-10 v1，经内容所有者于2026-10-09在聊天中确认并要求发布。",
+    "事实核查截止2026-10-09 UTC。六条均为相对10月9日版的新选题；机构新闻发布日期为2026-10-02至2026-10-09，研究发生时间在核查说明中另列。",
+    "厄尔尼诺：WMO原文发布日期为2026-10-08，季节展望覆盖10至12月。12月达峰及未来旱涝风险均为预测；不将海温异常写成全球气温，也不把季节概率等同于本地单日天气。",
+    "柔性形状传感：MIT报道日期为2026-10-08；论文首次发表为2026-07-29，不能称为当天完成的新发现。已核对机构报道及开放论文的光波导、形状重建与原型实验描述；康复用途属于潜在应用。",
+    "细菌免疫：犹他大学报道为2026-10-02，文中注明Science论文发表于10月1日。描述的是部分噬菌体蛋白酶激活CBASS的机制，非所有细菌的通用防御，亦非临床疗效结论。论文链接已核验，全文直接访问返回403。",
+    "纤维电机：EPFL报道为2026-10-07；论文首次发表为2026-09-27。四根电机提起46克为实验演示，不能与单根静态承重混用。论文说明原型连接外部高压电源；不能写成已可直接日常穿戴的成熟产品。",
+    "快速射电暴：NASA报道为2026-10-08；射电暴最早于2024-03-04被探测。红移2.148对应大爆炸后约30亿年的宇宙时期，不是距离地球30亿光年。年轻恒星群支持磁星假说，但尚未确定具体机制。",
+    "泰国洪水遥感：NASA报道为2026-10-09；影像对比日期是2025-10-07与2026-10-02。假彩色并非人眼直接看到的颜色。本条仅使用NASA自身Landsat观测结论，不引用二手灾损数字，也不把此次洪水直接归因为厄尔尼诺。",
+    "weekly及display逐字段继承当前2026-10-09 v1已批准版本；W41三题及真实上期W38三条参考解析不变，仍为8页、每页18秒、每5分钟刷新。",
+    "本JSON未新增W41教师提示或答案，保留题目原有来源分类字段；教师详解只在私人审阅文本中，不得公开播放。"
   ],
   "review": {
     "reviewer": "content owner",
     "approved_at": "2026-10-09",
-    "note": "Approved in direct chat; publication requested for 2026-10-09 v1."
+    "note": "Approved in direct chat on 2026-10-09; publication requested for 2026-10-10 v1."
   }
 }
