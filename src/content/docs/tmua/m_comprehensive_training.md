@@ -2,393 +2,393 @@
 title: "M Comprehensive Training"
 ---
 
-## 模块 M：综合训练
+## Module M: Comprehensive Training
 
-> **对应考纲**：Section 1 全体 + Section 2（跨模块综合）
-> **对应 Paper**：P1 + P2 均大量出现
-> **建议课时**：1 课时 | **目标题量**：约 15 题
+> **Syllabus Match**: All of Section 1 + Section 2 (Cross-Module Integration)
+> **Paper Match**: Frequently appears in both P1 and P2
+> **Suggested Duration**: 1 hour | **Target Question Volume**: ~15 questions
 
 ---
 
-## 📋 模块概览
+## 📋 Module Overview
 
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
+| Section | Content | Syllabus Match | Past Paper Frequency | Hours |
 |------|------|---------|-------------|------|
-| M1 | 微积分+坐标几何综合 | MM6.1–MM6.3, MM7.1–MM7.2, MM3.1–MM3.3 | 8 年 10+ 次 | 0.3 |
-| M2 | 积分+函数+图像综合 | MM7.1–MM7.4, MM8.1–MM8.7, MM1.7 | 8 年 8+ 次 | 0.3 |
-| M3 | 三角+代数+坐标几何综合 | MM4.1–MM4.6, MM1.1–MM1.6, MM3.1 | 8 年 8+ 次 | 0.2 |
-| M4 | 代数+函数+逻辑综合 | MM1.1–MM1.7, MM5.1–MM5.3, Arg1–Arg4, Prf1–Prf5 | 8 年 15+ 次 | 0.2 |
+| M1 | Calculus + Coordinate Geometry | MM6.1–MM6.3, MM7.1–MM7.2, MM3.1–MM3.3 | 10+ times in 8 years | 0.3 |
+| M2 | Integration + Functions + Graphs | MM7.1–MM7.4, MM8.1–MM8.7, MM1.7 | 8+ times in 8 years | 0.3 |
+| M3 | Trigonometry + Algebra + Coordinate Geometry | MM4.1–MM4.6, MM1.1–MM1.6, MM3.1 | 8+ times in 8 years | 0.2 |
+| M4 | Algebra + Functions + Logic | MM1.1–MM1.7, MM5.1–MM5.3, Arg1–Arg4, Prf1–Prf5 | 15+ times in 8 years | 0.2 |
 
-**说明**：本模块不讲授新知识点，而是训练将不同模块的知识串联起来解决综合问题的能力。TMUA 真题中约 40% 以上的题目涉及两个及以上知识点，Paper 2 中这一比例更高。
-
----
-
-## 一、综合题型分类
-
-### 类型 A：微积分 + 坐标几何（最常见组合）
-
-**特征**：题目给出曲线方程，要求法线/切线、与坐标轴交点、距离或面积。
-
-**典型考法**：
-- 求曲线在某点的法线方程，再求与坐标轴的交点或距离 —— 2016 P1 Q3、2018 P1 Q11
-- 用导数求最值，结合几何图形（如圆柱内接于球）—— 2016 P1 Q12
-- 曲线族的最值问题，需要同时用导数和坐标几何 —— 2018 P1 Q16、2022 P1 Q12
-
-**考纲映射**：MM6.1, MM6.3, MM3.1, MM8.5
+**Note**: This module does not introduce new concepts, but rather trains the ability to connect knowledge from different modules to solve comprehensive problems. Over 40% of TMUA past paper questions involve two or more topics, and this proportion is even higher in Paper 2.
 
 ---
 
-### 类型 B：积分 + 函数 + 图像
+## 1. Classification of Comprehensive Question Types
 
-**特征**：涉及面积计算、定积分性质、函数图像变换与积分的关系。
+### Type A: Calculus + Coordinate Geometry (Most Common Combination)
 
-**典型考法**：
-- 曲线与坐标轴围成的面积（需分段、取绝对值）—— 2016 P1 Q5
-- 积分与函数单调性/正负性的关系 —— 2017 P1 Q12
-- 定积分大小的比较与排序 —— 2022 P2 Q12
-- 积分与数列结合 —— 2017 P1 Q17、2023 P1 Q3
+**Characteristics**: The question provides a curve equation and asks for the normal/tangent line, intersections with coordinate axes, distance, or area.
 
-**考纲映射**：MM7.1, MM7.2, MM7.4, MM8.1, MM8.7
+**Typical Test Methods**:
+- Finding the normal equation of a curve at a point, then finding intersections with coordinate axes or distances — 2016 P1 Q3, 2018 P1 Q11
+- Using derivatives to find extrema, combined with geometric shapes (e.g., a cylinder inscribed in a sphere) — 2016 P1 Q12
+- Extrema problems for families of curves, requiring simultaneous use of derivatives and coordinate geometry — 2018 P1 Q16, 2022 P1 Q12
 
----
-
-### 类型 C：三角 + 代数 + 图像
-
-**特征**：三角方程通过代换化为代数方程，或三角函数的图像与代数性质结合。
-
-**典型考法**：
-- 三角方程用代数方法（换元、二次方程）求解 —— 2016 P1 Q8、2022 P1 Q1
-- 三角函数与代数的混合方程根的个数 —— 2016 P1 Q10、2018 P1 Q6
-- 三角不等式求完整解集 —— 2016 P1 Q17
-- 三角恒等变换与函数性质 —— 2022 P1 Q9
-
-**考纲映射**：MM4.1, MM4.4, MM4.5, MM4.6, MM1.3, MM8.1
+**Syllabus Mapping**: MM6.1, MM6.3, MM3.1, MM8.5
 
 ---
 
-### 类型 D：代数 + 函数 + 逻辑/证明（Paper 2 高频）
+### Type B: Integration + Functions + Graphs
 
-**特征**：需要对命题的逻辑结构进行分析，或构造/识别证明过程。
+**Characteristics**: Involves area calculations, properties of definite integrals, and the relationship between function graph transformations and integration.
 
-**典型考法**：
-- 对数方程组求解（指数/对数运算 + 代数消元）—— 2016 P1 Q16、2022 P2 Q15
-- 命题逻辑（充分条件、必要条件、逆否命题）—— 2022 P2 Q5、2022 P2 Q9
-- 证明题中的逻辑链排序或错误识别 —— 2016 P2 Q7、2018 P2 Q9
-- 反例构造 —— 2016 P2 Q8、2018 P2 Q6
+**Typical Test Methods**:
+- Area enclosed by a curve and coordinate axes (requires splitting intervals and taking absolute values) — 2016 P1 Q5
+- Relationship between integrals and function monotonicity/sign — 2017 P1 Q12
+- Comparing and ordering the values of definite integrals — 2022 P2 Q12
+- Combining integrals with sequences — 2017 P1 Q17, 2023 P1 Q3
 
-**考纲映射**：MM5.1, MM5.2, MM5.3, MM1.3, Arg1–Arg4, Prf1–Prf5, Err1, Err2
+**Syllabus Mapping**: MM7.1, MM7.2, MM7.4, MM8.1, MM8.7
 
 ---
 
-## 二、解题策略
+### Type C: Trigonometry + Algebra + Graphs
 
-### 2.1 如何识别综合题
+**Characteristics**: Trigonometric equations are transformed into algebraic equations via substitution, or trigonometric graphs are combined with algebraic properties.
 
-在阅读题目时注意以下信号词：
+**Typical Test Methods**:
+- Solving trigonometric equations using algebraic methods (substitution, quadratic equations) — 2016 P1 Q8, 2022 P1 Q1
+- Number of roots for mixed trigonometric and algebraic equations — 2016 P1 Q10, 2018 P1 Q6
+- Finding the complete solution set for trigonometric inequalities — 2016 P1 Q17
+- Trigonometric identities and function properties — 2022 P1 Q9
 
-| 信号 | 暗示的知识点组合 |
+**Syllabus Mapping**: MM4.1, MM4.4, MM4.5, MM4.6, MM1.3, MM8.1
+
+---
+
+### Type D: Algebra + Functions + Logic/Proof (High Frequency in Paper 2)
+
+**Characteristics**: Requires analyzing the logical structure of propositions, or constructing/identifying proof processes.
+
+**Typical Test Methods**:
+- Solving systems of logarithmic equations (exponent/logarithm operations + algebraic elimination) — 2016 P1 Q16, 2022 P2 Q15
+- Propositional logic (sufficient conditions, necessary conditions, contrapositive) — 2022 P2 Q5, 2022 P2 Q9
+- Ordering logical chains or identifying errors in proofs — 2016 P2 Q7, 2018 P2 Q9
+- Constructing counterexamples — 2016 P2 Q8, 2018 P2 Q6
+
+**Syllabus Mapping**: MM5.1, MM5.2, MM5.3, MM1.3, Arg1–Arg4, Prf1–Prf5, Err1, Err2
+
+---
+
+## 2. Problem-Solving Strategies
+
+### 2.1 How to Identify Comprehensive Questions
+
+Watch out for the following signal words when reading questions:
+
+| Signal | Implied Topic Combination |
 |------|----------------|
-| 曲线在某点的法线/切线 | 微积分 + 坐标几何 |
-| 曲线与坐标轴围成的面积 | 积分 + 函数图像 |
-| 方程的实根个数 | 微积分（单调性）+ 代数 + 图像 |
-| 最短距离（沿表面） | 坐标几何 + 三角 + 展开图 |
-| 充分条件/必要条件 | 逻辑 + 任意模块 |
-| 证明/反例 | 证明方法 + 任意模块 |
+| Normal/tangent of a curve at a point | Calculus + Coordinate Geometry |
+| Area enclosed by a curve and axes | Integration + Function Graphs |
+| Number of real roots of an equation | Calculus (Monotonicity) + Algebra + Graphs |
+| Shortest distance (along a surface) | Coordinate Geometry + Trigonometry + Nets/Unfoldings |
+| Sufficient/necessary conditions | Logic + Any Module |
+| Proof/counterexample | Proof Methods + Any Module |
 
-### 2.2 如何拆分步骤
+### 2.2 How to Break Down Steps
 
-**四步拆分法**：
+**Four-Step Breakdown Method**:
 
-1. **读题定位**：找出题目中涉及的所有数学对象（曲线、方程、图形等）
-2. **标注考点**：在每个对象旁边标注其对应的知识点
-3. **确定顺序**：判断哪些步骤必须先做（如求导→求切线→求交点）
-4. **逐步执行**：每步只做一件事，做完检查再进入下一步
+1. **Read and Locate**: Identify all mathematical objects involved in the question (curves, equations, shapes, etc.).
+2. **Label the Topics**: Note the corresponding topics next to each object.
+3. **Determine the Order**: Decide which steps must be done first (e.g., differentiate → find tangent → find intersection).
+4. **Execute Step-by-Step**: Focus on one task at a time, check your work, and then proceed to the next step.
 
-**示例**：2016 P1 Q3（法线+坐标几何）
+**Example**: 2016 P1 Q3 (Normal + Coordinate Geometry)
 
-- 对象 1：曲线 $y = \dfrac{2}{x^2}$ → **微积分**（求导）
-- 对象 2：法线 → **坐标几何**（法线斜率、直线方程）
-- 对象 3：交点 $P, Q$ → **坐标几何**（截距）
-- 对象 4：距离 $PQ$ → **坐标几何**（距离公式）
+- Object 1: Curve $y = \dfrac{2}{x^2}$ → **Calculus** (Differentiation)
+- Object 2: Normal line → **Coordinate Geometry** (Gradient of normal, equation of a line)
+- Object 3: Intersections $P, Q$ → **Coordinate Geometry** (Intercepts)
+- Object 4: Distance $PQ$ → **Coordinate Geometry** (Distance formula)
 
-步骤：求导 → 法线方程 → 求截距 → 距离公式
+Steps: Differentiate → Equation of normal → Find intercepts → Distance formula
 
-### 2.3 快速定位考点
+### 2.3 Quick Topic Localization
 
-- 看到 **导数/切线/法线/斜率/梯度** → 微积分 MM6
-- 看到 **面积/积分/∫** → 积分 MM7
-- 看到 **方程/根/因式** → 代数 MM1
-- 看到 **圆/直线/距离** → 坐标几何 MM3
-- 看到 **sin/cos/tan/角度** → 三角 MM4
-- 看到 **log/exp** → 指数对数 MM5
-- 看到 **图像/对称/变换** → 函数图像 MM8
-- 看到 **证明/充分/必要/反例** → 逻辑证明 Arg/Prf/Err
+- See **derivative/tangent/normal/slope/gradient** → Calculus MM6
+- See **area/integral/∫** → Integration MM7
+- See **equation/roots/factors** → Algebra MM1
+- See **circle/line/distance** → Coordinate Geometry MM3
+- See **sin/cos/tan/angle** → Trigonometry MM4
+- See **log/exp** → Exponentials & Logarithms MM5
+- See **graph/symmetry/transformation** → Functions & Graphs MM8
+- See **proof/sufficient/necessary/counterexample** → Logic & Proofs Arg/Prf/Err
 
 ---
 
-## 三、⚡ 速解技巧汇总
+## 3. ⚡ Summary of Quick Solving Techniques
 
-| 场景 | 技巧 | 适用题型 |
+| Scenario | Technique | Applicable Question Types |
 |------|------|---------|
-| 法线与坐标轴交点距离 | 用斜率 $m$ 和截距直接写斜边长：若 $x$ 截距为 $a$，斜率为 $m$，则斜边 $= |a|\sqrt{1+m^2}$ | 微积分+坐几 |
-| 面积跨越 $x$ 轴 | 先找零点分段，注意 $x$ 轴下方的面积取绝对值 | 积分+函数 |
-| 偶函数面积 | 只算右半边再乘以 2 | 积分+函数 |
-| 三角方程换元 | $\cos^2\theta \to 1 - \sin^2\theta$，化为二次方程 | 三角+代数 |
-| 指数方程换元 | $4^x = (2^2)^x = 2^{2x}$，令 $t = 2^x$ 化二次 | 代数+函数 |
-| 对数方程组 | 先用对数运算法则化简，再换元求解 | 代数+函数 |
-| 最值问题 | 求导 $f'(x) = 0$ 找驻点，判断二阶导符号 | 微积分+代数 |
-| 圆的一般方程 | $R^2 = g^2 + f^2 - c$，圆心 $(-g, -f)$ | 坐几 |
-| 充分/必要条件 | 画图或举特例验证，注意区分‘对所有人’和‘存在某人’ | 逻辑 |
-| 立体表面最短距离 | 展开为平面 → 直线距离 → 比较不同展开路径 | 坐几+三角 |
+| Distance between normal intersections with axes | Use gradient $m$ and intercept to directly write the hypotenuse: if $x$-intercept is $a$, gradient is $m$, then hypotenuse $= \|a\|\sqrt{1+m^2}$ | Calculus + Coord. Geo. |
+| Area crossing the $x$-axis | Find roots first to split the interval; take the absolute value for areas below the $x$-axis | Integration + Functions |
+| Area of an even function | Calculate only the right half and multiply by 2 | Integration + Functions |
+| Substitution in trig equations | $\cos^2\theta \to 1 - \sin^2\theta$, transform into a quadratic equation | Trig + Algebra |
+| Substitution in exponential equations | $4^x = (2^2)^x = 2^{2x}$, let $t = 2^x$ to form a quadratic | Algebra + Functions |
+| Systems of logarithmic equations | Simplify using logarithm rules first, then solve by substitution | Algebra + Functions |
+| Extrema problems | Differentiate $f'(x) = 0$ to find stationary points, check the sign of the second derivative | Calculus + Algebra |
+| General equation of a circle | $R^2 = g^2 + f^2 - c$, center at $(-g, -f)$ | Coord. Geo. |
+| Sufficient/necessary conditions | Draw graphs or use specific examples to verify; distinguish between 'for all' and 'there exists' | Logic |
+| Shortest distance on a 3D surface | Unfold into a 2D plane → straight-line distance → compare different unfolding paths | Coord. Geo. + Trig |
 
 ---
 
-## 四、⚠️ 易错警示
+## 4. ⚠️ Common Mistakes Warning
 
-- ❌ **面积积分不分段**：曲线跨越 $x$ 轴时，直接积分得到的是代数面积（正负抵消），不是几何面积。必须先找零点分段。
-- ❌ **法线斜率搞反**：法线斜率 $= -\dfrac{1}{\text{切线斜率}}$，不是切线斜率本身。
-- ❌ **三角方程漏解**：换元解出 $\sin\theta = \dfrac{\sqrt{3}}{2}$ 后，要注意原变量 $\theta$ 的范围，找出所有满足条件的解。
-- ❌ **对数定义域忽略**：$\log_{10}(y-1)$ 要求 $y > 1$，解出后要回代检验。
-- ❌ **充分条件与必要条件混淆**：'$A$ 是 $B$ 的充分条件' 意味着 $A \Rightarrow B$，不等价于 $B \Rightarrow A$。
-- ❌ **立体展开选错路径**：最短距离问题要考虑所有可能的展开方式，比较后才能确定答案。
-- ❌ **圆的一般方程符号**：$x^2 + y^2 + cx + dy + e = 0$ 的圆心是 $\left(-\dfrac{c}{2}, -\dfrac{d}{2}\right)$，不是 $\left(\dfrac{c}{2}, \dfrac{d}{2}\right)$。
-- ❌ **判别式 $\Delta$ 的意义**：二次方程判别式 $\Delta > 0$ 有两个实根，$\Delta = 0$ 有一个重根，$\Delta < 0$ 无实根。但要注意题目问的是‘不同实根’还是‘实根（含重根）’。
+- ❌ **Integrating area without splitting intervals**: When a curve crosses the $x$-axis, direct integration gives the signed algebraic area (positive and negative parts cancel out), not the geometric area. You must first find the roots and split the intervals.
+- ❌ **Messing up the normal gradient**: Normal gradient $= -\dfrac{1}{\text{Tangent gradient}}$, it is not the tangent gradient itself.
+- ❌ **Missing solutions in trig equations**: After solving for $\sin\theta = \dfrac{\sqrt{3}}{2}$ via substitution, pay attention to the domain of the original variable $\theta$ and find all solutions that satisfy the condition.
+- ❌ **Ignoring logarithm domains**: $\log_{10}(y-1)$ requires $y > 1$; after solving, substitute back to check validity.
+- ❌ **Confusing sufficient and necessary conditions**: '$A$ is a sufficient condition for $B$' means $A \Rightarrow B$, which is not equivalent to $B \Rightarrow A$.
+- ❌ **Choosing the wrong path for 3D unfoldings**: Shortest distance problems require considering all possible unfolding methods and comparing them to determine the answer.
+- ❌ **Signs in the general circle equation**: The center of $x^2 + y^2 + cx + dy + e = 0$ is $\left(-\dfrac{c}{2}, -\dfrac{d}{2}\right)$, not $\left(\dfrac{c}{2}, \dfrac{d}{2}\right)$.
+- ❌ **Meaning of the discriminant $\Delta$**: For a quadratic equation, $\Delta > 0$ means two real roots, $\Delta = 0$ means one repeated root, and $\Delta < 0$ means no real roots. Be careful whether the question asks for 'distinct real roots' or 'real roots (including repeated roots)'.
 
 ---
 
-## 五、📝 精选例题
+## 5. 📝 Selected Examples
 
-### 例题 1（2016 P1 Q3 · 微积分 + 坐标几何）
+### Example 1 (2016 P1 Q3 · Calculus + Coordinate Geometry)
 
-**题目**：曲线 $y = \dfrac{2}{x^2}$ 在 $x = 1$ 处的法线与 $x$ 轴交于点 $P$，与 $y$ 轴交于点 $Q$。求 $PQ$ 的长度。
+**Question**: The normal to the curve $y = \dfrac{2}{x^2}$ at $x = 1$ intersects the $x$-axis at point $P$ and the $y$-axis at point $Q$. Find the length of $PQ$.
 
 A. $\dfrac{3\sqrt{5}}{2}$ B. $\dfrac{3\sqrt{17}}{4}$ C. $\dfrac{7\sqrt{17}}{4}$ D. $\dfrac{35}{4}$ E. $\dfrac{35\sqrt{5}}{2}$ F. $\dfrac{3\sqrt{17}}{2}$
 
-【题目分析】
+【Question Analysis】
 
-本题跨越两个模块：
+This question spans two modules:
 
-- **微积分 [MM6.1, MM6.2]**：求曲线在指定点的导数，得到切线斜率
-- **坐标几何 [MM3.1]**：法线斜率为切线斜率的负倒数，写出法线方程，求截距，最后用距离公式
+- **Calculus [MM6.1, MM6.2]**: Finding the derivative of the curve at a specified point to get the tangent gradient.
+- **Coordinate Geometry [MM3.1]**: The normal gradient is the negative reciprocal of the tangent gradient. Write the normal equation, find intercepts, and finally use the distance formula.
 
-解题路径：求导 → 法线斜率 → 法线方程 → $x$ 截距和 $y$ 截距 → 距离公式
+Solution Path: Differentiate → Normal gradient → Normal equation → $x$-intercept and $y$-intercept → Distance formula
 
-【解题步骤】
+【Step-by-Step Solution】
 
-第一步：求切点坐标
+Step 1: Find the coordinates of the point of tangency
 
-当 $x = 1$ 时，$y = \dfrac{2}{1^2} = 2$，切点为 $(1, 2)$。
+When $x = 1$, $y = \dfrac{2}{1^2} = 2$. The point of tangency is $(1, 2)$.
 
-第二步：求导数与切线斜率
+Step 2: Find the derivative and tangent gradient
 
 $$y = 2x^{-2} \quad \Rightarrow \quad \frac{dy}{dx} = -4x^{-3} = -\frac{4}{x^3}$$
 
-在 $x = 1$ 处，切线斜率 $= -4$。
+At $x = 1$, the tangent gradient $= -4$.
 
-第三步：求法线斜率与法线方程
+Step 3: Find the normal gradient and normal equation
 
-法线斜率 $= -\dfrac{1}{-4} = \dfrac{1}{4}$
+Normal gradient $= -\dfrac{1}{-4} = \dfrac{1}{4}$
 
-法线过点 $(1, 2)$，方程为：
+The normal passes through the point $(1, 2)$, so the equation is:
 
 $$y - 2 = \frac{1}{4}(x - 1)$$
 
-第四步：求与坐标轴的交点
+Step 4: Find intersections with the coordinate axes
 
-与 $x$ 轴交点 $P$：令 $y = 0$
+Intersection $P$ with the $x$-axis: let $y = 0$
 
 $$-2 = \frac{1}{4}(x - 1) \quad \Rightarrow \quad x - 1 = -8 \quad \Rightarrow \quad x = -7$$
 
-即 $P(-7, 0)$。
+Thus, $P(-7, 0)$.
 
-与 $y$ 轴交点 $Q$：令 $x = 0$
+Intersection $Q$ with the $y$-axis: let $x = 0$
 
 $$y - 2 = -\frac{1}{4} \quad \Rightarrow \quad y = \frac{7}{4}$$
 
-即 $Q\!\left(0, \dfrac{7}{4}\right)$。
+Thus, $Q\!\left(0, \dfrac{7}{4}\right)$.
 
-第五步：计算 $PQ$ 长度
+Step 5: Calculate the length of $PQ$
 
 $$PQ = \sqrt{(-7 - 0)^2 + \left(0 - \frac{7}{4}\right)^2} = \sqrt{49 + \frac{49}{16}} = \sqrt{\frac{833}{16}}$$
 
-注意到 $833 = 49 \times 17$，因此：
+Note that $833 = 49 \times 17$, so:
 
 $$PQ = \frac{\sqrt{49 \times 17}}{4} = \frac{7\sqrt{17}}{4}$$
 
-【快捷思路】
+【Shortcut Approach】
 
-法线斜率 $m = \dfrac{1}{4}$，$x$ 截距的绝对值 $|a| = 7$。由斜率可直接写出斜边长：
+Normal gradient $m = \dfrac{1}{4}$, absolute value of the $x$-intercept $|a| = 7$. The hypotenuse length can be written directly using the gradient:
 
 $$PQ = |a| \cdot \frac{\sqrt{1 + m^2}}{|m|} = 7 \times \frac{\sqrt{1 + \frac{1}{16}}}{\frac{1}{4}} = 7 \times \frac{\sqrt{\frac{17}{16}}}{\frac{1}{4}} = \frac{7\sqrt{17}}{4}$$
 
-省去单独求 $Q$ 点坐标的步骤。
+This saves the step of finding the coordinates of point $Q$ individually.
 
-【正确答案】C
+【Correct Answer】C
 
-【知识点】微积分 + 坐标几何 | **考纲**: MM6.1, MM6.2, MM3.1, MM8.7
+【Topic】Calculus + Coordinate Geometry | **Syllabus**: MM6.1, MM6.2, MM3.1, MM8.7
 
 ---
 
-### 例题 2（2016 P1 Q5 · 积分 + 函数 + 图像）
+### Example 2 (2016 P1 Q5 · Integration + Functions + Graphs)
 
-**题目**：求曲线 $y = x^2 - 1$ 与 $x$ 轴以及直线 $x = -2$ 和 $x = 2$ 所围成区域的总面积。
+**Question**: Find the total area of the region enclosed by the curve $y = x^2 - 1$, the $x$-axis, and the lines $x = -2$ and $x = 2$.
 
 A. $\dfrac{4}{3}$ B. $\dfrac{8}{3}$ C. $4$ D. $\dfrac{16}{3}$ E. $12$ F. $16$
 
-【题目分析】
+【Question Analysis】
 
-本题跨越三个模块：
+This question spans three modules:
 
-- **积分 [MM7.1, MM7.2]**：用定积分求面积
-- **函数 [MM1.7, MM8.1]**：识别抛物线的形状与零点
-- **图像 [MM8.6, MM8.7]**：判断曲线在 $x$ 轴上方和下方的区间
+- **Integration [MM7.1, MM7.2]**: Using definite integrals to find area.
+- **Functions [MM1.7, MM8.1]**: Identifying the shape and roots of a parabola.
+- **Graphs [MM8.6, MM8.7]**: Determining the intervals where the curve is above and below the $x$-axis.
 
-解题路径：找零点 → 分段 → 利用偶函数对称性 → 计算积分
+Solution Path: Find roots → Split intervals → Use even function symmetry → Calculate integrals
 
-【解题步骤】
+【Step-by-Step Solution】
 
-第一步：找零点
+Step 1: Find roots
 
-令 $x^2 - 1 = 0$，得 $x = \pm 1$。
+Let $x^2 - 1 = 0$, giving $x = \pm 1$.
 
-在区间 $[-2, 2]$ 上：
-- $[-2, -1]$：$y \geq 0$，曲线在 $x$ 轴上方
-- $[-1, 1]$：$y \leq 0$，曲线在 $x$ 轴下方
-- $[1, 2]$：$y \geq 0$，曲线在 $x$ 轴上方
+On the interval $[-2, 2]$:
+- $[-2, -1]$: $y \geq 0$, the curve is above the $x$-axis
+- $[-1, 1]$: $y \leq 0$, the curve is below the $x$-axis
+- $[1, 2]$: $y \geq 0$, the curve is above the $x$-axis
 
-第二步：利用偶函数对称性
+Step 2: Use even function symmetry
 
-$y = x^2 - 1$ 是偶函数（$f(-x) = f(x)$），图像关于 $y$ 轴对称。因此总面积为右半部分面积的 2 倍：
+$y = x^2 - 1$ is an even function ($f(-x) = f(x)$), so its graph is symmetrical about the $y$-axis. Therefore, the total area is twice the area of the right half:
 
-$$\text{面积} = 2\left[\int_{0}^{1} |x^2 - 1|\,dx + \int_{1}^{2} |x^2 - 1|\,dx\right]$$
+$$\text{Area} = 2\left[\int_{0}^{1} |x^2 - 1|\,dx + \int_{1}^{2} |x^2 - 1|\,dx\right]$$
 
-第三步：去掉绝对值符号
+Step 3: Remove absolute value signs
 
-$$\text{面积} = 2\left[\int_{0}^{1}(1 - x^2)\,dx + \int_{1}^{2}(x^2 - 1)\,dx\right]$$
+$$\text{Area} = 2\left[\int_{0}^{1}(1 - x^2)\,dx + \int_{1}^{2}(x^2 - 1)\,dx\right]$$
 
-第四步：计算积分
+Step 4: Calculate integrals
 
 $$\int_{0}^{1}(1 - x^2)\,dx = \left[x - \frac{x^3}{3}\right]_{0}^{1} = 1 - \frac{1}{3} = \frac{2}{3}$$
 
 $$\int_{1}^{2}(x^2 - 1)\,dx = \left[\frac{x^3}{3} - x\right]_{1}^{2} = \left(\frac{8}{3} - 2\right) - \left(\frac{1}{3} - 1\right) = \frac{2}{3} + \frac{2}{3} = \frac{4}{3}$$
 
-总面积：
+Total area:
 
-$$\text{面积} = 2 \times \left(\frac{2}{3} + \frac{4}{3}\right) = 2 \times 2 = 4$$
+$$\text{Area} = 2 \times \left(\frac{2}{3} + \frac{4}{3}\right) = 2 \times 2 = 4$$
 
-【快捷思路】
+【Shortcut Approach】
 
-偶函数只算 $[0, 2]$ 再乘以 2。$[0, 1]$ 段面积 $\dfrac{2}{3}$，$[1, 2]$ 段面积 $\dfrac{4}{3}$，合计 $2 \times \dfrac{2}{3} + 2 \times \dfrac{4}{3} = 4$。或者直接记：每段面积都是 $\dfrac{4}{3}$，三段总计 $3 \times \dfrac{4}{3} = 4$（利用对称性，$[-2, -1]$ 和 $[1, 2]$ 面积相等）。
+For an even function, just calculate for $[0, 2]$ and multiply by 2. The area of the $[0, 1]$ segment is $\dfrac{2}{3}$, and the $[1, 2]$ segment area is $\dfrac{4}{3}$, giving a total of $2 \times \dfrac{2}{3} + 2 \times \dfrac{4}{3} = 4$. Alternatively, notice directly: each of the three segments ($[-2, -1]$, $[-1, 1]$, and $[1, 2]$) has an area of $\dfrac{4}{3}$, so the total for the three segments is $3 \times \dfrac{4}{3} = 4$ (using symmetry, the areas of $[-2, -1]$ and $[1, 2]$ are equal).
 
-【正确答案】C
+【Correct Answer】C
 
-【知识点】积分 + 函数 + 图像 | **考纲**: MM7.1, MM7.2, MM8.1, MM8.6, MM8.7
+【Topic】Integration + Functions + Graphs | **Syllabus**: MM7.1, MM7.2, MM8.1, MM8.6, MM8.7
 
 ---
 
-### 例题 3（2016 P1 Q20 · 坐标几何 + 三角 + 图像/展开）
+### Example 3 (2016 P1 Q20 · Coordinate Geometry + Trigonometry + Graphs/Unfolding)
 
-**题目**：正四棱锥 $PQRS$ 底面为正方形，顶点为 $O$，所有棱长均为 $20$ 米。求沿棱锥外表面从点 $P$ 到棱 $OR$ 中点的最短距离（单位：米）。
+**Question**: A regular square pyramid with base $PQRS$ and vertex $O$ has all edge lengths equal to $20$ meters. Find the shortest distance (in meters) along the outer surface of the pyramid from point $P$ to the midpoint of edge $OR$.
 
 A. $10\sqrt{5 - 2\sqrt{3}}$ B. $10\sqrt{3}$ C. $10\sqrt{5}$ D. $10\sqrt{7}$ E. $10\sqrt{5 + 2\sqrt{3}}$
 
-【题目分析】
+【Question Analysis】
 
-本题跨越三个模块：
+This question spans three modules:
 
-- **坐标几何/立体几何 [MM3.3, MM5.7]**：理解正四棱锥的结构
-- **三角 [MM4.1]**：余弦定理计算展开图上的距离
-- **图像/展开 [MM8.2]**：将立体表面展开为平面图形
+- **Coordinate Geometry / Solid Geometry [MM3.3, MM5.7]**: Understanding the structure of a regular square pyramid.
+- **Trigonometry [MM4.1]**: Using the cosine rule to calculate distances on the unfolded net.
+- **Graphs / Unfolding [MM8.2]**: Unfolding a 3D surface into a 2D plane figure.
 
-解题路径：分析几何结构 → 确定可能的路径 → 展开为平面 → 用余弦定理计算 → 比较不同路径
+Solution Path: Analyze geometric structure → Determine possible paths → Unfold into a plane → Calculate using the cosine rule → Compare different paths
 
-【解题步骤】
+【Step-by-Step Solution】
 
-由于所有棱长均为 $20$ 米，底面是边长为 $20$ 的正方形，四个侧面均为边长为 $20$ 的等边三角形。
+Since all edge lengths are $20$ meters, the base is a square with side length $20$, and the four lateral faces are all equilateral triangles with side length $20$.
 
-设 $T$ 为棱 $OR$ 的中点，则 $OT = TR = 10$。
+Let $T$ be the midpoint of edge $OR$, so $OT = TR = 10$.
 
-**路径一**：经过侧面 $OPS$ 和侧面 $OSR$（不经过底面）
+**Path 1**: Passing through lateral face $OPS$ and lateral face $OSR$ (not passing through the base)
 
-将两个侧面沿公共棱 $OS$ 展开在同一平面上：
-- $\triangle OPS$ 是等边三角形，$\angle POS = 60°$
-- $\triangle OSR$ 是等边三角形，$\angle SOR = 60°$
-- 展开后 $\angle POT = 60° + 60° = 120°$
+Unfold the two lateral faces along their common edge $OS$ onto the same plane:
+- $\triangle OPS$ is an equilateral triangle, $\angle POS = 60^\circ$
+- $\triangle OSR$ is an equilateral triangle, $\angle SOR = 60^\circ$
+- After unfolding, $\angle POT = 60^\circ + 60^\circ = 120^\circ$
 
-在展开平面上，$OP = 20$，$OT = 10$，夹角 $120°$。由余弦定理：
+On the unfolded plane, $OP = 20$, $OT = 10$, and the included angle is $120^\circ$. By the cosine rule:
 
-$$PT^2 = OP^2 + OT^2 - 2 \cdot OP \cdot OT \cdot \cos 120°$$
+$$PT^2 = OP^2 + OT^2 - 2 \cdot OP \cdot OT \cdot \cos 120^\circ$$
 
 $$PT^2 = 20^2 + 10^2 - 2 \times 20 \times 10 \times \left(-\frac{1}{2}\right) = 400 + 100 + 200 = 700$$
 
 $$PT = \sqrt{700} = 10\sqrt{7}$$
 
-**路径二**：经过底面 $PQRS$ 和侧面 $OSR$
+**Path 2**: Passing through the base $PQRS$ and lateral face $OSR$
 
-将底面和侧面 $OSR$ 沿棱 $RS$ 展开。设 $R$ 为原点 $(0, 0)$，$RS$ 沿 $x$ 轴正方向。
+Unfold the base and lateral face $OSR$ along edge $RS$. Let $R$ be the origin $(0, 0)$, and let $RS$ lie along the positive $x$-axis.
 
-底面正方形中 $P$ 的坐标为 $(-20, 20)$（从 $R$ 出发，沿 $RS$ 反方向走 $20$，再垂直走 $20$）。
+In the square base, the coordinates of $P$ are $(-20, 20)$ (starting from $R$, moving $20$ in the opposite direction of $RS$, then moving $20$ perpendicularly).
 
-等边三角形 $OSR$ 中，$O$ 在 $RS$ 上方的距离（高）为 $20\sin 60° = 10\sqrt{3}$。
+In the equilateral triangle $OSR$, the perpendicular distance (height) of $O$ above $RS$ is $20\sin 60^\circ = 10\sqrt{3}$.
 
-$T$ 为 $OR$ 中点，在展开图中，$T$ 的坐标为：沿 $RS$ 方向距 $R$ 为 $10$，垂直方向距 $RS$ 为 $5\sqrt{3}$。
+$T$ is the midpoint of $OR$, so in the unfolded net, the coordinates of $T$ are: $10$ units away from $R$ along $RS$, and $5\sqrt{3}$ units away perpendicularly from $RS$.
 
-因此 $T$ 的坐标为 $(10, 5\sqrt{3})$（以 $R$ 为原点，$RS$ 方向为 $x$ 轴）。
+Therefore, the coordinates of $T$ are $(10, 5\sqrt{3})$ (with $R$ as the origin and $RS$ as the $x$-axis).
 
 $$PT^2 = (-20 - 10)^2 + (20 - 5\sqrt{3})^2 = 900 + 400 - 200\sqrt{3} + 75 = 1375 - 200\sqrt{3}$$
 
-但上述坐标系取法有误。更简单的方法：
+However, the choice of the coordinate system above may be slightly complicated. A simpler method is:
 
-沿底面越过棱 $RS$ 时，$P$ 到 $RS$ 的距离为 $20$（正方形边长），$T$ 到 $RS$ 的距离为 $5\sqrt{3}$，沿 $RS$ 方向 $P$ 与 $T$ 的距离为 $15$。
+When crossing edge $RS$ via the base, the perpendicular distance from $P$ to $RS$ is $20$ (square's side length), the perpendicular distance from $T$ to $RS$ is $5\sqrt{3}$, and the distance between $P$ and $T$ along the direction of $RS$ is $15$.
 
 $$PT^2 = 15^2 + (20 + 5\sqrt{3})^2 = 225 + 400 + 200\sqrt{3} + 75 = 700 + 200\sqrt{3} > 700$$
 
-因此路径二长于路径一。
+Therefore, Path 2 is longer than Path 1.
 
-**结论**：最短距离为 $10\sqrt{7}$ 米。
+**Conclusion**: The shortest distance is $10\sqrt{7}$ meters.
 
-【快捷思路】
+【Shortcut Approach】
 
-路径一直接展开：$\angle POT = 120°$，$OP = 20$，$OT = 10$。
+Path 1 direct unfolding: $\angle POT = 120^\circ$, $OP = 20$, $OT = 10$.
 
-余弦定理一步到位：
+Cosine rule in one step:
 
 $$PT = \sqrt{400 + 100 - 400 \times \left(-\frac{1}{2}\right)} = \sqrt{700} = 10\sqrt{7}$$
 
-经底面的路径显然更长（需跨越更多距离），无需精确计算即可排除。
+The path through the base is obviously longer (requires crossing more distance) and can be eliminated without precise calculation.
 
-【正确答案】D
+【Correct Answer】D
 
-【知识点】坐标几何 + 三角 + 图像展开 | **考纲**: MM3.3, MM4.1, MM5.7, MM8.2
+【Topic】Coordinate Geometry + Trigonometry + Unfolding | **Syllabus**: MM3.3, MM4.1, MM5.7, MM8.2
 
 ---
 
-## 六、🏋️ 课后练习（限时 20 分钟）
+## 6. 🏋️ After-Class Exercises (20 Minutes Time Limit)
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
+| # | Question Number | Topic | Syllabus Match | Difficulty |
 |---|------|------|---------|------|
-| 1 | 2016 P1 Q8 | 三角方程 + 代数换元 | MM4.4, MM4.5, MM4.6, MM1.3 | ⭐⭐⭐ |
-| 2 | 2016 P1 Q11 | 指数方程 + 函数换元 | MM1.1, MM5.1, MM5.3 | ⭐⭐⭐ |
-| 3 | 2016 P1 Q16 | 对数方程组 + 代数消元 | MM5.2, MM5.3, MM1.4 | ⭐⭐⭐⭐ |
-| 4 | 2016 P2 Q8 | 不等式区域 + 逻辑推理 | MM3.1, MM1.5, Arg3, Prf1 | ⭐⭐⭐ |
-| 5 | 2017 P1 Q9 | 圆 + 正六边形（坐几+三角） | MM3.2, MM4.2 | ⭐⭐⭐ |
-| 6 | 2017 P1 Q19 | 二次不等式 + 韦达定理（代数+图像） | MM1.3, MM1.5, MM8.6 | ⭐⭐⭐ |
-| 7 | 2017 P2 Q14 | 二次函数图像 + 坐标变换（图像+坐几+函数） | MM8.4, MM3.1, MM8.2 | ⭐⭐⭐ |
-| 8 | 2018 P1 Q11 | 法线 + 抛物线（微积分+坐几） | MM6.1, MM6.3, MM3.1 | ⭐⭐⭐ |
-| 9 | 2018 P1 Q16 | 曲线最值 + 距离最小化（微积分+坐几+代数） | MM6.3, MM8.5, MM3.1 | ⭐⭐⭐⭐ |
-| 10 | 2018 P2 Q14 | 三角模糊情况 + 唯一性（三角+坐几） | MM4.1, MM4.6 | ⭐⭐⭐⭐ |
-| 11 | 2022 P1 Q2 | 圆方程 + 判别式（坐几+代数） | MM3.2, MM1.3 | ⭐⭐⭐ |
-| 12 | 2022 P1 Q12 | 曲线族包络 + 最值（坐几+微积分） | MM3.1, MM6.3, MM8.5 | ⭐⭐⭐⭐ |
-| 13 | 2022 P1 Q3 | 二阶导 + 积分条件（微积分+代数） | MM6.1, MM7.3, MM1.4 | ⭐⭐⭐⭐ |
-| 14 | 2023 P1 Q4 | 无穷级数 + 三角（数列+三角） | MM2.3, MM4.4, MM4.6 | ⭐⭐⭐⭐ |
-| 15 | 2023 P2 Q14 | 三线共点 + 代数推理（坐几+代数+证明） | MM3.1, MM1.6, Prf1 | ⭐⭐⭐⭐ |
+| 1 | 2016 P1 Q8 | Trig Equations + Algebraic Sub. | MM4.4, MM4.5, MM4.6, MM1.3 | ⭐⭐⭐ |
+| 2 | 2016 P1 Q11 | Exponential Equations + Sub. | MM1.1, MM5.1, MM5.3 | ⭐⭐⭐ |
+| 3 | 2016 P1 Q16 | Log Equation Systems + Elimination | MM5.2, MM5.3, MM1.4 | ⭐⭐⭐⭐ |
+| 4 | 2016 P2 Q8 | Inequality Regions + Logic Reasoning | MM3.1, MM1.5, Arg3, Prf1 | ⭐⭐⭐ |
+| 5 | 2017 P1 Q9 | Circle + Regular Hexagon (Geo + Trig) | MM3.2, MM4.2 | ⭐⭐⭐ |
+| 6 | 2017 P1 Q19 | Quadratic Inequalities + Vieta (Alg + Gr) | MM1.3, MM1.5, MM8.6 | ⭐⭐⭐ |
+| 7 | 2017 P2 Q14 | Quadratic Graph + Transformation | MM8.4, MM3.1, MM8.2 | ⭐⭐⭐ |
+| 8 | 2018 P1 Q11 | Normal + Parabola (Calc + Coord. Geo.) | MM6.1, MM6.3, MM3.1 | ⭐⭐⭐ |
+| 9 | 2018 P1 Q16 | Curve Extrema + Min. Distance | MM6.3, MM8.5, MM3.1 | ⭐⭐⭐⭐ |
+| 10 | 2018 P2 Q14 | Trig Ambiguous Cases + Uniqueness | MM4.1, MM4.6 | ⭐⭐⭐⭐ |
+| 11 | 2022 P1 Q2 | Circle Equation + Discriminant | MM3.2, MM1.3 | ⭐⭐⭐ |
+| 12 | 2022 P1 Q12 | Curve Families + Extrema (Geo + Calc) | MM3.1, MM6.3, MM8.5 | ⭐⭐⭐⭐ |
+| 13 | 2022 P1 Q3 | Second Derivative + Integral Conditions | MM6.1, MM7.3, MM1.4 | ⭐⭐⭐⭐ |
+| 14 | 2023 P1 Q4 | Infinite Series + Trigonometry | MM2.3, MM4.4, MM4.6 | ⭐⭐⭐⭐ |
+| 15 | 2023 P2 Q14 | Three Concurrent Lines + Alg. Reasoning | MM3.1, MM1.6, Prf1 | ⭐⭐⭐⭐ |
 
 ---
 
-## 🎯 配套练习
+## 🎯 Accompanying Practice
 
-学完全部内容？[→ 去做所有 TMUA 练习题](/practice/tmua/)
+Finished all the content? [→ Do all TMUA practice questions](/practice/tmua/)
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+*For full solutions, see the question bank database; each question includes a 【Step-by-Step Solution】 and a 【Shortcut Approach】.*

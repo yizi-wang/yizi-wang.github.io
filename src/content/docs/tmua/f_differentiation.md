@@ -2,399 +2,399 @@
 title: "F Differentiation"
 ---
 
-## 模块 F：微分（Differentiation）
+## Module F: Differentiation
 
-> **对应考纲 Section 1**: MM6.1, MM6.2, MM6.3
-> **对应 Paper**: P1 重点（24/320 题），P2 涉及（单调性证明、极值判断）
-> **建议课时**: 2 课时 | **目标题量**: 15-20 题
-
----
-
-## 📋 模块概览
-
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
-|------|------|---------|-------------|------|
-| F1 | 导数与切线/法线 | MM6.1, MM6.3 | 8 年 8 次 | 0.5 |
-| F2 | 幂函数求导 | MM6.2 | 8 年 6 次 | 0.5 |
-| F3 | 驻点与最值 | MM6.3 | 8 年 5 次 | 0.5 |
-| F4 | 单调性判断 | MM6.3 | 8 年 5 次 | 0.5 |
+> **Corresponding Syllabus Section**: MM6.1, MM6.2, MM6.3
+> **Corresponding Papers**: P1 focus (24/320 questions), P2 involves (monotonicity proofs, extrema judgment)
+> **Recommended Hours**: 2 hours | **Target Number of Questions**: 15-20 questions
 
 ---
 
-## F1 导数与切线/法线 [MM6.1, MM6.3]
+## 📋 Module Overview
 
-### 1.1 导数的几何意义
+| Section | Content | Corresponding Syllabus | Past Paper Frequency | Hours |
+|---------|---------|------------------------|----------------------|-------|
+| F1 | Derivatives and Tangent/Normal Lines | MM6.1, MM6.3 | 8 times in 8 years | 0.5 |
+| F2 | Differentiation of Power Functions | MM6.2 | 6 times in 8 years | 0.5 |
+| F3 | Stationary Points and Extrema | MM6.3 | 5 times in 8 years | 0.5 |
+| F4 | Determining Monotonicity | MM6.3 | 5 times in 8 years | 0.5 |
 
-导数 $f'(x)$ 是曲线 $y = f(x)$ 在点 $(x, f(x))$ 处**切线的斜率**。
+---
+
+## F1 Derivatives and Tangent/Normal Lines [MM6.1, MM6.3]
+
+### 1.1 Geometric Meaning of the Derivative
+
+The derivative $f'(x)$ is the **slope of the tangent line** to the curve $y = f(x)$ at the point $(x, f(x))$.
 
 $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
-**理解导数的几何意义**：
-- $f'(x) > 0$：切线斜率为正，曲线在该点向右上方倾斜
-- $f'(x) < 0$：切线斜率为负，曲线在该点向右下方倾斜
-- $f'(x) = 0$：切线水平，该点可能是极值点
-- 导数不存在：切线垂直（如 $y = \sqrt{x}$ 在 $x = 0$）或函数不光滑
+**Understanding the geometric meaning of the derivative**:
+- $f'(x) > 0$: The tangent has a positive slope; the curve is sloping upwards to the right at that point.
+- $f'(x) < 0$: The tangent has a negative slope; the curve is sloping downwards to the right at that point.
+- $f'(x) = 0$: The tangent is horizontal; the point may be an extremum.
+- Derivative does not exist: The tangent is vertical (e.g., $y = \sqrt{x}$ at $x = 0$) or the function is not smooth.
 
-**⚠️ 注意**：TMUA 不考"从第一性原理求导"（differentiation from first principles），只需掌握幂函数求导公式及其应用。
+**⚠️ Note**: TMUA does not test "differentiation from first principles"; you only need to master the differentiation formulas for power functions and their applications.
 
-### 1.2 切线与法线方程
+### 1.2 Equations of Tangent and Normal Lines
 
-**切线方程**：过点 $(x_0, y_0)$，斜率为 $f'(x_0)$
+**Equation of Tangent Line**: Passing through the point $(x_0, y_0)$ with slope $f'(x_0)$
 
 $$y - y_0 = f'(x_0)(x - x_0)$$
 
-**法线方程**：法线是切线的垂直线，斜率为负倒数
+**Equation of Normal Line**: The normal is perpendicular to the tangent, so its slope is the negative reciprocal.
 
-$$m_{\text{法线}} = -\frac{1}{f'(x_0)}$$
+$$m_{\text{normal}} = -\frac{1}{f'(x_0)}$$
 
-**特殊情况**：
-- 若 $f'(x_0) = 0$（切线水平），法线垂直（斜率不存在）
-- 若切线垂直，法线水平（斜率为 0）
+**Special cases**:
+- If $f'(x_0) = 0$ (horizontal tangent), the normal is vertical (slope is undefined).
+- If the tangent is vertical, the normal is horizontal (slope is 0).
 
-### 1.3 切线/法线与坐标轴交点
+### 1.3 Intercepts of Tangent/Normal Lines with Coordinate Axes
 
-设切线/法线方程为 $y = mx + c$ 或 $y - y_0 = m(x - x_0)$：
+Given a tangent/normal line equation $y = mx + c$ or $y - y_0 = m(x - x_0)$:
 
-- **$x$-截距**：令 $y = 0$，解 $x$
-- **$y$-截距**：令 $x = 0$，解 $y$
+- **$x$-intercept**: Set $y = 0$, solve for $x$.
+- **$y$-intercept**: Set $x = 0$, solve for $y$.
 
-两点 $P(a, 0)$ 和 $Q(0, b)$ 之间的距离：
+The distance between two points $P(a, 0)$ and $Q(0, b)$:
 
 $$PQ = \sqrt{a^2 + b^2}$$
 
 ---
 
-## F2 幂函数求导 [MM6.2]
+## F2 Differentiation of Power Functions [MM6.2]
 
-### 2.1 基本公式
+### 2.1 Basic Formulas
 
-幂函数 $x^n$ 的导数公式：
+The derivative formula for a power function $x^n$:
 
 $$\frac{d}{dx} x^n = nx^{n-1}$$
 
-**适用范围**：$n$ 为任意实数（正整数、负数、分数均可）。
+**Applicability**: $n$ can be any real number (positive integers, negative numbers, fractions).
 
-**常用特例**：
+**Common examples**:
 - $\frac{d}{dx} x^3 = 3x^2$
 - $\frac{d}{dx} x^{-2} = -2x^{-3}$
 - $\frac{d}{dx} x^{\frac{1}{2}} = \frac{1}{2}x^{-\frac{1}{2}}$
 - $\frac{d}{dx} x^{-\frac{3}{2}} = -\frac{3}{2}x^{-\frac{5}{2}}$
 
-### 2.2 求导法则
+### 2.2 Rules of Differentiation
 
-**和差法则**（线性性）：
+**Sum and Difference Rule** (Linearity):
 
 $$\frac{d}{dx} [af(x) + bg(x)] = af'(x) + bg'(x)$$
 
-**乘积法则**：
+**Product Rule**:
 
 $$\frac{d}{dx} [f(x) \cdot g(x)] = f'(x)g(x) + f(x)g'(x)$$
 
-**⚠️ TMUA 常见策略**：遇到含根式的分式函数，先展开再求导，避免使用商法则。
+**⚠️ Common TMUA Strategy**: When encountering fractional functions with radicals, expand first before differentiating to avoid using the quotient rule.
 
-例如：
+For example:
 $$\frac{(x^2 + 5)(2x)}{\sqrt[4]{x^3}} = \frac{2x^3 + 10x}{x^{\frac{3}{4}}} = 2x^{\frac{9}{4}} + 10x^{\frac{1}{4}}$$
 
-再逐项求导：$f'(x) = \frac{9}{2}x^{\frac{5}{4}} + \frac{5}{2}x^{-\frac{3}{4}}$
+Then differentiate term by term: $f'(x) = \frac{9}{2}x^{\frac{5}{4}} + \frac{5}{2}x^{-\frac{3}{4}}$
 
-### 2.3 二阶导数
+### 2.3 Second Derivative
 
 $$f''(x) = \frac{d}{dx} f'(x) = \frac{d^2y}{dx^2}$$
 
-**几何意义**：
-- $f''(x) > 0$：曲线在该点向上弯曲（凹向上）
-- $f''(x) < 0$：曲线在该点向下弯曲（凹向下）
-- **驻点判据**：若 $f'(x_0) = 0$ 且 $f''(x_0) < 0$，则 $x_0$ 是极大值点
+**Geometric meaning**:
+- $f''(x) > 0$: The curve is bending upwards at that point (concave up).
+- $f''(x) < 0$: The curve is bending downwards at that point (concave down).
+- **Stationary point criterion**: If $f'(x_0) = 0$ and $f''(x_0) < 0$, then $x_0$ is a local maximum point.
 
 ---
 
-## F3 驻点与最值 [MM6.3]
+## F3 Stationary Points and Extrema [MM6.3]
 
-### 3.1 驻点（Stationary Points）
+### 3.1 Stationary Points
 
-驻点是导数为零的点：$f'(x_0) = 0$。
+Stationary points are points where the derivative is zero: $f'(x_0) = 0$.
 
-**驻点类型判定**：
-| 条件 | 类型 |
-|------|------|
-| $f'(x_0) = 0$ 且 $f''(x_0) > 0$ | 极小值（minimum） |
-| $f'(x_0) = 0$ 且 $f''(x_0) < 0$ | 极大值（maximum） |
-| $f'(x_0) = 0$ 且 $f''(x_0) = 0$ | 需进一步判断（可能是拐点） |
+**Determining the type of stationary point**:
+| Condition | Type |
+|-----------|------|
+| $f'(x_0) = 0$ and $f''(x_0) > 0$ | Local minimum |
+| $f'(x_0) = 0$ and $f''(x_0) < 0$ | Local maximum |
+| $f'(x_0) = 0$ and $f''(x_0) = 0$ | Needs further investigation (could be a point of inflexion) |
 
-**⚠️ TMUA 说明**：考纲指出拐点（points of inflexion）不会单独考查，但学生需理解简单多项式曲线的拐点概念。
+**⚠️ TMUA Note**: The syllabus indicates that points of inflexion will not be tested separately, but students need to understand the concept of a point of inflexion for simple polynomial curves.
 
-### 3.2 最值问题
+### 3.2 Extrema Problems
 
-**全局最值**：函数在整个定义域内的最大/最小值。
+**Global Extrema**: The absolute maximum/minimum values of a function over its entire domain.
 
-**局部最值**：函数在某区间内的最大/最小值。
+**Local Extrema**: The maximum/minimum values of a function within a certain interval.
 
-**解题策略**：
-1. 找出所有驻点（$f'(x) = 0$）
-2. 计算驻点处的函数值
-3. 检查边界点（若定义域有限）
-4. 比较所有候选值，选出最大/最小
+**Problem-solving strategy**:
+1. Find all stationary points ($f'(x) = 0$).
+2. Calculate the function values at the stationary points.
+3. Check the boundary points (if the domain is finite).
+4. Compare all candidate values to select the maximum/minimum.
 
-### 3.3 含参数的最值
+### 3.3 Extrema with Parameters
 
-当函数含参数 $a$ 时，最值可能随 $a$ 变化。解题思路：
+When a function contains a parameter $a$, the extrema may vary with $a$. Approach:
 
-1. 求导，得到含 $a$ 的驻点条件
-2. 代入 $x$ 的特定值，得到最值关于 $a$ 的函数
-3. 对 $a$ 再求极值（二次函数最值问题）
-
----
-
-## F4 单调性判断 [MM6.3]
-
-### 4.1 递增与递减
-
-**严格递增**：$f'(x) > 0$ 对所有 $x$ 在区间内成立
-
-**严格递减**：$f'(x) < 0$ 对所有 $x$ 在区间内成立
-
-**⚠️ 等号陷阱**：考纲强调"strictly"（严格），即不等号不带等号。
-
-### 4.2 单调区间的划分
-
-通过分析 $f'(x)$ 的符号变化划分单调区间：
-
-1. 解方程 $f'(x) = 0$，得驻点
-2. 在驻点划分的各区间内取测试点
-3. 判断 $f'(x)$ 的符号
-
-### 4.3 利用单调性判断零点个数
-
-设 $f(x)$ 连续且在某区间内单调：
-
-- 若 $f(a) < 0$ 且 $f(b) > 0$（单调递增），则存在唯一零点
-- 若 $f(a) > 0$ 且 $f(b) < 0$（单调递减），则存在唯一零点
-
-**介值定理应用**：结合端点趋势分析，可判断五次方程等复杂函数的实根个数。
+1. Differentiate to get the condition for stationary points involving $a$.
+2. Substitute the specific value of $x$ to get a function of $a$ for the extrema.
+3. Differentiate again with respect to $a$ to find the extrema of this new function (often a quadratic function extrema problem).
 
 ---
 
-## ⚡ 速解技巧汇总
+## F4 Determining Monotonicity [MM6.3]
 
-| 场景 | 技巧 |
-|------|------|
-| 含根式分式求导 | 先展开再求导，避免商法则 |
-| 法线斜率 | 取负倒数，$m \to -\frac{1}{m}$ |
-| 驻点判别 | 二阶导数法：$f''(x_0) > 0$ 极小，$f''(x_0) < 0$ 极大 |
-| 单调区间 | 找驻点后画导数符号表格 |
-| 最值问题 | 驻点值 + 边界值比较 |
-| 含参数最值 | 对参数再求二次函数最值 |
-| 切线到坐标轴距离 | $x$-截距与 $y$-截距构成直角三角形斜边 |
+### 4.1 Increasing and Decreasing
+
+**Strictly increasing**: $f'(x) > 0$ for all $x$ in the interval.
+
+**Strictly decreasing**: $f'(x) < 0$ for all $x$ in the interval.
+
+**⚠️ The Equality Trap**: The syllabus emphasizes "strictly", meaning the inequalities should not include the "or equal to" sign.
+
+### 4.2 Finding Monotonic Intervals
+
+Divide monotonic intervals by analyzing the sign changes of $f'(x)$:
+
+1. Solve the equation $f'(x) = 0$ to find stationary points.
+2. Choose test points within each interval partitioned by the stationary points.
+3. Determine the sign of $f'(x)$.
+
+### 4.3 Using Monotonicity to Determine the Number of Roots
+
+Suppose $f(x)$ is continuous and monotonic over a certain interval:
+
+- If $f(a) < 0$ and $f(b) > 0$ (monotonically increasing), then there is exactly one root.
+- If $f(a) > 0$ and $f(b) < 0$ (monotonically decreasing), then there is exactly one root.
+
+**Application of the Intermediate Value Theorem**: Combined with the analysis of endpoint trends, this can be used to determine the number of real roots for complex functions like quintic equations.
 
 ---
 
-## ⚠️ 易错警示
+## ⚡ Fast Solution Tips Summary
 
-- ❌ 求导前**不化简**，导致计算复杂且易错 — 应先展开为幂函数和
-- ❌ 法线斜率写成 $-f'(x_0)$，**忘记取倒数** — 正确是 $-\frac{1}{f'(x_0)}$
-- ❌ 切线水平时仍写法线斜率为 $-\frac{1}{0}$ — 此时法线垂直，斜率不存在
-- ❌ 二阶导数符号搞反 — $f'' > 0$ 对应极小值（碗向上）
-- ❌ 单调区间端点写成 $x \leq a$ — 严格单调不带等号
-- ❌ 驻点个数判断漏掉判别式分析 — 需检查 $f'(x) = 0$ 是否有实根
-- ❌ 幂函数负指数求导时符号搞错 — 如 $x^{-2}$ 导数是 $-2x^{-3}$，两处负号
+| Scenario | Tip |
+|----------|-----|
+| Differentiating fractions with radicals | Expand first before differentiating to avoid the quotient rule. |
+| Slope of the normal line | Take the negative reciprocal, $m \to -\frac{1}{m}$. |
+| Identifying stationary points | Second derivative method: $f''(x_0) > 0$ for a local minimum, $f''(x_0) < 0$ for a local maximum. |
+| Monotonic intervals | Find stationary points, then draw a sign table for the derivative. |
+| Extrema problems | Compare the values at stationary points and boundary points. |
+| Extrema with parameters | Find the extrema of the resulting quadratic function with respect to the parameter. |
+| Distance from tangent to coordinate axes | The $x$-intercept and $y$-intercept form the hypotenuse of a right-angled triangle. |
 
 ---
 
-## 📝 精选例题
+## ⚠️ Common Mistakes Warnings
 
-### 例题 1（2016 P1 Q3 · 法线与坐标轴）
+- ❌ **Not simplifying** before differentiating, leading to complicated and error-prone calculations — expand into a sum of power functions first.
+- ❌ Writing the normal slope as $-f'(x_0)$, **forgetting to take the reciprocal** — the correct form is $-\frac{1}{f'(x_0)}$.
+- ❌ When the tangent is horizontal, still writing the normal slope as $-\frac{1}{0}$ — in this case, the normal is vertical, and the slope is undefined.
+- ❌ Reversing the sign of the second derivative — $f'' > 0$ corresponds to a local minimum (bowl facing up).
+- ❌ Including interval endpoints as $x \leq a$ — strict monotonicity should not include the equal sign.
+- ❌ Missing the discriminant analysis when determining the number of stationary points — need to check if $f'(x) = 0$ has real roots.
+- ❌ Getting the sign wrong when differentiating power functions with negative exponents — for example, the derivative of $x^{-2}$ is $-2x^{-3}$, note the negative signs in both places.
 
-**题目**：曲线 $y = \frac{2}{x^2}$ 在 $x = 1$ 处的法线与 $x$ 轴交于 $P$，与 $y$ 轴交于 $Q$。求 $PQ$ 的长度。
+---
 
-【题目分析】
-本题考查导数的几何意义与法线方程。先求曲线在指定点的导数（切线斜率），取负倒数得法线斜率，写出法线方程后求其与两坐标轴的交点，最后用距离公式计算 $PQ$。
+## 📝 Selected Examples
 
-【解题步骤】
-第一步：求切点坐标
+### Example 1 (2016 P1 Q3 · Normal Lines and Coordinate Axes)
 
-当 $x = 1$ 时，$y = \dfrac{2}{1^2} = 2$，切点为 $(1, 2)$。
+**Question**: The normal to the curve $y = \frac{2}{x^2}$ at $x = 1$ intersects the $x$-axis at $P$ and the $y$-axis at $Q$. Find the length of $PQ$.
 
-第二步：求导数与切线斜率
+【Question Analysis】
+This question tests the geometric meaning of derivatives and normal line equations. First, find the derivative (tangent slope) of the curve at the given point, take the negative reciprocal to get the normal slope, write down the normal equation to find its intersections with the two coordinate axes, and finally use the distance formula to calculate $PQ$.
+
+【Step-by-Step Solution】
+Step 1: Find the coordinates of the point of tangency.
+
+When $x = 1$, $y = \dfrac{2}{1^2} = 2$, so the point of tangency is $(1, 2)$.
+
+Step 2: Find the derivative and the tangent slope.
 
 $$y = 2x^{-2} \quad \Rightarrow \quad \frac{dy}{dx} = -4x^{-3} = -\frac{4}{x^3}$$
 
-在 $x = 1$ 处，切线斜率为 $y'(1) = -4$。
+At $x = 1$, the tangent slope is $y'(1) = -4$.
 
-第三步：求法线斜率与法线方程
+Step 3: Find the normal slope and the normal equation.
 
-法线斜率为切线斜率的负倒数：
+The normal slope is the negative reciprocal of the tangent slope:
 
-$$m_{\text{法线}} = -\frac{1}{-4} = \frac{1}{4}$$
+$$m_{\text{normal}} = -\frac{1}{-4} = \frac{1}{4}$$
 
-法线过点 $(1, 2)$，方程为：
+The normal passes through the point $(1, 2)$, so its equation is:
 
 $$y - 2 = \frac{1}{4}(x - 1)$$
 
-第四步：求与坐标轴交点
+Step 4: Find the intersections with the coordinate axes.
 
-与 $x$ 轴交点 $P$：令 $y = 0$，得 $-2 = \dfrac{1}{4}(x-1)$，解得 $x = -7$，即 $P(-7, 0)$。
+Intersection $P$ with the $x$-axis: Let $y = 0$, giving $-2 = \dfrac{1}{4}(x-1)$, which solves to $x = -7$, so $P(-7, 0)$.
 
-与 $y$ 轴交点 $Q$：令 $x = 0$，得 $y - 2 = -\dfrac{1}{4}$，解得 $y = \dfrac{7}{4}$，即 $Q\!\left(0, \dfrac{7}{4}\right)$。
+Intersection $Q$ with the $y$-axis: Let $x = 0$, giving $y - 2 = -\dfrac{1}{4}$, which solves to $y = \dfrac{7}{4}$, so $Q\!\left(0, \dfrac{7}{4}\right)$.
 
-第五步：计算 $PQ$ 长度
+Step 5: Calculate the length of $PQ$.
 
 $$PQ = \sqrt{(-7)^2 + \left(\frac{7}{4}\right)^2} = \sqrt{49 + \frac{49}{16}} = \sqrt{\frac{833}{16}}$$
 
-注意到 $833 = 49 \times 17$，因此：
+Note that $833 = 49 \times 17$, therefore:
 
 $$PQ = \frac{\sqrt{49 \times 17}}{4} = \frac{7\sqrt{17}}{4}$$
 
-【快捷思路】
-法线斜率 $m = \dfrac{1}{4}$，$x$ 截距绝对值为 $7$。由斜率与 $x$ 截距可直接写出斜边 $PQ = 7 \times \dfrac{\sqrt{1^2+4^2}}{4} = \dfrac{7\sqrt{17}}{4}$，省去单独求 $Q$ 点坐标的步骤。
+【Fast Solution Approach】
+The normal slope is $m = \dfrac{1}{4}$, and the absolute value of the $x$-intercept is $7$. Using the slope and the $x$-intercept, we can directly write the hypotenuse $PQ = 7 \times \dfrac{\sqrt{1^2+4^2}}{4} = \dfrac{7\sqrt{17}}{4}$, saving the step of separately finding the coordinates of point $Q$.
 
-【正确答案】C（$\dfrac{7\sqrt{17}}{4}$）
+【Correct Answer】C ($\dfrac{7\sqrt{17}}{4}$)
 
-【知识点】Differentiation, Coordinate Geometry | **考纲**: MM6.1, MM6.3
+【Knowledge Points】Differentiation, Coordinate Geometry | **Syllabus**: MM6.1, MM6.3
 
 ---
 
-### 例题 2（2016 P1 Q12 · 内接圆柱最值）
+### Example 2 (2016 P1 Q12 · Maximum Volume of an Inscribed Cylinder)
 
-**题目**：半径为 5 cm 的球体内接一个圆柱，圆柱的整个端面圆周都与球接触。求圆柱的最大体积。
+**Question**: A cylinder is inscribed in a sphere of radius 5 cm. The entire circumference of each end face of the cylinder is in contact with the sphere. Find the maximum volume of the cylinder.
 
-【题目分析】
-本题考查内接几何体的体积最优化问题。圆柱内接于球体，利用截面中的勾股定理建立变量关系，将体积表示为单变量函数后用导数求最大值。
+【Question Analysis】
+This question tests the volume optimization problem of an inscribed geometric solid. The cylinder is inscribed in a sphere. Use the Pythagorean theorem in a cross-section to establish the relationship between the variables, express the volume as a single-variable function, and then use the derivative to find the maximum value.
 
-【解题步骤】
-第一步：建立几何关系
+【Step-by-Step Solution】
+Step 1: Establish the geometric relationship.
 
-设球半径 $R = 5$。取过球心的截面，设圆柱底面半径为 $r$，圆柱高的一半为 $h$（即球心到圆柱底面的距离）。
+Let the sphere radius be $R = 5$. Take a cross-section passing through the center of the sphere. Let the radius of the base of the cylinder be $r$, and half of the cylinder's height be $h$ (which is the distance from the center of the sphere to the base of the cylinder).
 
-由勾股定理：
+By the Pythagorean theorem:
 
 $$h^2 + r^2 = 5^2 = 25$$
 
-即 $r^2 = 25 - h^2$。
+So $r^2 = 25 - h^2$.
 
-圆柱的总高度为 $2h$，体积为：
+The total height of the cylinder is $2h$, and its volume is:
 
 $$V = \pi r^2 (2h) = \pi(25 - h^2)(2h) = 2\pi(25h - h^3)$$
 
-第二步：求导找极值点
+Step 2: Differentiate to find the extreme point.
 
 $$\frac{dV}{dh} = 2\pi(25 - 3h^2)$$
 
-令导数为零：
+Set the derivative to zero:
 
 $$25 - 3h^2 = 0 \quad \Rightarrow \quad h^2 = \frac{25}{3} \quad \Rightarrow \quad h = \frac{5}{\sqrt{3}}$$
 
-验证极大值：$\frac{d^2V}{dh^2} = -12\pi h < 0$（当 $h > 0$ 时），确为极大值。
+Verify that it's a maximum: $\frac{d^2V}{dh^2} = -12\pi h < 0$ (since $h > 0$), confirming it is indeed a local maximum.
 
-第三步：计算最大体积
+Step 3: Calculate the maximum volume.
 
 $$r^2 = 25 - \frac{25}{3} = \frac{50}{3}$$
 
-圆柱高度 $2h = \frac{10}{\sqrt{3}} = \frac{10\sqrt{3}}{3}$。
+The height of the cylinder is $2h = \frac{10}{\sqrt{3}} = \frac{10\sqrt{3}}{3}$.
 
-最大体积：
+Maximum volume:
 
 $$V_{\max} = \pi \cdot \frac{50}{3} \cdot \frac{10\sqrt{3}}{3} = \frac{500\sqrt{3}}{9}\pi$$
 
-【快捷思路】
-内接圆柱最大体积的经典结论：最优时球心到端面的距离 $h = \frac{R}{\sqrt{3}}$。代入 $R = 5$ 得 $h = \frac{5}{\sqrt{3}}$，$r^2 = \frac{2}{3}R^2 = \frac{50}{3}$，体积为 $\frac{500\sqrt{3}}{9}\pi$。
+【Fast Solution Approach】
+Classic conclusion for the maximum volume of an inscribed cylinder: optimal when the distance from the center of the sphere to the end face is $h = \frac{R}{\sqrt{3}}$. Substituting $R = 5$ gives $h = \frac{5}{\sqrt{3}}$, $r^2 = \frac{2}{3}R^2 = \frac{50}{3}$, and the volume is $\frac{500\sqrt{3}}{9}\pi$.
 
-【正确答案】E（$\dfrac{500\sqrt{3}}{9}\pi$）
+【Correct Answer】E ($\dfrac{500\sqrt{3}}{9}\pi$)
 
-【知识点】Differentiation, Coordinate Geometry | **考纲**: MM6.2, MM6.3
+【Knowledge Points】Differentiation, Coordinate Geometry | **Syllabus**: MM6.2, MM6.3
 
 ---
 
-### 例题 3（2016 P1 Q13 · 实根个数判定）
+### Example 3 (2016 P1 Q13 · Determining the Number of Real Roots)
 
-**题目**：方程 $3x^5 - 10x^3 - 120x + 30 = 0$ 有几个实根？
+**Question**: How many real roots does the equation $3x^5 - 10x^3 - 120x + 30 = 0$ have?
 
-【题目分析】
-考查利用导数研究多项式函数单调性与实根个数。对五次方程 $3x^5-10x^3-120x+30=0$，求导找临界点，用介值定理逐区间判断零点个数。
+【Question Analysis】
+This question tests the use of derivatives to study the monotonicity of polynomial functions and the number of real roots. Differentiate the quintic equation $3x^5-10x^3-120x+30=0$ to find the critical points, and use the Intermediate Value Theorem to determine the number of roots interval by interval.
 
-【解题步骤】
-设 $f(x)=3x^5-10x^3-120x+30$，求导：
+【Step-by-Step Solution】
+Let $f(x)=3x^5-10x^3-120x+30$. Differentiating gives:
 
 $$f'(x)=15x^4-30x^2-120=15(x^2-4)(x^2+2)$$
 
-$x^2+2>0$ 恒成立，导数零点为 $x=\pm 2$。
+Since $x^2+2>0$ for all real $x$, the zeros of the derivative are $x=\pm 2$.
 
-导数符号分析：
-- $x < -2$：$f' > 0$（递增）
-- $-2 < x < 2$：$f' < 0$（递减）
-- $x > 2$：$f' > 0$（递增）
+Analyzing the sign of the derivative:
+- $x < -2$: $f' > 0$ (increasing)
+- $-2 < x < 2$: $f' < 0$ (decreasing)
+- $x > 2$: $f' > 0$ (increasing)
 
-计算极值（只需判正负）：
+Calculate the extrema (we only need the sign):
 
 $$f(-2)=-96+80+240+30>0, \quad f(2)=96-80-240+30<0$$
 
-结合端点趋势：
-- $x \to -\infty$ 时 $f \to -\infty$
-- $x \to +\infty$ 时 $f \to +\infty$
+Combining with the endpoint trends:
+- As $x \to -\infty$, $f \to -\infty$
+- As $x \to +\infty$, $f \to +\infty$
 
-由介值定理逐区间判断：
-- $(-\infty, -2)$：从 $-\infty$ 递增到正值 $f(-2) > 0$ → 1 个根
-- $(-2, 2)$：从正值 $f(-2)$ 递减到负值 $f(2) < 0$ → 1 个根
-- $(2, +\infty)$：从负值 $f(2)$ 递增到 $+\infty$ → 1 个根
+Determine the roots interval by interval using the Intermediate Value Theorem:
+- $(-\infty, -2)$: Increasing from $-\infty$ to a positive value $f(-2) > 0$ → 1 root
+- $(-2, 2)$: Decreasing from a positive value $f(-2)$ to a negative value $f(2) < 0$ → 1 root
+- $(2, +\infty)$: Increasing from a negative value $f(2)$ to $+\infty$ → 1 root
 
-共 3 个实根。
+There are 3 real roots in total.
 
-【快捷思路】
-导数零点 $\pm 2$ 划分三个单调区间。左端趋向 $-\infty$，右端趋向 $+\infty$，中间极值 $f(-2) > 0$、$f(2) < 0$，三段各有一根。
+【Fast Solution Approach】
+The derivative zeros $\pm 2$ divide the domain into three monotonic intervals. The left end approaches $-\infty$, the right end approaches $+\infty$, and the intermediate extrema are $f(-2) > 0$ and $f(2) < 0$, meaning there is exactly one root in each of the three sections.
 
-【正确答案】C（3 个）
+【Correct Answer】C (3 roots)
 
-【知识点】Differentiation, Graphs, Algebra | **考纲**: MM6.3
-
----
-
-## 🏋️ 课后练习（限时 15 分钟）
-
-| # | 题号 | 考点 | 对应考纲 | 难度 |
-|---|------|------|---------|------|
-| 1 | 2016 P1 Q15 | 含参数最值 | MM6.2, MM6.3 | ⭐⭐⭐ |
-| 2 | 2016 P1 Q18 | 单调性判断 | MM6.3 | ⭐⭐⭐ |
-| 3 | 2016 P2 Q2 | 幂函数求导 | MM6.2 | ⭐⭐ |
-| 4 | 2017 P1 Q2 | 二阶导数 | MM6.1 | ⭐⭐ |
-| 5 | 2017 P1 Q10 | 法线斜率最值 | MM6.1, MM6.3 | ⭐⭐⭐⭐ |
-| 6 | 2017 P1 Q16 | 两函数单调性 | MM6.3 | ⭐⭐⭐ |
-| 7 | 2018 P1 Q11 | 法线与抛物线 | MM6.1, MM6.3 | ⭐⭐⭐ |
-| 8 | 2018 P1 Q13 | 导数图像分析 | MM6.1, MM6.3 | ⭐⭐⭐ |
+【Knowledge Points】Differentiation, Graphs, Algebra | **Syllabus**: MM6.3
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+## 🏋️ After-Class Practice (15 Minutes Time Limit)
+
+| # | Question ID | Topic | Corresponding Syllabus | Difficulty |
+|---|-------------|-------|------------------------|------------|
+| 1 | 2016 P1 Q15 | Extrema with Parameters | MM6.2, MM6.3 | ⭐⭐⭐ |
+| 2 | 2016 P1 Q18 | Determining Monotonicity | MM6.3 | ⭐⭐⭐ |
+| 3 | 2016 P2 Q2 | Differentiation of Power Functions | MM6.2 | ⭐⭐ |
+| 4 | 2017 P1 Q2 | Second Derivative | MM6.1 | ⭐⭐ |
+| 5 | 2017 P1 Q10 | Extrema of Normal Slopes | MM6.1, MM6.3 | ⭐⭐⭐⭐ |
+| 6 | 2017 P1 Q16 | Monotonicity of Two Functions | MM6.3 | ⭐⭐⭐ |
+| 7 | 2018 P1 Q11 | Normal Lines and Parabolas | MM6.1, MM6.3 | ⭐⭐⭐ |
+| 8 | 2018 P1 Q13 | Derivative Graph Analysis | MM6.1, MM6.3 | ⭐⭐⭐ |
 
 ---
 
-## 📌 考纲速查
-
-### MM6.1 导数的定义与理解
-
-- 导数作为切线斜率
-- 导数作为变化率
-- 二阶导数
-- 符号：$\frac{dy}{dx}$, $\frac{d^2y}{dx^2}$, $f'(x)$, $f''(x)$
-
-### MM6.2 幂函数求导
-
-- $x^n$ 的导数（$n$ 为任意实数）
-- 和差的导数
-- **需先简化再求导**：如 $\frac{(3x+2)^2}{x^{\frac{1}{2}}}$
-
-### MM6.3 应用
-
-- 切线与法线方程
-- 驻点（极大值、极小值）
-- 严格递增（$f' > 0$）
-- 严格递减（$f' < 0$）
-- **拐点不单独考查**
+*For full solutions, please refer to the question bank database. Each question includes 【Step-by-Step Solution】 and 【Fast Solution Approach】.*
 
 ---
 
-## 🎯 配套练习
+## 📌 Syllabus Quick Reference
 
-学完本章？[→ 去做 Differentiation 相关练习题](/practice/tmua/?topic=Differentiation)
+### MM6.1 Definition and Understanding of the Derivative
+
+- Derivative as the gradient of a tangent to a graph
+- Derivative as a rate of change
+- Second derivative
+- Notation: $\frac{dy}{dx}$, $\frac{d^2y}{dx^2}$, $f'(x)$, $f''(x)$
+
+### MM6.2 Differentiation of Power Functions
+
+- Derivative of $x^n$ (where $n$ is any real number)
+- Derivative of a sum or difference
+- **Need to simplify before differentiating**: e.g. $\frac{(3x+2)^2}{x^{\frac{1}{2}}}$
+
+### MM6.3 Applications
+
+- Equations of tangent and normal lines
+- Stationary points (local maximum and local minimum)
+- Strictly increasing ($f' > 0$)
+- Strictly decreasing ($f' < 0$)
+- **Points of inflexion will not be tested separately**
 
 ---
 
-*本讲义依据 TMUA 2016-2023 真题编写，所有例题均来自真实考试。*
+## 🎯 Companion Exercises
+
+Finished this chapter? [→ Go to Differentiation practice questions](/practice/tmua/?topic=Differentiation)
+
+---
+
+*These lecture notes are compiled based on the TMUA 2016-2023 past papers. All examples are from real exams.*
