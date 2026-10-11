@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-10",
-  "edition": "2026-10-10 v1",
+  "content_date": "2026-10-12",
+  "edition": "2026-10-12 v2",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,193 +12,194 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月10日\n每日简报",
+    "headline": "10月12日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "brief-20261010-el-nino",
-        "category": "气候与预测 / CLIMATE",
-        "headline": "厄尔尼诺增强，降雨格局怎样变？",
-        "headline_en": "El Niño Strengthens and Shifts Rainfall Risks",
-        "summary": "世界气象组织预计，正在增强的厄尔尼诺将在12月前后达峰。热带太平洋海温变化会影响全球降雨，增加不同地区的旱涝风险；季节预测并非某地某天的天气预报。",
-        "summary_en": "WMO expects the strengthening El Niño to peak around December. Changing tropical Pacific sea temperatures can shift global rainfall, raising drought and flood risks in different regions. A seasonal outlook describes broad probabilities rather than the weather at one place on a particular day.",
-        "source": {
-          "name": "世界气象组织 / WMO",
-          "url": "https://wmo.int/news/media-centre/sea-surface-temperatures-reflect-strengthening-el-nino",
-          "published": "2026-10-08"
-        },
-        "accent": "aqua"
-      },
-      {
-        "id": "brief-20261010-soft-shape-sensing",
-        "category": "材料与传感 / SENSORS",
-        "headline": "软薄片怎样“读出”自己的弯曲？",
-        "headline_en": "A Soft Sheet Senses Its Own Shape",
-        "summary": "MIT展示一种柔软传感薄片：内嵌光纤随弯曲改变透光量，算法据此重建三维形状。原型有望记录康复动作；研究仍处于实验验证阶段，尚未证实临床效果。",
-        "summary_en": "MIT demonstrated a soft sensing sheet whose embedded optical fibres change light transmission as they bend. An algorithm reconstructs its three-dimensional shape from these signals. The prototype could track rehabilitation movements, but clinical benefits have not yet been demonstrated.",
+        "id": "2026-10-12-sando-drone-safety",
+        "category": "科技 / TECHNOLOGY",
+        "headline": "无人机先算障碍“可能去哪”",
+        "headline_en": "Drones plan for where obstacles could move",
+        "summary": "SANDO按障碍物最高速度，预估它可能到达的范围，规划随时间变化的安全通道。系统已通过仿真和无人机实飞测试；安全保证仍依赖速度、尺寸和感知误差等假设。",
+        "summary_en": "SANDO uses obstacles’ maximum speeds to estimate where they could move, then plans safety corridors that change with time. The system has been tested in simulations and drone flights. Its safety guarantee depends on assumptions about speed, size and sensing errors.",
         "source": {
           "name": "麻省理工学院 / MIT",
-          "url": "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008",
-          "published": "2026-10-08"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "brief-20261010-bacteria-sensor",
-        "category": "生物与免疫 / BIOLOGY",
-        "headline": "病毒的“剪刀”，触发细菌警报",
-        "headline_en": "A Viral Enzyme Triggers a Bacterial Alarm",
-        "summary": "研究发现，部分噬菌体的蛋白酶会切开细菌感应蛋白，启动抗病毒防线。受感染细菌随后可死亡，阻止病毒扩散。这揭示一种免疫识别机制，为噬菌体疗法提供线索，仍属基础研究。",
-        "summary_en": "Researchers found that proteases in some bacteriophages cut a bacterial sensor, activating antiviral defences. The infected bacterium can then die before the virus spreads. This immune-sensing mechanism may inform phage therapies, but the findings remain basic research.",
-        "source": {
-          "name": "犹他大学 / University of Utah",
-          "url": "https://attheu.utah.edu/health-medicine/research-uncovers-how-bacteria-fight-viruses-opening-the-door-to-better-virus-based-antibiotics/",
-          "published": "2026-10-02"
-        },
-        "accent": "gold"
-      },
-      {
-        "id": "brief-20261010-fiber-motor",
-        "category": "工程与运动 / ENGINEERING",
-        "headline": "像线一样细的电机，靠静电滑动",
-        "headline_en": "A Thread-Like Motor Moves Using Electrostatic Forces",
-        "summary": "EPFL团队做出直径约1至3毫米的柔性电机：静电力使内外两层纤维相对滑动。实验中，四根电机合力提起46克巧克力；未来或可用于助力衣物，但性能和耐久性仍需改进。",
-        "summary_en": "EPFL researchers built flexible motors about 1–3 millimetres in diameter. Electrostatic forces slide two nested fibres past each other. In laboratory tests, four motors lifted a 46-gram chocolate bar. Wearable assistance is a possible future use; performance and durability still need improvement.",
-        "source": {
-          "name": "洛桑联邦理工学院 / EPFL",
-          "url": "https://news.epfl.ch/news/researchers-design-a-motor-that-looks-like-a-thr-2/",
+          "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
           "published": "2026-10-07"
         },
         "accent": "aqua"
       },
       {
-        "id": "brief-20261010-frb-host",
-        "category": "天文与证据 / ASTRONOMY",
-        "headline": "射电暴来源，线索藏在宿主星系",
-        "headline_en": "A Radio Burst's Host Offers Clues to Its Origin",
-        "summary": "韦布望远镜测得一处快速射电暴宿主星系红移为2.148，对应宇宙约30亿岁时。星系中年轻的恒星群更支持磁星来源解释，但射电暴的产生机制仍未确定。",
-        "summary_en": "Webb measured a fast radio burst's host galaxy at redshift 2.148, corresponding to when the universe was about three billion years old. Its young stellar population favours a magnetar origin, but the mechanism producing the burst remains uncertain.",
+        "id": "2026-10-12-marine-snow-carbon",
+        "category": "海洋 / OCEAN",
+        "headline": "海洋“雪花”越黏，碳可能沉得越深",
+        "headline_en": "Gooier marine snow may carry carbon deeper",
+        "summary": "海洋雪由浮游生物残骸等聚成。荧光成像显示，细菌较难进入黏稠内部，分解因而更慢。实验与模型估算，高黏度团块向深海输送的碳可超过低黏度团块的六倍。",
+        "summary_en": "Marine snow forms from plankton remains and other material. Fluorescent imaging shows that bacteria struggle to enter gooier interiors, slowing decomposition. Experiments and modelling suggest that highly viscous clumps can carry over six times as much carbon into the deep ocean as less-viscous ones.",
         "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/",
-          "published": "2026-10-08"
+          "name": "斯克里普斯海洋研究所 / Scripps",
+          "url": "https://scripps.ucsd.edu/news/gooier-marine-snow-better-it-transporting-carbon-new-study-finds",
+          "published": "2026-10-09"
         },
         "accent": "coral"
       },
       {
-        "id": "brief-20261010-thailand-floods",
-        "category": "地理与遥感 / EARTH OBSERVATION",
-        "headline": "换一组颜色，看清泰国洪水范围",
-        "headline_en": "False Colour Reveals the Extent of Thailand's Flooding",
-        "summary": "NASA公布的Landsat影像显示，泰国邦巴功河沿岸农田和养殖区10月2日被洪水淹没。把不同波段组合成假彩色图，可更清楚地区分水体与植被，并与去年同期影像比较。",
-        "summary_en": "Landsat images released by NASA show flooding across farmland and aquaculture sites along Thailand's Bang Pakong River on 2 October. Combining different wavelength bands into false-colour images distinguishes water from vegetation more clearly and enables comparison with imagery from the same season last year.",
+        "id": "2026-10-12-education-gender-gaps",
+        "category": "世界 / WORLD",
+        "headline": "入学差距缩小，平均数仍会掩盖障碍",
+        "headline_en": "Education gaps narrow, but averages hide barriers",
+        "summary": "联合国教科文组织新报告称，全球学前至高中男女入学已总体均衡；贫困和农村地区仍有差距，早婚也是女童求学的障碍。入学人数接近，不等于人人都能完成学业。",
+        "summary_en": "A UNESCO report finds global gender parity in enrolment from pre-primary through upper-secondary education, but gaps persist in poor and rural communities. Early marriage also remains a barrier to girls’ education. Similar enrolment totals do not mean everyone can finish school.",
         "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand/",
+          "name": "联合国教科文组织 / UNESCO",
+          "url": "https://www.unesco.org/en/articles/gender-gaps-education-narrow-globally-yet-early-marriage-remains-major-barrier-girls-education-new?hub=343",
+          "published": "2026-10-08"
+        },
+        "accent": "gold"
+      },
+      {
+        "id": "2026-10-12-megacauda-throat-fossil",
+        "category": "古生物 / FOSSILS",
+        "headline": "1.6亿年前的喉骨，留下吞咽线索",
+        "headline_en": "Ancient throat bones offer clues to swallowing",
+        "summary": "内蒙古约1.6亿年前的孙氏巨尾兽，扁尾和后肢显示游泳适应。保存的喉骨类似现代哺乳动物，提示当时已有相近的吞咽和吸吮能力；这些行为是依据骨骼推断的。",
+        "summary_en": "Megacauda sungei from Inner Mongolia lived about 160 million years ago. Its flattened tail and hind limbs suggest swimming adaptations. Throat bones resemble those of modern mammals, suggesting similar swallowing and suckling abilities. These behaviours are inferred from skeletal evidence.",
+        "source": {
+          "name": "辽宁古生物博物馆 / LPM",
+          "url": "https://pmol.synu.edu.cn/2026/1009/c6800a117066/page.htm",
           "published": "2026-10-09"
         },
         "accent": "gold"
+      },
+      {
+        "id": "2026-10-12-solar-switchback-origin",
+        "category": "太空 / SPACE",
+        "headline": "粒子“指纹”追出太阳风折返来源",
+        "headline_en": "Particle fingerprints trace a solar-wind switchback",
+        "summary": "太阳轨道器测到一处磁场折返中氧、碳离子的特殊组合。观测与模型指向日冕高温磁环：磁场重连释放了被困粒子。发现为太阳风来源提供线索，但不能代表所有折返。",
+        "summary_en": "Solar Orbiter detected distinctive oxygen and carbon ions inside a magnetic switchback. Observations and modelling point to hot magnetic loops in the Sun’s outer atmosphere, where reconnection released trapped particles. This offers clues to the solar wind’s origins, but does not explain every switchback.",
+        "source": {
+          "name": "欧洲航天局 / ESA",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
+          "published": "2026-10-08"
+        },
+        "accent": "aqua"
+      },
+      {
+        "id": "2026-10-12-classroom-phone-trial",
+        "category": "学习 / LEARNING",
+        "headline": "逾1.6万名大学生参与课堂手机实验",
+        "headline_en": "Over 16,000 students join a classroom-phone experiment",
+        "summary": "印度10所高校16,683名学生的随机研究发现，课堂限用手机后，成绩较低学生进步更明显，出勤率未变。这提示注意力可能是关键；结果不宜直接推广至所有中小学。",
+        "summary_en": "A randomized study of 16,683 students at ten Indian colleges found that classroom phone restrictions especially helped lower-performing students. Attendance did not change, suggesting attention may matter. The results should not be assumed to apply to every primary or secondary school.",
+        "source": {
+          "name": "美国科学促进会 / AAAS",
+          "url": "https://www.eurekalert.org/news-releases/1146437",
+          "published": "2026-10-08"
+        },
+        "accent": "coral"
       }
     ]
   },
   "weekly": {
-    "week": "2026-W41",
+    "week": "2026-W42",
     "previous_answers": [
       {
-        "id": "answer-proof-divisible-pair-2026-w38",
+        "id": "answer-reasoning-nine-grid-2026-w41",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "从1到100的整数中，\n任意选出51个不同的数。\n证明：其中必有两个数，\n一个是另一个的整数倍。",
-        "headline_en": "Choose any 51 distinct integers from 1 to 100. Prove that one of the chosen numbers must be an integer multiple of another.",
-        "result": "按“奇数部分”分组",
-        "result_en": "Group the numbers by their odd parts",
-        "explanation": "把每个数不断除以2，直到剩下奇数。最多只有50种奇数结果，因此51个数中必有两个得到同一个奇数；这两个原数相差若干次乘2，较小数就整除较大数。",
-        "explanation_en": "Repeatedly divide each number by 2 until an odd number remains. There are at most 50 possible odd results, so two of the 51 selected numbers must share one. Their original values differ by factors of 2, so the smaller divides the larger.",
-        "subject": "W38 · 证明题解答",
-        "subject_en": "W38 · PROOF ANSWER",
-        "visual": "network",
-        "accent": "coral"
+        "headline": "把1至9按顺序写成3×3方格：第一行1、2、3，第二行4、5、6，第三行7、8、9。圈出3个数，每行、每列恰好一个。总和最大能是多少？为什么？",
+        "headline_en": "Write 1–9 in a 3×3 grid, with rows 1,2,3; 4,5,6; and 7,8,9. Circle three numbers, exactly one in each row and column. What is the largest possible sum? Why?",
+        "result": "总和恒为15",
+        "result_en": "The sum is always 15",
+        "explanation": "每个数可写成“行贡献”加“列贡献”：三行分别贡献0、3、6，三列分别贡献1、2、3。每行、每列各选一次，总和恒为0＋3＋6＋1＋2＋3＝15，所以最大值也是15。",
+        "explanation_en": "Each entry is a row contribution plus a column contribution. The rows contribute 0, 3 and 6; the columns contribute 1, 2 and 3. Choosing one entry from every row and column gives 0+3+6+1+2+3=15, whatever the choice. The maximum is therefore 15.",
+        "subject": "W41 · 九宫格解答",
+        "subject_en": "W41 · GRID ANSWER",
+        "visual": "question",
+        "accent": "gold"
       },
       {
-        "id": "answer-probability-coin-race-2026-w38",
+        "id": "answer-probability-spam-filter-2026-w41",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "反复独立抛一枚公平硬币。\n“正正”和“反正”中，\n哪一种更可能先连续出现？\n求两者各自先出现的概率。",
-        "headline_en": "Toss a fair coin independently. Which consecutive pattern appears first: HH or TH (H=heads, T=tails)? Find the probability for each pattern.",
-        "result": "正正：1/4；反正：3/4",
-        "result_en": "HH: 1/4; TH: 3/4",
-        "explanation": "HH先出现的概率是1/4，TH是3/4。HH想赢，开头两次必须就是HH；否则先出现了T，之后第一次出现H时，TH就已经赢了。",
-        "explanation_en": "HH wins with probability 1/4; TH wins with probability 3/4. HH can win only if the first two tosses are HH. Otherwise, a T occurs before any HH, and the first subsequent H completes TH.",
-        "subject": "W38 · 概率题解答",
-        "subject_en": "W38 · PROBABILITY ANSWER",
-        "visual": "rope",
+        "headline": "模拟测试：10000条消息中有100条垃圾信息。筛选器标记了其中90条，又误标其余9900条中的1%。从被标记的消息中等概率抽一条，它真是垃圾信息的概率是多少？",
+        "headline_en": "A simulated test has 10,000 messages, including 100 spam messages. A filter flags 90 of the spam messages and 1% of the other 9,900 messages. Pick uniformly from the flagged messages. What is the probability it is actually spam?",
+        "result": "10/21 ≈ 47.6%",
+        "result_en": "90 out of 189 flagged messages",
+        "explanation": "真正被标记的垃圾信息有90条；正常消息中误标了9900×1%＝99条。被标记的共有90＋99＝189条，因此所求概率是90/189＝10/21，约47.6%。抽样范围是全部被标记的消息。",
+        "explanation_en": "There are 90 correctly flagged spam messages and 9,900×1%=99 falsely flagged non-spam messages. The flagged pool therefore contains 189 messages. The required probability is 90/189=10/21, about 47.6%. The denominator counts all flagged messages.",
+        "subject": "W41 · 条件概率解答",
+        "subject_en": "W41 · CONDITIONAL PROBABILITY",
+        "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "answer-local-estimation-13-w38",
+        "id": "answer-proof-five-sensors-2026-w41",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "北滘一所大型中学的屋顶，\n在一场50毫米暴雨中，\n大约能收集多少吨雨水？\n给出数值或数量级，\n并说明主要假设。",
-        "headline_en": "Estimate the tonnes of rainwater collected by the roofs of a large secondary school in Beijiao during a 50 mm rainstorm. State your assumptions.",
-        "result": "示例估算：约400吨／场",
-        "result_en": "Sample estimate: about 400 tonnes per rainstorm",
-        "explanation": "示例约400吨：假设屋顶水平投影总面积1万平方米、收集率80%，水量为10000×0.05×0.8＝400立方米，约400吨。这是估算示例，面积和收集率并非学校实测数据。",
-        "explanation_en": "Sample estimate: about 400 tonnes. Assume a total horizontal roof area of 10,000 m² and an 80% collection rate. Collected water is 10,000×0.05×0.8=400 m³, approximately 400 tonnes. The area and collection rate are illustrative assumptions, not measurements of an actual school.",
-        "subject": "W38 · 本地估算解答",
-        "subject_en": "W38 · LOCAL ESTIMATE",
-        "visual": "estimation",
-        "accent": "gold"
+        "headline": "在边长10米的正方形内或边界上任放5个传感器。证明：至少两个的直线距离不超过5√2米。能保证不超过7米吗？请说明理由。",
+        "headline_en": "Place five sensors anywhere inside or on a square of side 10 m. Prove that some pair is at most 5√2 m apart. Can you always guarantee a pair at most 7 m apart? Justify your answer.",
+        "result": "5√2米；不能保证7米",
+        "result_en": "At most 5√2 m; 7 m is not guaranteed",
+        "explanation": "把正方形分成4个边长5米的小正方形，分界线上的点只归入其中一格。5点必有2点同格，距离不超过该格对角线5√2米。四角和中心各放一点，最近距离仍为5√2米，大于7米。",
+        "explanation_en": "Divide the square into four 5 m squares, assigning each boundary point to just one cell. Two sensors share a cell, so their distance is at most its diagonal, 5√2 m. For sensors at the four corners and centre, the minimum distance is 5√2 m > 7 m.",
+        "subject": "W41 · 几何证明解答",
+        "subject_en": "W41 · GEOMETRIC PROOF",
+        "visual": "network",
+        "accent": "coral"
       }
     ],
     "challenges": [
       {
-        "id": "reasoning-nine-grid-2026-w41",
+        "id": "reasoning-circle-triples-2026-w42",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "把1至9按顺序写成3×3方格：第一行1、2、3，第二行4、5、6，第三行7、8、9。圈出3个数，每行、每列恰好一个。总和最大能是多少？为什么？",
-        "headline_en": "Write 1–9 in a 3×3 grid, with rows 1,2,3; 4,5,6; and 7,8,9. Circle three numbers, exactly one in each row and column. What is the largest possible sum? Why?",
-        "subject": "入门 · 九宫格选数",
-        "subject_en": "STARTER · GRID PUZZLE",
-        "origin": "数阵与不变量 · 教学改写",
+        "headline": "把1至9各用一次，排在一个圆周上。每三个相邻位置的数相加，共得到九个和。这九个和中的最大值，最小能是多少？先试排，再证明你的答案最优。",
+        "headline_en": "Arrange 1–9 around a circle, using each number once. Add each group of three consecutive numbers to obtain nine sums. What is the smallest possible value of the largest sum? Experiment, then prove your answer is optimal.",
+        "subject": "进阶 · 圆周极值",
+        "subject_en": "DEVELOPING · CIRCULAR OPTIMISATION",
+        "origin": "平均数、等号条件与构造 · 教学改写",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "probability-spam-filter-2026-w41",
+        "id": "probability-conditional-reroll-2026-w42",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "模拟测试：10000条消息中有100条垃圾信息。筛选器标记了其中90条，又误标其余9900条中的1%。从被标记的消息中等概率抽一条，它真是垃圾信息的概率是多少？",
-        "headline_en": "A simulated test has 10,000 messages, including 100 spam messages. A filter flags 90 of the spam messages and 1% of the other 9,900 messages. Pick uniformly from the flagged messages. What is the probability it is actually spam?",
-        "subject": "进阶 · 数据判断",
-        "subject_en": "DEVELOPING · DATA REASONING",
-        "origin": "原创教学模型 · 条件概率",
+        "headline": "两枚公平六面骰子独立掷出，已知点数不同。只看第一枚，决定保留第二枚或独立重掷第二枚一次；决定前不看第二枚，重掷后必须用新点数，可与第一枚相同。最终点数和至少为8算赢。求最优策略与最大胜率。",
+        "headline_en": "Two fair six-sided dice are rolled independently; their results are known to differ. Seeing only the first, choose to keep the hidden second die or reroll it once independently. You must accept the new result, even if it equals the first. A final sum of at least 8 wins. Find the optimal strategy and maximum win probability.",
+        "subject": "挑战 · 条件概率决策",
+        "subject_en": "CHALLENGE · CONDITIONAL DECISIONS",
+        "origin": "条件概率与最优决策 · 教学改写",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "proof-five-sensors-2026-w41",
+        "id": "proof-minimum-monochrome-triangles-2026-w42",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "在边长10米的正方形内或边界上任放5个传感器。证明：至少两个的直线距离不超过5√2米。能保证不超过7米吗？请说明理由。",
-        "headline_en": "Place five sensors anywhere inside or on a square of side 10 m. Prove that some pair is at most 5√2 m apart. Can you always guarantee a pair at most 7 m apart? Justify your answer.",
-        "subject": "挑战 · 几何证明",
-        "subject_en": "CHALLENGE · GEOMETRIC PROOF",
-        "origin": "几何与鸽巢原理 · 教学改写",
+        "headline": "六个点两两相连，每条连线涂红或蓝。三条边同色的三角形，最少能有几个？请证明下界，并画出达到下界的涂色方案。挑战：能否让红色、蓝色三角形各恰好一个？",
+        "headline_en": "Join every pair of six points, colouring each edge red or blue. What is the minimum number of triangles with all three edges the same colour? Prove a lower bound and draw a colouring that attains it. Bonus: can there be exactly one red triangle and one blue triangle?",
+        "subject": "拓展 · 组合计数证明",
+        "subject_en": "STRETCH · COMBINATORIAL PROOF",
+        "origin": "双色图、双重计数与极值 · 教学改写",
         "visual": "network",
         "accent": "coral"
       }
     ],
-    "previous_week": "2026-W38"
+    "previous_week": "2026-W41"
   },
   "editorial_notes": [
-    "2026-10-10 v1，经内容所有者于2026-10-09在聊天中确认并要求发布。",
-    "事实核查截止2026-10-09 UTC。六条均为相对10月9日版的新选题；机构新闻发布日期为2026-10-02至2026-10-09，研究发生时间在核查说明中另列。",
-    "厄尔尼诺：WMO原文发布日期为2026-10-08，季节展望覆盖10至12月。12月达峰及未来旱涝风险均为预测；不将海温异常写成全球气温，也不把季节概率等同于本地单日天气。",
-    "柔性形状传感：MIT报道日期为2026-10-08；论文首次发表为2026-07-29，不能称为当天完成的新发现。已核对机构报道及开放论文的光波导、形状重建与原型实验描述；康复用途属于潜在应用。",
-    "细菌免疫：犹他大学报道为2026-10-02，文中注明Science论文发表于10月1日。描述的是部分噬菌体蛋白酶激活CBASS的机制，非所有细菌的通用防御，亦非临床疗效结论。论文链接已核验，全文直接访问返回403。",
-    "纤维电机：EPFL报道为2026-10-07；论文首次发表为2026-09-27。四根电机提起46克为实验演示，不能与单根静态承重混用。论文说明原型连接外部高压电源；不能写成已可直接日常穿戴的成熟产品。",
-    "快速射电暴：NASA报道为2026-10-08；射电暴最早于2024-03-04被探测。红移2.148对应大爆炸后约30亿年的宇宙时期，不是距离地球30亿光年。年轻恒星群支持磁星假说，但尚未确定具体机制。",
-    "泰国洪水遥感：NASA报道为2026-10-09；影像对比日期是2025-10-07与2026-10-02。假彩色并非人眼直接看到的颜色。本条仅使用NASA自身Landsat观测结论，不引用二手灾损数字，也不把此次洪水直接归因为厄尔尼诺。",
-    "weekly及display逐字段继承当前2026-10-09 v1已批准版本；W41三题及真实上期W38三条参考解析不变，仍为8页、每页18秒、每5分钟刷新。",
-    "本JSON未新增W41教师提示或答案，保留题目原有来源分类字段；教师详解只在私人审阅文本中，不得公开播放。"
+    "2026-10-12 v2，内容所有者已于2026-10-11在聊天中批准并要求发布。根据题目难度反馈，仅提高W42三道新题的推理要求；六条新闻、W41上期解答及显示设置与v1完全一致。",
+    "事实核查截至2026-10-11 UTC；六条均为相对10月10日版的新选题。显示日期是机构报道发布日期，不能等同于实验、观测或论文首次发表日期。",
+    "周一2026-10-12为ISO 2026-W42。上期解答对应已播放的W41三题，双语原题逐字保留；不沿用W38答案。W42新题仅含题目，教师提示和答案不在播放JSON中。",
+    "无人机：SANDO已完成仿真和实飞测试；安全保证依赖障碍物速度、尺寸及感知误差等假设，不代表任何情况下都不会碰撞。",
+    "海洋雪：超过六倍的碳输送量来自实验结合模型估算，不是全球海洋碳汇已实测增长六倍。",
+    "教育：总体入学均衡、地区差异及早婚障碍均来自UNESCO报告；入学均衡不等于完成率均衡，报告包含不同年份的数据。",
+    "化石：孙氏巨尾兽约1.6亿年前；游泳、吞咽和吸吮能力均由骨骼比较推断，不称为直接观察到的行为或人类直系祖先。",
+    "太阳风：折返案例的离子观测与模型支持日冕磁场重连来源，不将单个案例推广到所有折返。",
+    "课堂手机：16,683人、10所印度高校的随机研究。依据公开AAAS出版方报道核查，完整Science论文未直接读取；不编造效应量或推广至所有中小学。",
+    "继承原display、schema_version、demo及版式设置，仍为2页新闻＋3页上期解答＋3页本期题目，共8页；18秒一页，5分钟刷新。本次仅更新approved.json，不改显示代码或其他正文。",
+    "2026-10-11 UTC验证：完整仓库npm run build通过；系统Chromium完成1080×1920及540×960两种9:16视口的八页中英浏览器检查，正文逐字段一致，无内容溢出、裁切或版块重叠，八页截图已逐页核对。CI及公开页面核验不等同于实体屏验收。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-09",
-    "note": "Approved in direct chat on 2026-10-09; publication requested for 2026-10-10 v1."
+    "approved_at": "2026-10-11",
+    "note": "Approved by the content owner in direct chat on 2026-10-11; publication requested for 2026-10-12 v2. Full-site npm run build and all eight bilingual slides at 1080x1920 and 540x960 verified on 2026-10-11 UTC. Physical display not inspected."
   }
 }
