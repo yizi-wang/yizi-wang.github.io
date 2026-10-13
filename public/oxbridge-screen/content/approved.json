@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-12",
-  "edition": "2026-10-12 v2",
+  "content_date": "2026-10-13",
+  "edition": "2026-10-13 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,33 +12,33 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月12日\n每日简报",
+    "headline": "10月13日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-12-sando-drone-safety",
-        "category": "科技 / TECHNOLOGY",
-        "headline": "无人机先算障碍“可能去哪”",
-        "headline_en": "Drones plan for where obstacles could move",
-        "summary": "SANDO按障碍物最高速度，预估它可能到达的范围，规划随时间变化的安全通道。系统已通过仿真和无人机实飞测试；安全保证仍依赖速度、尺寸和感知误差等假设。",
-        "summary_en": "SANDO uses obstacles’ maximum speeds to estimate where they could move, then plans safety corridors that change with time. The system has been tested in simulations and drone flights. Its safety guarantee depends on assumptions about speed, size and sensing errors.",
+        "id": "2026-10-13-east-asia-rain-front",
+        "category": "气候 / CLIMATE",
+        "headline": "东亚夏季锋面北移，湿热风险可能叠加",
+        "headline_en": "A shifting rain front links rain and heat risks",
+        "summary": "研究分析1979—2025年的气象再分析资料，发现东亚夏季锋面北移，夏末变化更明显。水汽、急流和海温变化与此相关，韩国降雨和东亚热应激也有增强。这提示需关注湿热叠加，并非某一天的天气预报。",
+        "summary_en": "A study of weather reanalysis data from 1979–2025 found that East Asia’s summer front shifted north, especially in late summer. Changes in moisture transport, winds and sea temperatures were associated with the shift, alongside increased rainfall in Korea and heat stress across East Asia. The findings highlight overlapping risks, rather than predicting individual weather events.",
         "source": {
-          "name": "麻省理工学院 / MIT",
-          "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
-          "published": "2026-10-07"
+          "name": "npj气候与大气科学 / npj Climate and Atmospheric Science",
+          "url": "https://www.nature.com/articles/s41612-026-01570-x",
+          "published": "2026-10-11"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-12-marine-snow-carbon",
-        "category": "海洋 / OCEAN",
-        "headline": "海洋“雪花”越黏，碳可能沉得越深",
-        "headline_en": "Gooier marine snow may carry carbon deeper",
-        "summary": "海洋雪由浮游生物残骸等聚成。荧光成像显示，细菌较难进入黏稠内部，分解因而更慢。实验与模型估算，高黏度团块向深海输送的碳可超过低黏度团块的六倍。",
-        "summary_en": "Marine snow forms from plankton remains and other material. Fluorescent imaging shows that bacteria struggle to enter gooier interiors, slowing decomposition. Experiments and modelling suggest that highly viscous clumps can carry over six times as much carbon into the deep ocean as less-viscous ones.",
+        "id": "2026-10-13-krepe-heat-shields",
+        "category": "工程 / ENGINEERING",
+        "headline": "货运飞船“最后一程”，搭载隔热盾实验",
+        "headline_en": "A cargo spacecraft’s final journey tests heat shields",
+        "summary": "KREPE-3的12个测试舱搭乘离站货运飞船，计划在再入时测量温度、压力等并传回数据。测试包括3D打印隔热盾和伞状可展开设计。借用原有再入任务可降低飞行测试成本；报道尚未公布性能结果。",
+        "summary_en": "Twelve KREPE-3 capsules aboard a departing cargo spacecraft are designed to measure temperature, pressure and other conditions during atmospheric re-entry, transmitting data by satellite. Tests include a 3D-printed heat shield and an umbrella-like deployable design. Sharing an existing re-entry offers lower-cost flight data, but the report has not established how the new shields performed.",
         "source": {
-          "name": "斯克里普斯海洋研究所 / Scripps",
-          "url": "https://scripps.ucsd.edu/news/gooier-marine-snow-better-it-transporting-carbon-new-study-finds",
+          "name": "美国航天局 / NASA",
+          "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies/",
           "published": "2026-10-09"
         },
         "accent": "coral"
@@ -58,44 +58,44 @@
         "accent": "gold"
       },
       {
-        "id": "2026-10-12-megacauda-throat-fossil",
-        "category": "古生物 / FOSSILS",
-        "headline": "1.6亿年前的喉骨，留下吞咽线索",
-        "headline_en": "Ancient throat bones offer clues to swallowing",
-        "summary": "内蒙古约1.6亿年前的孙氏巨尾兽，扁尾和后肢显示游泳适应。保存的喉骨类似现代哺乳动物，提示当时已有相近的吞咽和吸吮能力；这些行为是依据骨骼推断的。",
-        "summary_en": "Megacauda sungei from Inner Mongolia lived about 160 million years ago. Its flattened tail and hind limbs suggest swimming adaptations. Throat bones resemble those of modern mammals, suggesting similar swallowing and suckling abilities. These behaviours are inferred from skeletal evidence.",
+        "id": "2026-10-13-distant-radio-burst",
+        "category": "太空 / SPACE",
+        "headline": "遥远射电闪光，留下年轻宇宙的线索",
+        "headline_en": "A distant radio flash offers clues from the young universe",
+        "summary": "MeerKAT射电观测与韦布光谱，确认一次快速射电暴来自宇宙诞生约30亿年时的星系。活跃造星的小型宿主，让年轻磁星成为可能来源。射电波沿途留下的变化还能探测星系间物质；爆发机制尚未确定。",
+        "summary_en": "MeerKAT radio observations and Webb spectroscopy placed a fast radio burst in a galaxy seen about three billion years after the Big Bang. Its small, actively star-forming host makes a young magnetar a plausible origin. Changes imprinted on the radio signal also reveal matter along its path, although the process producing the burst remains uncertain.",
         "source": {
-          "name": "辽宁古生物博物馆 / LPM",
-          "url": "https://pmol.synu.edu.cn/2026/1009/c6800a117066/page.htm",
-          "published": "2026-10-09"
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/",
+          "published": "2026-10-08"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-12-solar-switchback-origin",
-        "category": "太空 / SPACE",
-        "headline": "粒子“指纹”追出太阳风折返来源",
-        "headline_en": "Particle fingerprints trace a solar-wind switchback",
-        "summary": "太阳轨道器测到一处磁场折返中氧、碳离子的特殊组合。观测与模型指向日冕高温磁环：磁场重连释放了被困粒子。发现为太阳风来源提供线索，但不能代表所有折返。",
-        "summary_en": "Solar Orbiter detected distinctive oxygen and carbon ions inside a magnetic switchback. Observations and modelling point to hot magnetic loops in the Sun’s outer atmosphere, where reconnection released trapped particles. This offers clues to the solar wind’s origins, but does not explain every switchback.",
+        "id": "2026-10-13-antarctic-sea-ice",
+        "category": "地球 / EARTH",
+        "headline": "南极海冰冬季最大范围，仍处历史低位",
+        "headline_en": "Antarctic sea ice’s winter maximum remains low",
+        "summary": "南极海冰今年可能于9月14日达到最大范围，约1759万平方公里，为卫星记录第三低。卫星利用海冰与海水的微波差异穿云观测。“范围”统计冰覆盖率至少15%的区域，不等于全部是实心冰，也不直接反映厚度。",
+        "summary_en": "Antarctic sea ice likely reached its annual maximum on September 14: about 17.59 million square kilometres, the third-lowest maximum in the satellite record. Satellites distinguish ice from water using naturally emitted microwaves, which pass through clouds. “Extent” counts regions with at least 15% ice coverage; it does not mean solid ice everywhere or directly measure thickness.",
         "source": {
-          "name": "欧洲航天局 / ESA",
-          "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
-          "published": "2026-10-08"
+          "name": "美国航天局地球观测站 / NASA Earth Observatory",
+          "url": "https://science.nasa.gov/earth/earth-observatory/antarctic-sea-ice-grows-to-its-2026-maximum/",
+          "published": "2026-10-12"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-12-classroom-phone-trial",
-        "category": "学习 / LEARNING",
-        "headline": "逾1.6万名大学生参与课堂手机实验",
-        "headline_en": "Over 16,000 students join a classroom-phone experiment",
-        "summary": "印度10所高校16,683名学生的随机研究发现，课堂限用手机后，成绩较低学生进步更明显，出勤率未变。这提示注意力可能是关键；结果不宜直接推广至所有中小学。",
-        "summary_en": "A randomized study of 16,683 students at ten Indian colleges found that classroom phone restrictions especially helped lower-performing students. Attendance did not change, suggesting attention may matter. The results should not be assumed to apply to every primary or secondary school.",
+        "id": "2026-10-12-marine-snow-carbon",
+        "category": "海洋 / OCEAN",
+        "headline": "海洋“雪花”越黏，碳可能沉得越深",
+        "headline_en": "Gooier marine snow may carry carbon deeper",
+        "summary": "海洋雪由浮游生物残骸等聚成。荧光成像显示，细菌较难进入黏稠内部，分解因而更慢。实验与模型估算，高黏度团块向深海输送的碳可超过低黏度团块的六倍。",
+        "summary_en": "Marine snow forms from plankton remains and other material. Fluorescent imaging shows that bacteria struggle to enter gooier interiors, slowing decomposition. Experiments and modelling suggest that highly viscous clumps can carry over six times as much carbon into the deep ocean as less-viscous ones.",
         "source": {
-          "name": "美国科学促进会 / AAAS",
-          "url": "https://www.eurekalert.org/news-releases/1146437",
-          "published": "2026-10-08"
+          "name": "斯克里普斯海洋研究所 / Scripps",
+          "url": "https://scripps.ucsd.edu/news/gooier-marine-snow-better-it-transporting-carbon-new-study-finds",
+          "published": "2026-10-09"
         },
         "accent": "coral"
       }
@@ -185,21 +185,21 @@
     "previous_week": "2026-W41"
   },
   "editorial_notes": [
-    "2026-10-12 v2，内容所有者已于2026-10-11在聊天中批准并要求发布。根据题目难度反馈，仅提高W42三道新题的推理要求；六条新闻、W41上期解答及显示设置与v1完全一致。",
-    "事实核查截至2026-10-11 UTC；六条均为相对10月10日版的新选题。显示日期是机构报道发布日期，不能等同于实验、观测或论文首次发表日期。",
-    "周一2026-10-12为ISO 2026-W42。上期解答对应已播放的W41三题，双语原题逐字保留；不沿用W38答案。W42新题仅含题目，教师提示和答案不在播放JSON中。",
-    "无人机：SANDO已完成仿真和实飞测试；安全保证依赖障碍物速度、尺寸及感知误差等假设，不代表任何情况下都不会碰撞。",
-    "海洋雪：超过六倍的碳输送量来自实验结合模型估算，不是全球海洋碳汇已实测增长六倍。",
-    "教育：总体入学均衡、地区差异及早婚障碍均来自UNESCO报告；入学均衡不等于完成率均衡，报告包含不同年份的数据。",
-    "化石：孙氏巨尾兽约1.6亿年前；游泳、吞咽和吸吮能力均由骨骼比较推断，不称为直接观察到的行为或人类直系祖先。",
-    "太阳风：折返案例的离子观测与模型支持日冕磁场重连来源，不将单个案例推广到所有折返。",
-    "课堂手机：16,683人、10所印度高校的随机研究。依据公开AAAS出版方报道核查，完整Science论文未直接读取；不编造效应量或推广至所有中小学。",
-    "继承原display、schema_version、demo及版式设置，仍为2页新闻＋3页上期解答＋3页本期题目，共8页；18秒一页，5分钟刷新。本次仅更新approved.json，不改显示代码或其他正文。",
-    "2026-10-11 UTC验证：完整仓库npm run build通过；系统Chromium完成1080×1920及540×960两种9:16视口的八页中英浏览器检查，正文逐字段一致，无内容溢出、裁切或版块重叠，八页截图已逐页核对。CI及公开页面核验不等同于实体屏验收。"
+    "2026-10-13 review v1：内容所有者于2026-10-13北京时间08:54在聊天中明确批准发布。依据2026-10-12 v2制作；原文件blob SHA a3de9951ffb9bf7746a3b716fd91f770ab8d7e8d。获批原稿SHA256 c65902ab13beace899d60086265f53e3d54bd40814972126a7012d7972fa1eed。",
+    "四条新选题；UNESCO教育与Scripps海洋雪两条保留，保留原来源日期，不冒充新消息。2026-10-12 UTC重读两条机构来源。",
+    "来源日期为论文或机构报道发布日期，不等同于观测日期。射电暴观测于2024-03-04；南极海冰最大范围发生于2026-09-14，NASA本次更新为2026-10-12，NSIDC此前已于9月报道。",
+    "东亚锋面：同行评审已接受的早期在线稿，分析ERA5 1979—2025资料；是关联研究，不作特定地点天气预报。",
+    "KREPE-3：飞行演示报道描述计划采集数据，未宣布新型隔热盾已通过性能验证。",
+    "快速射电暴：光谱确定宿主红移；年轻磁星为可能来源，未确定爆发机制。",
+    "海冰：范围不等于冰面积、冰厚或陆地冰盖质量；使用冰覆盖率至少15%的统计定义。",
+    "UNESCO：全球入学均衡不等于各地区均衡或人人完成学业；报告含不同年份数据。",
+    "海洋雪：六倍估计来自实验与模型，不是全球碳汇已实测增加六倍。",
+    "W41三道原题和解答、W42三道新题及所有weekly字段完整保留。W42答案和教师提示不在播放JSON内。",
+    "schema_version、demo及display未改，保持2页新闻、3页W41解答、3页W42题目；18秒一页、5分钟刷新。已完成1080×1920与540×960两种9:16视口的八页中英检查，共16组通过，八页截图已逐一核对，无截断、溢出、重叠或控制台错误。仅更新approved.json的批准状态与审核发布元数据，正文逐字段保留。实体屏未验收。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-11",
-    "note": "Approved by the content owner in direct chat on 2026-10-11; publication requested for 2026-10-12 v2. Full-site npm run build and all eight bilingual slides at 1080x1920 and 540x960 verified on 2026-10-11 UTC. Physical display not inspected."
+    "approved_at": "2026-10-13T08:54+08:00",
+    "note": "Approved for publication by the content owner in direct chat on 2026-10-13 at 08:54 Asia/Shanghai (00:54 UTC), message Sentinel_c4f249fdfa28819196fa4beeb919be96. Approved source: 2026-10-13 review v1, SHA256 c65902ab13beace899d60086265f53e3d54bd40814972126a7012d7972fa1eed. Bilingual eight-slide validation passed at 1080x1920 and 540x960. Body, weekly and display remain unchanged. Physical display not inspected."
   }
 }
