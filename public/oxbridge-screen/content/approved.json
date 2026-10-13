@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-13",
-  "edition": "2026-10-13 review v1",
+  "content_date": "2026-10-14",
+  "edition": "2026-10-14 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,9 +12,51 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月13日\n每日简报",
+    "headline": "10月14日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
+      {
+        "id": "2026-10-14-solar-wind-helicity",
+        "category": "物理 / PHYSICS",
+        "headline": "太阳风的混乱中发现新规律",
+        "headline_en": "Hidden order found in the solar wind",
+        "summary": "10月13日公布的研究利用帕克太阳探测器数据，发现太阳风磁场波动的旋转方向，会在从大尺度流体行为过渡到小尺度粒子行为时反转。这为理解太空等离子体湍流与空间天气提供线索，尚不是新的磁暴预报工具。",
+        "summary_en": "Research announced on October 13 used Parker Solar Probe data to reveal a reversal in the rotation of magnetic-field fluctuations where solar-wind behaviour changes from fluid-like to particle-dominated scales. The finding offers a clue to turbulence in space plasmas and to space-weather research; it is not yet a new tool for forecasting geomagnetic storms.",
+        "source": {
+          "name": "布伦瑞克工业大学 / TU Braunschweig",
+          "url": "https://magazin.tu-braunschweig.de/pi-post/struktur-im-unstrukturierten-neues-phaenomen-im-sonnenwind-entdeckt/",
+          "published": "2026-10-13"
+        },
+        "accent": "aqua"
+      },
+      {
+        "id": "2026-10-14-economics-prize",
+        "category": "经济 / ECONOMICS",
+        "headline": "经济学奖关注家庭与企业的选择",
+        "headline_en": "Economics prize recognises everyday decisions",
+        "summary": "10月12日，2026年诺贝尔经济学奖宣布授予罗伯特·E·霍尔与迈克尔·伍德福德。他们把家庭消费、储蓄和企业定价等决策纳入宏观模型，说明预期如何影响今天的经济。这些模型帮助政府和央行评估稳定经济的政策，也随现实变化继续完善。",
+        "summary_en": "On October 12, the 2026 Nobel Memorial Prize in Economic Sciences was awarded to Robert E. Hall and Michael Woodford. Their work connects household spending and saving, and business pricing, to the wider economy, showing how expectations shape decisions today. These models help policymakers assess stabilisation policies and continue to evolve as economies change.",
+        "source": {
+          "name": "瑞典皇家科学院 / Royal Swedish Academy of Sciences",
+          "url": "https://www.kva.se/en/news/the-prize-in-economic-sciences-2026/",
+          "published": "2026-10-12"
+        },
+        "accent": "gold"
+      },
+      {
+        "id": "2026-10-14-battery-binder",
+        "category": "材料 / MATERIALS",
+        "headline": "新型电池“胶水”让回收更容易",
+        "headline_en": "A new battery binder could simplify recycling",
+        "summary": "10月9日发表的研究提出不含氟、可用水加工的电池黏结剂：柠檬酸连接两种聚合物，稳固电极，也让拆解后的电极涂层在水中与金属箔分离。实验电池保持良好性能，为更清洁的制造与回收提供思路；商业化放大仍待完成。",
+        "summary_en": "A study published on October 9 introduced a fluorine-free, water-processable battery binder. Citric acid links two polymers to hold electrodes together while allowing coatings to separate from metal foils in water after disassembly. Test batteries maintained strong performance, suggesting cleaner manufacturing and recycling; scaling up for commercial production remains a future step.",
+        "source": {
+          "name": "加州大学圣迭戈分校 / UC San Diego",
+          "url": "https://today.ucsd.edu/story/battery-manufacturing-and-recycling-could-go-green-with-this-glue",
+          "published": "2026-10-09"
+        },
+        "accent": "coral"
+      },
       {
         "id": "2026-10-13-east-asia-rain-front",
         "category": "气候 / CLIMATE",
@@ -30,34 +72,6 @@
         "accent": "aqua"
       },
       {
-        "id": "2026-10-13-krepe-heat-shields",
-        "category": "工程 / ENGINEERING",
-        "headline": "货运飞船“最后一程”，搭载隔热盾实验",
-        "headline_en": "A cargo spacecraft’s final journey tests heat shields",
-        "summary": "KREPE-3的12个测试舱搭乘离站货运飞船，计划在再入时测量温度、压力等并传回数据。测试包括3D打印隔热盾和伞状可展开设计。借用原有再入任务可降低飞行测试成本；报道尚未公布性能结果。",
-        "summary_en": "Twelve KREPE-3 capsules aboard a departing cargo spacecraft are designed to measure temperature, pressure and other conditions during atmospheric re-entry, transmitting data by satellite. Tests include a 3D-printed heat shield and an umbrella-like deployable design. Sharing an existing re-entry offers lower-cost flight data, but the report has not established how the new shields performed.",
-        "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies/",
-          "published": "2026-10-09"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "2026-10-12-education-gender-gaps",
-        "category": "世界 / WORLD",
-        "headline": "入学差距缩小，平均数仍会掩盖障碍",
-        "headline_en": "Education gaps narrow, but averages hide barriers",
-        "summary": "联合国教科文组织新报告称，全球学前至高中男女入学已总体均衡；贫困和农村地区仍有差距，早婚也是女童求学的障碍。入学人数接近，不等于人人都能完成学业。",
-        "summary_en": "A UNESCO report finds global gender parity in enrolment from pre-primary through upper-secondary education, but gaps persist in poor and rural communities. Early marriage also remains a barrier to girls’ education. Similar enrolment totals do not mean everyone can finish school.",
-        "source": {
-          "name": "联合国教科文组织 / UNESCO",
-          "url": "https://www.unesco.org/en/articles/gender-gaps-education-narrow-globally-yet-early-marriage-remains-major-barrier-girls-education-new?hub=343",
-          "published": "2026-10-08"
-        },
-        "accent": "gold"
-      },
-      {
         "id": "2026-10-13-distant-radio-burst",
         "category": "太空 / SPACE",
         "headline": "遥远射电闪光，留下年轻宇宙的线索",
@@ -70,20 +84,6 @@
           "published": "2026-10-08"
         },
         "accent": "gold"
-      },
-      {
-        "id": "2026-10-13-antarctic-sea-ice",
-        "category": "地球 / EARTH",
-        "headline": "南极海冰冬季最大范围，仍处历史低位",
-        "headline_en": "Antarctic sea ice’s winter maximum remains low",
-        "summary": "南极海冰今年可能于9月14日达到最大范围，约1759万平方公里，为卫星记录第三低。卫星利用海冰与海水的微波差异穿云观测。“范围”统计冰覆盖率至少15%的区域，不等于全部是实心冰，也不直接反映厚度。",
-        "summary_en": "Antarctic sea ice likely reached its annual maximum on September 14: about 17.59 million square kilometres, the third-lowest maximum in the satellite record. Satellites distinguish ice from water using naturally emitted microwaves, which pass through clouds. “Extent” counts regions with at least 15% ice coverage; it does not mean solid ice everywhere or directly measure thickness.",
-        "source": {
-          "name": "美国航天局地球观测站 / NASA Earth Observatory",
-          "url": "https://science.nasa.gov/earth/earth-observatory/antarctic-sea-ice-grows-to-its-2026-maximum/",
-          "published": "2026-10-12"
-        },
-        "accent": "aqua"
       },
       {
         "id": "2026-10-12-marine-snow-carbon",
@@ -185,21 +185,22 @@
     "previous_week": "2026-W41"
   },
   "editorial_notes": [
-    "2026-10-13 review v1：内容所有者于2026-10-13北京时间08:54在聊天中明确批准发布。依据2026-10-12 v2制作；原文件blob SHA a3de9951ffb9bf7746a3b716fd91f770ab8d7e8d。获批原稿SHA256 c65902ab13beace899d60086265f53e3d54bd40814972126a7012d7972fa1eed。",
-    "四条新选题；UNESCO教育与Scripps海洋雪两条保留，保留原来源日期，不冒充新消息。2026-10-12 UTC重读两条机构来源。",
-    "来源日期为论文或机构报道发布日期，不等同于观测日期。射电暴观测于2024-03-04；南极海冰最大范围发生于2026-09-14，NASA本次更新为2026-10-12，NSIDC此前已于9月报道。",
-    "东亚锋面：同行评审已接受的早期在线稿，分析ERA5 1979—2025资料；是关联研究，不作特定地点天气预报。",
-    "KREPE-3：飞行演示报道描述计划采集数据，未宣布新型隔热盾已通过性能验证。",
-    "快速射电暴：光谱确定宿主红移；年轻磁星为可能来源，未确定爆发机制。",
-    "海冰：范围不等于冰面积、冰厚或陆地冰盖质量；使用冰覆盖率至少15%的统计定义。",
-    "UNESCO：全球入学均衡不等于各地区均衡或人人完成学业；报告含不同年份数据。",
-    "海洋雪：六倍估计来自实验与模型，不是全球碳汇已实测增加六倍。",
-    "W41三道原题和解答、W42三道新题及所有weekly字段完整保留。W42答案和教师提示不在播放JSON内。",
-    "schema_version、demo及display未改，保持2页新闻、3页W41解答、3页W42题目；18秒一页、5分钟刷新。已完成1080×1920与540×960两种9:16视口的八页中英检查，共16组通过，八页截图已逐一核对，无截断、溢出、重叠或控制台错误。仅更新approved.json的批准状态与审核发布元数据，正文逐字段保留。实体屏未验收。"
+    "2026-10-14 review v1：待内容审核及本版发布批准，未发布。依据已批准2026-10-13 review v1；基线HEAD 541a49ac3d9d51a34109b1495052eb55dff2a263，approved.json blob f58e8a4a287e8c5036e5b239e98351536c490d41，SHA256 e5eee601a7e4d81d296dea4a426bdf34f31ccd073ed3ef6fe065f1cb103fe73c。",
+    "三条新选题为太阳风、经济学奖和电池黏结剂，替换KREPE-3、UNESCO教育和南极海冰；东亚锋面、FRB及海洋雪逐字段保留原批准稿及来源日期。",
+    "2026-10-13 UTC独立读取TU Braunschweig太阳风原始机构报道、瑞典皇家科学院经济学奖公告和科普说明、UC San Diego电池原始机构报道；原始链接及实际访问范围见HTML源清单。",
+    "来源日期为论文或机构报道公布日期，不等同于采集数据或发生事件的日期；太阳风研究的机构公布日为10月13日，FRB观测于2024-03-04。",
+    "太阳风：帕克数据中磁场波动旋转方向在流体—粒子尺度过渡处反转，不是太阳整体磁场反转，也未验证新的磁暴预报工具。",
+    "经济学奖：官方10月12日公告决定授予Robert E. Hall与Michael Woodford；使用was awarded而非表示颁奖仪式已完成的received，获奖研究跨多年。",
+    "电池：不含氟、以水加工，柠檬酸连接两种聚合物。水中分离针对研究人员拆解后的电极，商业规模生产尚未完成。机制与阶段以作者所在UCSD机构原文核对；Nature完整正文在本环境重定向受阻。",
+    "东亚锋面沿用批准文案与10月11日来源日期；本次出版方索引确认日期，正文访问受限。其1979—2025年再分析关联不构成某一天的天气预报。",
+    "FRB及海洋雪机构来源于2026-10-13 UTC重读，仍保留原日期。磁星是可能来源；海洋雪六倍估计来自实验与模型，不是全球碳汇已实测增长六倍。",
+    "W41三道原题与真实参考解答、W42三道题及所有weekly字段完整保留。W42教师提示和答案独立存放，不进入播放JSON或学生预览。",
+    "schema_version、demo、display及页面版式保持原批准配置：2页新闻＋3页W41解答＋3页W42题目，共8页；18秒一页，5分钟刷新。验证证据见审稿HTML；实体屏未验收。",
+    "独立版本草稿；未覆盖approved.json及旧10月13日draft.json，未提交、推送或部署。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-13T08:54+08:00",
-    "note": "Approved for publication by the content owner in direct chat on 2026-10-13 at 08:54 Asia/Shanghai (00:54 UTC), message Sentinel_c4f249fdfa28819196fa4beeb919be96. Approved source: 2026-10-13 review v1, SHA256 c65902ab13beace899d60086265f53e3d54bd40814972126a7012d7972fa1eed. Bilingual eight-slide validation passed at 1080x1920 and 540x960. Body, weekly and display remain unchanged. Physical display not inspected."
+    "approved_at": "2026-10-13T15:02:52.545893+00:00",
+    "note": "Approved for publication by the content owner in direct chat on 2026-10-13 at 15:02:52.545893 UTC (23:02:52.545893 Asia/Shanghai), message Sentinel_f4144e6064d08191a9e7d37649e3b0f7: 开始更新. Approval scope: 2026-10-14 v1 news update presented in assistant message Sentinel_491c7276c7948191a5ed5755dab14c8f; approved draft SHA256 9d721c8216ca0a3d07706e8f7d9720302245d8f8377641a0b6f60e403f5c7eff. All other draft fields, including the historical editorial notes, remain exact. W42 teacher hints and solutions are excluded from playback. Physical display not inspected."
   }
 }
