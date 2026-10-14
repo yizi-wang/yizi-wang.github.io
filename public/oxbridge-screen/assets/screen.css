@@ -195,6 +195,7 @@ body.display-page {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-width: 0;
+  min-height: 0;
   padding: 7.5rem 7.5rem 6rem 6.2rem;
 }
 
@@ -355,7 +356,7 @@ body.display-page {
   grid-template-columns: 14rem 1fr;
   gap: 2.4rem;
   align-items: center;
-  padding: 2.6rem 0;
+  padding: 0.7rem 0;
   border-bottom: 1px solid var(--rule);
 }
 
