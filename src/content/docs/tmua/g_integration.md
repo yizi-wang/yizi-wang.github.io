@@ -2,319 +2,319 @@
 title: "G Integration"
 ---
 
-## 模块 G：积分
+## Module G: Integration
 
-> **对应考纲 Section 1**: MM7.1, MM7.2, MM7.3, MM7.4, MM7.5, MM7.6
-> **对应 Paper**: P1 重点（27/320 题），P2 涉及（逻辑推理型积分题）
-> **建议课时**: 2 课时 | **目标题量**: 15-20 题
+> **Syllabus Sections**: MM7.1, MM7.2, MM7.3, MM7.4, MM7.5, MM7.6
+> **Paper Coverage**: P1 Focus (27/320 questions), P2 Covers (logic-based integration questions)
+> **Recommended Time**: 2 lessons | **Target Question Count**: 15-20 questions
 
 ---
 
-## 📋 模块概览
+## 📋 Module Overview
 
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
+| Section | Content | Syllabus | Past Paper Frequency | Lessons |
 |------|------|---------|-------------|------|
-| G1 | 定积分与面积 | MM7.1, MM7.4 | 8 年 15 次 | 0.5 |
-| G2 | 幂函数积分 | MM7.2, MM7.3 | 8 年 18 次 | 1 |
-| G3 | 梯形法则与微分方程 | MM7.5, MM7.6 | 8 年 8 次 | 0.5 |
+| G1 | Definite Integrals and Area | MM7.1, MM7.4 | 15 times in 8 years | 0.5 |
+| G2 | Integration of Power Functions | MM7.2, MM7.3 | 18 times in 8 years | 1 |
+| G3 | The Trapezium Rule and Differential Equations | MM7.5, MM7.6 | 8 times in 8 years | 0.5 |
 
 ---
 
-## G1 定积分与面积 [MM7.1, MM7.4]
+## G1 Definite Integrals and Area [MM7.1, MM7.4]
 
-### 1.1 定积分的几何意义
+### 1.1 Geometric Meaning of Definite Integrals
 
-定积分 $\displaystyle\int_a^b f(x)\,dx$ 表示曲线 $y = f(x)$ 与 $x$ 轴之间区域的**有向面积**：
-- 当 $f(x) > 0$ 时，积分值为正（面积在 $x$ 轴上方）
-- 当 $f(x) < 0$ 时，积分值为负（面积在 $x$ 轴下方）
+The definite integral $\displaystyle\int_a^b f(x)\,dx$ represents the **signed area** between the curve $y = f(x)$ and the $x$-axis:
+- When $f(x) > 0$, the integral value is positive (area above the $x$-axis).
+- When $f(x) < 0$, the integral value is negative (area below the $x$-axis).
 
-**⚠️ 面积与积分的区别**：
-求面积时，若曲线在 $x$ 轴下方，需要取绝对值：
+**⚠️ Difference Between Area and Integral**:
+When calculating the area, if the curve is below the $x$-axis, you need to take the absolute value:
 $$\text{Area} = \int_a^b |f(x)|\,dx$$
 
-这与直接计算 $\displaystyle\int_a^b f(x)\,dx$ 可能不同！
+This may be different from directly calculating $\displaystyle\int_a^b f(x)\,dx$!
 
-### 1.2 曲线间面积
+### 1.2 Area Between Curves
 
-两条曲线 $y = f(x)$（上曲线）与 $y = g(x)$（下曲线）围成的面积：
+The area enclosed by two curves $y = f(x)$ (the upper curve) and $y = g(x)$ (the lower curve):
 
 $$\text{Area} = \int_a^b [f(x) - g(x)]\,dx$$
 
-**关键步骤**：
-1. 求交点（解方程 $f(x) = g(x)$），确定积分区间 $[a, b]$
-2. 判断哪条曲线在上方（在区间内选取测试点）
-3. 上曲线减下曲线，积分
+**Key Steps**:
+1. Find the points of intersection (solve the equation $f(x) = g(x)$) to determine the limits of integration $[a, b]$.
+2. Determine which curve is on top (by choosing test points within the interval).
+3. Subtract the lower curve from the upper curve, then integrate.
 
-### 1.3 积分的合并 [MM7.4]
+### 1.3 Combining Integrals [MM7.4]
 
-**同区间合并**：
+**Combining Over the Same Interval**:
 $$\int_a^b f(x)\,dx + \int_a^b g(x)\,dx = \int_a^b [f(x) + g(x)]\,dx$$
 
-**相邻区间合并**：
+**Combining Adjacent Intervals**:
 $$\int_a^c f(x)\,dx + \int_c^b f(x)\,dx = \int_a^b f(x)\,dx$$
 
-**反向积分**：
+**Reversing Limits**:
 $$\int_b^a f(x)\,dx = -\int_a^b f(x)\,dx$$
 
-**⚡ 应用技巧**：题目中若给出 $\displaystyle\int_0^q f(x)\,dx$ 和 $\displaystyle\int_p^r f(x)\,dx$，可利用合并性质求其他区间的积分值，无需重复计算。
+**⚡ Application Tip**: If a question provides $\displaystyle\int_0^q f(x)\,dx$ and $\displaystyle\int_p^r f(x)\,dx$, you can use the combining properties to find integral values for other intervals without recalculating.
 
 ---
 
-## G2 幂函数积分 [MM7.2, MM7.3]
+## G2 Integration of Power Functions [MM7.2, MM7.3]
 
-### 2.1 基本积分公式
+### 2.1 Basic Integration Formula
 
-**幂函数积分**（$n \neq -1$）：
+**Integration of Power Functions** ($n \neq -1$):
 $$\int x^n\,dx = \frac{x^{n+1}}{n+1} + C$$
 
-**⚠️ 注意**：
-- 当 $n = -1$ 时，$\displaystyle\int \frac{1}{x}\,dx = \ln|x| + C$（TMUA 不涉及）
-- 负指数积分后符号变化：$\displaystyle\int x^{-2}\,dx = -x^{-1} + C$
+**⚠️ Note**:
+- When $n = -1$, $\displaystyle\int \frac{1}{x}\,dx = \ln|x| + C$ (Not tested in TMUA).
+- Watch for sign changes after integrating negative indices: $\displaystyle\int x^{-2}\,dx = -x^{-1} + C$.
 
-### 2.2 积分前先化简
+### 2.2 Simplify Before Integrating
 
-很多题目需要先展开再积分：
+Many questions require you to expand the expression before integrating:
 
-**例**：$\displaystyle\int (x + 2)^2\,dx$
-先展开：$(x + 2)^2 = x^2 + 4x + 4$
-再积分：$\displaystyle\int (x^2 + 4x + 4)\,dx = \frac{x^3}{3} + 2x^2 + 4x + C$
+**Example**: $\displaystyle\int (x + 2)^2\,dx$
+First expand: $(x + 2)^2 = x^2 + 4x + 4$
+Then integrate: $\displaystyle\int (x^2 + 4x + 4)\,dx = \frac{x^3}{3} + 2x^2 + 4x + C$
 
-**例**：$\displaystyle\int \frac{(3x - 5)^2}{x^{1/2}}\,dx$
-先展开分子：$(3x - 5)^2 = 9x^2 - 30x + 25$
-除以 $x^{1/2}$：$9x^{3/2} - 30x^{1/2} + 25x^{-1/2}$
-再积分：$9 \cdot \frac{x^{5/2}}{5/2} - 30 \cdot \frac{x^{3/2}}{3/2} + 25 \cdot \frac{x^{1/2}}{1/2}$
+**Example**: $\displaystyle\int \frac{(3x - 5)^2}{x^{1/2}}\,dx$
+First expand the numerator: $(3x - 5)^2 = 9x^2 - 30x + 25$
+Divide by $x^{1/2}$: $9x^{3/2} - 30x^{1/2} + 25x^{-1/2}$
+Then integrate: $9 \cdot \frac{x^{5/2}}{5/2} - 30 \cdot \frac{x^{3/2}}{3/2} + 25 \cdot \frac{x^{1/2}}{1/2}$
 $= \frac{18}{5}x^{5/2} - 20x^{3/2} + 50x^{1/2} + C$
 
-### 2.3 微积分基本定理 [MM7.3]
+### 2.3 The Fundamental Theorem of Calculus [MM7.3]
 
-**第一形式**：
+**First Form**:
 $$\int_a^b f(x)\,dx = F(b) - F(a)$$
-其中 $F'(x) = f(x)$，即 $F$ 是 $f$ 的原函数。
+Where $F'(x) = f(x)$, meaning $F$ is the antiderivative of $f$.
 
-**第二形式**：
+**Second Form**:
 $$\frac{d}{dx}\int_a^x f(t)\,dt = f(x)$$
 
-**应用场景**：
-- 若已知 $\displaystyle\int_0^x f(t)\,dt$ 的表达式，对 $x$ 求导可得 $f(x)$
-- 原函数与导数互逆关系，用于综合题（如 2022 P1 Q3）
+**Application Scenarios**:
+- If the expression for $\displaystyle\int_0^x f(t)\,dt$ is known, differentiating it with respect to $x$ yields $f(x)$.
+- The inverse relationship between antiderivatives and derivatives is used in comprehensive questions (e.g., 2022 P1 Q3).
 
 ---
 
-## G3 梯形法则与微分方程 [MM7.5, MM7.6]
+## G3 The Trapezium Rule and Differential Equations [MM7.5, MM7.6]
 
-### 3.1 梯形法则
+### 3.1 The Trapezium Rule
 
-用 $n$ 个等宽梯形近似积分 $\displaystyle\int_a^b f(x)\,dx$：
+Use $n$ equally spaced trapeziums to approximate the integral $\displaystyle\int_a^b f(x)\,dx$:
 
 $$\int_a^b f(x)\,dx \approx \frac{h}{2}\left[y_0 + 2(y_1 + y_2 + \cdots + y_{n-1}) + y_n\right]$$
 
-其中 $h = \frac{b - a}{n}$，$y_i = f(x_i)$。
+Where $h = \frac{b - a}{n}$ and $y_i = f(x_i)$.
 
-**高估与低估判断**：
-- 曲线**向上凸**（如 $\sin^2 x$ 在上升段）→ 梯形法则**高估**
-- 曲线**向下凸**（如 $\cos^2 x$ 在上升段）→ 梯形法则**低估**
+**Overestimate and Underestimate Analysis**:
+- Curve is **concave up** (e.g., $\sin^2 x$ in its increasing section) → Trapezium rule **overestimates**
+- Curve is **concave down** (e.g., $\cos^2 x$ in its increasing section) → Trapezium rule **underestimates**
 
-**⚡ 快速判断口诀**：曲线弯向哪里，梯形面积就偏大。
+**⚡ Quick Judgement Tip**: Consider the concavity; chords lie above a concave up curve, making the trapezium area larger.
 
-### 3.2 微分方程求解 [MM7.6]
+### 3.2 Solving Differential Equations [MM7.6]
 
-形式 $\displaystyle\frac{dy}{dx} = f(x)$ 的微分方程：
+Differential equations of the form $\displaystyle\frac{dy}{dx} = f(x)$:
 
-**解题步骤**：
-1. 两边积分：$y = \int f(x)\,dx + C$
-2. 利用初始条件（如 $x = 1$ 时 $y = 5$）确定 $C$
-3. 写出 $y$ 的完整表达式
+**Solving Steps**:
+1. Integrate both sides: $y = \int f(x)\,dx + C$
+2. Use the initial condition (e.g., when $x = 1$, $y = 5$) to determine $C$.
+3. Write the complete expression for $y$.
 
-**⚠️ 易错点**：
-- 被积函数中的分式项，先写成幂的形式再积分
-- 积分后常数项 $C$ 不要漏掉
-- 代入初始条件前，先化简表达式
-
----
-
-## 三种典型题型与解题策略
-
-### 题型 A：积分计算（化简 + 逐项积分）
-
-**识别特征**：被积函数含括号、分式，需要先展开
-
-**解题策略**：
-1. 展开括号或拆分分式
-2. 转化为幂的形式 $x^n$
-3. 逐项积分，合并结果
-
-**例题特征**：
-- $\displaystyle\int (x^2 - \frac{4}{x^2})^2\,dx$（2016 P2 Q1）
-- $\displaystyle\int \frac{3 - 2x}{x\sqrt{x}}\,dx$（2018 P1 Q1）
-
-### 题型 B：面积问题（求交点 + 上减下）
-
-**识别特征**：求曲线与轴或两条曲线围成的面积
-
-**解题策略**：
-1. 求交点确定积分区间
-2. 判断上/下曲线（或判断曲线在轴上方/下方）
-3. 上减下积分，注意取绝对值
-
-**例题特征**：
-- $y = x^2 - 1$ 与 $x$ 轴围成面积（2016 P1 Q5）
-- $y = p\sqrt{x}$ 与 $x = p\sqrt{y}$ 围成面积（2019 P1 Q9）
-
-### 题型 C：梯形法则误差分析
-
-**识别特征**：判断梯形近似是高估还是低估
-
-**解题策略**：
-1. 分析曲线凹凸性（向上凸还是向下凸）
-2. 利用对称性（偶函数反射不改变误差方向）
-3. 利用互补关系（$\sin^2 x + \cos^2 x = 1$）
+**⚠️ Common Mistakes**:
+- Fractional terms in the integrand must be written in index form before integrating.
+- Do not forget the constant of integration $C$.
+- Simplify the expression before substituting the initial condition.
 
 ---
 
-## ⚡ 速解技巧汇总
+## Three Typical Question Types and Strategies
 
-| 场景 | 技巧 |
+### Type A: Integral Calculation (Simplify + Integrate Term by Term)
+
+**Identifying Features**: The integrand contains brackets or fractions and needs to be expanded first.
+
+**Solving Strategy**:
+1. Expand brackets or split fractions.
+2. Convert to the index form $x^n$.
+3. Integrate term by term and combine the results.
+
+**Example Features**:
+- $\displaystyle\int (x^2 - \frac{4}{x^2})^2\,dx$ (2016 P2 Q1)
+- $\displaystyle\int \frac{3 - 2x}{x\sqrt{x}}\,dx$ (2018 P1 Q1)
+
+### Type B: Area Problems (Find Intersections + Upper minus Lower)
+
+**Identifying Features**: Find the area enclosed by a curve and an axis, or between two curves.
+
+**Solving Strategy**:
+1. Find the points of intersection to determine the limits of integration.
+2. Identify the upper and lower curves (or determine if the curve is above/below the axis).
+3. Integrate the upper curve minus the lower curve, making sure to take the absolute value if necessary.
+
+**Example Features**:
+- Area enclosed by $y = x^2 - 1$ and the $x$-axis (2016 P1 Q5)
+- Area enclosed by $y = p\sqrt{x}$ and $x = p\sqrt{y}$ (2019 P1 Q9)
+
+### Type C: Trapezium Rule Error Analysis
+
+**Identifying Features**: Determine whether the trapezium approximation is an overestimate or an underestimate.
+
+**Solving Strategy**:
+1. Analyse the concavity of the curve (concave up or concave down).
+2. Use symmetry (reflection of an even function does not change the direction of the error).
+3. Use complementary relationships (e.g., $\sin^2 x + \cos^2 x = 1$).
+
+---
+
+## ⚡ Quick Solving Tips Summary
+
+| Scenario | Tip |
 |------|------|
-| 分式积分 | 先写成幂 $x^{-n}$，再套公式 |
-| 括号内积分 | 展开！不要直接积分 $(x+2)^2$ |
-| 负指数积分 | 答案符号会变：$x^{-2} \to -x^{-1}$ |
-| 面积问题 | 画草图判断上/下曲线 |
-| 梯形误差 | 曲线弯向哪里，梯形偏大 |
-| 微分方程 | 先积分，再用初始条件定常数 |
+| Integrating fractions | Rewrite as powers $x^{-n}$ first, then apply the formula. |
+| Integrating brackets | Expand! Do not integrate $(x+2)^2$ directly. |
+| Negative indices | The sign will change: $x^{-2} \to -x^{-1}$. |
+| Area problems | Sketch a graph to determine the upper/lower curves. |
+| Trapezium error | Consider the concavity; chords lie above a concave up curve. |
+| Differential equations | Integrate first, then use the initial condition to find the constant. |
 
-## ⚠️ 易错警示
+## ⚠️ Common Pitfalls
 
-- ❌ 积分公式是 $\frac{x^{n+1}}{n+1}$，**不是** $nx^{n-1}$（那是导数公式）
-- ❌ $\displaystyle\int x^{-2}\,dx = -x^{-1} + C$，**不是** $x^{-1} + C$（负指数符号变化）
-- ❌ 求面积时直接积分，**忘记取绝对值**（当曲线在轴下方）
-- ❌ 微分方程求解时，**漏掉积分常数 $C$**
-- ❌ 梯形法则公式中，**中间项系数是 2**，首尾项系数是 1
+- ❌ The integration formula is $\frac{x^{n+1}}{n+1}$, **not** $nx^{n-1}$ (which is the differentiation formula).
+- ❌ $\displaystyle\int x^{-2}\,dx = -x^{-1} + C$, **not** $x^{-1} + C$ (watch out for the sign change with negative indices).
+- ❌ Integrating directly to find the area and **forgetting to take the absolute value** (when the curve is below the axis).
+- ❌ **Forgetting the integration constant $C$** when solving differential equations.
+- ❌ In the trapezium rule formula, **the coefficient of the middle terms is 2**, while the first and last terms have a coefficient of 1.
 
 ---
 
-## 📝 精选例题
+## 📝 Selected Examples
 
-### 例题 1（2017 P1 Q1 · 微分方程求解）
+### Example 1 (2017 P1 Q1 · Solving Differential Equations)
 
-**题目**：已知
+**Question**: Given that
 
 $$\frac{dy}{dx} = 3x^2 - \frac{2-3x}{x^3}, \quad x \neq 0$$
 
-且 $x = 1$ 时 $y = 5$，求 $y$ 关于 $x$ 的表达式。
+and $y = 5$ when $x = 1$, find the expression for $y$ in terms of $x$.
 
-【题目分析】
-本题考点为积分求原函数。已知导数表达式，需要对各项分别积分，再利用初始条件确定积分常数。
+**[Question Analysis]**
+This question tests finding the antiderivative. Given the derivative expression, you need to integrate each term separately and then use the initial condition to determine the constant of integration.
 
-【解题步骤】
-第一步：化简被积函数。将分式项写成幂的形式：
+**[Solving Steps]**
+Step 1: Simplify the integrand. Rewrite the fractional terms in index form:
 $$\frac{dy}{dx} = 3x^2 - \frac{2-3x}{x^3} = 3x^2 - \frac{2}{x^3} + \frac{3x}{x^3} = 3x^2 - 2x^{-3} + 3x^{-2}$$
 
-第二步：逐项积分。利用幂函数积分公式：
+Step 2: Integrate term by term. Use the integration formula for power functions:
 $$y = \int (3x^2 - 2x^{-3} + 3x^{-2})\,dx = x^3 + x^{-2} - 3x^{-1} + C$$
 
-第三步：代入初始条件。当 $x = 1$ 时 $y = 5$：
+Step 3: Substitute the initial condition. When $x = 1$, $y = 5$:
 $$5 = 1^3 + 1^{-2} - 3 \cdot 1^{-1} + C = 1 + 1 - 3 + C = -1 + C$$
-解得 $C = 6$。
+Solving gives $C = 6$.
 
-因此 $y = x^3 + x^{-2} - 3x^{-1} + 6$。
+Therefore, $y = x^3 + x^{-2} - 3x^{-1} + 6$.
 
-【快捷思路】
-逐项积分后代入 $x = 1$ 即可求出常数项。注意 $(2-3x)/x^3$ 的符号拆分容易出错，写成幂的形式再积分更稳妥。
+**[Quick Shortcut]**
+After integrating term by term, simply substitute $x = 1$ to find the constant. Be careful with splitting the signs in $(2-3x)/x^3$; it is safer to rewrite it in index form before integrating.
 
-【正确答案】C
+**[Correct Answer]** C
 
-【知识点】Integration | **考纲**: MM7.2, MM7.6
+**[Knowledge Point]** Integration | **Syllabus**: MM7.2, MM7.6
 
 ---
 
-### 例题 2（2019 P1 Q9 · 曲线间面积）
+### Example 2 (2019 P1 Q9 · Area Between Curves)
 
-**题目**：$p$ 为正常数。求曲线 $y = p\sqrt{x}$ 和 $x = p\sqrt{y}$ 围成的面积。
+**Question**: $p$ is a positive constant. Find the area enclosed by the curves $y = p\sqrt{x}$ and $x = p\sqrt{y}$.
 
-【题目分析】
-两条曲线互为反函数形式，图形关于 $y = x$ 对称。求交点确定积分区间后，用上曲线减下曲线积分。
+**[Question Analysis]**
+The two curves are inverse functions of each other, so their graphs are symmetric about $y = x$. After finding the points of intersection to determine the limits of integration, integrate the upper curve minus the lower curve.
 
-【解题步骤】
-第一步：写出两条曲线的显式形式。
-由 $y = p\sqrt{x}$ 得 $y^2 = p^2 x$，即 $x = \frac{y^2}{p^2}$。
-由 $x = p\sqrt{y}$ 得 $x^2 = p^2 y$，即 $y = \frac{x^2}{p^2}$。
+**[Solving Steps]**
+Step 1: Write the explicit forms of both curves.
+From $y = p\sqrt{x}$, we get $y^2 = p^2 x$, so $x = \frac{y^2}{p^2}$.
+From $x = p\sqrt{y}$, we get $x^2 = p^2 y$, so $y = \frac{x^2}{p^2}$.
 
-第二步：求交点。
-代入得 $\frac{y^2}{p^2} = p\sqrt{y}$，即 $y^4 = p^6 y$。
-$y(y^3 - p^6) = 0$，解得 $y = 0$ 或 $y = p^2$。
+Step 2: Find the points of intersection.
+Substituting gives $\frac{y^2}{p^2} = p\sqrt{y}$, which simplifies to $y^4 = p^6 y$.
+$y(y^3 - p^6) = 0$, giving $y = 0$ or $y = p^2$.
 
-当 $y = p^2$ 时：$x = p\sqrt{p^2} = p^2$。
-交点为 $(0, 0)$ 和 $(p^2, p^2)$。
+When $y = p^2$: $x = p\sqrt{p^2} = p^2$.
+The points of intersection are $(0, 0)$ and $(p^2, p^2)$.
 
-第三步：积分求面积。
-在区间 $[0, p^2]$ 上，$y = p\sqrt{x}$ 在上，$y = \frac{x^2}{p^2}$ 在下。
+Step 3: Integrate to find the area.
+On the interval $[0, p^2]$, $y = p\sqrt{x}$ is the upper curve and $y = \frac{x^2}{p^2}$ is the lower curve.
 
 $$\text{Area} = \int_0^{p^2} \left(p\sqrt{x} - \frac{x^2}{p^2}\right)\,dx = \left[\frac{2}{3}px^{3/2} - \frac{x^3}{3p^2}\right]_0^{p^2}$$
 
 $$= \frac{2}{3}p(p^2)^{3/2} - \frac{(p^2)^3}{3p^2} = \frac{2}{3}p^4 - \frac{p^4}{3} = \frac{p^4}{3}$$
 
-【快捷思路】
-两条曲线互为反函数，交点在 $y = x$ 上。直接代 $y = x$ 求 $x^2 = p^2 x$ 得 $x = p^2$（舍去 $x = 0$）。利用对称性，面积 = $\displaystyle\int_0^{p^2}(p\sqrt{x} - \frac{x^2}{p^2})\,dx$。
+**[Quick Shortcut]**
+The two curves are inverse functions, so their intersections lie on $y = x$. Directly substitute $y = x$ to solve $x^2 = p^2 x$, giving $x = p^2$ (ignoring $x = 0$). Using symmetry, the area is $\displaystyle\int_0^{p^2}(p\sqrt{x} - \frac{x^2}{p^2})\,dx$.
 
-【正确答案】D（$\frac{p^4}{3}$）
+**[Correct Answer]** D ($\frac{p^4}{3}$)
 
-【知识点】Integration | **考纲**: MM7.1
-
----
-
-### 例题 3（2019 P2 Q13 · 梯形法则误差分析）
-
-**题目**：学生用 4 个小区间的梯形法则近似 $\displaystyle\int_a^b \sin^2 x\,dx$，结果为高估。
-
-判断以下命题哪些**必然**成立：
-
-- **I** 若用同样方法近似 $\displaystyle\int_{-b}^{-a} \sin^2 x\,dx$，结果仍为高估。
-- **II** 若用同样方法近似 $\displaystyle\int_a^b \cos^2 x\,dx$，结果为低估。
-
-【题目分析】
-考查梯形法则的误差分析与函数对称性。利用偶函数对称性和 $\sin^2 x + \cos^2 x = 1$ 的互补关系。
-
-【解题步骤】
-命题 I：$\sin^2 x$ 是偶函数，图像关于 $y$ 轴对称。
-原区间 $[a, b]$ 上的梯形沿 $y$ 轴反射，恰好得到 $[-b, -a]$ 上的梯形。图形完全对称，误差方向不变。命题 I 成立。
-
-命题 II：利用 $\sin^2 x + \cos^2 x = 1$，$\cos^2 x = 1 - \sin^2 x$。
-$\cos^2 x$ 的图像是 $\sin^2 x$ 关于 $y = \frac{1}{2}$ 翻折。
-梯形面积之和等于矩形面积（高为 1），这是精确值。
-$\sin^2 x$ 梯形近似高估 $\Rightarrow$ $\cos^2 x$ 梯形近似低估。命题 II 成立。
-
-【快捷思路】
-偶函数反射不改变误差（命题 I）；互补关系 $\sin^2 + \cos^2 = 1$：一个高估则另一个低估（命题 II）。
-
-【正确答案】D（I 和 II 都成立）
-
-【知识点】Integration | **考纲**: MM7.5
+**[Knowledge Point]** Integration | **Syllabus**: MM7.1
 
 ---
 
-## 🏋️ 课后练习（限时 15 分钟）
+### Example 3 (2019 P2 Q13 · Trapezium Rule Error Analysis)
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
+**Question**: A student uses the trapezium rule with 4 sub-intervals to approximate $\displaystyle\int_a^b \sin^2 x\,dx$, and the result is an overestimate.
+
+Determine which of the following statements **must** be true:
+
+- **I** If the same method is used to approximate $\displaystyle\int_{-b}^{-a} \sin^2 x\,dx$, the result will still be an overestimate.
+- **II** If the same method is used to approximate $\displaystyle\int_a^b \cos^2 x\,dx$, the result will be an underestimate.
+
+**[Question Analysis]**
+This tests the error analysis of the trapezium rule and function symmetry. Make use of the even function symmetry and the complementary relationship $\sin^2 x + \cos^2 x = 1$.
+
+**[Solving Steps]**
+Statement I: $\sin^2 x$ is an even function, so its graph is symmetric about the $y$-axis.
+Reflecting the trapeziums on the original interval $[a, b]$ across the $y$-axis gives exactly the trapeziums on $[-b, -a]$. The geometry is completely symmetric, so the direction of the error remains unchanged. Statement I is true.
+
+Statement II: Using $\sin^2 x + \cos^2 x = 1$, we have $\cos^2 x = 1 - \sin^2 x$.
+The graph of $\cos^2 x$ is the reflection of $\sin^2 x$ across the line $y = \frac{1}{2}$.
+The sum of the trapezium areas for $\sin^2 x$ and $\cos^2 x$ equals the area of the rectangle (with a height of 1), which is an exact value.
+If the trapezium approximation for $\sin^2 x$ is an overestimate $\Rightarrow$ the trapezium approximation for $\cos^2 x$ must be an underestimate. Statement II is true.
+
+**[Quick Shortcut]**
+Reflecting an even function does not change the error (Statement I); For the complementary relationship $\sin^2 x + \cos^2 x = 1$, if one is an overestimate, the other must be an underestimate (Statement II).
+
+**[Correct Answer]** D (Both I and II are true)
+
+**[Knowledge Point]** Integration | **Syllabus**: MM7.5
+
+---
+
+## 🏋️ Post-Lesson Practice (15 Minutes Time Limit)
+
+| # | Question | Topic | Syllabus | Difficulty |
 |---|------|------|---------|------|
-| 1 | 2016 P1 Q5 | 面积 + 分段积分 | MM7.1 | ⭐⭐⭐ |
-| 2 | 2016 P2 Q1 | 展开后积分 | MM7.2 | ⭐⭐⭐ |
-| 3 | 2018 P1 Q1 | 分式积分 | MM7.2 | ⭐⭐⭐ |
-| 4 | 2017 P1 Q12 | 积分性质判断 | MM7.4 | ⭐⭐⭐ |
-| 5 | 2017 P1 Q17 | 积分与求和 | MM7.3, MM7.4 | ⭐⭐⭐⭐ |
-| 6 | 2022 P1 Q3 | 微积分基本定理 | MM7.3 | ⭐⭐⭐⭐ |
-| 7 | 2022 P1 Q6 | 定积分 + 对数 | MM7.2, MM5 | ⭐⭐⭐ |
-| 8 | 2023 P1 Q1 | 积分合并 + 待定系数 | MM7.4 | ⭐⭐⭐ |
+| 1 | 2016 P1 Q5 | Area + Piecewise Integration | MM7.1 | ⭐⭐⭐ |
+| 2 | 2016 P2 Q1 | Expand then Integrate | MM7.2 | ⭐⭐⭐ |
+| 3 | 2018 P1 Q1 | Integrating Fractions | MM7.2 | ⭐⭐⭐ |
+| 4 | 2017 P1 Q12 | Properties of Integrals | MM7.4 | ⭐⭐⭐ |
+| 5 | 2017 P1 Q17 | Integrals and Summations | MM7.3, MM7.4 | ⭐⭐⭐⭐ |
+| 6 | 2022 P1 Q3 | Fundamental Theorem of Calculus | MM7.3 | ⭐⭐⭐⭐ |
+| 7 | 2022 P1 Q6 | Definite Integrals + Logarithms | MM7.2, MM5 | ⭐⭐⭐ |
+| 8 | 2023 P1 Q1 | Combining Integrals + Undetermined Coefficients | MM7.4 | ⭐⭐⭐ |
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+*For full step-by-step solutions, please refer to the question bank database. Each question includes **[Solving Steps]** and **[Quick Shortcut]**.*
 
 ---
 
-## 🎯 配套练习
+## 🎯 Complementary Practice
 
-学完本章？[→ 去做 Integration 相关练习题](/practice/tmua/?topic=Integration)
+Finished this chapter? [→ Go to Integration practice questions](/practice/tmua/?topic=Integration)
 
 ---
 
-*讲义版本: v1.0 | 生成时间: 2026-04-29*
+*Notes Version: v1.0 | Generated: 2026-04-29*

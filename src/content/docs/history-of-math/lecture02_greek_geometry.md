@@ -6,7 +6,7 @@ title: "Lecture 2: The Foundations of Greek Geometry"
 
 ## Review and Introduction
 
-In the last lecture, we explored the long history of the Pythagorean theorem and how it revealed the deep connection between number and form. We also discussed how the discovery of irrational numbers like $\sqrt{2}$ dealt a major blow to the Pythagorean belief that "all is number" (where "number" meant rational number), leading to a separation of "number" and "form" in ancient Greek mathematics.
+In the last lecture, we explored the long history of the Pythagorean theorem and how it revealed the deep connection between number and form. We also discussed how the discovery of irrational numbers like  $\sqrt{2}$  dealt a major blow to the Pythagorean belief that "all is number" (where "number" meant rational number), leading to a separation of "number" and "form" in ancient Greek mathematics.
 
 This "mathematical crisis," in a way, pushed Greek mathematicians to rely more heavily on geometry. Geometric figures could intuitively represent quantities that could not be precisely described by simple integer ratios, and geometric proofs seemed to offer a more universal and solid foundation. Against this backdrop, Greek geometry achieved glorious success, and its rigorous logical system and profound geometric insights shaped the bedrock of Western scientific thought. Today, we will step into the hall of Greek geometry to explore its core concepts and enduring legacy.
 
@@ -43,12 +43,12 @@ In Greek geometry, regular polyhedra, also known as Platonic solids, hold a spec
 
 - **Squaring the circle:** Construct a square with the same area as a given circle.
 - **Trisecting an arbitrary angle:** Divide any given angle into three equal parts.
-- **Doubling the cube:** Construct a cube with twice the volume of a given cube (i.e., construct a side of length $\sqrt[3]{2}$).
+- **Doubling the cube:** Construct a cube with twice the volume of a given cube (i.e., construct a side of length  $\sqrt[3]{2}$ ).
 
 **A Millennia-Long Challenge and Its Resolution:** It was not until the 19th century, with the development of algebraic theory, that these problems were finally proven to be **impossible** to solve under the strict limitations of compass and straightedge construction.
 
 - **Wantzel's proof (1837):** Proved the impossibility of "doubling the cube" and "trisecting an angle."
-- **Lindemann's proof (1882):** Proved the impossibility of "squaring the circle" by proving that $\pi$ is a **transcendental number** (i.e., not a root of any polynomial equation with integer coefficients).
+- **Lindemann's proof (1882):** Proved the impossibility of "squaring the circle" by proving that  $\pi$  is a **transcendental number** (i.e., not a root of any polynomial equation with integer coefficients).
 
 ## Conic Sections: From Pure Geometry to Newton's Planetary Orbits
 

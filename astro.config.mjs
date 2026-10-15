@@ -12,14 +12,20 @@ export default defineConfig({
 		starlight({
 			title: "Yizi's Math Notes",
 			description: 'Mathematics teaching resources and TMUA study materials',
+			components: {
+				Header: './src/components/TopBannerHeader.astro',
+			},
 			defaultLocale: 'root',
 			locales: {
 				root: { label: 'English', lang: 'en' },
 				zh: { label: '中文', lang: 'zh-CN' },
 			},
 			social: [
-				{ icon: 'github', href: 'https://github.com/yizi-wang', label: 'GitHub' },
+				{ icon: 'github', href: 'https://github.com/The-CerealDev', label: 'GitHub' },
 			],
+			editLink: {
+				baseUrl: 'https://github.com/The-CerealDev/yizi-wang.github.io/edit/translate-teaching-notes/',
+			},
 			sidebar: [
 				{
 					label: 'About',
