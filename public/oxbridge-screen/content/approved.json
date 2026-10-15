@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-15",
-  "edition": "2026-10-15 review v1",
+  "content_date": "2026-10-16",
+  "edition": "2026-10-16 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,20 +12,20 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月15日\n每日简报",
+    "headline": "10月16日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-14-solar-wind-helicity",
-        "category": "物理 / PHYSICS",
-        "headline": "太阳风的混乱中发现新规律",
-        "headline_en": "Hidden order found in the solar wind",
-        "summary": "10月13日公布的研究利用帕克太阳探测器数据，发现太阳风磁场波动的旋转方向，会在从大尺度流体行为过渡到小尺度粒子行为时反转。这为理解太空等离子体湍流与空间天气提供线索，尚不是新的磁暴预报工具。",
-        "summary_en": "Research announced on October 13 used Parker Solar Probe data to reveal a reversal in the rotation of magnetic-field fluctuations where solar-wind behaviour changes from fluid-like to particle-dominated scales. The finding offers a clue to turbulence in space plasmas and to space-weather research; it is not yet a new tool for forecasting geomagnetic storms.",
+        "id": "2026-10-16-subseasonal-weather",
+        "category": "气候 / CLIMATE",
+        "headline": "学习预报误差，改善未来数周预测",
+        "headline_en": "Learning forecast errors improves the weeks ahead",
+        "summary": "10月14日发表的研究用机器学习从历史预报误差中学习，校正未来两至六周的概率预报。方法在2025年实时竞赛中表现领先，也改善了极端天气概率的预测。这有望帮助农业、能源与防灾提前规划，但不意味着能准确报出六周后每天的天气。",
+        "summary_en": "A study published on October 14 used machine learning to learn from past forecast errors and improve probabilistic predictions two to six weeks ahead. The method led a 2025 real-time forecasting competition and improved predictions of extreme weather. It could support farming, energy and disaster planning; it does not make daily weather six weeks away certain.",
         "source": {
-          "name": "布伦瑞克工业大学 / TU Braunschweig",
-          "url": "https://magazin.tu-braunschweig.de/pi-post/struktur-im-unstrukturierten-neues-phaenomen-im-sonnenwind-entdeckt/",
-          "published": "2026-10-13"
+          "name": "麻省理工学院 / MIT News",
+          "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+          "published": "2026-10-14"
         },
         "accent": "aqua"
       },
@@ -44,6 +44,48 @@
         "accent": "gold"
       },
       {
+        "id": "2026-10-16-shape-sensing-sheet",
+        "category": "工程 / ENGINEERING",
+        "headline": "柔软薄片用光追踪自身形状",
+        "headline_en": "A soft sheet uses light to sense its own shape",
+        "summary": "MIT10月8日报道，一种柔软薄片把软光纤嵌入硅胶；弯曲改变透过的光量，算法据此重建三维形状。实验中，少量光纤受损后仍能重建整体形状。它为动作追踪提供新思路；康复监测等应用仍属研究设想。",
+        "summary_en": "MIT reported on October 8 that soft optical fibres embedded in silicone let a flexible sheet reconstruct its three-dimensional shape. Bending changes the transmitted light, which an algorithm translates into shape. Experiments retained overall sensing after some fibres were damaged. The prototype suggests a new route to motion tracking; uses such as rehabilitation monitoring remain proposed applications.",
+        "source": {
+          "name": "麻省理工学院 / MIT News",
+          "url": "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008",
+          "published": "2026-10-08"
+        },
+        "accent": "coral"
+      },
+      {
+        "id": "2026-10-14-solar-wind-helicity",
+        "category": "物理 / PHYSICS",
+        "headline": "太阳风的混乱中发现新规律",
+        "headline_en": "Hidden order found in the solar wind",
+        "summary": "10月13日公布的研究利用帕克太阳探测器数据，发现太阳风磁场波动的旋转方向，会在从大尺度流体行为过渡到小尺度粒子行为时反转。这为理解太空等离子体湍流与空间天气提供线索，尚不是新的磁暴预报工具。",
+        "summary_en": "Research announced on October 13 used Parker Solar Probe data to reveal a reversal in the rotation of magnetic-field fluctuations where solar-wind behaviour changes from fluid-like to particle-dominated scales. The finding offers a clue to turbulence in space plasmas and to space-weather research; it is not yet a new tool for forecasting geomagnetic storms.",
+        "source": {
+          "name": "布伦瑞克工业大学 / TU Braunschweig",
+          "url": "https://magazin.tu-braunschweig.de/pi-post/struktur-im-unstrukturierten-neues-phaenomen-im-sonnenwind-entdeckt/",
+          "published": "2026-10-13"
+        },
+        "accent": "aqua"
+      },
+      {
+        "id": "2026-10-16-treble-clef-cluster",
+        "category": "太空 / SPACE",
+        "headline": "星系团碰撞让旧粒子云重新发亮",
+        "headline_en": "A collision may have revived a cosmic particle cloud",
+        "summary": "NASA10月14日报道，X射线与射电观测支持“高音谱号”结构的两步成因：黑洞早期喷发留下的带电粒子云逐渐变暗，随后星系团碰撞使其重新发亮。冲击波可能参与再加能。多波段资料帮助追溯巨型结构的历史；这是对古老事件的解释，并非碰撞刚刚发生。",
+        "summary_en": "NASA reported on October 14 that X-ray and radio observations suggest a two-stage origin for the “Treble Clef” structure. A particle cloud from an earlier black-hole outburst faded, then a galaxy-cluster collision brightened it again. Shock waves may have helped reenergise it. Combining wavelengths helps reconstruct cosmic history; the report explains ancient events, not a collision occurring now.",
+        "source": {
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-breaks-down-treble-clefs-galaxy-cluster-collision/",
+          "published": "2026-10-14"
+        },
+        "accent": "gold"
+      },
+      {
         "id": "2026-10-14-battery-binder",
         "category": "材料 / MATERIALS",
         "headline": "新型电池“胶水”让回收更容易",
@@ -54,48 +96,6 @@
           "name": "加州大学圣迭戈分校 / UC San Diego",
           "url": "https://today.ucsd.edu/story/battery-manufacturing-and-recycling-could-go-green-with-this-glue",
           "published": "2026-10-09"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "2026-10-15-bacteria-write-dna",
-        "category": "生物 / BIOLOGY",
-        "headline": "细菌也会“编写”DNA",
-        "headline_en": "Bacteria Write DNA to Fight Viruses",
-        "summary": "10月12日，《自然》发表研究：细菌防御系统DRT10能以RNA为模板，反复合成具有重复序列的DNA，参与抵抗病毒。冷冻电镜揭示，两个酶分子结合在一条RNA两侧。这种工作方式与维护染色体末端的端粒酶相似，演化分析也支持二者可能同源。发现为理解生命演化和开发DNA编写工具提供线索，但仍属基础研究，尚未证实抗衰老或治疗效果。",
-        "summary_en": "On October 12, Nature reported that a bacterial defense system called DRT10 uses RNA as a template to produce DNA containing repeated sequences, helping bacteria resist viruses. Cryo-electron microscopy revealed two enzyme molecules attached to opposite sides of one RNA molecule. The mechanism resembles that of telomerase, which maintains chromosome ends, and evolutionary analyses suggest a shared origin. The discovery offers clues about life's evolution and possible DNA-writing tools. It remains basic research: benefits for aging or disease treatment have not been established.",
-        "source": {
-          "name": "自然 / Nature",
-          "url": "https://www.nature.com/articles/s41586-026-11250-8",
-          "published": "2026-10-12"
-        },
-        "accent": "aqua"
-      },
-      {
-        "id": "2026-10-13-distant-radio-burst",
-        "category": "太空 / SPACE",
-        "headline": "遥远射电闪光，留下年轻宇宙的线索",
-        "headline_en": "A distant radio flash offers clues from the young universe",
-        "summary": "MeerKAT射电观测与韦布光谱，确认一次快速射电暴来自宇宙诞生约30亿年时的星系。活跃造星的小型宿主，让年轻磁星成为可能来源。射电波沿途留下的变化还能探测星系间物质；爆发机制尚未确定。",
-        "summary_en": "MeerKAT radio observations and Webb spectroscopy placed a fast radio burst in a galaxy seen about three billion years after the Big Bang. Its small, actively star-forming host makes a young magnetar a plausible origin. Changes imprinted on the radio signal also reveal matter along its path, although the process producing the burst remains uncertain.",
-        "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/",
-          "published": "2026-10-08"
-        },
-        "accent": "gold"
-      },
-      {
-        "id": "2026-10-15-lake-sediments-fire",
-        "category": "生态 / ECOLOGY",
-        "headline": "湖底沉积物揭示山火历史",
-        "headline_en": "Lake Sediments Reveal a Fire-Prone Past",
-        "summary": "10月7日，《自然》发表一项澳大利亚研究。团队分析湖底沉积物中的花粉和木炭，重建当地千年的植被与火灾变化。结果显示，殖民时期原住民传统用火中断后，桉树覆盖率由约9%升至34%，火灾更热，土壤侵蚀加剧。燃料积累可能放大气候变暖的影响。这是区域性的历史证据，提示防火还需理解土地管理；不能据此断言所有森林都应采用同一种燃烧方式。",
-        "summary_en": "A Nature study published on October 7 reconstructed a thousand years of environmental change from pollen and charcoal preserved in an Australian lake's sediments. After colonization disrupted Indigenous cultural burning, local eucalypt cover increased from about 9% to 34%, while fires became hotter and soil erosion increased. The findings suggest that accumulated vegetation fuel helped amplify the effects of climate warming. This regional historical evidence highlights the importance of land management in wildfire risk. It does not establish one burning strategy as suitable for every forest.",
-        "source": {
-          "name": "自然 / Nature",
-          "url": "https://www.nature.com/articles/s41586-026-11097-z",
-          "published": "2026-10-07"
         },
         "accent": "coral"
       }
@@ -185,18 +185,18 @@
     "previous_week": "2026-W41"
   },
   "editorial_notes": [
-    "2026-10-15 review v1：独立待审草稿，未获本版发布批准，未发布。已移除旧版review批准记录，status=draft。",
-    "基线：2026-10-14批准内容；Git commit 58b8ede21e8dd1b7ac587c2cc4b179f6482d7fe6；基线文件SHA256 17a677ebdada1a085c87c2a715bb40a044ca7d210b298e67caad4352aad74729。",
-    "仅替换新闻槽4东亚锋面、槽6海洋雪；太阳风、经济学奖、电池黏结剂、FRB逐字段保留原文与来源日期。",
-    "来源日期：DRT10论文2026-10-12；山火论文2026-10-07，ANSTO机构报道2026-10-09。经济学10月12日为授奖决定；FRB报道10月8日、网页更新10月9日、观测事件2024-03-04。",
-    "新题来源复核：DRT10作者摘要及哥伦比亚大学全文；山火出版社说明及ANSTO全文。Nature论文完整正文跳转受阻，不声称读过正文。",
-    "保留四条新闻的原始机构全文于2026-10-14复核。W41三条原题及真实参考解答、W42三条题目及weekly所有字段和顺序完整保留。",
-    "schema_version=2、demo=false、display完整保留；预期播放结构2页新闻、3页W41解答、3页W42题目，共8页，每页18秒，5分钟刷新。",
-    "本地生成审阅文件，未编辑正式仓库，未运行仓库build，未做网页预览、部署或实体屏验收。PDF仅供内容审阅，不是网页或电子屏版式预览。"
+    "2026-10-16 review v1：独立待审稿；内容验收待定，本版发布批准待定，未发布。不得沿用10月15日批准记录。",
+    "已批准基线：2026-10-15 review v1；HEAD be0032f742d1a8c4211177b429f7ffa7444d7b60；approved.json SHA256 d3a863dd6ba37ade7b6473747f6aba8cfa7d2df35591d9a018f9da357570d112。",
+    "本版新增概率天气预报、柔性光纤形状传感、Treble Clef星系团碰撞三条；经济学奖、太阳风和电池黏结剂逐字段保留并于2026-10-15重新核查原始机构全文，不冒充新报道。",
+    "三条新增来源：MIT 2026-10-14及Nature论文摘要；MIT 2026-10-08全文；NASA 2026-10-14全文。原始链接、来源日期、事件阶段及核查范围见独立来源清单。",
+    "天气方法改进两至六周概率预测，并非消除混沌或保证逐日天气；柔性薄片为实验原型，康复应用仍是设想；星系团碰撞为古老事件的证据解释，冲击波作用尚有不确定性。",
+    "W41真实原题、参考解答及W42三道分层题、weekly全体字段与顺序、display、schema_version及demo完整保留；提示和本周答案仅在独立教师文件。",
+    "播放结构：2页新闻（每页3条）、3页W41揭晓、3页W42题目，共8页；每页18秒，每5分钟刷新。",
+    "草稿及预览在独立目录制作。approved.json、两个旧未跟踪草稿和正式版式均保持不变；未提交、推送、部署或实体屏验收。浏览器和构建的实际结果见独立验证文件，不以草稿元数据代替验收。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-14T19:50:00",
-    "note": "Approved for publication by the content owner in the main conversation by replying 批准发布 at 19:50 on 2026-10-14; timezone was not supplied, so approved_at preserves the reported local clock time without an offset. Approval covers the complete PDF and JSON for 2026-10-15 review v1. Exact approved draft SHA256 b14bba5bc79d010e3f946311c832ec8bda5ed65c30171f0978c1ed732368680c, 16614 UTF-8 bytes, recovered from the authorized original-JSON handoff. All original fields except status remain exact; this review record is newly added. W42 teacher hints and answers are excluded from playback. Physical display not inspected."
+    "approved_at": "2026-10-15T12:29:33+00:00",
+    "note": "Approved for publication by the content owner in the main conversation at 2026-10-15T12:29:33+00:00 with the reply 面试题和电子屏都通过, after delivery of the complete bilingual eight-slide 2026-10-16 review v1, sources and separate teacher material. Exact reviewed draft SHA256 5ccad03f2daeb663a699ad27dd9fdf448baf38d80a56e31bbd2f01a73c987a06, 16611 UTF-8 bytes. Every field except status and this review record remains identical to that draft. Editorial notes are retained verbatim as historical draft provenance. W42 questions and W41 reveals are unchanged; teacher hints and current-week answers remain excluded from playback. Physical display not inspected."
   }
 }
