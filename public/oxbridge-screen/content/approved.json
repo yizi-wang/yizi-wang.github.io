@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-16",
-  "edition": "2026-10-16 review v1",
+  "content_date": "2026-10-19",
+  "edition": "2026-10-19 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,86 +12,86 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月16日\n每日简报",
+    "headline": "10月19日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-16-subseasonal-weather",
-        "category": "气候 / CLIMATE",
-        "headline": "学习预报误差，改善未来数周预测",
-        "headline_en": "Learning forecast errors improves the weeks ahead",
-        "summary": "10月14日发表的研究用机器学习从历史预报误差中学习，校正未来两至六周的概率预报。方法在2025年实时竞赛中表现领先，也改善了极端天气概率的预测。这有望帮助农业、能源与防灾提前规划，但不意味着能准确报出六周后每天的天气。",
-        "summary_en": "A study published on October 14 used machine learning to learn from past forecast errors and improve probabilistic predictions two to six weeks ahead. The method led a 2025 real-time forecasting competition and improved predictions of extreme weather. It could support farming, energy and disaster planning; it does not make daily weather six weeks away certain.",
+        "id": "2026-10-19-elnino-signals",
+        "category": "地球 / EARTH",
+        "headline": "三种海洋信号追踪厄尔尼诺",
+        "headline_en": "Three ocean signals track El Niño",
+        "summary": "NASA 10月15日展示海温、海面高度和海色观测：热带太平洋中东部偏暖、海面偏高，浮游植物减少使海水更蓝。信风减弱会抑制富营养深水上涌。多种信号帮助理解气候与海洋生态变化，但不能单独确定某地未来天气。",
+        "summary_en": "NASA's October 15 report combines sea temperature, sea level and ocean colour observations. The central and eastern tropical Pacific is warmer, sea levels are higher, and fewer phytoplankton make the water bluer. Weaker trade winds reduce nutrient-rich upwelling. Together, these signals help explain climate and marine ecosystem changes, but cannot alone determine future weather in a particular place.",
         "source": {
-          "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
-          "published": "2026-10-14"
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
+          "published": "2026-10-15"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-14-economics-prize",
-        "category": "经济 / ECONOMICS",
-        "headline": "经济学奖关注家庭与企业的选择",
-        "headline_en": "Economics prize recognises everyday decisions",
-        "summary": "10月12日，2026年诺贝尔经济学奖宣布授予罗伯特·E·霍尔与迈克尔·伍德福德。他们把家庭消费、储蓄和企业定价等决策纳入宏观模型，说明预期如何影响今天的经济。这些模型帮助政府和央行评估稳定经济的政策，也随现实变化继续完善。",
-        "summary_en": "On October 12, the 2026 Nobel Memorial Prize in Economic Sciences was awarded to Robert E. Hall and Michael Woodford. Their work connects household spending and saving, and business pricing, to the wider economy, showing how expectations shape decisions today. These models help policymakers assess stabilisation policies and continue to evolve as economies change.",
+        "id": "2026-10-19-antarctic-ice-cliffs",
+        "category": "气候 / CLIMATE",
+        "headline": "冰崖崩塌之后，不一定持续失稳",
+        "headline_en": "Ice-cliff collapse need not trigger runaway retreat",
+        "summary": "MIT 10月15日报道，研究者用2019—2023年卫星资料分析逾15000处南极冰崖。部分高冰崖退缩很快，却随后稳定；冰层变薄和冰下地形高地可能阻止连续崩塌。这提示海平面模型需考虑更多因素，并不表示南极融冰风险消失。",
+        "summary_en": "MIT reported on October 15 that researchers analysed more than 15,000 Antarctic ice cliffs using satellite data from 2019–2023. Some tall cliffs retreated rapidly but then stabilised. Thinning ice and rises in the underlying terrain may interrupt continued collapse. Sea-level models need to consider these factors; the finding does not remove the risks from Antarctic ice loss.",
         "source": {
-          "name": "瑞典皇家科学院 / Royal Swedish Academy of Sciences",
-          "url": "https://www.kva.se/en/news/the-prize-in-economic-sciences-2026/",
-          "published": "2026-10-12"
+          "name": "麻省理工学院 / MIT News",
+          "url": "https://news.mit.edu/2026/satellite-data-reveal-how-antarcticas-ice-cliffs-behave-over-time-1015",
+          "published": "2026-10-15"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-16-shape-sensing-sheet",
-        "category": "工程 / ENGINEERING",
-        "headline": "柔软薄片用光追踪自身形状",
-        "headline_en": "A soft sheet uses light to sense its own shape",
-        "summary": "MIT10月8日报道，一种柔软薄片把软光纤嵌入硅胶；弯曲改变透过的光量，算法据此重建三维形状。实验中，少量光纤受损后仍能重建整体形状。它为动作追踪提供新思路；康复监测等应用仍属研究设想。",
-        "summary_en": "MIT reported on October 8 that soft optical fibres embedded in silicone let a flexible sheet reconstruct its three-dimensional shape. Bending changes the transmitted light, which an algorithm translates into shape. Experiments retained overall sensing after some fibres were damaged. The prototype suggests a new route to motion tracking; uses such as rehabilitation monitoring remain proposed applications.",
+        "id": "2026-10-19-digital-service-trust",
+        "category": "社会 / SOCIETY",
+        "headline": "愿意使用数字服务，不等于更信任政府",
+        "headline_en": "Digital-service interest and government trust can diverge",
+        "summary": "MIT 10月15日介绍一项9月刊出的肯尼亚研究。逾11000人收到不同的政务平台介绍；相较强调政府的版本，只强调合作企业提高了使用意愿，却降低了政府信任。研究提示服务宣传会影响人们如何归功；问卷中的意愿不等于实际长期行为。",
+        "summary_en": "On October 15, MIT described a Kenyan study published in September. More than 11,000 people received different descriptions of a public-service portal. Compared with crediting government, crediting only its corporate partner increased willingness to use the service but reduced trust in government. Messaging can shape who receives credit; survey intentions do not establish long-term behaviour.",
         "source": {
           "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008",
-          "published": "2026-10-08"
+          "url": "https://news.mit.edu/2026/building-trust-governments-through-digital-platforms-1015",
+          "published": "2026-10-15"
         },
         "accent": "coral"
       },
       {
-        "id": "2026-10-14-solar-wind-helicity",
-        "category": "物理 / PHYSICS",
-        "headline": "太阳风的混乱中发现新规律",
-        "headline_en": "Hidden order found in the solar wind",
-        "summary": "10月13日公布的研究利用帕克太阳探测器数据，发现太阳风磁场波动的旋转方向，会在从大尺度流体行为过渡到小尺度粒子行为时反转。这为理解太空等离子体湍流与空间天气提供线索，尚不是新的磁暴预报工具。",
-        "summary_en": "Research announced on October 13 used Parker Solar Probe data to reveal a reversal in the rotation of magnetic-field fluctuations where solar-wind behaviour changes from fluid-like to particle-dominated scales. The finding offers a clue to turbulence in space plasmas and to space-weather research; it is not yet a new tool for forecasting geomagnetic storms.",
+        "id": "2026-10-19-microbial-fossil-record",
+        "category": "生命 / LIFE",
+        "headline": "微生物的演化，可能改变化石保存",
+        "headline_en": "Microbial evolution may shape the fossil record",
+        "summary": "剑桥大学10月8日报道，研究者比对700个细菌基因组与演化时间树，追踪分解胶原蛋白的酶如何传播。这类酶进入需氧细菌，可能加快遗体腐烂，减少软组织保存机会。研究为化石记录缺口提供新解释；这是演化重建支持的假说，并非直接观察古代腐烂过程。",
+        "summary_en": "Cambridge reported on October 8 that researchers compared 700 bacterial genomes with a dated evolutionary tree to trace collagen-digesting enzymes. Their spread into oxygen-using bacteria may have accelerated decay, reducing the chance of soft tissues becoming fossils. The study offers a new explanation for gaps in the fossil record; this is a hypothesis supported by evolutionary reconstruction, not direct observation of ancient decay.",
         "source": {
-          "name": "布伦瑞克工业大学 / TU Braunschweig",
-          "url": "https://magazin.tu-braunschweig.de/pi-post/struktur-im-unstrukturierten-neues-phaenomen-im-sonnenwind-entdeckt/",
-          "published": "2026-10-13"
+          "name": "剑桥大学 / University of Cambridge",
+          "url": "https://www.cam.ac.uk/research/news/rise-of-collagen-eating-microbes-may-help-explain-gaps-in-the-fossil-record",
+          "published": "2026-10-08"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-16-treble-clef-cluster",
+        "id": "2026-10-19-mmx-launch-plan",
         "category": "太空 / SPACE",
-        "headline": "星系团碰撞让旧粒子云重新发亮",
-        "headline_en": "A collision may have revived a cosmic particle cloud",
-        "summary": "NASA10月14日报道，X射线与射电观测支持“高音谱号”结构的两步成因：黑洞早期喷发留下的带电粒子云逐渐变暗，随后星系团碰撞使其重新发亮。冲击波可能参与再加能。多波段资料帮助追溯巨型结构的历史；这是对古老事件的解释，并非碰撞刚刚发生。",
-        "summary_en": "NASA reported on October 14 that X-ray and radio observations suggest a two-stage origin for the “Treble Clef” structure. A particle cloud from an earlier black-hole outburst faded, then a galaxy-cluster collision brightened it again. Shock waves may have helped reenergise it. Combining wavelengths helps reconstruct cosmic history; the report explains ancient events, not a collision occurring now.",
+        "headline": "火星卫星取样任务确认发射计划",
+        "headline_en": "Mars-moon mission confirms its launch plan",
+        "summary": "JAXA 10月18日确认，MMX计划于北京时间20日凌晨3时41分发射。探测器将用火卫一表面的中子和伽马射线推断元素组成，并计划取样返地。这些线索可帮助区分卫星源于小行星捕获还是巨大撞击；目前仍在发射前，取样和返回均是未来目标。",
+        "summary_en": "On October 18, JAXA confirmed MMX's planned launch for October 20 at 3:41 a.m. Beijing time. It will use neutrons and gamma rays from Phobos to infer elemental composition and aims to return samples to Earth. These clues could distinguish asteroid capture from a giant-impact origin for Mars' moons. The mission remains pre-launch; sampling and return are future goals.",
         "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-breaks-down-treble-clefs-galaxy-cluster-collision/",
-          "published": "2026-10-14"
+          "name": "日本宇宙航空研究开发机构 / JAXA",
+          "url": "https://www.jaxa.jp/press/2026/10/20261018-1_j.html",
+          "published": "2026-10-18"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-14-battery-binder",
+        "id": "2026-10-19-battery-binder",
         "category": "材料 / MATERIALS",
         "headline": "新型电池“胶水”让回收更容易",
         "headline_en": "A new battery binder could simplify recycling",
         "summary": "10月9日发表的研究提出不含氟、可用水加工的电池黏结剂：柠檬酸连接两种聚合物，稳固电极，也让拆解后的电极涂层在水中与金属箔分离。实验电池保持良好性能，为更清洁的制造与回收提供思路；商业化放大仍待完成。",
-        "summary_en": "A study published on October 9 introduced a fluorine-free, water-processable battery binder. Citric acid links two polymers to hold electrodes together while allowing coatings to separate from metal foils in water after disassembly. Test batteries maintained strong performance, suggesting cleaner manufacturing and recycling; scaling up for commercial production remains a future step.",
+        "summary_en": "A study published on October 9 introduced a fluorine-free, water-processable battery binder. Citric acid links two polymers to hold electrodes together while allowing coatings to separate from metal foils in water after disassembly. Test batteries maintained strong performance in controlled laboratory tests, suggesting cleaner manufacturing and recycling; scaling up for commercial production remains a future step.",
         "source": {
           "name": "加州大学圣迭戈分校 / UC San Diego",
           "url": "https://today.ucsd.edu/story/battery-manufacturing-and-recycling-could-go-green-with-this-glue",
@@ -102,101 +102,100 @@
     ]
   },
   "weekly": {
-    "week": "2026-W42",
+    "week": "2026-W43",
+    "previous_week": "2026-W42",
     "previous_answers": [
       {
-        "id": "answer-reasoning-nine-grid-2026-w41",
+        "id": "answer-reasoning-circle-triples-2026-w42",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "把1至9按顺序写成3×3方格：第一行1、2、3，第二行4、5、6，第三行7、8、9。圈出3个数，每行、每列恰好一个。总和最大能是多少？为什么？",
-        "headline_en": "Write 1–9 in a 3×3 grid, with rows 1,2,3; 4,5,6; and 7,8,9. Circle three numbers, exactly one in each row and column. What is the largest possible sum? Why?",
-        "result": "总和恒为15",
-        "result_en": "The sum is always 15",
-        "explanation": "每个数可写成“行贡献”加“列贡献”：三行分别贡献0、3、6，三列分别贡献1、2、3。每行、每列各选一次，总和恒为0＋3＋6＋1＋2＋3＝15，所以最大值也是15。",
-        "explanation_en": "Each entry is a row contribution plus a column contribution. The rows contribute 0, 3 and 6; the columns contribute 1, 2 and 3. Choosing one entry from every row and column gives 0+3+6+1+2+3=15, whatever the choice. The maximum is therefore 15.",
-        "subject": "W41 · 九宫格解答",
-        "subject_en": "W41 · GRID ANSWER",
+        "headline": "把1至9各用一次，排在一个圆周上。每三个相邻位置的数相加，共得到九个和。这九个和中的最大值，最小能是多少？先试排，再证明你的答案最优。",
+        "headline_en": "Arrange 1–9 around a circle, using each number once. Add each group of three consecutive numbers to obtain nine sums. What is the smallest possible value of the largest sum? Experiment, then prove your answer is optimal.",
+        "result": "最小值为16",
+        "result_en": "The minimum is 16",
+        "explanation": "九个和合计135，平均15。若最大值≤15，则全为15；相邻两和相减会使相隔三位的数相同，矛盾。因此至少16。圆周排列1、5、8、2、6、7、3、4、9的九个和都不超过16，达到下界。",
+        "explanation_en": "The nine sums total 135, averaging 15. A maximum of 15 would make all sums equal; subtracting neighbouring sums would force entries three places apart to match. Thus the integer maximum is at least 16. The circular order 1,5,8,2,6,7,3,4,9 attains 16.",
+        "subject": "W42 · 圆周极值解答",
+        "subject_en": "W42 · CIRCULAR OPTIMISATION",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "answer-probability-spam-filter-2026-w41",
+        "id": "answer-probability-conditional-reroll-2026-w42",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "模拟测试：10000条消息中有100条垃圾信息。筛选器标记了其中90条，又误标其余9900条中的1%。从被标记的消息中等概率抽一条，它真是垃圾信息的概率是多少？",
-        "headline_en": "A simulated test has 10,000 messages, including 100 spam messages. A filter flags 90 of the spam messages and 1% of the other 9,900 messages. Pick uniformly from the flagged messages. What is the probability it is actually spam?",
-        "result": "10/21 ≈ 47.6%",
-        "result_en": "90 out of 189 flagged messages",
-        "explanation": "真正被标记的垃圾信息有90条；正常消息中误标了9900×1%＝99条。被标记的共有90＋99＝189条，因此所求概率是90/189＝10/21，约47.6%。抽样范围是全部被标记的消息。",
-        "explanation_en": "There are 90 correctly flagged spam messages and 9,900×1%=99 falsely flagged non-spam messages. The flagged pool therefore contains 189 messages. The required probability is 90/189=10/21, about 47.6%. The denominator counts all flagged messages.",
-        "subject": "W41 · 条件概率解答",
-        "subject_en": "W41 · CONDITIONAL PROBABILITY",
+        "headline": "两枚公平六面骰子独立掷出，已知点数不同。只看第一枚，决定保留第二枚或独立重掷第二枚一次；决定前不看第二枚，重掷后必须用新点数，可与第一枚相同。最终点数和至少为8算赢。求最优策略与最大胜率。",
+        "headline_en": "Two fair six-sided dice are rolled independently; their results are known to differ. Seeing only the first, choose to keep the hidden second die or reroll it once independently. You must accept the new result, even if it equals the first. A final sum of at least 8 wins. Find the optimal strategy and maximum win probability.",
+        "result": "最优胜率13/30，约43.3%",
+        "result_en": "Maximum win probability: 13/30 ≈ 43.3%",
+        "explanation": "第一枚仍均匀分布。保留时第二枚有5种可能，重掷后有6种。第一枚为2或3时保留，为4、5或6时重掷，为1时任选。最优胜率为(0＋1/5＋2/5＋1/2＋2/3＋5/6)/6＝13/30。",
+        "explanation_en": "The first die is still uniform. Keeping leaves five possible hidden values; rerolling gives six. Keep for first-die values 2 or 3; reroll for 4, 5 or 6; either for 1. The optimal probability is (0+1/5+2/5+1/2+2/3+5/6)/6=13/30.",
+        "subject": "W42 · 条件概率决策解答",
+        "subject_en": "W42 · CONDITIONAL DECISIONS",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "answer-proof-five-sensors-2026-w41",
+        "id": "answer-proof-minimum-monochrome-triangles-2026-w42",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "在边长10米的正方形内或边界上任放5个传感器。证明：至少两个的直线距离不超过5√2米。能保证不超过7米吗？请说明理由。",
-        "headline_en": "Place five sensors anywhere inside or on a square of side 10 m. Prove that some pair is at most 5√2 m apart. Can you always guarantee a pair at most 7 m apart? Justify your answer.",
-        "result": "5√2米；不能保证7米",
-        "result_en": "At most 5√2 m; 7 m is not guaranteed",
-        "explanation": "把正方形分成4个边长5米的小正方形，分界线上的点只归入其中一格。5点必有2点同格，距离不超过该格对角线5√2米。四角和中心各放一点，最近距离仍为5√2米，大于7米。",
-        "explanation_en": "Divide the square into four 5 m squares, assigning each boundary point to just one cell. Two sensors share a cell, so their distance is at most its diagonal, 5√2 m. For sensors at the four corners and centre, the minimum distance is 5√2 m > 7 m.",
-        "subject": "W41 · 几何证明解答",
-        "subject_en": "W41 · GEOMETRIC PROOF",
+        "headline": "六个点两两相连，每条连线涂红或蓝。三条边同色的三角形，最少能有几个？请证明下界，并画出达到下界的涂色方案。挑战：能否让红色、蓝色三角形各恰好一个？",
+        "headline_en": "Join every pair of six points, colouring each edge red or blue. What is the minimum number of triangles with all three edges the same colour? Prove a lower bound and draw a colouring that attains it. Bonus: can there be exactly one red triangle and one blue triangle?",
+        "result": "最少2个；可以红蓝各1个",
+        "result_en": "Minimum: 2; one of each colour is possible",
+        "explanation": "每点有d条红边，则一红一蓝的边对有d(5−d)≤6个。每个非同色三角形被数两次，故至多18个；20个三角形中至少2个同色。点标为1至6，红边取12、15、16、24、26、34、35，其余为蓝：仅红126、蓝456同色。",
+        "explanation_en": "A vertex with d red edges has d(5−d)≤6 mixed-colour edge pairs. Each non-monochromatic triangle contributes two pairs, so at most 18 of 20 triangles are non-monochromatic. Label the points 1–6. Colour edges 12,15,16,24,26,34,35 red and all others blue: only red 126 and blue 456 are monochromatic.",
+        "subject": "W42 · 组合计数证明解答",
+        "subject_en": "W42 · COMBINATORIAL PROOF",
         "visual": "network",
         "accent": "coral"
       }
     ],
     "challenges": [
       {
-        "id": "reasoning-circle-triples-2026-w42",
+        "id": "reasoning-grid-flips-2026-w43",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "把1至9各用一次，排在一个圆周上。每三个相邻位置的数相加，共得到九个和。这九个和中的最大值，最小能是多少？先试排，再证明你的答案最优。",
-        "headline_en": "Arrange 1–9 around a circle, using each number once. Add each group of three consecutive numbers to obtain nine sums. What is the smallest possible value of the largest sum? Experiment, then prove your answer is optimal.",
-        "subject": "进阶 · 圆周极值",
-        "subject_en": "DEVELOPING · CIRCULAR OPTIMISATION",
-        "origin": "平均数、等号条件与构造 · 教学改写",
+        "headline": "5×5方格起初全白。每步可选一整行或一整列，把其中所有格子黑白互换。若最终至少有一个黑格，黑格最少能有几个？给出做法，并证明不能更少。",
+        "headline_en": "A 5×5 grid starts entirely white. Each move flips every cell in one whole row or column between black and white. If at least one cell ends black, what is the smallest possible number of black cells? Give a construction and prove it is minimal.",
+        "subject": "进阶 · 翻面逻辑",
+        "subject_en": "DEVELOPING · GRID LOGIC",
+        "origin": "原创教学题面 · 非试卷摘录",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "probability-conditional-reroll-2026-w42",
+        "id": "probability-pattern-race-2026-w43",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "两枚公平六面骰子独立掷出，已知点数不同。只看第一枚，决定保留第二枚或独立重掷第二枚一次；决定前不看第二枚，重掷后必须用新点数，可与第一枚相同。最终点数和至少为8算赢。求最优策略与最大胜率。",
-        "headline_en": "Two fair six-sided dice are rolled independently; their results are known to differ. Seeing only the first, choose to keep the hidden second die or reroll it once independently. You must accept the new result, even if it equals the first. A final sum of at least 8 wins. Find the optimal strategy and maximum win probability.",
-        "subject": "挑战 · 条件概率决策",
-        "subject_en": "CHALLENGE · CONDITIONAL DECISIONS",
-        "origin": "条件概率与最优决策 · 教学改写",
+        "headline": "不断独立投掷一枚公平硬币，直到连续三次的结果首次出现HHT或HTH便停止（H为正面，T为反面）。哪一种更可能先出现？求它的概率，并说明理由。",
+        "headline_en": "Keep tossing a fair coin independently until HHT or HTH first appears as three consecutive results (H=heads, T=tails). Which pattern is more likely to appear first? Find its probability and justify your answer.",
+        "subject": "挑战 · 硬币图案竞赛",
+        "subject_en": "CHALLENGE · COIN PATTERN RACE",
+        "origin": "原创教学题面 · 非试卷摘录",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "proof-minimum-monochrome-triangles-2026-w42",
+        "id": "proof-divisibility-chains-2026-w43",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "六个点两两相连，每条连线涂红或蓝。三条边同色的三角形，最少能有几个？请证明下界，并画出达到下界的涂色方案。挑战：能否让红色、蓝色三角形各恰好一个？",
-        "headline_en": "Join every pair of six points, colouring each edge red or blue. What is the minimum number of triangles with all three edges the same colour? Prove a lower bound and draw a colouring that attains it. Bonus: can there be exactly one red triangle and one blue triangle?",
-        "subject": "拓展 · 组合计数证明",
-        "subject_en": "STRETCH · COMBINATORIAL PROOF",
-        "origin": "双色图、双重计数与极值 · 教学改写",
-        "visual": "network",
+        "headline": "从1至60中选出一些不同的整数，要求选出的数中不存在a<b<c，使b是a的整数倍且c是b的整数倍。最多能选几个？给出一组选法，并证明无法选得更多。",
+        "headline_en": "Choose distinct integers from 1 to 60. Your set must not contain a<b<c with b a multiple of a and c a multiple of b. What is the largest possible number of selected integers? Give an example and prove optimality.",
+        "subject": "拓展 · 倍数链极值",
+        "subject_en": "STRETCH · DIVISIBILITY CHAINS",
+        "origin": "原创教学题面 · 非试卷摘录",
+        "visual": "question",
         "accent": "coral"
       }
-    ],
-    "previous_week": "2026-W41"
+    ]
   },
   "editorial_notes": [
-    "2026-10-16 review v1：独立待审稿；内容验收待定，本版发布批准待定，未发布。不得沿用10月15日批准记录。",
-    "已批准基线：2026-10-15 review v1；HEAD be0032f742d1a8c4211177b429f7ffa7444d7b60；approved.json SHA256 d3a863dd6ba37ade7b6473747f6aba8cfa7d2df35591d9a018f9da357570d112。",
-    "本版新增概率天气预报、柔性光纤形状传感、Treble Clef星系团碰撞三条；经济学奖、太阳风和电池黏结剂逐字段保留并于2026-10-15重新核查原始机构全文，不冒充新报道。",
-    "三条新增来源：MIT 2026-10-14及Nature论文摘要；MIT 2026-10-08全文；NASA 2026-10-14全文。原始链接、来源日期、事件阶段及核查范围见独立来源清单。",
-    "天气方法改进两至六周概率预测，并非消除混沌或保证逐日天气；柔性薄片为实验原型，康复应用仍是设想；星系团碰撞为古老事件的证据解释，冲击波作用尚有不确定性。",
-    "W41真实原题、参考解答及W42三道分层题、weekly全体字段与顺序、display、schema_version及demo完整保留；提示和本周答案仅在独立教师文件。",
-    "播放结构：2页新闻（每页3条）、3页W41揭晓、3页W42题目，共8页；每页18秒，每5分钟刷新。",
-    "草稿及预览在独立目录制作。approved.json、两个旧未跟踪草稿和正式版式均保持不变；未提交、推送、部署或实体屏验收。浏览器和构建的实际结果见独立验证文件，不以草稿元数据代替验收。"
+    "2026-10-19 review v1：独立待审稿。内容批准和发布批准均未取得，未发布。不得沿用10月16日及其他版本的批准记录。",
+    "读取基线为 GitHub master 8e74b8eb44004cf24b7ff59277f52b82569d8db1，2026-10-16 review v1，approved.json blob 63189df88eaf942d610aad44c091b4b812e96895。2026-10-18复核仓库树与Library，未发现10月19日同版待审稿。",
+    "10月19日为周一，进入2026-W43。previous_answers逐字保留已批准W42原题中英文本，再补真实解答；新W43三题的教师提示和答案仅在独立教师文件。",
+    "保留 schema_version=2、demo=false 和 display。八屏结构为两屏六条新闻、三屏W42揭晓、三屏W43新题；18秒一屏，每5分钟刷新。",
+    "新闻以近期机构原始材料复核；报告日期、实验阶段与未来计划分开。MMX为日本10月20日04:41:03（北京03:41:03）计划发射，尚未发射。发布前应复核发射安排是否变化。",
+    "完整PDF用于内容审阅，不是网页或实体屏截图。现行播放器buildSlides函数在独立副本上执行；浏览器启动受云环境权限限制，未完成网页版式验收，未运行仓库build或检查实体屏。",
+    "本轮只读GitHub并在独立文件目录准备材料；未写仓库、提交、推送、部署或更改发布状态。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-15T12:29:33+00:00",
-    "note": "Approved for publication by the content owner in the main conversation at 2026-10-15T12:29:33+00:00 with the reply 面试题和电子屏都通过, after delivery of the complete bilingual eight-slide 2026-10-16 review v1, sources and separate teacher material. Exact reviewed draft SHA256 5ccad03f2daeb663a699ad27dd9fdf448baf38d80a56e31bbd2f01a73c987a06, 16611 UTF-8 bytes. Every field except status and this review record remains identical to that draft. Editorial notes are retained verbatim as historical draft provenance. W42 questions and W41 reveals are unchanged; teacher hints and current-week answers remain excluded from playback. Physical display not inspected."
+    "approved_at": "2026-10-18T23:26:44Z",
+    "note": "Approved for publication of all eight student slides by the content owner in the main conversation at 2026-10-18T23:26:44Z, replying 电子屏批准 to the explicit request to approve 2026-10-19 review v1 and publish all eight slides. Exact reviewed Library JSON SHA256 e44150aa17370336b7986f2b2827096acd8775fc972d939669a150e6fff8fd3c, 16434 UTF-8 bytes. All fields except status and this added review record remain unchanged. Editorial notes are preserved as historical draft provenance. JAXA announcement and MMX homepage were checked before publication: planned launch 2026-10-20 04:41:03 JST / 03:41:03 Beijing time; still pre-launch. W42 reveals correspond to the actual previous questions. W43 teacher hints and answers are excluded from student playback. Physical display not inspected."
   }
 }
