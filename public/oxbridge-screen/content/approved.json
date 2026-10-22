@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-19",
-  "edition": "2026-10-19 review v1",
+  "content_date": "2026-10-22",
+  "edition": "2026-10-22 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,25 +12,53 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月19日\n每日简报",
+    "headline": "10月22日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-19-elnino-signals",
-        "category": "地球 / EARTH",
-        "headline": "三种海洋信号追踪厄尔尼诺",
-        "headline_en": "Three ocean signals track El Niño",
-        "summary": "NASA 10月15日展示海温、海面高度和海色观测：热带太平洋中东部偏暖、海面偏高，浮游植物减少使海水更蓝。信风减弱会抑制富营养深水上涌。多种信号帮助理解气候与海洋生态变化，但不能单独确定某地未来天气。",
-        "summary_en": "NASA's October 15 report combines sea temperature, sea level and ocean colour observations. The central and eastern tropical Pacific is warmer, sea levels are higher, and fewer phytoplankton make the water bluer. Weaker trade winds reduce nutrient-rich upwelling. Together, these signals help explain climate and marine ecosystem changes, but cannot alone determine future weather in a particular place.",
+        "id": "2026-10-22-microbe-biofilm",
+        "category": "海洋 / OCEAN",
+        "headline": "海洋微生物也有“黏在一起”的生活",
+        "headline_en": "An ocean microbe has a sticky second life",
+        "summary": "MIT 10月20日报道，原绿球藻既可自由漂浮，也可黏附形成生物膜。实验中，相同基因组的细胞能切换状态，附着细胞释放更多有机碳；海水样本也检出附着细胞。若随颗粒下沉，它们可能把碳带入深海，影响碳循环估算；实际输送量仍待测定。",
+        "summary_en": "MIT reported on October 20 that Prochlorococcus can drift freely or attach in biofilms. In laboratory cultures, genetically identical cells switched states, and attached cells released more organic carbon. Attached cells also appeared in seawater samples. If carried downward on sinking particles, they could transport carbon into the deep ocean and affect carbon-cycle estimates; the actual flux remains uncertain.",
         "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
-          "published": "2026-10-15"
+          "name": "麻省理工学院 / MIT News",
+          "url": "https://news.mit.edu/2026/oceans-most-abundant-loner-microbe-has-sticky-second-life-1020",
+          "published": "2026-10-20"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-19-antarctic-ice-cliffs",
+        "id": "2026-10-22-symmetry-mri",
+        "category": "数学与医学 / MATH & MEDICINE",
+        "headline": "把对称性写进AI，让扫描跟上运动",
+        "headline_en": "Building symmetry into AI to track motion",
+        "summary": "MIT 10月19日介绍一种胎儿脑部磁共振成像模型：把头部左右对称性纳入网络，帮助识别运动中的朝向，并调整扫描。二维切片更好对齐，才更容易组成完整三维图像。模型主要用孕晚期资料训练，对更小胎儿的成像仍需改进，不能替代医生诊断。",
+        "summary_en": "On October 19, MIT described a fetal-brain MRI model that builds left–right head symmetry into its network. This helps identify orientation during movement and adjust scanning. Better-aligned two-dimensional slices can produce a more complete three-dimensional image. The model was trained mainly on third-trimester data; imaging younger fetuses still needs improvement. It supports image acquisition rather than replacing a doctor's diagnosis.",
+        "source": {
+          "name": "麻省理工学院 / MIT News",
+          "url": "https://news.mit.edu/2026/teaching-ai-about-symmetry-could-make-prenatal-diagnosis-more-reliable-1019",
+          "published": "2026-10-19"
+        },
+        "accent": "gold"
+      },
+      {
+        "id": "2026-10-22-mars-rotor",
+        "category": "航空 / AERONAUTICS",
+        "headline": "火星旋翼，为什么要更薄更尖？",
+        "headline_en": "Why make Mars rotor blades thinner and sharper?",
+        "summary": "NASA 10月20日介绍火星旋翼研究：更薄、更尖的不对称翼型，在模拟和风洞中改善了升力与失速表现。它利用翼前缘扰动气流，并延后高速时性能骤降，可能帮助未来直升机飞得更远。相关论文9月22日刊出；设计尚未在火星飞行，预测航程仍待验证。",
+        "summary_en": "NASA reported on October 20 that thinner, sharper, asymmetric Mars rotor designs improved lift and stall behaviour in simulations and wind-tunnel tests. Disturbing airflow at the leading edge and delaying high-speed performance loss could extend future flights. The underlying paper appeared on September 22. These experimental blades have not flown on Mars; predicted ranges still require validation.",
+        "source": {
+          "name": "美国航天局 / NASA",
+          "url": "https://www.nasa.gov/science-research/aeronautics-research/nasa-experimental-mars-helicopter-blade-designs-target-longer-flights/",
+          "published": "2026-10-20"
+        },
+        "accent": "coral"
+      },
+      {
+        "id": "2026-10-22-antarctic-ice-cliffs",
         "category": "气候 / CLIMATE",
         "headline": "冰崖崩塌之后，不一定持续失稳",
         "headline_en": "Ice-cliff collapse need not trigger runaway retreat",
@@ -41,52 +69,24 @@
           "url": "https://news.mit.edu/2026/satellite-data-reveal-how-antarcticas-ice-cliffs-behave-over-time-1015",
           "published": "2026-10-15"
         },
-        "accent": "gold"
-      },
-      {
-        "id": "2026-10-19-digital-service-trust",
-        "category": "社会 / SOCIETY",
-        "headline": "愿意使用数字服务，不等于更信任政府",
-        "headline_en": "Digital-service interest and government trust can diverge",
-        "summary": "MIT 10月15日介绍一项9月刊出的肯尼亚研究。逾11000人收到不同的政务平台介绍；相较强调政府的版本，只强调合作企业提高了使用意愿，却降低了政府信任。研究提示服务宣传会影响人们如何归功；问卷中的意愿不等于实际长期行为。",
-        "summary_en": "On October 15, MIT described a Kenyan study published in September. More than 11,000 people received different descriptions of a public-service portal. Compared with crediting government, crediting only its corporate partner increased willingness to use the service but reduced trust in government. Messaging can shape who receives credit; survey intentions do not establish long-term behaviour.",
-        "source": {
-          "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/building-trust-governments-through-digital-platforms-1015",
-          "published": "2026-10-15"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "2026-10-19-microbial-fossil-record",
-        "category": "生命 / LIFE",
-        "headline": "微生物的演化，可能改变化石保存",
-        "headline_en": "Microbial evolution may shape the fossil record",
-        "summary": "剑桥大学10月8日报道，研究者比对700个细菌基因组与演化时间树，追踪分解胶原蛋白的酶如何传播。这类酶进入需氧细菌，可能加快遗体腐烂，减少软组织保存机会。研究为化石记录缺口提供新解释；这是演化重建支持的假说，并非直接观察古代腐烂过程。",
-        "summary_en": "Cambridge reported on October 8 that researchers compared 700 bacterial genomes with a dated evolutionary tree to trace collagen-digesting enzymes. Their spread into oxygen-using bacteria may have accelerated decay, reducing the chance of soft tissues becoming fossils. The study offers a new explanation for gaps in the fossil record; this is a hypothesis supported by evolutionary reconstruction, not direct observation of ancient decay.",
-        "source": {
-          "name": "剑桥大学 / University of Cambridge",
-          "url": "https://www.cam.ac.uk/research/news/rise-of-collagen-eating-microbes-may-help-explain-gaps-in-the-fossil-record",
-          "published": "2026-10-08"
-        },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-19-mmx-launch-plan",
-        "category": "太空 / SPACE",
-        "headline": "火星卫星取样任务确认发射计划",
-        "headline_en": "Mars-moon mission confirms its launch plan",
-        "summary": "JAXA 10月18日确认，MMX计划于北京时间20日凌晨3时41分发射。探测器将用火卫一表面的中子和伽马射线推断元素组成，并计划取样返地。这些线索可帮助区分卫星源于小行星捕获还是巨大撞击；目前仍在发射前，取样和返回均是未来目标。",
-        "summary_en": "On October 18, JAXA confirmed MMX's planned launch for October 20 at 3:41 a.m. Beijing time. It will use neutrons and gamma rays from Phobos to infer elemental composition and aims to return samples to Earth. These clues could distinguish asteroid capture from a giant-impact origin for Mars' moons. The mission remains pre-launch; sampling and return are future goals.",
+        "id": "2026-10-22-gravity-water",
+        "category": "地球 / EARTH",
+        "headline": "用卫星间距，追踪陆地水量变化",
+        "headline_en": "Tracking land water through satellite separation",
+        "summary": "NASA 10月20日报道，研究重析2002—2025年重力卫星数据，以双星间距的细微变化推算陆地储水。合并多年观测提高空间细节，却降低时间细节；40个地区的趋势与灌溉、蓄水等人类活动相关。这有助于监测水资源，但统计关联不能单独证明每处变化的原因。",
+        "summary_en": "NASA reported on October 20 that researchers reanalysed 2002–2025 gravity-satellite data, using tiny changes in satellite separation to infer land-water storage. Combining years of observations sharpened spatial detail but reduced temporal detail. Trends in 40 regions were associated with irrigation, reservoirs or other human activities. This could aid water monitoring, although statistical associations alone cannot establish each local cause.",
         "source": {
-          "name": "日本宇宙航空研究开发机构 / JAXA",
-          "url": "https://www.jaxa.jp/press/2026/10/20261018-1_j.html",
-          "published": "2026-10-18"
+          "name": "美国航天局地球观测站 / NASA Earth Observatory",
+          "url": "https://science.nasa.gov/earth/earth-observatory/the-human-fingerprint-on-earths-water-cycle/",
+          "published": "2026-10-20"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-19-battery-binder",
+        "id": "2026-10-22-battery-binder",
         "category": "材料 / MATERIALS",
         "headline": "新型电池“胶水”让回收更容易",
         "headline_en": "A new battery binder could simplify recycling",
@@ -185,17 +185,30 @@
     ]
   },
   "editorial_notes": [
-    "2026-10-19 review v1：独立待审稿。内容批准和发布批准均未取得，未发布。不得沿用10月16日及其他版本的批准记录。",
-    "读取基线为 GitHub master 8e74b8eb44004cf24b7ff59277f52b82569d8db1，2026-10-16 review v1，approved.json blob 63189df88eaf942d610aad44c091b4b812e96895。2026-10-18复核仓库树与Library，未发现10月19日同版待审稿。",
-    "10月19日为周一，进入2026-W43。previous_answers逐字保留已批准W42原题中英文本，再补真实解答；新W43三题的教师提示和答案仅在独立教师文件。",
-    "保留 schema_version=2、demo=false 和 display。八屏结构为两屏六条新闻、三屏W42揭晓、三屏W43新题；18秒一屏，每5分钟刷新。",
-    "新闻以近期机构原始材料复核；报告日期、实验阶段与未来计划分开。MMX为日本10月20日04:41:03（北京03:41:03）计划发射，尚未发射。发布前应复核发射安排是否变化。",
-    "完整PDF用于内容审阅，不是网页或实体屏截图。现行播放器buildSlides函数在独立副本上执行；浏览器启动受云环境权限限制，未完成网页版式验收，未运行仓库build或检查实体屏。",
-    "本轮只读GitHub并在独立文件目录准备材料；未写仓库、提交、推送、部署或更改发布状态。"
+    "2026-10-22 review v1：内容接受和本版发布批准均待用户决定，未发布。10月21日v1未获批准，不继承其中任何批准。",
+    "当前GitHub master和最近成功发布基线为2026-10-19 review v1，HEAD 038f55945ef263eebab011ab45ea3361ca3e2a97。公开站点读取被本环境代理403阻断，未宣称核验现网画面。",
+    "W43三题与W42真实揭晓整个weekly对象逐字保留，display保持18秒及5分钟刷新；W43提示答案仅在既有独立教师材料。",
+    "六篇原始机构正文及日期均于本轮读取核验，来源清单保留实验、模拟、观测阶段和论文日期差异。MRI题材从10月21日未批准稿重新核验择用；冰崖和电池题材从10月19日批准稿重新核验保留。新版本整体仍待审核。",
+    "火星旋翼为10月20日技术报道，论文9月22日刊出；不把报道日期当作论文日期，不宣称已在火星试飞。原绿球藻深海碳通量、水量统计因果、MRI孕期推广和电池商业规模均保留不确定性。",
+    "只在仓库外独立预览副本构建和排版；正式内容不变，无提交、推送或部署。构建及浏览器检查不等于实体屏验收。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-18T23:26:44Z",
-    "note": "Approved for publication of all eight student slides by the content owner in the main conversation at 2026-10-18T23:26:44Z, replying 电子屏批准 to the explicit request to approve 2026-10-19 review v1 and publish all eight slides. Exact reviewed Library JSON SHA256 e44150aa17370336b7986f2b2827096acd8775fc972d939669a150e6fff8fd3c, 16434 UTF-8 bytes. All fields except status and this added review record remain unchanged. Editorial notes are preserved as historical draft provenance. JAXA announcement and MMX homepage were checked before publication: planned launch 2026-10-20 04:41:03 JST / 03:41:03 Beijing time; still pre-launch. W42 reveals correspond to the actual previous questions. W43 teacher hints and answers are excluded from student playback. Physical display not inspected."
+    "approved_at": "2026-10-22T09:46+08:00",
+    "content_acceptance": {
+      "accepted": true,
+      "accepted_at": "2026-10-22T09:46+08:00",
+      "edition": "2026-10-22 review v1",
+      "scope": "All eight reviewed student slides, unchanged."
+    },
+    "publication_approval": {
+      "approved": true,
+      "approved_at": "2026-10-22T09:46+08:00",
+      "edition": "2026-10-22 review v1",
+      "scope": "Publish all eight student slides through this repository GitHub Pages route. Electronic screen only; no other project synchronization."
+    },
+    "reviewed_draft_sha256": "02b06fc1b18dab193919266d84714c2192db87881f12641cb30e8252d828a783",
+    "reviewed_draft_bytes": 16555,
+    "note": "Content acceptance and publication approval are recorded separately for the exact 2026-10-22 review v1. Only status and this review record differ from the reviewed JSON. Historical draft editorial notes are retained as provenance. W43 questions and genuine W42 reveals remain identical to the previous approved baseline. Current-week teacher hints and answers remain outside student playback. Approval time is recorded to the minute supplied by the user. Physical display not inspected."
   }
 }
