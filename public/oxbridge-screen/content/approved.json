@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-22",
-  "edition": "2026-10-22 review v1",
+  "content_date": "2026-10-23",
+  "edition": "2026-10-23 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月22日\n每日简报",
+    "headline": "10月23日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-22-microbe-biofilm",
-        "category": "海洋 / OCEAN",
-        "headline": "海洋微生物也有“黏在一起”的生活",
-        "headline_en": "An ocean microbe has a sticky second life",
-        "summary": "MIT 10月20日报道，原绿球藻既可自由漂浮，也可黏附形成生物膜。实验中，相同基因组的细胞能切换状态，附着细胞释放更多有机碳；海水样本也检出附着细胞。若随颗粒下沉，它们可能把碳带入深海，影响碳循环估算；实际输送量仍待测定。",
-        "summary_en": "MIT reported on October 20 that Prochlorococcus can drift freely or attach in biofilms. In laboratory cultures, genetically identical cells switched states, and attached cells released more organic carbon. Attached cells also appeared in seawater samples. If carried downward on sinking particles, they could transport carbon into the deep ocean and affect carbon-cycle estimates; the actual flux remains uncertain.",
+        "id": "2026-10-23-subseasonal-forecast",
+        "category": "气象 / WEATHER",
+        "headline": "让天气模型学会纠正自己的偏差",
+        "headline_en": "Teaching weather models to correct their biases",
+        "summary": "MIT 10月14日报道，研究团队用历史预报与实测资料，训练机器学习系统纠正现有模型的系统偏差，改善未来两至六周的温度、降水概率预报。这有助于农业和能源部门提前准备；预测的是可能性，并不意味着能准确说出六周后某天的天气。",
+        "summary_en": "MIT reported on October 14 that researchers trained a machine-learning system on past forecasts and observations to correct systematic errors in existing models. It improved probabilistic temperature and rainfall forecasts two to six weeks ahead. Such forecasts could give farmers and energy planners more preparation time. They describe likelihoods, however, rather than guaranteeing the weather on a particular day six weeks away.",
         "source": {
           "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/oceans-most-abundant-loner-microbe-has-sticky-second-life-1020",
-          "published": "2026-10-20"
+          "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+          "published": "2026-10-14"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-22-symmetry-mri",
-        "category": "数学与医学 / MATH & MEDICINE",
-        "headline": "把对称性写进AI，让扫描跟上运动",
-        "headline_en": "Building symmetry into AI to track motion",
-        "summary": "MIT 10月19日介绍一种胎儿脑部磁共振成像模型：把头部左右对称性纳入网络，帮助识别运动中的朝向，并调整扫描。二维切片更好对齐，才更容易组成完整三维图像。模型主要用孕晚期资料训练，对更小胎儿的成像仍需改进，不能替代医生诊断。",
-        "summary_en": "On October 19, MIT described a fetal-brain MRI model that builds left–right head symmetry into its network. This helps identify orientation during movement and adjust scanning. Better-aligned two-dimensional slices can produce a more complete three-dimensional image. The model was trained mainly on third-trimester data; imaging younger fetuses still needs improvement. It supports image acquisition rather than replacing a doctor's diagnosis.",
+        "id": "2026-10-23-crystal-ai",
+        "category": "材料 / MATERIALS",
+        "headline": "找新材料，AI也需要理解三维结构",
+        "headline_en": "Finding materials requires seeing their 3D structure",
+        "summary": "MIT 10月18日报道，研究者把晶体的三维原子排列与文字描述结合训练AI。相比只读论文文字，模型更能把结构与性能联系起来，并筛出有潜力的固态电池电解质候选。关键不只是有哪些元素，还有原子怎样排列；计算筛选仍不等于材料已经通过实验。",
+        "summary_en": "MIT reported on October 18 that researchers combined three-dimensional crystal structures with written descriptions to train an AI model. Compared with text-only training, it better connected structure with properties and identified promising solid-state battery electrolyte candidates. A material depends not only on which elements it contains, but also on how its atoms are arranged. Computational screening does not by itself establish experimental performance.",
         "source": {
           "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/teaching-ai-about-symmetry-could-make-prenatal-diagnosis-more-reliable-1019",
-          "published": "2026-10-19"
+          "url": "https://news.mit.edu/2026/giving-ai-crystal-clear-view-of-materials-world-1018",
+          "published": "2026-10-18"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-22-mars-rotor",
-        "category": "航空 / AERONAUTICS",
-        "headline": "火星旋翼，为什么要更薄更尖？",
-        "headline_en": "Why make Mars rotor blades thinner and sharper?",
-        "summary": "NASA 10月20日介绍火星旋翼研究：更薄、更尖的不对称翼型，在模拟和风洞中改善了升力与失速表现。它利用翼前缘扰动气流，并延后高速时性能骤降，可能帮助未来直升机飞得更远。相关论文9月22日刊出；设计尚未在火星飞行，预测航程仍待验证。",
-        "summary_en": "NASA reported on October 20 that thinner, sharper, asymmetric Mars rotor designs improved lift and stall behaviour in simulations and wind-tunnel tests. Disturbing airflow at the leading edge and delaying high-speed performance loss could extend future flights. The underlying paper appeared on September 22. These experimental blades have not flown on Mars; predicted ranges still require validation.",
+        "id": "2026-10-23-macaque-avoidance",
+        "category": "行为 / BEHAVIOUR",
+        "headline": "经历过疫情的猕猴，更警惕污染线索",
+        "headline_en": "Outbreak-exposed macaques were warier of food",
+        "summary": "加州大学圣迭戈分校10月20日报道，55只猕猴的选择实验发现，经历病毒暴发的群体较少取食带粪便视觉线索的食物，即使个体未感染也如此。粪便被封在透明树脂下，测试无感染风险。这提示经历可能塑造避病行为；群体比较不能证明猕猴懂得传播机制。",
+        "summary_en": "UC San Diego reported on October 20 that tests of 55 macaques found outbreak-exposed groups less willing to take food with visual faecal cues, including individuals never infected. The faeces were sealed beneath clear resin, removing infection risk. Experience may shape pathogen avoidance, but comparisons between groups do not establish that monkeys understand disease transmission.",
         "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://www.nasa.gov/science-research/aeronautics-research/nasa-experimental-mars-helicopter-blade-designs-target-longer-flights/",
+          "name": "加州大学圣迭戈分校 / UC San Diego",
+          "url": "https://today.ucsd.edu/story/like-humans-some-primates-become-cautious-of-germs-in-the-wake-of-a-viral-outbreak",
           "published": "2026-10-20"
         },
         "accent": "coral"
       },
       {
-        "id": "2026-10-22-antarctic-ice-cliffs",
-        "category": "气候 / CLIMATE",
-        "headline": "冰崖崩塌之后，不一定持续失稳",
-        "headline_en": "Ice-cliff collapse need not trigger runaway retreat",
-        "summary": "MIT 10月15日报道，研究者用2019—2023年卫星资料分析逾15000处南极冰崖。部分高冰崖退缩很快，却随后稳定；冰层变薄和冰下地形高地可能阻止连续崩塌。这提示海平面模型需考虑更多因素，并不表示南极融冰风险消失。",
-        "summary_en": "MIT reported on October 15 that researchers analysed more than 15,000 Antarctic ice cliffs using satellite data from 2019–2023. Some tall cliffs retreated rapidly but then stabilised. Thinning ice and rises in the underlying terrain may interrupt continued collapse. Sea-level models need to consider these factors; the finding does not remove the risks from Antarctic ice loss.",
+        "id": "2026-10-23-tissue-adhesive",
+        "category": "医学工程 / BIOENGINEERING",
+        "headline": "湿组织难黏合，先吸走表面水",
+        "headline_en": "Absorbing surface water helps tissue adhesives stick",
+        "summary": "MIT 10月20日介绍源自实验室的组织黏合技术：早期双面胶用聚丙烯酸吸走表面水，数秒内贴住湿组织，有望减少缝合造成的损伤与渗漏。相关手术修复用途计划2027年进入人体试验；原理可行并不等于所有手术已证实安全有效。",
+        "summary_en": "MIT reported on October 20 on tissue adhesives developed from laboratory research. Early double-sided versions used polyacrylic acid to absorb surface water and attach to wet tissue within seconds, potentially reducing damage and leaks associated with stitching. Human trials for surgical repair applications are planned for 2027; a working principle does not establish safety and effectiveness for every operation.",
         "source": {
           "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/satellite-data-reveal-how-antarcticas-ice-cliffs-behave-over-time-1015",
-          "published": "2026-10-15"
+          "url": "https://news.mit.edu/2026/sanaheal-makes-surgical-stitching-more-like-applying-sticky-note-1020",
+          "published": "2026-10-20"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-22-gravity-water",
-        "category": "地球 / EARTH",
-        "headline": "用卫星间距，追踪陆地水量变化",
-        "headline_en": "Tracking land water through satellite separation",
-        "summary": "NASA 10月20日报道，研究重析2002—2025年重力卫星数据，以双星间距的细微变化推算陆地储水。合并多年观测提高空间细节，却降低时间细节；40个地区的趋势与灌溉、蓄水等人类活动相关。这有助于监测水资源，但统计关联不能单独证明每处变化的原因。",
-        "summary_en": "NASA reported on October 20 that researchers reanalysed 2002–2025 gravity-satellite data, using tiny changes in satellite separation to infer land-water storage. Combining years of observations sharpened spatial detail but reduced temporal detail. Trends in 40 regions were associated with irrigation, reservoirs or other human activities. This could aid water monitoring, although statistical associations alone cannot establish each local cause.",
+        "id": "2026-10-23-new-guinea-fires",
+        "category": "环境 / ENVIRONMENT",
+        "headline": "干旱遇上人为点火，风险如何叠加？",
+        "headline_en": "How drought and human ignition combine to raise fire risk",
+        "summary": "NASA 10月22日报道，9—10月新几内亚遭遇干旱与大范围火灾。厄尔尼诺改变降雨，使植被易燃；农事、清地等人为点火更容易失控。卫星影像和排放模型帮助追踪烟尘与碳释放，显示气候和土地利用会叠加风险；排放量属于模型估算，并非逐处直接测量。",
+        "summary_en": "NASA reported on October 22 that drought and widespread fires affected New Guinea in September and October. El Niño shifted rainfall, drying vegetation so agricultural and land-clearing fires could spread uncontrolled. Satellite images and emissions models track smoke and carbon release, showing how climate and land use combine to raise risk. Emissions are modelled estimates, not direct measurements of every fire.",
         "source": {
           "name": "美国航天局地球观测站 / NASA Earth Observatory",
-          "url": "https://science.nasa.gov/earth/earth-observatory/the-human-fingerprint-on-earths-water-cycle/",
-          "published": "2026-10-20"
+          "url": "https://science.nasa.gov/earth/earth-observatory/fires-char-new-guinea/",
+          "published": "2026-10-22"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-22-battery-binder",
-        "category": "材料 / MATERIALS",
-        "headline": "新型电池“胶水”让回收更容易",
-        "headline_en": "A new battery binder could simplify recycling",
-        "summary": "10月9日发表的研究提出不含氟、可用水加工的电池黏结剂：柠檬酸连接两种聚合物，稳固电极，也让拆解后的电极涂层在水中与金属箔分离。实验电池保持良好性能，为更清洁的制造与回收提供思路；商业化放大仍待完成。",
-        "summary_en": "A study published on October 9 introduced a fluorine-free, water-processable battery binder. Citric acid links two polymers to hold electrodes together while allowing coatings to separate from metal foils in water after disassembly. Test batteries maintained strong performance in controlled laboratory tests, suggesting cleaner manufacturing and recycling; scaling up for commercial production remains a future step.",
+        "id": "2026-10-23-perseverance-navigation",
+        "category": "太空 / SPACE",
+        "headline": "火星没有GPS，毅力号怎样认路？",
+        "headline_en": "How does Perseverance navigate Mars without GPS?",
+        "summary": "NASA 10月21日发布的任务日志记载，毅力号10月11日累计行驶45.22公里。它把地面影像与轨道照片匹配，在没有GPS的火星定位；改进打滑模型和路径规则，让长途自主驾驶更可靠。里程服务于取样与岩石研究，并非越快越好；地形和辐射仍限制行动。",
+        "summary_en": "A NASA mission update published on October 21 records Perseverance reaching 45.22 kilometres on October 11. Matching ground images with orbital pictures locates the rover without GPS; improved slip models and driving rules support longer autonomous drives. Distance serves sampling and rock studies, so speed alone is not the goal. Terrain and radiation still constrain operations.",
         "source": {
-          "name": "加州大学圣迭戈分校 / UC San Diego",
-          "url": "https://today.ucsd.edu/story/battery-manufacturing-and-recycling-could-go-green-with-this-glue",
-          "published": "2026-10-09"
+          "name": "美国航天局火星任务团队 / NASA Mars Mission Team",
+          "url": "https://science.nasa.gov/blog/tracks-along-the-longest-drive-on-another-world/",
+          "published": "2026-10-21"
         },
         "accent": "coral"
       }
@@ -185,30 +185,30 @@
     ]
   },
   "editorial_notes": [
-    "2026-10-22 review v1：内容接受和本版发布批准均待用户决定，未发布。10月21日v1未获批准，不继承其中任何批准。",
-    "当前GitHub master和最近成功发布基线为2026-10-19 review v1，HEAD 038f55945ef263eebab011ab45ea3361ca3e2a97。公开站点读取被本环境代理403阻断，未宣称核验现网画面。",
-    "W43三题与W42真实揭晓整个weekly对象逐字保留，display保持18秒及5分钟刷新；W43提示答案仅在既有独立教师材料。",
-    "六篇原始机构正文及日期均于本轮读取核验，来源清单保留实验、模拟、观测阶段和论文日期差异。MRI题材从10月21日未批准稿重新核验择用；冰崖和电池题材从10月19日批准稿重新核验保留。新版本整体仍待审核。",
-    "火星旋翼为10月20日技术报道，论文9月22日刊出；不把报道日期当作论文日期，不宣称已在火星试飞。原绿球藻深海碳通量、水量统计因果、MRI孕期推广和电池商业规模均保留不确定性。",
-    "只在仓库外独立预览副本构建和排版；正式内容不变，无提交、推送或部署。构建及浏览器检查不等于实体屏验收。"
+    "2026-10-23 review v1：内容接受待用户决定；具体版本及全部八屏发布批准待用户决定；未发布。10月22日批准仅适用于旧版，未继承批准记录。",
+    "当前批准基线2026-10-22 review v1，HEAD e56986cbd00bc80a960638e25579170d6965ad2d，approved.json blob 97909724f959437457dd2feb2b25f63b5d1f7f26。",
+    "替换全部六条新闻，无保留今早新闻。概率天气预报和晶体AI从10月21日未批准候选重新核验择用，不意味着继承任何批准。",
+    "六篇原始机构正文均于本轮直接读取，保留报道、事件及未来试验日期。NASA火星车页面发布10月21日、署文10月12日、里程事件10月11日；湿组织黏合为技术进展报道，手术用途计划2027年人体试验。",
+    "W43三题和W42真实揭晓整个weekly对象逐字保留，18秒及5分钟刷新不变；本周提示和答案仅在教师审阅附录，不进入学生播放JSON或八屏预览。",
+    "仅在仓库外独立副本构建和排版，正式仓库及旧稿保持不变；未提交、推送或部署。构建不等于实体屏验收。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-22T09:46+08:00",
+    "approved_at": "2026-10-23T00:29+08:00",
     "content_acceptance": {
       "accepted": true,
-      "accepted_at": "2026-10-22T09:46+08:00",
-      "edition": "2026-10-22 review v1",
-      "scope": "All eight reviewed student slides, unchanged."
+      "accepted_at": "2026-10-23T00:29+08:00",
+      "edition": "2026-10-23 review v1",
+      "scope": "All eight reviewed bilingual student slides, unchanged."
     },
     "publication_approval": {
       "approved": true,
-      "approved_at": "2026-10-22T09:46+08:00",
-      "edition": "2026-10-22 review v1",
-      "scope": "Publish all eight student slides through this repository GitHub Pages route. Electronic screen only; no other project synchronization."
+      "approved_at": "2026-10-23T00:29+08:00",
+      "edition": "2026-10-23 review v1",
+      "scope": "Publish all eight student slides through this repository GitHub Pages route. Electronic screen only; no other project Git synchronization."
     },
-    "reviewed_draft_sha256": "02b06fc1b18dab193919266d84714c2192db87881f12641cb30e8252d828a783",
-    "reviewed_draft_bytes": 16555,
-    "note": "Content acceptance and publication approval are recorded separately for the exact 2026-10-22 review v1. Only status and this review record differ from the reviewed JSON. Historical draft editorial notes are retained as provenance. W43 questions and genuine W42 reveals remain identical to the previous approved baseline. Current-week teacher hints and answers remain outside student playback. Approval time is recorded to the minute supplied by the user. Physical display not inspected."
+    "reviewed_draft_sha256": "724b7f8a58df88926daac26ff38b3d77ffc0aa1b0d4b068cfbddb7a63f08343f",
+    "reviewed_draft_bytes": 16508,
+    "note": "Content acceptance and publication approval are recorded separately for the exact 2026-10-23 review v1 prepared on Thursday evening for Friday. Approval was received early Friday, not Friday evening. The original eight-slide body is unchanged; only status and this review record differ from the reviewed JSON. All 48 bilingual student text fields were checked against the reviewed Library PDF before release. Historical draft notes remain as provenance. W43 questions and genuine W42 reveals are unchanged. Teacher-only appendix hints and answers are excluded from student playback. Approval time is recorded to the minute supplied by the parent conversation. Physical display not inspected."
   }
 }
