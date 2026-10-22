@@ -2,269 +2,269 @@
 title: "K Number Theory and Combinatorics"
 ---
 
-## 模块 K：数论与组合
+## Module K: Number Theory and Combinatorics
 
-> **对应考纲 Section 1**: MM1.1, MM2.4, M2.3, M2.5
-> **对应 Paper**: P2 重点（逻辑推理与证明验证）
-> **建议课时**: 1 课时 | **目标题量**: 8 题
+> **Corresponding Syllabus Section 1**: MM1.1, MM2.4, M2.3, M2.5
+> **Corresponding Paper**: P2 Focus (Logical Reasoning and Proof Verification)
+> **Recommended Class Hours**: 1 hour | **Target Number of Questions**: 8 questions
 
 ---
 
-## 📋 模块概览
+## 📋 Module Overview
 
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
+| Section | Content | Corresponding Syllabus | Past Paper Frequency | Class Hours |
 |------|------|---------|-------------|------|
-| K1 | 整除与余数 | MM1.1, M2.3 | 8 年 3 次 | 0.4 |
-| K2 | 排列组合基础 | M2.5 | 8 年 3 次 | 0.3 |
-| K3 | 二项式系数性质 | MM2.4 | 8 年 2 次 | 0.3 |
+| K1 | Divisibility and Remainders | MM1.1, M2.3 | 3 times in 8 years | 0.4 |
+| K2 | Fundamentals of Combinatorics | M2.5 | 3 times in 8 years | 0.3 |
+| K3 | Properties of Binomial Coefficients | MM2.4 | 2 times in 8 years | 0.3 |
 
 ---
 
-## K1 整除与余数 [MM1.1, M2.3]
+## K1 Divisibility and Remainders [MM1.1, M2.3]
 
-### 1.1 整除的基本概念
+### 1.1 Basic Concepts of Divisibility
 
-**整除**：若存在整数 $k$ 使得 $a = bk$，则称 $b$ 整除 $a$，记作 $b \mid a$。
+**Divisibility**: If there exists an integer $k$ such that $a = bk$, then we say $b$ divides $a$, denoted as $b \mid a$.
 
-**⚠️ 常见误解**：整除关系不具有传递性的特殊形式。例如若 $a \mid bc$，**不**一定推出 $a \mid b$ 或 $a \mid c$。
+**⚠️ Common Misconception**: The divisibility relationship does not have a special form of transitivity. For example, if $a \mid bc$, it does **not** necessarily imply $a \mid b$ or $a \mid c$.
 
-**反例**：$a = 6$, $b = 2$, $c = 3$。$6 \mid 6$，但 $6 \nmid 2$ 且 $6 \nmid 3$。
+**Counterexample**: $a = 6$, $b = 2$, $c = 3$. We have $6 \mid 6$, but $6 \nmid 2$ and $6 \nmid 3$.
 
-### 1.2 带余除法
+### 1.2 Division with Remainder
 
-对于整数 $a$ 和正整数 $b$，存在唯一整数 $q$（商）和 $r$（余数），使得：
+For an integer $a$ and a positive integer $b$, there exist unique integers $q$ (quotient) and $r$ (remainder), such that:
 
 $$a = bq + r, \quad 0 \le r < b$$
 
-**⚠️ 关键陷阱**：余数 $r$ 必须严格小于除数 $b$。当两个余数相乘时，乘积可能超过除数，此时**真正的余数**是 $rs \bmod b$，而非 $rs$ 本身。
+**⚠️ Crucial Trap**: The remainder $r$ must be strictly less than the divisor $b$. When two remainders are multiplied, the product may exceed the divisor, in which case the **actual remainder** is $rs \bmod b$, not $rs$ itself.
 
-**经典错误示例**：
-设 $b$ 除以 $a$ 的余数为 $r$，$c$ 除以 $a$ 的余数为 $s$。若 $r, s > 0$，能否推出 $bc$ 除以 $a$ 的余数是 $rs$？
+**Classic Error Example**:
+Suppose the remainder of $b$ divided by $a$ is $r$, and the remainder of $c$ divided by $a$ is $s$. If $r, s > 0$, can we deduce that the remainder of $bc$ divided by $a$ is $rs$?
 
-**错误**：例如 $a = 6$, $r = 2$, $s = 3$，则 $rs = 6$，正好等于 $a$，此时 $bc$ 能被 $a$ 整除（余数为 $0$），而非余数为 $6$。
+**Error**: For instance, let $a = 6$, $r = 2$, $s = 3$, then $rs = 6$, which is exactly equal to $a$. In this case, $bc$ is divisible by $a$ (the remainder is $0$), rather than having a remainder of $6$.
 
-### 1.3 质数与质因数分解
+### 1.3 Prime Numbers and Prime Factorisation
 
-**质数**：大于 $1$ 且只有 $1$ 和自身两个正因数的整数。
+**Prime Number**: An integer greater than $1$ that has exactly two positive factors: $1$ and itself.
 
-**唯一分解定理**：每个大于 $1$ 的整数都能唯一分解为质数的乘积。
+**Unique Factorisation Theorem**: Every integer greater than $1$ can be uniquely factored into a product of prime numbers.
 
-**应用**：判断整除、求最大公因数、判断质数个数。
+**Applications**: Determining divisibility, finding the greatest common divisor, determining the number of primes.
 
 ---
 
-## K2 排列组合基础 [M2.5]
+## K2 Fundamentals of Combinatorics [M2.5]
 
-### 2.1 基本计数原理
+### 2.1 Basic Counting Principles
 
-**乘法原理**：若任务 $A$ 有 $m$ 种完成方式，对于每种方式，任务 $B$ 有 $n$ 种完成方式，则完成 $A$ 和 $B$ 共有 $m \times n$ 种方式。
+**Multiplication Principle**: If task $A$ can be done in $m$ ways, and for each way, task $B$ can be done in $n$ ways, then doing both $A$ and $B$ can be done in $m \times n$ ways.
 
-**鸽巢原理**：若将 $n+1$ 个物品放入 $n$ 个盒子，则至少有一个盒子包含至少 $2$ 个物品。
+**Pigeonhole Principle**: If $n+1$ items are placed into $n$ boxes, then at least one box must contain at least $2$ items.
 
-**⚠️ 应用场景**：
-- 圆桌座位问题：控制空隙，使后来者必相邻
-- 配对问题：从有序集合中选取若干项，保证存在某对满足条件
+**⚠️ Application Scenarios**:
+- Round table seating problems: controlling gaps to ensure latecomers must sit adjacently.
+- Pairing problems: selecting several items from an ordered set, guaranteeing that a certain pair satisfies a condition.
 
-### 2.2 Dyck 路径（山峰编码问题）
+### 2.2 Dyck Paths (Mountain Encoding Problem)
 
-**定义**：由 $n$ 个上坡（U）和 $n$ 个下坡（D）组成的路径，从高度 $0$ 出发、回到高度 $0$，且过程中不低于高度 $0$。
+**Definition**: A path consisting of $n$ up-steps (U) and $n$ down-steps (D), starting at height $0$, returning to height $0$, and never dropping below height $0$ during the process.
 
-**有效编码的特征**：
-- 第一个字符必为 U
-- 最后一个字符必为 D
-- 任意位置处累计的 U 数量不少于累计的 D 数量
+**Characteristics of a Valid Encoding**:
+- The first character must be U.
+- The last character must be D.
+- At any position, the cumulative number of U's is not less than the cumulative number of D's.
 
-**变换验证技巧**：
-- 反转操作：首字母变为 D → 无效
-- U-D 互换：首字母变为 D → 无效
-- 开头加 U、结尾加 D：整体抬高一层 → 有效
+**Transformation Verification Techniques**:
+- Reversal operation: The first letter becomes D → Invalid.
+- Swapping U and D: The first letter becomes D → Invalid.
+- Adding U at the beginning and D at the end: Raising the whole path by one level → Valid.
 
-**计数公式**（Catalan 数）：阶数为 $n$ 的有效编码数量为
+**Counting Formula** (Catalan Numbers): The number of valid encodings of order $n$ is
 
 $$C_n = \frac{1}{n+1}\binom{2n}{n}$$
 
-### 2.3 配对与鸽巢原理应用
+### 2.3 Applications of Pairing and the Pigeonhole Principle
 
-**策略**：
-1. 找出所有满足特定条件的配对
-2. 确定孤立项（不参与配对的项）
-3. 计算最大安全选择数：孤立项数 + 配对数
-4. 答案 = 安全数 + 1
+**Strategy**:
+1. Identify all pairings that satisfy the specific condition.
+2. Determine the isolated items (items not participating in pairings).
+3. Calculate the maximum number of safe choices: number of isolated items + number of pairings.
+4. Answer = Safe choices + 1.
 
 ---
 
-## K3 二项式系数性质 [MM2.4]
+## K3 Properties of Binomial Coefficients [MM2.4]
 
-### 3.1 二项式系数定义
+### 3.1 Definition of Binomial Coefficients
 
 $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
-表示从 $n$ 个物品中选取 $k$ 个的方式数。
+Represents the number of ways to choose $k$ items from $n$ items.
 
-### 3.2 整除性分析
+### 3.2 Divisibility Analysis
 
-判断 $\binom{n}{k} a^{n-k} b^k$ 能否被某数 $m$ 整除时，需考察：
-- $\binom{n}{k}$ 的质因数分解
-- $a^{n-k}$ 和 $b^k$ 的贡献
+When determining whether $\binom{n}{k} a^{n-k} b^k$ is divisible by a certain number $m$, consider:
+- The prime factorisation of $\binom{n}{k}$.
+- The contribution from $a^{n-k}$ and $b^k$.
 
-**技巧**：若 $m = p^e q^f$（质因数分解），则系数需同时满足：
-- 含至少 $e$ 个因子 $p$
-- 含至少 $f$ 个因子 $q$
+**Technique**: If $m = p^e q^f$ (prime factorisation), then the coefficient must simultaneously satisfy:
+- Containing at least $e$ factors of $p$.
+- Containing at least $f$ factors of $q$.
 
-**常见错误**：忽略二项式系数本身的质因数贡献，只看 $a$ 和 $b$ 的幂次。
+**Common Mistake**: Ignoring the prime factor contribution of the binomial coefficient itself and only looking at the powers of $a$ and $b$.
 
 ---
 
-## ⚡ 速解技巧汇总
+## ⚡ Quick Solving Techniques Summary
 
-| 场景 | 技巧 |
+| Scenario | Technique |
 |------|------|
-| 余数乘积问题 | 检验 $rs$ 是否超过除数，真正余数是 $rs \bmod a$ |
-| 圆桌座位问题 | 每两人间最多空 $k$ 个座位，总数 $\div$ (人+空)向上取整 |
-| Dyck 路径变换 | 检验首字母是否为 U，不满足即无效 |
-| 配对问题 | 统计配对数和孤立项数，安全数 = 孤立 + 配对 |
-| 二项式整除性 | 先检验首尾两项，中间项常自动满足条件 |
+| Remainder Product Problems | Check if $rs$ exceeds the divisor; the actual remainder is $rs \bmod a$. |
+| Round Table Seating Problems | At most $k$ empty seats between every two people; total $\div$ (people + empty spaces) rounded up. |
+| Dyck Path Transformations | Check if the first letter is U; if not, it is invalid. |
+| Pairing Problems | Count pairings and isolated items; safe choices = isolated + pairings. |
+| Binomial Divisibility | Check the first and last terms first; intermediate terms often automatically satisfy the condition. |
 
-## ⚠️ 易错警示
+## ⚠️ Common Pitfalls
 
-- ❌ 若 $a \mid bc$，**不**一定有 $a \mid b$ 或 $a \mid c$
-- ❌ 余数相乘后可能超过除数，不能直接当作新余数
-- ❌ Dyck 路径反转后首字母变为 D，失去有效性
-- ❌ 二项式系数整除性判断时，需同时检查质因数的多个贡献来源
+- ❌ If $a \mid bc$, it does **not** necessarily mean $a \mid b$ or $a \mid c$.
+- ❌ The product of remainders may exceed the divisor; it cannot be directly taken as the new remainder.
+- ❌ Reversing a Dyck path makes the first letter D, rendering it invalid.
+- ❌ When determining the divisibility of binomial coefficients, you must check multiple sources of prime factor contributions simultaneously.
 
 ---
 
-## 📝 精选例题
+## 📝 Selected Examples
 
-### 例题 1（2016 P2 Q13 · 整除性证明错误）
+### Example 1 (2016 P2 Q13 · Divisibility Proof Error)
 
-**题目**：在以下对错误命题的证明中，哪一行包含错误？
+**Question**: In the following proof of a false proposition, which line contains the error?
 
-命题：若 $a$ 整除 $bc$，则 $a$ 整除 $b$ 或 $a$ 整除 $c$。
+Proposition: If $a$ divides $bc$, then $a$ divides $b$ or $a$ divides $c$.
 
-证明步骤：
-1. 逆否命题转换
-2. 设余数 $r, s$，其中 $0 < r, s < a$
-3. $b = ax + r$, $c = ay + s$
-4. $bc = a(axy + xs + yr) + rs$
-5. $bc$ 除以 $a$ 的余数是 $rs$
-6. $rs > 0$，故 $a$ 不整除 $bc$
+Proof Steps:
+1. Contrapositive conversion.
+2. Let remainders be $r, s$, where $0 < r, s < a$.
+3. $b = ax + r$, $c = ay + s$.
+4. $bc = a(axy + xs + yr) + rs$.
+5. The remainder of $bc$ divided by $a$ is $rs$.
+6. $rs > 0$, hence $a$ does not divide $bc$.
 
-【题目分析】
-本题考查整除性的逻辑推理。需逐行审查证明过程，识别哪一步推导出错。
+【Problem Analysis】
+This question tests logical reasoning regarding divisibility. You need to review the proof step by step to identify where the deduction goes wrong.
 
-【解题步骤】
-第1-4行均正确。
+【Solution Steps】
+Lines 1-4 are all correct.
 
-第5行断言 $bc$ 除以 $a$ 的余数是 $rs$，这是**错误所在**。
+Line 5 asserts that the remainder of $bc$ divided by $a$ is $rs$, which is **where the error lies**.
 
-当 $rs \ge a$ 时，$rs$ 并非余数。例如 $a = 6$, $r = 2$, $s = 3$：
+When $rs \ge a$, $rs$ is not the remainder. For example, $a = 6$, $r = 2$, $s = 3$:
 $$rs = 6 = a$$
 
-此时 $bc$ 除以 $a$ 的余数为 $0$（即 $a$ 整除 $bc$），而非余数为 $6$。
+In this case, the remainder of $bc$ divided by $a$ is $0$ (i.e., $a$ divides $bc$), not a remainder of $6$.
 
-反例 $a = 6$, $b = 2$, $c = 3$：
-- $6 \mid bc$（因为 $bc = 6$）
-- 但 $6 \nmid 2$ 且 $6 \nmid 3$
+Counterexample $a = 6$, $b = 2$, $c = 3$:
+- $6 \mid bc$ (since $bc = 6$)
+- But $6 \nmid 2$ and $6 \nmid 3$
 
-证明试图用余数论证逆命题，却在第5行忽略了余数乘积可能超过除数的情形。
+The proof attempts to use remainders to argue the converse, but in Line 5, it ignores the scenario where the product of the remainders might exceed the divisor.
 
-【快捷思路】
-直接构造反例：$a = 6$, $r = 2$, $s = 3$，则 $rs = 6 = a$，余数应为 $0$。第5行的断言在反例下失效。
+【Shortcut Idea】
+Directly construct a counterexample: $a = 6$, $r = 2$, $s = 3$, then $rs = 6 = a$, and the remainder should be $0$. The assertion in line 5 fails under this counterexample.
 
-【正确答案】E（第5行）
+【Correct Answer】E (Line 5)
 
-【知识点】Number Theory | **考纲**: MM1.1, M2.3
-
----
-
-### 例题 2（2018 P2 Q8 · Dyck 路径变换）
-
-**题目**：山峰剖面图的有效编码由 $n$ 个 U 和 $n$ 个 D 组成，从海平面出发回到海平面，且不低于海平面。判断以下三种变换是否保持有效性：
-
-I. 反转编码
-II. 将每个 U 替换为 D，每个 D 替换为 U
-III. 在开头加 U，结尾加 D
-
-【题目分析】
-本题考查 Dyck 路径的性质。有效编码必须首字母为 U、尾字母为 D，且任意位置累计 U 数不少于累计 D 数。
-
-【解题步骤】
-**判断 I**：反转编码。
-
-原编码以 D 结尾，反转后以 D 开头。第一个字符为 D 时，第一步就走低于海平面，故反转后**不**是有效编码。I 错误。
-
-**判断 II**：U-D 互换。
-
-原编码以 U 开头，互换后以 D 开头。同样第一步就低于海平面，故互换后**不**是有效编码。II 错误。
-
-**判断 III**：开头加 U、结尾加 D。
-
-新编码首字母为 U，满足基本条件。原编码全程不低于海平面，新编码将原路径整体抬高一层（高度从 $0$ 提升到 $1$），更不会低于海平面。最后加的 D 使高度回到 $0$。新编码有 $n+1$ 个 U 和 $n+1$ 个 D，满足所有条件。III 正确。
-
-【快捷思路】
-抓住核心约束：首字母必为 U。I 和 II 都使首字母变为 D，立判无效。III 开头加 U 保持首字母为 U，且全程抬高一层，天然有效。
-
-【正确答案】D（仅 III 正确）
-
-【知识点】Combinatorics | **考纲**: M2.5
+【Knowledge Point】Number Theory | **Syllabus**: MM1.1, M2.3
 
 ---
 
-## 🏋️ 课后练习（限时 10 分钟）
+### Example 2 (2018 P2 Q8 · Dyck Path Transformation)
 
-| # | 题号 | 考点 | 对应考纲 | 难度 |
+**Question**: A valid encoding of a mountain profile consists of $n$ U's and $n$ D's, starts from sea level, returns to sea level, and never goes below sea level. Determine whether the following three transformations maintain validity:
+
+I. Reverse the encoding
+II. Replace every U with D, and every D with U
+III. Add U at the beginning, and D at the end
+
+【Problem Analysis】
+This question tests the properties of Dyck paths. A valid encoding must start with U, end with D, and have cumulative U's no less than cumulative D's at any point.
+
+【Solution Steps】
+**Judging I**: Reverse the encoding.
+
+The original encoding ends with D, so reversing it makes it start with D. If the first character is D, the first step goes below sea level, so after reversal, it is **not** a valid encoding. I is incorrect.
+
+**Judging II**: Swap U and D.
+
+The original encoding starts with U, so swapping makes it start with D. Similarly, the first step goes below sea level, so it is **not** a valid encoding. II is incorrect.
+
+**Judging III**: Add U at the beginning, add D at the end.
+
+The new encoding starts with U, satisfying the basic condition. The original encoding never goes below sea level, and the new encoding raises the whole path by one level (height increases from $0$ to $1$), so it will definitely not go below sea level. The final D brings the height back to $0$. The new encoding has $n+1$ U's and $n+1$ D's, satisfying all conditions. III is correct.
+
+【Shortcut Idea】
+Grasp the core constraint: the first letter must be U. Both I and II change the first letter to D, instantly rendering them invalid. III adds U at the start, keeping the first letter U, and raises the entire path by one level, naturally keeping it valid.
+
+【Correct Answer】D (Only III is correct)
+
+【Knowledge Point】Combinatorics | **Syllabus**: M2.5
+
+---
+
+## 🏋️ After-Class Exercises (10 Minutes Time Limit)
+
+| # | Question Number | Topic | Corresponding Syllabus | Difficulty |
 |---|------|------|---------|------|
-| 1 | 2016 P2 Q20 | 正多边形内角方程 | MM1.1 | ⭐⭐⭐ |
-| 2 | 2017 P2 Q13 | 标准形式加法进位 | M2.3 | ⭐⭐⭐ |
-| 3 | 2017 P2 Q20 | 排列组合推理 | M2.5 | ⭐⭐⭐⭐ |
-| 4 | 2019 P2 Q9 | 鸽巢原理圆桌问题 | M2.5 | ⭐⭐⭐ |
-| 5 | 2022 P2 Q8 | 配对与鸽巢原理 | M2.5 | ⭐⭐⭐ |
-| 6 | 2023 P1 Q6 | 二项式系数整除性 | MM2.4 | ⭐⭐⭐ |
+| 1 | 2016 P2 Q20 | Regular Polygon Interior Angle Equation | MM1.1 | ⭐⭐⭐ |
+| 2 | 2017 P2 Q13 | Standard Form Addition Carry | M2.3 | ⭐⭐⭐ |
+| 3 | 2017 P2 Q20 | Combinatorial Reasoning | M2.5 | ⭐⭐⭐⭐ |
+| 4 | 2019 P2 Q9 | Pigeonhole Principle Round Table Problem | M2.5 | ⭐⭐⭐ |
+| 5 | 2022 P2 Q8 | Pairing and Pigeonhole Principle | M2.5 | ⭐⭐⭐ |
+| 6 | 2023 P1 Q6 | Divisibility of Binomial Coefficients | MM2.4 | ⭐⭐⭐ |
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+*For full solutions, please refer to the question bank database; each question includes 【Solution Steps】 and 【Shortcut Idea】.*
 
 ---
 
-## 附录：典型题型总结
+## Appendix: Summary of Typical Question Types
 
-### 题型 A：整除性证明验证
+### Type A: Divisibility Proof Verification
 
-**特征**：给出一个对命题的证明过程，要求识别哪一步出错。
+**Characteristics**: Provides a proof process for a proposition and requires identifying which step is incorrect.
 
-**策略**：
-1. 逐行审查每一步的逻辑合法性
-2. 特别关注除法操作（可能丢根）、余数操作（可能超限）
-3. 用具体反例验证可疑步骤
+**Strategy**:
+1. Review the logical validity of each step line by line.
+2. Pay special attention to division operations (might lose roots) and remainder operations (might exceed bounds).
+3. Use specific counterexamples to verify suspicious steps.
 
-### 题型 B：鸽巢原理应用
+### Type B: Applications of the Pigeonhole Principle
 
-**特征**：圆形排列或配对问题，求保证某条件成立的最小数量。
+**Characteristics**: Circular arrangement or pairing problems, asking for the minimum number to guarantee a certain condition holds.
 
-**策略**：
-1. 确定控制量：空隙数、配对数、孤立项数
-2. 构造最坏情况（让条件最难满足）
-3. 计算安全边界，答案 = 安全数 + 1
+**Strategy**:
+1. Determine the controlling quantities: number of gaps, pairings, and isolated items.
+2. Construct the worst-case scenario (making the condition hardest to satisfy).
+3. Calculate the safety boundary, answer = safe choices + 1.
 
-### 题型 C：二项式系数性质
+### Type C: Properties of Binomial Coefficients
 
-**特征**：判断展开式中哪些项的系数满足整除性条件。
+**Characteristics**: Determine which terms in an expansion have coefficients that satisfy a divisibility condition.
 
-**策略**：
-1. 分析目标数的质因数分解
-2. 检验首尾两项（常为边界情况）
-3. 中间项往往自动满足，无需逐一验证
-
----
-
-## 🎯 配套练习
-
-学完本章？[→ 去做 Number Theory 相关练习题](/practice/tmua/?topic=Number%20Theory)
-
-学完本章？[→ 去做 Combinatorics 相关练习题](/practice/tmua/?topic=Combinatorics)
+**Strategy**:
+1. Analyse the prime factorisation of the target number.
+2. Check the first and last terms (often the boundary cases).
+3. Intermediate terms usually satisfy the condition automatically and do not require individual verification.
 
 ---
 
-*讲义完成！本模块共 8 题，覆盖数论基础与组合计数两大主题。*
+## 🎯 Matching Exercises
+
+Finished this chapter? [→ Go to Number Theory related exercises](/practice/tmua/?topic=Number%20Theory)
+
+Finished this chapter? [→ Go to Combinatorics related exercises](/practice/tmua/?topic=Combinatorics)
+
+---
+
+*Lecture notes complete! This module contains 8 questions, covering the two main topics of basics of number theory and combinatorial counting.*

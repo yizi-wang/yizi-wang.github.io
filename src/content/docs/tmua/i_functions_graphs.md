@@ -2,346 +2,346 @@
 title: "I Functions and Graphs"
 ---
 
-## 模块 I：函数与图像
+## Module I: Functions and Graphs
 
-> **对应考纲 Section 1**: MM1.7, MM8.1-MM8.7
-> **对应 Paper**: P1 基础题型 + P2 推理题型（22/320 题）
-> **建议课时**: 2 课时 | **目标题量**: 15-20 题
-
----
-
-## 📋 模块概览
-
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
-|------|------|---------|-------------|------|
-| I1 | 函数定义与性质 | MM1.7 | 6 年 6 次 | 0.5 |
-| I2 | 常见函数图像 | MM8.1, MM8.3-MM8.4 | 8 年 12 次 | 0.5 |
-| I3 | 图像变换 | MM8.2 | 8 年 8 次 | 0.5 |
-| I4 | 导数与函数形状 | MM8.5 | 8 年 10 次 | 0.3 |
-| I5 | 方程根的个数 | MM8.6-MM8.7 | 8 年 8 次 | 0.2 |
+> **Corresponding Syllabus Section 1**: MM1.7, MM8.1-MM8.7
+> **Corresponding Paper**: P1 Foundation Types + P2 Reasoning Types (22/320 questions)
+> **Suggested Lessons**: 2 Lessons | **Target Question Volume**: 15-20 Questions
 
 ---
 
-## I1 函数定义与性质 [MM1.7]
+## 📋 Module Overview
 
-### 1.1 函数的本质
+| Sub-section | Content | Corresponding Syllabus | Past Paper Frequency | Lessons |
+|-------------|---------|------------------------|----------------------|---------|
+| I1 | Function Definition and Properties | MM1.7 | 6 times in 6 years | 0.5 |
+| I2 | Common Function Graphs | MM8.1, MM8.3-MM8.4 | 12 times in 8 years | 0.5 |
+| I3 | Graph Transformations | MM8.2 | 8 times in 8 years | 0.5 |
+| I4 | Derivatives and Function Shapes | MM8.5 | 10 times in 8 years | 0.3 |
+| I5 | Number of Roots of Equations | MM8.6-MM8.7 | 8 times in 8 years | 0.2 |
 
-函数是一种**映射关系**：每个输入 $x$ 对应**唯一**的输出 $y$。
+---
+
+## I1 Function Definition and Properties [MM1.7]
+
+### 1.1 The Essence of Functions
+
+A function is a **mapping relationship**: each input $x$ corresponds to a **unique** output $y$.
 
 $$y = f(x)$$
 
-关键理解：函数是**多对一或一对一**的映射，不是一对多。同一个 $x$ 不能对应不同的 $y$ 值。
+Key understanding: A function is a **many-to-one or one-to-one** mapping, not a one-to-many mapping. The same $x$ cannot correspond to different $y$ values.
 
-**⚠️ 常见误解**：学生常认为函数必须是一对一的（如线性函数），但实际上多对一也是合法的（如 $y = x^2$，$x = 2$ 和 $x = -2$ 都对应 $y = 4$）。
+**⚠️ Common Misconception**: Students often think functions must be one-to-one (like linear functions), but actually many-to-one is also valid (like $y = x^2$, both $x = 2$ and $x = -2$ correspond to $y = 4$).
 
-### 1.2 常见函数性质
+### 1.2 Common Function Properties
 
-| 函数类型 | 定义域 | 单调性 | 特殊性质 |
-|---------|--------|--------|---------|
-| $y = \sqrt{x}$ | $x \geq 0$ | 严格递增 | 正平方根，$y \geq 0$ |
-| $y = |x|$ | 全实数 | $x<0$ 递减，$x>0$ 递增 | $V$ 形图像，关于 $y$ 轴对称 |
-| $y = x^n$（奇数 $n$） | 全实数 | 严格递增 | 过原点，关于原点对称 |
-| $y = x^n$（偶数 $n$） | 全实数 | $x<0$ 递减，$x>0$ 递增 | 过原点，关于 $y$ 轴对称 |
+| Function Type | Domain | Monotonicity | Special Properties |
+|---------------|--------|--------------|--------------------|
+| $y = \sqrt{x}$ | $x \geq 0$ | Strictly increasing | Positive square root, $y \geq 0$ |
+| $y = |x|$ | All real numbers | Decreasing for $x<0$, increasing for $x>0$ | $V$-shaped graph, symmetric about the $y$-axis |
+| $y = x^n$ (Odd $n$) | All real numbers | Strictly increasing | Passes through the origin, symmetric about the origin |
+| $y = x^n$ (Even $n$) | All real numbers | Decreasing for $x<0$, increasing for $x>0$ | Passes through the origin, symmetric about the $y$-axis |
 
-### 1.3 函数的单调性与不等式
+### 1.3 Monotonicity of Functions and Inequalities
 
-若函数 $f$ 在整个实数域上**严格单调递增**，则：
+If a function $f$ is **strictly monotonically increasing** over the entire domain of real numbers, then:
 
 $$f(x) < f(y) \iff x < y$$
 
-这是判断不等式能否推出大小关系的关键依据 [2016 P2 Q10]。
+This is the key basis for determining whether an inequality can imply a magnitude relationship [2016 P2 Q10].
 
-**应用场景**：给定 $f(x) < f(y)$，问能否推出 $x < y$？只需检查 $f$ 是否在 $\mathbb{R}$ 上严格递增。
-
----
-
-## I2 常见函数图像 [MM8.1, MM8.3-MM8.4]
-
-### 2.1 六种核心图像
-
-TMUA 考纲要求识别并能够绘制的函数图像：
-
-| 函数类型 | 图像特征 | 关键点 | TMUA 重点 |
-|---------|---------|--------|----------|
-| **线性函数** $y = mx + c$ | 直线 | 斜率 $m$，$y$-截距 $c$ | MM8.3 |
-| **二次函数** $y = a(x+b)^2+c$ | 抛物线 | 顶点 $(-b, c)$，开口方向由 $a$ 决定 | MM8.4 |
-| **三次函数** $y = x^3$ | S 形曲线 | 过原点，单调递增 | MM8.1 |
-| **指数函数** $y = a^x$ | 渐近上升 | 过 $(0,1)$，当 $a>1$ 时递增 | MM8.1 |
-| **对数函数** $y = \log_a x$ | 渐近曲线 | 过 $(1,0)$，当 $a>1$ 时递增 | MM8.1 |
-| **绝对值函数** $y = |x|$ | V 形 | 顶点在原点，关于 $y$ 轴对称 | MM1.7 |
-
-### 2.2 二次函数的参数影响 [MM8.4]
-
-标准形式：$y = a(x+b)^2 + c$
-
-- **$a$**：控制开口方向和宽度
-  - $a > 0$：开口向上
-  - $a < 0$：开口向下
-  - $|a|$ 越大，开口越窄（曲线越陡峭）
-
-- **$b$**：控制顶点横坐标（顶点在 $x = -b$）
-- **$c$**：控制顶点纵坐标（顶点在 $y = c$）
-
-**⚡ 快速配方口诀**：对于 $y = x^2 + px + q$，配方后顶点为 $\left(-\frac{p}{2}, q - \frac{p^2}{4}\right)$。
+**Application Scenario**: Given $f(x) < f(y)$, can we deduce $x < y$? Simply check whether $f$ is strictly increasing on $\mathbb{R}$.
 
 ---
 
-## I3 图像变换 [MM8.2]
+## I2 Common Function Graphs [MM8.1, MM8.3-MM8.4]
 
-### 3.1 四种基本变换
+### 2.1 Six Core Graphs
 
-设原函数为 $y = f(x)$，四种变换及效果：
+Function graphs required by the TMUA syllabus to recognize and be able to sketch:
 
-| 变换 | 表达式 | 效果 | ⚠️ 易错点 |
-|------|--------|------|----------|
-| **纵向拉伸** | $y = af(x)$ | 纵坐标乘以 $a$ | $a<0$ 会上下翻转 |
-| **上移** | $y = f(x) + a$ | 整体上移 $a$ 单位 | 正值上移，负值下移 |
-| **横向平移** | $y = f(x + a)$ | **左移** $a$ 单位 | 符号相反：$+a$ 向左，$-a$ 向右 |
-| **横向拉伸** | $y = f(ax)$ | 水平压缩为 $\frac{1}{a}$ | 与纵向拉伸方向相反 |
+| Function Type | Graph Features | Key Points | TMUA Focus |
+|---------------|----------------|------------|------------|
+| **Linear Function** $y = mx + c$ | Straight line | Gradient $m$, $y$-intercept $c$ | MM8.3 |
+| **Quadratic Function** $y = a(x+b)^2+c$ | Parabola | Vertex $(-b, c)$, opening direction determined by $a$ | MM8.4 |
+| **Cubic Function** $y = x^3$ | S-shaped curve | Passes through the origin, monotonically increasing | MM8.1 |
+| **Exponential Function** $y = a^x$ | Asymptotic rise | Passes through $(0,1)$, increasing when $a>1$ | MM8.1 |
+| **Logarithmic Function** $y = \log_a x$ | Asymptotic curve | Passes through $(1,0)$, increasing when $a>1$ | MM8.1 |
+| **Absolute Value Function** $y = |x|$ | V-shaped | Vertex at the origin, symmetric about the $y$-axis | MM1.7 |
 
-### 3.2 变换顺序与复合 [MM8.2]
+### 2.2 Influence of Parameters on Quadratic Functions [MM8.4]
 
-当多个变换叠加时，**顺序很重要**：
+Standard form: $y = a(x+b)^2 + c$
+
+- **$a$**: Controls the opening direction and width
+  - $a > 0$: Opens upwards
+  - $a < 0$: Opens downwards
+  - The larger $|a|$ is, the narrower the opening (steeper curve)
+
+- **$b$**: Controls the $x$-coordinate of the vertex (vertex at $x = -b$)
+- **$c$**: Controls the $y$-coordinate of the vertex (vertex at $y = c$)
+
+**⚡ Quick Completing the Square Trick**: For $y = x^2 + px + q$, after completing the square, the vertex is at $\left(-\frac{p}{2}, q - \frac{p^2}{4}\right)$.
+
+---
+
+## I3 Graph Transformations [MM8.2]
+
+### 3.1 Four Basic Transformations
+
+Let the original function be $y = f(x)$, the four transformations and their effects:
+
+| Transformation | Expression | Effect | ⚠️ Common Mistakes |
+|----------------|------------|--------|--------------------|
+| **Vertical Stretch** | $y = af(x)$ | Multiply $y$-coordinates by $a$ | $a<0$ causes vertical reflection |
+| **Vertical Translation** | $y = f(x) + a$ | Shift upwards by $a$ units | Positive means up, negative means down |
+| **Horizontal Translation** | $y = f(x + a)$ | Shift **left** by $a$ units | Opposite sign: $+a$ means left, $-a$ means right |
+| **Horizontal Stretch** | $y = f(ax)$ | Horizontal compression by factor of $\frac{1}{a}$ | Opposite to vertical stretch |
+
+### 3.2 Transformation Order and Composition [MM8.2]
+
+When multiple transformations are combined, the **order is crucial**:
 
 $$y = 2f(x+3)$$
 
-步骤：
-1. 先平移：$f(x) \to f(x+3)$（左移 3 单位）
-2. 再拉伸：$f(x+3) \to 2f(x+3)$（纵向拉伸 2 倍）
+Steps:
+1. Translate first: $f(x) \to f(x+3)$ (shift left by 3 units)
+2. Stretch then: $f(x+3) \to 2f(x+3)$ (vertical stretch by a factor of 2)
 
-**⚡ 速解口诀**：
-- 平移写在括号内：左加右减（与直觉相反）
-- 拉伸写在括号外：上下拉伸正常，左右拉伸反向
+**⚡ Quick Solving Tip**:
+- Translations inside brackets: left is addition, right is subtraction (counter-intuitive)
+- Stretches outside brackets: vertical stretch is normal, horizontal stretch is reversed
 
-### 3.3 对数函数的特殊变换 [2017 P1 Q18]
+### 3.3 Special Transformations of Logarithmic Functions [2017 P1 Q18]
 
-对数函数有独特性质：**上下平移等价于左右伸缩**
+Logarithmic functions have a unique property: **vertical translation is equivalent to horizontal stretch**
 
 $$y = \log_{10}x + k = \log_{10}(10^k \cdot x)$$
 
-这意味着：
-- 上移 $k$ 单位 $\Leftrightarrow$ 水平拉伸 $10^k$ 倍
+This means:
+- Shift upwards by $k$ units $\Leftrightarrow$ horizontal stretch by a factor of $10^k$
 
-**应用**：若题目问"上移 2 单位等价于水平拉伸多少"，直接计算 $k = 10^2 = 100$，所以拉伸因子为 $\frac{1}{100}$（压缩）。
-
----
-
-## I4 导数与函数形状 [MM8.5]
-
-### 4.1 导数的几何意义
-
-导数 $f'(x)$ 是切线斜率，决定了函数的增减趋势：
-
-| 导数符号 | 函数行为 | 图像特征 |
-|---------|---------|---------|
-| $f'(x) > 0$ | 严格递增 | 曲线上升 |
-| $f'(x) < 0$ | 严格递减 | 曲线下降 |
-| $f'(x) = 0$ | 驻点（极值点） | 顶点或转折点 |
-
-### 4.2 驻点与极值
-
-驻点判断三步法 [MM8.5]：
-
-1. **求导数**：$f'(x) = \cdots$
-2. **找驻点**：令 $f'(x) = 0$，解出 $x$ 值
-3. **判类型**：
-   - $f'(x)$ 从正变负 → 极大值
-   - $f'(x)$ 从负变正 → 极小值
-   - 或用二阶导数：$f''(x) < 0$ 为极大，$f''(x) > 0$ 为极小
-
-### 4.3 利用导数判断根的个数
-
-**核心思想**：函数的极值点决定了图像的"起伏"，进而决定了与水平线交点的可能个数 [2016 P1 Q13]。
-
-例如，三次函数：
-- 若有两个驻点（极大+极小），最多可与水平线有 3 个交点
-- 若极小值 $< 0$ 且极大值 $> 0$，则方程 $f(x) = 0$ 必有 3 个实根
+**Application**: If a question asks "what horizontal stretch is equivalent to shifting upwards by 2 units", calculate directly $k = 10^2 = 100$, so the scale factor is $\frac{1}{100}$ (compression).
 
 ---
 
-## I5 方程根的个数 [MM8.6-MM8.7]
+## I4 Derivatives and Function Shapes [MM8.5]
 
-### 5.1 代数解与图像交点
+### 4.1 Geometric Meaning of the Derivative
 
-方程 $f(x) = g(x)$ 的解 = 曲线 $y = f(x)$ 与 $y = g(x)$ 的交点横坐标。
+The derivative $f'(x)$ is the gradient of the tangent line, determining the increasing or decreasing trend of the function:
 
-**几何解释**：
-- $f(x) = k$ 的解 = $y = f(x)$ 与水平线 $y = k$ 的交点数
-- $f(x) = g(x)$ 的解 = 两函数图像的交点数
+| Sign of Derivative | Function Behaviour | Graph Feature |
+|--------------------|--------------------|---------------|
+| $f'(x) > 0$ | Strictly increasing | Curve rises |
+| $f'(x) < 0$ | Strictly decreasing | Curve falls |
+| $f'(x) = 0$ | Stationary point (Turning point) | Vertex or turning point |
 
-### 5.2 多项式根的个数判定
+### 4.2 Stationary Points and Extrema
 
-| 多项式次数 | 最大实根个数 | TMUA 常见题型 |
-|----------|------------|--------------|
-| 一次（线性） | 1 个 | 单交点 |
-| 二次 | 2 个 | 判别式、配方 |
-| 三次 | 3 个 | 导数分析极值位置 |
-| 四次 | 4 个 | W 形曲线分析 [2016 P2 Q14] |
+Three-step method to find stationary points [MM8.5]:
 
-### 5.3 指数与对数方程
+1. **Find derivative**: $f'(x) = \cdots$
+2. **Find stationary points**: Set $f'(x) = 0$ and solve for $x$
+3. **Determine nature**:
+   - $f'(x)$ changes from positive to negative → Local maximum
+   - $f'(x)$ changes from negative to positive → Local minimum
+   - Or use the second derivative: $f''(x) < 0$ for maximum, $f''(x) > 0$ for minimum
 
-**指数方程**：$2^x = mx + c$ 的解 = 指数曲线与直线的交点 [2018 P2 Q11]
+### 4.3 Using Derivatives to Determine the Number of Roots
 
-关键观察：
-- $y = 2^x$ 严格递增，凸函数
-- 直线斜率 $m < 0$ 时最多 1 个交点
-- 直线斜率 $m > 0$ 时可能 0、1 或 2 个交点（取决于截距 $c$）
+**Core Idea**: The stationary points of a function determine the "undulations" of its graph, which in turn determines the possible number of intersections with a horizontal line [2016 P1 Q13].
 
----
-
-## ⚡ 速解技巧汇总
-
-| 场景 | 技巧 |
-|------|------|
-| 判断 $f(x) < f(y)$ 能否推出 $x < y$ | 检查 $f$ 是否在 $\mathbb{R}$ 上严格递增（排除偶函数、有间断的函数） |
-| 二次函数顶点快速求 | 一次项系数除以 $-2$ 为横坐标，代入得纵坐标 |
-| 水平平移方向 | 括号内：左加右减（与直觉相反！） |
-| 对数函数上移 $\Leftrightarrow$ 水平伸缩 | 上移 $k$ = 水平压缩 $10^{-k}$（底数为 10 时） |
-| 判断三次方程根数 | 求导找极值，检查极小值是否 $< 0$、极大值是否 $> 0$ |
-| 四次函数交点数变化 | W 形曲线：水平线从下往上，交点数呈 $1 \to 2 \to 4 \to 3 \to 1$ 模式 |
+For example, a cubic function:
+- If it has two stationary points (maximum + minimum), it can intersect a horizontal line at most 3 times
+- If the local minimum is $< 0$ and the local maximum is $> 0$, then the equation $f(x) = 0$ must have 3 real roots
 
 ---
 
-## ⚠️ 易错警示
+## I5 Number of Roots of Equations [MM8.6-MM8.7]
 
-- ❌ 水平平移中，$y = f(x + 3)$ 是**左移** 3 单位，不是右移——括号内符号与移动方向相反
-- ❌ 判断单调性时，偶函数（如 $x^2$、$x^4$）不是整体单调的，只在 $x > 0$ 或 $x < 0$ 分别单调
-- ❌ $f(a - x) = f(x)$ 表示对称轴是 $x = \frac{a}{2}$，不是 $x = a$ [2018 P2 Q10]
-- ❌ 三次函数不一定有 3 个实根——若极值同号（都在轴上方或下方），可能只有 1 个根
-- ❌ 指数函数 $y = a^x$ 过 $(0, 1)$，不是过原点——当 $x = 0$ 时 $y = 1$
+### 5.1 Algebraic Solutions and Graph Intersections
+
+The solutions to the equation $f(x) = g(x)$ = the $x$-coordinates of the intersections between the curves $y = f(x)$ and $y = g(x)$.
+
+**Geometric Interpretation**:
+- Solutions to $f(x) = k$ = number of intersections between $y = f(x)$ and the horizontal line $y = k$
+- Solutions to $f(x) = g(x)$ = number of intersections between the two function graphs
+
+### 5.2 Determining the Number of Roots for Polynomials
+
+| Degree of Polynomial | Maximum Number of Real Roots | Common TMUA Question Types |
+|----------------------|------------------------------|----------------------------|
+| Linear | 1 | Single intersection |
+| Quadratic | 2 | Discriminant, completing the square |
+| Cubic | 3 | Derivative analysis of stationary point positions |
+| Quartic | 4 | W-shaped curve analysis [2016 P2 Q14] |
+
+### 5.3 Exponential and Logarithmic Equations
+
+**Exponential Equation**: Solutions to $2^x = mx + c$ = intersections between the exponential curve and the straight line [2018 P2 Q11]
+
+Key observations:
+- $y = 2^x$ is strictly increasing and convex
+- When the line gradient $m < 0$, there is at most 1 intersection
+- When the line gradient $m > 0$, there can be 0, 1, or 2 intersections (depending on the intercept $c$)
 
 ---
 
-## 📝 精选例题
+## ⚡ Summary of Quick Solving Techniques
 
-### 例题 1（2016 P2 Q10 · 函数单调性与不等式）
+| Scenario | Technique |
+|----------|-----------|
+| Determine if $f(x) < f(y)$ can imply $x < y$ | Check if $f$ is strictly increasing on $\mathbb{R}$ (exclude even functions and functions with discontinuities) |
+| Quick way to find quadratic vertex | Divide the coefficient of the linear term by $-2$ for the $x$-coordinate, then substitute back to get the $y$-coordinate |
+| Direction of horizontal translation | Inside brackets: left is addition, right is subtraction (counter-intuitive!) |
+| Logarithmic function upward shift $\Leftrightarrow$ horizontal stretch | Shift up by $k$ = horizontal compression by $10^{-k}$ (when the base is 10) |
+| Determine the number of roots for cubic equations | Differentiate to find turning points, check if local minimum $< 0$ and local maximum $> 0$ |
+| Change in number of intersections for a quartic function | W-shaped curve: as a horizontal line moves upwards, the number of intersections follows a $1 \to 2 \to 4 \to 3 \to 1$ pattern |
 
-**题目**：$x$ 和 $y$ 为非零实数。哪个条件**足以**推出 $x < y$？
+---
 
-选项：
+## ⚠️ Common Mistake Warnings
+
+- ❌ In horizontal translations, $y = f(x + 3)$ is a shift **left** by 3 units, not right—the sign inside the bracket is opposite to the direction of movement
+- ❌ When determining monotonicity, even functions (like $x^2$, $x^4$) are not monotonic overall, they are only monotonic for $x > 0$ and $x < 0$ separately
+- ❌ $f(a - x) = f(x)$ indicates the axis of symmetry is $x = \frac{a}{2}$, not $x = a$ [2018 P2 Q10]
+- ❌ A cubic function does not necessarily have 3 real roots—if the turning points have the same sign (both above or below the axis), there might only be 1 root
+- ❌ The exponential function $y = a^x$ passes through $(0, 1)$, not the origin—when $x = 0$, $y = 1$
+
+---
+
+## 📝 Selected Examples
+
+### Example 1 (2016 P2 Q10 · Function Monotonicity and Inequalities)
+
+**Question**: $x$ and $y$ are non-zero real numbers. Which condition is **sufficient** to deduce that $x < y$?
+
+Options:
 - A: $x^4 < y^4$
 - B: $y^4 < x^4$
 - C: $x^{-1} < y^{-1}$
 - D: $y^{-1} < x^{-1}$
 - E: $x^{\frac{3}{5}} < y^{\frac{3}{5}}$
 
-【题目分析】
-核心问题是：给定 $f(x) < f(y)$，能否反推 $x < y$？这取决于函数 $f$ 是否在整个实数域上**严格单调递增**。
+【Question Analysis】
+The core issue is: given $f(x) < f(y)$, can we deduce backwards that $x < y$? This depends on whether the function $f$ is **strictly monotonically increasing** over the entire domain of real numbers.
 
-【解题步骤】
-逐一检查各选项中的函数单调性：
+【Solving Steps】
+Check the monotonicity of the function in each option one by one:
 
-**选项 A/B**：$f(t) = t^4$。偶函数，在 $t < 0$ 递减、$t > 0$ 递增，整体非单调。反例：$x = 1$，$y = -2$，$x^4 = 1 < 16 = y^4$，但 $x > y$。不充分。
+**Options A/B**: $f(t) = t^4$. Even function, decreasing for $t < 0$ and increasing for $t > 0$, not monotonic overall. Counterexample: $x = 1$, $y = -2$, $x^4 = 1 < 16 = y^4$, but $x > y$. Not sufficient.
 
-**选项 C/D**：$f(t) = t^{-1}$。在正负两支分别递减，但整体非单调。反例：$x = 2$，$y = 1$，$x^{-1} = 0.5 < 1 = y^{-1}$，但 $x > y$。不充分。
+**Options C/D**: $f(t) = t^{-1}$. Decreasing in both positive and negative branches separately, but not monotonic overall. Counterexample: $x = 2$, $y = 1$, $x^{-1} = 0.5 < 1 = y^{-1}$, but $x > y$. Not sufficient.
 
-**选项 E**：$f(t) = t^{3/5} = \sqrt[5]{t^3}$。$t^3$ 在 $\mathbb{R}$ 上严格递增，$\sqrt[5]{\cdot}$ 也在 $\mathbb{R}$ 上严格递增，复合后整体严格递增。因此 $x^{3/5} < y^{3/5} \Leftrightarrow x < y$。**充分**。
+**Option E**: $f(t) = t^{3/5} = \sqrt[5]{t^3}$. $t^3$ is strictly increasing on $\mathbb{R}$, and $\sqrt[5]{\cdot}$ is also strictly increasing on $\mathbb{R}$, their composition is strictly increasing overall. Therefore $x^{3/5} < y^{3/5} \Leftrightarrow x < y$. **Sufficient**.
 
-【快捷思路】
-检查函数是否为偶函数（偶函数一定不是整体单调），或是否有间断点。只有 $t^{3/5}$ 在全实数域严格递增。
+【Quick Thought】
+Check if the function is an even function (even functions are definitely not monotonic overall), or if it has points of discontinuity. Only $t^{3/5}$ is strictly increasing over all real numbers.
 
-【正确答案】E
+【Correct Answer】E
 
-【知识点】Functions | **考纲**: MM1.7
+【Knowledge Points】Functions | **Syllabus**: MM1.7
 
 ---
 
-### 例题 2（2017 P1 Q18 · 对数函数变换）
+### Example 2 (2017 P1 Q18 · Logarithmic Function Transformations)
 
-**题目**：$y = \log_{10}x$ 向上平移 2 单位，该变换等价于沿 $x$ 轴拉伸因子 $k$。求 $k$ 值。
+**Question**: $y = \log_{10}x$ is translated upwards by 2 units. This transformation is equivalent to a stretch along the $x$-axis by a scale factor of $k$. Find the value of $k$.
 
-【题目分析】
-对数函数有特殊性质：上下平移可以转化为水平方向的伸缩。这是因为 $\log a + \log b = \log(ab)$。
+【Question Analysis】
+Logarithmic functions have a special property: vertical translations can be converted into horizontal stretches. This is because $\log a + \log b = \log(ab)$.
 
-【解题步骤】
-向上平移 2 单位后：
+【Solving Steps】
+After translating upwards by 2 units:
 $$y = \log_{10}x + 2 = \log_{10}x + \log_{10}100 = \log_{10}(100x)$$
 
-沿 $x$ 轴拉伸因子 $k$ 后：
+After stretching along the $x$-axis by a scale factor of $k$:
 $$y = \log_{10}\left(\frac{x}{k}\right) = \log_{10}x - \log_{10}k$$
 
-令两式恒等：
+Equating the two expressions:
 $$\log_{10}x + 2 = \log_{10}x - \log_{10}k$$
 $$2 = -\log_{10}k$$
 $$\log_{10}k = -2$$
 $$k = 10^{-2} = 0.01$$
 
-【快捷思路】
-取特殊点：原函数过 $(1, 0)$。平移后过 $(1, 2)$。要使拉伸后的函数也过 $(1, 2)$，需原函数在 $x = \frac{1}{k}$ 处值为 $2$，即 $\log_{10}\frac{1}{k} = 2$，得 $k = 0.01$。
+【Quick Thought】
+Take a specific point: the original function passes through $(1, 0)$. After translation, it passes through $(1, 2)$. To make the stretched function also pass through $(1, 2)$, the original function must evaluate to $2$ at $x = \frac{1}{k}$, meaning $\log_{10}\frac{1}{k} = 2$, which gives $k = 0.01$.
 
-【正确答案】A（$k = 0.01$）
+【Correct Answer】A ($k = 0.01$)
 
-【知识点】Functions, Graphs | **考纲**: MM8.2
+【Knowledge Points】Functions, Graphs | **Syllabus**: MM8.2
 
 ---
 
-### 例题 3（2018 P2 Q10 · 对称性的代数表达）
+### Example 3 (2018 P2 Q10 · Algebraic Expression of Symmetry)
 
-**题目**：判断三个条件哪些是图像 $y = f(x)$ 关于直线 $x = a$ 对称的**充要条件**：
+**Question**: Determine which of the following three conditions are **necessary and sufficient** for the graph of $y = f(x)$ to be symmetric about the line $x = a$:
 
 - I: $f(a - x) = f(a + x)$
 - II: $f(2a - x) = f(x)$
 - III: $f(a - x) = f(x)$
 
-【题目分析】
-核心是理解对称性的代数定义：关于 $x = a$ 对称意味着以 $a$ 为中心、等距的两点函数值相等。
+【Question Analysis】
+The core is to understand the algebraic definition of symmetry: symmetry about $x = a$ means that function values at points equidistant from the center $a$ are equal.
 
-【解题步骤】
-**条件 I**：$a - x$ 与 $a + x$ 的中点为 $a$，两点到 $x = a$ 的距离均为 $|x|$。这正是对称性的直接定义，**充要条件**。
+【Solving Steps】
+**Condition I**: The midpoint of $a - x$ and $a + x$ is $a$, and the distance of both points to $x = a$ is $|x|$. This is precisely the direct definition of symmetry, making it a **necessary and sufficient condition**.
 
-**条件 II**：$2a - x$ 与 $x$ 的中点为 $\frac{2a - x + x}{2} = a$，同样关于 $x = a$ 对称。做变量代换：令 $t = a - x$，则 $2a - x = a + t$，$f(2a - x) = f(x)$ 变为 $f(a + t) = f(a - t)$，与条件 I 等价。**充要条件**。
+**Condition II**: The midpoint of $2a - x$ and $x$ is $\frac{2a - x + x}{2} = a$, which is also symmetric about $x = a$. Let's make a substitution: let $t = a - x$, then $2a - x = a + t$, and $f(2a - x) = f(x)$ becomes $f(a + t) = f(a - t)$, which is equivalent to Condition I. **Necessary and sufficient condition**.
 
-**条件 III**：$a - x$ 与 $x$ 的中点为 $\frac{a}{2}$，这是关于 $x = \frac{a}{2}$ 的对称性，不是 $x = a$。反例：取 $f(x) = (x - a)^2$，关于 $x = a$ 对称，但 $f(a - x) = x^2$ 与 $f(x) = (x - a)^2$ 不相等。**不是充要条件**。
+**Condition III**: The midpoint of $a - x$ and $x$ is $\frac{a}{2}$, which represents symmetry about $x = \frac{a}{2}$, not $x = a$. Counterexample: take $f(x) = (x - a)^2$, which is symmetric about $x = a$, but $f(a - x) = x^2$ is not equal to $f(x) = (x - a)^2$. **Not a necessary and sufficient condition**.
 
-【快捷思路】
-判断对称轴时，关键看两个自变量的中点：$a - x$ 与 $a + x$ 中点为 $a$（正确）；$2a - x$ 与 $x$ 中点为 $a$（正确）；$a - x$ 与 $x$ 中点为 $\frac{a}{2}$（错误）。
+【Quick Thought】
+When finding the axis of symmetry, key is to look at the midpoint of the two independent variables: the midpoint of $a - x$ and $a + x$ is $a$ (correct); the midpoint of $2a - x$ and $x$ is $a$ (correct); the midpoint of $a - x$ and $x$ is $\frac{a}{2}$ (incorrect).
 
-【正确答案】B（I 和 II 是充要条件）
+【Correct Answer】B (I and II are necessary and sufficient conditions)
 
-【知识点】Functions, Graphs | **考纲**: MM8.1, MM8.7
-
----
-
-## 🏋️ 课后练习（限时 15 分钟）
-
-| # | 题号 | 考点 | 对应考纲 | 难度 |
-|---|------|------|---------|------|
-| 1 | 2016 P2 Q14 | 四次函数根数 | MM8.6, MM8.7 | ⭐⭐⭐ |
-| 2 | 2017 P2 Q7 | 指数函数图像 | MM8.1, MM8.2 | ⭐⭐⭐ |
-| 3 | 2017 P2 Q14 | 二次函数变换 | MM8.4 | ⭐⭐⭐ |
-| 4 | 2018 P1 Q5 | 余数定理 | MM1.7 | ⭐⭐⭐ |
-| 5 | 2018 P2 Q11 | 指数方程根数 | MM8.7 | ⭐⭐⭐ |
-| 6 | 2018 P2 Q15 | 三次函数变换 | MM8.5 | ⭐⭐⭐ |
-| 7 | 2019 P1 Q11 | 对数方程 | MM1.7 | ⭐⭐⭐ |
-| 8 | 2022 P1 Q9 | 函数性质 | MM1.7 | ⭐⭐⭐ |
+【Knowledge Points】Functions, Graphs | **Syllabus**: MM8.1, MM8.7
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+## 🏋️ After-class Exercises (15 Minutes Limit)
+
+| # | Question Number | Topic | Corresponding Syllabus | Difficulty |
+|---|-----------------|-------|------------------------|------------|
+| 1 | 2016 P2 Q14 | Number of roots of quartic functions | MM8.6, MM8.7 | ⭐⭐⭐ |
+| 2 | 2017 P2 Q7 | Exponential function graphs | MM8.1, MM8.2 | ⭐⭐⭐ |
+| 3 | 2017 P2 Q14 | Quadratic function transformations | MM8.4 | ⭐⭐⭐ |
+| 4 | 2018 P1 Q5 | Remainder theorem | MM1.7 | ⭐⭐⭐ |
+| 5 | 2018 P2 Q11 | Number of roots of exponential equations | MM8.7 | ⭐⭐⭐ |
+| 6 | 2018 P2 Q15 | Cubic function transformations | MM8.5 | ⭐⭐⭐ |
+| 7 | 2019 P1 Q11 | Logarithmic equations | MM1.7 | ⭐⭐⭐ |
+| 8 | 2022 P1 Q9 | Function properties | MM1.7 | ⭐⭐⭐ |
 
 ---
 
-## 📚 考纲映射速查
-
-| 考纲号 | 内容 | 对应小节 |
-|--------|------|---------|
-| MM1.7 | 函数定义与性质（多对一映射、$\sqrt{x}$、$|x|$） | I1 |
-| MM8.1 | 常见函数图像识别与绘制 | I2 |
-| MM8.2 | 图像变换（平移、拉伸、复合） | I3 |
-| MM8.3 | 线性函数参数影响（$m$、$c$） | I2 |
-| MM8.4 | 二次函数参数影响（$a$、$b$、$c$） | I2 |
-| MM8.5 | 导数与函数形状（驻点、增减区间） | I4 |
-| MM8.6 | 方程根的个数（坐标轴交点） | I5 |
-| MM8.7 | 图像交点与方程解的对应 | I5 |
+*Full solutions can be found in the question bank database, each containing 【Solving Steps】 and 【Quick Thought】.*
 
 ---
 
-## 🎯 配套练习
+## 📚 Syllabus Mapping Quick Reference
 
-学完本章？[→ 去做 Functions 相关练习题](/practice/tmua/?topic=Functions)
-
-学完本章？[→ 去做 Graphs 相关练习题](/practice/tmua/?topic=Graphs)
+| Syllabus Code | Content | Corresponding Sub-section |
+|---------------|---------|---------------------------|
+| MM1.7 | Function definitions and properties (many-to-one mapping, $\sqrt{x}$, $|x|$) | I1 |
+| MM8.1 | Recognizing and sketching common function graphs | I2 |
+| MM8.2 | Graph transformations (translations, stretches, compositions) | I3 |
+| MM8.3 | Influence of linear function parameters ($m$, $c$) | I2 |
+| MM8.4 | Influence of quadratic function parameters ($a$, $b$, $c$) | I2 |
+| MM8.5 | Derivatives and function shapes (stationary points, increasing/decreasing intervals) | I4 |
+| MM8.6 | Number of roots of equations (intersections with axes) | I5 |
+| MM8.7 | Correspondence between graph intersections and equation solutions | I5 |
 
 ---
 
-**模块 I 讲义完成 | 共 22 题 | 建议课时：2 小时**
+## 🎯 Companion Exercises
+
+Finished this chapter? [→ Do Functions related practice questions](/practice/tmua/?topic=Functions)
+
+Finished this chapter? [→ Do Graphs related practice questions](/practice/tmua/?topic=Graphs)
+
+---
+
+**Module I Notes Completed | Total 22 Questions | Suggested Lessons: 2 Hours**
