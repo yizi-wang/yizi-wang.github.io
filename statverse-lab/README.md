@@ -33,10 +33,10 @@ Open http://localhost:4173. The static build recursively includes every ES modul
 
 ## Evidence and limits
 
-Checkpoint3 developer evidence:47 unit/oracle/domain test groups;11 baseline browser flows,13 previous regressions,14 new actual Chromium checks against built output. Results/timestamps and desktop/phone/Teacher PNGs are in `evidence/`. These are developer checks, not independent learning approval.
+Checkpoint3 developer evidence:48 unit/oracle/domain test groups;11 baseline browser flows,13 previous regressions,14 new actual Chromium checks against built output. Results/timestamps and desktop/phone/Teacher PNGs are in `evidence/`. These are developer checks, not independent learning approval.
 
 Independent reports are preserved in `docs/reviews/`. Phase2 actual independent Chromium reported7/8 simulated novice tasks basically passing and Teacher hiding failing; those failures drive this checkpoint. Another reviewer's original0/8 BLOCKED browser report stays unchanged. No real students participated, no measured novice30-second outcome or weighted learning score is claimed.
 
-The pure inference engine's original M1–M3 failures were independently rechecked as fixed at7e45fa8. Its newly found high-count/extreme-alpha contingency P2 and adjacent-confidence1ulp P3 remain recorded pending the engine owner's next fix; this checkpoint has no chi-square UI. Do not call the engine full-domain approved.
+The pure inference engine's original M1–M3 failures were independently rechecked as fixed at7e45fa8. The high-count/extreme-alpha contingency P2 repair from8f088 is now integrated and developer-tested, with independent re-review pending. The adjacent-confidence1ulp P3 remains documented; this checkpoint has no chi-square UI. Do not call the engine full-domain approved.
 
 D discrete-test UI, E chi-square UI, sampling-methods and full probability/distribution workbench remain absent. Some official correlation table rows/cells are intentionally unimplemented and identified as such. Card populations are discrete; no Normal source-population simulator yet. Repeated estimated-SD references do not simulate random SD estimation. See official coverage matrix, review loop, numeric contract, actual development log, and `docs/classroom-guide-aurora-v2.md` for the18-minute A lesson.

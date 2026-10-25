@@ -47,3 +47,5 @@ All statuses are developer implementation/testing status; independent classroom 
 |Teacher/classroom|18-minute actual Aurora guide,18px chain labels, wide focused stages; hidden feedback/ARIA/geometry repaired and developer browser tested|Independent stage3 recheck and actual projection-distance/screen-reader tests pending|
 
 All earlier checkpoint rows remain historical implementation snapshots. This delta supersedes their current-feature statements; none implies complete S1–S3 coverage.
+
+18:07UTC follow-up: inference owner8f088 high-count residual repair is integrated and developer-regressed; independent re-review pending. Chi-square UI remains absent. P3 adjacent-confidence1ulp limitation remains documented.
