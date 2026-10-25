@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-25T22:00:42.923043+00:00",
+  "application_commit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "records_inclusive_local_bundle_commit": "dcbb25c5894b547ce32cfad61404a02fa7c02a7e",
+  "previous_delivery_index_commit": "f75ca3c88c4e8c66ff3a19696fec762495906460",
+  "runtime_and_handout_diff": [],
+  "current_source_matches_frozen_manifest_assets": 21,
+  "own_preview_ports": {
+    "4173": "closed",
+    "4174": "closed",
+    "4193": "closed",
+    "4194": "closed",
+    "4195": "closed"
+  },
+  "current_independent_acceptance": "Actual-dist/browser, content delta and exact final Library/canonical PDF reviews passed their stated scopes. No new covered product P0/P1/P2.",
+  "library_new_three_file_batch": "BLOCKED known zero write: official helper read-only tool discovery network failure, one attempt, no prepare/finalize/newIDs/retry/alternate route",
+  "independent_final_four_file_batch": "BLOCKED known zero write in separate review environment: same discovery network failure including one authorized retry, no IDs; report preserved, original images not falsely delivered",
+  "available_downloads": "Existing exact-accc8f9 frozen source/static, native Teacher/Student PDFs and developer screenshots; IDs in final-selected-delivery.json",
+  "extra_parent_check": "Parent reported an additional read-only label/contrast check underway at21:58UTC. No result is claimed here; parent may append its result separately.",
+  "release_boundary": "No new application/Site deployment. Only README/docs/evidence after the app freeze. Final containing record SHA is returned after commit; do not substitute it for the application SHA.",
+  "time_boundary": "Records report actual execution through this timestamp. Parent owns the22:47:29UTC user handoff; no seven-hour continuous coding or future completion is asserted."
+}

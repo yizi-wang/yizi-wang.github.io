@@ -121,5 +121,9 @@
     "value": 86.8,
     "fixed_application": "94d0b8d",
     "meaning": "Software/design/evidence assessment; not correctness percent or learners, no automatic later score increase"
-  }
+  },
+  "latest_delivery_index_commit_before_this_record": "f75ca3c88c4e8c66ff3a19696fec762495906460",
+  "short_report_library_id": null,
+  "short_report_source_url": "https://github.com/yizi-wang/yizi-wang.github.io/blob/statverse-lab-20261025/statverse-lab/docs/DELIVERY-SUMMARY.md",
+  "report_save_status": "New three-file batch blocked before prepare/finalize; short report is available in pushed source, not assigned a new Library ID."
 }
