@@ -1,3 +1,5 @@
+import {normalCDF as referenceCDF,normalSurvival as referenceSurvival} from "./inference.js";
+import {workedAnswersHidden} from "./visibility.js";
 import {
   POOLS,
   mean,
@@ -12,10 +14,12 @@ import {
   normalPDF,
   normalCDF,
 } from "./statistics.js";
+import {createMeanLab} from "./mean-lab.js";
 import { createCorrelationLab } from "./correlation.js";
 const correlationLab = createCorrelationLab(
   document.querySelector("#correlation-workspace"),
 );
+const meanLab=createMeanLab(document.querySelector("#mean-workspace"));
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
 const fmt = (x, d = 3) =>
@@ -59,7 +63,7 @@ const names = {
 };
 const state = {
   pool: "aurora",
-  n: 5,
+  n: 3,
   kind: "mean",
   seed: "aurora-2026",
   rng: seededRandom("aurora-2026"),
@@ -78,6 +82,7 @@ const state = {
   teacherStage: "all",
   answersHidden: false,
   predictionRecord: null,
+  hasSampled:false,introDismissed:false,introDrawCount:0,introPredictions:[],firstPredictionChoice:null,firstObservationPending:false,
 };
 let exactCache = null;
 function exactOutcomes() {
@@ -141,7 +146,7 @@ function selectedSample(animate = false) {
     })
     .join("");
   $("#sample-caption").innerHTML =
-    `These ${state.n} cards → one ${spec.observed} = ${fmt(s.value)}. <button id="trace-point" class="text-button">Find sample #${state.selected + 1}'s point ↗</button>`;
+    `These ${state.n} cards → one ${spec.observed} = ${fmt(s.value)}. <button id="trace-point" class="text-button">Find sample #${state.selected + 1}'s point →</button>`;
   if (isStandardized()) {
     const t = theory(POOLS[state.pool], state.n, state.kind),
       z = (s.value - t.expectation) / t.se;
@@ -157,8 +162,7 @@ function selectedSample(animate = false) {
         ? "instant"
         : "smooth",
     });
-  $("#live").textContent =
-    `Sample ${state.selected + 1}. ${state.n} card powers: ${values(POOLS[state.pool], s.ids).join(", ")}. Observed ${spec.name}: ${fmt(s.value)}.`;
+  $("#live").textContent = workedAnswersHidden()?`Sample ${state.selected+1}; ${state.n} card powers: ${values(POOLS[state.pool],s.ids).join(', ')}. Worked estimate hidden.`:`Sample ${state.selected + 1}. ${state.n} card powers: ${values(POOLS[state.pool], s.ids).join(", ")}. Observed ${spec.name}: ${fmt(s.value)}.`;
 }
 function domain() {
   const vs = POOLS[state.pool].cards.map((c) => c.value),
@@ -193,19 +197,20 @@ function chart() {
   $("#chart-label").textContent =
     `${state.exact ? "Exact + simulated" : "Empirical"} sampling distribution of ${standardized ? "Z = (X̄ − μ) / SE" : spec.symbol}`;
   if (!Number.isFinite(t.expectation)) {
+    state.exact=false;state.exactPage=0;$('#exact').checked=false;renderExactInspector(null);
     host.innerHTML =
       '<div class="empty-sample" style="padding-top:55px"><b>S² needs n ≥ 2.</b><p>With one value there is no n − 1 variance estimate.</p></div>';
     $("#chart-description").textContent =
       "Increase n to at least 2 to estimate population variance with S².";
     return;
   }
-  const tickFont = document.body.classList.contains("teacher") ? 14 : 10;
+  const tickFont = document.body.classList.contains("teacher") ? 16 : 10;
   const w = Math.max(280, host.clientWidth),
-    h = 210,
-    L = 38,
-    T = 19,
-    B = 168,
-    W = w - 52,
+    h = 240,
+    L = document.body.classList.contains("teacher")?52:38,
+    T = 28,
+    B = 128,
+    W = w - L - 14,
     H = B - T,
     bins = 28,
     binWidth = (hi - lo) / bins;
@@ -237,41 +242,32 @@ function chart() {
     }
   }
   const heights = hist.map((x) => x.length / Math.max(1, R));
-  const normalPeak =
-    state.lab === "clt" && state.kind === "mean" && t.se > 0
-      ? normalPDF(
-          standardized ? 0 : t.expectation,
-          standardized ? 0 : t.expectation,
-          standardized ? 1 : t.se,
-        ) * binWidth
-      : 0;
-  const ymax = Math.max(0.05, ...heights, ...exactBins, normalPeak) * 1.15;
+  const showNormal=state.lab==='clt'&&state.kind==='mean'&&t.se>0;
+  const normalMu=standardized?0:t.expectation,normalSd=standardized?1:t.se;
+  const intervalMass=(a,b)=>{const za=(a-normalMu)/normalSd,zb=(b-normalMu)/normalSd;return Math.max(0,za>0?referenceSurvival(za)-referenceSurvival(zb):referenceCDF(zb)-referenceCDF(za))};
+  const normalBins=showNormal?Array.from({length:bins},(_,i)=>intervalMass(lo+i*binWidth,lo+(i+1)*binWidth)):[];
+  const ymax = Math.min(1,Math.max(.05,...heights,...exactBins,...normalBins)*1.15);
   const x = (v) => L + ((v - lo) / (hi - lo)) * W,
     y = (p) => B - (p / ymax) * H;
-  let svg = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="dist-title dist-desc"><title id="dist-title">Sampling distribution of ${spec.symbol}, ${R} repeated samples, n equals ${state.n}</title><desc id="dist-desc">Each mint point is one whole sample's statistic. Horizontal axis: ${standardized ? "standardized Z (dimensionless)" : state.kind.includes("variance") ? "power squared" : "power"}. Vertical axis: relative frequency per bin. Select a point, or use the sample selector below the chart, to see its exact cards.</desc>`;
+  let svg = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="dist-title dist-desc"><title id="dist-title">Sampling distribution of ${spec.symbol}, ${R} repeated samples, n equals ${state.n}</title><desc id="dist-desc">Bars encode relative frequency per bin. Dots occupy a separate saved-sample strip; their vertical positions only separate samples, never encode probability. Each dot is one whole sample's statistic. Horizontal axis: ${standardized ? "standardized Z (dimensionless)" : state.kind.includes("variance") ? "power squared" : "power"}. Vertical probability axis applies only to the histogram bars, not the dots below. Select a dot, or use the sample selector below the chart, to see its exact cards.</desc>`;
   for (let i = 0; i < 4; i++) {
     const p = (ymax * i) / 3;
     svg += `<line x1="${L}" x2="${L + W}" y1="${y(p)}" y2="${y(p)}" stroke="#283448" stroke-dasharray="2 4"/><text x="${L - 8}" y="${y(p) + 3}" fill="#7789a3" text-anchor="end" font-size="${tickFont}">${fmt(p * 100, 0)}%</text>`;
   }
-  svg += `<text x="${L}" y="8" fill="#788ca5" font-size="${tickFont - 1}">RELATIVE FREQUENCY PER BIN</text>`;
+  svg += `<text x="${L}" y="17" fill="#788ca5" font-size="${tickFont - 1}">RELATIVE FREQUENCY PER BIN</text>`;
   for (let i = 0; i <= 5; i++) {
     const v = lo + ((hi - lo) * i) / 5;
     svg += `<text x="${x(v)}" y="${B + 15}" text-anchor="middle" fill="#8798b0" font-size="${tickFont}">${fmt(v, 1)}</text>`;
   }
-  svg += `<text x="${L + W / 2}" y="${h - 6}" text-anchor="middle" fill="#9badc5" font-size="${tickFont}">${standardized ? "Z · dimensionless (fixed −4 to 4 window)" : `${spec.observed} · ${state.kind === "variance" || state.kind === "varianceN" ? "power²" : "power"}`}</text>`;
+  svg += `<text x="${L + W / 2}" y="${B + 29}" text-anchor="middle" fill="#9badc5" font-size="${tickFont}">${standardized ? "Z · dimensionless (fixed −4 to 4 window)" : `${spec.observed} · ${state.kind === "variance" || state.kind === "varianceN" ? "power²" : "power"}`}</text>`;
+  heights.forEach((p,i)=>{if(p>0)svg+=`<rect class="empirical-bin" data-bin="${i}" data-count="${hist[i].length}" data-proportion="${p}" x="${L+i*W/bins+1}" y="${y(p)}" width="${Math.max(1,W/bins-2)}" height="${B-y(p)}" fill="#a6f0cb" fill-opacity=".32" stroke="#a6f0cb" stroke-opacity=".55"><title>${hist[i].length} of ${R} estimates in this bin (${fmt(100*p,2)}%)</title></rect>`});
   if (exact)
     exactBins.forEach(
       (p, i) =>
         (svg += `<rect x="${L + (i * W) / bins + 1}" y="${y(p)}" width="${W / bins - 2}" height="${B - y(p)}" fill="#af9dfa" fill-opacity=".1" stroke="#af9dfa" stroke-width=".75"/>`),
     );
-  if (state.lab === "clt" && state.kind === "mean" && t.se > 0) {
-    let d = "";
-    for (let i = 0; i <= 200; i++) {
-      const v = lo + ((hi - lo) * i) / 200;
-      d += `${i ? "L" : "M"}${x(v)},${y(normalPDF(v, standardized ? 0 : t.expectation, standardized ? 1 : t.se) * binWidth)} `;
-    }
-    svg += `<path d="${d}" fill="none" stroke="#df9eff" stroke-width="1.5" opacity=".8"/>`;
-  }
+  if(showNormal){let d='';normalBins.forEach((p,i)=>{d+=`${i?'L':'M'}${x(lo+(i+.5)*binWidth)},${y(p)} `});svg+=`<path class="normal-bin-reference" d="${d}" fill="none" stroke="#df9eff" stroke-width="1.5"/>`;}
+  svg+=`<rect x="${L-3}" y="187" width="${W+6}" height="35" rx="4" fill="#182739"/><text x="${L}" y="181" fill="#a8bfd5" font-size="${tickFont-1}">SAVED SAMPLES · one dot = one whole sample</text><text x="${L+W/2}" y="${h-6}" text-anchor="middle" fill="#9eafc7" font-size="${tickFont-1}">Dot height only separates samples; it is not probability.</text>`;
   if (!state.hidden)
     svg += `<line class="truth-line" x1="${x(standardized ? 0 : t.expectation)}" x2="${x(standardized ? 0 : t.expectation)}" y1="${T}" y2="${B}" stroke="#f4d18a" stroke-width="1.5"/><text x="${Math.min(L + W - 15, x(standardized ? 0 : t.expectation) + 5)}" y="${T + 8}" fill="#f4d18a" font-size="${tickFont}">${standardized ? "E(Z)" : "E(T)"}</text>`;
   if (R) {
@@ -281,10 +277,10 @@ function chart() {
   hist.forEach((ids, b) =>
     ids.forEach((i, j) => {
       const s = state.samples[i],
-        cy = y((j + 0.5) / Math.max(1, R)),
+        cy = 195 + (j % 4) * 6,
         cx = x(transform(s.value));
       const selected = i === state.selected;
-      svg += `<circle class="dot" data-index="${i}" cx="${cx}" cy="${cy}" r="${selected ? 4.5 : Math.min(3.1, Math.max(1.3, (H / ymax / Math.max(1, R)) * 0.37))}" fill="${selected ? "#f7d799" : "#a6f0cb"}" opacity="${selected ? 1 : 0.75}" stroke="${selected ? "#fff" : "none"}"><title>Sample #${i + 1}${state.answersHidden ? "" : `: ${standardized ? "Z = " + fmt(transform(s.value)) + "; " : ""}${spec.observed} = ${fmt(s.value)}`}. Select to inspect its ${state.n} cards.</title></circle>`;
+      svg += `<circle class="dot" data-index="${i}" cx="${cx}" cy="${cy}" r="${selected ? 4.5 : R>1000?1.8:2.6}" fill="${selected ? "#f7d799" : "#a6f0cb"}" opacity="${selected ? 1 : 0.75}" stroke="${selected ? "#fff" : "none"}"><title>Sample #${i + 1}${workedAnswersHidden() ? "" : `: ${standardized ? "Z = " + fmt(transform(s.value)) + "; " : ""}${spec.observed} = ${fmt(s.value)}`}. Select to inspect its ${state.n} cards.</title></circle>`;
     }),
   );
   svg += "</svg>";
@@ -315,6 +311,7 @@ function chart() {
       "beforeend",
       `<span class="overflow-note">Degenerate distribution: every estimate equals ${fmt(t.expectation)}; SE = 0. Standardization by zero is undefined.</span>`,
     );
+  if(showNormal)desc.insertAdjacentHTML('beforeend',`<span class="normal-reference-note">Purple line: Normal-model probability per bin${standardized?'':`; ${fmt(100*(1-normalBins.reduce((a,b)=>a+b,0)),2)}% of this approximation lies beyond the displayed card-support window`}.</span>`);
   renderExactInspector(exact);
   $("#sample-picker")?.addEventListener("change", (e) => {
     const i = Number(e.target.value);
@@ -368,6 +365,8 @@ function metrics() {
       "Keep n fixed and increase R. How does the theoretical spread of the divisor-n variance statistic change?",
   };
   $("#predict-question").textContent = prompts[state.kind];
+  renderFirstPrediction();
+  renderSemanticChain(t);
   if (isStandardized())
     $("#predict-question").textContent =
       "For the unstandardized sample mean X̄, if n increases, how does its spread change?";
@@ -376,14 +375,16 @@ function metrics() {
     $("#reset-note").textContent =
       "5,000 retained samples reached. Reset this experiment to start a fresh reproducible record.";
   $("#n-value").textContent = state.n;
-  $("#challenge-question").textContent =
-    `You collect 1,000 samples instead of 200, keeping n = ${state.n}. Does the theoretical standard error change?`;
+  $('.discovery-stat').classList.toggle('hidden',state.lab==='coverage');
+  $("#challenge-question").textContent = state.lab==='coverage'?`For this already computed interval, does ${state.confidence*100}% mean the fixed μ has ${state.confidence*100}% probability of lying inside it?`:`You collect 1,000 samples instead of 200, keeping n = ${state.n}. Does the theoretical standard error change?`;
+  $$('[data-answer]').forEach(b=>b.textContent=state.lab==='coverage'?(b.dataset.answer==='yes'?'Yes, that is its chance':'No, μ and this interval are fixed'):(b.dataset.answer==='yes'?'Yes, it shrinks':'No, it stays the same'));
+  $('#ci-exact-question').textContent=`Must exactly ${state.confidence*100} out of every 100 intervals cover μ?`;
   $("#observed-label").textContent =
     `OBSERVED ESTIMATE · ${names[state.kind].observed}`;
   const disabled = state.kind === "variance" && state.n === 1;
   $("#draw").disabled = disabled || state.running || R >= 5000;
   $("#quick-draw").disabled = $("#draw").disabled;
-  $("#run").disabled = disabled || state.running || R >= 5000;
+  $("#run").disabled = !state.hasSampled || disabled || state.running || R >= 5000;
   $("#pause").disabled = !state.running;
   $("#teacher-pause").disabled = !state.running;
   $("#run").textContent =
@@ -419,12 +420,12 @@ function metrics() {
   if (state.lab === "clt") {
     title = "The means concentrate. The population stays skewed.";
     body =
-      "Increase n to see the distribution of sample means become more nearly Normal. The purple curve is a Normal approximation (density × bin width), never an exact distribution for these card pools. IID observations and finite variance matter; there is no universal n = 30 guarantee.";
+      "Increase n to see the distribution of sample means become more nearly Normal. The purple line shows bin probabilities from a Normal approximation, never an exact distribution for these card pools. IID observations and finite variance matter; there is no universal n = 30 guarantee.";
   }
   if (state.lab === "coverage") {
     title = `${state.confidence * 100}% describes a method over repeated samples.`;
     body =
-      "The population mean μ is fixed. Each fresh sample creates a random interval. The observed fraction covering μ can differ from 95%; for non-normal data, small-sample Normal intervals may have poor coverage.";
+      `The population mean μ is fixed. Each fresh sample creates a random interval. The observed fraction covering μ can differ from ${state.confidence*100}%; for non-normal data, small-sample Normal intervals may have poor coverage.`;
   }
   $("#insight-title").textContent = title;
   $("#insight-body").textContent = body;
@@ -544,6 +545,7 @@ function reset(
   state.rng = seededRandom(state.seed);
   state.samples = [];
   state.selected = -1;
+  renderExactInspector(null);
   state.exactPage = 0;
   state.ciIndex = -1;
   document.querySelectorAll(".sample-flight").forEach((e) => e.remove());
@@ -564,6 +566,7 @@ function addOne() {
   if (state.samples.length >= 5000) return false;
   const ids = draw(POOLS[state.pool], state.n, state.rng),
     v = statistic(values(POOLS[state.pool], ids), state.kind);
+  if(state.introDrawCount<2){state.introDrawCount++;state.firstObservationPending=true;$$('[data-prediction]').forEach(b=>b.classList.remove('selected'))}state.hasSampled=true;
   state.samples.push({ ids, value: v });
   state.selected = state.samples.length - 1;
   return true;
@@ -637,6 +640,7 @@ $("#pool").addEventListener("change", (e) => {
 });
 $("#estimator").addEventListener("change", (e) => {
   state.kind = e.target.value;
+  state.introDismissed=true;
   clearPrediction();
   $$("[data-prediction]").forEach((b) => b.classList.remove("selected"));
   $("#predict-feedback").textContent = "";
@@ -668,8 +672,7 @@ $("#teacher").addEventListener("click", (e) => {
   const on = document.body.classList.toggle("teacher");
   $("#teacher").setAttribute("aria-pressed", String(on));
   applyTeacherStage();
-  chart();
-  coverage();
+  renderActiveLab();
   $("#live").textContent = on
     ? "Teacher mode. Wider projection layout. Use Hide true values to withhold answers, and Pause to stop a running batch."
     : "Student mode.";
@@ -679,6 +682,8 @@ $$("[data-prediction]").forEach((b) =>
     $$("[data-prediction]").forEach((x) =>
       x.classList.toggle("selected", x === b),
     );
+    if(firstUsePrompt()){state.firstPredictionChoice=b.dataset.prediction;state.introPredictions[state.introDrawCount]=b.dataset.prediction;$('#predict-feedback').textContent='Prediction saved. Draw one whole sample, then trace its single saved dot.';return}
+    state.firstObservationPending=false;
     const t = theory(POOLS[state.pool], state.n, state.kind);
     if (!Number.isFinite(t.se)) {
       $("#predict-feedback").textContent =
@@ -701,7 +706,8 @@ $$("[data-prediction]").forEach((b) =>
 );
 $$("[data-answer]").forEach((b) =>
   b.addEventListener("click", () => {
-    $("#challenge-feedback").textContent =
+    $("#challenge-feedback").textContent = workedAnswersHidden()?'Choice recorded. Worked explanation hidden.':
+      state.lab==='coverage'?(b.dataset.answer==='no'?`Correct. This interval either covers fixed μ or misses it. ${state.confidence*100}% is the nominal repeated-method level under its conditions; the non-normal approximation may have different actual coverage.`:'The endpoints and μ are already fixed. Confidence describes the repeated method, not a probability assigned to this realized interval.'):
       b.dataset.answer === "no"
         ? "Correct: SE describes one estimator. R only improves the simulated picture. Explain why n is different."
         : "Keep n fixed and compare the theoretical SE before and after a batch. R adds more estimates of the same random quantity.";
@@ -722,7 +728,9 @@ $$("[data-lab]").forEach((b) =>
     const lab = b.dataset.lab;
     if (lab === state.lab) return;
     state.lab = lab;
+    state.introDismissed=true;
     clearPrediction();
+    $("#challenge-feedback").textContent="";$("#ci-exact-feedback").textContent="";
     $$("[data-lab]").forEach((x) =>
       x.classList.toggle("active", x.dataset.lab === lab),
     );
@@ -740,6 +748,7 @@ $$("[data-lab]").forEach((b) =>
         "偏态总体，近似正态的均值。Change n. Watch the sampling distribution.",
         "S3 · CENTRAL LIMIT THEOREM",
       ],
+      mean:["Mean inference","State the null. <em>Compare the evidence.</em>","总体均值与均值差：先定模型，再定位观测。Known σ or a stated large-sample approximation.","S3 · ONE / TWO INDEPENDENT MEANS"],
       correlation: [
         "Correlation & regression",
         "Move a point. <em>Question the relationship.</em>",
@@ -758,6 +767,7 @@ $$("[data-lab]").forEach((b) =>
       clt: "02",
       coverage: "03",
       correlation: "04",
+      mean:"05",
     }[lab];
     if ($("#experiment-number"))
       $("#experiment-number").textContent = "EXPERIMENT " + labNumber;
@@ -767,6 +777,7 @@ $$("[data-lab]").forEach((b) =>
       clt: "THE LIMIT LAB",
       coverage: "THE INTERVAL LAB",
       correlation: "THE RELATIONSHIP LAB",
+      mean:"THE INFERENCE LAB",
     }[lab];
     $("#crumb").textContent = meta[0];
     $("#lab-title").innerHTML = meta[1];
@@ -777,8 +788,11 @@ $$("[data-lab]").forEach((b) =>
       "hidden",
       lab !== "correlation",
     );
+    $("#mean-workspace").classList.toggle("hidden",lab!=="mean");
     $("#clt-controls").classList.toggle("hidden", lab !== "clt");
-    $("#quick-draw").classList.toggle("hidden", lab === "correlation");
+    $("#quick-draw").classList.toggle("hidden", ["correlation","mean"].includes(lab));
+    if(lab!=="mean")meanLab.pause();
+    if(lab==="mean"){stop();state.remaining=0;meanLab.render();applyTeacherStage();return}
     if (lab === "correlation") {
       stop();
       state.remaining = 0;
@@ -805,6 +819,7 @@ window.addEventListener("resize", () => {
     chart();
     coverage();
     if (state.lab === "correlation") correlationLab.render();
+    if(state.lab==="mean")meanLab.render();
   });
 });
 window.STATVERSE = {
@@ -823,7 +838,9 @@ window.STATVERSE = {
     confidence: state.confidence,
     teacherStage: state.teacherStage,
     answersHidden: state.answersHidden,
+    effectiveAnswersHidden:workedAnswersHidden(),
     correlation: correlationLab.getSnapshot(),
+    meanInference:meanLab.getSnapshot(),
   }),
 };
 population();
@@ -834,7 +851,7 @@ function animateSampleToPoint() {
   document.querySelectorAll(".sample-flight").forEach((e) => e.remove());
   if (
     matchMedia("(prefers-reduced-motion: reduce)").matches ||
-    state.answersHidden
+    workedAnswersHidden()
   )
     return;
   const source = $("#sample-tray"),
@@ -937,7 +954,7 @@ function renderExactInspector(outcomes) {
 function applyTeacherStage() {
   const teacher = document.body.classList.contains("teacher"),
     stage = teacher ? state.teacherStage : "all";
-  document.body.dataset.teacherStage=state.lab==="correlation"?"all":stage;
+  document.body.dataset.teacherStage=["sampling","clt","coverage"].includes(state.lab)?stage:"all";
   const groups = {
     prediction: $(".prediction"),
     population: $(".population-panel"),
@@ -952,9 +969,8 @@ function applyTeacherStage() {
     all: Object.keys(groups),
     predict: ["prediction"],
     population: ["prediction", "population"],
-    sample: ["population", "sample", "settings"],
+    sample: ["sample", "settings"],
     distribution: [
-      "population",
       "sample",
       "distribution",
       "settings",
@@ -981,11 +997,11 @@ function applyTeacherStage() {
       "Does more repetition reduce the SE of the next sample mean? Explain using the model.",
   };
   $("#teacher-question").textContent =
-    state.lab === "correlation"
+    state.lab === "mean"?"State independence, variance knowledge and the alternative before revealing the null tails.":state.lab === "correlation"
       ? "Drag one point, then compare the change in Pearson r with the change in ranks."
       : prompts[stage];
-  $("#teacher-stage").disabled = state.lab === "correlation";
-  $("#teacher-next").disabled = state.lab === "correlation";
+  $("#teacher-stage").disabled = ["correlation","mean"].includes(state.lab);
+  $("#teacher-next").disabled = ["correlation","mean"].includes(state.lab);
   document.body.classList.toggle(
     "answers-hidden",
     teacher && state.answersHidden,
@@ -1020,7 +1036,8 @@ $("#teacher-next").onclick = () => {
 $("#hide-worked").onchange = (e) => {
   state.answersHidden = e.target.checked;
   applyTeacherStage();
-  chart();
+  renderActiveLab();
+  $('#live').textContent=workedAnswersHidden()?'Worked answers hidden. Data and random stream unchanged.':'Worked answers revealed. Data and random stream unchanged.';
 };
 $("#standardize").onchange = (e) => {
   state.standardized = e.target.checked;
@@ -1055,12 +1072,14 @@ for (const el of document.querySelectorAll(
 
 function clearPrediction() {
   state.predictionRecord = null;
+  state.firstObservationPending=false;
   $$("[data-prediction]").forEach((b) => b.classList.remove("selected"));
   $("#predict-feedback").textContent = "";
 }
 function updatePredictionEvidence(t) {
   const p = state.predictionRecord;
   if (!p || p.pool !== state.pool || p.kind !== state.kind) return;
+  if(workedAnswersHidden()){$('#predict-feedback').textContent='Prediction recorded. Worked comparison hidden.';return}
   if (p.kind === "varianceN" && p.n !== state.n) {
     clearPrediction();
     return;
@@ -1079,3 +1098,11 @@ function updatePredictionEvidence(t) {
       `R ${p.R} → ${state.samples.length}, with n fixed at ${state.n}: theoretical SE stays ${fmt(t.se)}. ${p.kind === "varianceN" ? (p.choice === "same" ? "Your prediction matches." : "More repetitions depict the same distribution.") : "Your n-change prediction is still waiting for a change to n."}`;
   }
 }
+
+function renderActiveLab(){if(state.lab==='correlation')correlationLab.render();else if(state.lab==='mean')meanLab.render();else{selectedSample();update()}}
+
+function firstUsePrompt(){return state.introDrawCount<2&&!state.introDismissed&&state.lab==='sampling'&&state.kind==='mean'}
+function renderFirstPrediction(){const bs=$$('[data-prediction]'),intro=firstUsePrompt(),second=state.introDrawCount===1,keys=intro?(second?['parameter','estimate','rule']:['card','sample','population']):['wider','narrower','same'],labels=intro?(second?['The population','The observed estimate','The rule']:['One card','One whole sample','The whole pool']):['Wider','Narrower','The same'];bs.forEach((b,i)=>{b.dataset.prediction=keys[i];b.textContent=labels[i]});if(intro)$('#predict-question').textContent=second?`Draw another group of ${state.n}: which object is the new observed result, while the population and rule stay fixed?`:`First experiment: draw ${state.n} cards. What should ONE saved dot represent?`;if(state.firstObservationPending&&!state.predictionRecord){$('#predict-feedback').textContent=workedAnswersHidden()?'First prediction recorded. Worked explanation hidden.':state.introDrawCount<2?'One whole group gives one calculated mean and one saved dot below. Select the dot to recover the original cards.':'The population and estimating rule stay fixed. Each group gives a new observed estimate; it need not equal the fixed parameter. Now compare sample size n with repetitions R.'}}
+function renderSemanticChain(t){const s=state.samples[state.selected],varianceTarget=state.kind==='variance'||state.kind==='varianceN';$('#chain-target-label').textContent=varianceTarget?'Fixed population variance σ²':'Fixed population mean μ';$('#chain-target').textContent=state.hidden?'Hidden · still fixed':fmt(t.target);const rules={mean:`X̄ = mean of ${state.n} draws`,first:'X₁ = first card only',shift:`X̄ + 2 = mean of ${state.n}, then + 2`,variance:'S² = squared deviations / (n − 1)',varianceN:'Vₙ = squared deviations / n'};$('#chain-rule').textContent=rules[state.kind];$('#chain-observed-label').textContent=`This sample’s observed ${names[state.kind].observed}`;$('#chain-estimate').textContent=workedAnswersHidden()?'Concealed':s?fmt(s.value):'Draw a sample';$('#chain-repeat').textContent=`R = ${state.samples.length} complete samples saved · one whole sample → one statistic-dot${isStandardized()?' (plot window may omit counted extremes)':''}.`;$('#chain-expectation').textContent=workedAnswersHidden()?'Expectation explanation concealed.':state.samples.length>=2&&state.kind==='mean'?'E(X̄) = μ averages over all possible weighted samples. It is not the average within this one group or a guaranteed finite simulation result.':'';document.body.classList.toggle('has-samples',state.samples.length>0)}
+
+$$('[data-ci-exact]').forEach(b=>b.onclick=()=>{$('#ci-exact-feedback').textContent=workedAnswersHidden()?'Choice recorded. Worked explanation hidden.':b.dataset.ciExact==='no'?'Correct. A finite observed fraction fluctuates, and approximation error can also change the actual method coverage. Nominal confidence never forces an exact count in each batch.':'Inspect another batch: the procedure does not force a fixed number of hits. Separate nominal confidence, actual method coverage and finite simulation variation.'});

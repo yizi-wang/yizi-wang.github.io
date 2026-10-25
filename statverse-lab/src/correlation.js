@@ -1,3 +1,5 @@
+import {workedAnswersHidden} from "./visibility.js";
+import {correlationCritical,CORRELATION_TABLE_SOURCE} from "./correlation-tables.js";
 import {
   mean,
   pearson,
@@ -37,6 +39,7 @@ const presets = {
       [4, 3],
     ],
   },
+  boundary:{label:"Rank-table boundary · n = 6",points:[[1,2],[2,1],[3,4],[4,3],[5,6],[6,5]]},
   constant: {
     label: "Constant response",
     points: Array.from({ length: 8 }, (_, i) => [i + 1, 4]),
@@ -67,20 +70,22 @@ export function createCorrelationLab(root) {
     dragDomain: null,
     analysisToken: 0,
     result: null,
+    note:"All points are synthetic. No association here establishes causation.",
+    criticalMethod:"pearson",criticalTail:"two-sided",criticalAssumed:false,
     running: false,
   };
-  root.innerHTML = `<section class="prediction cor-predict"><div class="prediction-icon">↗</div><div><span class="eyebrow">PREDICT → CHANGE ONE THING</span><p>For nonconstant variables, square all nonnegative y values. Which must stay unchanged: Pearson r or Spearman rₛ?</p></div><div class="prediction-options"><button data-cor-predict="pearson">Pearson r</button><button data-cor-predict="spearman">Spearman rₛ</button><button data-cor-predict="both">Both</button></div></section>
+  root.innerHTML = `<section class="prediction cor-predict"><div class="prediction-icon">→</div><div><span class="eyebrow">PREDICT → CHANGE ONE THING</span><p>For nonconstant variables, square all nonnegative y values. Which must stay unchanged: Pearson r or Spearman rₛ?</p></div><div class="prediction-options"><button data-cor-predict="pearson">Pearson r</button><button data-cor-predict="spearman">Spearman rₛ</button><button data-cor-predict="both">Both</button></div></section>
  <div class="cor-toolbar"><label for="cor-preset">DATA STORY</label><select id="cor-preset">${Object.entries(
    presets,
  )
    .map(([k, v]) => `<option value="${k}">${v.label}</option>`)
    .join(
      "",
-   )}</select><button id="cor-square" class="secondary">Square y ↗</button><button id="cor-outlier" class="secondary">Add an outlier</button><button id="cor-reset" class="text-button">↻ Reset story</button><label class="toggle"><input id="cor-line" type="checkbox" checked> Show regression</label></div>
+   )}</select><button id="cor-square" class="secondary">Square y →</button><button id="cor-outlier" class="secondary">Add an outlier</button><button id="cor-reset" class="text-button">↻ Reset story</button><label class="toggle"><input id="cor-line" type="checkbox" checked> Show regression</label></div>
  <div class="cor-workbench"><section class="panel cor-scatter-panel"><div class="section-heading"><div><span class="step-number">01</span><h2>Move the evidence <small>散点</small></h2></div><span id="cor-n" class="badge mint"></span></div><p class="cor-hint">Drag a point, or focus it and use arrow keys (0.1 unit; Shift = 1). Numerical controls below provide the same edits.</p><div id="cor-scatter" class="cor-scatter"></div><div class="cor-legend"><span><i class="key-dot"></i> Paired observations</span><span><i class="key-line"></i> ŷ on observed x range</span><span><i class="key-line dashed"></i> Extrapolation</span></div><div class="point-editor"><label for="cor-point">POINT</label><select id="cor-point"></select><label for="cor-x">x</label><input id="cor-x" type="number" step="0.1" min="-1000000" max="1000000"><label for="cor-y">y</label><input id="cor-y" type="number" step="0.1" min="-1000000" max="1000000"><button id="cor-apply" class="secondary">Apply values</button></div><p id="cor-edit-note" class="cor-hint" role="status">All points are synthetic. No association here establishes causation.</p></section>
  <section class="panel cor-results"><div class="section-heading"><div><span class="step-number">02</span><h2>Two different questions <small>相关</small></h2></div></div><div class="coefficient"><div><span>PEARSON · LINEAR</span><strong id="cor-r" class="answer-output"></strong><small>How closely do points follow a straight line?</small></div><div><span>SPEARMAN · MONOTONIC</span><strong id="cor-rs" class="answer-output"></strong><small>How consistently do the two orders agree?</small></div></div><div id="cor-insight" class="cor-insight answer-output"></div><div class="regression-box"><span class="eyebrow">LEAST-SQUARES · y ON x</span><b id="cor-equation" class="answer-output"></b><label for="cor-predict-x">Predict at x =</label><input id="cor-predict-x" type="number" step="0.1" value="6"><p id="cor-prediction" class="answer-output"></p><small>The response/explanatory roles matter. Swapping axes does not generally invert this fitted line.</small></div></section></div>
  <section class="panel cor-rank-panel"><div class="section-heading"><div><span class="step-number">03</span><h2>Inspect the ranks <small>平均秩</small></h2></div><span class="badge">TIES EXPLORATION · EXTENSION</span></div><p>Spearman = Pearson correlation of the ranks. Equal values share their average rank. The shortcut 1 − 6Σd²/[n(n²−1)] assumes no ties. Numerical exam questions with ties are excluded by this IAL specification.</p><div class="cor-table-wrap"><table id="cor-table"></table></div></section>
- <section class="panel permutation-panel"><div class="section-heading"><div><span class="step-number">04</span><h2>Could shuffled pairings look this strong?</h2></div><span class="badge">ENRICHMENT · CONDITIONAL RANDOMIZATION</span></div><p>Hold the observed x and y values fixed; randomly re-pair the y values. Under an exchangeable independent-pairing null, compare |r| with the observed |r|. This is a conditional permutation exploration, distinct from an arbitrary zero-correlation null. Core S3 significance uses supplied critical-value tables; this simulation does not replace that method.</p><button id="cor-permute" class="secondary">Shuffle 999 pairings</button><span id="cor-permutation-result" class="answer-output" role="status">Data changes clear the old simulation.</span></section>
+ <section class="panel correlation-table-test"><div class="section-heading"><div><span class="step-number">04</span><h2>Use the official critical-value table</h2></div><span class="badge">S3 CORE · TOTAL α = 5%</span></div><div class="cor-table-controls"><label for="cor-table-method">Coefficient</label><select id="cor-table-method"><option value="pearson">Pearson PMCC</option><option value="spearman">Spearman ranks · no ties</option></select><label for="cor-table-tail">Alternative chosen before seeing data</label><select id="cor-table-tail"><option value="two-sided">ρ ≠ 0 · two-sided</option><option value="greater">ρ > 0 · upper</option><option value="less">ρ &lt; 0 · lower</option></select></div><p id="cor-table-reference"></p><label class="model-confirm"><input type="checkbox" id="cor-table-assumptions"> Treat these synthetic pairs as an independent random sample under the stated table model.</label><p id="cor-table-condition"></p><output id="cor-table-decision" class="answer-output" role="status"></output><a class="text-button" href="${CORRELATION_TABLE_SOURCE}" target="_blank" rel="noopener">Pearson IAL official Formula Book · printed p27 / PDF p33 →</a></section><section class="panel permutation-panel"><div class="section-heading"><div><span class="step-number">04</span><h2>Could shuffled pairings look this strong?</h2></div><span class="badge">ENRICHMENT · CONDITIONAL RANDOMIZATION</span></div><p>Hold the observed x and y values fixed; randomly re-pair the y values. Under an exchangeable independent-pairing null, compare |r| with the observed |r|. This is a conditional permutation exploration, distinct from an arbitrary zero-correlation null. Core S3 significance uses supplied critical-value tables; this simulation does not replace that method.</p><button id="cor-permute" class="secondary">Shuffle 999 pairings</button><span id="cor-permutation-result" class="answer-output" role="status">Data changes clear the old simulation.</span></section>
  <section class="discovery-panel cor-transfer"><div><span class="eyebrow">TRANSFER · EFFECT ≠ SIGNIFICANCE ≠ CAUSATION</span><h2>A zero coefficient can hide a strong pattern.</h2><p>Try the U-shaped story. Both coefficients can be zero while y is determined by x. Significance concerns compatibility with a specified null; it does not measure effect size or establish a causal mechanism.</p></div><div><button data-cor-answer="yes" class="secondary">r = 0 means independence</button><button data-cor-answer="no" class="secondary">r = 0 can hide dependence</button><p id="cor-feedback" class="answer-output" role="status"></p></div></section>`;
   const $ = (s) => root.querySelector(s),
     $$ = (s) => [...root.querySelectorAll(s)];
@@ -90,7 +95,7 @@ export function createCorrelationLab(root) {
     state.analysisToken++;
     state.result = null;
     state.running = false;
-    $("#cor-edit-note").textContent = message;
+    state.note=message;$("#cor-edit-note").textContent=workedAnswersHidden()?"Data edited; worked results hidden.":message;
     $("#cor-permutation-result").textContent =
       "Data changes clear the old simulation.";
     $("#cor-permute").textContent = "Shuffle 999 pairings";
@@ -113,7 +118,7 @@ export function createCorrelationLab(root) {
   function getDomain(m = getMath()) {
     const xs = [...m.xs],
       ys = [...m.ys];
-    if (m.fit && Number.isFinite(state.prediction)) {
+    if (m.fit && Number.isFinite(state.prediction)&&!workedAnswersHidden()) {
       xs.push(state.prediction);
       ys.push(m.fit.predict(state.prediction));
     }
@@ -145,17 +150,17 @@ export function createCorrelationLab(root) {
       s += `<line x1="${X(x)}" x2="${X(x)}" y1="${T}" y2="${B}" stroke="#28394d" stroke-dasharray="2 5"/><line x1="${L}" x2="${R}" y1="${Y(y)}" y2="${Y(y)}" stroke="#28394d" stroke-dasharray="2 5"/><text x="${X(x)}" y="${B + 18}" text-anchor="middle" fill="#9bacc2" font-size="10">${f(x, 1)}</text><text x="${L - 8}" y="${Y(y) + 3}" text-anchor="end" fill="#9bacc2" font-size="10">${f(y, 1)}</text>`;
     }
     s += `<text x="${(L + R) / 2}" y="${h - 4}" text-anchor="middle" fill="#bfd0e1" font-size="11">x · explanatory variable</text><text x="${L}" y="10" fill="#bfd0e1" font-size="10">y · response</text><g clip-path="url(#scatter-clip)">`;
-    if (m.fit && state.showLine) {
+    if (m.fit && state.showLine&&!workedAnswersHidden()) {
       const a = Math.min(...m.xs),
         b = Math.max(...m.xs);
-      s += `<line x1="${X(xmin)}" y1="${Y(m.fit.predict(xmin))}" x2="${X(xmax)}" y2="${Y(m.fit.predict(xmax))}" stroke="#b6a5ff" stroke-dasharray="5 5" stroke-width="1.5"/><line x1="${X(a)}" y1="${Y(m.fit.predict(a))}" x2="${X(b)}" y2="${Y(m.fit.predict(b))}" stroke="#f4d18a" stroke-width="2"/>`;
+      s += `<line data-worked-regression="true" x1="${X(xmin)}" y1="${Y(m.fit.predict(xmin))}" x2="${X(xmax)}" y2="${Y(m.fit.predict(xmax))}" stroke="#b6a5ff" stroke-dasharray="5 5" stroke-width="1.5"/><line data-worked-regression="true" x1="${X(a)}" y1="${Y(m.fit.predict(a))}" x2="${X(b)}" y2="${Y(m.fit.predict(b))}" stroke="#f4d18a" stroke-width="2"/>`;
     }
     state.points.forEach(
       (p, i) =>
         (s += `<circle data-point="${i}" class="cor-point ${i === state.selected ? "selected" : ""}" cx="${X(p[0])}" cy="${Y(p[1])}" r="${i === state.selected ? 8 : 6}" fill="${i === state.selected ? "#f4d18a" : "#a6f0cb"}" stroke="#0c1522" stroke-width="2" tabindex="0" role="button" aria-label="Point ${i + 1}, x ${f(p[0])}, y ${f(p[1])}. Arrow keys edit; Shift increases the step."><title>Point ${i + 1}: (${f(p[0])}, ${f(p[1])})</title></circle>`),
     );
-    if (m.fit && Number.isFinite(state.prediction))
-      s += `<path d="M${X(state.prediction) - 5},${Y(m.fit.predict(state.prediction))}h10m-5,-5v10" stroke="#df9eff" stroke-width="2"/>`;
+    if (m.fit && Number.isFinite(state.prediction)&&!workedAnswersHidden())
+      s += `<path data-worked-regression="true" d="M${X(state.prediction) - 5},${Y(m.fit.predict(state.prediction))}h10m-5,-5v10" stroke="#df9eff" stroke-width="2"/>`;
     s += "</g></svg>";
     host.innerHTML = s;
     host.dataset.domain = JSON.stringify(d);
@@ -197,11 +202,12 @@ export function createCorrelationLab(root) {
           `<option value="${i}" ${i === state.selected ? "selected" : ""}>${i + 1}</option>`,
       )
       .join("");
-    $("#cor-x").value = f(p[0], 5);
-    $("#cor-y").value = f(p[1], 5);
+    $("#cor-x").value = String(p[0]);
+    $("#cor-y").value = String(p[1]);
   }
   function render() {
     const m = getMath();
+    $('#cor-edit-note').textContent=workedAnswersHidden()?'Worked results hidden; raw observations unchanged.':state.note;
     $("#cor-n").textContent = `n = ${state.points.length} pairs`;
     $("#cor-r").textContent = f(m.r);
     $("#cor-rs").textContent = f(m.rs);
@@ -232,7 +238,16 @@ export function createCorrelationLab(root) {
       `<caption>Actual values → average ranks. Pearson(ranks) = Spearman rₛ.</caption><thead><tr><th>Point</th><th>x</th><th>y</th><th>Rank x</th><th>Rank y</th></tr></thead><tbody>${state.points.map((p, i) => `<tr class="${i === state.selected ? "selected" : ""}"><td>${i + 1}</td><td>${f(p[0])}</td><td>${f(p[1])}</td><td class="answer-output">${f(m.rx[i])}</td><td class="answer-output">${f(m.ry[i])}</td></tr>`).join("")}</tbody>`;
     renderEditor();
     renderPlot();
+    renderCritical(m);
   }
+  function renderCritical(m=getMath()){
+ const method=state.criticalMethod,tail=state.criticalTail,coefficient=method==='pearson'?m.r:m.rs,ties=new Set(m.xs).size<m.xs.length||new Set(m.ys).size<m.ys.length,entry=correlationCritical(method,state.points.length,tail);
+ $('#cor-table-condition').textContent=method==='pearson'?'PMCC table interpretation assumes a suitable bivariate Normal model and independent random pairs. Edited points are a teaching model, not evidence from an actual study.':'Spearman table interpretation here requires no tied ranks and independent random pairs. The ties exploration remains useful, but this no-ties table is not applied to it.';
+ $('#cor-table-reference').textContent=entry?`H₀: ρ = 0. n = ${entry.n}; total α = 0.05; use the one-tail ${entry.oneTailLevel} column. Printed critical magnitude = ${entry.critical.toFixed(4)}.`:'No verified printed entry for this n/direction in the included n4–24 rows. Consult the official table; no automatic decision.';
+ let message;if(!Number.isFinite(coefficient))message='Coefficient undefined: no table decision.';else if(method==='spearman'&&ties)message='Tied ranks: this no-ties critical table is unavailable. Use the labelled conditional permutation exploration for a different null model.';else if(!entry)message='No table decision available at this sample size and level.';else if(!state.criticalAssumed)message='State the sampling/model assumptions before interpreting a significance decision.';else{const signed=tail==='less'?-coefficient:tail==='greater'?coefficient:Math.abs(coefficient);if(method==='pearson'&&Math.abs(signed-entry.critical)<.00005&&Math.abs(signed-entry.critical)>1e-12)message='Borderline at the printed table precision: avoid an unqualified decision; obtain sufficient precision and quote the table comparison.';else{const comparison=method==='spearman'?Number(signed.toFixed(4)):signed,reject=comparison>=entry.critical-1e-12;message=`${method==='spearman'?'Rank coefficient compared at the table’s four-decimal precision. ':''}${tail==='two-sided'?'|coefficient|':tail==='greater'?'coefficient':'−coefficient'} = ${f(signed,4)} ${reject?'≥':'<'} ${entry.critical.toFixed(4)}. ${reject?'Reject H₀: evidence in the chosen direction under the stated model.':'Do not reject H₀: insufficient evidence; this does not prove zero correlation.'} Significance is not effect size or causation.`}}
+ $('#cor-table-decision').textContent=workedAnswersHidden()?'Official-table decision concealed. Data and assumptions unchanged.':message;
+ }
+ $('#cor-table-method').onchange=e=>{state.criticalMethod=e.target.value;renderCritical()};$('#cor-table-tail').onchange=e=>{state.criticalTail=e.target.value;renderCritical()};$('#cor-table-assumptions').onchange=e=>{state.criticalAssumed=e.target.checked;renderCritical()};
   $("#cor-preset").onchange = (e) => {
     state.preset = e.target.value;
     state.points = presets[state.preset].points.map((p) => [...p]);
@@ -393,7 +408,7 @@ export function createCorrelationLab(root) {
         const p = (b + 1) / (B + 1);
         state.running = false;
         state.result = { B, b, p, observed, seed: "pairing-2026" };
-        $("#cor-permutation-result").textContent =
+        $("#cor-permutation-result").textContent = workedAnswersHidden()?`${done} shuffled pairings recorded; worked p-value hidden.`:
           `Two-sided |r| Monte Carlo p = (${b}+1)/(${B}+1) = ${f(p, 4)}. MC standard error ≈ ${f(Math.sqrt((p * (1 - p)) / (B + 1)), 4)}. Seed: pairing-2026. This is not P(the null is true).`;
         $("#cor-permute").disabled = false;
       }

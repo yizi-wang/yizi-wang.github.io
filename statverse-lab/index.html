@@ -22,16 +22,16 @@
       <p class="nav-label">YOUR LABORATORY</p>
       <nav aria-label="Experiments">
         <button class="nav-item active" data-lab="sampling">
-          <span>01</span> Sampling & estimators <i>↗</i></button
+          <span>01</span> Sampling & estimators <i>→</i></button
         ><button class="nav-item" data-lab="clt">
-          <span>02</span> Central limit theorem <i>↗</i></button
+          <span>02</span> Central limit theorem <i>→</i></button
         ><button class="nav-item" data-lab="coverage">
-          <span>03</span> Confidence intervals <i>↗</i>
+          <span>03</span> Confidence intervals <i>→</i>
         </button>
         <button class="nav-item" data-lab="correlation">
-          <span>04</span> Correlation & regression <i>↗</i>
+          <span>04</span> Correlation & regression <i>→</i>
         </button>
-      </nav>
+      <button class="nav-item" data-lab="mean"><span>05</span> Mean inference <i>→</i></button></nav>
       <div class="sidebar-note">
         <span class="orb"></span
         ><b>Small experiments.<br />Big statistical ideas.</b>
@@ -51,7 +51,7 @@
         </div>
         <div class="top-actions">
           <button id="teacher" aria-pressed="false" class="quiet">
-            ▣ <span>Teacher mode</span></button
+            <span>Teacher mode</span></button
           ><button id="help" class="icon-button" aria-label="Open field guide">
             ?
           </button>
@@ -63,7 +63,7 @@
           <option value="sampling">01 · Sampling & estimators</option>
           <option value="clt">02 · Central limit theorem</option>
           <option value="coverage">03 · Confidence intervals</option>
-          <option value="correlation">04 · Correlation & regression</option>
+          <option value="correlation">04 · Correlation & regression</option><option value="mean">05 · Mean inference</option>
         </select>
       </div>
       <main id="main">
@@ -101,7 +101,7 @@
             <option value="transfer">6 · Transfer</option></select
           ><button id="teacher-next" class="secondary">Next stage →</button
           ><button id="teacher-pause" class="secondary" disabled>
-            Ⅱ Pause sampling</button
+            Pause Pause sampling</button
           ><label class="toggle"
             ><input id="hide-worked" type="checkbox" /> Hide worked
             answers</label
@@ -148,7 +148,7 @@
             </div>
             <div class="toolbar-label">
               <span class="status-dot"></span> IID · WITH REPLACEMENT
-              <button id="assumptions" class="text-button">Why? ↗</button>
+              <button id="assumptions" class="text-button">Why? →</button>
             </div>
             <label class="toggle"
               ><input type="checkbox" id="hide-truth" /><span
@@ -176,7 +176,7 @@
               ><span class="truth" id="population-moments"></span>
             </div>
           </section>
-          <div class="workbench">
+          <section id="semantic-chain" class="semantic-chain" aria-label="Fixed parameter, estimating rule and observed estimate"><div><span id="chain-target-label">Fixed population mean μ</span><b id="chain-target"></b></div><div><span>Rule before sampling · estimator</span><b id="chain-rule"></b></div><div><span id="chain-observed-label">This sample's observed x̄</span><b id="chain-estimate"></b></div><p id="chain-repeat"></p><p id="chain-expectation"></p></section><div class="workbench">
             <section class="sample-panel panel">
               <div class="section-heading">
                 <div>
@@ -188,8 +188,8 @@
               <div class="control-row">
                 <label class="range-label" for="n"
                   >Cards per sample
-                  <b>n = <output id="n-value">5</output></b></label
-                ><input id="n" type="range" min="1" max="60" value="5" />
+                  <b>n = <output id="n-value">3</output></b></label
+                ><input id="n" type="range" min="1" max="60" value="3" />
               </div>
               <div id="sample-tray" class="sample-tray">
                 <div class="empty-sample">
@@ -241,8 +241,8 @@
                 class="chart"
                 aria-label="Sampling distribution chart"
               ></div>
-              <div class="chart-legend">
-                <span><i class="key-dot"></i> One sample → one point</span
+              <div class="chart-legend"><span><i class="key-bar"></i> Bars: finite relative frequency</span>
+                <span><i class="key-dot"></i> Dots below: whole samples</span
                 ><span class="truth"
                   ><i class="key-line"></i> Theoretical E(T)</span
                 ><span><i class="key-line dashed"></i> Simulation mean</span>
@@ -265,7 +265,7 @@
                   aria-label="Pause batch"
                   disabled
                 >
-                  Ⅱ
+                  Pause
                 </button>
               </div>
               <div class="distribution-metrics">
@@ -335,7 +335,7 @@
               >
             </div>
             <div id="coverage-chart" class="coverage-chart"></div>
-            <p id="coverage-result"></p>
+  <div class="ci-check"><h3 id="ci-exact-question">Must exactly 95 out of every100 intervals cover μ?</h3><button class="secondary" data-ci-exact="yes">Yes, the count is fixed</button><button class="secondary" data-ci-exact="no">No, the observed count can vary</button><p id="ci-exact-feedback" class="answer-output" role="status"></p></div><p id="coverage-result"></p>
             <div class="ci-selector">
               <label for="ci-case">Inspect recorded interval</label
               ><input
@@ -389,10 +389,11 @@
           class="hidden"
           aria-label="Correlation and regression lab"
         ></section>
+<section id="mean-workspace" class="hidden" aria-label="Mean inference lab"></section>
         <footer>
           <span>STATVERSE <b>Learn by changing the experiment.</b></span
           ><button id="guide-open" class="text-button">
-            Field guide & course scope ↗</button
+            Field guide & course scope →</button
           ><span>PRIVATE DEVELOPMENT PREVIEW · v0.2</span>
         </footer>
       </main>
@@ -450,7 +451,7 @@
         href="https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/international-a-level-maths-spec.pdf"
         target="_blank"
         rel="noopener"
-        >Official Pearson specification ↗</a
+        >Official Pearson specification →</a
       >
     </dialog>
     <div id="live" class="sr-only" role="status" aria-live="polite"></div>
