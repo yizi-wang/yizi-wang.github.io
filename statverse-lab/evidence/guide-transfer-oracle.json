@@ -1,0 +1,54 @@
+{
+  "evidence": "Developer independent arithmetic check of original guide answers using Python Fraction, not browser/student review",
+  "mu": "2",
+  "population_variance": "3",
+  "n4_se_mean": 0.8660254037844386,
+  "n4_se_first": 1.7320508075688772,
+  "cases_n2": [
+    {
+      "values": [
+        1,
+        1
+      ],
+      "p": "9/16",
+      "mean": "1"
+    },
+    {
+      "values": [
+        1,
+        5
+      ],
+      "p": "3/16",
+      "mean": "3"
+    },
+    {
+      "values": [
+        5,
+        1
+      ],
+      "p": "3/16",
+      "mean": "3"
+    },
+    {
+      "values": [
+        5,
+        5
+      ],
+      "p": "1/16",
+      "mean": "5"
+    }
+  ],
+  "weighted_expected_mean": "2",
+  "observed_sample": [
+    1,
+    1,
+    5,
+    1
+  ],
+  "observed_mean": 2,
+  "rule_expectations": {
+    "mean": 2,
+    "first": 2,
+    "mean_plus1": 3
+  }
+}

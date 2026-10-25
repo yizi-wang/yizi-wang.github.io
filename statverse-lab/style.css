@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap");
+/* Local system-font fallbacks keep the lab independent of font networks. */
 :root {
   color-scheme: dark;
   --bg: #0b101b;
@@ -41,6 +41,26 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible {
   outline: 2px solid var(--mint);
+}
+summary:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 4px;
+}
+.inference-controls label:has(> input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.5;
+}
+.inference-controls label > input[type="checkbox"] {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--mint);
+}
+.guide-links {
+  line-height: 1.8;
 }
 button:disabled {
   opacity: 0.35;
@@ -3592,4 +3612,8 @@ dialog > a {
 }
 .teacher #design-workspace[data-view="sample"] #design-algebra {
   display: none;
+}
+@media (max-width: 640px) {
+  .section-heading { flex-wrap: wrap; align-items: flex-start; }
+  .section-heading .badge { max-width: 100%; white-space: normal; overflow-wrap: anywhere; line-height: 1.5; }
 }

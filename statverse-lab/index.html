@@ -21,7 +21,7 @@
       <div class="course-tag">PEARSON EDEXCEL IAL <b>S1–S3</b></div>
       <p class="nav-label">YOUR LABORATORY</p>
       <nav aria-label="Experiments">
-        <button class="nav-item active" data-lab="sampling">
+        <button class="nav-item active" data-lab="sampling" aria-current="page">
           <span>01</span> Sampling & estimators <i>→</i></button
         ><button class="nav-item" data-lab="clt">
           <span>02</span> Central limit theorem <i>→</i></button
@@ -86,7 +86,7 @@
           <option value="normal">09 · Normal combinations</option>
         </select>
       </div>
-      <main id="main">
+      <main id="main" tabindex="-1">
         <section class="intro">
           <div>
             <div class="eyebrow">
@@ -472,11 +472,11 @@
           <span>STATVERSE <b>Learn by changing the experiment.</b></span
           ><button id="guide-open" class="text-button">
             Field guide & course scope →</button
-          ><span>PRIVATE DEVELOPMENT PREVIEW · v0.5</span>
+          ><span>PRIVATE DEVELOPMENT PREVIEW · v0.5.1</span>
         </footer>
       </main>
     </div>
-    <dialog id="guide">
+    <dialog id="guide" aria-labelledby="guide-title">
       <button
         id="guide-close"
         class="icon-button close"
@@ -485,13 +485,15 @@
         ×
       </button>
       <div class="eyebrow">STATVERSE FIELD GUIDE</div>
-      <h2>From a population to an estimate.</h2>
+      <h2 id="guide-title">From a population to an estimate.</h2>
+      <p class="guide-links"><a href="guide.html" target="_blank" rel="noopener">Printable18-minute lesson &amp; student sheet · new tab →</a><br /><a href="scope.html" target="_blank" rel="noopener">Current coverage, conditions &amp; limits · new tab →</a></p>
+      <p>The examples below use the card lab's IID model with replacement. The finite-frame lab instead selects distinct units without replacement under its stated sampling design; those observations are not assumed IID.</p>
       <dl>
         <dt>Population · 总体</dt>
-        <dd>The fixed probability model for every possible card draw.</dd>
+        <dd>The set of units or probability model being studied. The card lab uses a fixed probability model; the finite-frame lab uses twelve distinct units.</dd>
         <dt>Sample · 样本</dt>
         <dd>
-          n independent draws with replacement. The same card may appear again.
+          In the card lab, n independent draws with replacement. The same card type may appear again. In the finite-frame lab, n distinct units are selected without replacement by the chosen design.
         </dd>
         <dt>Random variable · 随机变量</dt>
         <dd>
@@ -516,7 +518,7 @@
         <dt>Standard error · 标准误</dt>
         <dd>
           The standard deviation of the estimator's sampling distribution; it
-          depends on n, not the number R of simulation repetitions.
+          depends on the model, sampling design, rule and n, not the number R of simulation repetitions.
         </dd>
       </dl>
       <p>
@@ -579,7 +581,8 @@
       <p>
         Additional delivered routes: S1/S3 descriptive correlation and a sourced
         critical-table subset; S3 one/two-independent-mean z methods; S2
-        discrete tests; partial S3 χ² fit/independence. Type I/II, power,
+        discrete tests; partial S3 χ² fit/independence; finite sampling designs
+        and independent Normal combinations. Type I/II, power,
         p-values and conditional randomization are labelled explanatory
         enrichment. This is not complete S1–S3 coverage.
       </p>
@@ -588,6 +591,12 @@
         target="_blank"
         rel="noopener"
         >Official Pearson specification →</a
+      >
+      <a
+        href="https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/IAL-Mathematics-Formula-Book.pdf"
+        target="_blank"
+        rel="noopener"
+        >Official Pearson Formula Book · printed p27 correlation tables →</a
       >
     </dialog>
     <div id="live" class="sr-only" role="status" aria-live="polite"></div>

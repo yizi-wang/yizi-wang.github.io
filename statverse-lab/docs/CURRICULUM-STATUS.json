@@ -1,0 +1,218 @@
+{
+  "prepared_utc": "2026-10-25T19:57:03.158178+00:00",
+  "status_meaning": "Complete means the bounded interaction below is implemented, not that an entire unit or all possible exercises are complete. Independent review status is separate.",
+  "rows": [
+    {
+      "reference": "S1.3§1 ·p55",
+      "topic": "Modelling",
+      "status": "partial",
+      "labs": "All labs",
+      "implemented": "Synthetic model assumptions, fixed parameters and experimental limits are explicit.",
+      "limit": "Selected contexts, not a general modelling course."
+    },
+    {
+      "reference": "S1.3§2 ·p55",
+      "topic": "Data display, location, dispersion, skew and outliers",
+      "status": "partial",
+      "labs": "—",
+      "implemented": "Sample values and an outlier example support other labs.",
+      "limit": "No dedicated histogram-with-unequal-width, boxplot, skewness or data-summary workbench."
+    },
+    {
+      "reference": "S1.3§3 ·p55",
+      "topic": "Probability, conditioning, independence and sampling",
+      "status": "partial",
+      "labs": "01 /08",
+      "implemented": "Transparent weighted draws and distinct replacement/nonreplacement designs.",
+      "limit": "General conditional probability and conditional-independence scenarios absent."
+    },
+    {
+      "reference": "S1.3§4 ·p56",
+      "topic": "PMCC and least-squares regression",
+      "status": "partial",
+      "labs": "04",
+      "implemented": "Drag/keyboard/numeric pairs; Pearson, fitted y-on-x, prediction, outlier, extrapolation and zero-correlation counterexample.",
+      "limit": "Bounded synthetic data, no real-data upload; descriptive inference conditions remain separate."
+    },
+    {
+      "reference": "S1.3§5 ·p56",
+      "topic": "Discrete variables, PMF/CDF and moments",
+      "status": "partial",
+      "labs": "01 /06",
+      "implemented": "Weighted finite moments and Binomial/Poisson PMFs are calculated.",
+      "limit": "No general PMF/CDF editor or complete discrete-uniform lesson."
+    },
+    {
+      "reference": "S1.3§6 ·p56",
+      "topic": "Normal probabilities",
+      "status": "partial",
+      "labs": "05 /09",
+      "implemented": "Normal density, signed tails, quantiles and stated Normal models.",
+      "limit": "No general arbitrary-event Normal calculator or source-population simulator."
+    },
+    {
+      "reference": "S2.3§1 ·p58",
+      "topic": "Binomial/Poisson models and approximation",
+      "status": "partial",
+      "labs": "06 /07",
+      "implemented": "Exact null laws and test tails; Binomial(3,p) GOF example.",
+      "limit": "Moments/approximation comparison and continuity correction UI absent."
+    },
+    {
+      "reference": "S2.3§2 ·p58",
+      "topic": "Polynomial PDF/CDF, moments and quantiles",
+      "status": "absent",
+      "labs": "—",
+      "implemented": "Not built.",
+      "limit": "No continuous PDF/CDF manipulation, area or quantile lesson."
+    },
+    {
+      "reference": "S2.3§3 ·p58",
+      "topic": "Continuous uniform; Normal approximation and continuity correction",
+      "status": "absent",
+      "labs": "—",
+      "implemented": "Not built.",
+      "limit": "No event-specific continuity-correction interaction."
+    },
+    {
+      "reference": "S2.3§4.1 ·p59",
+      "topic": "Population, census, sample and frame",
+      "status": "partial",
+      "labs": "01 /08",
+      "implemented": "Fixed card model and12 distinct finite-frame identities; census example at n12.",
+      "limit": "Bounded illustrative designs, not a complete survey-frame or advantages/disadvantages course."
+    },
+    {
+      "reference": "S2.3§4.2 ·p59",
+      "topic": "Statistic and sampling distribution",
+      "status": "complete",
+      "labs": "01 /08",
+      "implemented": "Fixed model→original sample→one statistic→repeated distribution, with original-case recall; census in finite-frame lab.",
+      "limit": "Two explicitly different sampling models. No full sampling-frame survey toolkit."
+    },
+    {
+      "reference": "S2.3§4.3–4.6 ·p59",
+      "topic": "Hypotheses, critical regions, tails and discrete tests",
+      "status": "partial",
+      "labs": "06",
+      "implemented": "Binomial and Poisson H0 laws, chosen H1/alpha, inclusive integer regions and observed decisions.",
+      "limit": "Bounded display n≤200, Poisson lambda≤30; tails can be evaluated outside the shown PMF window."
+    },
+    {
+      "reference": "S3.3§1 ·p61",
+      "topic": "Independent Normal linear combinations",
+      "status": "complete",
+      "labs": "09",
+      "implemented": "Distinct variable IDs, explicit model conditions, signed means, squared variance terms, sign-flip comparison and point mass.",
+      "limit": "Two variables; no covariance/related-variable model. Repeated IDs are rejected."
+    },
+    {
+      "reference": "S3.3§2 ·p61",
+      "topic": "Random, stratified, systematic and quota sampling",
+      "status": "partial",
+      "labs": "08",
+      "implemented": "Same12 identities under four explicit mechanisms; population weights, missing strata and ordering comparison.",
+      "limit": "Bounded finite frame; systematic n divides12. One deterministic convenience mechanism does not represent all quota implementations."
+    },
+    {
+      "reference": "S3.3§3.1 ·p61",
+      "topic": "Estimator, bias and standard error",
+      "status": "complete",
+      "labs": "01",
+      "implemented": "Rule versus realised estimate; mean/first/mean+2/variance rules; separate n/R, expectation/finite simulation, weighted exact cases.",
+      "limit": "Finite-variance IID with replacement in the card lab; n1 sample variance unavailable."
+    },
+    {
+      "reference": "S3.3§3.2 ·p61",
+      "topic": "Distribution of the sample mean",
+      "status": "partial",
+      "labs": "01 /02 /05",
+      "implemented": "Weighted discrete-source means, expectation/SE and analytic Normal mean references.",
+      "limit": "No original Normal source-population experiment; approximation conditions remain explicit."
+    },
+    {
+      "reference": "S3.3§3.3–3.4 ·p61",
+      "topic": "Confidence intervals",
+      "status": "partial",
+      "labs": "03 /05",
+      "implemented": "Known-sigma repeated intervals, confidence changes, fixed-parameter interpretation; mean UI also has stated large-sample estimated-s intervals.",
+      "limit": "Non-Normal small-n coverage approximate; estimated-s repeated reference fixes the plug-in s and does not resample its estimation."
+    },
+    {
+      "reference": "S3.3§3.5–3.8 ·p61–62",
+      "topic": "Normal-mean tests",
+      "status": "complete",
+      "labs": "05",
+      "implemented": "One-mean z, known variance, chosen tails and null-reference decision with stated conditions.",
+      "limit": "No small-sample Student t fallback. Synthetic summaries are an illustrative model."
+    },
+    {
+      "reference": "S3.3§3.6,3.8 ·p61–62",
+      "topic": "CLT and large-sample inference",
+      "status": "partial",
+      "labs": "02 /05",
+      "implemented": "Skewed finite-variance populations, raw/standardised mean views, independent n/R, SE and explicit approximation conditions.",
+      "limit": "No universal n30 guarantee; discrete source pools only. Unknown-sigma route requires explicit large-sample justification."
+    },
+    {
+      "reference": "S3.3§3.7–3.8 ·p62",
+      "topic": "Two independent means",
+      "status": "complete",
+      "labs": "05",
+      "implemented": "Difference of means, variance addition, known-sigma and stated large-sample estimated-s z routes.",
+      "limit": "Independent groups only; no paired design or Welch t interface."
+    },
+    {
+      "reference": "S3.3§4 ·p62",
+      "topic": "Chi-square goodness of fit",
+      "status": "partial",
+      "labs": "07",
+      "implemented": "Uniform/specified four-class probabilities and Binomial(3,p), original-data edits, E/contributions, meaningful pooling, fitted parameter accounting where supported.",
+      "limit": "Normal/Poisson/continuous-uniform GOF absent. Fitted Binomial inference uses only the original four unpooled classes. fit=true with any actual pooling is unsupported in either operation order: p/decision/referenceDF withheld, even if E≥5. df≤0 is rejected."
+    },
+    {
+      "reference": "S3.3§4 ·p62",
+      "topic": "Chi-square independence",
+      "status": "complete",
+      "labs": "07",
+      "implemented": "Editable preset-sized tables, margins/E/contributions/df, low-E gate and meaningful whole-row/column merges.",
+      "limit": "Requires sampling/model assumptions; asymptotic law is approximate. No arbitrary dimension editor or Yates correction."
+    },
+    {
+      "reference": "S3.3§5 ·p62",
+      "topic": "Spearman and zero-correlation tests",
+      "status": "partial",
+      "labs": "04",
+      "implemented": "Average ranks/ties; official-table method, tail mapping, signed direction,4dp boundary and conditions.",
+      "limit": "Verified subset of official rows/cells only. Ties descriptive; no ordinary no-ties table inference. Table threshold does not supply an exact observed p-value."
+    }
+  ],
+  "enrichment": [
+    {
+      "topic": "Repeated CI coverage",
+      "labs": "03",
+      "meaning": "Fixed parameter, random intervals; finite observed coverage versus nominal. A teaching realization of CI interpretation."
+    },
+    {
+      "topic": "Exact ordered enumeration and sample provenance",
+      "labs": "01",
+      "meaning": "Weighted possible samples and expectation contributions; teaching support, not an additional exam technique."
+    },
+    {
+      "topic": "TypeI/II, power, p-values and conditional randomization",
+      "labs": "04 /05 /06 /07",
+      "meaning": "Explanatory enrichment requested by the user; not explicitly named specification clauses. Each method/null is separately labelled."
+    },
+    {
+      "topic": "Known finite-population designSE/FPC",
+      "labs": "08",
+      "meaning": "Complete fictional frame permits exact design spread. This is not SE estimated from one sample and is supplementary support."
+    },
+    {
+      "topic": "Tied-rank numerical exploration",
+      "labs": "04",
+      "meaning": "Average ranks are descriptive. Specification expects understanding ties but excludes numerical examination questions with ties."
+    }
+  ],
+  "implementation_baseline": "94d0b8ded2cefe1091f237543adde7c0330ce888 (independently reviewed mathematical implementation; checkpoint6 adds documentation/access refinements)"
+}

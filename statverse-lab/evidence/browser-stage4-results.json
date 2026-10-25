@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-25T19:27:33.542Z",
+  "timestamp": "2026-10-25T20:06:36.715Z",
   "baseUrl": "http://127.0.0.1:4174",
   "browser": "151.0.7922.173",
   "evidenceType": "Developer actual Chromium regression, not independent review or real student observation",
@@ -7,122 +7,122 @@
     {
       "name": "seven labs expose only their own workspace on phone and teacher navigation",
       "status": "PASS",
-      "ms": 1137
+      "ms": 1174
     },
     {
       "name": "Binomial null masses, inclusive upper boundary and actual alpha match independent oracle",
       "status": "PASS",
-      "ms": 433
+      "ms": 245
     },
     {
       "name": "changing observed count keeps null masses fixed and respects the inclusive boundary",
       "status": "PASS",
-      "ms": 343
+      "ms": 168
     },
     {
       "name": "Poisson upper5% starts at9, not8; degenerate tails remain directional",
       "status": "PASS",
-      "ms": 372
+      "ms": 273
     },
     {
       "name": "Poisson positive underflow is distinguished from impossible and overflow is explicit",
       "status": "PASS",
-      "ms": 253
+      "ms": 196
     },
     {
       "name": "discrete repetitions reproduce seed and distinguish null size from alternative power",
       "status": "PASS",
-      "ms": 988
+      "ms": 1010
     },
     {
       "name": "discrete invalid counts/parameters reject without stale geometry; n200 point mass works",
       "status": "PASS",
-      "ms": 824
+      "ms": 529
     },
     {
       "name": "D pause/manual/resume enforces2000 cap in actual DOM and stops on navigation",
       "status": "PASS",
-      "ms": 3662
+      "ms": 3279
     },
     {
       "name": "contingency E/contributions/df/p and count scale law are linked",
       "status": "PASS",
-      "ms": 240
+      "ms": 579
     },
     {
       "name": "independence uses unequal margins and exact E5 boundary remains valid in UI",
       "status": "PASS",
-      "ms": 68
+      "ms": 202
     },
     {
       "name": "low expected cells withhold decision; explicit meaningful whole-column pooling repairs approximation",
       "status": "PASS",
-      "ms": 220
+      "ms": 408
     },
     {
       "name": "E live edits reject empty/fractional/negative/zero margins and clear stale results",
       "status": "PASS",
-      "ms": 399
+      "ms": 927
     },
     {
       "name": "GOF uniform oracle and specified probabilities are not silently normalized",
       "status": "PASS",
-      "ms": 372
+      "ms": 646
     },
     {
       "name": "fitted Binomial GOF deducts q and reuses original estimate after pooling; df0 rejected",
       "status": "PASS",
-      "ms": 458
+      "ms": 625
     },
     {
       "name": "conditional shuffles preserve both margins, separate nulls and reproducible RNG",
       "status": "PASS",
-      "ms": 929
+      "ms": 851
     },
     {
       "name": "new modules hide worked feedback, probability geometry and decisions without changing data/RNG",
       "status": "PASS",
-      "ms": 644
+      "ms": 842
     },
     {
       "name": "phone/desktop/teacher layouts and keyboard reveal work in both new labs",
       "status": "PASS",
-      "ms": 1845
+      "ms": 3995
     },
     {
       "name": "teacher result focus keeps essential quantitative objects inside16:9 without changing model",
       "status": "PASS",
-      "ms": 602
+      "ms": 914
     },
     {
       "name": "S3-01 phone card values stay fully inside their clipped card in student and teacher modes",
       "status": "PASS",
-      "ms": 1086
+      "ms": 1865
     },
     {
       "name": "S3-02 Mean pause restores single-step, preserves RNG and respects invalid/cap states",
       "status": "PASS",
-      "ms": 3586
+      "ms": 6216
     },
     {
       "name": "all external modules cancel pending work on navigation",
       "status": "PASS",
-      "ms": 430
+      "ms": 551
     },
     {
       "name": "finite Normal and chi-square tail underflow is not displayed as exact probability zero",
       "status": "PASS",
-      "ms": 420
+      "ms": 480
     },
     {
       "name": "Teacher sample-stage trace reveals distribution stage without changing the original sample or seed",
       "status": "PASS",
-      "ms": 1113
+      "ms": 1362
     },
     {
       "name": "no runtime errors or missing static modules",
       "status": "PASS",
-      "ms": 0
+      "ms": 1
     }
   ],
   "errors": []

@@ -1,78 +1,53 @@
-# Implemented coverage — checkpoint history and current delta
+# Current official coverage — implemented, partial, enrichment and absent
 
-Authority: official Pearson IAL specification in CURRICULUM-MATH-REQUIREMENTS.md. No other exam board is used. Status is implementation status, not independent approval.
+Implementation baseline: `94d0b8ded2cefe1091f237543adde7c0330ce888 (independently reviewed mathematical implementation; checkpoint6 adds documentation/access refinements)`.
 
-| Module | Official reference | Current status | Boundary |
-|---|---|---|---|
-|A: fixed population, iid sample, statistic, distribution|S2.3§4.1–4.2 p59|Implemented; developer unit/browser checks|Sampling frame/census not interactive|
-|A: mean, first value, shifted mean, bias, SE|S3.3§3.1–3.2 p61|Implemented; numerical exact checks|First/shift rules teaching examples|
-|A: variance n−1 versus n|S3 estimation, prerequisite moments|Implemented; n1 undefined|No claim sqrt(S²) unbiased|
-|A: exact ordered sample enumeration|Teaching realization|Implemented, weighted; cap20,000|Extension as technique, core sampling concept|
-|B: CLT|S3.3§3.5–3.6 p61|Partial: mean distribution+Normal overlay|No standardization control/Normal population yet|
-|B: repeated CI coverage|S3.3§3.3 p61 interpretation|Partial:95% knownσ intervals, nonnormal approximation|No unknownσ/confidence slider yet|
-|B/D: one/two-mean tests|S3.3§3.4,3.6–3.8 pp61–62|Absent|Next priority after flagship review|
-|C: correlation/regression/significance|S1.3§4 p56;S3.3§5 p62|Absent UI; basic engine helpers only|Ties exploration must be labelled extension|
-|D: binomial/Poisson tests|S2.3§4.3–4.6 p59|Absent|TypeI/II,pvalue,power enrichment requested|
-|E: GOF/contingency|S3.3§4 p62|Absent UI; expected-count helper only|GOF models/pooling not implemented|
-|F: sampling methods|S3.3§2 p61|Absent|Large sample does not remove bias|
-|F: independent Normal combinations|S3.3§1 p61|Absent|Variances add under independence|
-|F: PMF/CDF, distributions, PDF|S1.3§5–6 p56;S2.3§1–3 p58|Card PMF/moments only|Full distribution workbench absent|
-|F: displays/skew/outliers|S1.3§2 p55|Partial empirical histogram-style dots|No unequal-bin histogram lesson|
+Complete means the bounded interaction below is implemented, not that an entire unit or all possible exercises are complete. Independent review status is separate.
 
-Core inference plan: Normal z, known variance or explicit large-sample substitution; no t default. No blanket n≥30 guarantee. No claim of whole S1–S3 completion.
+Official source: Pearson Edexcel IAL specification Issue3 April2019. S1p55–56, S2p58–59, S3p61–62; one-based PDF page = printed page+6. S3 assumes S1/S2. No other examination system defines this map. CLT is S3.3§3.6; one/two-mean tests span§3.5–3.8; a combined CI/inference row may cite§3.4–3.8.
 
-## Checkpoint2 delta
+|Official reference|Topic|Status|Labs|Delivered|Limit|
+|---|---|---|---|---|---|
+|S1.3§1 ·p55|Modelling|Partial|All labs|Synthetic model assumptions, fixed parameters and experimental limits are explicit.|Selected contexts, not a general modelling course.|
+|S1.3§2 ·p55|Data display, location, dispersion, skew and outliers|Partial|—|Sample values and an outlier example support other labs.|No dedicated histogram-with-unequal-width, boxplot, skewness or data-summary workbench.|
+|S1.3§3 ·p55|Probability, conditioning, independence and sampling|Partial|01 /08|Transparent weighted draws and distinct replacement/nonreplacement designs.|General conditional probability and conditional-independence scenarios absent.|
+|S1.3§4 ·p56|PMCC and least-squares regression|Partial|04|Drag/keyboard/numeric pairs; Pearson, fitted y-on-x, prediction, outlier, extrapolation and zero-correlation counterexample.|Bounded synthetic data, no real-data upload; descriptive inference conditions remain separate.|
+|S1.3§5 ·p56|Discrete variables, PMF/CDF and moments|Partial|01 /06|Weighted finite moments and Binomial/Poisson PMFs are calculated.|No general PMF/CDF editor or complete discrete-uniform lesson.|
+|S1.3§6 ·p56|Normal probabilities|Partial|05 /09|Normal density, signed tails, quantiles and stated Normal models.|No general arbitrary-event Normal calculator or source-population simulator.|
+|S2.3§1 ·p58|Binomial/Poisson models and approximation|Partial|06 /07|Exact null laws and test tails; Binomial(3,p) GOF example.|Moments/approximation comparison and continuity correction UI absent.|
+|S2.3§2 ·p58|Polynomial PDF/CDF, moments and quantiles|Not built|—|Not built.|No continuous PDF/CDF manipulation, area or quantile lesson.|
+|S2.3§3 ·p58|Continuous uniform; Normal approximation and continuity correction|Not built|—|Not built.|No event-specific continuity-correction interaction.|
+|S2.3§4.1 ·p59|Population, census, sample and frame|Partial|01 /08|Fixed card model and12 distinct finite-frame identities; census example at n12.|Bounded illustrative designs, not a complete survey-frame or advantages/disadvantages course.|
+|S2.3§4.2 ·p59|Statistic and sampling distribution|Complete bounded interaction|01 /08|Fixed model→original sample→one statistic→repeated distribution, with original-case recall; census in finite-frame lab.|Two explicitly different sampling models. No full sampling-frame survey toolkit.|
+|S2.3§4.3–4.6 ·p59|Hypotheses, critical regions, tails and discrete tests|Partial|06|Binomial and Poisson H0 laws, chosen H1/alpha, inclusive integer regions and observed decisions.|Bounded display n≤200, Poisson lambda≤30; tails can be evaluated outside the shown PMF window.|
+|S3.3§1 ·p61|Independent Normal linear combinations|Complete bounded interaction|09|Distinct variable IDs, explicit model conditions, signed means, squared variance terms, sign-flip comparison and point mass.|Two variables; no covariance/related-variable model. Repeated IDs are rejected.|
+|S3.3§2 ·p61|Random, stratified, systematic and quota sampling|Partial|08|Same12 identities under four explicit mechanisms; population weights, missing strata and ordering comparison.|Bounded finite frame; systematic n divides12. One deterministic convenience mechanism does not represent all quota implementations.|
+|S3.3§3.1 ·p61|Estimator, bias and standard error|Complete bounded interaction|01|Rule versus realised estimate; mean/first/mean+2/variance rules; separate n/R, expectation/finite simulation, weighted exact cases.|Finite-variance IID with replacement in the card lab; n1 sample variance unavailable.|
+|S3.3§3.2 ·p61|Distribution of the sample mean|Partial|01 /02 /05|Weighted discrete-source means, expectation/SE and analytic Normal mean references.|No original Normal source-population experiment; approximation conditions remain explicit.|
+|S3.3§3.3–3.4 ·p61|Confidence intervals|Partial|03 /05|Known-sigma repeated intervals, confidence changes, fixed-parameter interpretation; mean UI also has stated large-sample estimated-s intervals.|Non-Normal small-n coverage approximate; estimated-s repeated reference fixes the plug-in s and does not resample its estimation.|
+|S3.3§3.5–3.8 ·p61–62|Normal-mean tests|Complete bounded interaction|05|One-mean z, known variance, chosen tails and null-reference decision with stated conditions.|No small-sample Student t fallback. Synthetic summaries are an illustrative model.|
+|S3.3§3.6,3.8 ·p61–62|CLT and large-sample inference|Partial|02 /05|Skewed finite-variance populations, raw/standardised mean views, independent n/R, SE and explicit approximation conditions.|No universal n30 guarantee; discrete source pools only. Unknown-sigma route requires explicit large-sample justification.|
+|S3.3§3.7–3.8 ·p62|Two independent means|Complete bounded interaction|05|Difference of means, variance addition, known-sigma and stated large-sample estimated-s z routes.|Independent groups only; no paired design or Welch t interface.|
+|S3.3§4 ·p62|Chi-square goodness of fit|Partial|07|Uniform/specified four-class probabilities and Binomial(3,p), original-data edits, E/contributions, meaningful pooling, fitted parameter accounting where supported.|Normal/Poisson/continuous-uniform GOF absent. Fitted Binomial inference uses only the original four unpooled classes. fit=true with any actual pooling is unsupported in either operation order: p/decision/referenceDF withheld, even if E≥5. df≤0 is rejected.|
+|S3.3§4 ·p62|Chi-square independence|Complete bounded interaction|07|Editable preset-sized tables, margins/E/contributions/df, low-E gate and meaningful whole-row/column merges.|Requires sampling/model assumptions; asymptotic law is approximate. No arbitrary dimension editor or Yates correction.|
+|S3.3§5 ·p62|Spearman and zero-correlation tests|Partial|04|Average ranks/ties; official-table method, tail mapping, signed direction,4dp boundary and conditions.|Verified subset of official rows/cells only. Ties descriptive; no ordinary no-ties table inference. Table threshold does not supply an exact observed p-value.|
 
-|Area|Updated implementation|Still incomplete / scope boundary|
-|---|---|---|
-|A S2 sampling/S3 estimation|Visible sample compression; reduced-motion equivalent; rule-bound predictions; exact ordered rows/weights/contributions; genuine teacher reveal/answers/pause|Independent learning/first30seconds validation pending|
-|B S3 CLT|Raw or standardized mean distributions; same samples; theoretical Z mean0/SD1; fixed-window overflow counts|No Normal source-population switch; card populations remain discrete/nonnormal|
-|B S3 CI|Knownσ90/95/99% levels, same-sample comparison; numeric/keyboard/touch interval details; fixedμ interpretation|Unknownσ large-sample option and mean-test UI absent; these nonnormal intervals approximate|
-|C S1 regression/PMCC, S3 ranks|Interactive scatter, values/ranks, ties averages, response-on-x line, outlier, monotone transform, extrapolation, U-shape/undefined states|Supplied critical-table inference not implemented; numerical ties explicitly extension|
-|C user-requested significance|Seeded999 conditional pair permutations with(b+1)/(B+1), MC error, stale-state invalidation|Enrichment; independence/exchangeability null distinct from generic zero correlation; no causal claim|
-|D/E|No new UI in this checkpoint; separate parent-coordinated pure inference task|Do not claim tests/chi-square course coverage from the unused helper functions|
+## Explanatory enrichment / teaching support
 
-All statuses are developer implementation/testing status; independent classroom approval remains pending.
+- Repeated CI coverage (lab03): Fixed parameter, random intervals; finite observed coverage versus nominal. A teaching realization of CI interpretation.
+- Exact ordered enumeration and sample provenance (lab01): Weighted possible samples and expectation contributions; teaching support, not an additional exam technique.
+- TypeI/II, power, p-values and conditional randomization (lab04 /05 /06 /07): Explanatory enrichment requested by the user; not explicitly named specification clauses. Each method/null is separately labelled.
+- Known finite-population designSE/FPC (lab08): Complete fictional frame permits exact design spread. This is not SE estimated from one sample and is supplementary support.
+- Tied-rank numerical exploration (lab04): Average ranks are descriptive. Specification expects understanding ties but excludes numerical examination questions with ties.
 
-## Checkpoint3 delta — implementation, not independent approval
+## Validation is a separate axis
 
-|Area/reference|Now working|Remaining boundary|
-|---|---|---|
-|A S2.3§4/S3.3§3.1–3.2|Default3-card discovery before distribution-spread question; linked fixed target/rule/estimate/R; literal frequency histogram plus separate traceable sample rug; invalid exact inspector cleared|No novice learning outcome or30-second timing measured|
-|B S3.3§3.3|Confidence-specific copy, fixed-interval and finite-coverage transfer, bias card deferred|Card non-Normal intervals approximate; unknownσ repeated-coverage simulator absent|
-|B/D S3.3§3.4,3.6–3.8|One/two independent mean z UI; known Normal σ exact, knownσ CLT and estimated-s large-sample routes gated by conditions|No paired/t method; no automatic adequacy threshold. Estimated-s repetition uses fixed plug-in Normal reference, not random s simulation|
-|C S3.3§5|Official IAL Formula Book printedp27 tables; signed direction and total-alpha mapping; equality/table rounding; model confirmation; ties/constant/missing gates|Subset of cells transcribed; missing official versus unimplemented distinguished; no exact p inferred from table|
-|D S2.3§4.3–4.6|Pure reviewed discrete engine integrated only; mean-reference repeated rejection interaction available as enrichment|Binomial/Poisson UI absent; engine functions alone do not establish classroom coverage|
-|E S3.3§4|Pure engine integrated, original E5 defect fixed and independently rechecked|No UI/pooling yet; high-count extreme-alpha engine P2 pending external owner fix|
-|Teacher/classroom|18-minute actual Aurora guide,18px chain labels, wide focused stages; hidden feedback/ARIA/geometry repaired and developer browser tested|Independent stage3 recheck and actual projection-distance/screen-reader tests pending|
+Checkpoint5 F mathematics and both GOF P1 event paths passed independent94d0b8d recheck; actual-browser approval remains pending. Earlier independent reports and developer checks remain separate in REVIEW-LOOP.md, not converted into real student outcomes. No real students, physical projection-distance or screen-reader speech trial. Retained numerical limits: adjacent confidence levels can change a CI critical value by1ulp nonmonotonically; tiny TypeII uses1−power with cancellation. Ordinary95% CI calculations are not claimed wrong.
 
-All earlier checkpoint rows remain historical implementation snapshots. This delta supersedes their current-feature statements; none implies complete S1–S3 coverage.
+Sources:
+- https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/international-a-level-maths-spec.pdf
+- https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/IAL-Mathematics-Formula-Book.pdf (Issue2 Jan2021, correlation printedp27/PDF33)
 
-18:07UTC follow-up: inference owner8f088 high-count residual repair is integrated and developer-regressed; independent re-review pending. Chi-square UI remains absent. P3 adjacent-confidence1ulp limitation remains documented.
+## Historical checkpoints
 
-## Checkpoint4 delta — actual D/E interfaces
-
-|Official item|Implemented now|Honest remaining scope|
-|---|---|---|
-|S2.3§4.3–4.6 p59|Binomial/Poisson H₀/H₁, signed tails, exact null PMF, inclusive critical regions, nominal/actualα, observation and repeated fixed-rule decisions|No discrete Normal-approximation comparison UI; display n≤200,Poissonλ≤30|
-|S3.3§4 p62 independence|Live2×2/2×3/3×3 original counts, margins,E/contributions/χ²/df; E<5 blocks asymptoticp/decision; meaningful whole row/column merges|Preset-sized tables; no arbitrary dimension editor; random-sampling assumptions still needed|
-|S3.3§4 p62 fit|Four-category uniform/specified probabilities and Binomial(3,p); fittingp from same original counts subtractsq1 after pooling|Poisson,Normal,continuous-uniform GOF UI absent; no arbitrary fitted-q knob or exact multinomial test|
-|Interpretive enrichment|TypeI/II/power with explicit truth/direction; fixed-margin conditional shuffles separate from asymptotic law; Monte Carlo(b+1)/(R+1)/resolution/SE|Not additional compulsory syllabus topics; finite PRNG simulation is not an exact enumerated null|
-|Teacher/access|D/E focused model/result/repeat views, same maths/data, worked concealment, keyboard inputs and real desktop/phone PNGs|Physical projection/SR/real students absent; stage4 independent implementation review pending|
-|F|Separate658f005 pure module independently reviewed; report saved|Not imported, no F UI delivered in this checkpoint|
-
-Inference8f088 R1/M1–M3 sampled contracts independently passed; one-ulpCI and tinyTypeII complement limitations remain. The interface states tinyβ numerical precision and positivep underflow. Do not count unimplemented GOF families or F functions as full coverage.
-
-## Checkpoint5 delta — current implementation and correction
-
-This delta supersedes historical feature claims above. In particular, the checkpoint4 phrase about fitting before pooling was an implementation description later shown invalid by independent calibration review; it must not be read as approved method.
-
-|Official item|Current delivered interaction|Conditions and remaining scope|
-|---|---|---|
-|S3.3§2 p61|Identity-preserving finite12-unit SRS, proportional stratified, systematic uniform-random-start and an explicit quota-convenience mechanism; population weighting, recall and repeated estimates|Systematic n divides12; quota is one stated mechanism, no probability SE; no general survey/sample-estimatedSE toolbox|
-|S3.3§1 p61|Two independent Normal variables with editable signed coefficients, means, variances and constant; variance contributions squared; sign-flip comparison|Explicit Normality/independence, distinct IDs; no correlated inputs/covariance tool; zero-variance pointmass supported|
-|S3.3§4 p62 corrected GOF|Same portal observations persist across uniform/specified H₀ changes; explicit example loading and separate semantic datasets|Binomial p fitting supported only before any actual pooling. Raw-data-fit+pool standard reference is unsupported: descriptive O/E/contributions/statistic only, p/reject/referenceDF withheld. No grouped MLE/bootstrap|
-|Supplementary support|Finite population designSE/FPC, exact systematic starts, design bias versus single error, deterministic convenience counterexamples|Mark supplementary/enrichment rather than claim every formula is compulsory; known complete fictional populationSE is not sample-estimatedSE|
-|Independent status|Pure F658f005 finite mathematical audit passed; earlier S3 mobile/pause/trace fixes independently passed atdbe9351|New F UI and the two checkpoint5 GOF P1 repairs await independent recheck. No real students or full S1/S2/S3 completion claim|
-
-Remaining absent/partial: polynomial PDF/CDF and full distribution workbench; Normal source-population simulator; full GOF model families (Poisson/Normal/continuous-uniform); full official correlation table; general survey estimation, paired/covariance inference. The18-minute flagship guide covers estimator/estimate/sampling distribution, not this whole matrix.
+Earlier checkpoint snapshots are retained in [the explicitly superseded archive](archive/COVERAGE-CHECKPOINT-HISTORY.md). In particular, raw four-class fittedp followed by pooling never had the claimed simple χ² reference; that historical method was invalid and is now explicitly withheld. This current first-page matrix replaces all historical Current status columns.

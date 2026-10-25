@@ -863,9 +863,12 @@ $$("[data-lab]").forEach((b) =>
     clearPrediction();
     $("#challenge-feedback").textContent = "";
     $("#ci-exact-feedback").textContent = "";
-    $$("[data-lab]").forEach((x) =>
-      x.classList.toggle("active", x.dataset.lab === lab),
-    );
+    $$("[data-lab]").forEach((x) => {
+      const active = x.dataset.lab === lab;
+      x.classList.toggle("active", active);
+      if (active) x.setAttribute("aria-current", "page");
+      else x.removeAttribute("aria-current");
+    });
     $("#lab-switch").value = lab;
     const meta = {
       sampling: [

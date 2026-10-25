@@ -1,6 +1,6 @@
 # 18-minute classroom demonstration — estimator, estimate and sampling distribution
 
-Version3, 2026-10-25. Independent review matched the route to actual Teacher screenshots and source at7baa7fd. Updated for stage4 trace visibility repairs. This is a teacher script, not a real classroom trial or measured18-minute rehearsal. The hypothetical{1,2,9} skeleton is superseded; only the actual Aurora model is used.
+Version4, 2026-10-25. Printable route and original student/teacher transfer sheet: ../guide.html. Independent review matched the route to actual Teacher screenshots and source at7baa7fd. Updated for stage4 trace visibility repairs. This is a teacher script, not a real classroom trial or measured18-minute rehearsal. The hypothetical{1,2,9} skeleton is superseded; only the actual Aurora model is used.
 
 ## Preparation
 
@@ -56,13 +56,13 @@ Reveal `E(X̄)=μ`: expectation averages over all possible samples with their pr
 
 Remain at stage4, where n and Exact small model are visible. Switch to n=2 (warn that the old cohort is cleared), keep sample-mean estimator, enable **Exact small model**, open **Inspect exact ordered samples & weights**. There are25 ordered pairs, with unequal probabilities, not25 equally likely cases.
 
-Inspect [2,2]: probability .45²=.2025; mean2; weighted contribution .405. Ask whether [40,40] is equally likely: no, .02²=.0004. Show sum of probabilities1 and weighted expected mean5.3. Explain exact enumeration does not require taking thousands of samples and has no Monte Carlo fluctuation. Do not use S² with n=1; variance estimator is undefined.
+Inspect [2,2] on Page1: probability .45²=.2025; mean2; weighted contribution .405. Set Page to3 to inspect [40,40] at case25, then compare the total beneath the table. Ask whether [40,40] is equally likely: no, .02²=.0004. Show sum of probabilities1 and weighted expected mean5.3. Explain exact enumeration does not require taking thousands of samples and has no Monte Carlo fluctuation. Do not use S² with n=1; variance estimator is undefined.
 
 If this advanced table overloads the group, use just these two rows and the total; omit the rest of the table, not the weighting principle.
 
 ## 14–16 min · Transfer: n changes the distribution; R changes the evidence
 
-Remain at stage4; return to n=3 and a fresh seeded cohort, then compare with n=12 using fresh samples. Ask a prediction before changing n: “Will the centre move? Will spread change?” Theoretical centre remains5.3; SE halves when n quadruples, approximately3.590→1.795. Simulation may look irregular when R is small. n changes reset the cohort so the chart does not silently mix different sampling distributions.
+Remain at stage4; return to n=3 and a fresh seeded cohort, then compare with n=12 using fresh samples. Ask a prediction before changing n: “Will the centre move? Will spread change?” Record the theoretical SE before changing n. If comparing empirical spread, use the same stated R for both fresh cohorts; the theoretical-SE comparison is the core two-minute task and extra simulation is optional. Theoretical centre remains5.3; SE halves when n quadruples, approximately3.590→1.795. Simulation may look irregular when R is small. n changes reset the cohort so the chart does not silently mix different sampling distributions.
 
 Do not frame the mean of this highly skewed model at every small n as exactly Normal. The lesson concerns expectation and SE; approximate shape is the next CLT lesson.
 
@@ -83,6 +83,6 @@ Next lesson: nonnormal population versus approximate distribution of means, then
 
 ## Verification and stage4 synchronization
 
-The independent reviewer verified the sequence against all four Teacher-stage screenshots and source stage/seed/visibility behaviour at7baa7fd; did not conduct a new live18-minute rehearsal or physical projection trial. The separate actual browser review verified seeded values and hidden-output paths. At that pinned version mobile digits clipped and the stage3 trace link targeted a hidden panel. Stage4 developer regressions protect full card values and make the trace action reveal stage4 before focusing the saved point, preserving sample/R/seed. New independent recheck remains pending. The explicit Next-stage sequence above remains valid.
+The independent reviewer verified the sequence against all four Teacher-stage screenshots and source stage/seed/visibility behaviour at7baa7fd; did not conduct a new live18-minute rehearsal or physical projection trial. The separate actual browser review verified seeded values and hidden-output paths. At that pinned version mobile digits clipped and the stage3 trace link targeted a hidden panel. Stage4 developer regressions protect full card values and make the trace action reveal stage4 before focusing the saved point, preserving sample/R/seed. These three repairs were independently regressed successfully at dbe9351. The explicit Next-stage sequence above remains valid. The new printable guide and original transfer sheet await final browser/print verification.
 
 The first two on-page predictions concern a whole sample and what changes; n/spread follows two draws. The semantic chain distinguishes fixed target/rule/estimate/R. The online Field guide now contains a concise18-minute Teacher route without leaking seeded worked answers while concealment is active. No learner outcome, physical back-row readability, or real-phone test is claimed.

@@ -56,13 +56,13 @@ Reveal `E(X̄)=μ`: expectation averages over all possible samples with their pr
 
 Remain at stage4, where n and Exact small model are visible. Switch to n=2 (warn that the old cohort is cleared), keep sample-mean estimator, enable **Exact small model**, open **Inspect exact ordered samples & weights**. There are25 ordered pairs, with unequal probabilities, not25 equally likely cases.
 
-Inspect [2,2]: probability .45²=.2025; mean2; weighted contribution .405. Ask whether [40,40] is equally likely: no, .02²=.0004. Show sum of probabilities1 and weighted expected mean5.3. Explain exact enumeration does not require taking thousands of samples and has no Monte Carlo fluctuation. Do not use S² with n=1; variance estimator is undefined.
+Inspect [2,2] on Page1: probability .45²=.2025; mean2; weighted contribution .405. Set Page to3 to inspect [40,40] at case25, then compare the total beneath the table. Ask whether [40,40] is equally likely: no, .02²=.0004. Show sum of probabilities1 and weighted expected mean5.3. Explain exact enumeration does not require taking thousands of samples and has no Monte Carlo fluctuation. Do not use S² with n=1; variance estimator is undefined.
 
 If this advanced table overloads the group, use just these two rows and the total; omit the rest of the table, not the weighting principle.
 
 ## 14–16 min · Transfer: n changes the distribution; R changes the evidence
 
-Remain at stage4; return to n=3 and a fresh seeded cohort, then compare with n=12 using fresh samples. Ask a prediction before changing n: “Will the centre move? Will spread change?” Theoretical centre remains5.3; SE halves when n quadruples, approximately3.590→1.795. Simulation may look irregular when R is small. n changes reset the cohort so the chart does not silently mix different sampling distributions.
+Remain at stage4; return to n=3 and a fresh seeded cohort, then compare with n=12 using fresh samples. Ask a prediction before changing n: “Will the centre move? Will spread change?” Record the theoretical SE before changing n. If comparing empirical spread, use the same stated R for both fresh cohorts; the theoretical-SE comparison is the core two-minute task and extra simulation is optional. Theoretical centre remains5.3; SE halves when n quadruples, approximately3.590→1.795. Simulation may look irregular when R is small. n changes reset the cohort so the chart does not silently mix different sampling distributions.
 
 Do not frame the mean of this highly skewed model at every small n as exactly Normal. The lesson concerns expectation and SE; approximate shape is the next CLT lesson.
 

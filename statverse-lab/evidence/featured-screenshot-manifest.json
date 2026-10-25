@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-10-25T20:16:17.774Z",
+  "baseUrl": "http://127.0.0.1:4174",
+  "evidenceType": "Developer actual Chromium screenshots, not independent review, physical devices or real students",
+  "images": [
+    {
+      "file": "final-sampling-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fullPage": true,
+      "lab": "sampling",
+      "scrollY": 0
+    },
+    {
+      "file": "final-sampling-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": false,
+      "lab": "sampling",
+      "scrollY": 836
+    },
+    {
+      "file": "final-sampling-teacher.png",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullPage": false,
+      "lab": "sampling",
+      "scrollY": 0
+    },
+    {
+      "file": "final-guide-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": false,
+      "lab": "guide",
+      "scrollY": 0
+    },
+    {
+      "file": "final-guide-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fullPage": false,
+      "lab": "guide",
+      "scrollY": 0
+    }
+  ]
+}

@@ -15,7 +15,7 @@ npm run dev
 
 Open http://localhost:4173. The static build recursively includes every ES module in `src/`; deploy `dist/` on a static host. Runtime has no app dependencies. Browser QA uses the parent repository's installed Playwright and `/usr/bin/chromium`: `node tests/browser.mjs`, `node tests/browser-stage2.mjs`, and `STATVERSE_BASE_URL=http://127.0.0.1:4174 node tests/browser-stage3.mjs` against a separate built-output server. The cap5000 real-DOM test takes about40–70seconds depending on load.
 
-## Working features at checkpoint5
+## Current working features
 
 - Fixed weighted population → whole original sample → one saved statistic. Default n3 and two concrete introductory predictions precede the n-versus-spread question. A persistent chain distinguishes fixed target, rule before sampling, observed estimate and R. Saved dots retrieve their exact source cards; reduced motion retains the relationship.
 - Five estimator rules, independent n/R, reproducible seed/reset, single draw, batch/pause/resume, guarded5000 cap. n1 sample variance unavailable. Theoretical expectation/SE/bias differ from finite simulation summaries.
@@ -33,7 +33,7 @@ Open http://localhost:4173. The static build recursively includes every ES modul
 
 ## Evidence and limits
 
-Checkpoint5 developer evidence:71 unit/oracle/domain test groups;11 baseline browser flows,13 previous regressions,24 D/E and21 F/P1 actual Chromium checks against built output. Results/timestamps and desktop/phone/Teacher PNGs are in `evidence/`. These are developer checks, not independent learning approval.
+Current developer evidence:71 unit/oracle/domain test groups;11 baseline browser flows,13 previous regressions,24 D/E and21 F/P1 actual Chromium checks against built output. Results/timestamps and desktop/phone/Teacher PNGs are in `evidence/`. These are developer checks, not independent learning approval.
 
 Independent reports are preserved in `docs/reviews/`. Phase2 actual independent Chromium reported7/8 simulated novice tasks basically passing and Teacher hiding failing; those failures drove checkpoint3. Phase3 actual built-output review closed S2-01–04. Phase4 independent browser review closed the subsequent mobile card clipping, paused Mean single-step and Teacher trace-target repairs; its new GOF preservation P1 and the separate mathematical calibration P1 drive checkpoint5. Another reviewer's original0/8 BLOCKED browser report stays unchanged. No real students participated, no measured novice30-second outcome or weighted learning score is claimed.
 
@@ -56,4 +56,31 @@ F finite sampling:12 invented distinct units, no replacement within a sample, re
 
 Independent Normal tool: two distinct IDs, explicit Normality/independence, editable coefficients/means/variances/constant. Negative coefficients preserve nonnegative squared variance contributions; sign flip shows before/current curves on common axes. Repeated IDs blocked; same parameters with different IDs allowed under explicit independence. Zero total variance is a point mass, tiny positive variance stays Normal with numeric precision/resolution labels. This bounded two-variable interface does not handle covariance or non-Normal distribution inference.
 
-Stage4 independent review found two P1s: GOF null change overwrote O, and raw-data fittedp followed by pooling used an invalid standard χ² calibration. Current developer regressions preserve O across same-context null changes and withhold unsupported fitted+pooled inference in both operation orders. New model examples require an explicit Load example counts action. These P1 repairs await independent recheck; earlier PASS arithmetic did not approve calibration. Full reports and corrections are preserved in docs/reviews and REVIEW-LOOP.md. No new feature breadth is planned after this checkpoint; prioritize independent review and delivery verification.
+Stage4 independent review found two P1s: GOF null change overwrote O, and raw-data fittedp followed by pooling used an invalid standard χ² calibration. Current developer regressions preserve O across same-context null changes and withhold unsupported fitted+pooled inference in both operation orders. Within the same semantic dataset, changing H₀ preserves observations; Load example counts explicitly replaces them with an example. Changing semantic context restores or initializes its separately stored dataset with a notice. These P1 repairs passed the independent94d0b8d mathematics/event-bridge recheck; actual-browser recheck is still pending; earlier PASS arithmetic did not approve calibration. Full reports and corrections are preserved in docs/reviews and REVIEW-LOOP.md. No new feature breadth is planned after this checkpoint; prioritize independent review and delivery verification.
+
+## Offline use and classroom handouts
+
+Unzip a complete static delivery into one folder. Python3 is the only prerequisite for the optional local launcher:
+
+```bash
+python start.py
+# On some systems: python3 start.py
+# If4173 is already in use:
+python start.py --port 4175
+```
+
+Open the printed `http://127.0.0.1:4173/` URL and keep the terminal open. Ctrl+C stops only that local server. It binds to loopback, not a public network interface. No package install, account, internet connection or backend is required to operate the labs. Alternatively, from the unzipped folder run `python -m http.server 4173 --bind 127.0.0.1`. Direct double-clicking `index.html` is not the supported launch path because browsers restrict local ES-module imports. An existing static host can serve `dist/` as-is.
+
+`guide.html` is the printable18-minute teacher route plus six original transfer questions. Teacher notes start closed. **Print student questions** excludes teacher answers; **Print teacher script** explicitly includes them. Exported PDFs are also provided in the handoff. `scope.html` is the current official coverage/conditions page; `docs/CURRICULUM-STATUS.md` and its JSON are the current status map. Earlier checkpoint deltas in COVERAGE.md remain historical, not current approval.
+
+Seeds reproduce a declared model and action stream, not every arbitrary ordering of controls. Card n/model/rule changes reset incompatible history. In the finite-frame lab each saved replication uses `base|method|r`; its12 units are restored between samples, with no duplicate ID within a sample. The quota example is deterministic and has no random seed/batch effect. Recall/hide/Teacher changes do not consume a new draw. Reset returns the declared reproducible start; changing the seed changes the pseudo-random stream while leaving model parameters fixed. Other modules disclose their own seed/reset semantics beside their controls.
+
+All observations and identities are invented. No payment, paid draw, owned collection, student record, analytics, account or observation upload is implemented. Fonts use local system fallbacks, so runtime assets make no external requests; official source links open external Pearson pages only if selected. A private hosting platform may have its own access/login controls. A successful deployment is not a claim that the owner logged in and tested it or that a physical classroom was validated.
+
+Developer browser checks require the repository's installed Playwright and Chromium; these are QA dependencies, not runtime dependencies. The standalone static/source bundle does not silently install them. `npm test` uses Node's built-in test runner; `npm run build` creates the deployable static folder.
+
+## Global delivery verification
+
+Checkpoint6 adds7 actual built-browser workflow groups and36 lab/viewport scans (320/390/1440/1920), keyboard skip/modal/current-lab checks, the actual seeded Teacher route including exact Page1/Page3, external-network-blocked operation, and student/teacher PDF answer isolation. All passed; this is not a WCAG certification or student study. Source/dist closure, original root289-page build and71 numerical groups pass. Exact local timings and review scopes remain in evidence/ and docs/reviews/.
+
+To package a clean committed checkout, run `npm run build`, then `python scripts/package-delivery.py --label checkpoint6 --output ../statverse-delivery`. It creates exact-source+static, standalone static and clearly labelled developer-screenshot ZIPs with commit IDs and SHA256 manifests. The full source retains historical failure evidence; the featured screenshot set excludes those failure images. Independent screenshot archives are separately attributed by the coordinator.

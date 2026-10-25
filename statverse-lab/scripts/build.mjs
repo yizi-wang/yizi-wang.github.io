@@ -4,7 +4,7 @@ await rm(new URL("../dist/", import.meta.url), {
   force: true,
 });
 await mkdir(new URL("../dist/", import.meta.url), { recursive: true });
-for (const p of ["index.html", "style.css"])
+for (const p of ["index.html", "style.css", "guide.html", "scope.html", "reading.css", "start.py"])
   await cp(
     new URL("../" + p, import.meta.url),
     new URL("../dist/" + p, import.meta.url),

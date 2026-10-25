@@ -1,0 +1,526 @@
+{
+  "timestamp": "2026-10-25T20:15:01.095Z",
+  "baseUrl": "http://127.0.0.1:4174",
+  "evidenceType": "Developer actual built-output Chromium global/keyboard/print/offline checks. Not a WCAG certification, screen-reader speech trial, independent review or real student study.",
+  "results": [
+    {
+      "name": "nine labs: visible control/image names, unique IDs and no whole-page overflow at four viewports",
+      "status": "PASS",
+      "ms": 1895
+    },
+    {
+      "name": "keyboard skip link focuses main; named modal Escape restores its opener; native lab switch changes current state",
+      "status": "PASS",
+      "ms": 388
+    },
+    {
+      "name": "actual18-minute Teacher route preserves seed/sample, uses weighted exact cases and distinguishes n/R",
+      "status": "PASS",
+      "ms": 1468
+    },
+    {
+      "name": "reduced motion removes the compression ghost while original data/statistic stay available",
+      "status": "PASS",
+      "ms": 262
+    },
+    {
+      "name": "printable guide has accessible teacher disclosure and correct distinct student/teacher PDFs",
+      "status": "PASS",
+      "ms": 557
+    },
+    {
+      "name": "coverage page distinguishes bounded complete, partial, enrichment and absent content with official sources",
+      "status": "PASS",
+      "ms": 322
+    },
+    {
+      "name": "built local package requires no external font/assets/network for all nine labs and reading pages",
+      "status": "PASS",
+      "ms": 0
+    }
+  ],
+  "scans": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "sampling",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "sampling"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "clt",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "clt"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "coverage",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "coverage"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "correlation",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "correlation"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "mean",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "mean"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "discrete",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "discrete"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "chisquare",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "chisquare"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "design",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "design"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lab": "normal",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "normal"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "sampling",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "sampling"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "clt",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "clt"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "coverage",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "coverage"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "correlation",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "correlation"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "mean",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "mean"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "discrete",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "discrete"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "chisquare",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "chisquare"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "design",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "design"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lab": "normal",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "normal"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "sampling",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "sampling"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "clt",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "clt"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "coverage",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "coverage"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "correlation",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "correlation"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "mean",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "mean"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "discrete",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "discrete"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "chisquare",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "chisquare"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "design",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "design"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lab": "normal",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "normal"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "sampling",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "sampling"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "clt",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "clt"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "coverage",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "coverage"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "correlation",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "correlation"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "mean",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "mean"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "discrete",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "discrete"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "chisquare",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "chisquare"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "design",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "design"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "lab": "normal",
+      "unlabelled": [],
+      "duplicates": [],
+      "overflow": 0,
+      "current": [
+        "normal"
+      ]
+    }
+  ],
+  "performanceEvidence": {
+    "sampleMeanAdd200": {
+      "elapsedMs": 395,
+      "n": 3,
+      "R": 202,
+      "longTaskDurationsMs": []
+    },
+    "pdfPages": {
+      "student": 2,
+      "teacher": 6
+    }
+  },
+  "externalRequests": [],
+  "pageErrors": []
+}
