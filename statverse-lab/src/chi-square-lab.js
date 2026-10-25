@@ -87,7 +87,7 @@ export function createChiSquareLab(root) {
    .join(
      "",
    )}</select></label><label id="chi-model-field" class="hidden">GOF null model<select id="chi-model"><option value="uniform">Four equally likely portals</option><option value="specified">Four specified probabilities</option><option value="binomial3">Number of wins · Binomial(3,p)</option></select></label><label>Nominal α<select id="chi-alpha"><option value="0.1">10%</option><option value="0.05" selected>5%</option><option value="0.01">1%</option></select></label><label id="chi-p-field" class="hidden">Externally specified p (q=0)<input id="chi-p" type="number" min="0" max="1" step="any" value="0.5"></label><label id="chi-fit-field" class="model-confirm hidden"><input id="chi-fit" type="checkbox"> Estimate Binomial p from these same counts (q=1)</label></div><p id="chi-null" class="mean-hypotheses"></p><p class="method-note">Synthetic independent observations, one mutually exclusive category per observation. Edit counts directly; expected counts and contributions update from the same data snapshot. No automatic category merging.</p><p id="chi-data-note" class="method-note" role="status"></p><div id="chi-inputs" class="table-scroll"></div><p id="chi-error" class="input-error" role="alert"></p><button id="chi-reveal" class="primary">Reveal expected counts & contributions →</button> <button id="chi-double" class="secondary">×2 counts · same proportions</button> <button id="chi-load-example" class="text-button">Load example counts</button></section>
- <section class="panel"><div class="section-heading"><div><span class="step-number">02</span><h2 id="chi-result-title">Observed → expected → contribution</h2></div></div><div id="chi-before" class="method-note">Predict expected counts before revealing. Under independence Eᵢⱼ = row total × column total / N. A large contribution means a large squared discrepancy relative to E.</div><div id="chi-output" class="answer-output hidden"><div id="chi-metrics" class="result-metrics"></div><div id="chi-expected" class="table-scroll"></div><p id="chi-decision" class="decision-box"></p><p id="chi-df" class="method-note"></p></div><p id="chi-validity" class="validity-note" role="status"></p></section>
+ <section class="panel"><div class="section-heading"><div><span class="step-number">02</span><h2 id="chi-result-title">Observed → expected → contribution</h2></div></div><div id="chi-before" class="method-note">Predict expected counts before revealing. Under independence Eᵢⱼ = row total × column total / N. A large contribution means a large squared discrepancy relative to E.</div><div id="chi-output" class="answer-output hidden"><div id="chi-metrics" class="result-metrics"></div><div id="chi-expected" class="table-scroll"></div><p id="chi-decision" class="decision-box"></p><p id="chi-df" class="method-note"></p><details id="chi-calibration-note" class="method-disclosure hidden"><summary>Why is this workflow unsupported? · Teacher note</summary><p id="chi-calibration-text" class="method-note"></p></details></div><p id="chi-validity" class="validity-note" role="status"></p></section>
  <section class="panel"><div class="section-heading"><div><span class="step-number">03</span><h2>Pool only meaningful categories <small>有意义合并</small></h2></div></div><p class="method-note">Combine adjacent whole categories only when the new label makes sense in the story. The same groups are used for O and E; original counts remain editable. Choosing a merger is a modelling decision, not a way to chase significance.</p><div class="inference-controls"><label id="chi-axis-field">Whole-category axis<select id="chi-axis"><option value="columns">Columns</option><option value="rows">Rows</option></select></label><label>Adjacent categories<select id="chi-merge-choice"></select></label><label><input id="chi-merge-confirm" type="checkbox"> This combined category has a defensible meaning</label><button id="chi-merge" class="secondary">Merge selected whole groups</button><button id="chi-unpool" class="text-button">Restore original categories</button></div><p id="chi-groups" class="method-note"></p><p id="chi-merge-note" role="status" class="method-note"></p></section>
  <section id="chi-permutation-panel" class="panel"><div class="section-heading"><div><span class="step-number">04</span><h2>Shuffle pairings, keep margins <small>条件置换</small></h2></div><span class="badge">CONDITIONAL RANDOMIZATION · ENRICHMENT</span></div><p class="method-note">Shuffle column labels among the existing row positions. Both margins stay fixed. This Monte Carlo null is conditional on the margins; it is separate from the asymptotic χ² reference. It can explore sparse tables without pretending the low-E asymptotic test is valid.</p><div class="inference-controls"><label>Seed<input id="chi-seed" value="labels-2026" maxlength="64"></label><button id="chi-shuffle" class="secondary">Shuffle once</button><button id="chi-run" class="secondary">Run +200 shuffles</button><button id="chi-pause" class="secondary" disabled>Pause</button><button id="chi-reset" class="text-button">Reset shuffles</button></div><p id="chi-permutation-result" class="answer-output" role="status"></p><div id="chi-shuffle-table" class="table-scroll"></div><p id="chi-permutation-limit" class="method-note"></p></section>
  <section class="transfer"><div><span class="eyebrow">TRANSFER</span><h3 id="chi-transfer-question">Does a small χ² p-value show a large or causal relationship?</h3></div><div><button data-chi-answer="yes">Yes, strength and causality follow</button><button data-chi-answer="no">No, check size and study design</button><p id="chi-transfer-feedback" role="status"></p></div></section>`;
@@ -415,6 +415,9 @@ export function createChiSquareLab(root) {
       $("#chi-output").classList.toggle("hidden", !state.revealed || !r.valid);
       $("#chi-before").classList.toggle("hidden", state.revealed && r.valid);
       if (!r.valid) {
+        $("#chi-calibration-note").classList.add("hidden");
+        $("#chi-calibration-note").open = false;
+        $("#chi-calibration-text").textContent = "";
         $("#chi-validity").textContent =
           `Inference unavailable: ${r.status}. N must be positive and every row/column margin positive. Remove an empty category explicitly in a redesigned table; do not divide by0.`;
         $("#chi-expected").innerHTML = "";
@@ -427,7 +430,7 @@ export function createChiSquareLab(root) {
         $("#chi-validity").textContent = workedAnswersHidden()
           ? "Expected-frequency validity assessment concealed with worked results."
           : unsupported
-            ? "Calibration unsupported: p was fitted from the original four classes before pooling. Even with every E≥5, the pooled statistic does not have the standard χ²(k′−2) reference assumed by a simple parameter count. p and the test decision are withheld. Restore original categories or use an independently specified model."
+            ? "Calibration unsupported: this fitted-and-pooled workflow cannot give a reliable standard χ² p-value or test decision. Restore original categories, or use p specified independently of these counts."
             : r.approximationAppropriate
               ? `All expected frequencies≥5 (minimum ${number(r.minExpected, 5)}). The χ² reference is still asymptotic; valid random sampling and model assumptions are required.`
               : `${r.smallExpectedCount} expected frequencies below5 (minimum ${number(r.minExpected, 5)}). Under this specification, combine meaningful categories before using the χ² approximation. The asymptotic p-value and reject/do-not-reject decision are withheld.`;
@@ -436,22 +439,31 @@ export function createChiSquareLab(root) {
           !r.approximationAppropriate,
         );
         $("#chi-decision").textContent = unsupported
-          ? "No calibrated standard χ² decision for this fitted-and-pooled GOF workflow. Descriptive O/E/contributions/statistic remain available. The contingency fixed-margin randomization is not a replacement GOF calibration."
+          ? "Inference withheld. Descriptive O/E/contributions and χ² remain available."
           : r.pValue === null
             ? gof
               ? "No reliable asymptotic decision from this GOF table. Inspect meaningful category pooling; exact multinomial testing is not implemented here."
               : "No reliable asymptotic decision from this table. Inspect meaningful pooling or use the separately labelled conditional randomization exploration."
             : `${r.reject ? "Reject H₀: evidence of model discrepancy under the assumptions." : "Do not reject H₀: insufficient evidence of model discrepancy; H₀ is not proved."} α=${r.alpha}. The p-value is P(χ²≥observed statistic) under the reference model, not P(H₀).`;
         $("#chi-df").textContent = unsupported
-          ? `Formal parameter counting gives k′−1−q=${state.groups.length}−1−1=${r.df}, but this is not an approved reference df for the current raw-data fit followed by pooling. No grouped-MLE/bootstrap calibration is implemented here.`
+          ? ""
           : gof
             ? `df = k′−1−q = ${state.groups.length}−1−${r.fittedParameters} = ${r.df}. ${model === "binomial3" ? `p=${number(r.parameter, 6)}${r.fittedParameters ? " estimated from these unpooled original counts: q=1. Pooling this fitted workflow requires separately supported calibration." : " specified independently: q=0."}` : "No parameters fitted from these counts: q=0."}`
             : `df=(r−1)(c−1)=(${state.rows.length}−1)(${state.cols.length}−1)=${r.df}. Expected cell counts come from margins, not one separately fitted parameter per cell.`;
+        const note = $("#chi-calibration-note");
+        note.classList.toggle("hidden", !unsupported);
+        if (!unsupported) note.open = false;
+        $("#chi-calibration-text").textContent = unsupported
+          ? `p was fitted using the original four-class counts, which were then combined. Even with every E≥5, this statistic does not have the standard χ²(k′−2) reference from simple parameter counting. Formal k′−1−q=${state.groups.length}−1−1=${r.df} is not an approved reference df for this workflow. No grouped-MLE/bootstrap calibration is implemented here. The contingency fixed-margin randomization has a different null and is not a replacement GOF calibration.`
+          : "";
       }
       permutationView();
     } catch (e) {
       pause();
       state.result = null;
+      $("#chi-calibration-note").classList.add("hidden");
+      $("#chi-calibration-note").open = false;
+      $("#chi-calibration-text").textContent = "";
       $$("[data-chi-row-total],[data-chi-col-total],#chi-total").forEach(
         (e) => (e.textContent = "—"),
       );

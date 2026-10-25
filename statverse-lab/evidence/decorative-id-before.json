@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-25T20:42:52.302Z",
+  "type": "Developer actual DOM observation before decorative-ID fix",
+  "duplicateIds": [
+    "glow-sun",
+    "glow-star",
+    "glow-leaf",
+    "glow-sun",
+    "glow-star",
+    "glow-leaf"
+  ],
+  "ghosts": 1,
+  "samples": [
+    {
+      "ids": [
+        2,
+        4,
+        0
+      ],
+      "value": 16.666666666666664
+    }
+  ]
+}

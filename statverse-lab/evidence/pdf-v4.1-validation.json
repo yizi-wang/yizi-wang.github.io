@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-10-25T20:45:24.652284+00:00",
+  "evidenceType": "Developer Poppler render/text/property checks; independent new-hash review pending, no physical printer or accessibility certification",
+  "files": [
+    {
+      "file": "STATVERSE-18min-teacher-guide.pdf",
+      "bytes": 136793,
+      "sha256": "175840e57a199f72f8af7bece91167702818b1e643158e65ebdbb981a6fac2b6",
+      "pages": 6,
+      "numbered_identity_footers": true,
+      "known_typos_absent": true,
+      "render_files": [
+        "print-v4.1/teacher-1.png",
+        "print-v4.1/teacher-2.png",
+        "print-v4.1/teacher-3.png",
+        "print-v4.1/teacher-4.png",
+        "print-v4.1/teacher-5.png",
+        "print-v4.1/teacher-6.png"
+      ]
+    },
+    {
+      "file": "STATVERSE-student-transfer.pdf",
+      "bytes": 41861,
+      "sha256": "98f5515c70cfd501e4245ef9872fddadb8d19c33c372177bfc64e3e8fef73e75",
+      "pages": 2,
+      "numbered_identity_footers": true,
+      "known_typos_absent": true,
+      "render_files": [
+        "print-v4.1/student-1.png",
+        "print-v4.1/student-2.png"
+      ]
+    }
+  ],
+  "developer_visual_review": "All six teacher pages and two student pages viewed as latest Poppler PNGs after final copy changes; no observed clipping, footer overlap, missing glyphs or extra pages. This is not independent/physical-printer approval."
+}

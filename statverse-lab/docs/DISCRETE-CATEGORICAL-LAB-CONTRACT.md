@@ -30,3 +30,7 @@ Effective Teacher worked hiding covers decisions/feedback/calculated geometry wi
 ## Observation/null separation repair (S4-01)
 
 Four portal observations are saved independently of uniform versus specified null probabilities. Switching those nulls preserves original raw count fields, their total and meaningful grouping, even if an edit is invalid/empty. Null probability fields also retain their own state. A different semantic context (portal choices versus number of wins, or contingency story) has a separately retained dataset and an explicit context-change notice; grouping resets for changed categories. Within the same semantic dataset, Load example counts explicitly replaces observations with a default example and a notice. A different semantic context restores or initializes its separately stored dataset as described above. Parameter edits and model changes cancel incompatible simulation history without fabricating fresh observations.
+
+### Final presentation boundary
+
+Unsupported fit+actualpool keeps the same mathematical flags and null p/reject/referenceDF in either event order. The visible first layer states withholding and existing recovery options. A native closed Teacher-note disclosure retains formal parameter counting and why grouped-fit/bootstrap or contingency MC is not silently substituted. Opening/closing the note changes no data or model. Invalid/unsupported→supported transitions clear or close the note; worked hiding conceals it with the existing calculated output.

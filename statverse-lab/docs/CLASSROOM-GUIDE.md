@@ -1,6 +1,6 @@
 # 18-minute classroom demonstration — estimator, estimate and sampling distribution
 
-Version4, 2026-10-25. Printable route and original student/teacher transfer sheet: ../guide.html. Independent review matched the route to actual Teacher screenshots and source at7baa7fd. Updated for stage4 trace visibility repairs. This is a teacher script, not a real classroom trial or measured18-minute rehearsal. The hypothetical{1,2,9} skeleton is superseded; only the actual Aurora model is used.
+Version4.1, 2026-10-25. Printable route and original student/teacher transfer sheet: ../guide.html. Independent review matched the route to actual Teacher screenshots and source at7baa7fd. Updated for stage4 trace visibility repairs. This is a teacher script, not a real classroom trial or measured18-minute rehearsal. The hypothetical{1,2,9} skeleton is superseded; only the actual Aurora model is used.
 
 ## Preparation
 
@@ -83,6 +83,6 @@ Next lesson: nonnormal population versus approximate distribution of means, then
 
 ## Verification and stage4 synchronization
 
-The independent reviewer verified the sequence against all four Teacher-stage screenshots and source stage/seed/visibility behaviour at7baa7fd; did not conduct a new live18-minute rehearsal or physical projection trial. The separate actual browser review verified seeded values and hidden-output paths. At that pinned version mobile digits clipped and the stage3 trace link targeted a hidden panel. Stage4 developer regressions protect full card values and make the trace action reveal stage4 before focusing the saved point, preserving sample/R/seed. These three repairs were independently regressed successfully at dbe9351. The explicit Next-stage sequence above remains valid. The new printable guide and original transfer sheet await final browser/print verification.
+The independent reviewer verified the sequence against all four Teacher-stage screenshots and source stage/seed/visibility behaviour at7baa7fd; did not conduct a new live18-minute rehearsal or physical projection trial. The separate actual browser review verified seeded values and hidden-output paths. At that pinned version mobile digits clipped and the stage3 trace link targeted a hidden panel. Stage4 developer regressions protect full card values and make the trace action reveal stage4 before focusing the saved point, preserving sample/R/seed. These three repairs were independently regressed successfully at dbe9351. The explicit Next-stage sequence above remains valid. The printable guide and original transfer sheet passed developer browser/print checks; independent checks at the checkpoint6 PDF hashes found typography issues now source-corrected. Revised numbered PDFs require their own exact-hash print recheck.
 
 The first two on-page predictions concern a whole sample and what changes; n/spread follows two draws. The semantic chain distinguishes fixed target/rule/estimate/R. The online Field guide now contains a concise18-minute Teacher route without leaking seeded worked answers while concealment is active. No learner outcome, physical back-row readability, or real-phone test is claimed.

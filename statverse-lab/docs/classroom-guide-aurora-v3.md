@@ -1,3 +1,7 @@
+# SUPERSEDED — historical guide, not the current teaching script
+
+Use [the current printable guide](../guide.html) or [canonical Markdown](CLASSROOM-GUIDE.md). Historical repair-pending statements below describe their original checkpoint only.
+
 # 18-minute classroom demonstration — estimator, estimate and sampling distribution
 
 Version3, 2026-10-25. Independent review matched the route to actual Teacher screenshots and source at7baa7fd. Updated for stage4 trace visibility repairs. This is a teacher script, not a real classroom trial or measured18-minute rehearsal. The hypothetical{1,2,9} skeleton is superseded; only the actual Aurora model is used.

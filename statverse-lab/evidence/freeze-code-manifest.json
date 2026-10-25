@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-10-25T20:52:29.520767+00:00",
+  "version": "0.5.2",
+  "guide_version": "4.1",
+  "static_byte_closure": true,
+  "sha256": {
+    "src/app.js": "b67fa5ee6c1e114b7614e61f6052141b0f41cb832a53b33b4c95da8f4a4b3535",
+    "src/categorical-model.js": "de5f20859d154f912e9b8aa5b4ea48477e5d970020d869456a1d2376eb080003",
+    "src/chi-square-lab.js": "34ef10885ea43e5a296f2cf8d5e7e737b70d43a7d80ae9aeddca6876d584c9fd",
+    "src/correlation-tables.js": "54f6a94c6f85b36b577bc7907afd877e92bcc70de4386879a294c060af84dd3d",
+    "src/correlation.js": "b4f16d73360ad2936bf551409ab8e496b86b770f0ba13ae5291210c953bab71d",
+    "src/discrete-lab.js": "a635111ac38279ac21175619c31d799c7ab61f3415aa99ecb0f440d766ff65b5",
+    "src/inference.js": "27b351cb6194e6f7fc8e52b380e80f8e8cfd0399b1be7f47b19540227b1b3ebf",
+    "src/lab-ui.js": "311c1e537d829268d51259579628382682a7d7467c8f515c5c0d3d469f3a1a52",
+    "src/mean-lab.js": "33caf5b02fa8a66e42d5dfff59b6b1077917331c63a5b4c1609d5cdeabafbe6f",
+    "src/normal-combination-lab.js": "d70dbea8753add72e1984e85a8a77737406c654268c762d59112363cae4c11ed",
+    "src/sampling-design-lab.js": "32e44080f058dcbf472c9a089e996245c1aa2faa0ddc00c4e03b6a3d3f5f5459",
+    "src/sampling-design.js": "201bfb236e1c4b0448b2160624ff9dfca6da746194c79a0568df05abded3d102",
+    "src/statistics.js": "6092d6650165d4ea1cea496a4ded4dc4e723ec2c3a25c036f5c9a1f744d82968",
+    "src/visibility.js": "2b327d2ed48198cdf7502f750b5e9f58e6719b51cc03648a1f561b189035d107",
+    "index.html": "35df387646d13c8a82d3475dc806f29c832b2f476ae7e298babf407f9ce726a3",
+    "style.css": "75686ad2629c2b37f5be955e227fb6519bf245ad05c512188c6d96bd4e816675",
+    "guide.html": "f7853f3fd9c6eb217fa10b40190bb9dd054f76ad421e0aee1be041092a3315d8",
+    "scope.html": "c35327946057973f363ce69d070ee377f94bcfdbd019963639ba174caff40678",
+    "reading.css": "55e1aa54dee65b7abf716084ed9597a8330a1249d9296777270d88bbe0e42a77",
+    "favicon.svg": "062eef222ab038f095d8c117ac5916e19ae30b7af69777e4c432752af00f033d",
+    "start.py": "920972a149c638fd0f50e141e5a799fb6669e82073f4ec1d1e6e49a4ef280519"
+  }
+}

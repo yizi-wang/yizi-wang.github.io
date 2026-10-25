@@ -130,7 +130,9 @@ function exactOutcomes() {
 function isStandardized() {
   return state.lab === "clt" && state.standardized;
 }
+let artSerial = 0;
 function art(c) {
+  const glowId = `statverse-glow-${++artSerial}`;
   const paths = {
     leaf: "M22 43C5 31 10 15 35 8C44 30 36 43 22 43ZM18 38L34 14M24 28L15 23M28 23L36 24",
     wave: "M8 35Q15 18 22 31T40 24M8 25Q15 8 22 21T40 14M12 43Q25 30 37 39",
@@ -139,7 +141,7 @@ function art(c) {
       "M25 5C29 18 42 18 40 33C38 47 10 47 10 32C10 20 20 19 20 12C25 20 29 25 24 31C37 30 26 19 25 5Z",
     star: "M25 4L30 18L45 21L34 30L37 46L25 37L12 46L16 30L4 21L20 18ZM25 13V34M15 24H36",
   };
-  return `<svg class="card-art" viewBox="0 0 50 50" aria-hidden="true"><defs><radialGradient id="glow-${c.sigil}"><stop stop-color="currentColor" stop-opacity=".2"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient></defs><circle cx="25" cy="25" r="24" fill="url(#glow-${c.sigil})"/><circle cx="25" cy="25" r="21" fill="none" stroke="currentColor" opacity=".15" stroke-dasharray="2 4"/><path d="${paths[c.sigil]}" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  return `<svg class="card-art" viewBox="0 0 50 50" aria-hidden="true"><defs><radialGradient id="${glowId}"><stop stop-color="currentColor" stop-opacity=".2"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient></defs><circle cx="25" cy="25" r="24" fill="url(#${glowId})"/><circle cx="25" cy="25" r="21" fill="none" stroke="currentColor" opacity=".15" stroke-dasharray="2 4"/><path d="${paths[c.sigil]}" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 }
 function population() {
   const pool = POOLS[state.pool],
@@ -1037,6 +1039,14 @@ function animateSampleToPoint() {
   if (!a.width || !b.width) return;
   const ghost = source.cloneNode(true);
   ghost.removeAttribute("id");
+  ghost.querySelectorAll("radialGradient[id]").forEach((gradient) => {
+    const oldId = gradient.id;
+    gradient.id = oldId + "-flight";
+    gradient.closest("svg").querySelectorAll("[fill]").forEach((shape) => {
+      if (shape.getAttribute("fill") === `url(#${oldId})`)
+        shape.setAttribute("fill", `url(#${gradient.id})`);
+    });
+  });
   ghost.className = "sample-flight";
   ghost.setAttribute("aria-hidden", "true");
   ghost.inert = true;

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-25T20:05:54.749Z",
+  "timestamp": "2026-10-25T20:40:53.590Z",
   "baseUrl": "http://127.0.0.1:4174",
   "browser": "151.0.7922.173",
   "evidenceType": "Developer actual built-output Chromium regression, not independent review or real students",
@@ -7,102 +7,102 @@
     {
       "name": "S4-01 GOF null changes retain observed portal counts; distinct contexts and examples are explicit",
       "status": "PASS",
-      "ms": 1097
+      "ms": 1152
     },
     {
       "name": "fitted-plus-pooled GOF withholds unsupported calibration in either operation order",
       "status": "PASS",
-      "ms": 1301
+      "ms": 1288
     },
     {
       "name": "F default finite frame preserves twelve identities and no replacement within one sample",
       "status": "PASS",
-      "ms": 201
+      "ms": 167
     },
     {
       "name": "F seed reset and recalled point retain original IDs and values without consuming the next draw",
       "status": "PASS",
-      "ms": 302
+      "ms": 280
     },
     {
       "name": "F stratified n5 uses population weights, not rounded sample proportions",
       "status": "PASS",
-      "ms": 113
+      "ms": 122
     },
     {
       "name": "F missing stratum never becomes a zero or raw-mean target estimate",
       "status": "PASS",
-      "ms": 104
+      "ms": 106
     },
     {
       "name": "F systematic ordering changes exact variance while preserving units and design expectation",
       "status": "PASS",
-      "ms": 159
+      "ms": 164
     },
     {
       "name": "F quota is one explicit deterministic mechanism with error -10, +10 or zero, no probability SE",
       "status": "PASS",
-      "ms": 340
+      "ms": 369
     },
     {
       "name": "F accessibility ranks do not change probability selection at the same design seed",
       "status": "PASS",
-      "ms": 158
+      "ms": 159
     },
     {
       "name": "F census has every ID, estimate mu and exact zero design spread for the three probability designs",
       "status": "PASS",
-      "ms": 270
+      "ms": 272
     },
     {
       "name": "F empirical frequencies are separate from case dots and theoretical spread does not depend on R",
       "status": "PASS",
-      "ms": 497
+      "ms": 469
     },
     {
       "name": "F hidden truth and worked answers do not redraw or reseed the finite population",
       "status": "PASS",
-      "ms": 606
+      "ms": 619
     },
     {
       "name": "F batch pause/manual/resume respects1000 capacity and parameter changes cancel pending updates",
       "status": "PASS",
-      "ms": 3155
+      "ms": 3218
     },
     {
       "name": "F invalid n values do not leave old samples/estimates or a drawing action enabled",
       "status": "PASS",
-      "ms": 195
+      "ms": 277
     },
     {
       "name": "Normal combination default and sign flip match independent mean/variance oracle",
       "status": "PASS",
-      "ms": 169
+      "ms": 240
     },
     {
       "name": "Normal tool rejects undeclared conditions and repeated variable IDs; equal parameters with distinct IDs remain valid",
       "status": "PASS",
-      "ms": 332
+      "ms": 350
     },
     {
       "name": "Normal zero variance is a point mass, tiny positive variance stays Normal, invalid ranges clear output",
       "status": "PASS",
-      "ms": 152
+      "ms": 166
     },
     {
       "name": "Normal IDs are text, and worked hiding preserves parameters while concealing computed shape",
       "status": "PASS",
-      "ms": 286
+      "ms": 302
     },
     {
       "name": "nine-lab navigation, phone layouts and focused Teacher views retain the mathematical objects",
       "status": "PASS",
-      "ms": 2133
+      "ms": 2574
     },
     {
       "name": "F Teacher sample tracing reveals a correctly sized distribution without changing the selected units",
       "status": "PASS",
-      "ms": 561
+      "ms": 562
     },
     {
       "name": "no runtime errors or missing static source modules",

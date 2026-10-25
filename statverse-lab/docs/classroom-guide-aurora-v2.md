@@ -1,3 +1,7 @@
+# SUPERSEDED — historical guide, not the current teaching script
+
+Use [the current printable guide](../guide.html) or [canonical Markdown](CLASSROOM-GUIDE.md). Historical repair-pending statements below describe their original checkpoint only.
+
 > Historical v2. Superseded by classroom-guide-aurora-v3.md; do not use its obsolete chart-warning paragraph as current product guidance.
 
 # 18-minute classroom demonstration — estimator, estimate and sampling distribution

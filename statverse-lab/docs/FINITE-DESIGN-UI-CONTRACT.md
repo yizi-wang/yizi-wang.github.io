@@ -26,3 +26,7 @@ The bounded interface accepts coefficients magnitude≤20, means magnitude≤100
 ## Visibility, access and evidence
 
 Teacher focus and phone navigation use the same state. Worked concealment hides computed text/geometry/feedback without changing data; fixed-truth hiding is separate. Unit buttons and native numeric/sample selectors supply keyboard alternatives. Focus changes redraw responsive SVGs after visibility changes. Actual developer screenshots at390×844,1440×900,1920×1080 and21 built-output regression flows are in evidence/. Physical projection distance, physical phone, screen-reader speech and real student understanding are untested. New F UI independent approval remains pending.
+
+### Phone reading support
+
+On narrow views, stratum and comparison-method labels stay pinned while their own table scrolls. The short observed weighted sum uses actual population counts N_h/N and the selected saved sample's stratum means; displayed means may round, so the display uses approximation wording and never redefines the estimate. Missing strata produce an explicit unavailable message, not a substituted0. This is a display of the existing estimator, not a new estimation method or formula contract.

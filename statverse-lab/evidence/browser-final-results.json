@@ -1,47 +1,47 @@
 {
-  "timestamp": "2026-10-25T20:19:22.542Z",
+  "timestamp": "2026-10-25T20:50:34.020Z",
   "baseUrl": "http://127.0.0.1:4174",
   "evidenceType": "Developer actual built-output Chromium global/keyboard/print/offline checks. Not a WCAG certification, screen-reader speech trial, independent review or real student study.",
   "results": [
     {
       "name": "nine labs: visible control/image names, unique IDs and no whole-page overflow at four viewports",
       "status": "PASS",
-      "ms": 2077
+      "ms": 2215
     },
     {
       "name": "keyboard skip link focuses main; named modal Escape restores its opener; native lab switch changes current state",
       "status": "PASS",
-      "ms": 634
+      "ms": 440
     },
     {
       "name": "actual18-minute Teacher route preserves seed/sample, uses weighted exact cases and distinguishes n/R",
       "status": "PASS",
-      "ms": 1485
+      "ms": 1366
     },
     {
       "name": "reduced motion removes the compression ghost while original data/statistic stay available",
       "status": "PASS",
-      "ms": 261
+      "ms": 252
     },
     {
       "name": "printable guide has accessible teacher disclosure and correct distinct student/teacher PDFs",
       "status": "PASS",
-      "ms": 533
+      "ms": 516
     },
     {
       "name": "coverage page distinguishes bounded complete, partial, enrichment and absent content with official sources",
       "status": "PASS",
-      "ms": 329
+      "ms": 317
     },
     {
       "name": "Teacher finite-design method labels meet projection text target and remain keyboard controls",
       "status": "PASS",
-      "ms": 478
+      "ms": 488
     },
     {
       "name": "built local package requires no external font/assets/network for all nine labs and reading pages",
       "status": "PASS",
-      "ms": 15
+      "ms": 16
     }
   ],
   "scans": [
@@ -516,11 +516,12 @@
   ],
   "performanceEvidence": {
     "sampleMeanAdd200": {
-      "elapsedMs": 416,
+      "elapsedMs": 400,
       "n": 3,
       "R": 202,
       "longTaskDurationsMs": []
     },
+    "pdfExportMode": "temporary QA only; committed handout bytes preserved",
     "pdfPages": {
       "student": 2,
       "teacher": 6

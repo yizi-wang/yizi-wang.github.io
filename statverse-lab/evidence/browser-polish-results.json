@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-10-25T20:50:39.678Z",
+  "baseUrl": "http://127.0.0.1:4174",
+  "evidenceType": "Developer actual Chromium presentation/keyboard/state regression, not independent or student evidence",
+  "results": [
+    {
+      "name": "fitted pooling first layer is actionable, advanced reason is keyboard disclosure, all inference gates unchanged",
+      "status": "PASS",
+      "ms": 979
+    },
+    {
+      "name": "pooled then fitted and invalid inputs cannot retain an old advanced calibrated-looking result",
+      "status": "PASS",
+      "ms": 542
+    },
+    {
+      "name": "mobile stratified rows stay named after horizontal scroll and formula uses population fractions and recorded means",
+      "status": "PASS",
+      "ms": 457
+    },
+    {
+      "name": "comparison method labels stay visible while panning and native activation clears the old cohort",
+      "status": "PASS",
+      "ms": 96
+    },
+    {
+      "name": "missing strata, constant values, quota and fixed-truth hiding never invent a weighted target or new SE",
+      "status": "PASS",
+      "ms": 559
+    },
+    {
+      "name": "decorative SVG IDs remain unique with repeated cards and a live full-motion sample clone, while seed replay stays identical",
+      "status": "PASS",
+      "ms": 822
+    },
+    {
+      "name": "wide Teacher sample keeps the existing table/metric layout, and no JS runtime errors occur",
+      "status": "PASS",
+      "ms": 428
+    }
+  ],
+  "pageErrors": []
+}
