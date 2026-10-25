@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-10-25T22:06:54.106246+00:00",
+  "application_commit": "5f57ec2f690d98c4f8124ce047d5f19518ab313c",
+  "broad_review_baseline": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "source_dist_byte_closure": true,
+  "sha256": {
+    "src/app.js": "997017cbaa39aa91bd90de1a1913d3ec89bdd84239c5a585c616474684343178",
+    "src/categorical-model.js": "de5f20859d154f912e9b8aa5b4ea48477e5d970020d869456a1d2376eb080003",
+    "src/chi-square-lab.js": "34ef10885ea43e5a296f2cf8d5e7e737b70d43a7d80ae9aeddca6876d584c9fd",
+    "src/correlation-tables.js": "54f6a94c6f85b36b577bc7907afd877e92bcc70de4386879a294c060af84dd3d",
+    "src/correlation.js": "0a8d2dab36b26192cda52bfb2865d7169557d383a733e18df6dc7f57c2a653d7",
+    "src/discrete-lab.js": "a635111ac38279ac21175619c31d799c7ab61f3415aa99ecb0f440d766ff65b5",
+    "src/inference.js": "27b351cb6194e6f7fc8e52b380e80f8e8cfd0399b1be7f47b19540227b1b3ebf",
+    "src/lab-ui.js": "311c1e537d829268d51259579628382682a7d7467c8f515c5c0d3d469f3a1a52",
+    "src/mean-lab.js": "1931320f15602532502365b82a4866d59073f8b0740368aabbb3a2d5cd30406c",
+    "src/normal-combination-lab.js": "d70dbea8753add72e1984e85a8a77737406c654268c762d59112363cae4c11ed",
+    "src/sampling-design-lab.js": "98d903175d386a8b938dc4adfed2579d6540674c951a4852103084143bbf568f",
+    "src/sampling-design.js": "201bfb236e1c4b0448b2160624ff9dfca6da746194c79a0568df05abded3d102",
+    "src/statistics.js": "6092d6650165d4ea1cea496a4ded4dc4e723ec2c3a25c036f5c9a1f744d82968",
+    "src/visibility.js": "2b327d2ed48198cdf7502f750b5e9f58e6719b51cc03648a1f561b189035d107",
+    "index.html": "35df387646d13c8a82d3475dc806f29c832b2f476ae7e298babf407f9ce726a3",
+    "style.css": "75686ad2629c2b37f5be955e227fb6519bf245ad05c512188c6d96bd4e816675",
+    "guide.html": "f7853f3fd9c6eb217fa10b40190bb9dd054f76ad421e0aee1be041092a3315d8",
+    "scope.html": "c35327946057973f363ce69d070ee377f94bcfdbd019963639ba174caff40678",
+    "reading.css": "55e1aa54dee65b7abf716084ed9597a8330a1249d9296777270d88bbe0e42a77",
+    "favicon.svg": "062eef222ab038f095d8c117ac5916e19ae30b7af69777e4c432752af00f033d",
+    "start.py": "920972a149c638fd0f50e141e5a799fb6669e82073f4ec1d1e6e49a4ef280519"
+  },
+  "changed_assets": [
+    "src/app.js",
+    "src/correlation.js",
+    "src/mean-lab.js",
+    "src/sampling-design-lab.js"
+  ],
+  "change_contract": "Only five role attributes changed across four source files; all other bytes of those files were asserted unchanged before commit. Static D/Normal untouched.",
+  "canonical_pdf_sha256": {
+    "STATVERSE-18min-teacher-guide.pdf": "175840e57a199f72f8af7bece91167702818b1e643158e65ebdbb981a6fac2b6",
+    "STATVERSE-student-transfer.pdf": "98f5515c70cfd501e4245ef9872fddadb8d19c33c372177bfc64e3e8fef73e75"
+  },
+  "directed_independent_regression": "PASS; see FINAL-A11Y-DELTA-5f57ec2.md;18axe states/12AX states/10alternatives plus keyboard/hide/seed; not fullWCAG",
+  "final_wrapped_packages": [
+    {
+      "file": "/workspace/exports/STATVERSE-final-semantic-5f57ec2-source-and-static.zip",
+      "bytes": 14257663,
+      "sha256": "7de2ef8d6e5ad725a666f5db95801c58c614e41f11fe38990e8cffece4a55b0b",
+      "entries": 243
+    },
+    {
+      "file": "/workspace/exports/STATVERSE-final-semantic-5f57ec2-static.zip",
+      "bytes": 291949,
+      "sha256": "736d8f9d35b3227920be4c470dc3130a2371b9da2c6c06bf47653f69a7df30ba",
+      "entries": 29
+    }
+  ],
+  "release_notes_wrapper_only": true,
+  "site_version": 9,
+  "site_source": "4749751da202ee0ab5df333bab7c9ad55e2f300e",
+  "deployment": {
+    "id": "appgdep_6ade7f4aad58819191ae74b5806f90f5",
+    "status": "succeeded",
+    "updated_at": "2026-10-25T22:14:42.735277+00:00",
+    "version_id": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_110176e3551c8191aecc0cad951244ad"
+  },
+  "library_attempt": {
+    "action": "One ordered new5f57ec2 source/static/report batch through official helper",
+    "targets": [
+      "/workspace/exports/STATVERSE-final-semantic-5f57ec2-source-and-static.zip",
+      "/workspace/exports/STATVERSE-final-semantic-5f57ec2-static.zip",
+      "/workspace/exports/STATVERSE-final-5f57ec2-report.md"
+    ],
+    "attempts": 1,
+    "status": "BLOCKED; stopped",
+    "stage": "read-only hosted tools/list discovery",
+    "error": "library upload failed: hosted apps tools/list request failed: network",
+    "prepare": false,
+    "finalize": false,
+    "new_ids": [],
+    "uncertain_write": false,
+    "retry_or_alternate_library_route": false
+  },
+  "github_delivery": "Exact verified ZIPs committed under statverse-lab/releases on authorized separate code branch; not a production deployment.",
+  "pre_release_note_snapshot_checks": [
+    {
+      "file": "/workspace/exports/STATVERSE-final-semantic-5f57ec2-source-and-static.zip",
+      "manifestEntries": 241,
+      "allPass": true
+    },
+    {
+      "file": "/workspace/exports/STATVERSE-final-semantic-5f57ec2-static.zip",
+      "manifestEntries": 27,
+      "allPass": true
+    }
+  ],
+  "package_checks": [
+    {
+      "file": "STATVERSE-final-semantic-5f57ec2-source-and-static.zip",
+      "manifestEntries": 242,
+      "allPass": true,
+      "bytes": 14257663,
+      "sha256": "7de2ef8d6e5ad725a666f5db95801c58c614e41f11fe38990e8cffece4a55b0b"
+    },
+    {
+      "file": "STATVERSE-final-semantic-5f57ec2-static.zip",
+      "manifestEntries": 28,
+      "allPass": true,
+      "bytes": 291949,
+      "sha256": "736d8f9d35b3227920be4c470dc3130a2371b9da2c6c06bf47653f69a7df30ba"
+    }
+  ],
+  "latest_source_static_library_ids": [],
+  "latest_source_static_delivery": "GitHub development-branch releases directory, exact verified files; oldaccc8f9 Library ZIPs explicitly historical."
+}

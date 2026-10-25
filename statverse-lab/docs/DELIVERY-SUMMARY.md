@@ -1,17 +1,19 @@
-# STATVERSE — 交付摘要
+# STATVERSE — 最终交付摘要
 
-**冻结应用终验通过受测范围：** `accc8f9435ebfb6109568831704c1d34a350d5f7`（v0.5.2；课堂资料v4.1）。之后的文档/交付记录与应用版本分列，实际工作时间见开发日志，不宣称七小时连续编码。
+**最新应用：5f57ec2f690d98c4f8124ce047d5f19518ab313c。** 广泛数学/功能/内容/打印终验基线为accc8f9；其后仅四文件五个role属性的语义补丁，独立18状态定向回归通过，A11Y-01 P2关闭。数学、样式、可见文字、随机流和PDF均未改；不把定向回归扩写为全面WCAG认证。文档记录提交与应用SHA分列。
 
-**打开：** [私有实验室](https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site) · [18分钟课堂指南](https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site/guide.html) · [真实覆盖范围](https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site/scope.html)。可能需所有者登录；原主站、master、电子屏和站点权限未改。
+[私有实验室](https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site) · [18分钟指南](https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site/guide.html) · [覆盖范围](https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site/scope.html)。同一owner-private项目已更新版本9，22:14:42UTC部署成功，权限未扩大；原主站/master/电子屏未改。部署成功不冒称所有者登录实测。
 
-建议第一课只用旗舰：**三张原始卡→一个观察均值→一个可回溯样本点→重复抽样分布**。其余工作区衔接CLT/CI、相关性、均值z、离散检验、部分卡方、有限总体抽样与独立Normal组合，共九个实际可操作工作区。教师版PDF含答案，学生版六道原创迁移题无答案；18分钟是教学安排，非实测课堂时长。
+**先用一条精品路线：三张原始卡→一个观察均值→一个可回溯样本点→重复抽样分布。** 九个实际工作区另连接CLT/CI、相关性、均值z、离散检验、部分卡方、有限总体抽样及独立Normal组合。教师PDF含答案，学生PDF无答案；18分钟是教师安排，非实测课堂时长。
 
-**离线：** 解压静态包，在该目录运行 `python3 start.py`（部分系统用 `python start.py`），打开显示的本机地址。端口占用时加 `--port 4175`。无需npm安装、联网或账号；Python3仅用于附带本地服务器。不要直接双击HTML。所有卡牌、观测与单位均为虚构，无付费抽卡、学生记录或分析上传。
+**离线：** 完整解压静态包，运行`python3 start.py`（部分系统用`python start.py`），打开显示的本机HTTP地址；端口占用时加`--port 4175`。无需npm安装、联网或账号；Python3只用于附带服务器。不要直接双击HTML。观测和单位均虚构，无付费抽卡、学生记录或分析上传。
 
-**已核验：** 71个开发者数值/域测试组，以及多轮独立数学、内容、真实Chromium和打印验收。最终独立浏览器覆盖桌面/手机18流程、Teacher与手机Teacher各九工作区、隐藏/seed/取消、键盘/Escape、320px、原生200%缩放、实际Aurora与精确枚举路径；14模块实载、离线外部请求/失败/console/pageErrors均0。两项历史GOF P1已闭环，拟合+合并通过扣留不受支持的p/拒绝结论安全处理。受测范围无新增产品P0/P1/P2。
+**已核验：** 开发者71数值/域测试组；广泛独立dist验收覆盖桌面/手机18流程、Teacher与手机Teacher各九工作区、键盘/Escape/reduced motion/320px/原生200%缩放、实际Aurora及精确分页。14模块实载、离线外部尝试/失败请求/console/pageErrors均0。语义delta另有18状态axe、12状态原生AX、10原生替代控件、键盘、Teacher隐藏及同seed新旧完整records对照通过；数学引擎字节未变。
 
-独立审查者对阶段五`94d0b8d`的软件设计与证据评分为 **86.8/100**，不是数学正确率或学生成绩，后续补丁未预加分。最终补丁按上述应用SHA另行验收。
+两项历史GOF P1已闭环；拟合后合并通过扣留未获支持的p/拒绝结论安全处理，未冒称新增有效校准。阶段五94d0b8d的独立软件设计/证据评分仍为**86.8/100**，不是数学正确率或学生成绩，后续补丁不预加分。
 
-**边界：** 这是以S3为重点、连接S1/S2部分主题的实验室，不是完整考纲课程。范围矩阵明确完整窄交互、部分、拓展和未做；保留拟合+合并校准、部分GOF族/临界表、一般PDF/CDF/连续性修正等缺口。大R有长任务；未测真人学习效果、实体手机、后排投影、屏幕阅读器语音或全部浏览器。已知浮点及一个不影响理解的排版P3保留在限制清单。
+**范围：** 以S3为重点，非完整S1–S3课程；矩阵明确完整窄交互、部分、拓展及未做。保留部分GOF族/临界表、一般PDF/CDF/连续性修正及拟合+合并校准缺口。大R有长任务；辅助文字对比度、F标签名称次序/landmark等P3保留。未测真人学习效果、实体手机、后排投影、真实读屏或所有浏览器。已知浮点和一处印刷空格限制如实记录。
 
-**文件身份：** 最终文件选择见仓库`docs/DELIVERY-MANIFEST.md`及交付记录。Library教师/学生PDF与ZIP内canonical PDF字节不同，但独立核对全文、全部8页渲染像素及链接一致；两组实际哈希分别保留。独立终验3PNG/61图证据包的官方保存及一次授权重试均在只读工具发现阶段网络失败，未生成Library ID；报告已入源码，已上传的开发者截图合集可交付，来源不混同。
+**文件版本：** 新源码/静态包COMMIT为5f57ec2，RELEASE-NOTES记录本次签注；随代码快照保留的旧accc8f9文档是广泛终验基线，不代表本次role补丁未做。最新文件身份以[交付索引](https://github.com/yizi-wang/yizi-wang.github.io/blob/statverse-lab-20261025/statverse-lab/docs/DELIVERY-MANIFEST.md)为准。旧accc8f9 Library源码/静态包只作历史，不冒充最新版。
+
+PDF沿用已验v4.1：教师libfile_91661210f8f0819189eb8167a12c8bc4，学生libfile_aad2f305b7408191b45956638fbfb433；不重导。Library与ZIP canonical PDF字节不同，但全文、全部8页渲染像素和链接独立核对一致，两组哈希分列。开发者截图合集libfile_1546b99f0f08819196c5eacbf482a4a8沿用原冻结视觉，不称新抓图或独立图。独立61图包因官方工具发现network失败未入库，报告已保存。

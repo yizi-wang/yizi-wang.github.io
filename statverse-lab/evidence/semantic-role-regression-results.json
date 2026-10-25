@@ -1,0 +1,285 @@
+{
+  "applicationCommit": "5f57ec2f690d98c4f8124ce047d5f19518ab313c",
+  "baseline": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "timestamp": "2026-10-25T22:11:06.202Z",
+  "evidenceType": "Developer actual Chromium old/new role/name/keyboard/Teacher-hide checks; independent axe recheck remains separate.",
+  "checks": [
+    {
+      "width": 1440,
+      "lab": "sampling",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "lab": "coverage",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "lab": "correlation",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "lab": "design",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "lab": "sampling",
+      "version": "new",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "lab": "coverage",
+      "version": "new",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "lab": "correlation",
+      "version": "new",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "lab": "design",
+      "version": "new",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "sampling",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "coverage",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "correlation",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "design",
+      "version": "old",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "sampling",
+      "version": "new",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "coverage",
+      "version": "new",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "correlation",
+      "version": "new",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "lab": "design",
+      "version": "new",
+      "status": "PASS"
+    }
+  ],
+  "screens": [
+    {
+      "width": 1440,
+      "lab": "sampling",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-sampling-old.png"
+    },
+    {
+      "width": 1440,
+      "lab": "coverage",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-coverage-old.png"
+    },
+    {
+      "width": 1440,
+      "lab": "correlation",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-correlation-old.png"
+    },
+    {
+      "width": 1440,
+      "lab": "design",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-design-old.png"
+    },
+    {
+      "width": 1440,
+      "lab": "sampling",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-sampling-new.png"
+    },
+    {
+      "width": 1440,
+      "lab": "coverage",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-coverage-new.png"
+    },
+    {
+      "width": 1440,
+      "lab": "correlation",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-correlation-new.png"
+    },
+    {
+      "width": 1440,
+      "lab": "design",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/1440-design-new.png"
+    },
+    {
+      "width": 390,
+      "lab": "sampling",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/390-sampling-old.png"
+    },
+    {
+      "width": 390,
+      "lab": "coverage",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/390-coverage-old.png"
+    },
+    {
+      "width": 390,
+      "lab": "correlation",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/390-correlation-old.png"
+    },
+    {
+      "width": 390,
+      "lab": "design",
+      "version": "old",
+      "file": "/tmp/statverse-semantic-pixel-check/390-design-old.png"
+    },
+    {
+      "width": 390,
+      "lab": "sampling",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/390-sampling-new.png"
+    },
+    {
+      "width": 390,
+      "lab": "coverage",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/390-coverage-new.png"
+    },
+    {
+      "width": 390,
+      "lab": "correlation",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/390-correlation-new.png"
+    },
+    {
+      "width": 390,
+      "lab": "design",
+      "version": "new",
+      "file": "/tmp/statverse-semantic-pixel-check/390-design-new.png"
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "pixel_comparison": [
+    {
+      "width": 1440,
+      "lab": "sampling",
+      "pixel_equal": true,
+      "difference_bbox": null
+    },
+    {
+      "width": 1440,
+      "lab": "coverage",
+      "pixel_equal": true,
+      "difference_bbox": null
+    },
+    {
+      "width": 1440,
+      "lab": "correlation",
+      "pixel_equal": true,
+      "difference_bbox": null
+    },
+    {
+      "width": 1440,
+      "lab": "design",
+      "pixel_equal": false,
+      "difference_bbox": [
+        412,
+        138,
+        413,
+        139
+      ]
+    },
+    {
+      "width": 390,
+      "lab": "sampling",
+      "pixel_equal": true,
+      "difference_bbox": null
+    },
+    {
+      "width": 390,
+      "lab": "coverage",
+      "pixel_equal": true,
+      "difference_bbox": null
+    },
+    {
+      "width": 390,
+      "lab": "correlation",
+      "pixel_equal": true,
+      "difference_bbox": null
+    },
+    {
+      "width": 390,
+      "lab": "design",
+      "pixel_equal": true,
+      "difference_bbox": null
+    }
+  ],
+  "all8_old_new_pairs_pixel_equal": false,
+  "strict_pixel_equality_diagnostic": {
+    "status": "7 of8 exact; strict equality assertion failed for desktop F",
+    "differing_pixels": [
+      {
+        "x": 412,
+        "y": 138,
+        "old": [
+          40,
+          51,
+          70
+        ],
+        "new": [
+          41,
+          51,
+          70
+        ],
+        "delta": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "interpretation": "No cause inferred, no app change or recapture used to erase this result. One RGB-level pixel difference does not establish a layout/content change; absolute raster equality is not claimed."
+  }
+}
