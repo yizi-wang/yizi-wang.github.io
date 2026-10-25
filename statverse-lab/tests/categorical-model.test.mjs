@@ -55,7 +55,7 @@ test("uniform and specified GOF independent numeric oracles and probability vali
     RangeError,
   );
 });
-test("fitting Binomial p uses original counts and subtracts one df after pooling", () => {
+test("raw-count Binomial fit plus pooling retains description but withholds unsupported calibration", () => {
   const o = [12, 38, 36, 14],
     g = identityGroups(4),
     a = evaluateGOF(o, { model: "binomial3", fit: true, groups: g }),
@@ -68,6 +68,13 @@ test("fitting Binomial p uses original counts and subtracts one df after pooling
   near(b.parameter, a.parameter);
   assert.equal(a.df, 2);
   assert.equal(b.df, 1);
+  assert.equal(b.referenceDf, null);
+  assert.equal(b.referenceDistributionSupported, false);
+  assert.equal(b.status, "unsupported-fitted-pooling-calibration");
+  assert.equal(b.approximationAppropriate, false);
+  assert.equal(b.pValue, null);
+  assert.equal(b.reject, null);
+  assert.equal(b.asymptoticPValue, null);
   near(
     a.expected.reduce((s, x) => s + x, 0),
     100,
@@ -136,6 +143,44 @@ test("original invalid counts or probabilities cannot be concealed by pooling", 
   );
   assert.throws(
     () => evaluateGOF([1, 2, 3, 4], { groups: [[0, 1], [1], [3]] }),
+    RangeError,
+  );
+});
+
+test("independent fitted-pooling P1 oracle is withheld, unpool and fixed p recover supported routes", () => {
+  const o = [7263, 2491, 238, 8],
+    g = identityGroups(4),
+    pooled = mergeAdjacent(g, 0),
+    a = evaluateGOF(o, { model: "binomial3", fit: true, groups: pooled });
+  near(a.parameter, 0.0997, 1e-12);
+  near(a.statistic, 3.9346774144922705, 1e-10);
+  assert.equal(a.pValue, null);
+  assert.equal(a.reject, null);
+  assert.equal(a.referenceDf, null);
+  assert.equal(a.approximationAppropriate, false);
+  const b = evaluateGOF(o, { model: "binomial3", fit: true, groups: g });
+  assert.equal(b.df, 2);
+  near(b.pValue, 0.0544302, 1e-7);
+  assert.equal(b.reject, false);
+  const c = evaluateGOF(o, {
+    model: "binomial3",
+    p: 0.1,
+    fit: false,
+    groups: pooled,
+  });
+  assert.equal(c.df, 2);
+  assert.equal(c.referenceDistributionSupported, true);
+  assert.ok(c.pValue !== null);
+  assert.throws(
+    () =>
+      evaluateGOF(o, {
+        model: "binomial3",
+        fit: true,
+        groups: [
+          [0, 1],
+          [2, 3],
+        ],
+      }),
     RangeError,
   );
 });

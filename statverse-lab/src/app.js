@@ -20,6 +20,8 @@ import {
 import { createMeanLab } from "./mean-lab.js";
 import { createDiscreteLab } from "./discrete-lab.js";
 import { createChiSquareLab } from "./chi-square-lab.js";
+import { createSamplingDesignLab } from "./sampling-design-lab.js";
+import { createNormalCombinationLab } from "./normal-combination-lab.js";
 import { createCorrelationLab } from "./correlation.js";
 const correlationLab = createCorrelationLab(
   document.querySelector("#correlation-workspace"),
@@ -31,11 +33,19 @@ const discreteLab = createDiscreteLab(
 const chiSquareLab = createChiSquareLab(
   document.querySelector("#chisquare-workspace"),
 );
+const samplingDesignLab = createSamplingDesignLab(
+  document.querySelector("#design-workspace"),
+);
+const normalCombinationLab = createNormalCombinationLab(
+  document.querySelector("#normal-workspace"),
+);
 const externalLabs = {
   correlation: correlationLab,
   mean: meanLab,
   discrete: discreteLab,
   chisquare: chiSquareLab,
+  design: samplingDesignLab,
+  normal: normalCombinationLab,
 };
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
@@ -882,6 +892,18 @@ $$("[data-lab]").forEach((b) =>
         "把观测放进零假设分布，再比较重复拒绝率。Exact integer tails; transparent generating truth.",
         "S2 · HYPOTHESES & CRITICAL REGIONS",
       ],
+      design: [
+        "Finite sampling designs",
+        "Same units. <em>Different ways to choose.</em>",
+        "同一虚构有限总体，比较无放回机制。Identity, population weights and design variability.",
+        "S3 · SAMPLING METHODS",
+      ],
+      normal: [
+        "Independent Normal combinations",
+        "Signs move means. <em>Squares set variance.</em>",
+        "独立与正态是模型条件。Compare aX+bY+c before and after a sign flip.",
+        "S3 · INDEPENDENT NORMAL COMBINATIONS",
+      ],
       chisquare: [
         "Chi-square laboratory",
         "Edit the counts. <em>Reveal the model.</em>",
@@ -909,6 +931,8 @@ $$("[data-lab]").forEach((b) =>
       mean: "05",
       discrete: "06",
       chisquare: "07",
+      design: "08",
+      normal: "09",
     }[lab];
     if ($("#experiment-number"))
       $("#experiment-number").textContent = "EXPERIMENT " + labNumber;
@@ -921,6 +945,8 @@ $$("[data-lab]").forEach((b) =>
       mean: "THE INFERENCE LAB",
       discrete: "THE DECISION LAB",
       chisquare: "THE CATEGORY LAB",
+      design: "THE FINITE FRAME LAB",
+      normal: "THE COMBINATION LAB",
     }[lab];
     $("#crumb").textContent = meta[0];
     $("#lab-title").innerHTML = meta[1];
@@ -985,6 +1011,8 @@ window.STATVERSE = {
     meanInference: meanLab.getSnapshot(),
     discrete: discreteLab.getSnapshot(),
     chiSquare: chiSquareLab.getSnapshot(),
+    samplingDesign: samplingDesignLab.getSnapshot(),
+    normalCombination: normalCombinationLab.getSnapshot(),
   }),
 };
 population();
@@ -1140,18 +1168,23 @@ function applyTeacherStage() {
       "Does more repetition reduce the SE of the next sample mean? Explain using the model.",
   };
   $("#teacher-question").textContent =
-    state.lab === "discrete"
-      ? "Choose H₁ and α before the observation. Use Projection focus for the null distribution or repeated decisions."
-      : state.lab === "chisquare"
-        ? "Predict expected counts; inspect contributions and meaningful pooling. Projection focus keeps the current task together."
-        : state.lab === "mean"
-          ? "State independence, variance knowledge and the alternative before revealing the null tails."
-          : state.lab === "correlation"
-            ? "Drag one point, then compare the change in Pearson r with the change in ranks."
-            : prompts[stage];
+    state.lab === "design"
+      ? "Keep unit identities fixed. Compare the sampling mechanisms, population weights and known finite-design spread."
+      : state.lab === "normal"
+        ? "Declare Normality and independence. Flip a coefficient sign; compare the mean and squared-coefficient variance."
+        : state.lab === "discrete"
+          ? "Choose H₁ and α before the observation. Use Projection focus for the null distribution or repeated decisions."
+          : state.lab === "chisquare"
+            ? "Predict expected counts; inspect contributions and meaningful pooling. Projection focus keeps the current task together."
+            : state.lab === "mean"
+              ? "State independence, variance knowledge and the alternative before revealing the null tails."
+              : state.lab === "correlation"
+                ? "Drag one point, then compare the change in Pearson r with the change in ranks."
+                : prompts[stage];
   $("#teacher-stage").disabled = Boolean(externalLabs[state.lab]);
   $("#teacher-next").disabled = Boolean(externalLabs[state.lab]);
-  if (externalLabs[state.lab]) $("#teacher-pause").disabled = false;
+  if (externalLabs[state.lab])
+    $("#teacher-pause").disabled = state.lab === "normal";
   document.body.classList.toggle(
     "answers-hidden",
     teacher && state.answersHidden,

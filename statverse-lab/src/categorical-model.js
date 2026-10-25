@@ -101,13 +101,31 @@ export function evaluateGOF(
     );
   const grouped = aggregateCounts(observed, groups),
     groupedProbabilities = aggregateCounts(probs, groups);
+  const result = goodnessOfFit({
+    observed: grouped,
+    probabilities: groupedProbabilities,
+    fittedParameters,
+    alpha,
+  });
+  // A parameter fitted from the finer original counts does not generally give
+  // chi-square(k'-1-q) after pooling those counts. Do not certify that law.
+  const unsupportedFitPooling =
+    model === "binomial3" && fit && groups.some((g) => g.length > 1);
   return {
-    ...goodnessOfFit({
-      observed: grouped,
-      probabilities: groupedProbabilities,
-      fittedParameters,
-      alpha,
-    }),
+    ...result,
+    referenceDistributionSupported: !unsupportedFitPooling,
+    referenceDf: unsupportedFitPooling ? null : result.df,
+    ...(unsupportedFitPooling
+      ? {
+          status: "unsupported-fitted-pooling-calibration",
+          approximationAppropriate: false,
+          pValue: null,
+          reject: null,
+          asymptoticPValue: null,
+          calibrationReason:
+            "p is fitted from the original four classes, then the statistic is pooled. This workflow has no supported standard chi-square calibration here.",
+        }
+      : {}),
     grouped,
     probabilities: groupedProbabilities,
     originalProbabilities: probs,

@@ -3171,3 +3171,425 @@ dialog > a {
 .result-metrics b {
   overflow-wrap: anywhere;
 }
+
+/* Finite-frame identities and independent Normal composition. */
+#design-workspace > .panel,
+#normal-workspace > .panel {
+  margin: 24px 0;
+}
+.finite-context {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  padding: 16px 20px;
+  margin: 18px 0;
+  background: #1b2d3f;
+  border: 1px solid #3b566f;
+  border-radius: 7px;
+}
+.finite-context > span {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #b2c7dc;
+}
+.finite-context b {
+  display: block;
+  color: var(--mint);
+  font-size: 20px;
+  line-height: 1.6;
+}
+.finite-context > span:nth-child(3) {
+  flex: 1;
+  min-width: 220px;
+}
+.finite-context > span:nth-child(3) b {
+  font-size: 13px;
+  color: var(--violet);
+}
+.finite-frame {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+.finite-unit {
+  min-height: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 6px;
+  background: #152235;
+  border: 1px solid color-mix(in srgb, var(--unit-color) 40%, #22344b);
+  border-radius: 7px;
+  text-align: center;
+  color: #c5d4e4;
+  position: relative;
+}
+.finite-unit > span {
+  font-size: 10px;
+}
+.finite-unit b {
+  font-size: 25px;
+  color: var(--unit-color);
+}
+.finite-unit small {
+  font-size: 9px;
+  color: var(--unit-color);
+}
+.finite-unit em {
+  font-style: normal;
+  font-size: 8px;
+  color: #7790aa;
+}
+.finite-unit.included {
+  background: #1f403b;
+  border-color: #9eebc6;
+}
+.finite-unit.included em {
+  color: #aaf4ce;
+}
+.finite-unit.inspected {
+  outline: 2px solid #e8d1a0;
+  outline-offset: 2px;
+}
+#design-workspace table,
+#normal-workspace table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#design-workspace caption,
+#normal-workspace caption {
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #a6bdd4;
+  padding: 10px 0;
+}
+#design-workspace th,
+#design-workspace td,
+#normal-workspace th,
+#normal-workspace td {
+  padding: 11px 10px;
+  text-align: left;
+  line-height: 1.7;
+  border-bottom: 1px solid #2b4057;
+  font-size: 12px;
+  color: #becfe0;
+}
+#design-workspace th,
+#normal-workspace th {
+  font-weight: 500;
+}
+#design-workspace .table-scroll,
+#normal-workspace .table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.current-design {
+  background: #25413c77;
+}
+#design-algebra {
+  margin: 20px 0 0;
+  padding-top: 15px;
+  border-top: 1px solid #31495f;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #abc3da;
+}
+#design-algebra summary {
+  cursor: pointer;
+  color: var(--mint);
+}
+#design-case {
+  width: 90px;
+}
+#design-weights table {
+  min-width: 660px;
+}
+#design-trace {
+  margin-top: 12px;
+}
+.finite-chart svg,
+.normal-combination-chart svg {
+  width: 100%;
+  display: block;
+}
+.normal-input-table input {
+  width: 120px;
+  min-width: 80px;
+  background: #1b2c40;
+  border: 1px solid #3a526b;
+  color: #e2edf6;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+}
+#normal-contributions table {
+  margin: 15px 0;
+}
+.variance-components {
+  height: 14px;
+  display: flex;
+  background: #253649;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 18px 0;
+}
+.variance-components span {
+  display: block;
+  height: 14px;
+}
+.variance-components:has(p) {
+  height: auto;
+  background: transparent;
+}
+.variance-components p {
+  font-size: 12px;
+  margin: 0;
+  color: #c9d7e5;
+}
+.teacher[data-current-lab="design"] .intro,
+.teacher[data-current-lab="normal"] .intro {
+  display: none;
+}
+.teacher .finite-context > span {
+  font-size: 14px;
+}
+.teacher .finite-context b {
+  font-size: 25px;
+}
+.teacher .finite-context > span:nth-child(3) b {
+  font-size: 17px;
+}
+.teacher .finite-unit {
+  min-height: 112px;
+}
+.teacher .finite-unit > span {
+  font-size: 13px;
+}
+.teacher .finite-unit b {
+  font-size: 30px;
+}
+.teacher .finite-unit small {
+  font-size: 12px;
+}
+.teacher .finite-unit em {
+  font-size: 10px;
+}
+.teacher #design-workspace .method-note,
+.teacher #normal-workspace .method-note {
+  font-size: 16px;
+}
+.teacher #design-workspace th,
+.teacher #design-workspace td,
+.teacher #normal-workspace th,
+.teacher #normal-workspace td {
+  font-size: 16px;
+}
+.teacher
+  #design-workspace[data-view="model"]
+  > [data-design-stage]:not([data-design-stage="model"]),
+.teacher
+  #design-workspace[data-view="frame"]
+  > [data-design-stage]:not([data-design-stage="frame"]),
+.teacher
+  #design-workspace[data-view="sample"]
+  > [data-design-stage]:not([data-design-stage="sample"]):not(
+    [data-design-stage="frame"]
+  ),
+.teacher
+  #design-workspace[data-view="distribution"]
+  > [data-design-stage]:not([data-design-stage="distribution"]),
+.teacher
+  #design-workspace[data-view="compare"]
+  > [data-design-stage]:not([data-design-stage="compare"]),
+.teacher
+  #normal-workspace[data-view="model"]
+  > [data-normal-stage]:not([data-normal-stage="model"]),
+.teacher
+  #normal-workspace[data-view="result"]
+  > [data-normal-stage]:not([data-normal-stage="result"]) {
+  display: none;
+}
+.teacher #design-workspace[data-view="sample"] {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 16px;
+}
+.teacher #design-workspace[data-view="sample"] > .projection-select,
+.teacher #design-workspace[data-view="sample"] > .finite-context {
+  grid-column: 1/-1;
+  margin: 8px 0;
+}
+.teacher #design-workspace[data-view="sample"] .finite-frame {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.teacher #design-workspace[data-view="sample"] > .panel {
+  margin: 0;
+  padding: 20px;
+}
+.teacher #normal-workspace[data-view="result"] > .panel {
+  margin: 14px 0;
+  padding: 20px;
+}
+.teacher #normal-workspace[data-view="result"] .normal-combination-chart {
+  max-width: 900px;
+  margin: auto;
+}
+@media (max-width: 900px) {
+  .finite-frame {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .normal-input-table input {
+    width: 95px;
+  }
+}
+@media (max-width: 640px) {
+  .finite-frame {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .finite-unit {
+    min-height: 95px;
+    padding: 8px 4px;
+  }
+  .finite-unit b {
+    font-size: 22px;
+  }
+  .finite-unit > span {
+    font-size: 9px;
+  }
+  .finite-unit small {
+    font-size: 9px;
+  }
+  .finite-context {
+    padding: 12px;
+    gap: 12px;
+  }
+  .finite-context > span {
+    font-size: 8px;
+  }
+  .finite-context b {
+    font-size: 17px;
+  }
+  .finite-context > span:nth-child(3) {
+    min-width: 100%;
+  }
+  .finite-context > span:nth-child(3) b {
+    font-size: 11px;
+  }
+  #design-workspace th,
+  #design-workspace td,
+  #normal-workspace th,
+  #normal-workspace td {
+    padding: 8px;
+    font-size: 11px;
+  }
+  .normal-input-table input {
+    width: 82px;
+    font-size: 12px;
+    padding: 8px;
+  }
+  .teacher #design-workspace[data-view="sample"] {
+    display: block;
+  }
+  .teacher #design-workspace[data-view="sample"] .finite-frame {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  #design-workspace .section-heading,
+  #normal-workspace .section-heading {
+    flex-wrap: wrap;
+  }
+  #design-workspace .section-heading .badge,
+  #normal-workspace .section-heading .badge {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+.teacher .finite-chart text,
+.teacher .normal-combination-chart text {
+  font-size: 14px;
+}
+.teacher #design-workspace[data-view="sample"] {
+  gap: 12px;
+}
+.teacher #design-workspace[data-view="sample"] > .projection-select {
+  padding: 10px 18px;
+  margin: 6px 0;
+}
+.teacher #design-workspace[data-view="sample"] > .finite-context {
+  padding: 12px 16px;
+  margin: 6px 0;
+}
+.teacher #design-workspace[data-view="sample"] > .panel {
+  padding: 16px;
+}
+.teacher #design-workspace[data-view="sample"] .finite-unit b {
+  line-height: 1.2;
+}
+.teacher
+  #design-workspace[data-view="sample"]
+  [data-design-stage="frame"]
+  .method-note {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.teacher #design-workspace[data-view="sample"] #design-weights td,
+.teacher #design-workspace[data-view="sample"] #design-weights th {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.teacher #design-workspace[data-view="sample"] .case-inspector {
+  margin-top: 12px;
+  padding-top: 10px;
+}
+.teacher #normal-workspace[data-view="result"] #normal-output {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "metrics metrics" "contributions chart" "variance chart" "distribution distribution" "comparison comparison";
+  gap: 12px 20px;
+  align-items: start;
+}
+.teacher
+  #normal-workspace[data-view="result"]
+  #normal-output
+  > .result-metrics {
+  grid-area: metrics;
+}
+.teacher #normal-workspace[data-view="result"] #normal-contributions {
+  grid-area: contributions;
+}
+.teacher #normal-workspace[data-view="result"] #normal-variance-bar {
+  grid-area: variance;
+  margin: 8px 0;
+}
+.teacher #normal-workspace[data-view="result"] #normal-chart {
+  grid-area: chart;
+  width: 100%;
+}
+.teacher #normal-workspace[data-view="result"] #normal-distribution {
+  grid-area: distribution;
+}
+.teacher #normal-workspace[data-view="result"] #normal-comparison {
+  grid-area: comparison;
+}
+.teacher #normal-workspace[data-view="result"] #normal-contributions table {
+  margin: 8px 0;
+}
+.teacher #normal-workspace[data-view="result"] #normal-output > .method-note {
+  margin: 8px 0;
+}
+@media (max-width: 900px) {
+  .teacher #normal-workspace[data-view="result"] #normal-output {
+    display: block;
+  }
+}
+.teacher #design-workspace[data-view="sample"] #design-algebra {
+  display: none;
+}

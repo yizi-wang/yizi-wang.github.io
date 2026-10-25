@@ -75,6 +75,9 @@ export function createChiSquareLab(root) {
     prediction: null,
     transfer: null,
     lastShuffle: null,
+    datasetKey: null,
+    datasets: {},
+    specifiedProbabilities: ["0.1", "0.2", "0.3", "0.4"],
   };
   root.innerHTML = `<section class="prediction"><div class="prediction-icon">?</div><div><span class="eyebrow">PREDICT → EXPECTED IS A MODEL</span><p id="chi-predict-question">If group sizes differ, must independence mean equal expected counts in every cell?</p></div><div class="prediction-options"><button data-chi-predict="yes">Yes, every cell equal</button><button data-chi-predict="no">No, margins matter</button></div><p id="chi-predict-feedback" role="status"></p></section>
  <section class="panel"><div class="section-heading"><div><span class="step-number">01</span><h2>Edit the observed counts <small>观察频数</small></h2></div><span class="badge">S3 · PEARSON χ² · NO YATES</span></div><div class="inference-controls"><label>Question<select id="chi-mode"><option value="contingency">Association · contingency table</option><option value="gof">Fit · one specified distribution</option></select></label><label id="chi-preset-field">Synthetic population story<select id="chi-preset">${Object.entries(
@@ -83,7 +86,7 @@ export function createChiSquareLab(root) {
    .map(([k, p]) => `<option value="${k}">${p.name}</option>`)
    .join(
      "",
-   )}</select></label><label id="chi-model-field" class="hidden">GOF null model<select id="chi-model"><option value="uniform">Four equally likely portals</option><option value="specified">Four specified probabilities</option><option value="binomial3">Number of wins · Binomial(3,p)</option></select></label><label>Nominal α<select id="chi-alpha"><option value="0.1">10%</option><option value="0.05" selected>5%</option><option value="0.01">1%</option></select></label><label id="chi-p-field" class="hidden">Specified p<input id="chi-p" type="number" min="0" max="1" step="any" value="0.5"></label><label id="chi-fit-field" class="model-confirm hidden"><input id="chi-fit" type="checkbox"> Estimate Binomial p from these same counts (q=1)</label></div><p id="chi-null" class="mean-hypotheses"></p><p class="method-note">Synthetic independent observations, one mutually exclusive category per observation. Edit counts directly; expected counts and contributions update from the same data snapshot. No automatic category merging.</p><div id="chi-inputs" class="table-scroll"></div><p id="chi-error" class="input-error" role="alert"></p><button id="chi-reveal" class="primary">Reveal expected counts & contributions →</button> <button id="chi-double" class="secondary">×2 counts · same proportions</button></section>
+   )}</select></label><label id="chi-model-field" class="hidden">GOF null model<select id="chi-model"><option value="uniform">Four equally likely portals</option><option value="specified">Four specified probabilities</option><option value="binomial3">Number of wins · Binomial(3,p)</option></select></label><label>Nominal α<select id="chi-alpha"><option value="0.1">10%</option><option value="0.05" selected>5%</option><option value="0.01">1%</option></select></label><label id="chi-p-field" class="hidden">Externally specified p (q=0)<input id="chi-p" type="number" min="0" max="1" step="any" value="0.5"></label><label id="chi-fit-field" class="model-confirm hidden"><input id="chi-fit" type="checkbox"> Estimate Binomial p from these same counts (q=1)</label></div><p id="chi-null" class="mean-hypotheses"></p><p class="method-note">Synthetic independent observations, one mutually exclusive category per observation. Edit counts directly; expected counts and contributions update from the same data snapshot. No automatic category merging.</p><p id="chi-data-note" class="method-note" role="status"></p><div id="chi-inputs" class="table-scroll"></div><p id="chi-error" class="input-error" role="alert"></p><button id="chi-reveal" class="primary">Reveal expected counts & contributions →</button> <button id="chi-double" class="secondary">×2 counts · same proportions</button> <button id="chi-load-example" class="text-button">Load example counts</button></section>
  <section class="panel"><div class="section-heading"><div><span class="step-number">02</span><h2 id="chi-result-title">Observed → expected → contribution</h2></div></div><div id="chi-before" class="method-note">Predict expected counts before revealing. Under independence Eᵢⱼ = row total × column total / N. A large contribution means a large squared discrepancy relative to E.</div><div id="chi-output" class="answer-output hidden"><div id="chi-metrics" class="result-metrics"></div><div id="chi-expected" class="table-scroll"></div><p id="chi-decision" class="decision-box"></p><p id="chi-df" class="method-note"></p></div><p id="chi-validity" class="validity-note" role="status"></p></section>
  <section class="panel"><div class="section-heading"><div><span class="step-number">03</span><h2>Pool only meaningful categories <small>有意义合并</small></h2></div></div><p class="method-note">Combine adjacent whole categories only when the new label makes sense in the story. The same groups are used for O and E; original counts remain editable. Choosing a merger is a modelling decision, not a way to chase significance.</p><div class="inference-controls"><label id="chi-axis-field">Whole-category axis<select id="chi-axis"><option value="columns">Columns</option><option value="rows">Rows</option></select></label><label>Adjacent categories<select id="chi-merge-choice"></select></label><label><input id="chi-merge-confirm" type="checkbox"> This combined category has a defensible meaning</label><button id="chi-merge" class="secondary">Merge selected whole groups</button><button id="chi-unpool" class="text-button">Restore original categories</button></div><p id="chi-groups" class="method-note"></p><p id="chi-merge-note" role="status" class="method-note"></p></section>
  <section id="chi-permutation-panel" class="panel"><div class="section-heading"><div><span class="step-number">04</span><h2>Shuffle pairings, keep margins <small>条件置换</small></h2></div><span class="badge">CONDITIONAL RANDOMIZATION · ENRICHMENT</span></div><p class="method-note">Shuffle column labels among the existing row positions. Both margins stay fixed. This Monte Carlo null is conditional on the margins; it is separate from the asymptotic χ² reference. It can explore sparse tables without pretending the low-E asymptotic test is valid.</p><div class="inference-controls"><label>Seed<input id="chi-seed" value="labels-2026" maxlength="64"></label><button id="chi-shuffle" class="secondary">Shuffle once</button><button id="chi-run" class="secondary">Run +200 shuffles</button><button id="chi-pause" class="secondary" disabled>Pause</button><button id="chi-reset" class="text-button">Reset shuffles</button></div><p id="chi-permutation-result" class="answer-output" role="status"></p><div id="chi-shuffle-table" class="table-scroll"></div><p id="chi-permutation-limit" class="method-note"></p></section>
@@ -148,29 +151,46 @@ export function createChiSquareLab(root) {
         };
   }
   const groupName = (g, names) => g.map((i) => names[i]).join(" + ");
+  function saveCurrentInputs() {
+    if (state.datasetKey) {
+      const counts = $$("[data-chi-count]");
+      if (counts.length)
+        state.datasets[state.datasetKey] = counts.map((e) => e.value);
+    }
+    const probs = $$("[data-chi-prob]");
+    if (probs.length) state.specifiedProbabilities = probs.map((e) => e.value);
+  }
+  function initialCounts(key) {
+    return key === "gof:portals"
+      ? ["8", "9", "10", "13"]
+      : key === "gof:binomial3"
+        ? ["12", "38", "36", "14"]
+        : presets[key.slice("contingency:".length)].o.flat().map(String);
+  }
+  function contextName(key) {
+    return key === "gof:portals"
+      ? "four portal categories"
+      : key === "gof:binomial3"
+        ? "0–3 wins per three-trial experiment"
+        : presets[key.slice("contingency:".length)]?.name || "synthetic counts";
+  }
   function inputTable() {
-    const l = labels();
+    const l = labels(),
+      saved = state.datasets[state.datasetKey];
     if (state.mode === "contingency") {
       const p = presets[state.preset];
       $("#chi-inputs").innerHTML =
-        `<table class="observed-table"><caption>Original observed counts O · edit people, not probabilities</caption><thead><tr><th>Group / category</th>${l.cols.map((c) => `<th>${c}</th>`).join("")}<th>Row total</th></tr></thead><tbody>${p.o.map((r, i) => `<tr><th>${l.rows[i]}</th>${r.map((v, j) => `<td><input data-chi-count data-row="${i}" data-col="${j}" aria-label="Observed ${l.rows[i]}, ${l.cols[j]}" type="number" min="0" max="1000000" step="1" value="${v}"></td>`).join("")}<td data-chi-row-total="${i}"></td></tr>`).join("")}</tbody><tfoot><tr><th>Column total</th>${l.cols.map((_, j) => `<td data-chi-col-total="${j}"></td>`).join("")}<td id="chi-total"></td></tr></tfoot></table>`;
+        `<table class="observed-table"><caption>Original observed counts O · edit people, not probabilities</caption><thead><tr><th>Group / category</th>${l.cols.map((c) => `<th>${c}</th>`).join("")}<th>Row total</th></tr></thead><tbody>${p.o.map((r, i) => `<tr><th>${l.rows[i]}</th>${r.map((v, j) => `<td><input data-chi-count data-row="${i}" data-col="${j}" aria-label="Observed ${l.rows[i]}, ${l.cols[j]}" type="number" min="0" max="1000000" step="1" value="${saved[i * p.cols.length + j]}"></td>`).join("")}<td data-chi-row-total="${i}"></td></tr>`).join("")}</tbody><tfoot><tr><th>Column total</th>${l.cols.map((_, j) => `<td data-chi-col-total="${j}"></td>`).join("")}<td id="chi-total"></td></tr></tfoot></table>`;
     } else {
       const model = $("#chi-model").value,
-        obs =
-          model === "uniform"
-            ? [8, 9, 10, 13]
-            : model === "specified"
-              ? [12, 18, 30, 40]
-              : [12, 38, 36, 14],
-        ps =
-          model === "specified"
-            ? [0.1, 0.2, 0.3, 0.4]
-            : [0.25, 0.25, 0.25, 0.25];
+        obs = [...saved],
+        ps = [...state.specifiedProbabilities];
       $("#chi-inputs").innerHTML =
         `<table class="observed-table"><caption>Original GOF categories · specified probabilities must sum to1</caption><thead><tr><th>Category</th>${l.cols.map((x) => `<th>${x}</th>`).join("")}<th>Total</th></tr></thead><tbody><tr><th>Observed O</th>${obs.map((o, i) => `<td><input data-chi-count data-col="${i}" aria-label="Observed ${l.cols[i]}" type="number" min="0" max="1000000" step="1" value="${o}"></td>`).join("")}<td id="chi-total"></td></tr>${model === "specified" ? `<tr><th>Null probability</th>${ps.map((p, i) => `<td><input data-chi-prob aria-label="Specified probability ${l.cols[i]}" type="number" min="0" max="1" step="any" value="${p}"></td>`).join("")}<td id="chi-prob-total"></td></tr>` : ""}</tbody></table>`;
     }
     $$("[data-chi-count],[data-chi-prob]").forEach((el) =>
       el.addEventListener("input", () => {
+        saveCurrentInputs();
         clear();
         render();
       }),
@@ -399,27 +419,34 @@ export function createChiSquareLab(root) {
           `Inference unavailable: ${r.status}. N must be positive and every row/column margin positive. Remove an empty category explicitly in a redesigned table; do not divide by0.`;
         $("#chi-expected").innerHTML = "";
       } else {
+        const unsupported =
+          r.status === "unsupported-fitted-pooling-calibration";
         resultTable(r);
         $("#chi-metrics").innerHTML =
-          `<div><span>PEARSON χ²</span><b>${number(r.statistic, 6)}</b></div><div><span>DEGREES OF FREEDOM</span><b>${r.df}</b></div><div><span>ASYMPTOTIC p</span><b>${r.pValue === null ? "Withheld" : probability(r.pValue, r.pValue === 0 ? chiSquareTails(r.statistic, r.df).logUpper : undefined)}</b></div>`;
+          `<div><span>PEARSON χ²</span><b>${number(r.statistic, 6)}</b></div><div><span>REFERENCE df</span><b>${unsupported ? "Not calibrated" : r.df}</b></div><div><span>ASYMPTOTIC p</span><b>${r.pValue === null ? "Withheld" : probability(r.pValue, r.pValue === 0 ? chiSquareTails(r.statistic, r.df).logUpper : undefined)}</b></div>`;
         $("#chi-validity").textContent = workedAnswersHidden()
           ? "Expected-frequency validity assessment concealed with worked results."
-          : r.approximationAppropriate
-            ? `All expected frequencies≥5 (minimum ${number(r.minExpected, 5)}). The χ² reference is still asymptotic; valid random sampling and model assumptions are required.`
-            : `${r.smallExpectedCount} expected frequencies below5 (minimum ${number(r.minExpected, 5)}). Under this specification, combine meaningful categories before using the χ² approximation. The asymptotic p-value and reject/do-not-reject decision are withheld.`;
+          : unsupported
+            ? "Calibration unsupported: p was fitted from the original four classes before pooling. Even with every E≥5, the pooled statistic does not have the standard χ²(k′−2) reference assumed by a simple parameter count. p and the test decision are withheld. Restore original categories or use an independently specified model."
+            : r.approximationAppropriate
+              ? `All expected frequencies≥5 (minimum ${number(r.minExpected, 5)}). The χ² reference is still asymptotic; valid random sampling and model assumptions are required.`
+              : `${r.smallExpectedCount} expected frequencies below5 (minimum ${number(r.minExpected, 5)}). Under this specification, combine meaningful categories before using the χ² approximation. The asymptotic p-value and reject/do-not-reject decision are withheld.`;
         $("#chi-validity").classList.toggle(
           "needs-pooling",
           !r.approximationAppropriate,
         );
-        $("#chi-decision").textContent =
-          r.pValue === null
+        $("#chi-decision").textContent = unsupported
+          ? "No calibrated standard χ² decision for this fitted-and-pooled GOF workflow. Descriptive O/E/contributions/statistic remain available. The contingency fixed-margin randomization is not a replacement GOF calibration."
+          : r.pValue === null
             ? gof
               ? "No reliable asymptotic decision from this GOF table. Inspect meaningful category pooling; exact multinomial testing is not implemented here."
               : "No reliable asymptotic decision from this table. Inspect meaningful pooling or use the separately labelled conditional randomization exploration."
             : `${r.reject ? "Reject H₀: evidence of model discrepancy under the assumptions." : "Do not reject H₀: insufficient evidence of model discrepancy; H₀ is not proved."} α=${r.alpha}. The p-value is P(χ²≥observed statistic) under the reference model, not P(H₀).`;
-        $("#chi-df").textContent = gof
-          ? `df = k′−1−q = ${state.groups.length}−1−${r.fittedParameters} = ${r.df}. ${model === "binomial3" ? `p=${number(r.parameter, 6)}${r.fittedParameters ? " estimated from the original counts: q=1; fitting remains tied to the same data after pooling." : " specified independently: q=0."}` : "No parameters fitted from these counts: q=0."}`
-          : `df=(r−1)(c−1)=(${state.rows.length}−1)(${state.cols.length}−1)=${r.df}. Expected cell counts come from margins, not one separately fitted parameter per cell.`;
+        $("#chi-df").textContent = unsupported
+          ? `Formal parameter counting gives k′−1−q=${state.groups.length}−1−1=${r.df}, but this is not an approved reference df for the current raw-data fit followed by pooling. No grouped-MLE/bootstrap calibration is implemented here.`
+          : gof
+            ? `df = k′−1−q = ${state.groups.length}−1−${r.fittedParameters} = ${r.df}. ${model === "binomial3" ? `p=${number(r.parameter, 6)}${r.fittedParameters ? " estimated from these unpooled original counts: q=1. Pooling this fitted workflow requires separately supported calibration." : " specified independently: q=0."}` : "No parameters fitted from these counts: q=0."}`
+            : `df=(r−1)(c−1)=(${state.rows.length}−1)(${state.cols.length}−1)=${r.df}. Expected cell counts come from margins, not one separately fitted parameter per cell.`;
       }
       permutationView();
     } catch (e) {
@@ -442,19 +469,35 @@ export function createChiSquareLab(root) {
     }
   }
   function setup() {
+    const previous = state.datasetKey;
+    saveCurrentInputs();
     clear();
     state.revealed = false;
     state.prediction = null;
-    const gof = $("#chi-mode").value === "gof";
-    state.mode = gof ? "gof" : "contingency";
+    state.mode = $("#chi-mode").value;
     state.preset = $("#chi-preset").value;
-    const p = presets[state.preset];
-    state.rows = identityGroups(p.rows.length);
-    state.cols = identityGroups(p.cols.length);
-    state.groups = identityGroups(4);
+    const key =
+      state.mode === "gof"
+        ? $("#chi-model").value === "binomial3"
+          ? "gof:binomial3"
+          : "gof:portals"
+        : "contingency:" + state.preset;
+    state.datasetKey = key;
+    if (!state.datasets[key]) state.datasets[key] = initialCounts(key);
+    if (previous !== key) {
+      const p = presets[state.preset];
+      state.rows = identityGroups(p.rows.length);
+      state.cols = identityGroups(p.cols.length);
+      state.groups = identityGroups(4);
+    }
     $("#chi-merge-confirm").checked = false;
     $("#chi-merge-note").textContent = "";
     inputTable();
+    $("#chi-data-note").textContent = !previous
+      ? `Initial synthetic observations: ${contextName(key)}. Observation counts are separate from the null model.`
+      : previous === key
+        ? "Null model changed; the same original observations and category groups are retained. Expected counts are recomputed under the new H₀."
+        : `Changed data context to ${contextName(key)}. Its separately saved observations are shown; the previous data context is retained separately. Pooling is reset because the categories changed. This is not the same dataset under a different H₀.`;
     render();
   }
   function shuffle() {
@@ -521,6 +564,19 @@ export function createChiSquareLab(root) {
     clear();
     render();
   };
+  $("#chi-load-example").onclick = () => {
+    const model = $("#chi-model").value;
+    state.datasets[state.datasetKey] =
+      state.mode === "gof" && model === "specified"
+        ? ["12", "18", "30", "40"]
+        : initialCounts(state.datasetKey);
+    clear();
+    state.revealed = false;
+    inputTable();
+    $("#chi-data-note").textContent =
+      "Example observation counts explicitly loaded. Null-model parameters and current category grouping are unchanged.";
+    render();
+  };
   $("#chi-double").onclick = () => {
     try {
       readInputs();
@@ -530,6 +586,7 @@ export function createChiSquareLab(root) {
           "Doubling would exceed the per-cell display limit.",
         );
       inputs.forEach((e) => (e.value = 2 * Number(e.value)));
+      saveCurrentInputs();
       clear();
       $("#chi-merge-note").textContent =
         "All original counts doubled. Proportions stay the same; compare χ² and its p-value.";
@@ -583,6 +640,8 @@ export function createChiSquareLab(root) {
     pause,
     getSnapshot: () => ({
       ...state,
+      datasets: structuredClone(state.datasets),
+      specifiedProbabilities: [...state.specifiedProbabilities],
       rng: undefined,
       rows: state.rows.map((g) => [...g]),
       cols: state.cols.map((g) => [...g]),

@@ -1,4 +1,4 @@
-# Implemented coverage — checkpoint 1
+# Implemented coverage — checkpoint history and current delta
 
 Authority: official Pearson IAL specification in CURRICULUM-MATH-REQUIREMENTS.md. No other exam board is used. Status is implementation status, not independent approval.
 
@@ -62,3 +62,17 @@ All earlier checkpoint rows remain historical implementation snapshots. This del
 |F|Separate658f005 pure module independently reviewed; report saved|Not imported, no F UI delivered in this checkpoint|
 
 Inference8f088 R1/M1–M3 sampled contracts independently passed; one-ulpCI and tinyTypeII complement limitations remain. The interface states tinyβ numerical precision and positivep underflow. Do not count unimplemented GOF families or F functions as full coverage.
+
+## Checkpoint5 delta — current implementation and correction
+
+This delta supersedes historical feature claims above. In particular, the checkpoint4 phrase about fitting before pooling was an implementation description later shown invalid by independent calibration review; it must not be read as approved method.
+
+|Official item|Current delivered interaction|Conditions and remaining scope|
+|---|---|---|
+|S3.3§2 p61|Identity-preserving finite12-unit SRS, proportional stratified, systematic uniform-random-start and an explicit quota-convenience mechanism; population weighting, recall and repeated estimates|Systematic n divides12; quota is one stated mechanism, no probability SE; no general survey/sample-estimatedSE toolbox|
+|S3.3§1 p61|Two independent Normal variables with editable signed coefficients, means, variances and constant; variance contributions squared; sign-flip comparison|Explicit Normality/independence, distinct IDs; no correlated inputs/covariance tool; zero-variance pointmass supported|
+|S3.3§4 p62 corrected GOF|Same portal observations persist across uniform/specified H₀ changes; explicit example loading and separate semantic datasets|Binomial p fitting supported only before any actual pooling. Raw-data-fit+pool standard reference is unsupported: descriptive O/E/contributions/statistic only, p/reject/referenceDF withheld. No grouped MLE/bootstrap|
+|Supplementary support|Finite population designSE/FPC, exact systematic starts, design bias versus single error, deterministic convenience counterexamples|Mark supplementary/enrichment rather than claim every formula is compulsory; known complete fictional populationSE is not sample-estimatedSE|
+|Independent status|Pure F658f005 finite mathematical audit passed; earlier S3 mobile/pause/trace fixes independently passed atdbe9351|New F UI and the two checkpoint5 GOF P1 repairs await independent recheck. No real students or full S1/S2/S3 completion claim|
+
+Remaining absent/partial: polynomial PDF/CDF and full distribution workbench; Normal source-population simulator; full GOF model families (Poisson/Normal/continuous-uniform); full official correlation table; general survey estimation, paired/covariance inference. The18-minute flagship guide covers estimator/estimate/sampling distribution, not this whole matrix.

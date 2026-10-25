@@ -256,6 +256,7 @@ await test("D pause/manual/resume enforces2000 cap in actual DOM and stops on na
 await test("contingency E/contributions/df/p and count scale law are linked", async () => {
   await choose("chisquare");
   await $("#chi-preset").selectOption("strong");
+  await $("#chi-load-example").click();
   await $("#chi-reveal").click();
   const a = (await snap()).chiSquare.result;
   assert.deepEqual(a.expected, [
@@ -325,6 +326,7 @@ await test("low expected cells withhold decision; explicit meaningful whole-colu
 });
 await test("E live edits reject empty/fractional/negative/zero margins and clear stale results", async () => {
   await $("#chi-preset").selectOption("strong");
+  await $("#chi-load-example").click();
   const input = $("[data-chi-count]").first();
   for (const v of ["", "1.5", "-1"]) {
     await input.fill(v);
@@ -339,6 +341,7 @@ await test("E live edits reject empty/fractional/negative/zero margins and clear
   await $("[data-chi-count]").nth(3).fill("16");
   assert.equal((await snap()).chiSquare.result.status, "invalid-zero-margin");
   await $("#chi-preset").selectOption("strong");
+  await $("#chi-load-example").click();
 });
 await test("GOF uniform oracle and specified probabilities are not silently normalized", async () => {
   await $("#chi-mode").selectOption("gof");
@@ -356,6 +359,8 @@ await test("GOF uniform oracle and specified probabilities are not silently norm
     /exact multinomial testing is not implemented/,
   );
   await $("#chi-model").selectOption("specified");
+  assert.equal((await snap()).chiSquare.result.total, 4);
+  await $("#chi-load-example").click();
   assert.equal((await snap()).chiSquare.result.total, 100);
   await $("[data-chi-prob]").first().fill(".2");
   assert.equal((await snap()).chiSquare.result, null);
@@ -376,6 +381,13 @@ await test("fitted Binomial GOF deducts q and reuses original estimate after poo
   const b = (await snap()).chiSquare.result;
   near(b.parameter, a.parameter, 1e-12);
   assert.equal(b.df, 1);
+  assert.equal(b.pValue, null);
+  assert.equal(b.reject, null);
+  assert.equal(b.approximationAppropriate, false);
+  assert.match(
+    await $("#chi-validity").textContent(),
+    /Calibration unsupported/,
+  );
   await $("#chi-merge-choice").selectOption("0");
   await $("#chi-merge-confirm").check();
   await $("#chi-merge").click();
@@ -463,6 +475,7 @@ await test("phone/desktop/teacher layouts and keyboard reveal work in both new l
         assert.equal(await $("#dis-output").isVisible(), true);
       } else {
         await $("#chi-preset").selectOption("strong");
+        await $("#chi-load-example").click();
         await $("#chi-reveal").click();
       }
       assert.ok(
@@ -661,6 +674,7 @@ await test("finite Normal and chi-square tail underflow is not displayed as exac
   await change("#mean-x", 496);
   await choose("chisquare");
   await $("#chi-preset").selectOption("strong");
+  await $("#chi-load-example").click();
   for (const [i, v] of [1000000, 0, 0, 1000000].entries())
     await $("[data-chi-count]").nth(i).fill(String(v));
   await $("#chi-reveal").click();
@@ -669,6 +683,7 @@ await test("finite Normal and chi-square tail underflow is not displayed as exac
     /positive.*machine range/,
   );
   await $("#chi-preset").selectOption("strong");
+  await $("#chi-load-example").click();
 });
 await test("Teacher sample-stage trace reveals distribution stage without changing the original sample or seed", async () => {
   const q = await browser.newPage({
