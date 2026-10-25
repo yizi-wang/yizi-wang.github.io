@@ -30,3 +30,5 @@ Native Sites identity and deployment evidence in REVIEW-LOOP.md. No source helpe
 |16:53–16:56|Final developer regression rerun11 baseline+13 new flows PASS;16 math/domain tests PASS including81 Normal-CDF reference points; original root compatibility build289pages PASS at16:54:08UTC,61.56s|
 
 These are actual checkpoint activities, not a claim of seven hours completed. Parent task still coordinates work through22:47:29UTC. No independent checkpoint2 approval or real student test is recorded.
+|17:00–17:03|Published source code checkpoints; actual1920×1080 focus layout initially missed metric boundary by4px; reduced chart padding and reran actual assertion:metrics y982,height66,bottom1048 within1080. Saved corrected screenshot and measured evidence. Final review code commit6797009a27c6bd5a66865d6ca47d89d51fabe3af pushed.|
+|17:04:00|Native owner-private Site checkpoint2 deployment succeeded; exact6797009 static ZIP39,829bytes uploaded successfully to Library. Deployment/Library IDs and SHA persisted in evidence/checkpoint2-delivery.json. No access change or production/master deployment.|
