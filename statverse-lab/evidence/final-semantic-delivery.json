@@ -108,5 +108,24 @@
     }
   ],
   "latest_source_static_library_ids": [],
-  "latest_source_static_delivery": "GitHub development-branch releases directory, exact verified files; oldaccc8f9 Library ZIPs explicitly historical."
+  "latest_source_static_delivery": "GitHub development-branch releases directory, exact verified files; oldaccc8f9 Library ZIPs explicitly historical.",
+  "github_download_validation_utc": "2026-10-25T22:23:23Z",
+  "github_download_validation": [
+    {
+      "filename": "STATVERSE-final-semantic-5f57ec2-static.zip",
+      "http_status": 200,
+      "downloaded_bytes": 291949,
+      "sha256": "736d8f9d35b3227920be4c470dc3130a2371b9da2c6c06bf47653f69a7df30ba",
+      "matches_local": true
+    },
+    {
+      "filename": "STATVERSE-final-semantic-5f57ec2-source-and-static.zip",
+      "http_status": 200,
+      "downloaded_bytes": 14257663,
+      "sha256": "7de2ef8d6e5ad725a666f5db95801c58c614e41f11fe38990e8cffece4a55b0b",
+      "matches_local": true
+    }
+  ],
+  "github_release_record_commit": "0c72ec136285e5d3f072b2c1aa19d9b528cf9e3b",
+  "record_updated_at": "2026-10-25T22:24:54.310508+00:00"
 }
