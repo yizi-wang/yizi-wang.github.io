@@ -68,6 +68,46 @@ test("normal tails and inverse match SciPy, including subnormal quantiles", () =
   }
   for (const [p, q] of QUANTILE_ORACLES) close(I.normalInverseCDF(p), q, 2e-13, 2e-14);
 });
+test("M2: centered Normal quantiles and tiny confidence intervals retain relative precision", () => {
+  // mpmath 1.3.0, 100 decimal digits, using the exact binary64 input p/c.
+  // Quantile = sqrt(2)*erfinv(2*p-1); CI critical = sqrt(2)*erfinv(c).
+  const centered = [
+    [.49999999999999994, -1.3914582123358836e-16],
+    [.5000000000000001, 2.782916424671767e-16],
+    [.499999999999, -2.5065728237018603e-12],
+    [.500000000001, 2.5065728237018603e-12],
+    [.49999999, -2.5066282733116222e-8],
+    [.50000001, 2.5066282872262043e-8],
+    [.24999999999999997, -.6744897501960818],
+    [.25, -.6744897501960817],
+    [.25000000000000006, -.6744897501960816],
+    [.7499999999999999, .6744897501960814],
+    [.75, .6744897501960817],
+    [.7500000000000001, .674489750196082],
+  ];
+  for (const [p, q] of centered) close(I.normalInverseCDF(p), q, 5e-15, 0);
+  for (const ps of [centered.slice(6, 9), centered.slice(9, 12)]) {
+    const qs = ps.map(([p]) => I.normalInverseCDF(p));
+    assert.ok(qs[0] <= qs[1] && qs[1] <= qs[2]);
+  }
+  const confidence = [
+    [1e-12, 1.2533141373155002e-12],
+    [1e-8, 1.2533141373155004e-8],
+    [.5, .6744897501960817],
+    [.8, 1.2815515655446006],
+    [.95, 1.9599639845400538],
+    [.99, 2.5758293035489004],
+    [1 - 1e-12, 7.130509892879273],
+  ];
+  for (const [confidenceLevel, q] of confidence) {
+    const one = I.zTestOneMean({ mean: 0, variance: 1, n: 1, confidenceLevel }).confidenceInterval;
+    const two = I.zTestTwoMeans({ meanX: 0, meanY: 0, varianceX: 9, varianceY: 16,
+      nX: 1, nY: 1, confidenceLevel }).confidenceInterval;
+    close(one.criticalValue, q, 5e-15, 0);
+    close(one.upper, q, 5e-15, 0); close(one.lower, -q, 5e-15, 0);
+    close(two.criticalValue, q, 5e-15, 0); close(two.upper, 5 * q, 5e-15, 0);
+  }
+});
 test("critical boundaries and actual sizes match independent SciPy searches", () => {
   for (const [kind, params, alpha, alternative, lower, upper, size] of CRITICAL_ORACLES) {
     const r = kind === "binomial"
@@ -207,6 +247,19 @@ test("degenerate models and out-of-support queries have exact probabilities", ()
   assert.equal(I.binomialSurvival(21, 20, .2), 0);
   assert.equal(I.poissonPMF(-1, 4), 0);
 });
+test("M3: impossible observations in degenerate models respect the selected direction", () => {
+  for (const [alternative, upwardP, downwardP] of [["less", 1, 0], ["greater", 0, 1], ["two-sided", 0, 0]]) {
+    assert.equal(I.binomialPValue(1, 20, 0, alternative), upwardP);
+    assert.equal(I.poissonPValue(1, 0, alternative), upwardP);
+    assert.equal(I.binomialPValue(19, 20, 1, alternative), downwardP);
+    const bin = I.binomialTest({ k: 1, n: 20, p: 0, alternative });
+    const pois = I.poissonTest({ k: 1, lambda: 0, alternative });
+    const down = I.binomialTest({ k: 19, n: 20, p: 1, alternative });
+    assert.equal(bin.pValue, upwardP); assert.equal(pois.pValue, upwardP);
+    assert.equal(bin.reject, upwardP === 0); assert.equal(pois.reject, upwardP === 0);
+    assert.equal(down.pValue, downwardP); assert.equal(down.reject, downwardP === 0);
+  }
+});
 test("extreme tails remain positive when representable; logs survive underflow", () => {
   // Independent analytic tails: all successes, zero events, chi-square df=2.
   probClose(I.binomialPMF(1000, 1000, .5), 2 ** -1000, 3e-13);
@@ -318,6 +371,42 @@ test("contingency transpose/permutation invariance and scale law", () => {
   close(a.statistic, I.contingencyTest(transposed).statistic);
   close(a.pValue, I.contingencyTest([...table].reverse().map(row => [...row].reverse())).pValue);
   close(I.contingencyTest(table.map(row => row.map(o => 5 * o))).statistic, 5 * a.statistic);
+});
+test("M1: expected frequency 5 stays exact and status is transpose invariant", () => {
+  const transpose = table => table[0].map((_, j) => table.map(row => row[j]));
+  for (const table of [[[10, 0], [67, 77]], [[5, 5], [72, 72]]]) {
+    const r = I.contingencyTest(table), t = I.contingencyTest(transpose(table));
+    assert.deepEqual(r.expected, [[5, 5], [72, 72]]);
+    assert.deepEqual(t.expected, transpose(r.expected));
+    for (const result of [r, t]) {
+      assert.equal(result.status, "ok"); assert.equal(result.smallExpectedCount, 0);
+      assert.equal(result.df, 1);
+      close(result.statistic, table[0][0] === 10 ? 385 / 36 : 0, 1e-14, 0);
+      close(result.pValue, table[0][0] === 10 ? .0010745773786670282 : 1, 1e-13);
+      assert.equal(result.reject, table[0][0] === 10);
+    }
+  }
+  // Products around 5*N must have the same classification as exact integers,
+  // including near the supported N limit and when other products exceed 2^53.
+  for (const [r, c] of [[10, 77], [999983, 5000087], [2236067, 2236069], [1000000, 5000000]]) {
+    for (const delta of [-1, 0, 1]) {
+      const total = Math.floor(r * c / 5) + delta;
+      if (total <= r + c || total > I.INFERENCE_LIMITS.countTotal) continue;
+      const table = [[0, r], [c, total - r - c]];
+      for (const current of [table, transpose(table)]) {
+        const result = I.contingencyTest(current);
+        const exactSmall = result.rowTotals.flatMap(row => result.columnTotals.map(column =>
+          BigInt(row) * BigInt(column) < 5n * BigInt(total)));
+        assert.equal(result.smallExpectedCount, exactSmall.filter(Boolean).length);
+        assert.equal(result.status, exactSmall.includes(true) ? "needs-pooling" : "ok");
+        assert.deepEqual(result.expected.flat().map(e => e < 5), exactSmall);
+      }
+    }
+  }
+  const unpooled = I.goodnessOfFit({ observed: [2, 3, 95], expected: [2, 3, 95] });
+  assert.equal(unpooled.status, "needs-pooling"); assert.equal(unpooled.pValue, null);
+  const pooled = I.goodnessOfFit({ observed: [5, 95], expected: [5, 95] });
+  assert.equal(pooled.status, "ok"); assert.equal(pooled.pValue, 1);
 });
 test("zero margins are invalid and small expected cells suppress inference", () => {
   for (const table of [[[0, 0], [0, 0]], [[0, 0], [2, 3]], [[0, 4], [0, 5]]]) {
