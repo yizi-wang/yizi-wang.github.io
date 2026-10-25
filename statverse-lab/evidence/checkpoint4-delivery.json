@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-25T18:49:13.261600+00:00",
+  "sourceReviewCommit": "dbe9351ac863f572033f2de4b4c11bf3bcd8a2f7",
+  "sourceCodeCommit": "de36cfe400de6e15455910b03f7d03e5465dcaa9",
+  "branch": "statverse-lab-20261025",
+  "site": {
+    "projectId": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "deploymentId": "appgdep_6ade4f2261fc8191831c3c7f9de4f255",
+    "versionId": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_3eeb0b363cdc819182e3835763a49d38",
+    "status": "succeeded",
+    "url": "https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site",
+    "access": "owner-private",
+    "sourceCommit": "d1228392d77c89baca102a471cc82fb6d291a049"
+  },
+  "library": {
+    "libraryFileId": "libfile_c215aae7bb548191a08055a9a00b8abc",
+    "fileId": "file_00000000ce5c81f7a2cd291579985d58",
+    "fileName": "STATVERSE-checkpoint4-dbe9351-static.zip",
+    "bytes": 86276,
+    "sha256": "f74343ecd088dc1da164388a09a8b3dae1bbdf20c5c7152449047d8693bdc653"
+  },
+  "developerEvidence": {
+    "unitGroupsPassed": 53,
+    "baselineBrowserFlowsPassed": 11,
+    "previousBrowserRegressionsPassed": 13,
+    "priorBuiltBrowserRegressionsPassed": 14,
+    "newBuiltBrowserRegressionsPassed": 24,
+    "browser": "Chromium151.0.7922.173",
+    "realStudents": 0,
+    "independentStage4Review": "PENDING"
+  },
+  "independentHistory": {
+    "stage3": "S2-01..04 closed; S3-01/02 and trace P2 received, now developer-regressed only",
+    "inference8f088": "17795 API calls; sampled R1/M1..M3 repair passed; not UI approval"
+  },
+  "remaining": [
+    "New D/E UI and three review repairs need independent review",
+    "GOF Poisson/Normal/continuous uniform UI absent",
+    "Arbitrary table-dimension editor absent",
+    "F pure module not integrated",
+    "Mean Teacher focus still scrolling",
+    "Adjacent-confidence 1ulp P3 and tiny TypeII complement precision retained",
+    "Physical projector/screen-reader/real students untested"
+  ]
+}
