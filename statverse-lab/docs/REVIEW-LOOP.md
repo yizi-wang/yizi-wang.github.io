@@ -1,0 +1,25 @@
+# Review loop and evidence
+
+Independent requirements review received from parent; no independent implementation review has yet happened. Developer checks are explicitly developer checks. No real student testing. Prospective simulated-novice tasks stay NOT TESTED until independently operated.
+
+| ID | Problem | Evidence | Severity | Proposal | Actual change | Regression | Status |
+|---|---|---|---|---|---|---|---|
+|DEV-01|CLT Normal curve could overflow y domain before first sample|Developer code inspection: ymax omitted theoretical overlay peak|P1|Include overlay peak in shared scale|src/app.js chart ymax includes normalPeak|Browser/math check scheduled|Open pending check|
+|DEV-02|Transfer question kept n5 after n change|Developer inspection of static question|P2|Use selected n|metrics updates challenge text|Browser check scheduled|Open pending check|
+
+Automation evidence: evidence/browser-results.json and screenshots. Numerical tests: npm test. Neither constitutes independent review. Independent reviewers should add actual issue/action/seed/viewport then rerun failure after a fix. Mathematical P0 blocks release regardless of score.
+|DEV-03|390px viewport overflow by2px|Actual Chromium: prediction-options left66 right392, width390 viewport; browser-results first run failed phone width assertion|P2|Constrain options width after left inset|style.css max-width/phone width calc|Rerunning browser flow|Open|
+|DEV-04|Primary draw below initial desktop fold|Actual initial screenshot1440×1000|P2|Add first-draw action in intro and direct trace link|index intro quick draw; app scrolls to sample and trace link scrolls to point panel|Rerunning browser flow|Open|
+
+## Checkpoint1 developer regression closure — 2026-10-25 16:07UTC
+
+- DEV-01: overlay peak now included; CLT UI flow passed. Numerical range-specific SVG coordinate assertion remains desirable in independent review, so this is a developer code fix with partial verification.
+- DEV-02: transfer text uses selected n; code inspected and browser ran parameter changes. Independent copy review pending.
+- DEV-03: same Chromium390px width assertion rerun PASS; no horizontal overflow. Closed for tested viewport, see browser-results.json.
+- DEV-04: intro quick-draw action and per-sample point trace link implemented; browser flow/screenshot evidence exists. Independent timed first-use evaluation still NOT TESTED.
+- Browser suite:11/11 PASS, Chromium151.0.7922.173; viewports1440×1000,1920×1080,390×844; no pageerror. These are developer automated checks, not independent review.
+
+## Publication evidence
+
+Native owner-private Sites save+deploy succeeded2026-10-25 16:07:01UTC. Project appgprj_6ade2582c75481919d80c39e48a6a523; deployment appgdep_6ade291e29648191a101da18099bacc7; version appgprj_6ade2582c75481919d80c39e48a6a523~appgver_0d76797a24a881918d1a7173c1c5ca72; pushed Sites source commit f04e1f65494f9bedf2d2faeda14aada4d4692dbe.
+URL https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site . Local browser-tested source matches this deployment. No deployed-browser test or public sharing claimed. Sites helper scripts were unavailable in this environment; source was pushed using supplied short-lived repo-scoped credential passed via hidden stdin (no stored token), and archive created directly from that committed source with git archive.

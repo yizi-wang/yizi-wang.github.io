@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-10-25T16:04:12.392Z",
+  "browser": "151.0.7922.173",
+  "viewports": [
+    "1440×1000",
+    "1920×1080",
+    "390×844"
+  ],
+  "results": [
+    {
+      "name": "First draw and original sample retrieval",
+      "status": "PASS",
+      "ms": 259
+    },
+    {
+      "name": "Reset seed reproduces first sample",
+      "status": "PASS",
+      "ms": 89
+    },
+    {
+      "name": "Hide truth does not alter model or random state",
+      "status": "PASS",
+      "ms": 151
+    },
+    {
+      "name": "Pause stops advancement; resume completes same batch",
+      "status": "PASS",
+      "ms": 3078
+    },
+    {
+      "name": "n change clears incompatible estimates",
+      "status": "PASS",
+      "ms": 89
+    },
+    {
+      "name": "n=1 sample variance is unavailable",
+      "status": "PASS",
+      "ms": 37
+    },
+    {
+      "name": "Exact weighted enumeration and explicit cap",
+      "status": "PASS",
+      "ms": 103
+    },
+    {
+      "name": "CLT and repeated CI output",
+      "status": "PASS",
+      "ms": 868
+    },
+    {
+      "name": "Keyboard dialog opens and Escape closes",
+      "status": "PASS",
+      "ms": 70
+    },
+    {
+      "name": "Phone has no horizontal overflow and can draw",
+      "status": "PASS",
+      "ms": 60
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS",
+      "ms": 0
+    }
+  ],
+  "errors": []
+}
