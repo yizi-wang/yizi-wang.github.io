@@ -319,7 +319,7 @@ function chart() {
   );
   const x = (v) => L + ((v - lo) / (hi - lo)) * W,
     y = (p) => B - (p / ymax) * H;
-  let svg = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="dist-title dist-desc"><title id="dist-title">Sampling distribution of ${spec.symbol}, ${R} repeated samples, n equals ${state.n}</title><desc id="dist-desc">Bars encode relative frequency per bin. Dots occupy a separate saved-sample strip; their vertical positions only separate samples, never encode probability. Each dot is one whole sample's statistic. Horizontal axis: ${standardized ? "standardized Z (dimensionless)" : state.kind.includes("variance") ? "power squared" : "power"}. Vertical probability axis applies only to the histogram bars, not the dots below. Select a dot, or use the sample selector below the chart, to see its exact cards.</desc>`;
+  let svg = `<svg viewBox="0 0 ${w} ${h}" role="group" aria-labelledby="dist-title dist-desc"><title id="dist-title">Sampling distribution of ${spec.symbol}, ${R} repeated samples, n equals ${state.n}</title><desc id="dist-desc">Bars encode relative frequency per bin. Dots occupy a separate saved-sample strip; their vertical positions only separate samples, never encode probability. Each dot is one whole sample's statistic. Horizontal axis: ${standardized ? "standardized Z (dimensionless)" : state.kind.includes("variance") ? "power squared" : "power"}. Vertical probability axis applies only to the histogram bars, not the dots below. Select a dot, or use the sample selector below the chart, to see its exact cards.</desc>`;
   for (let i = 0; i < 4; i++) {
     const p = (ymax * i) / 3;
     svg += `<line x1="${L}" x2="${L + W}" y1="${y(p)}" y2="${y(p)}" stroke="#283448" stroke-dasharray="2 4"/><text x="${L - 8}" y="${y(p) + 3}" fill="#7789a3" text-anchor="end" font-size="${tickFont}">${fmt(p * 100, 0)}%</text>`;
@@ -568,7 +568,7 @@ function coverage() {
   const hit = ss.filter(
     (s) => s.value - margin <= m.mu && m.mu <= s.value + margin,
   ).length;
-  let svg = `<svg viewBox="0 0 ${cw} 280" role="img" aria-label="A window of recorded confidence intervals. Use the interval selector or focus a point to inspect its numeric endpoints and coverage.">`;
+  let svg = `<svg viewBox="0 0 ${cw} 280" role="group" aria-label="A window of recorded confidence intervals. Use the interval selector or focus a point to inspect its numeric endpoints and coverage.">`;
   if (!state.hidden)
     svg += `<line x1="${x(m.mu)}" x2="${x(m.mu)}" y1="8" y2="250" stroke="#f4d18a"/><text x="${x(m.mu) + 5}" y="12" fill="#f4d18a" font-size="${ciFont}">fixed μ</text>`;
   shown.forEach((s, i) => {

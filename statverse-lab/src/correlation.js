@@ -187,7 +187,7 @@ export function createCorrelationLab(root) {
       [xmin, xmax, ymin, ymax] = d;
     const X = (x) => L + ((x - xmin) / (xmax - xmin)) * (R - L),
       Y = (y) => B - ((y - ymin) / (ymax - ymin)) * (B - T);
-    let s = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="scatter-title scatter-desc"><title id="scatter-title">Synthetic paired data scatterplot</title><desc id="scatter-desc">Horizontal x, vertical y. Each focusable point can be edited with arrow keys, dragging or numeric inputs. Solid regression line only spans observed x; dashed portions extrapolate.</desc><defs><clipPath id="scatter-clip"><rect x="${L}" y="${T}" width="${R - L}" height="${B - T}"/></clipPath></defs>`;
+    let s = `<svg viewBox="0 0 ${w} ${h}" role="group" aria-labelledby="scatter-title scatter-desc"><title id="scatter-title">Synthetic paired data scatterplot</title><desc id="scatter-desc">Horizontal x, vertical y. Each focusable point can be edited with arrow keys, dragging or numeric inputs. Solid regression line only spans observed x; dashed portions extrapolate.</desc><defs><clipPath id="scatter-clip"><rect x="${L}" y="${T}" width="${R - L}" height="${B - T}"/></clipPath></defs>`;
     for (let i = 0; i <= 5; i++) {
       const x = xmin + ((xmax - xmin) * i) / 5,
         y = ymin + ((ymax - ymin) * i) / 5;

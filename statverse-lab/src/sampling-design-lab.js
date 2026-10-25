@@ -292,7 +292,7 @@ export function createSamplingDesignLab(root) {
       ]++;
     const peak = Math.min(1, (Math.max(...counts) / R) * 1.1),
       Y = (p) => B - (p / peak) * (B - T);
-    let svg = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Finite empirical distribution of defined design estimates; frequency bars above, original saved samples below."><text x="${L}" y="12" fill="#adc2d7" font-size="11">RELATIVE FREQUENCY PER BIN</text>`;
+    let svg = `<svg viewBox="0 0 ${w} ${h}" role="group" aria-label="Finite empirical distribution of defined design estimates; frequency bars above, original saved samples below."><text x="${L}" y="12" fill="#adc2d7" font-size="11">RELATIVE FREQUENCY PER BIN</text>`;
     for (let i = 0; i <= 3; i++) {
       const p = (peak * i) / 3;
       svg += `<line x1="${L}" x2="${Rx}" y1="${Y(p)}" y2="${Y(p)}" stroke="#2a3e53" stroke-dasharray="2 4"/><text x="${L - 5}" y="${Y(p) + 3}" text-anchor="end" fill="#a4b8d0" font-size="10">${number(p * 100, 1)}%</text>`;
