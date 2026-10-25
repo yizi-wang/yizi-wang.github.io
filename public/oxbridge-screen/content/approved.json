@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-23",
-  "edition": "2026-10-23 review v1",
+  "content_date": "2026-10-26",
+  "edition": "2026-10-26 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,203 +12,204 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月23日\n每日简报",
+    "headline": "10月26日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-23-subseasonal-forecast",
-        "category": "气象 / WEATHER",
-        "headline": "让天气模型学会纠正自己的偏差",
-        "headline_en": "Teaching weather models to correct their biases",
-        "summary": "MIT 10月14日报道，研究团队用历史预报与实测资料，训练机器学习系统纠正现有模型的系统偏差，改善未来两至六周的温度、降水概率预报。这有助于农业和能源部门提前准备；预测的是可能性，并不意味着能准确说出六周后某天的天气。",
-        "summary_en": "MIT reported on October 14 that researchers trained a machine-learning system on past forecasts and observations to correct systematic errors in existing models. It improved probabilistic temperature and rainfall forecasts two to six weeks ahead. Such forecasts could give farmers and energy planners more preparation time. They describe likelihoods, however, rather than guaranteeing the weather on a particular day six weeks away.",
+        "id": "2026-10-26-x-hinges",
+        "category": "工程 / ENGINEERING",
+        "headline": "把传感器直接打印进物件",
+        "headline_en": "Printing sensors directly into everyday objects",
+        "summary": "MIT 10月22日介绍X-Hinges设计工具：传感器与导电连线用不同材料打印，减少信号互扰，让手套、灯等物件感知弯曲并响应动作。它把结构设计与测量连起来，支持多方向运动；目前仍是原型研究，不同打印件的读数仍需校准，通用性还待改进。",
+        "summary_en": "On October 22, MIT described X-Hinges, which prints sensors and conducting traces from different materials to reduce signal interference. Gloves and lamps can then measure bending and respond to movement. The tool connects mechanical design with measurement across multiple directions. This remains prototype research: readings from separately printed devices still need calibration, and broader usability requires further development.",
         "source": {
           "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
-          "published": "2026-10-14"
+          "url": "https://news.mit.edu/2026/design-software-reimagines-everyday-objects-as-self-aware-devices-1022",
+          "published": "2026-10-22"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-23-crystal-ai",
-        "category": "材料 / MATERIALS",
-        "headline": "找新材料，AI也需要理解三维结构",
-        "headline_en": "Finding materials requires seeing their 3D structure",
-        "summary": "MIT 10月18日报道，研究者把晶体的三维原子排列与文字描述结合训练AI。相比只读论文文字，模型更能把结构与性能联系起来，并筛出有潜力的固态电池电解质候选。关键不只是有哪些元素，还有原子怎样排列；计算筛选仍不等于材料已经通过实验。",
-        "summary_en": "MIT reported on October 18 that researchers combined three-dimensional crystal structures with written descriptions to train an AI model. Compared with text-only training, it better connected structure with properties and identified promising solid-state battery electrolyte candidates. A material depends not only on which elements it contains, but also on how its atoms are arranged. Computational screening does not by itself establish experimental performance.",
+        "id": "2026-10-26-coastal-cliffs",
+        "category": "地球 / EARTH",
+        "headline": "用两次激光扫描，看海崖怎样后退",
+        "headline_en": "Two laser surveys reveal how coastal cliffs retreat",
+        "summary": "UCSD 10月23日报道，研究者比较2016与2023年的机载激光雷达资料，重建加州海崖三维变化，发现退缩高度不均匀，集中于局部热点。激光测距把地形变化变成可比较的数据，可服务海岸规划；七年平均退缩率不是逐年匀速，更不能预测某次崩塌的确切时间。",
+        "summary_en": "UC San Diego reported on October 23 that researchers compared airborne lidar surveys from 2016 and 2023 to reconstruct changes in California's coastal cliffs. Retreat was highly uneven and concentrated in hotspots. Laser ranging turns changing terrain into comparable three-dimensional data for coastal planning. A seven-year average does not imply steady annual retreat or predict the exact timing of an individual collapse.",
         "source": {
-          "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/giving-ai-crystal-clear-view-of-materials-world-1018",
-          "published": "2026-10-18"
+          "name": "加州大学圣迭戈分校 / UC San Diego",
+          "url": "https://today.ucsd.edu/story/new-statewide-lidar-study-identifies-hotspots-for-california-coastal-cliff-retreat",
+          "published": "2026-10-23"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-23-macaque-avoidance",
-        "category": "行为 / BEHAVIOUR",
-        "headline": "经历过疫情的猕猴，更警惕污染线索",
-        "headline_en": "Outbreak-exposed macaques were warier of food",
-        "summary": "加州大学圣迭戈分校10月20日报道，55只猕猴的选择实验发现，经历病毒暴发的群体较少取食带粪便视觉线索的食物，即使个体未感染也如此。粪便被封在透明树脂下，测试无感染风险。这提示经历可能塑造避病行为；群体比较不能证明猕猴懂得传播机制。",
-        "summary_en": "UC San Diego reported on October 20 that tests of 55 macaques found outbreak-exposed groups less willing to take food with visual faecal cues, including individuals never infected. The faeces were sealed beneath clear resin, removing infection risk. Experience may shape pathogen avoidance, but comparisons between groups do not establish that monkeys understand disease transmission.",
+        "id": "2026-10-26-climate-economy",
+        "category": "社会 / SOCIETY",
+        "headline": "气候冲击，怎样沿经济链传递？",
+        "headline_en": "How climate shocks travel through an economy",
+        "summary": "UCSD 10月20日介绍加州气候经济影响报告：高温、烟尘和缺水会影响健康、工时与农业，冲击还能传到食品价格和家庭开支。损失因地区与人群而异，户外劳动者等更易暴露。报告综合已有研究和情景推算，帮助理解风险如何传导；未来估算依赖升温等假设，并非确定账单。",
+        "summary_en": "UC San Diego described a climate-economy report on October 20. Heat, smoke and water shortages affect health, working hours and agriculture, with consequences spreading to food prices and household costs. Exposure differs across regions and groups, including outdoor workers. The report combines existing research and scenario projections to explain how risks spread; future estimates depend on warming assumptions rather than being certain bills.",
         "source": {
           "name": "加州大学圣迭戈分校 / UC San Diego",
-          "url": "https://today.ucsd.edu/story/like-humans-some-primates-become-cautious-of-germs-in-the-wake-of-a-viral-outbreak",
+          "url": "https://today.ucsd.edu/story/what-climate-change-is-costing-california",
           "published": "2026-10-20"
         },
         "accent": "coral"
       },
       {
-        "id": "2026-10-23-tissue-adhesive",
-        "category": "医学工程 / BIOENGINEERING",
-        "headline": "湿组织难黏合，先吸走表面水",
-        "headline_en": "Absorbing surface water helps tissue adhesives stick",
-        "summary": "MIT 10月20日介绍源自实验室的组织黏合技术：早期双面胶用聚丙烯酸吸走表面水，数秒内贴住湿组织，有望减少缝合造成的损伤与渗漏。相关手术修复用途计划2027年进入人体试验；原理可行并不等于所有手术已证实安全有效。",
-        "summary_en": "MIT reported on October 20 on tissue adhesives developed from laboratory research. Early double-sided versions used polyacrylic acid to absorb surface water and attach to wet tissue within seconds, potentially reducing damage and leaks associated with stitching. Human trials for surgical repair applications are planned for 2027; a working principle does not establish safety and effectiveness for every operation.",
+        "id": "2026-10-26-vaping-dependence",
+        "category": "健康与数据 / HEALTH & DATA",
+        "headline": "电子烟研究：看清比例，也看清因果",
+        "headline_en": "Vaping research: distinguish percentages from causes",
+        "summary": "UCSD 10月20日报道，美国18—24岁每日电子烟使用者中，高尼古丁产品使用率从2017年的3.1%升至2022年的49.2%，并与更强依赖相关。尼古丁作用于脑的奖励回路，产品浓度与使用方式都值得研究。观察数据不能单独证明因果，这些比例也不代表全体青年。",
+        "summary_en": "UC San Diego reported on October 20 that high-nicotine product use among US daily vapers aged 18–24 rose from 3.1% in 2017 to 49.2% in 2022 and was associated with greater dependence. Nicotine acts on brain reward circuits, making product strength and use patterns relevant. Observational data do not establish causation, and these percentages do not describe all young adults.",
         "source": {
-          "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/sanaheal-makes-surgical-stitching-more-like-applying-sticky-note-1020",
+          "name": "加州大学圣迭戈分校 / UC San Diego",
+          "url": "https://today.ucsd.edu/story/high-nicotine-e-cigarettes-linked-to-rising-nicotine-dependence-among-young-adults",
           "published": "2026-10-20"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-23-new-guinea-fires",
-        "category": "环境 / ENVIRONMENT",
-        "headline": "干旱遇上人为点火，风险如何叠加？",
-        "headline_en": "How drought and human ignition combine to raise fire risk",
-        "summary": "NASA 10月22日报道，9—10月新几内亚遭遇干旱与大范围火灾。厄尔尼诺改变降雨，使植被易燃；农事、清地等人为点火更容易失控。卫星影像和排放模型帮助追踪烟尘与碳释放，显示气候和土地利用会叠加风险；排放量属于模型估算，并非逐处直接测量。",
-        "summary_en": "NASA reported on October 22 that drought and widespread fires affected New Guinea in September and October. El Niño shifted rainfall, drying vegetation so agricultural and land-clearing fires could spread uncontrolled. Satellite images and emissions models track smoke and carbon release, showing how climate and land use combine to raise risk. Emissions are modelled estimates, not direct measurements of every fire.",
+        "id": "2026-10-26-swift-mission",
+        "category": "天文 / ASTRONOMY",
+        "headline": "Swift停止观测，档案仍可用于研究",
+        "headline_en": "Swift stops observing; its archive remains open for research",
+        "summary": "NASA 10月23日宣布，Swift于20日完成最后观测。轨道降低后，大气阻力妨碍望远镜稳定指向，科学任务因此结束。它曾迅速定位伽马射线暴，再转向捕捉易消逝的余辉，说明观测速度也是科学能力。近22年的公开档案仍可研究；替代快速响应能力仍在探索。",
+        "summary_en": "NASA announced on October 23 that Swift made its final observation on October 20. As its orbit lowered, atmospheric drag prevented steady telescope pointing, ending science operations. Swift rapidly located gamma-ray bursts and turned to catch fading afterglows, showing why response speed matters in astronomy. Nearly 22 years of public archival data remain available; replacement rapid-response capabilities are still being explored.",
         "source": {
-          "name": "美国航天局地球观测站 / NASA Earth Observatory",
-          "url": "https://science.nasa.gov/earth/earth-observatory/fires-char-new-guinea/",
-          "published": "2026-10-22"
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/missions/swift/nasas-swift-mission-ends/",
+          "published": "2026-10-23"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-23-perseverance-navigation",
+        "id": "2026-10-26-dragonfly-simulation",
         "category": "太空 / SPACE",
-        "headline": "火星没有GPS，毅力号怎样认路？",
-        "headline_en": "How does Perseverance navigate Mars without GPS?",
-        "summary": "NASA 10月21日发布的任务日志记载，毅力号10月11日累计行驶45.22公里。它把地面影像与轨道照片匹配，在没有GPS的火星定位；改进打滑模型和路径规则，让长途自主驾驶更可靠。里程服务于取样与岩石研究，并非越快越好；地形和辐射仍限制行动。",
-        "summary_en": "A NASA mission update published on October 21 records Perseverance reaching 45.22 kilometres on October 11. Matching ground images with orbital pictures locates the rover without GPS; improved slip models and driving rules support longer autonomous drives. Distance serves sampling and rock studies, so speed alone is not the goal. Terrain and radiation still constrain operations.",
+        "headline": "先在地面模拟，练习土卫六自主着陆",
+        "headline_en": "Rehearsing an autonomous Titan landing on Earth",
+        "summary": "NASA 10月23日报道，Dragonfly在类飞行航电测试台上实时模拟首次飞行与着陆。模拟的相机、惯性测量和激光雷达输入，帮助软件选择安全地点，并让工程师核对系统协同。土卫六遥远，需自主决策；这仍是地面测试，实际飞行系统及故障应对还需验证。",
+        "summary_en": "NASA reported on October 23 that Dragonfly rehearsed its first flight and landing in real time on a flight-like avionics testbed. Simulated camera, inertial and lidar inputs helped software select safe terrain while engineers checked system interactions. Titan's distance makes autonomous decisions essential. This was a ground test; validation on the actual flight system and fault-response testing are still ahead.",
         "source": {
-          "name": "美国航天局火星任务团队 / NASA Mars Mission Team",
-          "url": "https://science.nasa.gov/blog/tracks-along-the-longest-drive-on-another-world/",
-          "published": "2026-10-21"
+          "name": "美国航天局 / NASA",
+          "url": "https://science.nasa.gov/blogs/dragonfly/2026/10/23/nasas-dragonfly-completes-first-simulated-flight/",
+          "published": "2026-10-23"
         },
         "accent": "coral"
       }
     ]
   },
   "weekly": {
-    "week": "2026-W43",
-    "previous_week": "2026-W42",
+    "week": "2026-W44",
+    "previous_week": "2026-W43",
     "previous_answers": [
       {
-        "id": "answer-reasoning-circle-triples-2026-w42",
+        "id": "answer-reasoning-grid-flips-2026-w43",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "把1至9各用一次，排在一个圆周上。每三个相邻位置的数相加，共得到九个和。这九个和中的最大值，最小能是多少？先试排，再证明你的答案最优。",
-        "headline_en": "Arrange 1–9 around a circle, using each number once. Add each group of three consecutive numbers to obtain nine sums. What is the smallest possible value of the largest sum? Experiment, then prove your answer is optimal.",
-        "result": "最小值为16",
-        "result_en": "The minimum is 16",
-        "explanation": "九个和合计135，平均15。若最大值≤15，则全为15；相邻两和相减会使相隔三位的数相同，矛盾。因此至少16。圆周排列1、5、8、2、6、7、3、4、9的九个和都不超过16，达到下界。",
-        "explanation_en": "The nine sums total 135, averaging 15. A maximum of 15 would make all sums equal; subtracting neighbouring sums would force entries three places apart to match. Thus the integer maximum is at least 16. The circular order 1,5,8,2,6,7,3,4,9 attains 16.",
-        "subject": "W42 · 圆周极值解答",
-        "subject_en": "W42 · CIRCULAR OPTIMISATION",
+        "headline": "5×5方格起初全白。每步可选一整行或一整列，把其中所有格子黑白互换。若最终至少有一个黑格，黑格最少能有几个？给出做法，并证明不能更少。",
+        "headline_en": "A 5×5 grid starts entirely white. Each move flips every cell in one whole row or column between black and white. If at least one cell ends black, what is the smallest possible number of black cells? Give a construction and prove it is minimal.",
+        "result": "最少5个黑格",
+        "result_en": "The minimum is 5 black cells",
+        "explanation": "任取两行两列的四角，每次翻0或2角，黑角数恒为偶数。若仅1—4个黑格，必有全白行和列；用任一黑格及它们围成四角，就只有1黑角，矛盾。故至少5；翻一整行恰得5。",
+        "explanation_en": "Every rectangle formed by two rows and columns keeps an even number of black corners: a move flips zero or two. With 1–4 black cells, an all-white row and column would exist; any black cell would then define a rectangle with one black corner, impossible. Flipping one whole row attains five.",
+        "subject": "W43 · 翻面逻辑解答",
+        "subject_en": "W43 · GRID LOGIC",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "answer-probability-conditional-reroll-2026-w42",
+        "id": "answer-probability-pattern-race-2026-w43",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "两枚公平六面骰子独立掷出，已知点数不同。只看第一枚，决定保留第二枚或独立重掷第二枚一次；决定前不看第二枚，重掷后必须用新点数，可与第一枚相同。最终点数和至少为8算赢。求最优策略与最大胜率。",
-        "headline_en": "Two fair six-sided dice are rolled independently; their results are known to differ. Seeing only the first, choose to keep the hidden second die or reroll it once independently. You must accept the new result, even if it equals the first. A final sum of at least 8 wins. Find the optimal strategy and maximum win probability.",
-        "result": "最优胜率13/30，约43.3%",
-        "result_en": "Maximum win probability: 13/30 ≈ 43.3%",
-        "explanation": "第一枚仍均匀分布。保留时第二枚有5种可能，重掷后有6种。第一枚为2或3时保留，为4、5或6时重掷，为1时任选。最优胜率为(0＋1/5＋2/5＋1/2＋2/3＋5/6)/6＝13/30。",
-        "explanation_en": "The first die is still uniform. Keeping leaves five possible hidden values; rerolling gives six. Keep for first-die values 2 or 3; reroll for 4, 5 or 6; either for 1. The optimal probability is (0+1/5+2/5+1/2+2/3+5/6)/6=13/30.",
-        "subject": "W42 · 条件概率决策解答",
-        "subject_en": "W42 · CONDITIONAL DECISIONS",
+        "headline": "不断独立投掷一枚公平硬币，直到连续三次的结果首次出现HHT或HTH便停止（H为正面，T为反面）。哪一种更可能先出现？求它的概率，并说明理由。",
+        "headline_en": "Keep tossing a fair coin independently until HHT or HTH first appears as three consecutive results (H=heads, T=tails). Which pattern is more likely to appear first? Find its probability and justify your answer.",
+        "result": "HHT先出概率2/3；HTH为1/3",
+        "result_en": "HHT wins with probability 2/3; HTH with 1/3",
+        "explanation": "设刚出现H后HHT先出的概率为p。下一次H，则等到T必由HHT胜；下一次T，再出H则HTH胜，再出T则重回起点。因此p=1/2+p/4，得2/3。开头的T只延迟首个H，不改变胜率。",
+        "explanation_en": "Let p be the chance that HHT wins just after H. A following H leads to an HHT win at the first T. A following T then H lets HTH win; a following T then T resets the process. Thus p=1/2+p/4, so p=2/3. Initial tails merely delay the first H.",
+        "subject": "W43 · 硬币图案解答",
+        "subject_en": "W43 · COIN PATTERN RACE",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "answer-proof-minimum-monochrome-triangles-2026-w42",
+        "id": "answer-proof-divisibility-chains-2026-w43",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "六个点两两相连，每条连线涂红或蓝。三条边同色的三角形，最少能有几个？请证明下界，并画出达到下界的涂色方案。挑战：能否让红色、蓝色三角形各恰好一个？",
-        "headline_en": "Join every pair of six points, colouring each edge red or blue. What is the minimum number of triangles with all three edges the same colour? Prove a lower bound and draw a colouring that attains it. Bonus: can there be exactly one red triangle and one blue triangle?",
-        "result": "最少2个；可以红蓝各1个",
-        "result_en": "Minimum: 2; one of each colour is possible",
-        "explanation": "每点有d条红边，则一红一蓝的边对有d(5−d)≤6个。每个非同色三角形被数两次，故至多18个；20个三角形中至少2个同色。点标为1至6，红边取12、15、16、24、26、34、35，其余为蓝：仅红126、蓝456同色。",
-        "explanation_en": "A vertex with d red edges has d(5−d)≤6 mixed-colour edge pairs. Each non-monochromatic triangle contributes two pairs, so at most 18 of 20 triangles are non-monochromatic. Label the points 1–6. Colour edges 12,15,16,24,26,34,35 red and all others blue: only red 126 and blue 456 are monochromatic.",
-        "subject": "W42 · 组合计数证明解答",
-        "subject_en": "W42 · COMBINATORIAL PROOF",
-        "visual": "network",
+        "headline": "从1至60中选出一些不同的整数，要求选出的数中不存在a<b<c，使b是a的整数倍且c是b的整数倍。最多能选几个？给出一组选法，并证明无法选得更多。",
+        "headline_en": "Choose distinct integers from 1 to 60. Your set must not contain a<b<c with b a multiple of a and c a multiple of b. What is the largest possible number of selected integers? Give an example and prove optimality.",
+        "result": "最多45个",
+        "result_en": "The maximum is 45",
+        "explanation": "按奇数部分分链u、2u、4u……，链中任取三数都违例。15条长链各至多取2数，15条单元素链各至多取1数，故至多45。取16至60共45数；若a|b|c，则c≥4a≥64，矛盾。",
+        "explanation_en": "Group numbers into chains u,2u,4u,… for odd u. Any three from one chain are forbidden. Fifteen longer chains allow at most two selections each; fifteen singleton chains allow one, giving 45. Select 16–60. A divisibility triple would give c≥4a≥64, impossible.",
+        "subject": "W43 · 倍数链极值解答",
+        "subject_en": "W43 · DIVISIBILITY CHAINS",
+        "visual": "question",
         "accent": "coral"
       }
     ],
     "challenges": [
       {
-        "id": "reasoning-grid-flips-2026-w43",
+        "id": "reasoning-nine-coins-2026-w44",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "5×5方格起初全白。每步可选一整行或一整列，把其中所有格子黑白互换。若最终至少有一个黑格，黑格最少能有几个？给出做法，并证明不能更少。",
-        "headline_en": "A 5×5 grid starts entirely white. Each move flips every cell in one whole row or column between black and white. If at least one cell ends black, what is the smallest possible number of black cells? Give a construction and prove it is minimal.",
-        "subject": "进阶 · 翻面逻辑",
-        "subject_en": "DEVELOPING · GRID LOGIC",
-        "origin": "原创教学题面 · 非试卷摘录",
+        "headline": "9枚外观相同的硬币中，恰有1枚较重，其余等重。只用无砝码的双盘天平，最坏情况下至少称几次，才能确定较重硬币？设计方法，并说明为什么不能更少。",
+        "headline_en": "Among nine identical-looking coins, exactly one is heavier and the others have equal weight. Using only a two-pan balance without weights, what is the minimum number of weighings needed in the worst case to identify the heavier coin? Give a method and prove that fewer cannot suffice.",
+        "subject": "进阶 · 称重决策",
+        "subject_en": "DEVELOPING · WEIGHING DECISIONS",
+        "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "probability-pattern-race-2026-w43",
+        "id": "probability-triangle-cards-2026-w44",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "不断独立投掷一枚公平硬币，直到连续三次的结果首次出现HHT或HTH便停止（H为正面，T为反面）。哪一种更可能先出现？求它的概率，并说明理由。",
-        "headline_en": "Keep tossing a fair coin independently until HHT or HTH first appears as three consecutive results (H=heads, T=tails). Which pattern is more likely to appear first? Find its probability and justify your answer.",
-        "subject": "挑战 · 硬币图案竞赛",
-        "subject_en": "CHALLENGE · COIN PATTERN RACE",
-        "origin": "原创教学题面 · 非试卷摘录",
+        "headline": "把1至10分别写在10张卡片上，随机、不放回抽出3张，抽取顺序不计。这3个数能作为一个非退化三角形的边长的概率是多少？请用有条理的计数说明理由。",
+        "headline_en": "Write 1 through 10 on ten cards and draw three uniformly at random without replacement, ignoring order. What is the probability that the three numbers can be side lengths of a non-degenerate triangle? Justify your answer with an organised count.",
+        "subject": "挑战 · 三角形概率",
+        "subject_en": "CHALLENGE · TRIANGLE PROBABILITY",
+        "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "proof-divisibility-chains-2026-w43",
+        "id": "proof-domino-two-holes-2026-w44",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "从1至60中选出一些不同的整数，要求选出的数中不存在a<b<c，使b是a的整数倍且c是b的整数倍。最多能选几个？给出一组选法，并证明无法选得更多。",
-        "headline_en": "Choose distinct integers from 1 to 60. Your set must not contain a<b<c with b a multiple of a and c a multiple of b. What is the largest possible number of selected integers? Give an example and prove optimality.",
-        "subject": "拓展 · 倍数链极值",
-        "subject_en": "STRETCH · DIVISIBILITY CHAINS",
-        "origin": "原创教学题面 · 非试卷摘录",
+        "headline": "6×6棋盘按黑白相间染色，任意去掉一黑格与一白格。剩下34格是否总能用17块1×2骨牌无重叠铺满？允许旋转，不能越界。若能，给出适用于任意删格的办法；若不能，给出反例。",
+        "headline_en": "Colour a 6×6 board alternately black and white, then remove any one black square and any one white square. Can the remaining 34 squares always be tiled by seventeen 1×2 dominoes without overlap? Rotation is allowed; dominoes must stay inside the board. Give a method that works for every pair of removed squares, or a counterexample.",
+        "subject": "拓展 · 骨牌构造",
+        "subject_en": "STRETCH · DOMINO CONSTRUCTION",
+        "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "coral"
       }
     ]
   },
   "editorial_notes": [
-    "2026-10-23 review v1：内容接受待用户决定；具体版本及全部八屏发布批准待用户决定；未发布。10月22日批准仅适用于旧版，未继承批准记录。",
-    "当前批准基线2026-10-22 review v1，HEAD e56986cbd00bc80a960638e25579170d6965ad2d，approved.json blob 97909724f959437457dd2feb2b25f63b5d1f7f26。",
-    "替换全部六条新闻，无保留今早新闻。概率天气预报和晶体AI从10月21日未批准候选重新核验择用，不意味着继承任何批准。",
-    "六篇原始机构正文均于本轮直接读取，保留报道、事件及未来试验日期。NASA火星车页面发布10月21日、署文10月12日、里程事件10月11日；湿组织黏合为技术进展报道，手术用途计划2027年人体试验。",
-    "W43三题和W42真实揭晓整个weekly对象逐字保留，18秒及5分钟刷新不变；本周提示和答案仅在教师审阅附录，不进入学生播放JSON或八屏预览。",
-    "仅在仓库外独立副本构建和排版，正式仓库及旧稿保持不变；未提交、推送或部署。构建不等于实体屏验收。"
+    "2026-10-26 review v1：内容接受待定，具体版本及全部八屏发布批准待定，未发布；其他版本批准不适用于本稿。",
+    "当前批准基线2026-10-23 review v1，HEAD 815e8d29dea39995cd855cfcf93d7ab0fb3516c1，approved.json blob 0eba44c23ff8af719efa455d3cfce6edb0a7f8d6。Library及本地未发现同日电子屏稿。",
+    "10月26日为周一，ISO周2026-W44；真实上一周为2026-W43。三个揭晓的题面及英文逐字复制已批准W43题目，未沿用过期W42答案。W44三题为新拟教学题面，提示与答案仅在独立教师材料。",
+    "六条新闻均与10月23日不同，原始机构正文于10月25日直接核验。尼古丁奖励回路的背景解释另核对Stanford Medicine教学原文，不把背景材料日期当作新闻日期。",
+    "保留schema_version=2、demo=false及display；两屏新闻、三屏W43揭晓、三屏W44新题，每屏18秒，每5分钟刷新。",
+    "已读取AGENTS.md、docs/maintain-site.md、docs/maintain-content.md及skills/starlight-publish/SKILL.md。.agents目录无可用技能；仅采用适用构建与输出检查，不进入提交发布步骤。",
+    "仅在仓库外独立预览副本构建与排版，不修改正式approved.json或其他仓库文件，不提交、推送、部署；构建不等于实体屏验收。"
   ],
   "review": {
     "reviewer": "content owner",
-    "approved_at": "2026-10-23T00:29+08:00",
+    "approved_at": "2026-10-25T13:00:15Z",
     "content_acceptance": {
       "accepted": true,
-      "accepted_at": "2026-10-23T00:29+08:00",
-      "edition": "2026-10-23 review v1",
+      "accepted_at": "2026-10-25T13:00:15Z",
+      "edition": "2026-10-26 review v1",
       "scope": "All eight reviewed bilingual student slides, unchanged."
     },
     "publication_approval": {
       "approved": true,
-      "approved_at": "2026-10-23T00:29+08:00",
-      "edition": "2026-10-23 review v1",
+      "approved_at": "2026-10-25T13:00:15Z",
+      "edition": "2026-10-26 review v1",
       "scope": "Publish all eight student slides through this repository GitHub Pages route. Electronic screen only; no other project Git synchronization."
     },
-    "reviewed_draft_sha256": "724b7f8a58df88926daac26ff38b3d77ffc0aa1b0d4b068cfbddb7a63f08343f",
-    "reviewed_draft_bytes": 16508,
-    "note": "Content acceptance and publication approval are recorded separately for the exact 2026-10-23 review v1 prepared on Thursday evening for Friday. Approval was received early Friday, not Friday evening. The original eight-slide body is unchanged; only status and this review record differ from the reviewed JSON. All 48 bilingual student text fields were checked against the reviewed Library PDF before release. Historical draft notes remain as provenance. W43 questions and genuine W42 reveals are unchanged. Teacher-only appendix hints and answers are excluded from student playback. Approval time is recorded to the minute supplied by the parent conversation. Physical display not inspected."
+    "reviewed_draft_sha256": "42fdfc03d3234e8ab5a8333a2dcb1422fb8e2671293977db8b50e454f9fbc8c1",
+    "reviewed_draft_bytes": 16734,
+    "note": "Content acceptance and publication approval are recorded separately for the exact 2026-10-26 review v1. All 48 bilingual student fields and the six primary source URLs were matched against the reviewed HTML student section, normalizing only whitespace, Unicode compatibility characters, HTML escaping and transport backticks. The independent teacher section is excluded from student playback. Only status and this review record differ from the reviewed JSON; historical draft notes remain as provenance. W43 reveals correspond to the actual approved W43 questions; W44 challenges contain no hints or answers. Physical display not inspected."
   }
 }
