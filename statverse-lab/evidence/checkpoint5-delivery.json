@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-10-25T19:46:53.543Z",
+  "review_source_commit": "94d0b8ded2cefe1091f237543adde7c0330ce888",
+  "branch": "statverse-lab-20261025",
+  "site_source_commit": "f41ea1324cbb6a26fe75a87a1c77b957ae222060",
+  "deployment": {
+    "id": "appgdep_6ade5c99136c81919001e44af81796cf",
+    "project_id": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "title": "STATVERSE — Interactive Statistics Lab",
+    "version_id": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_f91ef543f91c81919b95a117848f8228",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ade2582c75481919d80c39e48a6a523",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-25T19:46:39.609046+00:00"
+  },
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/STATVERSE-checkpoint5-94d0b8d-static.zip",
+    "file_id": "file_00000000d44081f5be4f8f58e2a01935",
+    "library_file_id": "libfile_954ee19b65b8819184371e0cd3f272fe",
+    "file_name": "STATVERSE-checkpoint5-94d0b8d-static.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 110277,
+    "external_connectors_accessed": false
+  },
+  "zip_sha256": "eb5125763506deb0fef58cf2411146ee8e04a01f3a871d98552c54f0e5aae5c8",
+  "zip_bytes": 110277,
+  "source_module_count": 14,
+  "checks": {
+    "unit_groups": 71,
+    "built_output_de_flows": 24,
+    "built_output_f_and_p1_flows": 21,
+    "root_compatibility_pages": 289
+  },
+  "independent_status": "Checkpoint5 F UI and two GOF P1 repairs await independent recheck; prior independent report statuses preserved",
+  "scope": "Existing private Site only; no production/master changes"
+}
