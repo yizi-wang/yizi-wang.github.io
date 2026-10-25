@@ -1,0 +1,178 @@
+{
+  "timestamp": "2026-10-25T20:27:22.556Z",
+  "source_commit": "d9a1f12990df7728501f9b4480a05ca0a874da5d",
+  "code_fix_commit": "053de2a1ab63f7f1dac4a761c7dfee9aeefae37c",
+  "branch": "statverse-lab-20261025",
+  "site_source_commit": "fdc4cc8a82a64227fea71bfb41e59fc3a4ee6b85",
+  "deployment": {
+    "id": "appgdep_6ade65c1128881919fff4374373c687d",
+    "project_id": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "title": "STATVERSE — Interactive Statistics Lab",
+    "version_id": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_6a3b88b4ba348191a786d1c56ce362f8",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ade2582c75481919d80c39e48a6a523",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-25T20:25:44.681481+00:00"
+  },
+  "packages": {
+    "source_commit": "d9a1f12990df7728501f9b4480a05ca0a874da5d",
+    "source_module_count": 14,
+    "packages": [
+      {
+        "file": "/workspace/exports/STATVERSE-checkpoint6-d9a1f12-source-and-static.zip",
+        "bytes": 12040050,
+        "sha256": "2dd0081ce0a4c773fa27ad6322b15e374b865a7a2ac36b21ea368ab4119f0d50",
+        "entries": 193
+      },
+      {
+        "file": "/workspace/exports/STATVERSE-checkpoint6-d9a1f12-static.zip",
+        "bytes": 276774,
+        "sha256": "4bb273f4504f3aaff5ae7b42526d5fe0f819fb3385f1e5dc08b5f71c3bf2ec9e",
+        "entries": 28
+      },
+      {
+        "file": "/workspace/exports/STATVERSE-checkpoint6-d9a1f12-developer-screenshots.zip",
+        "bytes": 1120225,
+        "sha256": "77811ebe48bc2b2c87c33f89f1f6ee982ce7ac3078243709290fd997d7834493",
+        "entries": 9
+      }
+    ]
+  },
+  "library_packages": [
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-checkpoint6-d9a1f12-source-and-static.zip",
+      "file_id": "file_00000000d1a081f7b82a8051b8f2f989",
+      "library_file_id": "libfile_db7f89fda98081919ff80d7c65458d99",
+      "file_name": "STATVERSE-checkpoint6-d9a1f12-source-and-static.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 12040050,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-checkpoint6-d9a1f12-static.zip",
+      "file_id": "file_00000000498481f5b9ea435b6c86e7a2",
+      "library_file_id": "libfile_9136654748d48191b8087a1a36bc9590",
+      "file_name": "STATVERSE-checkpoint6-d9a1f12-static.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 276774,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-checkpoint6-d9a1f12-developer-screenshots.zip",
+      "file_id": "file_00000000ddb48230b416dfc1aac36fb3",
+      "library_file_id": "libfile_f6bf628084ac81918debfde0613b0766",
+      "file_name": "STATVERSE-checkpoint6-d9a1f12-developer-screenshots.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 1120225,
+      "external_connectors_accessed": false
+    }
+  ],
+  "classroom_library": [
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-18min-teacher-guide.pdf",
+      "file_id": "file_0000000041c481f5a4d956920da12749",
+      "library_file_id": "libfile_e5734d3cc00081918b5b47af4398a984",
+      "file_name": "STATVERSE-18min-teacher-guide.pdf",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/pdf",
+      "library_artifact_type": "other",
+      "file_size_bytes": 157650,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-student-transfer.pdf",
+      "file_id": "file_00000000d02082308355061a10bf518a",
+      "library_file_id": "libfile_f69d9e15a40c8191b36847909399bbfd",
+      "file_name": "STATVERSE-student-transfer.pdf",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/pdf",
+      "library_artifact_type": "other",
+      "file_size_bytes": 59851,
+      "external_connectors_accessed": false
+    }
+  ],
+  "independent_screenshot_archive": {
+    "library_file_id": "libfile_769f44ef833c8191a359f6cc4222672d",
+    "file_id": "file_00000000ba2081f5abe2d1fe69618ec9",
+    "name": "STATVERSE-independent-review-S5-94d0b8d.zip",
+    "png_count": 59,
+    "scope": "Independent actual-browser94d0b8d archive, separate origin from developer images"
+  },
+  "independent_baseline_score": {
+    "source_commit": "94d0b8ded2cefe1091f237543adde7c0330ce888",
+    "score": 86.8,
+    "meaning": "Independent software/design/evidence assessment; not mathematical accuracy percentage or real student outcomes; no score increase inferred for later fixes"
+  },
+  "checks": {
+    "unit": 71,
+    "de_browser": 24,
+    "f_p1_browser": 21,
+    "global_browser": 8,
+    "lab_viewport_scans": 36,
+    "source_modules": 14,
+    "root_pages": 289
+  },
+  "pending": "Independent spot-check of053de2a C1-C5/access/Teacher label/font/favicon and reading/print pages; two optional presentationP2 enhancements queued; no new inference method planned",
+  "production_changes": false
+}

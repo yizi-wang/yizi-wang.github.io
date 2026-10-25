@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-10-25T20:26:54.494Z",
+  "sourceCommit": "d9a1f12990df7728501f9b4480a05ca0a874da5d",
+  "type": "Actual developer check of extracted static ZIP through included Python launcher with all external requests blocked",
+  "directory": "/workspace/statverse-offline-d9a1f12-343qwvsd",
+  "sample": [
+    8,
+    40,
+    2
+  ],
+  "sampleMean": 16.666666666666668,
+  "normal": {
+    "mean": 11,
+    "variance": 97
+  },
+  "guideClosedAnswers": true,
+  "scopeRows": 23,
+  "handoutHTTP": 200,
+  "faviconHTTP": 200,
+  "externalRequests": [],
+  "status": "PASS",
+  "launcherExitCode": 0,
+  "launcherLog": "STATVERSE: http://127.0.0.1:4191/\nKeep this window open. Press Ctrl+C to stop.\nAll experiment calculations run locally.\n127.0.0.1 - - [25/Oct/2026 20:26:52] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/inference.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/visibility.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/statistics.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/mean-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/discrete-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/chi-square-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/sampling-design-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/normal-combination-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/correlation.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/categorical-model.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/sampling-design.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/lab-ui.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:53] \"GET /src/correlation-tables.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /guide.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /handouts/STATVERSE-student-transfer.pdf HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /scope.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 20:26:54] \"GET /favicon.svg HTTP/1.1\" 200 -\n\nStopped.\n"
+}
