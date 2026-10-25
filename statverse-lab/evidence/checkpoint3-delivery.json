@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-25T18:08:10.902014+00:00",
+  "sourceReviewCommit": "7baa7fd15597b2bf4cbf1bcabf7fc6893c9d06c5",
+  "sourceCodeCommit": "c6e0d16e40f2f78ce4758044429203949d3964c9",
+  "branch": "statverse-lab-20261025",
+  "site": {
+    "projectId": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "deploymentId": "appgdep_6ade4580efa08191a6774af85af2eac7",
+    "versionId": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_eb7c818e27a8819196a5c4822a11fb7c",
+    "status": "succeeded",
+    "url": "https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site",
+    "access": "owner-private",
+    "sourceCommit": "c6cc47af1621c05bc418ae3530ec57aac37a88b1"
+  },
+  "library": {
+    "libraryFileId": "libfile_d5356d5a1ce48191bdf396d641309ab4",
+    "fileId": "file_0000000005c881f8aed8331258bc9c39",
+    "fileName": "STATVERSE-checkpoint3-7baa7fd-static.zip",
+    "bytes": 63760,
+    "sha256": "e50c218001fa088675d2ac9a2570ee6c00a7746ca7c0e9ed31183648f7dd0822"
+  },
+  "developerEvidence": {
+    "unitGroupsPassed": 48,
+    "baselineBrowserFlowsPassed": 11,
+    "previousBrowserRegressionsPassed": 13,
+    "builtBrowserRegressionsPassed": 14,
+    "browser": "Chromium151.0.7922.173",
+    "realStudents": 0,
+    "independentStage3Review": "PENDING"
+  },
+  "remaining": [
+    "D discrete UI absent",
+    "E chi-square UI absent",
+    "F not integrated",
+    "8f088 engine independent re-review pending",
+    "Adjacent-confidence 1ulp P3 documented",
+    "Projection-distance and screen-reader trial absent"
+  ]
+}
