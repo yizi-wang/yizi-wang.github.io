@@ -1,0 +1,125 @@
+{
+  "application_commit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "source_record_commit": "dcbb25c5894b547ce32cfad61404a02fa7c02a7e",
+  "selection_note": "One already-uploaded exact frozen-application Library set remains the available runtime/source/handout/screenshot delivery. Later final review/provenance records are on the development branch. Updated records-inclusive local ZIPs are verified but unuploaded after the stopped network failure; no new IDs are fabricated.",
+  "artifacts": [
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-Teacher-Guide-v4.1.pdf",
+      "file_id": "file_00000000672c81f5aaf8072bca829f74",
+      "library_file_id": "libfile_91661210f8f0819189eb8167a12c8bc4",
+      "file_name": "STATVERSE-Teacher-Guide-v4.1.pdf",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/pdf",
+      "library_artifact_type": "other",
+      "file_size_bytes": 161755,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-Student-Transfer-v4.1.pdf",
+      "file_id": "file_000000002db481f7b07c8fc1a60d3be4",
+      "library_file_id": "libfile_aad2f305b7408191b45956638fbfb433",
+      "file_name": "STATVERSE-Student-Transfer-v4.1.pdf",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/pdf",
+      "library_artifact_type": "other",
+      "file_size_bytes": 66812,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-freeze-candidate-accc8f9-source-and-static.zip",
+      "file_id": "file_0000000071f48230a013f8f429c2cb24",
+      "library_file_id": "libfile_cc8ccc402efc8191970b15a11e98337d",
+      "file_name": "STATVERSE-freeze-candidate-accc8f9-source-and-static.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 14193730,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-freeze-candidate-accc8f9-static.zip",
+      "file_id": "file_0000000015bc81f5a1ab3c2480b61d29",
+      "library_file_id": "libfile_35baafa3db708191b28f2be9ccc61439",
+      "file_name": "STATVERSE-freeze-candidate-accc8f9-static.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 288119,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-freeze-candidate-accc8f9-developer-screenshots.zip",
+      "file_id": "file_0000000063a881f5ad773d94ed90e2e6",
+      "library_file_id": "libfile_1546b99f0f08819196c5eacbf482a4a8",
+      "file_name": "STATVERSE-freeze-candidate-accc8f9-developer-screenshots.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 1485202,
+      "external_connectors_accessed": false
+    }
+  ],
+  "zip_hashes": {
+    "source_and_static": "a2cbf71dcf2169b0772bc015fe5b10322a89a2d5b9c2431c10d0343fc8065199",
+    "static": "64fdafe602ef40ebb977e34fb0433c8488958c6db41a113f8549e6d724bd50d4",
+    "developer_screenshots": "a36073175e77817da3aa38fe227c7f14b8549bf2170b2ccd93fc6f0bfa2ce629"
+  },
+  "native_pdf_verification": "evidence/final-pdf-consumer-verification.json",
+  "updated_local_bundle_upload": "evidence/final-delivery-attempt.json",
+  "independent_final_evidence_upload": "Failed in reviewer environment before prepare/finalize twice including one authorized retry; no IDs. Full transmitted report and local identities preserved under docs/reviews/FINAL-BROWSER-ACCEPTANCE-accc8f9.md.",
+  "score": {
+    "value": 86.8,
+    "fixed_application": "94d0b8d",
+    "meaning": "Software/design/evidence assessment; not correctness percent or learners, no automatic later score increase"
+  }
+}

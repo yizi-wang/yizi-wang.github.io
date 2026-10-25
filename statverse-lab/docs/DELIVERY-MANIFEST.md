@@ -2,7 +2,24 @@
 
 Application anchor: `accc8f9435ebfb6109568831704c1d34a350d5f7`. Version0.5.2; guidev4.1. A source bundle's COMMIT identifies its documentation snapshot; it must not be substituted for the independently tested application SHA.
 
-The final outbound package IDs are recorded after Library acknowledges those files, on the [live development-branch copy of this index](https://github.com/yizi-wang/yizi-wang.github.io/blob/statverse-lab-20261025/statverse-lab/docs/DELIVERY-MANIFEST.md). A source package cannot embed its own subsequently assigned Library identity. Keep its local manifest/COMMIT together with that live index.
+## Selected available Library set
+
+The following exact frozen-application files are already saved and remain the final available Library set. Their application is the independently acceptedaccc8f9. New records-inclusive final ZIPs/report were verified locally but their single official three-file upload failed before prepare/finalize at read-only tools discovery; zero new IDs. No retry or alternate route was used. Final acceptance records are available on the development branch, separate from the unchanged application bytes.
+
+|Item|Library ID|bytes|SHA256|
+|---|---|---:|---|
+|Exact application source + static|libfile_cc8ccc402efc8191970b15a11e98337d|14193730|a2cbf71dcf2169b0772bc015fe5b10322a89a2d5b9c2431c10d0343fc8065199|
+|Standalone static app + canonical handouts|libfile_35baafa3db708191b28f2be9ccc61439|288119|64fdafe602ef40ebb977e34fb0433c8488958c6db41a113f8549e6d724bd50d4|
+
+Latest complete records-inclusive source commit:dcbb25c5894b547ce32cfad61404a02fa7c02a7e. [Short delivery report](https://github.com/yizi-wang/yizi-wang.github.io/blob/statverse-lab-20261025/statverse-lab/docs/DELIVERY-SUMMARY.md) and [complete final independent browser report](https://github.com/yizi-wang/yizi-wang.github.io/blob/statverse-lab-20261025/statverse-lab/docs/reviews/FINAL-BROWSER-ACCEPTANCE-accc8f9.md) are readable on that branch. Original master remains unchanged. The source package cannot embed a subsequently assigned identity for itself; refer to this live index for the final selection.
+
+Local final files, **not Library uploads**:
+
+- STATVERSE-final-dcbb25c-source-and-static.zip:14248700bytes, SHA2560277efe4ffafdf07c94fde8219e6591e5601af396161957e90a9382919dad248.
+- STATVERSE-final-dcbb25c-static.zip:289095bytes, SHA2569881ac31a1c2635a16dc3e060282921eb34fd78d1ac5081be5acd6052530eae2.
+- STATVERSE-final-delivery-report.md:3061bytes, SHA25684182ebd5efe74b9c059b862ec5ee6a31d0cc9267b858474008fd51ef49cb357.
+
+The exact action/error/stage and completed checks are in evidence/final-delivery-attempt.json; successful prior file IDs are retained in evidence/final-selected-delivery.json. This is a network failure, not an approval denial or uncertain write. The updated three-file batch is stopped until the official channel is available; no successful save is implied.
 
 ## Exact approved classroom PDFs
 

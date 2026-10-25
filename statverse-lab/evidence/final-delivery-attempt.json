@@ -1,0 +1,64 @@
+{
+  "recorded_at": "2026-10-25T21:49:25.654566+00:00",
+  "application_commit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "source_record_commit": "dcbb25c5894b547ce32cfad61404a02fa7c02a7e",
+  "action": "Save one ordered three-file final source/static/report batch with the current official Library prepared-upload helper",
+  "targets": [
+    {
+      "local_path": "/workspace/exports/STATVERSE-final-dcbb25c-source-and-static.zip",
+      "bytes": 14248700,
+      "sha256": "0277efe4ffafdf07c94fde8219e6591e5601af396161957e90a9382919dad248"
+    },
+    {
+      "local_path": "/workspace/exports/STATVERSE-final-dcbb25c-static.zip",
+      "bytes": 289095,
+      "sha256": "9881ac31a1c2635a16dc3e060282921eb34fd78d1ac5081be5acd6052530eae2"
+    },
+    {
+      "local_path": "/workspace/exports/STATVERSE-final-delivery-report.md",
+      "bytes": 3061,
+      "sha256": "84182ebd5efe74b9c059b862ec5ee6a31d0cc9267b858474008fd51ef49cb357"
+    }
+  ],
+  "status": "BLOCKED \u2014 network; known not uploaded",
+  "exit_code": 1,
+  "exact_error": "library upload failed: hosted apps tools/list request failed: network",
+  "failure_stage": "read-only hosted-tool discovery",
+  "prepare_executed": false,
+  "finalize_executed": false,
+  "new_library_ids": [],
+  "uncertain_external_write": false,
+  "automatic_approval_rejection": false,
+  "attempts": 1,
+  "retry_or_alternate_transfer": false,
+  "continuing_work": "Verified local final ZIP manifests and loopback launch; complete final reports already committed/pushed to development branch; existing exact-application Library assets remain valid. Record final selection and stop this upload action.",
+  "verification": {
+    "application_commit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+    "source_record_commit": "dcbb25c5894b547ce32cfad61404a02fa7c02a7e",
+    "packages": [
+      {
+        "name": "STATVERSE-final-dcbb25c-source-and-static.zip",
+        "entries": 238,
+        "manifestAllPass": true,
+        "bytes": 14248700,
+        "sha256": "0277efe4ffafdf07c94fde8219e6591e5601af396161957e90a9382919dad248"
+      },
+      {
+        "name": "STATVERSE-final-dcbb25c-static.zip",
+        "entries": 27,
+        "manifestAllPass": true,
+        "bytes": 289095,
+        "sha256": "9881ac31a1c2635a16dc3e060282921eb34fd78d1ac5081be5acd6052530eae2"
+      }
+    ],
+    "short_report": {
+      "file": "/workspace/exports/STATVERSE-final-delivery-report.md",
+      "bytes": 3061,
+      "sha256": "84182ebd5efe74b9c059b862ec5ee6a31d0cc9267b858474008fd51ef49cb357"
+    },
+    "runtime_asset_hashes_verified_over_HTTP": 21,
+    "launcher_exit": 0,
+    "temporary_root": "/workspace/statverse-final-dcbb25c-_q6bk16t",
+    "note": "Final docs/evidence snapshot differs from frozen application only in README/docs/evidence. Existing approved classroom PDF bytes and all21 runtime assets remain unchanged. No new screenshot upload requested."
+  }
+}
