@@ -20,3 +20,16 @@ Authority: official Pearson IAL specification in CURRICULUM-MATH-REQUIREMENTS.md
 |F: displays/skew/outliers|S1.3§2 p55|Partial empirical histogram-style dots|No unequal-bin histogram lesson|
 
 Core inference plan: Normal z, known variance or explicit large-sample substitution; no t default. No blanket n≥30 guarantee. No claim of whole S1–S3 completion.
+
+## Checkpoint2 delta
+
+|Area|Updated implementation|Still incomplete / scope boundary|
+|---|---|---|
+|A S2 sampling/S3 estimation|Visible sample compression; reduced-motion equivalent; rule-bound predictions; exact ordered rows/weights/contributions; genuine teacher reveal/answers/pause|Independent learning/first30seconds validation pending|
+|B S3 CLT|Raw or standardized mean distributions; same samples; theoretical Z mean0/SD1; fixed-window overflow counts|No Normal source-population switch; card populations remain discrete/nonnormal|
+|B S3 CI|Knownσ90/95/99% levels, same-sample comparison; numeric/keyboard/touch interval details; fixedμ interpretation|Unknownσ large-sample option and mean-test UI absent; these nonnormal intervals approximate|
+|C S1 regression/PMCC, S3 ranks|Interactive scatter, values/ranks, ties averages, response-on-x line, outlier, monotone transform, extrapolation, U-shape/undefined states|Supplied critical-table inference not implemented; numerical ties explicitly extension|
+|C user-requested significance|Seeded999 conditional pair permutations with(b+1)/(B+1), MC error, stale-state invalidation|Enrichment; independence/exchangeability null distinct from generic zero correlation; no causal claim|
+|D/E|No new UI in this checkpoint; separate parent-coordinated pure inference task|Do not claim tests/chi-square course coverage from the unused helper functions|
+
+All statuses are developer implementation/testing status; independent classroom approval remains pending.

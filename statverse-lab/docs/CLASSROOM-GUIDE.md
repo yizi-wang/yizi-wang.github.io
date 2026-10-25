@@ -1,35 +1,21 @@
-# 18-minute classroom route: estimator, estimate, sampling distribution
+# 18-minute teacher-led route: estimator, estimate, sampling distribution
 
-Audience:16–18; Pearson Edexcel IAL S2 sampling distributions → S3 estimation. Developer-authored guide; not yet validated with students. No real student testing claimed. Use Teacher mode and16:9 projection; cards are fictional, independent replacement draws, no purchases. Each card's value is power, not probability.
+Audience16–18, Pearson Edexcel IAL S2→S3. This route follows independent review feedback; timings are suggested allocations, not observed student performance. No real student testing. Keep CLT/CI and correlation for separate lessons.
 
-## 0–2 min — Predict
+0–2min: Aurora Archive, mean, n3, seed aurora-2026. Teacher stage Population. Show μ5.3 once, then Hide true values. Ask “What stays fixed when we redraw?” State independent replacement draws; duplicates are possible. Do not begin with every definition.
 
-Start with Aurora Archive, n3, sample mean, seed aurora-2026. Hide true values. Ask: “Which can change when we repeat: the rule, the population mean, or this sample's mean?” Take a prediction before revealing definitions. Population is a fixed probability model; hiding does not make μ random. Reveal probabilities and explain replacement: duplicates are possible, draws independent.
+2–6min: Teacher stage One sample. Hide worked answers, draw once. Learners compute(8+40+2)/3=16.667 from the actual fixed-seed first group. Reveal worked answers. Advance to Sampling distribution: one complete three-card sample makes one point. Draw twice more, then use the number selector to return to sample1 and verify its original cards. The compression animation can be replayed; reduced motion keeps the same original-sample/estimate/point relationship in text.
 
-## 2–5 min — One group becomes one number
+6–10min: Mean,n3; predict narrower. Run200 samples, pausing to inspect one. Record SE3.590 externally before changing n. Increase R only: theoretical SE stays fixed. Change n12: results clear and SE1.795 halves. The app's saved prediction compares the actual baseline and new theoretical SE. Distinguish solid expectation from dashed finite simulation mean. An observed estimate need not equal the parameter.
 
-Draw once. Ask learners to add the three powers and divide by3. Match their answer with the displayed observed xbar. Follow “Find sample's point”; one complete group becomes **one point**, not three points. Draw twice more, then revisit sample1 using the native sample selector or a graph point. Ask: “Can you recover exactly which cards created this point?” Distinguish raw card variability from variability of sample means.
+10–14min: First-card rule. Setn3; predict Same. Change ton12. SE remainsσ≈6.219 because the rule ignores11cards. This statistic is still an estimator ofμ; unbiased does not imply precise. Distinguish fixed estimating rule from one observed number.
 
-## 5–8 min — A rule before, a number after
+14–18min: If time allows, mean+2 demonstrates bias2 surviving larger n. Teacher stage Transfer: factory groups of20, experiment repeated500times. Learners identify parameter, estimator, one estimate, n/R and the horizontal axis. Ask whether an unbiased estimator's next number must equal truth. Score their explanation, never whether a rare card appeared.
 
-Before another draw, point at the selected Sample mean rule: Xbar is a statistic used to estimate μ, an estimator. After the draw, its number xbar is an estimate. Ask learners for the next result; knowing the rule does not determine the random result.
-Switch to First card only; history clears because the rule changed. Explain this too is an estimator of μ. Reveal truth and compare theoretical E(T) with target μ. Unbiased does not guarantee any one estimate equals μ.
+Alternative lesson: replace mean+2 with tiny-pool exact enumeration; do not add both into18minutes. Three-moon n2 has9ordered groups, weights1/9, E2. Expand the exact table and inspect each group/p×T. Aurora's unequal probabilities show why unweighted averaging of ordered cases is wrong. Finite simulations need not equal the exact expectation.
 
-## 8–12 min — Separate n from R
+Teacher controls: native lab select remains available at1920×1080 and on phones; reveal stages act on real workspaces. Hide worked answers does not change samples or RNG. Pause sampling is always available in the teacher controls. Truth hiding is separate from concealing worked results. Root population/model and estimator conditions stay fixed unless an explicit control changes them.
 
-Return to mean; n3. Run200 repeated samples. Pause partway and inspect a saved sample. Identify solid theoretical expectation versus dashed finite simulation mean; they need not coincide. Increase R while n stays3: theoretical SE is unchanged. Reset and increase n to12: same fixed population, SE halves because n quadrupled. Horizontal support remains fixed for this pool/rule. Ask why “more reruns” does not make the next size3 mean more precise.
+Later CLT lesson: compare raw means and standardized Z using identical samples; Z has theoretical mean0/SD1, which does not make its distribution Normal. Out-of-window samples are counted and retained. Later CI lesson: choose90/95/99% on the same samples; inspect a numbered miss without color/hover. μ is fixed, endpoints random; card populations use a Normal approximation, not an exact finite-n guarantee. A realized interval does not carry a frequentist95% probability for fixedμ.
 
-## 12–15 min — Bias and exact expectation
-
-Select Mean+2. Predict whether increasing n repairs it; run a batch and compare theoretical bias2 with shrinking SE. An estimator may be precise around the wrong target.
-Optional tiny-pool route: select Three-moon, n2, exact enumeration. There are3²=9 ordered samples. Both orders count; exact probabilities are products. Distinguish the weighted exact distribution from a finite simulation. Aurora is unequally probable, so its ordered samples cannot be averaged unweighted.
-
-## 15–18 min — Transfer and exit question
-
-Have learners answer the on-page n/R challenge, then explain aloud. New situation: factory weights are sampled in groups of20; an engineer repeats the experiment500 times. Identify population parameter, estimator, one estimate, n and R, and what the distribution's horizontal axis represents. Ask: “Must an unbiased estimator's next answer be correct?” Expected: no; unbiased concerns expectation over repeated random samples, not any single estimate.
-
-Optional next lesson: CLT tab shows the distribution of **means**, not raw cards, approaching a Normal approximation; no universal n30 guarantee. Confidence tab uses knownσ95% z intervals; μ fixed, intervals random; these nonnormal populations give approximate coverage, especially poor at small n. Never say this observed interval has95% frequentist probability of containing fixed μ.
-
-## Teacher controls and practical limits
-
-Pause is available during batches; Reset reproduces seed/actions; Hide true values changes display only; sample selector is keyboard accessible. Teacher layout widens the workbench. Full staged reveal/focus tools are not yet present in checkpoint1. n1 S² is unavailable; exact enumeration capped20,000; records capped5000. Prefer200–1000 repetitions during class. All computations local; no student data collected.
+Current verification: developer browser paths and screenshots exist, plus independent review of the earlier commit. Checkpoint2 independent learning/projection review remains pending; physical classroom back-row readability has not been measured.

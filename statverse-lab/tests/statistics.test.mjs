@@ -149,3 +149,32 @@ test("invalid data/model boundaries are rejected explicitly", () => {
   );
   assert.throws(() => pearson([1, 2], [1]), RangeError);
 });
+
+test("independent review: degenerate model and explicit numeric support boundaries", () => {
+  const p = {
+    cards: [
+      { value: 7, p: 1 / 3 },
+      { value: 7, p: 1 / 3 },
+      { value: 7, p: 1 / 3 },
+    ],
+  };
+  assert.equal(moments(p).variance, 0);
+  assert.equal(theory(p, 3, "mean").se, 0);
+  assert.equal(theory(p, 3, "mean").expectation, 7);
+  assert.equal(variance([7, 7, 7]), 0);
+  assert.throws(() => mean([1e308, 1e308]), RangeError);
+  assert.throws(
+    () =>
+      theory(
+        {
+          cards: [
+            { value: -1e100, p: 0.5 },
+            { value: 1e100, p: 0.5 },
+          ],
+        },
+        2,
+        "variance",
+      ),
+    RangeError,
+  );
+});

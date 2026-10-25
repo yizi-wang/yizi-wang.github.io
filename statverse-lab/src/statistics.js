@@ -86,8 +86,14 @@ export const POOLS = {
   },
 };
 function validateData(xs) {
-  if (!Array.isArray(xs) || !xs.length || xs.some((x) => !Number.isFinite(x)))
-    throw new RangeError("A nonempty array of finite observations is required");
+  if (
+    !Array.isArray(xs) ||
+    !xs.length ||
+    xs.some((x) => !Number.isFinite(x) || Math.abs(x) > 1e70)
+  )
+    throw new RangeError(
+      "A nonempty array of finite observations with |value| ≤ 1e70 is required; larger magnitudes are outside the supported moment domain",
+    );
 }
 function validatePool(pool) {
   if (
@@ -95,6 +101,7 @@ function validatePool(pool) {
     pool.cards.some(
       (c) =>
         !Number.isFinite(c.value) ||
+        Math.abs(c.value) > 1e70 ||
         !Number.isFinite(c.p) ||
         c.p < 0 ||
         c.p > 1,
@@ -102,7 +109,7 @@ function validatePool(pool) {
     Math.abs(pool.cards.reduce((s, c) => s + c.p, 0) - 1) > 1e-10
   )
     throw new RangeError(
-      "Finite card values and probabilities summing to 1 are required",
+      "Card values must be finite with |value| ≤ 1e70; probabilities must lie in [0,1] and sum to 1",
     );
 }
 function validateRule(n, kind, offset) {
@@ -110,13 +117,15 @@ function validateRule(n, kind, offset) {
     throw new RangeError("n must be an integer from 1 to 200");
   if (
     !["mean", "first", "shift", "variance", "varianceN"].includes(kind) ||
-    !Number.isFinite(offset)
+    !Number.isFinite(offset) ||
+    Math.abs(offset) > 1e70
   )
     throw new RangeError("Unknown estimator or nonfinite offset");
 }
 export function mean(xs) {
   validateData(xs);
-  return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : NaN;
+  const anchor = xs[0];
+  return anchor + xs.reduce((s, x) => s + (x - anchor), 0) / xs.length;
 }
 export function variance(xs, unbiased = true) {
   const m = mean(xs);
@@ -127,7 +136,9 @@ export function variance(xs, unbiased = true) {
 }
 export function moments(pool) {
   validatePool(pool);
-  const mu = pool.cards.reduce((s, c) => s + c.value * c.p, 0);
+  const anchor = pool.cards.reduce((a, b) => (b.p > a.p ? b : a)).value;
+  const mu =
+    anchor + pool.cards.reduce((s, c) => s + (c.value - anchor) * c.p, 0);
   const v = pool.cards.reduce((s, c) => s + c.p * (c.value - mu) ** 2, 0);
   return {
     mu,
@@ -153,6 +164,8 @@ export function draw(pool, n, rng) {
     throw new RangeError("n must be an integer from 1 to 200");
   return Array.from({ length: n }, () => {
     const u = rng();
+    if (!Number.isFinite(u) || u < 0 || u >= 1)
+      throw new RangeError("RNG must return a finite value in [0,1)");
     let c = 0;
     for (let i = 0; i < pool.cards.length; i++) {
       c += pool.cards[i].p;
@@ -219,23 +232,47 @@ export function exactDistribution(pool, n, kind, offset = 2) {
   return outcomes;
 }
 export function binomialAtLeastOne(n, p) {
+  if (
+    !Number.isSafeInteger(n) ||
+    n < 0 ||
+    !Number.isFinite(p) ||
+    p < 0 ||
+    p > 1
+  )
+    throw new RangeError(
+      "Binomial trials must be a nonnegative safe integer and probability in [0,1]",
+    );
+  if (n === 0 || p === 0) return 0;
+  if (p === 1) return 1;
   return -Math.expm1(n * Math.log1p(-p));
 }
 export function normalPDF(x, mu = 0, sd = 1) {
+  if (![x, mu, sd].every(Number.isFinite) || sd <= 0)
+    throw new RangeError(
+      "A Normal density requires finite x/mean and positive finite standard deviation",
+    );
   return Math.exp(-0.5 * ((x - mu) / sd) ** 2) / (sd * Math.sqrt(2 * Math.PI));
 }
 export function normalCDF(x) {
-  const s = x < 0 ? -1 : 1,
-    a = Math.abs(x) / Math.sqrt(2),
-    t = 1 / (1 + 0.3275911 * a);
-  const erf =
-    1 -
-    ((((1.061405429 * t - 1.453152027) * t + 1.421413741) * t - 0.284496736) *
-      t +
-      0.254829592) *
-      t *
-      Math.exp(-a * a);
-  return 0.5 * (1 + s * erf);
+  if (Number.isNaN(x) || typeof x !== "number")
+    throw new RangeError("Normal CDF argument must be a real number");
+  if (x === Infinity) return 1;
+  if (x === -Infinity) return 0;
+  const a = Math.abs(x);
+  let tail;
+  if (a >= 5) {
+    let fraction = 0;
+    for (let k = 100; k >= 1; k--) fraction = k / (a + fraction);
+    tail = Math.exp((-a * a) / 2) / (Math.sqrt(2 * Math.PI) * (a + fraction));
+  } else {
+    const n = Math.max(2, 2 * Math.ceil(a * 128)),
+      h = a / n,
+      phi = (t) => Math.exp((-t * t) / 2) / Math.sqrt(2 * Math.PI);
+    let sum = phi(0) + phi(a);
+    for (let i = 1; i < n; i++) sum += (i % 2 ? 4 : 2) * phi(i * h);
+    tail = 0.5 - (h * sum) / 3;
+  }
+  return Math.max(0, Math.min(1, x < 0 ? tail : 1 - tail));
 }
 export function ranks(xs) {
   validateData(xs);
@@ -291,4 +328,81 @@ export function contingency(observed) {
     valid: expected.flat().every((e) => e >= 5),
     total,
   };
+}
+
+export function regression(xs, ys) {
+  validateData(xs);
+  validateData(ys);
+  if (xs.length !== ys.length || xs.length < 2)
+    throw new RangeError("At least two paired observations are required");
+  const mx = mean(xs),
+    my = mean(ys),
+    sxx = xs.reduce((s, x) => s + (x - mx) ** 2, 0),
+    sxy = xs.reduce((s, x, i) => s + (x - mx) * (ys[i] - my), 0);
+  if (!sxx) return null;
+  const slope = sxy / sxx;
+  return {
+    slope,
+    intercept: my - slope * mx,
+    predict: (x) => my + slope * (x - mx),
+  };
+}
+export function shuffle(xs, rng) {
+  const a = [...xs];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+export function meanZTest({ xbar, mu0, sigma, n, tail = "two" }) {
+  if (
+    ![xbar, mu0, sigma].every(Number.isFinite) ||
+    sigma <= 0 ||
+    !Number.isInteger(n) ||
+    n < 1 ||
+    !["lower", "upper", "two"].includes(tail)
+  )
+    throw new RangeError(
+      "Finite means, positive known sigma, integer n and valid tail required",
+    );
+  const se = sigma / Math.sqrt(n),
+    z = (xbar - mu0) / se,
+    p =
+      tail === "lower"
+        ? normalCDF(z)
+        : tail === "upper"
+          ? normalCDF(-z)
+          : 2 * normalCDF(-Math.abs(z));
+  return { z, se, p };
+}
+export function twoMeanZTest({
+  xbar,
+  ybar,
+  sigmaX,
+  sigmaY,
+  nx,
+  ny,
+  delta0 = 0,
+  tail = "two",
+}) {
+  if (
+    ![xbar, ybar, sigmaX, sigmaY, delta0].every(Number.isFinite) ||
+    sigmaX <= 0 ||
+    sigmaY <= 0 ||
+    ![nx, ny].every((n) => Number.isInteger(n) && n >= 1) ||
+    !["lower", "upper", "two"].includes(tail)
+  )
+    throw new RangeError(
+      "Two independent samples require finite means, positive known sigmas and integer sizes",
+    );
+  const se = Math.sqrt(sigmaX ** 2 / nx + sigmaY ** 2 / ny),
+    z = (xbar - ybar - delta0) / se,
+    p =
+      tail === "lower"
+        ? normalCDF(z)
+        : tail === "upper"
+          ? normalCDF(-z)
+          : 2 * normalCDF(-Math.abs(z));
+  return { z, se, p };
 }

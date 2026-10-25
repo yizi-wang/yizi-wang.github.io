@@ -1,0 +1,7 @@
+# Numeric contracts
+
+Current pedagogical models use card powers0–40 and n1–60. Correlation editor supports finite coordinates within±1,000,000. The pure sample/moment engine explicitly accepts observation/card magnitudes up to1e70, estimator offset magnitudes up to1e70, n1–200. Larger finite magnitudes are rejected with RangeError: fourth moments and variance-estimator SE formulas would otherwise overflow standard double precision. The tool does not claim to support arbitrary finite IEEE754 inputs. Very ill-conditioned floating-point inputs are not a symbolic/arbitrary-precision calculation.
+
+Probabilities must be finite in[0,1] and sum1 within1e−10. RNG callbacks must return a finite number in[0,1). Binomial-at-least-one supports nonnegative safe-integer trial counts, with n0/p0/p1 explicitly handled. A continuous Normal PDF requires positive finite SD; a zero-SD population is instead shown as a point mass. Normal CDF uses Simpson quadrature on|x|<5 and a convergent Mills-ratio continued fraction for larger tails, with independent oracle checks; no low-accuracy2×tail rounding beyond1e−7 tolerance is accepted.
+
+Constant populations have exact zero variance under the weighted-anchor moment calculation. CI endpoints collapse to[μ,μ], inclusion is inclusive and coverage100%; standardization divides by zero and is explicitly unavailable. Charts use a padded display span without changing the mathematical support.

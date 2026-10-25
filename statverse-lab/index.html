@@ -28,6 +28,9 @@
         ><button class="nav-item" data-lab="coverage">
           <span>03</span> Confidence intervals <i>↗</i>
         </button>
+        <button class="nav-item" data-lab="correlation">
+          <span>04</span> Correlation & regression <i>↗</i>
+        </button>
       </nav>
       <div class="sidebar-note">
         <span class="orb"></span
@@ -54,6 +57,15 @@
           </button>
         </div>
       </header>
+      <div class="compact-lab-switch">
+        <label for="lab-switch">STATISTICS LAB</label
+        ><select id="lab-switch">
+          <option value="sampling">01 · Sampling & estimators</option>
+          <option value="clt">02 · Central limit theorem</option>
+          <option value="coverage">03 · Confidence intervals</option>
+          <option value="correlation">04 · Correlation & regression</option>
+        </select>
+      </div>
       <main id="main">
         <section class="intro">
           <div>
@@ -73,238 +85,315 @@
             </button>
           </div>
         </section>
-        <section class="prediction" aria-label="Prediction">
-          <div class="prediction-icon">✦</div>
-          <div>
-            <span class="eyebrow">PREDICT BEFORE YOU DRAW</span>
-            <p id="predict-question">
-              If you draw more cards in each sample, what happens to the spread
-              of sample means?
-            </p>
-          </div>
-          <div class="prediction-options">
-            <button data-prediction="wider">Wider</button
-            ><button data-prediction="narrower">Narrower</button
-            ><button data-prediction="same">The same</button>
-          </div>
-          <p id="predict-feedback" aria-live="polite"></p>
-        </section>
-        <div class="experiment-toolbar">
-          <div class="pool-control">
-            <label for="pool">FIXED POPULATION</label
-            ><select id="pool">
-              <option value="aurora">Aurora Archive · skewed</option>
-              <option value="small">Three-moon model · exact</option>
-            </select>
-          </div>
-          <div class="toolbar-label">
-            <span class="status-dot"></span> IID · WITH REPLACEMENT
-            <button id="assumptions" class="text-button">Why? ↗</button>
-          </div>
-          <label class="toggle"
-            ><input type="checkbox" id="hide-truth" /><span
-              >Hide true values</span
-            ></label
-          >
-        </div>
         <section
-          class="population-panel"
-          aria-label="Fixed population probability distribution"
+          id="teacher-controls"
+          class="teacher-controls"
+          aria-label="Teacher presentation controls"
         >
-          <div class="section-heading">
-            <div>
-              <span class="step-number">01</span>
-              <h2>The population <small>总体</small></h2>
-            </div>
-            <span class="panel-caption"
-              >Transparent probabilities. No purchases. Original fictional
-              cards.</span
-            >
-          </div>
-          <div id="population" class="population-cards"></div>
-          <div class="population-summary">
-            <span>Random variable <b>X</b> = power of one random card</span
-            ><span class="truth" id="population-moments"></span>
-          </div>
+          <label for="teacher-stage">REVEAL STAGE</label
+          ><select id="teacher-stage">
+            <option value="all">All workspaces</option>
+            <option value="predict">1 · Predict</option>
+            <option value="population">2 · Fixed population</option>
+            <option value="sample">3 · One sample</option>
+            <option value="distribution">4 · Sampling distribution</option>
+            <option value="explain">5 · Explain</option>
+            <option value="transfer">6 · Transfer</option></select
+          ><button id="teacher-next" class="secondary">Next stage →</button
+          ><button id="teacher-pause" class="secondary" disabled>
+            Ⅱ Pause sampling</button
+          ><label class="toggle"
+            ><input id="hide-worked" type="checkbox" /> Hide worked
+            answers</label
+          >
+          <p id="teacher-question">
+            Keep the rule fixed. Let learners predict the next result before
+            drawing.
+          </p>
         </section>
-        <div class="workbench">
-          <section class="sample-panel panel">
-            <div class="section-heading">
-              <div>
-                <span class="step-number">02</span>
-                <h2>Draw a sample <small>样本</small></h2>
-              </div>
-              <span id="sample-badge" class="badge">READY</span>
-            </div>
-            <div class="control-row">
-              <label class="range-label" for="n"
-                >Cards per sample
-                <b>n = <output id="n-value">5</output></b></label
-              ><input id="n" type="range" min="1" max="60" value="5" />
-            </div>
-            <div id="sample-tray" class="sample-tray">
-              <div class="empty-sample">
-                <span>✦</span><b>Your next discovery starts here.</b>
-                <p>Draw a sample to meet the cards.</p>
-              </div>
-            </div>
-            <div class="estimate-box">
-              <div>
-                <span id="observed-label">OBSERVED ESTIMATE · x̄</span
-                ><strong id="observed">—</strong>
-              </div>
-              <p id="sample-caption">
-                One random sample → one calculated number.<br />这组卡牌将成为右图的一个点。
+        <div id="sampling-workspace">
+          <section class="prediction" aria-label="Prediction">
+            <div class="prediction-icon">✦</div>
+            <div>
+              <span class="eyebrow">PREDICT BEFORE YOU DRAW</span>
+              <p id="predict-question">
+                If you draw more cards in each sample, what happens to the
+                spread of sample means?
               </p>
             </div>
-            <div class="draw-controls">
-              <button class="primary" id="draw">
-                ✦ Draw one sample <span>→</span></button
-              ><button
-                id="replay"
-                class="secondary"
-                disabled
-                aria-label="Replay selected sample"
-              >
-                ↻ Replay
-              </button>
+            <div class="prediction-options">
+              <button data-prediction="wider">Wider</button
+              ><button data-prediction="narrower">Narrower</button
+              ><button data-prediction="same">The same</button>
             </div>
-            <div class="sample-formula" id="formula">
-              x̄ = (x₁ + ··· + xₙ) / n
-            </div>
+            <p id="predict-feedback" aria-live="polite"></p>
           </section>
-          <section class="distribution-panel panel">
+          <div id="clt-controls" class="method-controls hidden">
+            <label
+              ><input id="standardize" type="checkbox" /> Standardize the means:
+              Z = (X̄ − μ) / (σ/√n)</label
+            >
+            <p>
+              Same saved samples, new horizontal unit. Standardization sets mean
+              0 and SD 1; it does not itself make a distribution Normal.
+            </p>
+          </div>
+          <div class="experiment-toolbar">
+            <div class="pool-control">
+              <label for="pool">FIXED POPULATION</label
+              ><select id="pool">
+                <option value="aurora">Aurora Archive · skewed</option>
+                <option value="small">Three-moon model · exact</option>
+              </select>
+            </div>
+            <div class="toolbar-label">
+              <span class="status-dot"></span> IID · WITH REPLACEMENT
+              <button id="assumptions" class="text-button">Why? ↗</button>
+            </div>
+            <label class="toggle"
+              ><input type="checkbox" id="hide-truth" /><span
+                >Hide true values</span
+              ></label
+            >
+          </div>
+          <section
+            class="population-panel"
+            aria-label="Fixed population probability distribution"
+          >
             <div class="section-heading">
               <div>
-                <span class="step-number">03</span>
-                <h2>Collect the estimates <small>抽样分布</small></h2>
+                <span class="step-number">01</span>
+                <h2>The population <small>总体</small></h2>
               </div>
-              <span id="r-badge" class="badge mint">R = 0</span>
-            </div>
-            <div class="chart-topline">
-              <span id="chart-label">Sampling distribution of X̄</span
-              ><label
-                ><input type="checkbox" id="exact" /> Exact small model</label
+              <span class="panel-caption"
+                >Transparent probabilities. No purchases. Original fictional
+                cards.</span
               >
             </div>
-            <div
-              id="distribution-chart"
-              class="chart"
-              aria-label="Sampling distribution chart"
-            ></div>
-            <div class="chart-legend">
-              <span><i class="key-dot"></i> One sample → one point</span
-              ><span class="truth"
-                ><i class="key-line"></i> Theoretical E(T)</span
-              ><span><i class="key-line dashed"></i> Simulation mean</span>
+            <div id="population" class="population-cards"></div>
+            <div class="population-summary">
+              <span>Random variable <b>X</b> = power of one random card</span
+              ><span class="truth" id="population-moments"></span>
             </div>
-            <div id="chart-description" class="chart-description">
-              Draw your first sample. Then select any point to revisit its
-              cards.
+          </section>
+          <div class="workbench">
+            <section class="sample-panel panel">
+              <div class="section-heading">
+                <div>
+                  <span class="step-number">02</span>
+                  <h2>Draw a sample <small>样本</small></h2>
+                </div>
+                <span id="sample-badge" class="badge">READY</span>
+              </div>
+              <div class="control-row">
+                <label class="range-label" for="n"
+                  >Cards per sample
+                  <b>n = <output id="n-value">5</output></b></label
+                ><input id="n" type="range" min="1" max="60" value="5" />
+              </div>
+              <div id="sample-tray" class="sample-tray">
+                <div class="empty-sample">
+                  <span>✦</span><b>Your next discovery starts here.</b>
+                  <p>Draw a sample to meet the cards.</p>
+                </div>
+              </div>
+              <div class="estimate-box">
+                <div>
+                  <span id="observed-label">OBSERVED ESTIMATE · x̄</span
+                  ><strong id="observed">—</strong>
+                </div>
+                <p id="sample-caption">
+                  One random sample → one calculated number.<br />这组卡牌将成为右图的一个点。
+                </p>
+              </div>
+              <div class="draw-controls">
+                <button class="primary" id="draw">
+                  ✦ Draw one sample <span>→</span></button
+                ><button
+                  id="replay"
+                  class="secondary"
+                  disabled
+                  aria-label="Replay selected sample"
+                >
+                  ↻ Replay
+                </button>
+              </div>
+              <div class="sample-formula" id="formula">
+                x̄ = (x₁ + ··· + xₙ) / n
+              </div>
+            </section>
+            <section class="distribution-panel panel">
+              <div class="section-heading">
+                <div>
+                  <span class="step-number">03</span>
+                  <h2>Collect the estimates <small>抽样分布</small></h2>
+                </div>
+                <span id="r-badge" class="badge mint">R = 0</span>
+              </div>
+              <div class="chart-topline">
+                <span id="chart-label">Sampling distribution of X̄</span
+                ><label
+                  ><input type="checkbox" id="exact" /> Exact small model</label
+                >
+              </div>
+              <div
+                id="distribution-chart"
+                class="chart"
+                aria-label="Sampling distribution chart"
+              ></div>
+              <div class="chart-legend">
+                <span><i class="key-dot"></i> One sample → one point</span
+                ><span class="truth"
+                  ><i class="key-line"></i> Theoretical E(T)</span
+                ><span><i class="key-line dashed"></i> Simulation mean</span>
+              </div>
+              <div id="chart-description" class="chart-description">
+                Draw your first sample. Then select any point to revisit its
+                cards.
+              </div>
+              <div id="exact-inspector" class="exact-inspector hidden"></div>
+              <div class="batch-row">
+                <label for="batch">Repeated samples <b>R</b></label
+                ><select id="batch">
+                  <option value="50">+50</option>
+                  <option value="200" selected>+200</option>
+                  <option value="1000">+1,000</option></select
+                ><button id="run" class="secondary">▶ Run batch</button
+                ><button
+                  id="pause"
+                  class="icon-button"
+                  aria-label="Pause batch"
+                  disabled
+                >
+                  Ⅱ
+                </button>
+              </div>
+              <div class="distribution-metrics">
+                <div>
+                  <span>THEORETICAL E(T)</span
+                  ><b id="expectation" class="truth">—</b>
+                </div>
+                <div><span>SIMULATION MEAN</span><b id="simulation">—</b></div>
+                <div>
+                  <span>STANDARD ERROR</span><b id="se" class="truth">—</b>
+                </div>
+              </div>
+            </section>
+          </div>
+          <section class="settings-panel">
+            <div>
+              <label for="estimator">ESTIMATOR · THE RULE BEFORE THE DATA</label
+              ><select id="estimator">
+                <option value="mean">Sample mean · X̄</option>
+                <option value="first">First card only · X₁</option>
+                <option value="shift">Mean + 2 · X̄ + 2</option>
+                <option value="variance">Sample variance · S² (n − 1)</option>
+                <option value="varianceN">Variance with divisor n</option>
+              </select>
             </div>
-            <div class="batch-row">
-              <label for="batch">Repeated samples <b>R</b></label
-              ><select id="batch">
-                <option value="50">+50</option>
-                <option value="200" selected>+200</option>
-                <option value="1000">+1,000</option></select
-              ><button id="run" class="secondary">▶ Run batch</button
-              ><button
-                id="pause"
-                class="icon-button"
-                aria-label="Pause batch"
-                disabled
+            <div class="seed-control">
+              <label for="seed">REPRODUCIBLE SEED</label
+              ><input id="seed" value="aurora-2026" maxlength="64" /><button
+                id="reset"
+                class="text-button"
               >
-                Ⅱ
+                ↻ Reset & repeat
               </button>
             </div>
-            <div class="distribution-metrics">
+            <p id="reset-note" aria-live="polite">
+              Change n, pool or estimator → start a fresh experiment.
+            </p>
+          </section>
+          <section id="coverage-panel" class="panel hidden">
+            <div class="section-heading">
               <div>
-                <span>THEORETICAL E(T)</span
-                ><b id="expectation" class="truth">—</b>
+                <span class="step-number">04</span>
+                <h2>Random intervals, fixed truth <small>重复覆盖率</small></h2>
               </div>
-              <div><span>SIMULATION MEAN</span><b id="simulation">—</b></div>
-              <div>
-                <span>STANDARD ERROR</span><b id="se" class="truth">—</b>
-              </div>
+              <span class="badge">KNOWN σ · z INTERVAL</span>
+            </div>
+            <div class="method-controls">
+              <label for="confidence">Confidence level</label
+              ><select id="confidence">
+                <option value="0.9">90%</option>
+                <option value="0.95" selected>95%</option>
+                <option value="0.99">99%</option></select
+              ><span>Change confidence using the same saved samples.</span>
+            </div>
+            <p id="coverage-method">
+              Each interval uses a known-σ Normal z method. These card
+              populations are non-normal: coverage is approximate, especially at
+              small n. μ stays fixed.
+            </p>
+            <div class="ci-meaning">
+              <b>Before sampling</b><span>Random endpoints; one fixed μ.</span
+              ><b>After observing</b
+              ><span
+                >This interval either covers μ or misses it. A 95% method does
+                not assign a 95% frequentist probability to the fixed parameter
+                in this one fixed interval.</span
+              >
+            </div>
+            <div id="coverage-chart" class="coverage-chart"></div>
+            <p id="coverage-result"></p>
+            <div class="ci-selector">
+              <label for="ci-case">Inspect recorded interval</label
+              ><input
+                id="ci-case"
+                type="number"
+                min="1"
+                max="1"
+                value="1"
+                disabled
+              /><span id="ci-window"></span>
+            </div>
+            <output id="ci-detail" aria-live="polite"
+              >Draw a sample to inspect its interval.</output
+            >
+          </section>
+          <section class="discovery-panel">
+            <div>
+              <span class="eyebrow">OBSERVE → EXPLAIN</span>
+              <h2 id="insight-title">
+                Same rule. Different observed estimates.
+              </h2>
+              <p id="insight-body">
+                Before drawing, X̄ is a statistic and an estimator of μ. After
+                drawing, your x̄ is an observed estimate. Repeat the whole sample
+                to see how that rule varies.
+              </p>
+            </div>
+            <div class="discovery-stat">
+              <span id="bias-label">THEORETICAL BIAS</span
+              ><strong class="truth" id="bias">0</strong
+              ><small id="bias-note">E(T) − target parameter</small>
+            </div>
+          </section>
+          <section class="transfer">
+            <div>
+              <span class="eyebrow">TRANSFER · CHECK YOUR IDEA</span>
+              <h3 id="challenge-question">
+                You collect 1,000 samples instead of 200, keeping n = 5. Does
+                the theoretical standard error change?
+              </h3>
+            </div>
+            <div>
+              <button data-answer="yes">Yes, it shrinks</button
+              ><button data-answer="no">No, it stays the same</button>
+              <p id="challenge-feedback" aria-live="polite"></p>
             </div>
           </section>
         </div>
-        <section class="settings-panel">
-          <div>
-            <label for="estimator">ESTIMATOR · THE RULE BEFORE THE DATA</label
-            ><select id="estimator">
-              <option value="mean">Sample mean · X̄</option>
-              <option value="first">First card only · X₁</option>
-              <option value="shift">Mean + 2 · X̄ + 2</option>
-              <option value="variance">Sample variance · S² (n − 1)</option>
-              <option value="varianceN">Variance with divisor n</option>
-            </select>
-          </div>
-          <div class="seed-control">
-            <label for="seed">REPRODUCIBLE SEED</label
-            ><input id="seed" value="aurora-2026" maxlength="64" /><button
-              id="reset"
-              class="text-button"
-            >
-              ↻ Reset & repeat
-            </button>
-          </div>
-          <p id="reset-note" aria-live="polite">
-            Change n, pool or estimator → start a fresh experiment.
-          </p>
-        </section>
-        <section id="coverage-panel" class="panel hidden">
-          <div class="section-heading">
-            <div>
-              <span class="step-number">04</span>
-              <h2>Random intervals, fixed truth <small>重复覆盖率</small></h2>
-            </div>
-            <span class="badge">KNOWN σ · z INTERVAL</span>
-          </div>
-          <p>
-            Each sample gives x̄ ± 1.96 σ/√n. For this non-normal population this
-            is a Normal approximation; small n can have poor coverage. The
-            parameter μ stays fixed.
-          </p>
-          <div id="coverage-chart" class="coverage-chart"></div>
-          <p id="coverage-result"></p>
-        </section>
-        <section class="discovery-panel">
-          <div>
-            <span class="eyebrow">OBSERVE → EXPLAIN</span>
-            <h2 id="insight-title">Same rule. Different observed estimates.</h2>
-            <p id="insight-body">
-              Before drawing, X̄ is a statistic and an estimator of μ. After
-              drawing, your x̄ is an observed estimate. Repeat the whole sample
-              to see how that rule varies.
-            </p>
-          </div>
-          <div class="discovery-stat">
-            <span id="bias-label">THEORETICAL BIAS</span
-            ><strong class="truth" id="bias">0</strong
-            ><small id="bias-note">E(T) − target parameter</small>
-          </div>
-        </section>
-        <section class="transfer">
-          <div>
-            <span class="eyebrow">TRANSFER · CHECK YOUR IDEA</span>
-            <h3 id="challenge-question">
-              You collect 1,000 samples instead of 200, keeping n = 5. Does the
-              theoretical standard error change?
-            </h3>
-          </div>
-          <div>
-            <button data-answer="yes">Yes, it shrinks</button
-            ><button data-answer="no">No, it stays the same</button>
-            <p id="challenge-feedback" aria-live="polite"></p>
-          </div>
-        </section>
+        <section
+          id="correlation-workspace"
+          class="hidden"
+          aria-label="Correlation and regression lab"
+        ></section>
         <footer>
           <span>STATVERSE <b>Learn by changing the experiment.</b></span
           ><button id="guide-open" class="text-button">
             Field guide & course scope ↗</button
-          ><span>PRIVATE DEVELOPMENT PREVIEW · v0.1</span>
+          ><span>PRIVATE DEVELOPMENT PREVIEW · v0.2</span>
         </footer>
       </main>
     </div>

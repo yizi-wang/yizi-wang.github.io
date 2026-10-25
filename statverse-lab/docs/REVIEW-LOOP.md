@@ -35,3 +35,23 @@ URL https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site . Local brows
 Latest developer unit suite9/9 PASS; browser11/11 PASS, captured2026-10-25T16:14:35.819Z. Exact viewport image dimensions checked with PIL:1440×900,1920×1080,390×844. First-draw browser flow now uses the intro action and actually clicks sample1's SVG point; native sample selector also checked. Code is formatted for independent inspection. No simulated-novice success or independent implementation approval is claimed.
 
 Latest private deployment appgdep_6ade2bacbc748191962659b498cbdddf, version appgprj_6ade2582c75481919d80c39e48a6a523~appgver_6454bf5ca8ac8191972b9e5b5c446b44, Sites source afb1652087ef50d233545c696b41e2351d95f541. Status succeeded, same private URL.
+
+## Independent review round1 → checkpoint2 developer response
+
+Original findings: [pedagogy report](reviews/ROUND1-INDEPENDENT-PEDAGOGY.md), [transmitted math/engineering findings and failed materialization](reviews/ROUND1-MATH-ENGINEERING-RECEIVED.md). These original statuses are immutable history; the following is developer verification, not independent acceptance.
+
+|ID|Issue/evidence at65cf|Severity|Proposed repair|Actual modification|Actual developer regression|Independent status|
+|---|---|---|---|---|---|---|
+|R1|Only sidebar labs; hidden on phone/Teacher|P1|Always-available native lab chooser|index.html compact lab select; app shared lab/cancel path; responsive/Teacher visibility|browser-stage2:390px and1920px Teacher select Sampling/CLT/CI/C; PASS|Recheck pending|
+|R2|CI interval details only hover/color; sample1 n3 seed gives miss|P1|Numeric interval selector, explicit endpoints/μ/hit text, pointer/keyboard access|coverage renderer/selectors, selected-window labels, focusable interval points; miss line dashed, hidden truth preserves endpoints|Actual sample1[9.63,23.703] missesμ5.3, hide/reveal unchanged; keyboard sample2 and mobile selector PASS|Recheck pending|
+|R3|First-card estimator paired with mean-only prediction|P1|Bind prompt/baseline/feedback to rule and model|Rule-specific questions; SE baseline comparison; incompatible predictions cleared; raw/Z wording explicit|Mean n3→12 narrows; first SE unchanged and prompt names first-card rule; PASS|Recheck pending|
+|R4|Exact weighted outcomes not inspectable|P2|Paged original-sample/probability/contribution table|Exact cache and inspectable ordered rows, p products, p×T, weighted expectation, paging|9 tiny-model rows E2; Aurora page2 case11; PASS|Recheck pending|
+|R5|Pause4990+manual1+resume10→5001|P2 / engineering blocker|Capacity guard at append and each tick, update paused remaining|addOne guard; remaining clamped after manual draw and tick; visible reset-at-cap message|Real Chromium DOM with deterministic RAF schedule:4990/rem10→4991/rem9→5000/rem0; PASS, evidence/stage2-cap-regression.json|Recheck pending|
+|R6|Projection tick/metric sizes unverified|P2 risk|Increase core text and provide focus stages|Teacher ticks14px, labels12px, metrics25px, selector14px, genuine workspace reveal stages|Actual1920×1080 screenshots; font/layout code checked. No physical back-row test|Risk reduced, independent visual/physical review pending|
+|M1|Constant7 model produced degenerate NaN chart|P2|Weighted-anchor moments, padded display domains, zero-SE guards|Point mass/CI[μ,μ]; no divide-by-zero standardization/Normal density|Unit fixture plus actual browser SE0/CI[7,7]/finite SVG PASS|Recheck pending|
+|M2|Large finite values overflowed intermediate moments|P2|Supported-domain rejection instead of fake validity|Explicit |value|≤1e70 and |offset|≤1e70 RangeError contract; document limits|1e308 mean and±1e100 moment fixture rejected; PASS|Recheck pending|
+|M3|Invalid probabilities/negative SD/NaN RNG accepted|P2|Enforce helper contracts|Probability/n/RNG/Normal checks; binomial edge support; improved CDF accuracy|Domain cases and81-point independent Python erfc reference PASS|Recheck pending|
+
+Additional developer regression fixes during checkpoint2: CI selector blur could recreate an intended focus target; duplicate unchanged selections now do not redraw, and pointer/keyboard interval selection is explicit. The exact-row test initially assumed a closed details panel after a model change; product now preserves openness, and test opens only when needed. Screenshots are captured after blur/scroll-top to avoid fixed-element full-page capture artifacts; mobile skip-link positioning and resting invisibility improved.
+
+No independent checkpoint2 scores or real-student outcomes have been assigned. Developer browser evidence is evidence/browser-stage2-results.json; original11 flows were also rerun. The parent can pin the code commit enclosing this update for the next independent review.

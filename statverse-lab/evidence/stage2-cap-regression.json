@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-25T16:55:51.680Z",
+  "method": "Real Chromium DOM; deterministic requestAnimationFrame scheduling for exact pause boundary",
+  "paused": 4990,
+  "remaining": 10,
+  "single": 4991,
+  "singleRemaining": 9,
+  "final": 5000,
+  "finalRemaining": 0,
+  "disabled": true
+}

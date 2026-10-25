@@ -4,7 +4,13 @@ await rm(new URL("../dist/", import.meta.url), {
   force: true,
 });
 await mkdir(new URL("../dist/src/", import.meta.url), { recursive: true });
-for (const p of ["index.html", "style.css", "src/statistics.js", "src/app.js"])
+for (const p of [
+  "index.html",
+  "style.css",
+  "src/statistics.js",
+  "src/app.js",
+  "src/correlation.js",
+])
   await cp(
     new URL("../" + p, import.meta.url),
     new URL("../dist/" + p, import.meta.url),

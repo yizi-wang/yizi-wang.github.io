@@ -1,0 +1,28 @@
+
+> statverse-lab@0.2.0 test
+> node --test tests/*.test.mjs
+
+✔ known sigma one/two mean z independent oracles (2.699733ms)
+✔ regression intercept, residual sum and degeneracy (0.722662ms)
+✔ strictly increasing transforms preserve tied and untied rank correlation (0.437915ms)
+✔ shuffle preserves multisets and seed, including ties (1.426945ms)
+✔ independent review helper domain and degenerate probabilities (1.084659ms)
+✔ Normal CDF against independent Python erfc grid, including small tails (19.754708ms)
+✔ independent oracle: nine ordered samples, expectations and variances (7.948784ms)
+✔ unequal probabilities must weight ordered samples (0.217455ms)
+✔ expectation and SE: mean, first, shifted, variance (15.082501ms)
+✔ n affects mean SE; R is not a theory parameter (0.167947ms)
+✔ n=1 unbiased variance undefined; cap is honest (0.654047ms)
+✔ seed and RNG stream reproduce across batch boundaries (1.437917ms)
+✔ location, scale, order metamorphic properties (0.242461ms)
+✔ independent correlation and contingency oracles (1.165304ms)
+✔ invalid data/model boundaries are rejected explicitly (0.653812ms)
+✔ independent review: degenerate model and explicit numeric support boundaries (0.467851ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 131.93645

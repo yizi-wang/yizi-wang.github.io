@@ -21,3 +21,12 @@ Native Sites identity and deployment evidence in REVIEW-LOOP.md. No source helpe
 
 |16:09–16:14|Formatted source for review; added finite-input/model validation and a ninth unit test; corrected n1 stale selection and responsive SVG coordinate sizing; repeated browser suite11/11 PASS; captured exact1440×900,1920×1080,390×844 viewport screenshots|
 |16:17:55|Second native owner-private deployment succeeded; latest Sites source afb1652087ef50d233545c696b41e2351d95f541. First checkpoint is available for independent review; further project work remains.|
+
+|16:20–16:30|Checkpoint2 development: real teacher reveal/answer controls; group-to-point animation; exact ordered-row inspector/cache; standardized CLT and variable CI confidence; separate correlation UI with dragging/keyboard/numeric editing|
+|16:30–16:42|Received independent R1–R6 and math findings; prioritized navigation, CI detail access, prompt alignment, cap guard and degenerate models; preserved original report separately|
+|16:38–16:39|Uploaded exact65cf static snapshot to Library successfully,23,440bytes, with commit and SHA manifest; retained owner-private Site access|
+|16:42–16:43|Supported Library materialization of independent math archive prepared successfully; bundled helper download failed; verified zero local archive, no retry/alternate transfer; continued transmitted findings|
+|16:45–16:52|Actual Chromium checkpoint2 regression: initial2 failures (details test assumption and CI focus redraw); repaired/retested13/13 PASS; exact paused4990 cap scenario verified5000 in real DOM|
+|16:53–16:56|Final developer regression rerun11 baseline+13 new flows PASS;16 math/domain tests PASS including81 Normal-CDF reference points; original root compatibility build289pages PASS at16:54:08UTC,61.56s|
+
+These are actual checkpoint activities, not a claim of seven hours completed. Parent task still coordinates work through22:47:29UTC. No independent checkpoint2 approval or real student test is recorded.
