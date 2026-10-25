@@ -527,6 +527,15 @@ export function createCorrelationLab(root) {
   };
   return {
     render,
+    pause: () => {
+      if (state.running) {
+        state.analysisToken++;
+        state.running = false;
+        $("#cor-permute").disabled = false;
+        $("#cor-permutation-result").textContent =
+          "Permutation run stopped. Run again for a complete labelled Monte Carlo result.";
+      }
+    },
     getSnapshot: () => ({
       ...state,
       points: state.points.map((p) => [...p]),

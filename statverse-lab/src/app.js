@@ -18,11 +18,25 @@ import {
   normalCDF,
 } from "./statistics.js";
 import { createMeanLab } from "./mean-lab.js";
+import { createDiscreteLab } from "./discrete-lab.js";
+import { createChiSquareLab } from "./chi-square-lab.js";
 import { createCorrelationLab } from "./correlation.js";
 const correlationLab = createCorrelationLab(
   document.querySelector("#correlation-workspace"),
 );
 const meanLab = createMeanLab(document.querySelector("#mean-workspace"));
+const discreteLab = createDiscreteLab(
+  document.querySelector("#discrete-workspace"),
+);
+const chiSquareLab = createChiSquareLab(
+  document.querySelector("#chisquare-workspace"),
+);
+const externalLabs = {
+  correlation: correlationLab,
+  mean: meanLab,
+  discrete: discreteLab,
+  chisquare: chiSquareLab,
+};
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
 const fmt = (x, d = 3) =>
@@ -164,13 +178,26 @@ function selectedSample(animate = false) {
       `<span class="standardized-link"> Chart Z = ${fmt(z)}${Math.abs(z) > 4 ? " (outside the displayed −4 to 4 window; sample retained)" : ""}.</span>`,
     );
   }
-  $("#trace-point").onclick = () =>
+  $("#trace-point").onclick = () => {
+    if (
+      document.body.classList.contains("teacher") &&
+      $(".distribution-panel").classList.contains("stage-hidden")
+    ) {
+      state.teacherStage = "distribution";
+      $("#teacher-stage").value = "distribution";
+      applyTeacherStage();
+      chart();
+      coverage();
+    }
     $(".distribution-panel").scrollIntoView({
       block: "center",
       behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
         ? "instant"
         : "smooth",
     });
+    if (!workedAnswersHidden())
+      $(`.dot[data-index="${state.selected}"]`)?.focus({ preventScroll: true });
+  };
   $("#live").textContent = workedAnswersHidden()
     ? `Sample ${state.selected + 1}; ${state.n} card powers: ${values(POOLS[state.pool], s.ids).join(", ")}. Worked estimate hidden.`
     : `Sample ${state.selected + 1}. ${state.n} card powers: ${values(POOLS[state.pool], s.ids).join(", ")}. Observed ${spec.name}: ${fmt(s.value)}.`;
@@ -320,16 +347,27 @@ function chart() {
         cy = 195 + (j % 4) * 6,
         cx = x(transform(s.value));
       const selected = i === state.selected;
-      svg += `<circle class="dot" data-index="${i}" cx="${cx}" cy="${cy}" r="${selected ? 4.5 : R > 1000 ? 1.8 : 2.6}" fill="${selected ? "#f7d799" : "#a6f0cb"}" opacity="${selected ? 1 : 0.75}" stroke="${selected ? "#fff" : "none"}"><title>Sample #${i + 1}${workedAnswersHidden() ? "" : `: ${standardized ? "Z = " + fmt(transform(s.value)) + "; " : ""}${spec.observed} = ${fmt(s.value)}`}. Select to inspect its ${state.n} cards.</title></circle>`;
+      svg += `<circle class="dot" role="button" tabindex="${selected ? 0 : -1}" aria-label="Saved whole sample ${i + 1}; ${state.n} cards. Select to inspect original sample." data-index="${i}" cx="${cx}" cy="${cy}" r="${selected ? 4.5 : R > 1000 ? 1.8 : 2.6}" fill="${selected ? "#f7d799" : "#a6f0cb"}" opacity="${selected ? 1 : 0.75}" stroke="${selected ? "#fff" : "none"}"><title>Sample #${i + 1}${workedAnswersHidden() ? "" : `: ${standardized ? "Z = " + fmt(transform(s.value)) + "; " : ""}${spec.observed} = ${fmt(s.value)}`}. Select to inspect its ${state.n} cards.</title></circle>`;
     }),
   );
   svg += "</svg>";
   host.innerHTML = svg;
-  host
-    .querySelectorAll("[data-index]")
-    .forEach((el) =>
-      el.addEventListener("click", () => select(+el.dataset.index)),
-    );
+  host.querySelectorAll("[data-index]").forEach((el) => {
+    el.addEventListener("click", () => select(+el.dataset.index));
+    el.addEventListener("keydown", (e) => {
+      let i = +el.dataset.index;
+      if (["Enter", " "].includes(e.key)) e.preventDefault();
+      else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        i = Math.min(state.samples.length - 1, i + 1);
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        i = Math.max(0, i - 1);
+      } else return;
+      select(i);
+      $(`.dot[data-index="${i}"]`)?.focus({ preventScroll: true });
+    });
+  });
   const desc = $("#chart-description");
   desc.innerHTML = R
     ? `<label for="sample-picker">Revisit sample</label> <input id="sample-picker" type="number" min="1" max="${R}" value="${state.selected + 1}" aria-label="Choose recorded sample number" style="width:65px;background:#182536;color:#e9eef7;border:1px solid #3a4960;border-radius:4px;padding:3px 5px;font-size:10px"> <span>of ${R}${exact ? ` · exact: ${exact.length} weighted ordered samples` : ""}</span>`
@@ -810,6 +848,7 @@ $$("[data-lab]").forEach((b) =>
     const lab = b.dataset.lab;
     if (lab === state.lab) return;
     state.lab = lab;
+    document.body.dataset.currentLab = lab;
     state.introDismissed = true;
     clearPrediction();
     $("#challenge-feedback").textContent = "";
@@ -837,6 +876,18 @@ $$("[data-lab]").forEach((b) =>
         "总体均值与均值差：先定模型，再定位观测。Known σ or a stated large-sample approximation.",
         "S3 · ONE / TWO INDEPENDENT MEANS",
       ],
+      discrete: [
+        "Discrete hypothesis tests",
+        "Fix a rule. <em>Repeat the decision.</em>",
+        "把观测放进零假设分布，再比较重复拒绝率。Exact integer tails; transparent generating truth.",
+        "S2 · HYPOTHESES & CRITICAL REGIONS",
+      ],
+      chisquare: [
+        "Chi-square laboratory",
+        "Edit the counts. <em>Reveal the model.</em>",
+        "观察、期望与贡献同步改变。Meaningful pooling before an asymptotic decision.",
+        "S3 · GOODNESS OF FIT & INDEPENDENCE",
+      ],
       correlation: [
         "Correlation & regression",
         "Move a point. <em>Question the relationship.</em>",
@@ -856,6 +907,8 @@ $$("[data-lab]").forEach((b) =>
       coverage: "03",
       correlation: "04",
       mean: "05",
+      discrete: "06",
+      chisquare: "07",
     }[lab];
     if ($("#experiment-number"))
       $("#experiment-number").textContent = "EXPERIMENT " + labNumber;
@@ -866,34 +919,27 @@ $$("[data-lab]").forEach((b) =>
       coverage: "THE INTERVAL LAB",
       correlation: "THE RELATIONSHIP LAB",
       mean: "THE INFERENCE LAB",
+      discrete: "THE DECISION LAB",
+      chisquare: "THE CATEGORY LAB",
     }[lab];
     $("#crumb").textContent = meta[0];
     $("#lab-title").innerHTML = meta[1];
     $("#lab-subtitle").textContent = meta[2];
     $("#unit-label").textContent = meta[3];
-    $("#sampling-workspace").classList.toggle("hidden", ["correlation", "mean"].includes(lab));
-    $("#correlation-workspace").classList.toggle(
+    $("#sampling-workspace").classList.toggle(
       "hidden",
-      lab !== "correlation",
+      Boolean(externalLabs[lab]),
     );
-    $("#mean-workspace").classList.toggle("hidden", lab !== "mean");
-    $("#clt-controls").classList.toggle("hidden", lab !== "clt");
-    $("#quick-draw").classList.toggle(
-      "hidden",
-      ["correlation", "mean"].includes(lab),
-    );
-    if (lab !== "mean") meanLab.pause();
-    if (lab === "mean") {
-      stop();
-      state.remaining = 0;
-      meanLab.render();
-      applyTeacherStage();
-      return;
+    for (const [key, module] of Object.entries(externalLabs)) {
+      $("#" + key + "-workspace").classList.toggle("hidden", lab !== key);
+      if (lab !== key) module.pause?.();
     }
-    if (lab === "correlation") {
+    $("#clt-controls").classList.toggle("hidden", lab !== "clt");
+    $("#quick-draw").classList.toggle("hidden", Boolean(externalLabs[lab]));
+    if (externalLabs[lab]) {
       stop();
       state.remaining = 0;
-      correlationLab.render();
+      externalLabs[lab].render();
       applyTeacherStage();
       return;
     }
@@ -915,8 +961,7 @@ window.addEventListener("resize", () => {
   resizeFrame = requestAnimationFrame(() => {
     chart();
     coverage();
-    if (state.lab === "correlation") correlationLab.render();
-    if (state.lab === "mean") meanLab.render();
+    externalLabs[state.lab]?.render();
   });
 });
 window.STATVERSE = {
@@ -938,6 +983,8 @@ window.STATVERSE = {
     effectiveAnswersHidden: workedAnswersHidden(),
     correlation: correlationLab.getSnapshot(),
     meanInference: meanLab.getSnapshot(),
+    discrete: discreteLab.getSnapshot(),
+    chiSquare: chiSquareLab.getSnapshot(),
   }),
 };
 population();
@@ -1093,13 +1140,18 @@ function applyTeacherStage() {
       "Does more repetition reduce the SE of the next sample mean? Explain using the model.",
   };
   $("#teacher-question").textContent =
-    state.lab === "mean"
-      ? "State independence, variance knowledge and the alternative before revealing the null tails."
-      : state.lab === "correlation"
-        ? "Drag one point, then compare the change in Pearson r with the change in ranks."
-        : prompts[stage];
-  $("#teacher-stage").disabled = ["correlation", "mean"].includes(state.lab);
-  $("#teacher-next").disabled = ["correlation", "mean"].includes(state.lab);
+    state.lab === "discrete"
+      ? "Choose H₁ and α before the observation. Use Projection focus for the null distribution or repeated decisions."
+      : state.lab === "chisquare"
+        ? "Predict expected counts; inspect contributions and meaningful pooling. Projection focus keeps the current task together."
+        : state.lab === "mean"
+          ? "State independence, variance knowledge and the alternative before revealing the null tails."
+          : state.lab === "correlation"
+            ? "Drag one point, then compare the change in Pearson r with the change in ranks."
+            : prompts[stage];
+  $("#teacher-stage").disabled = Boolean(externalLabs[state.lab]);
+  $("#teacher-next").disabled = Boolean(externalLabs[state.lab]);
+  if (externalLabs[state.lab]) $("#teacher-pause").disabled = false;
   document.body.classList.toggle(
     "answers-hidden",
     teacher && state.answersHidden,
@@ -1109,7 +1161,12 @@ function applyTeacherStage() {
     teacher && (stage === "sample" || stage === "explain"),
   );
 }
-$("#teacher-pause").onclick = stop;
+$("#teacher-pause").onclick = () => {
+  if (externalLabs[state.lab]) {
+    externalLabs[state.lab].pause?.();
+    externalLabs[state.lab].render();
+  } else stop();
+};
 $("#teacher-stage").onchange = (e) => {
   state.teacherStage = e.target.value;
   applyTeacherStage();
@@ -1204,8 +1261,7 @@ function updatePredictionEvidence(t) {
 }
 
 function renderActiveLab() {
-  if (state.lab === "correlation") correlationLab.render();
-  else if (state.lab === "mean") meanLab.render();
+  if (externalLabs[state.lab]) externalLabs[state.lab].render();
   else {
     selectedSample();
     update();

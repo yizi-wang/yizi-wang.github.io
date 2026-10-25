@@ -49,3 +49,16 @@ All statuses are developer implementation/testing status; independent classroom 
 All earlier checkpoint rows remain historical implementation snapshots. This delta supersedes their current-feature statements; none implies complete S1–S3 coverage.
 
 18:07UTC follow-up: inference owner8f088 high-count residual repair is integrated and developer-regressed; independent re-review pending. Chi-square UI remains absent. P3 adjacent-confidence1ulp limitation remains documented.
+
+## Checkpoint4 delta — actual D/E interfaces
+
+|Official item|Implemented now|Honest remaining scope|
+|---|---|---|
+|S2.3§4.3–4.6 p59|Binomial/Poisson H₀/H₁, signed tails, exact null PMF, inclusive critical regions, nominal/actualα, observation and repeated fixed-rule decisions|No discrete Normal-approximation comparison UI; display n≤200,Poissonλ≤30|
+|S3.3§4 p62 independence|Live2×2/2×3/3×3 original counts, margins,E/contributions/χ²/df; E<5 blocks asymptoticp/decision; meaningful whole row/column merges|Preset-sized tables; no arbitrary dimension editor; random-sampling assumptions still needed|
+|S3.3§4 p62 fit|Four-category uniform/specified probabilities and Binomial(3,p); fittingp from same original counts subtractsq1 after pooling|Poisson,Normal,continuous-uniform GOF UI absent; no arbitrary fitted-q knob or exact multinomial test|
+|Interpretive enrichment|TypeI/II/power with explicit truth/direction; fixed-margin conditional shuffles separate from asymptotic law; Monte Carlo(b+1)/(R+1)/resolution/SE|Not additional compulsory syllabus topics; finite PRNG simulation is not an exact enumerated null|
+|Teacher/access|D/E focused model/result/repeat views, same maths/data, worked concealment, keyboard inputs and real desktop/phone PNGs|Physical projection/SR/real students absent; stage4 independent implementation review pending|
+|F|Separate658f005 pure module independently reviewed; report saved|Not imported, no F UI delivered in this checkpoint|
+
+Inference8f088 R1/M1–M3 sampled contracts independently passed; one-ulpCI and tinyTypeII complement limitations remain. The interface states tinyβ numerical precision and positivep underflow. Do not count unimplemented GOF families or F functions as full coverage.

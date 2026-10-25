@@ -34,6 +34,12 @@
         <button class="nav-item" data-lab="mean">
           <span>05</span> Mean inference <i>→</i>
         </button>
+        <button class="nav-item" data-lab="discrete">
+          <span>06</span> Discrete tests <i>→</i>
+        </button>
+        <button class="nav-item" data-lab="chisquare">
+          <span>07</span> Chi-square laboratory <i>→</i>
+        </button>
       </nav>
       <div class="sidebar-note">
         <span class="orb"></span
@@ -68,6 +74,8 @@
           <option value="coverage">03 · Confidence intervals</option>
           <option value="correlation">04 · Correlation & regression</option>
           <option value="mean">05 · Mean inference</option>
+          <option value="discrete">06 · Discrete tests</option>
+          <option value="chisquare">07 · Chi-square laboratory</option>
         </select>
       </div>
       <main id="main">
@@ -105,7 +113,7 @@
             <option value="transfer">6 · Transfer</option></select
           ><button id="teacher-next" class="secondary">Next stage →</button
           ><button id="teacher-pause" class="secondary" disabled>
-            Pause Pause sampling</button
+            Pause active experiment</button
           ><label class="toggle"
             ><input id="hide-worked" type="checkbox" /> Hide worked
             answers</label
@@ -432,11 +440,21 @@
           class="hidden"
           aria-label="Mean inference lab"
         ></section>
+        <section
+          id="discrete-workspace"
+          class="hidden"
+          aria-label="Discrete hypothesis test lab"
+        ></section>
+        <section
+          id="chisquare-workspace"
+          class="hidden"
+          aria-label="Chi-square lab"
+        ></section>
         <footer>
           <span>STATVERSE <b>Learn by changing the experiment.</b></span
           ><button id="guide-open" class="text-button">
             Field guide & course scope →</button
-          ><span>PRIVATE DEVELOPMENT PREVIEW · v0.2</span>
+          ><span>PRIVATE DEVELOPMENT PREVIEW · v0.4</span>
         </footer>
       </main>
     </div>
@@ -488,6 +506,64 @@
         unbiasedness, standard error, CLT and confidence intervals. Card artwork
         and exact enumeration are teaching contexts. No real student data is
         collected.
+      </p>
+      <details class="teacher-route">
+        <summary>
+          18-minute Teacher route · estimator / estimate / sampling distribution
+        </summary>
+        <p>
+          A teacher script, not evidence of a classroom trial. Choose Sampling &
+          estimators, Aurora, mean rule, n3, seed aurora-2026. In Teacher stage3
+          set/reset the seed, then return to stage2.
+        </p>
+        <ol>
+          <li>
+            <b>0–2min · Predict.</b> Stage2: identify the fixed pool and
+            independent replacement draws. Must each group have the pool mean?
+          </li>
+          <li>
+            <b>2–5min · Experiment.</b> Stage3: hide worked answers; draw one
+            group. Ask students to calculate from the three raw powers before
+            revealing the estimate.
+          </li>
+          <li>
+            <b>5–8min · Observe.</b> Next stage reveals the distribution. Trace
+            one entire group to its saved dot, draw again, then recall sample1.
+            Which object changed: parameter, rule or estimate?
+          </li>
+          <li>
+            <b>8–11min · Repeat.</b> Add200 samples. n is cards per group; R is
+            complete groups. Bars show relative frequency; dots below are
+            original groups and their vertical positions are not probabilities.
+          </li>
+          <li>
+            <b>11–14min · Explain.</b> Change to n2 and inspect25 weighted
+            ordered cases. Compare the probabilities of the lowest-lowest and
+            rarest-rarest pairs; do not treat them as equally likely.
+          </li>
+          <li>
+            <b>14–16min · Transfer.</b> Compare fresh n3 and n12 cohorts.
+            Predict centre and SE before changing n; R only improves the
+            simulated picture.
+          </li>
+          <li>
+            <b>16–18min · Exit check.</b> Ask each learner to identify
+            parameter, estimator, observed estimate, what one dot represents,
+            and why more R does not improve one future sample.
+          </li>
+        </ol>
+        <p>
+          Real student understanding, timing and back-row projection remain
+          unmeasured. Use the stated IID finite-variance model; the skewed card
+          mean is not exactly Normal at every n.
+        </p>
+      </details>
+      <p>
+        Additional delivered routes: S1/S3 descriptive correlation and a sourced
+        critical-table subset; S3 one/two-independent-mean z methods; S2
+        discrete tests; partial S3 χ² fit/independence. Type I/II, power,
+        p-values and conditional randomization are labelled explanatory
+        enrichment. This is not complete S1–S3 coverage.
       </p>
       <a
         href="https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/international-a-level-maths-spec.pdf"

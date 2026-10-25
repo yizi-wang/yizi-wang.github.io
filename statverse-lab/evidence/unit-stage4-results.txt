@@ -1,0 +1,65 @@
+
+> statverse-lab@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ meaningful whole-column pooling keeps O/E aligned and enables low-E reference (4.110758ms)
+✔ uniform and specified GOF independent numeric oracles and probability validation (1.314049ms)
+✔ fitting Binomial p uses original counts and subtracts one df after pooling (0.819302ms)
+✔ fixed-margin randomization preserves margins, supports ties and seed reproducibility (8.714852ms)
+✔ original invalid counts or probabilities cannot be concealed by pooling (0.314178ms)
+✔ independent official PMCC tail, direction and equality vectors (1.417854ms)
+✔ upward-rounded no-ties Spearman boundary includes equality (1.782609ms)
+✔ printed dashes, absent columns/rows and unimplemented entries are distinct (0.197538ms)
+✔ specified discrete and continuous regression oracles (8.125051ms)
+✔ binomial PMF, inclusive CDF/SF match frozen SciPy oracles (69.338482ms)
+✔ Poisson PMF, inclusive CDF/SF match frozen SciPy oracles (1.238547ms)
+✔ chi-square tails match SciPy across df, transitions and extreme tails (1.798319ms)
+✔ normal tails and inverse match SciPy, including subnormal quantiles (5.960752ms)
+✔ M2: centered Normal quantiles and tiny confidence intervals retain relative precision (3.999322ms)
+✔ critical boundaries and actual sizes match independent SciPy searches (22.18368ms)
+✔ exact BigInt rational enumeration checks binomial masses and tails (3.432557ms)
+✔ BigInt arithmetic independently proves selected regions stay within exact alpha budgets (4.056434ms)
+✔ binomial normalization, tail identity, recurrence, reflection, moments (21.449384ms)
+✔ Poisson inclusive off-by-one identity and PMF recurrence (0.466431ms)
+✔ critical regions are inclusive, maximal per allocated tail, conservative (82.995455ms)
+✔ p-values consistently use inclusive doubled-min-tail, not probability ordering (0.80251ms)
+✔ degenerate models and out-of-support queries have exact probabilities (2.81462ms)
+✔ M3: impossible observations in degenerate models respect the selected direction (0.343813ms)
+✔ extreme tails remain positive when representable; logs survive underflow (6.702405ms)
+✔ normal/chi-square monotonicity, symmetry, complements and analytic df=2 (2.166068ms)
+✔ power evaluates the fixed null critical region under the alternative (1.193151ms)
+✔ z test distinguishes estimated variance approximation, with no t fallback (1.341775ms)
+✔ z tests obey location/scale, label swap, null shift and CI nesting (2.575148ms)
+✔ contingency returns expected cells, contributions, df and reference p-value (2.175377ms)
+✔ contingency transpose/permutation invariance and scale law (0.497141ms)
+✔ M1: expected frequency 5 stays exact and status is transpose invariant (2.96947ms)
+✔ R1: exact integer residuals retain near-independent high-count chi-square statistics (2.3093ms)
+✔ zero margins are invalid and small expected cells suppress inference (0.33978ms)
+✔ GOF accepts probabilities or expected counts, deducts fitted parameters (0.640067ms)
+✔ GOF handles caller-defined Binomial, Poisson, Normal and unequal-width uniform bins (0.268695ms)
+✔ invalid inputs and unsupported domains reject explicitly (2.626543ms)
+✔ functions do not mutate inputs and factory queries cannot mutate its state (0.276243ms)
+✔ known sigma one/two mean z independent oracles (2.942889ms)
+✔ regression intercept, residual sum and degeneracy (0.526276ms)
+✔ strictly increasing transforms preserve tied and untied rank correlation (0.525547ms)
+✔ shuffle preserves multisets and seed, including ties (1.147951ms)
+✔ independent review helper domain and degenerate probabilities (1.172172ms)
+✔ Normal CDF against independent Python erfc grid, including small tails (21.213414ms)
+✔ independent oracle: nine ordered samples, expectations and variances (3.470585ms)
+✔ unequal probabilities must weight ordered samples (0.211927ms)
+✔ expectation and SE: mean, first, shifted, variance (16.622488ms)
+✔ n affects mean SE; R is not a theory parameter (0.17296ms)
+✔ n=1 unbiased variance undefined; cap is honest (0.542945ms)
+✔ seed and RNG stream reproduce across batch boundaries (1.646616ms)
+✔ location, scale, order metamorphic properties (0.186869ms)
+✔ independent correlation and contingency oracles (1.624431ms)
+✔ invalid data/model boundaries are rejected explicitly (1.154747ms)
+✔ independent review: degenerate model and explicit numeric support boundaries (0.359643ms)
+ℹ tests 53
+ℹ suites 0
+ℹ pass 53
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 368.471358

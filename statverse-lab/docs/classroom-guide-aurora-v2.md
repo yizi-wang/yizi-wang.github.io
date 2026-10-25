@@ -1,3 +1,5 @@
+> Historical v2. Superseded by classroom-guide-aurora-v3.md; do not use its obsolete chart-warning paragraph as current product guidance.
+
 # 18-minute classroom demonstration — estimator, estimate and sampling distribution
 
 Version2, 2026-10-25. Independent teaching reviewer script based on actual Aurora model and controls reported for commit6797009. Supersedes the earlier hypothetical-pool skeleton. This is a teacher script, not evidence of a real classroom trial. Complete outstanding hide-answer/chart/regression fixes before class. Stage3 control changes are recorded at the end.

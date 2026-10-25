@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-25T18:05:54.221Z",
+  "timestamp": "2026-10-25T18:29:23.364Z",
   "baseUrl": "http://127.0.0.1:4174",
   "browser": "151.0.7922.173",
   "evidenceType": "Developer actual browser regression, not independent review or real student observation",
@@ -7,67 +7,67 @@
     {
       "name": "VP02 two concrete draws precede n/spread prediction and preserve one-group mapping",
       "status": "PASS",
-      "ms": 361
+      "ms": 386
     },
     {
       "name": "VP01 frequency belongs to bars; sample dots have a distinct non-probability strip",
       "status": "PASS",
-      "ms": 147
+      "ms": 150
     },
     {
       "name": "S2-01 worked hiding covers SE feedback, live region, plot and semantic chain without RNG/data change",
       "status": "PASS",
-      "ms": 353
+      "ms": 370
     },
     {
       "name": "S2-02 invalid n1 variance clears exact rows, page and expectation rather than hiding old cases",
       "status": "PASS",
-      "ms": 168
+      "ms": 160
     },
     {
       "name": "S2-04 and VP05 CI nominal copy and transfer remain confidence-specific, without bias card",
       "status": "PASS",
-      "ms": 212
+      "ms": 237
     },
     {
       "name": "S2-03 correlation editor preserves exact x when only y changes",
       "status": "PASS",
-      "ms": 222
+      "ms": 193
     },
     {
       "name": "S2-01 hiding removes regression and prediction geometry while retaining raw paired data",
       "status": "PASS",
-      "ms": 222
+      "ms": 220
     },
     {
       "name": "official table direction, rounded rank boundary, dashes and ties are gated correctly",
       "status": "PASS",
-      "ms": 179
+      "ms": 191
     },
     {
       "name": "known-sigma one and two mean z UI match independent numeric oracles",
       "status": "PASS",
-      "ms": 248
+      "ms": 249
     },
     {
       "name": "estimated variance requires explicit large-sample assumption; paired design is not silently tested",
       "status": "PASS",
-      "ms": 216
+      "ms": 179
     },
     {
       "name": "new mean module hidden answers preserve reference state and conceal computed geometry",
       "status": "PASS",
-      "ms": 196
+      "ms": 186
     },
     {
       "name": "desktop/mobile/teacher navigation and layouts include mean module without overflow",
       "status": "PASS",
-      "ms": 563
+      "ms": 603
     },
     {
       "name": "teacher stages retain the semantic chain and essential distribution within 1080 pixels",
       "status": "PASS",
-      "ms": 700
+      "ms": 726
     },
     {
       "name": "no runtime errors in source or static build",

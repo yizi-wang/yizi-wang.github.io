@@ -15,7 +15,7 @@ npm run dev
 
 Open http://localhost:4173. The static build recursively includes every ES module in `src/`; deploy `dist/` on a static host. Runtime has no app dependencies. Browser QA uses the parent repository's installed Playwright and `/usr/bin/chromium`: `node tests/browser.mjs`, `node tests/browser-stage2.mjs`, and `STATVERSE_BASE_URL=http://127.0.0.1:4174 node tests/browser-stage3.mjs` against a separate built-output server. The cap5000 real-DOM test takes about40–70seconds depending on load.
 
-## Working features at checkpoint3
+## Working features at checkpoint4
 
 - Fixed weighted population → whole original sample → one saved statistic. Default n3 and two concrete introductory predictions precede the n-versus-spread question. A persistent chain distinguishes fixed target, rule before sampling, observed estimate and R. Saved dots retrieve their exact source cards; reduced motion retains the relationship.
 - Five estimator rules, independent n/R, reproducible seed/reset, single draw, batch/pause/resume, guarded5000 cap. n1 sample variance unavailable. Theoretical expectation/SE/bias differ from finite simulation summaries.
@@ -33,10 +33,18 @@ Open http://localhost:4173. The static build recursively includes every ES modul
 
 ## Evidence and limits
 
-Checkpoint3 developer evidence:48 unit/oracle/domain test groups;11 baseline browser flows,13 previous regressions,14 new actual Chromium checks against built output. Results/timestamps and desktop/phone/Teacher PNGs are in `evidence/`. These are developer checks, not independent learning approval.
+Checkpoint4 developer evidence:53 unit/oracle/domain test groups;11 baseline browser flows,13 previous regressions,24 new actual Chromium checks against built output. Results/timestamps and desktop/phone/Teacher PNGs are in `evidence/`. These are developer checks, not independent learning approval.
 
 Independent reports are preserved in `docs/reviews/`. Phase2 actual independent Chromium reported7/8 simulated novice tasks basically passing and Teacher hiding failing; those failures drive this checkpoint. Another reviewer's original0/8 BLOCKED browser report stays unchanged. No real students participated, no measured novice30-second outcome or weighted learning score is claimed.
 
-The pure inference engine's original M1–M3 failures were independently rechecked as fixed at7e45fa8. The high-count/extreme-alpha contingency P2 repair from8f088 is now integrated and developer-tested, with independent re-review pending. The adjacent-confidence1ulp P3 remains documented; this checkpoint has no chi-square UI. Do not call the engine full-domain approved.
+The pure inference engine's original M1–M3 failures were independently rechecked as fixed at7e45fa8. The high-count/extreme-alpha contingency P2 repair from8f088 is integrated and independently rechecked in17,795 API calls, including3498 exact-reference tables. This is finite mathematical evidence, not UI approval. The adjacent-confidence1ulp P3 remains documented; this checkpoint has no chi-square UI. Do not call the engine full-domain approved.
 
-D discrete-test UI, E chi-square UI, sampling-methods and full probability/distribution workbench remain absent. Some official correlation table rows/cells are intentionally unimplemented and identified as such. Card populations are discrete; no Normal source-population simulator yet. Repeated estimated-SD references do not simulate random SD estimation. See official coverage matrix, review loop, numeric contract, actual development log, and `docs/classroom-guide-aurora-v2.md` for the18-minute A lesson.
+D discrete-test and E partial chi-square UI now work as described below. Sampling-methods and full probability/distribution workbench remain absent. Some official correlation table rows/cells are intentionally unimplemented and identified as such. Card populations are discrete; no Normal source-population simulator yet. Repeated estimated-SD references do not simulate random SD estimation. See official coverage matrix, review loop, numeric contract, actual development log, and `docs/classroom-guide-aurora-v3.md` for the18-minute A lesson.
+
+## Checkpoint4 additions and boundaries
+
+D: exact Binomial/Poisson null PMFs, pre-chosen tails/α, inclusive observed count and critical region, nominal versus actual rejection probability, distinct generating truth, seeded repetitions/single-step/pause, source binary trials and decision inspection. TypeI/II/power are enrichment; β wording checks the chosen alternative direction. Positive tail underflow is labelled, distinct from impossible degenerate observations. n≤200 andPoissonλ≤30 in this display; explicit overflow window. Capacity2000.
+
+E: live original counts, margins, E/contributions/χ²/df; lowE suppressesp/decision. Explicit meaningful adjacent whole-row/column/category grouping preserves originals and aggregates O/E together. Uniform, specified probabilities and Binomial(3,p) GOF; optionalp fitting from original data withq1 anddf check. Invalid probabilities never normalized. Double-counts action illustrates significance versus magnitude. Conditional fixed-margin label shuffles are separately labelled Monte Carlo, with(b+1)/(R+1), resolution/error, N≤500, capacity2000. No exact multinomial GOF, general Normal/Poisson/continuous-uniform GOF UI or arbitrary table dimensions yet.
+
+D/E have dedicated Teacher projection focus and actual1920×1080 result bounds/screenshots. Phone raw-card clipping, Mean paused-step controls and Teacher stage3 trace target repaired and developer-regressed. New D/E and these repairs await the next independent browser review; previous S2-01–04 and VP tested routes were independently closed at7baa7fd. No real student observations, physical projector or screen-reader trial. F pure module independently reviewed in a separate branch, not integrated here.

@@ -2843,3 +2843,331 @@ dialog > a {
     width: 100%;
   }
 }
+
+/* Discrete decisions and categorical model inspection. */
+#discrete-workspace > .panel,
+#chisquare-workspace > .panel {
+  margin: 24px 0;
+}
+.case-inspector {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.case-inspector label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.case-inspector input {
+  width: 90px;
+}
+.case-inspector p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--mint);
+  overflow-wrap: anywhere;
+}
+#chi-inputs input {
+  width: 84px;
+  min-width: 64px;
+  font-size: 13px;
+  padding: 10px;
+}
+#chi-inputs table,
+#chi-expected table,
+#chi-shuffle-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+#chisquare-workspace caption {
+  text-align: left;
+  padding: 10px 0;
+  color: #aac0d5;
+  font-size: 12px;
+  line-height: 1.7;
+}
+#chisquare-workspace td,
+#chisquare-workspace th {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #2d3e52;
+  font-size: 12px;
+  line-height: 1.6;
+}
+#chisquare-workspace th {
+  color: #bdcde0;
+  font-weight: 500;
+}
+#chisquare-workspace .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.expected-table td {
+  min-width: 130px;
+}
+.expected-table td b,
+.expected-table td span,
+.expected-table td small {
+  display: block;
+}
+.expected-table td b {
+  color: var(--mint);
+  font-size: 16px;
+}
+.expected-table td span {
+  color: var(--violet);
+  font-size: 14px;
+  margin-top: 5px;
+}
+.expected-table td small {
+  color: #b7c7db;
+  margin-top: 5px;
+}
+.expected-table .low-expected {
+  background: #57324155;
+  border-bottom: 2px solid #f2a1bc;
+}
+.validity-note {
+  padding: 14px;
+  border-left: 3px solid var(--mint);
+  background: #183b302e;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #bcd4d0;
+}
+.validity-note.needs-pooling {
+  border-color: #f2a1bc;
+  background: #57324140;
+  color: #f7c3d4;
+}
+#chi-inputs tfoot,
+#chi-shuffle-table tfoot {
+  color: var(--gold);
+}
+#discrete-workspace .prediction-options,
+#chisquare-workspace .prediction-options {
+  position: static;
+  margin-left: 38px;
+}
+#discrete-workspace .prediction,
+#chisquare-workspace .prediction {
+  display: flex;
+  flex-wrap: wrap;
+}
+#discrete-workspace .prediction > div:nth-child(2),
+#chisquare-workspace .prediction > div:nth-child(2) {
+  flex: 1;
+  min-width: 160px;
+}
+#discrete-workspace .prediction p[role="status"],
+#chisquare-workspace .prediction p[role="status"] {
+  flex-basis: 100%;
+  margin-left: 38px;
+}
+.teacher #discrete-workspace .method-note,
+.teacher #chisquare-workspace .method-note {
+  font-size: 16px;
+}
+.teacher #chisquare-workspace td,
+.teacher #chisquare-workspace th {
+  font-size: 16px;
+}
+@media (max-width: 640px) {
+  #discrete-workspace .prediction-options,
+  #chisquare-workspace .prediction-options {
+    margin-left: 0;
+  }
+  #discrete-workspace .prediction p[role="status"],
+  #chisquare-workspace .prediction p[role="status"] {
+    margin-left: 0;
+  }
+  #chi-inputs input {
+    width: 70px;
+    padding: 8px;
+  }
+  #chisquare-workspace td,
+  #chisquare-workspace th {
+    padding: 9px;
+  }
+  #chisquare-workspace .inference-controls label {
+    max-width: 100%;
+  }
+  .case-inspector label {
+    flex-wrap: wrap;
+  }
+}
+#dis-p {
+  overflow-wrap: anywhere;
+  font-size: clamp(14px, 2.2vw, 25px);
+}
+#chi-inputs input {
+  background: #1b2b3f;
+  color: #e6eef7;
+  border: 1px solid #344b64;
+  border-radius: 6px;
+}
+.projection-select {
+  display: none;
+}
+.projection-reveal {
+  display: none;
+}
+.teacher .projection-select {
+  display: flex;
+  margin: 18px 0;
+  padding: 12px 18px;
+  background: #18293a;
+  border: 1px solid #35506b;
+  border-radius: 7px;
+}
+.teacher .projection-select label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #bbcfdf;
+  font-size: 15px;
+}
+.teacher .projection-select select {
+  font-size: 15px;
+  min-width: 280px;
+}
+.teacher .projection-reveal {
+  display: inline-flex;
+  margin: 0 0 16px;
+}
+.teacher[data-current-lab="discrete"] .intro,
+.teacher[data-current-lab="chisquare"] .intro {
+  display: none;
+}
+.teacher
+  #discrete-workspace[data-view="model"]
+  > [data-projection]:not([data-projection="model"]),
+.teacher
+  #discrete-workspace[data-view="result"]
+  > [data-projection]:not([data-projection="result"]),
+.teacher
+  #discrete-workspace[data-view="repeat"]
+  > [data-projection]:not([data-projection="repeat"]),
+.teacher
+  #discrete-workspace[data-view="transfer"]
+  > [data-projection]:not([data-projection="transfer"]),
+.teacher
+  #chisquare-workspace[data-view="model"]
+  > [data-projection]:not([data-projection="model"]),
+.teacher
+  #chisquare-workspace[data-view="result"]
+  > [data-projection]:not([data-projection="result"]),
+.teacher
+  #chisquare-workspace[data-view="repeat"]
+  > [data-projection]:not([data-projection="repeat"]),
+.teacher
+  #chisquare-workspace[data-view="transfer"]
+  > [data-projection]:not([data-projection="transfer"]),
+.teacher
+  #chisquare-workspace[data-view="pool"]
+  > [data-projection]:not([data-projection="pool"]):not(
+    [data-projection="result"]
+  ) {
+  display: none;
+}
+.teacher #chisquare-workspace[data-view="pool"] #chi-decision,
+.teacher #chisquare-workspace[data-view="pool"] #chi-df,
+.teacher #chisquare-workspace[data-view="pool"] #chi-before {
+  display: none;
+}
+.teacher #discrete-workspace[data-view="result"] .panel,
+.teacher #chisquare-workspace[data-view="result"] .panel,
+.teacher #chisquare-workspace[data-view="pool"] .panel {
+  padding: 20px;
+}
+.teacher #discrete-workspace[data-view="result"] .null-chart svg {
+  min-height: 270px;
+}
+@media (max-width: 640px) {
+  .teacher .projection-select label {
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 0;
+    width: 100%;
+    font-size: 12px;
+  }
+  .teacher .projection-select select {
+    min-width: 0;
+    width: 100%;
+    font-size: 12px;
+  }
+}
+.teacher #dis-null-chart text {
+  font-size: 16px;
+}
+.teacher .expected-table td span {
+  font-size: 18px;
+}
+.teacher .expected-table td small {
+  font-size: 14px;
+}
+.teacher[data-current-lab="discrete"] .projection-select,
+.teacher[data-current-lab="chisquare"] .projection-select {
+  margin: 12px 0;
+  padding: 10px 18px;
+}
+.teacher #discrete-workspace[data-view="result"] > .inference-workbench,
+.teacher #chisquare-workspace[data-view="result"] > .panel,
+.teacher #chisquare-workspace[data-view="pool"] > .panel {
+  margin: 14px 0;
+}
+.teacher #chisquare-workspace[data-view="result"] .section-heading {
+  margin-bottom: 12px;
+}
+.teacher #chisquare-workspace[data-view="result"] #chi-expected td {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+/* Protect the numerical outcome from anonymous inline SVG/text line boxes. */
+.sample-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sample-card .card-art {
+  display: block;
+  flex-shrink: 0;
+}
+.sample-card .tier {
+  display: block;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+.sample-card b {
+  flex-shrink: 0;
+  line-height: 1.15;
+  margin-top: 3px;
+}
+.sample-card.compact .tier {
+  display: none;
+}
+.teacher-route {
+  border-top: 1px solid #33495e;
+  margin: 20px 0;
+  padding: 16px 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.teacher-route summary {
+  cursor: pointer;
+  color: var(--mint);
+}
+.teacher-route li {
+  margin: 12px 0;
+}
+/* A source-navigation action is not a worked numerical answer. */
+.answers-hidden .estimate-box #trace-point {
+  visibility: visible;
+}
+.result-metrics b {
+  overflow-wrap: anywhere;
+}
