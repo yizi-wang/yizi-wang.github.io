@@ -222,10 +222,14 @@ For N>0 and positive row/column margins:
 `E[i][j]=(rowTotal[i]*columnTotal[j])/N`, each contribution is `(O-E)^2/E`,
 the statistic is their sum and df=(rows-1)(columns-1). The result includes
 `total, rowTotals, columnTotals, expected, contributions`.
-Multiplication precedes division to preserve transpose symmetry and E=5.
-Within N<=1e12, integer products near the threshold 5*N<=5e12 are exactly
-representable, so the returned E<5 classification agrees with the exact
-integer comparison; no tolerance is used to promote a genuinely small cell.
+Integer margins are converted to BigInt. E<5 is tested exactly as `r*c < 5*N`.
+For each contribution the integer residual `D=O*N-r*c` is formed exactly, then
+`D^2/(N*r*c)` is converted to a floating point statistic.
+This avoids subtracting nearly equal rounded large counts. Display expected
+counts use the exact rational's integer and fractional parts. A displayed E
+may round to O even when its exact residual is nonzero: the UI should use the
+returned contributions, not recompute them from rounded displayed expected
+counts. Exact E=5 remains 5 and is suitable; no tolerance promotes a low cell.
 An all-zero table returns `valid:false, status:"invalid-total"`; any zero
 margin returns `valid:false, status:"invalid-zero-margin"`. Both return null
 statistic, expected, contributions, pValue, asymptoticPValue and reject.
@@ -290,6 +294,12 @@ Relative accuracy is not promised for subnormal probabilities (below roughly
 overflow z², returning a zero small tail and log -Infinity. Complementary
 probabilities near 1 can round to 1; use the direct opposite-tail function.
 Do not compute a tiny upper tail as `1-CDF`.
+CI critical values are accurate within floating point tolerance, but strict
+monotonicity for every pair of adjacent binary64 confidence levels is not
+guaranteed: at .49999999999994543 and .4999999999999455 the current solver
+can decrease by one ulp. Both results remain within 5e-15 relative of their
+100-digit references; this local rounding limitation does not describe an
+error in ordinary 95% intervals.
 
 Checked-in tests have frozen SciPy 1.17.0 references, exact BigInt rational
 enumeration, analytic identities, boundary maximality/conservativeness,
@@ -355,3 +365,15 @@ the parent task owns independent re-review):
   adjacent-to-.5 quantiles, confidence=1e-12 and all degenerate-null directions.
 - Root Astro compatibility build passed again: 289 pages, 45.07 seconds,
   with `ASTRO_TELEMETRY_DISABLED=1 npm run build`. No deployment was performed.
+
+Adjacent-domain follow-up R1, 25 October 2026: contingency contributions now
+use exact BigInt residuals, not floating point subtraction of O and E. For
+`[[5,6],[454545454536,545454545443]]`, statistic is
+`3.666666666780211e-25`, p is `.9999999999995168`, and reject=false at
+alpha=`1-1e-12`. Exact E<5 classification and the M1 boundary/transpose
+regressions remain covered. The additional tiny-CI one-ulp behavior is
+recorded above rather than claimed to be fixed.
+R1 verification: 38/38 inference/existing tests PASS (the new sampling-design
+work is excluded from this fix commit); 1,600 Fraction table comparisons PASS,
+maximum statistic relative discrepancy 2.94e-16; Chromium R1 and M1–M3 smoke
+PASS. Root Astro compatibility build again passed 289 pages; no deployment.

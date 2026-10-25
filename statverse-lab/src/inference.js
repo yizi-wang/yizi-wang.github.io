@@ -455,8 +455,8 @@ function countTotal(observed) {
     "Count total must be a safe integer <= 1e12");
   return total;
 }
-function chiSquareResult(statistic, df, expectedFlat, alpha) {
-  const smallExpectedCount = expectedFlat.filter(x => x < 5).length;
+function chiSquareResult(statistic, df, expectedFlat, alpha,
+  smallExpectedCount = expectedFlat.filter(x => x < 5).length) {
   const approximationAppropriate = smallExpectedCount === 0;
   const asymptoticPValue = chiSquareSurvival(statistic, df);
   return { valid: true, status: approximationAppropriate ? "ok" : "needs-pooling",
@@ -488,14 +488,24 @@ export function contingencyTest(observed, { alpha = 0.05 } = {}) {
       approximate: true, approximationAppropriate: false, asymptoticPValue: null, pValue: null,
       reject: null, alpha, method: "pearson-chi-square" };
   }
-  // Multiply before dividing: transposition then uses identical operands, and
-  // E=5 is exact. With N<=1e12, every product near 5*N (<=5e12) is a safe
-  // integer; products too large for exact multiplication are far above 5*N.
-  // Thus the returned E and its E<5 classification agree at this boundary.
-  const expected = rowTotals.map(r => columnTotals.map(c => (r * c) / total));
-  const contributions = observed.map((row, i) => row.map((o, j) => pearsonContribution(o, expected[i][j])));
+  const bigN = BigInt(total), bigRows = rowTotals.map(BigInt), bigColumns = columnTotals.map(BigInt);
+  let smallExpectedCount = 0;
+  const expected = bigRows.map(r => bigColumns.map(c => {
+    const product = r * c;
+    if (product < 5n * bigN) smallExpectedCount++;
+    // Split the exact rational into integer/fractional parts for display.
+    // Converting r*c to Number before division can lose a large integer E.
+    return Number(product / bigN) + Number(product % bigN) / total;
+  }));
+  const contributions = observed.map((row, i) => row.map((o, j) => {
+    const product = bigRows[i] * bigColumns[j];
+    // Preserve a tiny residual at large counts: subtract exact integers,
+    // then convert D^2/(N*r*c), rather than subtract rounded O-E values.
+    const residual = BigInt(o) * bigN - product;
+    return Number(residual * residual) / Number(bigN * product);
+  }));
   const statistic = sum(contributions.flat());
-  return { ...chiSquareResult(statistic, df, expected.flat(), alpha), total, rowTotals, columnTotals,
+  return { ...chiSquareResult(statistic, df, expected.flat(), alpha, smallExpectedCount), total, rowTotals, columnTotals,
     expected, contributions };
 }
 
