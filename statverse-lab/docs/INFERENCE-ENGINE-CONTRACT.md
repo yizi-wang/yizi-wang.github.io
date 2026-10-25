@@ -86,7 +86,12 @@ poissonPValue(k, lambda, alternative = "two-sided")
 for charts or repeated queries; a scalar helper rebuilds the table each call.
 Construction is O(n) time/space; queries are O(1). Private typed arrays cannot
 be mutated through the public object. Degenerate `n=0`, `p=0/1`, `lambda=0`
-are exact point masses, including impossible observations with p-value 0.
+are exact point masses. An impossible observation has two-sided p-value 0;
+its one-sided p-value is 0 only in the direction of that observation and is
+1 for the opposite direction. For example, Binomial(20,0) or Poisson(0)
+observed at k=1 has less p=1 and greater/two-sided p=0. Binomial(20,1)
+observed at k=19 has less/two-sided p=0 and greater p=1. The test-observation
+domain restrictions above still apply.
 Negative Poisson PMF/CDF queries return 0, and their survival returns 1.
 
 Two-sided p-values use **doubled minimum inclusive tail**:
@@ -214,9 +219,13 @@ are applied.
 
 Contingency tables must be rectangular, with 2..100 rows and columns.
 For N>0 and positive row/column margins:
-`E[i][j]=(rowTotal[i]/N)*columnTotal[j]`, each contribution is `(O-E)^2/E`,
+`E[i][j]=(rowTotal[i]*columnTotal[j])/N`, each contribution is `(O-E)^2/E`,
 the statistic is their sum and df=(rows-1)(columns-1). The result includes
 `total, rowTotals, columnTotals, expected, contributions`.
+Multiplication precedes division to preserve transpose symmetry and E=5.
+Within N<=1e12, integer products near the threshold 5*N<=5e12 are exactly
+representable, so the returned E<5 classification agrees with the exact
+integer comparison; no tolerance is used to promote a genuinely small cell.
 An all-zero table returns `valid:false, status:"invalid-total"`; any zero
 margin returns `valid:false, status:"invalid-zero-margin"`. Both return null
 statistic, expected, contributions, pValue, asymptoticPValue and reject.
@@ -262,7 +271,13 @@ This avoids beginning at a tiny P(X=0). Bernoulli probabilities preserve the
 supplied p directly. Poisson and χ² tails use regularized incomplete gamma:
 lower series / upper continued fraction, computing small tails directly.
 A centered Stirling expression avoids large-argument log-gamma cancellation.
-Normal tails use the gamma identity; inverse Normal bisects log survival.
+Normal tails use the gamma identity. Inverse Normal uses a compensated
+central-integral series with Newton refinement for p in [.25,.75], preserving
+the doubles adjacent to p=.5, and bisects log survival in the tails. For
+confidence levels <=.5, the z interval critical value inverts confidence/2
+as central mass directly, avoiding cancellation in (1-confidence)/2. The
+supported confidence domain remains `[1e-12, 1 - 1e-12]`; ordinary 95% CI
+behavior is unchanged.
 Iterations are capped, and nonconvergence throws `RangeError`.
 Numerical definitions and identities can be checked against
 [NIST DLMF §8.2](https://dlmf.nist.gov/8.2) and
@@ -297,7 +312,8 @@ Target ordinary-probability accuracy across the documented domain is 1e-10
 relative above 1e-300, with absolute tolerances near 0/1. Tests intentionally
 exercise tails much smaller than standard browser CDF approximations retain.
 
-Implementation verification on 25 October 2026 (not independent approval):
+Initial implementation verification at `840f850` on 25 October 2026
+(not independent approval):
 
 - `npm --prefix statverse-lab test`: 34/34 PASS (25 inference groups and 9
   existing groups), including 276 frozen rows and high-precision edge cases.
@@ -313,3 +329,29 @@ Implementation verification on 25 October 2026 (not independent approval):
   assertions. This was a module check, not a new UI-feature acceptance test.
 - Root Astro compatibility build: 289 pages, PASS, 38.21 seconds, using
   `ASTRO_TELEMETRY_DISABLED=1 npm run build`. No deployment was performed.
+
+Review follow-up M1–M3, 25 October 2026 (implementer regression verification;
+the parent task owns independent re-review):
+
+- M1: multiply integer margins before division. For `[[10,0],[67,77]]`,
+  E is exactly `[[5,5],[72,72]]`, statistic=385/36, df=1,
+  p≈.0010745773786670282, status=`ok`, reject=true. Transposition preserves
+  the result. `[[5,5],[72,72]]` and its transpose give statistic=0, p=1.
+  Genuine E=[2,3,95] still needs pooling; caller-pooled E=[5,95] is suitable.
+- M2: central quantile inversion and direct central CI mass fix the relative
+  accuracy of values extremely close to p=.5 and confidence=1e-12. No input
+  range was narrowed. Confidence levels 1e-8, .8, .95, .99, 1-1e-12 and
+  extreme tail quantiles remain covered; the ordinary 95% CI regression passes.
+- M3: documented the direction dependence of impossible-observation one-sided
+  p-values; the existing algorithm is unchanged and all alternatives are tested.
+- `npm --prefix statverse-lab test`: 37/37 PASS (28 inference groups plus
+  9 existing groups). Three additional groups specifically regress M1–M3.
+- Additional deterministic seed-20261025 check: 931 Normal quantiles and 407
+  CI critical values against mpmath 1.3.0 at 400 decimal digits, maximum relative
+  discrepancy 8.67e-16. For 1,600 contingency tables, all E<5 classifications
+  agree with exact Fraction arithmetic; maximum statistic relative discrepancy
+  is 3.48e-14. These are empirical checks, not universal error bounds.
+- Chromium 151.0.7922.173 module smoke passed M1, its transpose, the two
+  adjacent-to-.5 quantiles, confidence=1e-12 and all degenerate-null directions.
+- Root Astro compatibility build passed again: 289 pages, 45.07 seconds,
+  with `ASTRO_TELEMETRY_DISABLED=1 npm run build`. No deployment was performed.

@@ -143,13 +143,40 @@ export function normalTails(z) {
 }
 export function normalCDF(z) { return normalTails(z).lower; }
 export function normalSurvival(z) { return normalTails(z).upper; }
+function normalCentralMass(z) {
+  // Phi(z)-1/2, evaluated without adding/subtracting 1/2. The centered
+  // quantile solver only calls this for |z|<0.68, where this series converges
+  // rapidly: integral_0^z exp(-t*t/2) dt / sqrt(2*pi).
+  let term = z, s = z, c = 0;
+  const ratio = -z * z / 2;
+  for (let i = 1; i <= 32; i++) {
+    term *= ratio * (2 * i - 1) / (i * (2 * i + 1));
+    const y = term - c, t = s + y;
+    c = (t - s) - y; s = t;
+    if (Math.abs(term) <= Math.abs(s) * Number.EPSILON / 4) break;
+  }
+  return s / Math.sqrt(2 * Math.PI);
+}
+function normalCentralQuantile(centeredProbability) {
+  // |centeredProbability|<=1/4. Preserve even the immediately adjacent
+  // doubles around p=1/2, instead of comparing plateaued log(1/2) values.
+  const scale = Math.sqrt(2 * Math.PI);
+  let z = centeredProbability * scale;
+  for (let i = 0; i < 8; i++) {
+    const next = z - (normalCentralMass(z) - centeredProbability) * scale * Math.exp(z * z / 2);
+    if (next === z) break;
+    z = next;
+  }
+  return z;
+}
 export function normalInverseCDF(p) {
   probability(p);
   if (p === 0) return -Infinity;
   if (p === 1) return Infinity;
   if (p === 0.5) return 0;
+  if (p >= 0.25 && p <= 0.75) return normalCentralQuantile(p - 0.5);
   const logTarget = Math.log(p < 0.5 ? p : 1 - p);
-  let lo = 0, hi = 40;
+  let lo = normalCentralQuantile(0.25), hi = 40;
   // Bisection in the log tail covers even Number.MIN_VALUE without subtraction.
   for (let i = 0; i < 90; i++) {
     const mid = (lo + hi) / 2;
@@ -375,7 +402,11 @@ function zResult(estimate, nullValue, standardError, { alpha, alternative, confi
   const z = (estimate - nullValue) / standardError;
   requireRange(Number.isFinite(z), "Derived z is outside the finite numerical domain");
   const pValue = normalPValue(z, alternative);
-  const criticalValue = -normalInverseCDF((1 - confidenceLevel) / 2);
+  // For a narrow central interval use its central mass directly. Forming
+  // (1-confidenceLevel)/2 would discard significant digits at confidence~0.
+  const criticalValue = confidenceLevel <= 0.5
+    ? normalCentralQuantile(confidenceLevel / 2)
+    : -normalInverseCDF((1 - confidenceLevel) / 2);
   const lower = estimate - criticalValue * standardError, upper = estimate + criticalValue * standardError;
   requireRange(Number.isFinite(lower) && Number.isFinite(upper), "Confidence limits overflow");
   return { estimate, nullValue, standardError, z, pValue, alpha, alternative,
@@ -457,7 +488,11 @@ export function contingencyTest(observed, { alpha = 0.05 } = {}) {
       approximate: true, approximationAppropriate: false, asymptoticPValue: null, pValue: null,
       reject: null, alpha, method: "pearson-chi-square" };
   }
-  const expected = rowTotals.map(r => columnTotals.map(c => (r / total) * c));
+  // Multiply before dividing: transposition then uses identical operands, and
+  // E=5 is exact. With N<=1e12, every product near 5*N (<=5e12) is a safe
+  // integer; products too large for exact multiplication are far above 5*N.
+  // Thus the returned E and its E<5 classification agree at this boundary.
+  const expected = rowTotals.map(r => columnTotals.map(c => (r * c) / total));
   const contributions = observed.map((row, i) => row.map((o, j) => pearsonContribution(o, expected[i][j])));
   const statistic = sum(contributions.flat());
   return { ...chiSquareResult(statistic, df, expected.flat(), alpha), total, rowTotals, columnTotals,
