@@ -23,3 +23,15 @@ Automation evidence: evidence/browser-results.json and screenshots. Numerical te
 
 Native owner-private Sites save+deploy succeeded2026-10-25 16:07:01UTC. Project appgprj_6ade2582c75481919d80c39e48a6a523; deployment appgdep_6ade291e29648191a101da18099bacc7; version appgprj_6ade2582c75481919d80c39e48a6a523~appgver_0d76797a24a881918d1a7173c1c5ca72; pushed Sites source commit f04e1f65494f9bedf2d2faeda14aada4d4692dbe.
 URL https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site . Local browser-tested source matches this deployment. No deployed-browser test or public sharing claimed. Sites helper scripts were unavailable in this environment; source was pushed using supplied short-lived repo-scoped credential passed via hidden stdin (no stored token), and archive created directly from that committed source with git archive.
+
+## Checkpoint1 revision2 — 2026-10-25 16:17:55UTC
+
+|ID|Problem|Evidence|Severity|Proposal|Actual modification|Regression|Limitation|
+|---|---|---|---|---|---|---|---|
+|DEV-05|Unavailable n1 S² view retained old sample selector|Developer lifecycle inspection; early chart return skipped descriptor reset|P1|Clear stale descriptor on invalid variance|chart invalid-state message; reset disables exact n1 variance|Browser now asserts sample-picker absent; PASS|Independent review pending|
+|DEV-06|Phone chart labels shrank with fixed600px SVG|Actual390px screenshot/code inspection|P2|Render at actual container width|Responsive SVG viewBox,10px ticks, resize/teacher redraw; teacher type increased|390px screenshot and no-overflow checks PASS|Projection distance not student-tested|
+|DEV-07|Unvalidated nonfinite/empty and invalid model inputs in helper API|Developer inspection of exported pure engine|P1 for future exposed custom inputs|Validate data/model/rule/counts|RangeError guards, explicit undefined constant correlation/n1S²|Ninth unit test and existing oracles PASS|Current UI uses fixed valid models|
+
+Latest developer unit suite9/9 PASS; browser11/11 PASS, captured2026-10-25T16:14:35.819Z. Exact viewport image dimensions checked with PIL:1440×900,1920×1080,390×844. First-draw browser flow now uses the intro action and actually clicks sample1's SVG point; native sample selector also checked. Code is formatted for independent inspection. No simulated-novice success or independent implementation approval is claimed.
+
+Latest private deployment appgdep_6ade2bacbc748191962659b498cbdddf, version appgprj_6ade2582c75481919d80c39e48a6a523~appgver_6454bf5ca8ac8191972b9e5b5c446b44, Sites source afb1652087ef50d233545c696b41e2351d95f541. Status succeeded, same private URL.

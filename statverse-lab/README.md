@@ -2,7 +2,7 @@
 
 A private development preview for16–18year-old Pearson Edexcel IAL S1/S2/S3 learners, with S3 as the priority. Original fictional card pool; no payments, student data, backend or account required for computation. This is checkpoint1, not a complete S1–S3 course or classroom approval.
 
-Private playable preview: https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site (owner sign-in may be required). Native deployment succeeded16:07:01UTC; local browser QA is separate from deployment verification.
+Private playable preview: https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site (owner sign-in may be required). Latest native deployment succeeded16:17:55UTC; local browser QA is separate from deployment verification.
 
 ## Run
 
@@ -39,3 +39,5 @@ Open http://localhost:4173. Static deployable output:dist/. Source index.html al
 See docs/RESOURCE-AUDIT.md, COVERAGE.md, DEVELOPMENT-LOG.md, REVIEW-LOOP.md and independent prospective requirements/acceptance plans. Desktop/phone/teacher screenshots and actual browser results live in evidence/.
 
 Teacher mode currently widens layout and supports pause/truth hiding; full step reveal/focus control remains partial. CI confidence level fixed95%, knownσ only. CLT lacks standardized view/Normal population. Correlation/test/chi-square UI and broader F modules absent. No independent code approval or real student test claimed. Parent task owns independent review and further iterations across the full project window.
+
+Latest checkpoint validation:9numerical/boundary tests and11actual browser flow checks PASS. Original Astro site build PASS289pages. Independent implementation review is pending;10prospective simulated-novice tasks are prepared, none counted as tested.

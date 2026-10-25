@@ -1,0 +1,21 @@
+
+> statverse-lab@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ independent oracle: nine ordered samples, expectations and variances (4.05557ms)
+✔ unequal probabilities must weight ordered samples (0.335613ms)
+✔ expectation and SE: mean, first, shifted, variance (8.606871ms)
+✔ n affects mean SE; R is not a theory parameter (0.192794ms)
+✔ n=1 unbiased variance undefined; cap is honest (0.590855ms)
+✔ seed and RNG stream reproduce across batch boundaries (1.189707ms)
+✔ location, scale, order metamorphic properties (0.190997ms)
+✔ independent correlation and contingency oracles (0.691255ms)
+✔ invalid data/model boundaries are rejected explicitly (0.983652ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 95.929448

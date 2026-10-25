@@ -1,14 +1,182 @@
-import {chromium} from '../../node_modules/playwright/index.mjs';import assert from 'node:assert/strict';import fs from 'node:fs/promises';
-const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox']});const errors=[],results=[];const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});page.on('pageerror',e=>errors.push(String(e)));await page.goto('http://127.0.0.1:4173');await page.screenshot({path:'evidence/desktop-initial.png',fullPage:true});const snap=()=>page.evaluate(()=>window.STATVERSE.getSnapshot());async function test(name,fn){const start=Date.now();try{await fn();results.push({name,status:'PASS',ms:Date.now()-start})}catch(e){results.push({name,status:'FAIL',error:String(e),ms:Date.now()-start})}}
-await test('First draw and original sample retrieval',async()=>{await page.locator('#n').fill('3');await page.locator('#draw').click();const a=await snap();assert.equal(a.samples.length,1);assert.equal(a.samples[0].ids.length,3);await page.locator('#draw').click();await page.locator('#sample-picker').fill('1');await page.locator('#sample-picker').dispatchEvent('change');assert.equal((await snap()).selected,0);assert.deepEqual((await snap()).samples[0],a.samples[0]);assert.equal(await page.locator('#observed').textContent(),Number(a.samples[0].value.toFixed(3)).toString())});
-await test('Reset seed reproduces first sample',async()=>{const old=(await snap()).samples[0];await page.locator('#reset').click();await page.locator('#draw').click();assert.deepEqual((await snap()).samples[0],old)});
-await test('Hide truth does not alter model or random state',async()=>{const a=await snap();await page.locator('#hide-truth').check();assert.deepEqual((await snap()).samples,a.samples);assert.equal((await snap()).pool,a.pool);assert.equal(await page.locator('#expectation').textContent(),'Hidden');assert.equal(await page.locator('.truth-line').count(),0);await page.locator('#hide-truth').uncheck()});
-await test('Pause stops advancement; resume completes same batch',async()=>{await page.locator('#batch').selectOption('1000');await page.locator('#run').click();await page.waitForTimeout(50);await page.locator('#pause').click();const a=await snap();await page.waitForTimeout(100);assert.equal((await snap()).samples.length,a.samples.length);assert.equal(a.running,false);assert.ok(a.remaining>0);await page.locator('#run').click();await page.waitForFunction(()=>!window.STATVERSE.getSnapshot().running);assert.equal((await snap()).samples.length,1001)});
-await test('n change clears incompatible estimates',async()=>{await page.locator('#n').fill('12');assert.equal((await snap()).samples.length,0);assert.equal(await page.locator('#r-badge').textContent(),'R = 0');await page.locator('#draw').click();assert.equal((await snap()).samples[0].ids.length,12)});
-await test('n=1 sample variance is unavailable',async()=>{await page.locator('#estimator').selectOption('variance');await page.locator('#n').fill('1');assert.equal(await page.locator('#draw').isDisabled(),true);assert.match(await page.locator('#distribution-chart').textContent(),/n ≥ 2/)});
-await test('Exact weighted enumeration and explicit cap',async()=>{await page.locator('#pool').selectOption('small');await page.locator('#n').fill('3');await page.locator('#estimator').selectOption('mean');await page.locator('#exact').check();assert.match(await page.locator('#chart-description').textContent(),/27 ordered/);await page.locator('#n').fill('20');assert.equal(await page.locator('#exact').isDisabled(),true);assert.equal(await page.locator('#exact').isChecked(),false)});
-await test('CLT and repeated CI output',async()=>{await page.locator('[data-lab="clt"]').click();await page.locator('#batch').selectOption('200');await page.locator('#run').click();await page.waitForFunction(()=>!window.STATVERSE.getSnapshot().running);assert.equal(await page.locator('#distribution-chart path').count(),1);await page.locator('[data-lab="coverage"]').click();await page.locator('#run').click();await page.waitForFunction(()=>!window.STATVERSE.getSnapshot().running);assert.match(await page.locator('#coverage-result').textContent(),/200/);assert.equal(await page.locator('#coverage-chart circle').count(),40)});
-await test('Keyboard dialog opens and Escape closes',async()=>{await page.locator('#help').focus();await page.keyboard.press('Enter');assert.equal(await page.locator('#guide').isVisible(),true);await page.keyboard.press('Escape');assert.equal(await page.locator('#guide').isVisible(),false)});
-await page.locator('[data-lab="sampling"]').click();await page.locator('#n').fill('5');await page.locator('#draw').click();await page.locator('#run').click();await page.waitForFunction(()=>!window.STATVERSE.getSnapshot().running);await page.screenshot({path:'evidence/desktop-sampling.png',fullPage:true});await page.locator('#teacher').click();await page.setViewportSize({width:1920,height:1080});await page.screenshot({path:'evidence/teacher-1920.png',fullPage:true});await page.locator('#teacher').click();await page.setViewportSize({width:390,height:844});await page.screenshot({path:'evidence/mobile-sampling.png',fullPage:true});
-await test('Phone has no horizontal overflow and can draw',async()=>{assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));const a=(await snap()).samples.length;await page.locator('#draw').click();assert.equal((await snap()).samples.length,a+1)});await test('No browser runtime errors',async()=>assert.deepEqual(errors,[]));
-await fs.writeFile('evidence/browser-results.json',JSON.stringify({timestamp:new Date().toISOString(),browser:await browser.version(),viewports:['1440×1000','1920×1080','390×844'],results,errors},null,2));console.log(JSON.stringify(results,null,2));await browser.close();if(results.some(x=>x.status==='FAIL'))process.exitCode=1;
+import { chromium } from "../../node_modules/playwright/index.mjs";
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+const browser = await chromium.launch({
+  executablePath: "/usr/bin/chromium",
+  headless: true,
+  args: ["--no-sandbox"],
+});
+const errors = [],
+  results = [];
+const page = await browser.newPage({
+  viewport: { width: 1440, height: 900 },
+  reducedMotion: "reduce",
+});
+page.on("pageerror", (e) => errors.push(String(e)));
+await page.goto("http://127.0.0.1:4173");
+await page.screenshot({ path: "evidence/desktop-initial.png", fullPage: true });
+const snap = () => page.evaluate(() => window.STATVERSE.getSnapshot());
+async function test(name, fn) {
+  const start = Date.now();
+  try {
+    await fn();
+    results.push({ name, status: "PASS", ms: Date.now() - start });
+  } catch (e) {
+    results.push({
+      name,
+      status: "FAIL",
+      error: String(e),
+      ms: Date.now() - start,
+    });
+  }
+}
+await test("First draw and original sample retrieval", async () => {
+  await page.locator("#n").fill("3");
+  await page.locator("#quick-draw").click();
+  const a = await snap();
+  assert.equal(a.samples.length, 1);
+  assert.equal(await page.locator(".dot").count(), 1);
+  assert.equal(a.samples[0].ids.length, 3);
+  await page.locator("#draw").click();
+  await page.locator('.dot[data-index="0"]').click();
+  assert.equal((await snap()).selected, 0);
+  await page.locator("#sample-picker").fill("1");
+  await page.locator("#sample-picker").dispatchEvent("change");
+  assert.equal((await snap()).selected, 0);
+  assert.deepEqual((await snap()).samples[0], a.samples[0]);
+  assert.equal(
+    await page.locator("#observed").textContent(),
+    Number(a.samples[0].value.toFixed(3)).toString(),
+  );
+});
+await test("Reset seed reproduces first sample", async () => {
+  const old = (await snap()).samples[0];
+  await page.locator("#reset").click();
+  await page.locator("#draw").click();
+  assert.deepEqual((await snap()).samples[0], old);
+});
+await test("Hide truth does not alter model or random state", async () => {
+  const a = await snap();
+  await page.locator("#hide-truth").check();
+  assert.deepEqual((await snap()).samples, a.samples);
+  assert.equal((await snap()).pool, a.pool);
+  assert.equal(await page.locator("#expectation").textContent(), "Hidden");
+  assert.equal(await page.locator(".truth-line").count(), 0);
+  await page.locator("#hide-truth").uncheck();
+});
+await test("Pause stops advancement; resume completes same batch", async () => {
+  await page.locator("#batch").selectOption("1000");
+  await page.locator("#run").click();
+  await page.waitForTimeout(50);
+  await page.locator("#pause").click();
+  const a = await snap();
+  await page.waitForTimeout(100);
+  assert.equal((await snap()).samples.length, a.samples.length);
+  assert.equal(a.running, false);
+  assert.ok(a.remaining > 0);
+  await page.locator("#run").click();
+  await page.waitForFunction(() => !window.STATVERSE.getSnapshot().running);
+  assert.equal((await snap()).samples.length, 1001);
+});
+await test("n change clears incompatible estimates", async () => {
+  await page.locator("#n").fill("12");
+  assert.equal((await snap()).samples.length, 0);
+  assert.equal(await page.locator("#r-badge").textContent(), "R = 0");
+  await page.locator("#draw").click();
+  assert.equal((await snap()).samples[0].ids.length, 12);
+});
+await test("n=1 sample variance is unavailable", async () => {
+  await page.locator("#estimator").selectOption("variance");
+  await page.locator("#n").fill("1");
+  assert.equal(await page.locator("#draw").isDisabled(), true);
+  assert.match(
+    await page.locator("#distribution-chart").textContent(),
+    /n ≥ 2/,
+  );
+  assert.equal(await page.locator("#sample-picker").count(), 0);
+});
+await test("Exact weighted enumeration and explicit cap", async () => {
+  await page.locator("#pool").selectOption("small");
+  await page.locator("#n").fill("3");
+  await page.locator("#estimator").selectOption("mean");
+  await page.locator("#exact").check();
+  assert.match(
+    await page.locator("#chart-description").textContent(),
+    /27 ordered/,
+  );
+  await page.locator("#n").fill("20");
+  assert.equal(await page.locator("#exact").isDisabled(), true);
+  assert.equal(await page.locator("#exact").isChecked(), false);
+});
+await test("CLT and repeated CI output", async () => {
+  await page.locator('[data-lab="clt"]').click();
+  await page.locator("#batch").selectOption("200");
+  await page.locator("#run").click();
+  await page.waitForFunction(() => !window.STATVERSE.getSnapshot().running);
+  assert.equal(await page.locator("#distribution-chart path").count(), 1);
+  await page.locator('[data-lab="coverage"]').click();
+  await page.locator("#run").click();
+  await page.waitForFunction(() => !window.STATVERSE.getSnapshot().running);
+  assert.match(await page.locator("#coverage-result").textContent(), /200/);
+  assert.equal(await page.locator("#coverage-chart circle").count(), 40);
+});
+await test("Keyboard dialog opens and Escape closes", async () => {
+  await page.locator("#help").focus();
+  await page.keyboard.press("Enter");
+  assert.equal(await page.locator("#guide").isVisible(), true);
+  await page.keyboard.press("Escape");
+  assert.equal(await page.locator("#guide").isVisible(), false);
+});
+await page.locator('[data-lab="sampling"]').click();
+await page.locator("#pool").selectOption("aurora");
+await page.locator("#n").fill("5");
+await page.locator("#draw").click();
+await page.locator("#run").click();
+await page.waitForFunction(() => !window.STATVERSE.getSnapshot().running);
+await page.screenshot({
+  path: "evidence/desktop-sampling.png",
+  fullPage: true,
+});
+await page.screenshot({
+  path: "evidence/desktop-viewport.png",
+  fullPage: false,
+});
+await page.locator("#teacher").click();
+await page.setViewportSize({ width: 1920, height: 1080 });
+await page.screenshot({ path: "evidence/teacher-1920.png", fullPage: false });
+await page.locator("#teacher").click();
+await page.setViewportSize({ width: 390, height: 844 });
+await page.screenshot({ path: "evidence/mobile-sampling.png", fullPage: true });
+await page.screenshot({
+  path: "evidence/mobile-viewport.png",
+  fullPage: false,
+});
+await test("Phone has no horizontal overflow and can draw", async () => {
+  assert.ok(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  );
+  const a = (await snap()).samples.length;
+  await page.locator("#draw").click();
+  assert.equal((await snap()).samples.length, a + 1);
+});
+await test("No browser runtime errors", async () =>
+  assert.deepEqual(errors, []));
+await fs.writeFile(
+  "evidence/browser-results.json",
+  JSON.stringify(
+    {
+      timestamp: new Date().toISOString(),
+      browser: await browser.version(),
+      viewports: ["1440×900", "1920×1080", "390×844"],
+      results,
+      errors,
+    },
+    null,
+    2,
+  ),
+);
+console.log(JSON.stringify(results, null, 2));
+await browser.close();
+if (results.some((x) => x.status === "FAIL")) process.exitCode = 1;

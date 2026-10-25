@@ -18,3 +18,7 @@ https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site
 Local browser suite11/11 PASS; static/numerical test suite8/8 PASS. Screenshots in evidence. No independent implementation review completed yet.
 
 Original root website compatibility build PASS:289pages,46.88s at16:06:20UTC, ASTRO_TELEMETRY_DISABLED=1.
+
+Revision2 private deployment succeeded16:17:55UTC. Numerical/boundary suite9/9 PASS; browser11/11 PASS. Responsive chart labels, undefined-variance state and source readability improved. Latest native IDs in evidence/deployment.json.
+
+Independent review should prioritize: actual sample→point learning clarity, fixed support scale's pedagogical tradeoff for strongly skewed means, tiny projection labels, exact-enumeration explanation/inspection, and teacher staged reveal. Full compression animation is not implemented; current single draw highlights matching sample/point and offers direct trace navigation. Exact enumeration is currently binned for display, with weighted ordered outcomes retained in the pure engine.

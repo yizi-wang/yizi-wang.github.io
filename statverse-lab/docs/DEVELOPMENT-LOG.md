@@ -18,3 +18,6 @@ Do not extrapolate these timestamps into unobserved continuous work. Checkpoint 
 Native Sites identity and deployment evidence in REVIEW-LOOP.md. No source helper was available locally; no claimed helper execution. Root compatibility build initially hit Astro telemetry config directory permissions; retried with ASTRO_TELEMETRY_DISABLED=1, without editing home/config permissions.
 
 |16:06:20|Original Astro/Starlight compatibility build completed:289pages,46.88seconds, with ASTRO_TELEMETRY_DISABLED=1. Original telemetry config error avoided through documented environment flag, no privileged file writes.|
+
+|16:09–16:14|Formatted source for review; added finite-input/model validation and a ninth unit test; corrected n1 stale selection and responsive SVG coordinate sizing; repeated browser suite11/11 PASS; captured exact1440×900,1920×1080,390×844 viewport screenshots|
+|16:17:55|Second native owner-private deployment succeeded; latest Sites source afb1652087ef50d233545c696b41e2351d95f541. First checkpoint is available for independent review; further project work remains.|
