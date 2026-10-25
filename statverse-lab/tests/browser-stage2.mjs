@@ -274,6 +274,8 @@ await test("R5 paused batch plus manual draw stops at exactly 5000 in real DOM",
   const q = await browser.newPage({ reducedMotion: "reduce" });
   q.on("pageerror", (e) => errors.push(String(e)));
   await q.goto("http://127.0.0.1:4173");
+  await q.locator("#draw").click();
+  await q.locator("#reset").click();
   const r = await q.evaluate(() => {
     const queue = [];
     window.requestAnimationFrame = (fn) => {

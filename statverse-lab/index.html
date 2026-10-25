@@ -31,7 +31,10 @@
         <button class="nav-item" data-lab="correlation">
           <span>04</span> Correlation & regression <i>→</i>
         </button>
-      <button class="nav-item" data-lab="mean"><span>05</span> Mean inference <i>→</i></button></nav>
+        <button class="nav-item" data-lab="mean">
+          <span>05</span> Mean inference <i>→</i>
+        </button>
+      </nav>
       <div class="sidebar-note">
         <span class="orb"></span
         ><b>Small experiments.<br />Big statistical ideas.</b>
@@ -63,7 +66,8 @@
           <option value="sampling">01 · Sampling & estimators</option>
           <option value="clt">02 · Central limit theorem</option>
           <option value="coverage">03 · Confidence intervals</option>
-          <option value="correlation">04 · Correlation & regression</option><option value="mean">05 · Mean inference</option>
+          <option value="correlation">04 · Correlation & regression</option>
+          <option value="mean">05 · Mean inference</option>
         </select>
       </div>
       <main id="main">
@@ -176,7 +180,27 @@
               ><span class="truth" id="population-moments"></span>
             </div>
           </section>
-          <section id="semantic-chain" class="semantic-chain" aria-label="Fixed parameter, estimating rule and observed estimate"><div><span id="chain-target-label">Fixed population mean μ</span><b id="chain-target"></b></div><div><span>Rule before sampling · estimator</span><b id="chain-rule"></b></div><div><span id="chain-observed-label">This sample's observed x̄</span><b id="chain-estimate"></b></div><p id="chain-repeat"></p><p id="chain-expectation"></p></section><div class="workbench">
+          <section
+            id="semantic-chain"
+            class="semantic-chain"
+            aria-label="Fixed parameter, estimating rule and observed estimate"
+          >
+            <div>
+              <span id="chain-target-label">Fixed population mean μ</span
+              ><b id="chain-target"></b>
+            </div>
+            <div>
+              <span>Rule before sampling · estimator</span
+              ><b id="chain-rule"></b>
+            </div>
+            <div>
+              <span id="chain-observed-label">This sample's observed x̄</span
+              ><b id="chain-estimate"></b>
+            </div>
+            <p id="chain-repeat"></p>
+            <p id="chain-expectation"></p>
+          </section>
+          <div class="workbench">
             <section class="sample-panel panel">
               <div class="section-heading">
                 <div>
@@ -241,7 +265,10 @@
                 class="chart"
                 aria-label="Sampling distribution chart"
               ></div>
-              <div class="chart-legend"><span><i class="key-bar"></i> Bars: finite relative frequency</span>
+              <div class="chart-legend">
+                <span
+                  ><i class="key-bar"></i> Bars: finite relative frequency</span
+                >
                 <span><i class="key-dot"></i> Dots below: whole samples</span
                 ><span class="truth"
                   ><i class="key-line"></i> Theoretical E(T)</span
@@ -335,7 +362,18 @@
               >
             </div>
             <div id="coverage-chart" class="coverage-chart"></div>
-  <div class="ci-check"><h3 id="ci-exact-question">Must exactly 95 out of every100 intervals cover μ?</h3><button class="secondary" data-ci-exact="yes">Yes, the count is fixed</button><button class="secondary" data-ci-exact="no">No, the observed count can vary</button><p id="ci-exact-feedback" class="answer-output" role="status"></p></div><p id="coverage-result"></p>
+            <div class="ci-check">
+              <h3 id="ci-exact-question">
+                Must exactly 95 out of every100 intervals cover μ?
+              </h3>
+              <button class="secondary" data-ci-exact="yes">
+                Yes, the count is fixed</button
+              ><button class="secondary" data-ci-exact="no">
+                No, the observed count can vary
+              </button>
+              <p id="ci-exact-feedback" class="answer-output" role="status"></p>
+            </div>
+            <p id="coverage-result"></p>
             <div class="ci-selector">
               <label for="ci-case">Inspect recorded interval</label
               ><input
@@ -389,7 +427,11 @@
           class="hidden"
           aria-label="Correlation and regression lab"
         ></section>
-<section id="mean-workspace" class="hidden" aria-label="Mean inference lab"></section>
+        <section
+          id="mean-workspace"
+          class="hidden"
+          aria-label="Mean inference lab"
+        ></section>
         <footer>
           <span>STATVERSE <b>Learn by changing the experiment.</b></span
           ><button id="guide-open" class="text-button">

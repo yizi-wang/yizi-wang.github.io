@@ -33,3 +33,17 @@ Core inference plan: Normal z, known variance or explicit large-sample substitut
 |D/E|No new UI in this checkpoint; separate parent-coordinated pure inference task|Do not claim tests/chi-square course coverage from the unused helper functions|
 
 All statuses are developer implementation/testing status; independent classroom approval remains pending.
+
+## Checkpoint3 delta — implementation, not independent approval
+
+|Area/reference|Now working|Remaining boundary|
+|---|---|---|
+|A S2.3§4/S3.3§3.1–3.2|Default3-card discovery before distribution-spread question; linked fixed target/rule/estimate/R; literal frequency histogram plus separate traceable sample rug; invalid exact inspector cleared|No novice learning outcome or30-second timing measured|
+|B S3.3§3.3|Confidence-specific copy, fixed-interval and finite-coverage transfer, bias card deferred|Card non-Normal intervals approximate; unknownσ repeated-coverage simulator absent|
+|B/D S3.3§3.4,3.6–3.8|One/two independent mean z UI; known Normal σ exact, knownσ CLT and estimated-s large-sample routes gated by conditions|No paired/t method; no automatic adequacy threshold. Estimated-s repetition uses fixed plug-in Normal reference, not random s simulation|
+|C S3.3§5|Official IAL Formula Book printedp27 tables; signed direction and total-alpha mapping; equality/table rounding; model confirmation; ties/constant/missing gates|Subset of cells transcribed; missing official versus unimplemented distinguished; no exact p inferred from table|
+|D S2.3§4.3–4.6|Pure reviewed discrete engine integrated only; mean-reference repeated rejection interaction available as enrichment|Binomial/Poisson UI absent; engine functions alone do not establish classroom coverage|
+|E S3.3§4|Pure engine integrated, original E5 defect fixed and independently rechecked|No UI/pooling yet; high-count extreme-alpha engine P2 pending external owner fix|
+|Teacher/classroom|18-minute actual Aurora guide,18px chain labels, wide focused stages; hidden feedback/ARIA/geometry repaired and developer browser tested|Independent stage3 recheck and actual projection-distance/screen-reader tests pending|
+
+All earlier checkpoint rows remain historical implementation snapshots. This delta supersedes their current-feature statements; none implies complete S1–S3 coverage.

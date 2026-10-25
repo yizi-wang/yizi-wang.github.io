@@ -1,0 +1,59 @@
+
+> statverse-lab@0.3.0 test
+> node --test tests/*.test.mjs
+
+✔ independent official PMCC tail, direction and equality vectors (1.794204ms)
+✔ upward-rounded no-ties Spearman boundary includes equality (1.966908ms)
+✔ printed dashes, absent columns/rows and unimplemented entries are distinct (0.283215ms)
+✔ specified discrete and continuous regression oracles (6.297588ms)
+✔ binomial PMF, inclusive CDF/SF match frozen SciPy oracles (41.469717ms)
+✔ Poisson PMF, inclusive CDF/SF match frozen SciPy oracles (1.95057ms)
+✔ chi-square tails match SciPy across df, transitions and extreme tails (0.909212ms)
+✔ normal tails and inverse match SciPy, including subnormal quantiles (5.153865ms)
+✔ M2: centered Normal quantiles and tiny confidence intervals retain relative precision (4.188443ms)
+✔ critical boundaries and actual sizes match independent SciPy searches (17.25251ms)
+✔ exact BigInt rational enumeration checks binomial masses and tails (10.491842ms)
+✔ BigInt arithmetic independently proves selected regions stay within exact alpha budgets (4.8621ms)
+✔ binomial normalization, tail identity, recurrence, reflection, moments (20.558035ms)
+✔ Poisson inclusive off-by-one identity and PMF recurrence (0.770393ms)
+✔ critical regions are inclusive, maximal per allocated tail, conservative (91.022323ms)
+✔ p-values consistently use inclusive doubled-min-tail, not probability ordering (0.787049ms)
+✔ degenerate models and out-of-support queries have exact probabilities (1.72927ms)
+✔ M3: impossible observations in degenerate models respect the selected direction (0.46247ms)
+✔ extreme tails remain positive when representable; logs survive underflow (4.877503ms)
+✔ normal/chi-square monotonicity, symmetry, complements and analytic df=2 (3.089465ms)
+✔ power evaluates the fixed null critical region under the alternative (0.934665ms)
+✔ z test distinguishes estimated variance approximation, with no t fallback (1.024051ms)
+✔ z tests obey location/scale, label swap, null shift and CI nesting (1.355377ms)
+✔ contingency returns expected cells, contributions, df and reference p-value (1.185085ms)
+✔ contingency transpose/permutation invariance and scale law (0.313834ms)
+✔ M1: expected frequency 5 stays exact and status is transpose invariant (1.003829ms)
+✔ zero margins are invalid and small expected cells suppress inference (0.235978ms)
+✔ GOF accepts probabilities or expected counts, deducts fitted parameters (0.30623ms)
+✔ GOF handles caller-defined Binomial, Poisson, Normal and unequal-width uniform bins (0.178938ms)
+✔ invalid inputs and unsupported domains reject explicitly (1.687253ms)
+✔ functions do not mutate inputs and factory queries cannot mutate its state (0.253159ms)
+✔ known sigma one/two mean z independent oracles (4.314218ms)
+✔ regression intercept, residual sum and degeneracy (0.899445ms)
+✔ strictly increasing transforms preserve tied and untied rank correlation (1.088569ms)
+✔ shuffle preserves multisets and seed, including ties (1.667787ms)
+✔ independent review helper domain and degenerate probabilities (2.146104ms)
+✔ Normal CDF against independent Python erfc grid, including small tails (19.369516ms)
+✔ independent oracle: nine ordered samples, expectations and variances (4.969422ms)
+✔ unequal probabilities must weight ordered samples (0.409862ms)
+✔ expectation and SE: mean, first, shifted, variance (11.453039ms)
+✔ n affects mean SE; R is not a theory parameter (0.167375ms)
+✔ n=1 unbiased variance undefined; cap is honest (0.770289ms)
+✔ seed and RNG stream reproduce across batch boundaries (1.422564ms)
+✔ location, scale, order metamorphic properties (0.218461ms)
+✔ independent correlation and contingency oracles (1.113717ms)
+✔ invalid data/model boundaries are rejected explicitly (0.416894ms)
+✔ independent review: degenerate model and explicit numeric support boundaries (0.570203ms)
+ℹ tests 47
+ℹ suites 0
+ℹ pass 47
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 322.1217

@@ -1,67 +1,67 @@
 {
-  "timestamp": "2026-10-25T16:55:52.510Z",
+  "timestamp": "2026-10-25T18:01:21.351Z",
   "browser": "151.0.7922.173",
   "evidenceType": "Developer actual browser regression, not independent review or student testing",
   "results": [
     {
       "name": "R1 mobile and teacher native navigation reaches all labs",
       "status": "PASS",
-      "ms": 489
+      "ms": 3190
     },
     {
       "name": "R3 prediction follows estimator and links actual SE comparison",
       "status": "PASS",
-      "ms": 239
+      "ms": 968
     },
     {
       "name": "R4 exact rows expose original ordered sample, product weight and contribution",
       "status": "PASS",
-      "ms": 332
+      "ms": 1277
     },
     {
       "name": "Sample compression animation has equivalent reduced-motion result",
       "status": "PASS",
-      "ms": 1170
+      "ms": 1592
     },
     {
       "name": "Teacher reveal stages conceal actual workspaces and worked answers only",
       "status": "PASS",
-      "ms": 296
+      "ms": 1057
     },
     {
       "name": "CLT standardization retains samples and declares plot-window overflow",
       "status": "PASS",
-      "ms": 842
+      "ms": 4733
     },
     {
       "name": "R2 CI miss is inspectable without hover, and hidden truth preserves endpoints",
       "status": "PASS",
-      "ms": 527
+      "ms": 8133
     },
     {
       "name": "C monotone transform preserves Spearman; ties use average ranks",
       "status": "PASS",
-      "ms": 159
+      "ms": 278
     },
     {
       "name": "C numerical, keyboard and real drag edits recompute the same data",
       "status": "PASS",
-      "ms": 233
+      "ms": 583
     },
     {
       "name": "C undefined coefficients, U-shape, extrapolation and permutation are distinct",
       "status": "PASS",
-      "ms": 1057
+      "ms": 2290
     },
     {
       "name": "R5 paused batch plus manual draw stops at exactly 5000 in real DOM",
       "status": "PASS",
-      "ms": 45921
+      "ms": 67516
     },
     {
       "name": "Independent constant-population fixture renders point masses and [7,7] CI",
       "status": "PASS",
-      "ms": 776
+      "ms": 2444
     },
     {
       "name": "No new browser runtime errors",

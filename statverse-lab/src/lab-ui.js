@@ -1,5 +1,68 @@
-import {workedAnswersHidden} from "./visibility.js";
-import {normalPDF} from './statistics.js';
-export const number=(x,d=3)=>Number.isFinite(x)?(Math.abs(x)>=1e6?x.toExponential(3):Number(x.toFixed(d)).toString()):'Unavailable';
-export const probability=(p,logP)=>p===0&&Number.isFinite(logP)?`positive but < machine range (log p = ${number(logP)})`:p===0?'0':p<.0001?p.toExponential(3):number(p,6);
-export function normalReferenceSVG(host,{z,lower,upper,revealed=true,approximate=false}){const w=Math.max(290,host.clientWidth),h=260,L=38,R=w-18,T=24,B=218,extent=workedAnswersHidden()?4:Math.max(4,Math.min(10,Math.abs(z)+.5)),X=x=>L+(x+extent)/(2*extent)*(R-L),Y=p=>B-p/.43*(B-T);let s=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${approximate?'Approximate':'Exact under stated Normal model'} standard Normal null reference. Red tails are the critical region; the observed z is separate."><text x="${L}" y="12" fill="#a8bdd5" font-size="11">H₀ REFERENCE · Z ~ N(0,1) · DENSITY</text>`;for(let i=-Math.floor(extent);i<=extent;i++){s+=`<line x1="${X(i)}" x2="${X(i)}" y1="${T}" y2="${B}" stroke="#2b3d53" stroke-dasharray="2 5"/><text x="${X(i)}" y="${B+18}" text-anchor="middle" fill="#a1b4ce" font-size="11">${i}</text>`}let d='';for(let i=0;i<=240;i++){const x=-extent+2*extent*i/240;d+=`${i?'L':'M'}${X(x)},${Y(normalPDF(x))} `}if(revealed&&!workedAnswersHidden()){for(const [a,b]of [[-extent,lower],[upper,extent]]){if(a===null||b===null||a>b)continue;let fill=`M${X(Math.max(-extent,a))},${B} `;for(let i=0;i<=80;i++){const x=Math.max(-extent,a)+(Math.min(extent,b)-Math.max(-extent,a))*i/80;fill+=`L${X(x)},${Y(normalPDF(x))} `}fill+=`L${X(Math.min(extent,b))},${B} Z`;s+=`<path d="${fill}" fill="#f091ae" fill-opacity=".23"/>`}}s+=`<path d="${d}" fill="none" stroke="#a6f0cb" stroke-width="2"/>`;if(revealed&&!workedAnswersHidden())for(const c of [lower,upper])if(c!==null)s+=`<line x1="${X(c)}" x2="${X(c)}" y1="${T}" y2="${B}" stroke="#f091ae" stroke-dasharray="4 4"/><text x="${X(c)}" y="${T+14}" text-anchor="middle" fill="#f091ae" font-size="11">${number(c)}</text>`;const pz=Math.max(-extent,Math.min(extent,z));if(!workedAnswersHidden())s+=`<line x1="${X(pz)}" x2="${X(pz)}" y1="${T+30}" y2="${B}" stroke="#f4d18a" stroke-width="2"/><text x="${Math.min(R-55,Math.max(L+5,X(pz)+6))}" y="${T+27}" fill="#f4d18a" font-size="12">observed z=${number(z)}</text><text x="${(L+R)/2}" y="${h-5}" text-anchor="middle" fill="#bfd0e1" font-size="11">z · dimensionless${Math.abs(z)>extent?' · observed value beyond visible window':''}</text></svg>`;return s}
+import { workedAnswersHidden } from "./visibility.js";
+import { normalPDF } from "./statistics.js";
+export const number = (x, d = 3) =>
+  Number.isFinite(x)
+    ? Math.abs(x) >= 1e6
+      ? x.toExponential(3)
+      : Number(x.toFixed(d)).toString()
+    : "Unavailable";
+export const probability = (p, logP) =>
+  p === 0 && Number.isFinite(logP)
+    ? `positive but < machine range (log p = ${number(logP)})`
+    : p === 0
+      ? "0"
+      : p < 0.0001
+        ? p.toExponential(3)
+        : number(p, 6);
+export function normalReferenceSVG(
+  host,
+  { z, lower, upper, revealed = true, approximate = false },
+) {
+  const w = Math.max(290, host.clientWidth),
+    h = 260,
+    L = 38,
+    R = w - 18,
+    T = 24,
+    B = 218,
+    extent = workedAnswersHidden()
+      ? 4
+      : Math.max(4, Math.min(10, Math.abs(z) + 0.5)),
+    X = (x) => L + ((x + extent) / (2 * extent)) * (R - L),
+    Y = (p) => B - (p / 0.43) * (B - T);
+  let s = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${approximate ? "Approximate" : "Exact under stated Normal model"} standard Normal null reference. Red tails are the critical region; the observed z is separate."><text x="${L}" y="12" fill="#a8bdd5" font-size="11">H₀ REFERENCE · Z ~ N(0,1) · DENSITY</text>`;
+  for (let i = -Math.floor(extent); i <= extent; i++) {
+    s += `<line x1="${X(i)}" x2="${X(i)}" y1="${T}" y2="${B}" stroke="#2b3d53" stroke-dasharray="2 5"/><text x="${X(i)}" y="${B + 18}" text-anchor="middle" fill="#a1b4ce" font-size="11">${i}</text>`;
+  }
+  let d = "";
+  for (let i = 0; i <= 240; i++) {
+    const x = -extent + (2 * extent * i) / 240;
+    d += `${i ? "L" : "M"}${X(x)},${Y(normalPDF(x))} `;
+  }
+  if (revealed && !workedAnswersHidden()) {
+    for (const [a, b] of [
+      [-extent, lower],
+      [upper, extent],
+    ]) {
+      if (a === null || b === null || a > b) continue;
+      let fill = `M${X(Math.max(-extent, a))},${B} `;
+      for (let i = 0; i <= 80; i++) {
+        const x =
+          Math.max(-extent, a) +
+          ((Math.min(extent, b) - Math.max(-extent, a)) * i) / 80;
+        fill += `L${X(x)},${Y(normalPDF(x))} `;
+      }
+      fill += `L${X(Math.min(extent, b))},${B} Z`;
+      s += `<path d="${fill}" fill="#f091ae" fill-opacity=".23"/>`;
+    }
+  }
+  s += `<path d="${d}" fill="none" stroke="#a6f0cb" stroke-width="2"/>`;
+  if (revealed && !workedAnswersHidden())
+    for (const c of [lower, upper])
+      if (c !== null)
+        s += `<line x1="${X(c)}" x2="${X(c)}" y1="${T}" y2="${B}" stroke="#f091ae" stroke-dasharray="4 4"/><text x="${X(c)}" y="${T + 14}" text-anchor="middle" fill="#f091ae" font-size="11">${number(c)}</text>`;
+  const pz = Math.max(-extent, Math.min(extent, z));
+  if (revealed && !workedAnswersHidden())
+    s += `<line x1="${X(pz)}" x2="${X(pz)}" y1="${T + 30}" y2="${B}" stroke="#f4d18a" stroke-width="2"/><text x="${Math.min(R - 55, Math.max(L + 5, X(pz) + 6))}" y="${T + 27}" fill="#f4d18a" font-size="12">observed z=${number(z)}</text>`;
+  s += `<text x="${(L + R) / 2}" y="${h - 5}" text-anchor="middle" fill="#bfd0e1" font-size="11">z · dimensionless${revealed && !workedAnswersHidden() && Math.abs(z) > extent ? " · observed value beyond visible window" : ""}</text></svg>`;
+  return s;
+}
