@@ -937,6 +937,7 @@ function renderExactInspector(outcomes) {
 function applyTeacherStage() {
   const teacher = document.body.classList.contains("teacher"),
     stage = teacher ? state.teacherStage : "all";
+  document.body.dataset.teacherStage=state.lab==="correlation"?"all":stage;
   const groups = {
     prediction: $(".prediction"),
     population: $(".population-panel"),
@@ -959,14 +960,7 @@ function applyTeacherStage() {
       "settings",
       "coverage",
     ],
-    explain: [
-      "population",
-      "sample",
-      "distribution",
-      "settings",
-      "coverage",
-      "explain",
-    ],
+    explain: ["distribution","settings","coverage","explain"],
     transfer: Object.keys(groups),
   }[stage];
   for (const [key, el] of Object.entries(groups))
@@ -998,7 +992,7 @@ function applyTeacherStage() {
   );
   $(".workbench").classList.toggle(
     "single-stage",
-    teacher && stage === "sample",
+    teacher && (stage === "sample"||stage==="explain"),
   );
 }
 $("#teacher-pause").onclick = stop;
