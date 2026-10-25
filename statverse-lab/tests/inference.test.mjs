@@ -93,6 +93,8 @@ test("M2: centered Normal quantiles and tiny confidence intervals retain relativ
   const confidence = [
     [1e-12, 1.2533141373155002e-12],
     [1e-8, 1.2533141373155004e-8],
+    [.49999999999994543, .6744897501959959],
+    [.4999999999999455, .674489750195996],
     [.5, .6744897501960817],
     [.8, 1.2815515655446006],
     [.95, 1.9599639845400538],
@@ -407,6 +409,37 @@ test("M1: expected frequency 5 stays exact and status is transpose invariant", (
   assert.equal(unpooled.status, "needs-pooling"); assert.equal(unpooled.pValue, null);
   const pooled = I.goodnessOfFit({ observed: [5, 95], expected: [5, 95] });
   assert.equal(pooled.status, "ok"); assert.equal(pooled.pValue, 1);
+});
+test("R1: exact integer residuals retain near-independent high-count chi-square statistics", () => {
+  const table = [[5, 6], [454545454536, 545454545443]];
+  const transpose = t => t[0].map((_, j) => t.map(row => row[j]));
+  for (const t of [table, transpose(table)]) {
+    const r = I.contingencyTest(t, { alpha: 1 - 1e-12 });
+    // Python Fraction + mpmath 100 digits, not rounded expected-cell arithmetic.
+    close(r.statistic, 3.6666666667802111111138598929630243e-25, 2e-15, 0);
+    close(r.pValue, .9999999999995168569053837759517, 0, 2e-16);
+    assert.equal(r.status, "ok"); assert.equal(r.reject, false);
+  }
+  // Independent 2x2 oracle: N*(ad-bc)^2 / ((a+b)(c+d)(a+c)(b+d)).
+  function determinantOracle(t) {
+    const [[a, b], [c, d]] = t.map(row => row.map(x => BigInt(x)));
+    const N = a + b + c + d, determinant = a * d - b * c;
+    return Number(N * determinant * determinant) / Number((a + b) * (c + d) * (a + c) * (b + d));
+  }
+  for (const k of [1, 7, 1000, 1000000, 1000000000, 90000000000]) {
+    for (const delta of [-1, 0, 1]) {
+      const original = [[5, 6], [5 * k + delta, 6 * k - delta]];
+      for (const t of [original, transpose(original)]) {
+        const result = I.contingencyTest(t);
+        close(result.statistic, determinantOracle(t), 3e-15, 0);
+        const N = BigInt(result.total);
+        const small = result.rowTotals.flatMap(row => result.columnTotals.map(column =>
+          BigInt(row) * BigInt(column) < 5n * N));
+        assert.equal(result.smallExpectedCount, small.filter(Boolean).length);
+        assert.equal(result.status, small.includes(true) ? "needs-pooling" : "ok");
+      }
+    }
+  }
 });
 test("zero margins are invalid and small expected cells suppress inference", () => {
   for (const table of [[[0, 0], [0, 0]], [[0, 0], [2, 3]], [[0, 4], [0, 5]]]) {
