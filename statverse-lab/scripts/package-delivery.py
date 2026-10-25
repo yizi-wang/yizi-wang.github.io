@@ -27,7 +27,7 @@ relative = app.relative_to(repo).as_posix()
 dist = app / 'dist'
 if not (dist / 'index.html').is_file():
     parser.exit(1, 'Run npm run build before packaging.\n')
-for source in [app / p for p in ['index.html', 'style.css', 'guide.html', 'scope.html', 'reading.css', 'start.py']] + sorted((app / 'src').glob('*.js')):
+for source in [app / p for p in ['index.html', 'style.css', 'guide.html', 'scope.html', 'reading.css', 'start.py', 'favicon.svg']] + sorted((app / 'src').glob('*.js')):
     target = dist / source.relative_to(app)
     if not target.is_file() or target.read_bytes() != source.read_bytes():
         parser.exit(1, f'Stale or missing static output: {target.relative_to(app)}\n')

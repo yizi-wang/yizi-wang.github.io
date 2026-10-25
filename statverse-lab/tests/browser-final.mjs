@@ -7,8 +7,9 @@ const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless
 const base=process.env.STATVERSE_BASE_URL||'http://127.0.0.1:4174';
 const page=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'});
 page.setDefaultTimeout(6500);
-const errors=[],results=[],scans=[],external=[],performanceEvidence={};
+const consoleErrors=[],errors=[],results=[],scans=[],external=[],performanceEvidence={};
 page.on('pageerror',e=>errors.push(String(e)));
+page.on('console',m=>{if(m.type()==='error')consoleErrors.push(m.text())});
 page.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)errors.push(`${r.status()} ${r.url()}`)});
 await page.route('**/*',route=>{if(!route.request().url().startsWith(base)){external.push(route.request().url());return route.abort()}return route.continue()});
 const $=s=>page.locator(s),snap=()=>page.evaluate(()=>window.STATVERSE.getSnapshot());
@@ -54,7 +55,10 @@ await test('printable guide has accessible teacher disclosure and correct distin
 await test('coverage page distinguishes bounded complete, partial, enrichment and absent content with official sources',async()=>{
  await page.goto(base+'/scope.html');assert.ok(await page.getByRole('heading',{name:'Official content map'}).isVisible());assert.equal(await page.locator('#matrix tbody tr').count(),23);for(const label of ['Complete bounded interaction','Partial','Not built'])assert.ok(await page.getByText(label,{exact:true}).count()>0);assert.match(await $('#enrichment').textContent(),/TypeI\/II/);assert.equal(await page.locator('a[href*="qualifications.pearson.com"]').count(),2);await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth<=1));await page.screenshot({path:'evidence/final-scope-mobile.png',fullPage:true});
 });
-await test('built local package requires no external font/assets/network for all nine labs and reading pages',async()=>{
- assert.deepEqual(external,[]);assert.deepEqual(errors,[]);
+await test('Teacher finite-design method labels meet projection text target and remain keyboard controls',async()=>{
+ await page.goto(base);await page.setViewportSize({width:1920,height:1080});await choose('design');await $('#teacher').click();await $('#design-view').selectOption('compare');const buttons=$('#design-compare .text-button');assert.equal(await buttons.count(),4);for(const button of await buttons.all())assert.ok(await button.evaluate(e=>parseFloat(getComputedStyle(e).fontSize)>=18));await buttons.first().focus();await page.keyboard.press('Enter');assert.equal((await snap()).samplingDesign.method,'srs');await page.screenshot({path:'evidence/final-design-compare-teacher.png',fullPage:false});
 });
-await browser.close();const out={timestamp:new Date().toISOString(),baseUrl:base,evidenceType:'Developer actual built-output Chromium global/keyboard/print/offline checks. Not a WCAG certification, screen-reader speech trial, independent review or real student study.',results,scans,performanceEvidence,externalRequests:external,pageErrors:errors};await fs.writeFile('evidence/browser-final-results.json',JSON.stringify(out,null,2)+'\n');console.log(JSON.stringify({pass:results.filter(r=>r.status==='PASS').length,total:results.length,failed:results.filter(r=>r.status==='FAIL'),performanceEvidence},null,2));if(results.some(r=>r.status==='FAIL'))process.exitCode=1;
+await test('built local package requires no external font/assets/network for all nine labs and reading pages',async()=>{
+ const icon=await page.request.get(base+'/favicon.svg');assert.equal(icon.status(),200);assert.match(icon.headers()['content-type'],/image\/svg\+xml/);assert.deepEqual(external,[]);assert.deepEqual(errors,[]);assert.deepEqual(consoleErrors,[]);
+});
+await browser.close();const out={timestamp:new Date().toISOString(),baseUrl:base,evidenceType:'Developer actual built-output Chromium global/keyboard/print/offline checks. Not a WCAG certification, screen-reader speech trial, independent review or real student study.',results,scans,performanceEvidence,externalRequests:external,pageErrors:errors,consoleErrors};await fs.writeFile('evidence/browser-final-results.json',JSON.stringify(out,null,2)+'\n');console.log(JSON.stringify({pass:results.filter(r=>r.status==='PASS').length,total:results.length,failed:results.filter(r=>r.status==='FAIL'),performanceEvidence},null,2));if(results.some(r=>r.status==='FAIL'))process.exitCode=1;

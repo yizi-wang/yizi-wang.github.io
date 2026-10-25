@@ -42,7 +42,7 @@ Official source: Pearson Edexcel IAL specification Issue3 April2019. S1p55–56,
 
 ## Validation is a separate axis
 
-Checkpoint5 F mathematics and both GOF P1 event paths passed independent94d0b8d recheck; actual-browser approval remains pending. Earlier independent reports and developer checks remain separate in REVIEW-LOOP.md, not converted into real student outcomes. No real students, physical projection-distance or screen-reader speech trial. Retained numerical limits: adjacent confidence levels can change a CI critical value by1ulp nonmonotonically; tiny TypeII uses1−power with cancellation. Ordinary95% CI calculations are not claimed wrong.
+Checkpoint5 F mathematics and both GOF P1 event paths passed independent94d0b8d recheck; actual-browser recheck also passed at94d0b8d within its declared scope; newer checkpoint6 changes await a spot-check. Earlier independent reports and developer checks remain separate in REVIEW-LOOP.md, not converted into real student outcomes. No real students, physical projection-distance or screen-reader speech trial. Retained numerical limits: adjacent confidence levels can change a CI critical value by1ulp nonmonotonically; tiny TypeII uses1−power with cancellation. Ordinary95% CI calculations are not claimed wrong.
 
 Sources:
 - https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Mathematics/2018/Specification-and-Sample-Assessment/international-a-level-maths-spec.pdf

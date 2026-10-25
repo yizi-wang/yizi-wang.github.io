@@ -12,11 +12,11 @@ Prepared2026-10-25 ~20:18UTC. Intermediate checkpoint; project window remains op
 
 ## Evidence
 
-71 unit groups PASS.24 D/E and21 F/P1 actual built Chromium flows PASS after style/access changes.7 new global groups PASS with36 lab/viewport combinations at320/390/1440/1920; actual keyboard/modal/current-lab, Teacher seed→sample→dot→R202→exactPage3→n12, hidden-output accessible-tree exclusion, reduced motion, external-network-blocked operation and print-mode separation. Source/dist byte closure retained. Original root289-page compatibility build PASS20:07:05UTC,55.99s. Headless add200 performance is recorded as local evidence only, not a device guarantee.
+71 unit groups PASS.24 D/E and21 F/P1 actual built Chromium flows PASS after style/access changes.8 new global groups PASS with36 lab/viewport combinations at320/390/1440/1920; actual keyboard/modal/current-lab, Teacher seed→sample→dot→R202→exactPage3→n12, hidden-output accessible-tree exclusion, reduced motion, external-network-blocked operation and print-mode separation. Source/dist byte closure retained. Original root289-page compatibility build PASS20:07:05UTC,55.99s. Headless add200 performance is recorded as local evidence only, not a device guarantee.
 
 ## Independent state
 
-94d0b8d mathematical/event-bridge recheck closed both GOF P1s in tested paths;78 event assertions/13,311 comparisons0 failures,20,168 finite-design outcomes and318 Normal snapshots. This is not browser/student evidence. Actual-browser reviewer is still reviewing94d0b8d. Independent content review foundC1–C5(P2/P3), now repaired with developer regression and preserved original report; independent wording recheck pending. No unqualified final sign-off, weighted learning score, physical projector/SR speech or real-student claim.
+94d0b8d mathematical/event-bridge recheck closed both GOF P1s in tested paths;78 event assertions/13,311 comparisons0 failures,20,168 finite-design outcomes and318 Normal snapshots. This is not browser/student evidence. Actual-browser review94d0b8d passed bothP1 paths and all nine-workspace routes, with one Teacher comparison-labelP2 now developer-repaired. New checkpoint6 changes await final spot-check. Independent content review foundC1–C5(P2/P3), now repaired with developer regression and preserved original report; independent wording recheck pending. No unqualified final sign-off, weighted learning score, physical projector/SR speech or real-student claim.
 
 ## Next
 

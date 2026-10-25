@@ -3617,3 +3617,9 @@ dialog > a {
   .section-heading { flex-wrap: wrap; align-items: flex-start; }
   .section-heading .badge { max-width: 100%; white-space: normal; overflow-wrap: anywhere; line-height: 1.5; }
 }
+.teacher #design-compare .text-button {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+}

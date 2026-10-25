@@ -4,7 +4,7 @@ Snapshot2026-10-25UTC. These are current limits; historical failures and their f
 
 ## Current review gate
 
-Fixed94d0b8d: both GOF P1s and F mathematics/event bridges passed independent limited recheck (78 event assertions,13,311 comparisons). The reference withheld for raw-data-fit+pool is a deliberate safety boundary, not a newly calibrated method. Actual-browser review of this pin is separately pending at this snapshot. The newest printable pages/navigation/access changes are developer-regressed and need final independent spot-check; no real student approval is implied.
+Fixed94d0b8d: both GOF P1s and F mathematics/event bridges passed independent limited recheck (78 event assertions,13,311 comparisons). The reference withheld for raw-data-fit+pool is a deliberate safety boundary, not a newly calibrated method. Actual-browser review at94d0b8d also passed the twoP1 paths and all nine-workspace routes; it found the Teacher comparison-labelP2. The label repair and newest documentation/access changes await final spot-check. The newest printable pages/navigation/access changes are developer-regressed and need final independent spot-check; no real student approval is implied.
 
 ## Numerical limits retained
 
