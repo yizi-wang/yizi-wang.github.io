@@ -1,0 +1,182 @@
+{
+  "timestamp": "2026-10-25T20:58:33.741Z",
+  "source_commit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "branch": "statverse-lab-20261025",
+  "version": "0.5.2",
+  "guide_version": "4.1",
+  "site_source_commit": "74ba5e61f992294c37f4713c7267dd25d496f957",
+  "deployment": {
+    "id": "appgdep_6ade6cb4055c8191a99b3046ec8ee0af",
+    "project_id": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "title": "STATVERSE — Interactive Statistics Lab",
+    "version_id": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_398f1fe930b4819198cb4d40bbe3b5bb",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ade2582c75481919d80c39e48a6a523",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-25T20:55:25.344704+00:00"
+  },
+  "library_artifacts": [
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-Teacher-Guide-v4.1.pdf",
+      "file_id": "file_00000000672c81f5aaf8072bca829f74",
+      "library_file_id": "libfile_91661210f8f0819189eb8167a12c8bc4",
+      "file_name": "STATVERSE-Teacher-Guide-v4.1.pdf",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/pdf",
+      "library_artifact_type": "other",
+      "file_size_bytes": 161755,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-Student-Transfer-v4.1.pdf",
+      "file_id": "file_000000002db481f7b07c8fc1a60d3be4",
+      "library_file_id": "libfile_aad2f305b7408191b45956638fbfb433",
+      "file_name": "STATVERSE-Student-Transfer-v4.1.pdf",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/pdf",
+      "library_artifact_type": "other",
+      "file_size_bytes": 66812,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-freeze-candidate-accc8f9-source-and-static.zip",
+      "file_id": "file_0000000071f48230a013f8f429c2cb24",
+      "library_file_id": "libfile_cc8ccc402efc8191970b15a11e98337d",
+      "file_name": "STATVERSE-freeze-candidate-accc8f9-source-and-static.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 14193730,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-freeze-candidate-accc8f9-static.zip",
+      "file_id": "file_0000000015bc81f5a1ab3c2480b61d29",
+      "library_file_id": "libfile_35baafa3db708191b28f2be9ccc61439",
+      "file_name": "STATVERSE-freeze-candidate-accc8f9-static.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 288119,
+      "external_connectors_accessed": false
+    },
+    {
+      "operation": "create_library_file",
+      "status": "succeeded",
+      "path": "/STATVERSE-freeze-candidate-accc8f9-developer-screenshots.zip",
+      "file_id": "file_0000000063a881f5ad773d94ed90e2e6",
+      "library_file_id": "libfile_1546b99f0f08819196c5eacbf482a4a8",
+      "file_name": "STATVERSE-freeze-candidate-accc8f9-developer-screenshots.zip",
+      "current_version_number": 0,
+      "restored_from_version_number": null,
+      "xattrs": [
+        {
+          "name": "user.library-file-version",
+          "value": "0"
+        }
+      ],
+      "directory_id": "libdir_119b3c3983048191999111a25c8de846",
+      "mime_type": "application/zip",
+      "library_artifact_type": "other",
+      "file_size_bytes": 1485202,
+      "external_connectors_accessed": false
+    }
+  ],
+  "canonical_local_pdf_sources": [
+    {
+      "name": "STATVERSE-Teacher-Guide-v4.1.pdf",
+      "bytes": 136793,
+      "sha256": "175840e57a199f72f8af7bece91167702818b1e643158e65ebdbb981a6fac2b6",
+      "pages": 6
+    },
+    {
+      "name": "STATVERSE-Student-Transfer-v4.1.pdf",
+      "bytes": 41861,
+      "sha256": "98f5515c70cfd501e4245ef9872fddadb8d19c33c372177bfc64e3e8fef73e75",
+      "pages": 2
+    }
+  ],
+  "native_pdf_exact_byte_caveat": {
+    "upload_status": "succeeded",
+    "metadata_reported_sizes": {
+      "teacher": 161755,
+      "student": 66812
+    },
+    "local_source_sizes": {
+      "teacher": 136793,
+      "student": 41861
+    },
+    "status": "BLOCKED readback verification",
+    "exact_action": "Official Library prepare_materialize followed by bundled library_file_transfer.py materialize for newly saved Teacher PDF",
+    "target": "libfile_91661210f8f0819189eb8167a12c8bc4 -> /workspace/statverse-library-pdf-freeze-verification/STATVERSE-Teacher-Guide-v4.1.pdf",
+    "reason": "library file transfer failed: download failed",
+    "outcome": "one helper attempt failed; no materialized teacher file; no retry or alternate downloader; Student readback not attempted; no uncertain write",
+    "hash_rule": "Local source hashes are not asserted as standalone Library PDF byte hashes. Independent consumer should materialize the new IDs and calculate actual hashes. Canonical PDF bytes inside exact-commit source/static ZIP are covered by ZIP manifests."
+  },
+  "zip_hashes": {
+    "source_and_static": "a2cbf71dcf2169b0772bc015fe5b10322a89a2d5b9c2431c10d0343fc8065199",
+    "static": "64fdafe602ef40ebb977e34fb0433c8488958c6db41a113f8549e6d724bd50d4",
+    "developer_screenshots": "a36073175e77817da3aa38fe227c7f14b8549bf2170b2ccd93fc6f0bfa2ce629"
+  },
+  "validation": {
+    "unit": 71,
+    "de_browser": 24,
+    "f_p1_browser": 21,
+    "global_workflows": 8,
+    "lab_viewport_combinations": 36,
+    "polish_browser": 7,
+    "local_poppler_pages_viewed": 8,
+    "pure_engine_hashes_unchanged": true
+  },
+  "independent_baseline": {
+    "source": "94d0b8d",
+    "score": 86.8,
+    "meaning": "Fixed phase5 software/design/evidence assessment, not accuracy percentage/real learners, no post-patch extra score"
+  },
+  "remaining": "Independent final accc8f9 UI/module/offline/guide-link regressions and new PDF byte review; continue genuine boundary/access work until22:47:29UTC without new breadth; final report remains draft"
+}
