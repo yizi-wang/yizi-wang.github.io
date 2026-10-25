@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-10-25T21:25:10.832449+00:00",
+  "application_commit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "independent_review_time_UTC": "2026-10-25 21:01\u201321:03",
+  "source": "Coordinator-transmitted complete independent actual Library materialization/Poppler report; see docs/reviews/FINAL-PDF-V41-ACCEPTANCE.md",
+  "status": "PASS for the exact Library and canonical hashes listed",
+  "pairs": [
+    {
+      "role": "Teacher (contains answers)",
+      "pages": 6,
+      "library_file_id": "libfile_91661210f8f0819189eb8167a12c8bc4",
+      "library_bytes": 161755,
+      "library_sha256": "e01db8c548054e66fd3166346bfbd166a9ac80ad6f20ac1672ad9b24fd02e371",
+      "canonical_path": "evidence/STATVERSE-18min-teacher-guide.pdf",
+      "canonical_bytes": 136793,
+      "canonical_sha256": "175840e57a199f72f8af7bece91167702818b1e643158e65ebdbb981a6fac2b6"
+    },
+    {
+      "role": "Student (no teacher answers)",
+      "pages": 2,
+      "library_file_id": "libfile_aad2f305b7408191b45956638fbfb433",
+      "library_bytes": 66812,
+      "library_sha256": "4b27afca4413a1215b59f39a23f30534b10a48163c59250f480b644a977175e0",
+      "canonical_path": "evidence/STATVERSE-student-transfer.pdf",
+      "canonical_bytes": 41861,
+      "canonical_sha256": "98f5515c70cfd501e4245ef9872fddadb8d19c33c372177bfc64e3e8fef73e75"
+    }
+  ],
+  "comparison": {
+    "byte_equal": false,
+    "full_pdftotext_layout_equal": true,
+    "all8pages_same_parameter_rgb_pixel_differences": 0,
+    "render_dimensions_each_page": [
+      1061,
+      1500
+    ],
+    "link_targets_equal": true,
+    "teacher_answers_in_student": false
+  },
+  "historical_developer_readback": "Teacher official helper download failed once with no local file. No retry/alternate. This historical local failure remains in freeze-delivery.json; independent consumer successfully obtained and tested exact native bytes, resolving the overall PDF delivery gate.",
+  "known_nonblocking_P3": "Teacher p3 / guide: not probability . has a space before the full stop. Retained by coordinator decision to preserve frozen approved bytes.",
+  "unperformed": [
+    "Physical printing",
+    "PDF screen-reader audio/tagged-accessibility certification",
+    "Owner private-site playback"
+  ],
+  "rule": "No re-export or re-upload required. Do not claim byte equality or speculate about the byte-difference cause."
+}

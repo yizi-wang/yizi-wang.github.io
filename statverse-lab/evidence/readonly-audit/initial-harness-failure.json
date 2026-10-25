@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-10-25T21:18:25.429Z",
+  "applicationCommit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "evidenceType": "Developer readonly runtime audit of fresh remote sparse checkout and newly extracted frozen static package. No application edits, production action or student study.",
+  "results": [
+    {
+      "name": "README default-port conflict is explicit and suggests the documented alternative without changing another server",
+      "status": "PASS",
+      "ms": 94
+    },
+    {
+      "name": "fresh GitHub source: initial one sample→one point and reset reproduce original seeded data",
+      "status": "PASS",
+      "ms": 494
+    },
+    {
+      "name": "fresh GitHub source: guide/scope tabs and all21 runtime assets load locally, without losing the opener sample",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /lesson/. Input:\n\n'Loading http://127.0.0.1:4193/guide.html'\n",
+      "ms": 257
+    },
+    {
+      "name": "fresh GitHub source: finite sampler and independent Normal boundaries preserve their declared gates",
+      "status": "FAIL",
+      "error": "TimeoutError: locator.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-lab=\"design\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"nav-item\" data-lab=\"design\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    13 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "ms": 7012
+    },
+    {
+      "name": "fresh GitHub source: supported extrema/invalid active inputs never generate nonfinite SVG geometry or unqualified decisions",
+      "status": "FAIL",
+      "error": "TimeoutError: locator.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-lab=\"correlation\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"nav-item\" data-lab=\"correlation\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    13 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "ms": 7009
+    },
+    {
+      "name": "extracted static ZIP: initial one sample→one point and reset reproduce original seeded data",
+      "status": "PASS",
+      "ms": 354
+    },
+    {
+      "name": "extracted static ZIP: guide/scope tabs and all21 runtime assets load locally, without losing the opener sample",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /lesson/. Input:\n\n'Loading http://127.0.0.1:4194/guide.html'\n",
+      "ms": 187
+    },
+    {
+      "name": "extracted static ZIP: finite sampler and independent Normal boundaries preserve their declared gates",
+      "status": "FAIL",
+      "error": "TimeoutError: locator.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-lab=\"design\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"nav-item\" data-lab=\"design\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    13 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "ms": 7011
+    },
+    {
+      "name": "extracted static ZIP: supported extrema/invalid active inputs never generate nonfinite SVG geometry or unqualified decisions",
+      "status": "FAIL",
+      "error": "TimeoutError: locator.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-lab=\"correlation\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"nav-item\" data-lab=\"correlation\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    13 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <dialog open=\"\" id=\"guide\" aria-labelledby=\"guide-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "ms": 7005
+    },
+    {
+      "name": "no runtime errors or external requests in either cold delivery path",
+      "status": "PASS",
+      "ms": 0
+    }
+  ],
+  "events": [
+    {
+      "directory": "/workspace/statverse-remote-freeze-audit/statverse-lab",
+      "port": 4193,
+      "launcherExit": 0,
+      "log": "STATVERSE: http://127.0.0.1:4193/\nKeep this window open. Press Ctrl+C to stop.\nAll experiment calculations run locally.\n127.0.0.1 - - [25/Oct/2026 21:17:54] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:54] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:54] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:54] \"GET /src/app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/inference.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/statistics.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/discrete-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/mean-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/visibility.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/chi-square-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/sampling-design-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/normal-combination-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/correlation.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/categorical-model.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/lab-ui.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/sampling-design.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /src/correlation-tables.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:55] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:56] \"GET /guide.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:56] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:17:56] \"GET /favicon.svg HTTP/1.1\" 200 -\n\nStopped.\n"
+    },
+    {
+      "directory": "/workspace/statverse-frozen-offline-accc8f9-k9gryyr_",
+      "port": 4194,
+      "launcherExit": 0,
+      "log": "STATVERSE: http://127.0.0.1:4194/\nKeep this window open. Press Ctrl+C to stop.\nAll experiment calculations run locally.\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/inference.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/visibility.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/statistics.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/mean-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/discrete-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/chi-square-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/normal-combination-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/correlation.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/sampling-design-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/lab-ui.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/correlation-tables.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/sampling-design.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /src/categorical-model.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:10] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:11] \"GET /guide.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:11] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:18:11] \"GET /favicon.svg HTTP/1.1\" 200 -\n\nStopped.\n"
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": []
+}

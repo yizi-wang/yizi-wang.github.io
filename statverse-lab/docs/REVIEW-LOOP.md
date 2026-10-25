@@ -170,3 +170,35 @@ The independent15-PNG assessment remains86.8/100 at94d0b8d, not a revised score 
 |DEV7-SVGID/P3|Actual full-motion draw duplicated decorativeglow IDs six times across pool/sample/ghost; evidence/decorative-id-before.json|Per-art deterministic UI identifier counter and separately remapped flight gradients; no RNG or numeric state consumption|Actual full-motion draw andn60 produce unique DOM IDs with live clone; all fill references resolve; resetseed reproduces same sample. New7-flow polish suite and8 global groups PASS|Narrow technical fix not independent math reapproval; pure engines unchanged|
 
 Developer baseline after two presentation changes:71 unit groups,24 D/E and21 F/P1 browser groups passed. After decorative-ID fix:8 global/36 scan groups and7 targeted polish flows pass; source/dist closed through normal static build. Pure inference/statistics/sampling-design SHA256 still match independent audit pins. Canonical handout export now requires STATVERSE_EXPORT_HANDOUTS=1; default QA prints to temporary files, preserving approved committed PDF bytes during later regression. No real student/physical projector/SR speech claim.
+
+## Frozen application accc8f9 —21:28UTC record
+
+Application SHA remains `accc8f9435ebfb6109568831704c1d34a350d5f7`; all changes after that anchor so far are documentation/evidence. Do not substitute an eventual records commit for the independently tested application identity.
+
+|Item|Actual independent evidence|Current disposition|
+|---|---|---|
+|C1–C5 current scope and two-model vocabulary|d9a1f12 independent146-assertion/transfer Fraction review, then accc8f9 delta/hash checks|CLOSED for stated content paths; no full-course claim|
+|DOC7-SYNC and PDF typo/answer separation|accc8f9 independent final delta24 targeted assertions; exact native PDFs independently materialized and all8pages rendered|CLOSED; exact Library and canonical identities both retained|
+|VP7-FIT disclosure|Actual module events fit→pool/pool→fit/disclosure/restore/fixedp independently retain unsupported-calibration gate|Content/method guard CLOSED; final native-browser disclosure/layout spot-check pending|
+|VP7-STRAT short formula|Seven recorded weighted states independently recomputed with Fraction; population fractions/null/hidden states correct|Content/parameter bridge CLOSED; final phone sticky semantics spot-check pending|
+|S5-UI-01 Teacher method labels / local font and icon|Developer actual18px/keyboard/localfavicon+offline checks pass|Final independent native-browser spot-check pending|
+|Final v4.1 handouts|Library Teacher6/Student2 pages; all8 corresponding canonical renders pixel-identical, full extracted text/link targets equal, no student answers|CLOSED for exact listed hashes; byte equality explicitly false; no physical printer or tagged-PDF certification|
+|Residual punctuation|`not probability .` is one harmless guide/Teacher-print space before full stop|Known nonblockingP3; coordinator explicitly retains frozen bytes, no repair claimed|
+
+The standalone Teacher readback failure in freeze-delivery.json remains a truthful historical local failure. The independent consumer subsequently succeeded with the same exact Library IDs, establishing actual native hashes and resolving the overall PDF delivery gate. No forced retry, replacement or guess about byte transformations was used. Final-PDF-V41-ACCEPTANCE.md and evidence/final-pdf-consumer-verification.json contain the resolution.
+
+New developer read-only evidence: freshly fetched remote source71 tests/build, source/static ZIP manifests and21asset closure, ten cold-source/offline browser groups, and six capped-workload/navigation groups passed. These are supplementary developer checks, not extra independent student tasks or extra points on the fixed86.8 assessment. Initial popup-load/archive-prefix harness assumptions and actual bounded workload timings remain in FROZEN-DELIVERY-AUDIT.md and evidence/readonly-audit/.
+
+### Final actual-dist independent acceptance received21:38UTC
+
+`reviews/FINAL-BROWSER-ACCEPTANCE-accc8f9.md` retains the coordinator-transmitted summary; full original report is awaited separately. Fixedaccc8f9 actual Chromium closes S5-UI-01 (four methods18px) and the final native-browser VP7-FIT/VP7-STRAT/access/offline gates. Both GOF guards, core-hash/14module closure, eighteen desktop/mobile routes, nineTeacher and ninephoneTeacher workspaces, keyboard/Escape/reduced-motion/320px/native200%zoom, source samples/seed/cancel/hide and actual Aurora/exact-pagination route passed. No new mathematical/teachingP0/P1 in covered paths; this is not a full-domain or learner certification.
+
+Independent n60/R5000 testing retained5000points with functioning cancel/reset. Reported reset≈51ms, prepositioned native-pointer pause≈105ms, input waiting≈55ms; locator pause/navigation≈1.59s/1.21s includes scroll/action waiting. HighR long tasks remain a measured limitation, not a claim of physical-phone performance. The independently testedZIP had27 matching manifest entries, self-started offline; external attempted/failed requests, console errors and pageErrors all0.
+
+The independent final three-PNG/archive Library batch failed at read-only hosted-tool discovery before prepare/finalize: network, no IDs. Coordinator has requested one original-flow retry; outcome pending at this receipt. This delivery-channel state does not change the completed actual browser acceptance or imply an uncertain app deployment. No app/guide/PDF changes are needed.
+
+### Final browser report and upload outcome received21:42UTC
+
+Full final report now replaces the received-summary placeholder in FINAL-BROWSER-ACCEPTANCE-accc8f9.md; the original summary is retained explicitly as an earlier received summary. No new productP0/P1/P2. Independent final PNG/ZIP actual local hashes are preserved in the report’s receipt appendage, but no local sharing or developer materialization is claimed. The original four-file Library batch and its one authorized retry both failed during read-only hosted tools/list discovery; prepare/finalize never ran, zero IDs, action stopped. No alternate direct transfer or app change. Successful developer screenshots Librarylibfile_1546b99f0f08819196c5eacbf482a4a8 remain available and clearly distinct.
+
+Independent rebuilt staticZIP hash7907a922… differs from the developer ZIP64fdafe6…; acceptance establishes the exactCOMMIT and all27 internal manifest entries, not wrapper byte equality. This does not affect the already separately verified native/canonical PDF text/render equivalence. The final application staysaccc8f9; ensuing changes are documentation/evidence only.

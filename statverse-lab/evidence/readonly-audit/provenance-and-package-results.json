@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-10-25T21:22:16.100654+00:00",
+  "applicationCommit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "closure": {
+    "working-source": {
+      "fileCount": 21,
+      "matches": true
+    },
+    "working-dist": {
+      "fileCount": 21,
+      "matches": true
+    },
+    "fresh-remote-source": {
+      "fileCount": 21,
+      "matches": true
+    },
+    "fresh-remote-dist": {
+      "fileCount": 21,
+      "matches": true
+    },
+    "sites-dist": {
+      "fileCount": 21,
+      "matches": true
+    },
+    "site-input-archive": {
+      "fileCount": 21,
+      "matches": true
+    }
+  },
+  "packages": [
+    {
+      "name": "STATVERSE-freeze-candidate-accc8f9-source-and-static.zip",
+      "bytes": 14193730,
+      "sha256": "a2cbf71dcf2169b0772bc015fe5b10322a89a2d5b9c2431c10d0343fc8065199",
+      "entries": 219,
+      "manifestEntries": 218,
+      "manifestAllPass": true,
+      "unsafePaths": [],
+      "excludedDirectoryOrEnvMatches": [],
+      "commonCredentialPatternFiles": []
+    },
+    {
+      "name": "STATVERSE-freeze-candidate-accc8f9-static.zip",
+      "bytes": 288119,
+      "sha256": "64fdafe602ef40ebb977e34fb0433c8488958c6db41a113f8549e6d724bd50d4",
+      "entries": 28,
+      "manifestEntries": 27,
+      "manifestAllPass": true,
+      "unsafePaths": [],
+      "excludedDirectoryOrEnvMatches": [],
+      "commonCredentialPatternFiles": []
+    }
+  ],
+  "credentialScanScope": "Known token prefixes/private-key headers only; not a proof that arbitrary content cannot contain secrets. No matched values printed.",
+  "runtimeNetwork": "Browser audit blocks all non-loopback requests; no external requests were attempted. No analytics/backend/student persistence code is implemented."
+}

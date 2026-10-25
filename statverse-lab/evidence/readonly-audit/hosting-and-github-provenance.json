@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-10-25 21:23:29 UTC",
+  "application_commit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "evidence_record_head_at_check": "5a8ac571d9173f44b440c4613319ea4809cbadbe",
+  "github": {
+    "url": "https://github.com/yizi-wang/yizi-wang.github.io/tree/statverse-lab-20261025/statverse-lab",
+    "branch": "statverse-lab-20261025",
+    "remote_branch_commit": "5a8ac571d9173f44b440c4613319ea4809cbadbe",
+    "exact_application_commit_freshly_fetched_and_built": true,
+    "master_base_and_current": "a843be97d2035c8e6e5402566e39b7011e8fbd2a",
+    "changed_paths_outside_statverse_lab": [],
+    "production_workflow_trigger": "push branches [master]",
+    "task_production_actions": "No master push, merge, workflow dispatch, original-site deployment or access change."
+  },
+  "site": {
+    "id": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "status": "active",
+    "latest_version_number": 8,
+    "current_live_url": "https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site",
+    "current_user_role": "owner",
+    "access_mode": "custom",
+    "access_policy_summary": {
+      "allowed_users": 1,
+      "allowed_groups": 0,
+      "external_visitor_count": 0,
+      "revision": 1
+    }
+  },
+  "saved_version": {
+    "id": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_398f1fe930b4819198cb4d40bbe3b5bb",
+    "project_id": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "version_number": 8,
+    "source": {
+      "commit_sha": "74ba5e61f992294c37f4713c7267dd25d496f957"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000b04081f795e0b6bf4efa2065",
+      "content_hash": "sha256:02d2a4ba5b886e23701c4f9426b972b642a8c4ef9ae28af310036084bffbaa24",
+      "size_bytes": 450560,
+      "file_count": 22
+    },
+    "screenshot_url": null,
+    "deployment_id": "appgdep_6ade6cb4055c8191a99b3046ec8ee0af"
+  },
+  "deployment": {
+    "id": "appgdep_6ade6cb4055c8191a99b3046ec8ee0af",
+    "project_id": "appgprj_6ade2582c75481919d80c39e48a6a523",
+    "title": "STATVERSE — Interactive Statistics Lab",
+    "version_id": "appgprj_6ade2582c75481919d80c39e48a6a523~appgver_398f1fe930b4819198cb4d40bbe3b5bb",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://statverse-statistics-lab-20261025.qswsaxs.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ade2582c75481919d80c39e48a6a523",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-25T20:55:25.344704+00:00"
+  },
+  "local_source_byte_checks": "See provenance-and-package-results.json: all21 runtime/reading assets match source, dist, fresh remote source/dist, Sites checkout dist and site input archive.",
+  "archive_wrapper_caveat": {
+    "local_input_decompressed_tar_bytes": 450560,
+    "local_input_decompressed_tar_sha256": "2e2d26488c76c8cced40b3dc2f38236854ee18630edbb18670b8a80ff2db7a16",
+    "native_saved_archive_content_hash": "sha256:02d2a4ba5b886e23701c4f9426b972b642a8c4ef9ae28af310036084bffbaa24",
+    "rule": "Wrapper byte equality is not claimed. Native source/version/deployment identities and matching local input assets are established; reason for wrapper hash difference is not inferred."
+  },
+  "unperformed": [
+    "Owner-login playback",
+    "Authenticated served HTTP body hash comparison",
+    "Physical classroom/projector/device validation"
+  ],
+  "privacy": "Sanitized counts and provenance only. No owner email, account identifiers, bypass token, write credential or signed transfer URL retained."
+}

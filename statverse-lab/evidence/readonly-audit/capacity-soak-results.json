@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-10-25T21:24:18.889Z",
+  "applicationCommit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "evidenceType": "Developer single-session Chromium real requestAnimationFrame capacity audit; not an independent review, long-duration soak, physical-device performance guarantee or student study.",
+  "results": [
+    {
+      "name": "Card cap5000 with n60; first/last identity and reset remain functional",
+      "status": "PASS",
+      "elapsedMs": 51882,
+      "R": 5000,
+      "n": 60,
+      "svgElementsAtCapacity": 10567,
+      "longTaskCount": 387,
+      "longestTaskMs": 406
+    },
+    {
+      "name": "mean: real RAF batches reach cap2000; disabled controls and reset remain coherent",
+      "status": "PASS",
+      "elapsedMs": 4015,
+      "R": 2000,
+      "longTaskCount": 0,
+      "longestTaskMs": 0
+    },
+    {
+      "name": "discrete: real RAF batches reach cap2000; disabled controls and reset remain coherent",
+      "status": "PASS",
+      "elapsedMs": 4094,
+      "R": 2000,
+      "longTaskCount": 0,
+      "longestTaskMs": 0
+    },
+    {
+      "name": "chisquare: real RAF batches reach cap2000; disabled controls and reset remain coherent",
+      "status": "PASS",
+      "elapsedMs": 3828,
+      "R": 2000,
+      "longTaskCount": 0,
+      "longestTaskMs": 0
+    },
+    {
+      "name": "design: real RAF batches reach cap1000; disabled controls and reset remain coherent",
+      "status": "PASS",
+      "elapsedMs": 5692,
+      "R": 1000,
+      "longTaskCount": 0,
+      "longestTaskMs": 0
+    },
+    {
+      "name": "Post-load navigation still works; no NaN/Infinity geometry, pageerror or network dependency",
+      "status": "PASS",
+      "elapsedMs": 479,
+      "pageErrors": [],
+      "externalRequests": []
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": []
+}

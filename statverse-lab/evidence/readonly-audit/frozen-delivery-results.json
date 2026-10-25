@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-10-25T21:20:55.130Z",
+  "applicationCommit": "accc8f9435ebfb6109568831704c1d34a350d5f7",
+  "evidenceType": "Developer readonly runtime audit of fresh remote sparse checkout and newly extracted frozen static package. No application edits, production action or student study.",
+  "results": [
+    {
+      "name": "README default-port conflict is explicit and suggests the documented alternative without changing another server",
+      "status": "PASS",
+      "ms": 77
+    },
+    {
+      "name": "fresh GitHub source: initial one sample→one point and reset reproduce original seeded data",
+      "status": "PASS",
+      "ms": 366
+    },
+    {
+      "name": "fresh GitHub source: guide/scope tabs and all21 runtime assets load locally, without losing the opener sample",
+      "status": "PASS",
+      "ms": 442
+    },
+    {
+      "name": "fresh GitHub source: finite sampler and independent Normal boundaries preserve their declared gates",
+      "status": "PASS",
+      "ms": 377
+    },
+    {
+      "name": "fresh GitHub source: supported extrema/invalid active inputs never generate nonfinite SVG geometry or unqualified decisions",
+      "status": "PASS",
+      "ms": 437
+    },
+    {
+      "name": "extracted static ZIP: initial one sample→one point and reset reproduce original seeded data",
+      "status": "PASS",
+      "ms": 483
+    },
+    {
+      "name": "extracted static ZIP: guide/scope tabs and all21 runtime assets load locally, without losing the opener sample",
+      "status": "PASS",
+      "ms": 386
+    },
+    {
+      "name": "extracted static ZIP: finite sampler and independent Normal boundaries preserve their declared gates",
+      "status": "PASS",
+      "ms": 457
+    },
+    {
+      "name": "extracted static ZIP: supported extrema/invalid active inputs never generate nonfinite SVG geometry or unqualified decisions",
+      "status": "PASS",
+      "ms": 504
+    },
+    {
+      "name": "no runtime errors or external requests in either cold delivery path",
+      "status": "PASS",
+      "ms": 1
+    }
+  ],
+  "events": [
+    {
+      "label": "fresh GitHub source",
+      "existing_input_recovery": "Out-of-range forecast restores previous supported value; no new UI change made."
+    },
+    {
+      "directory": "/workspace/statverse-remote-freeze-audit/statverse-lab",
+      "port": 4193,
+      "launcherExit": 0,
+      "log": "STATVERSE: http://127.0.0.1:4193/\nKeep this window open. Press Ctrl+C to stop.\nAll experiment calculations run locally.\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/inference.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/visibility.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/statistics.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/mean-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/discrete-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/chi-square-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/sampling-design-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/normal-combination-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/correlation.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/lab-ui.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/categorical-model.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/sampling-design.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /src/correlation-tables.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:50] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /guide.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/categorical-model.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/chi-square-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/correlation-tables.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/correlation.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/discrete-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/inference.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/lab-ui.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/mean-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/normal-combination-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/sampling-design-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/sampling-design.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/statistics.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /src/visibility.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /guide.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /scope.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /start.py HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:51] \"GET /scope.html HTTP/1.1\" 200 -\n\nStopped.\n"
+    },
+    {
+      "label": "extracted static ZIP",
+      "existing_input_recovery": "Out-of-range forecast restores previous supported value; no new UI change made."
+    },
+    {
+      "directory": "/workspace/statverse-frozen-offline-accc8f9-k9gryyr_",
+      "port": 4194,
+      "launcherExit": 0,
+      "log": "STATVERSE: http://127.0.0.1:4194/\nKeep this window open. Press Ctrl+C to stop.\nAll experiment calculations run locally.\n127.0.0.1 - - [25/Oct/2026 21:20:52] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:52] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:52] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:52] \"GET /src/app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/inference.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/visibility.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/mean-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/statistics.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/discrete-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/chi-square-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/sampling-design-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/normal-combination-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/correlation.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/lab-ui.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/categorical-model.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/correlation-tables.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /src/sampling-design.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /guide.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:53] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/categorical-model.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/chi-square-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/correlation-tables.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/correlation.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/discrete-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/inference.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/lab-ui.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/mean-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/normal-combination-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/sampling-design-lab.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/sampling-design.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/statistics.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /src/visibility.js HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /guide.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /scope.html HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /reading.css HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /favicon.svg HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /start.py HTTP/1.1\" 200 -\n127.0.0.1 - - [25/Oct/2026 21:20:54] \"GET /scope.html HTTP/1.1\" 200 -\n\nStopped.\n"
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": []
+}
