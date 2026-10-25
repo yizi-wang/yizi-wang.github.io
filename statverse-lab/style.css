@@ -2417,3 +2417,4 @@ dialog > a {
   }
 }
 .teacher main{padding-top:20px}.teacher[data-teacher-stage="sample"] .intro,.teacher[data-teacher-stage="distribution"] .intro,.teacher[data-teacher-stage="explain"] .intro{display:none}
+.teacher[data-teacher-stage="distribution"] .chart{height:224px}

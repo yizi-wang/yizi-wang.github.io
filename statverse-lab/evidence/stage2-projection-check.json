@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-25T17:02:44.244Z",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "stage": "distribution",
+  "metricsBounds": {
+    "x": 891.6875,
+    "y": 982,
+    "width": 719.3125,
+    "height": 66
+  },
+  "insideViewport": true,
+  "evidenceType": "Developer browser layout check; physical classroom distance untested"
+}
