@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-26",
-  "edition": "2026-10-26 review v1",
+  "content_date": "2026-10-29",
+  "edition": "2026-10-29 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月26日\n每日简报",
+    "headline": "10月29日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-26-x-hinges",
-        "category": "工程 / ENGINEERING",
-        "headline": "把传感器直接打印进物件",
-        "headline_en": "Printing sensors directly into everyday objects",
-        "summary": "MIT 10月22日介绍X-Hinges设计工具：传感器与导电连线用不同材料打印，减少信号互扰，让手套、灯等物件感知弯曲并响应动作。它把结构设计与测量连起来，支持多方向运动；目前仍是原型研究，不同打印件的读数仍需校准，通用性还待改进。",
-        "summary_en": "On October 22, MIT described X-Hinges, which prints sensors and conducting traces from different materials to reduce signal interference. Gloves and lamps can then measure bending and respond to movement. The tool connects mechanical design with measurement across multiple directions. This remains prototype research: readings from separately printed devices still need calibration, and broader usability requires further development.",
+        "id": "2026-10-29-co2-stock",
+        "category": "气候 / CLIMATE",
+        "headline": "年增幅放缓，为何仍创新高？",
+        "headline_en": "A smaller increase can still set a record",
+        "summary": "10月27日WMO公布：2025年全球地表CO₂平均浓度达426.8ppm，较工业化前高53%。浓度是大气“存量”，不是当年排放量；排放约一半留在大气，其余被陆地和海洋吸收。即使年增幅放缓，存量仍可创新高。",
+        "summary_en": "WMO reported on October 27 that global surface CO₂ concentration reached 426.8 ppm in 2025, 53% above pre-industrial levels. Concentration is an atmospheric stock, not annual emissions. About half of yearly CO₂ emissions remain airborne; land and oceans absorb the rest. A slower annual increase can still produce a record concentration.",
         "source": {
-          "name": "麻省理工学院 / MIT News",
-          "url": "https://news.mit.edu/2026/design-software-reimagines-everyday-objects-as-self-aware-devices-1022",
+          "name": "WMO",
+          "url": "https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/no-22",
+          "published": "2026-10-27"
+        },
+        "accent": "aqua"
+      },
+      {
+        "id": "2026-10-29-touchscreen-fibre",
+        "category": "工程 / ENGINEERING",
+        "headline": "让衣袖成为触摸屏",
+        "headline_en": "Turning a sleeve into a touchscreen",
+        "summary": "NUS 10月22日介绍可融入衣物的触控纤维，制成96×54像素衣袖屏。发光芯片呈现图像，按压感应层接通电路，信号定位触点。50次机洗后，发光强度与触控响应基本不变。这展示了“布料变界面”的路径，目前仍是研究原型。",
+        "summary_en": "NUS reported on October 22 a research prototype: a sleeve with a 96-by-54-pixel display. LEDs generate images; pressing a sensing layer completes a circuit to locate touch. Light output and touch response remained nearly unchanged after 50 machine washes. This shows how fabric can become an interface, while remaining a research prototype.",
+        "source": {
+          "name": "NUS / Nature",
+          "url": "https://news.nus.edu.sg/worlds-first-touchscreen-in-garment/",
+          "published": "2026-10-22"
+        },
+        "accent": "gold"
+      },
+      {
+        "id": "2026-10-29-food-web",
+        "category": "生态 / ECOLOGY",
+        "headline": "干旱与疾病，怎样重连食物网？",
+        "headline_en": "How drought and disease rewire a food web",
+        "summary": "10月21日CSIC介绍西班牙Doñana长期研究：疾病减少兔类后，干旱又削弱鸭等替代猎物供应，猞猁转而大量捕食黑鸢雏鸟。受影响成鸟更常迁离领地。多重压力能改变物种互动；这是一地的长期观察，不能直接外推为普遍规律。",
+        "summary_en": "CSIC reported on October 21 that disease and drought altered predator interactions in Spain’s Doñana. Disease reduced rabbits; drought reduced alternatives such as ducks. Lynx then heavily preyed on black-kite chicks, and affected adults more often left territories. Interacting pressures can reshape a food web, but one observational study does not establish a universal rule.",
+        "source": {
+          "name": "EBD-CSIC / Nature",
+          "url": "https://www.ebd.csic.es/en/outreach/news/droughts-and-shortage-preys-pushes-lynx-prey-black-kite-chicks-donana-national-park",
+          "published": "2026-10-21"
+        },
+        "accent": "coral"
+      },
+      {
+        "id": "2026-10-29-enzyme-plastics",
+        "category": "材料 / MATERIALS",
+        "headline": "给聚酯装上“酶剪刀”",
+        "headline_en": "Enzyme scissors help polyesters break down",
+        "summary": "东京大学10月22日介绍发表于《自然》的研究：部分内含分解酶的可生物降解聚酯薄膜，在757米深海五个月内质量损失近100%。酶切断分子链，生成可能被微生物利用的小分子。这是实海材料测试，不是海洋清理系统；成本与规模化仍待验证。",
+        "summary_en": "The University of Tokyo reported on October 22 that some enzyme-embedded biodegradable polyester films lost nearly all their mass after five months at 757 metres. Enzymes break polymer bonds, producing smaller molecules microbes may use. This was a marine materials test, not an ocean-cleanup system. Lower costs and scaling remain future work.",
+        "source": {
+          "name": "University of Tokyo / Nature",
+          "url": "https://www.a.u-tokyo.ac.jp/topics/topics_20261022-1.html",
           "published": "2026-10-22"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-26-coastal-cliffs",
-        "category": "地球 / EARTH",
-        "headline": "用两次激光扫描，看海崖怎样后退",
-        "headline_en": "Two laser surveys reveal how coastal cliffs retreat",
-        "summary": "UCSD 10月23日报道，研究者比较2016与2023年的机载激光雷达资料，重建加州海崖三维变化，发现退缩高度不均匀，集中于局部热点。激光测距把地形变化变成可比较的数据，可服务海岸规划；七年平均退缩率不是逐年匀速，更不能预测某次崩塌的确切时间。",
-        "summary_en": "UC San Diego reported on October 23 that researchers compared airborne lidar surveys from 2016 and 2023 to reconstruct changes in California's coastal cliffs. Retreat was highly uneven and concentrated in hotspots. Laser ranging turns changing terrain into comparable three-dimensional data for coastal planning. A seven-year average does not imply steady annual retreat or predict the exact timing of an individual collapse.",
+        "id": "2026-10-29-thwaites-grounding-zone",
+        "category": "地球科学 / EARTH SCIENCE",
+        "headline": "一条“线”换成一片“带”，预测为何改变？",
+        "headline_en": "Why replacing a line with a zone changes a model",
+        "summary": "NASA 10月20日报道：新模型不再把冰川接地处视为一条“线”，而纳入海水随潮汐侵入冰底、加速融化的接地“带”，更贴合思韦茨冰川历史观测。部分模拟的2100年海平面贡献约为旧估计两倍；这是条件预测，非已发生结果。",
+        "summary_en": "NASA reported on October 20 that a Thwaites Glacier model represents the grounded-to-floating transition as a zone, not a line. Tidal seawater intrusions accelerate melting. The model better reproduces historical observations. Some simulations project roughly twice earlier estimates of its sea-level contribution by 2100. These are conditional projections, not observed future outcomes.",
         "source": {
-          "name": "加州大学圣迭戈分校 / UC San Diego",
-          "url": "https://today.ucsd.edu/story/new-statewide-lidar-study-identifies-hotspots-for-california-coastal-cliff-retreat",
-          "published": "2026-10-23"
+          "name": "NASA",
+          "url": "https://science.nasa.gov/blogs/science-news/2026/10/20/nasa-refines-thwaites-glacier-projections/",
+          "published": "2026-10-20"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-26-climate-economy",
-        "category": "社会 / SOCIETY",
-        "headline": "气候冲击，怎样沿经济链传递？",
-        "headline_en": "How climate shocks travel through an economy",
-        "summary": "UCSD 10月20日介绍加州气候经济影响报告：高温、烟尘和缺水会影响健康、工时与农业，冲击还能传到食品价格和家庭开支。损失因地区与人群而异，户外劳动者等更易暴露。报告综合已有研究和情景推算，帮助理解风险如何传导；未来估算依赖升温等假设，并非确定账单。",
-        "summary_en": "UC San Diego described a climate-economy report on October 20. Heat, smoke and water shortages affect health, working hours and agriculture, with consequences spreading to food prices and household costs. Exposure differs across regions and groups, including outdoor workers. The report combines existing research and scenario projections to explain how risks spread; future estimates depend on warming assumptions rather than being certain bills.",
-        "source": {
-          "name": "加州大学圣迭戈分校 / UC San Diego",
-          "url": "https://today.ucsd.edu/story/what-climate-change-is-costing-california",
-          "published": "2026-10-20"
-        },
-        "accent": "coral"
-      },
-      {
-        "id": "2026-10-26-vaping-dependence",
-        "category": "健康与数据 / HEALTH & DATA",
-        "headline": "电子烟研究：看清比例，也看清因果",
-        "headline_en": "Vaping research: distinguish percentages from causes",
-        "summary": "UCSD 10月20日报道，美国18—24岁每日电子烟使用者中，高尼古丁产品使用率从2017年的3.1%升至2022年的49.2%，并与更强依赖相关。尼古丁作用于脑的奖励回路，产品浓度与使用方式都值得研究。观察数据不能单独证明因果，这些比例也不代表全体青年。",
-        "summary_en": "UC San Diego reported on October 20 that high-nicotine product use among US daily vapers aged 18–24 rose from 3.1% in 2017 to 49.2% in 2022 and was associated with greater dependence. Nicotine acts on brain reward circuits, making product strength and use patterns relevant. Observational data do not establish causation, and these percentages do not describe all young adults.",
-        "source": {
-          "name": "加州大学圣迭戈分校 / UC San Diego",
-          "url": "https://today.ucsd.edu/story/high-nicotine-e-cigarettes-linked-to-rising-nicotine-dependence-among-young-adults",
-          "published": "2026-10-20"
-        },
-        "accent": "aqua"
-      },
-      {
-        "id": "2026-10-26-swift-mission",
+        "id": "2026-10-29-euclid-comet",
         "category": "天文 / ASTRONOMY",
-        "headline": "Swift停止观测，档案仍可用于研究",
-        "headline_en": "Swift stops observing; its archive remains open for research",
-        "summary": "NASA 10月23日宣布，Swift于20日完成最后观测。轨道降低后，大气阻力妨碍望远镜稳定指向，科学任务因此结束。它曾迅速定位伽马射线暴，再转向捕捉易消逝的余辉，说明观测速度也是科学能力。近22年的公开档案仍可研究；替代快速响应能力仍在探索。",
-        "summary_en": "NASA announced on October 23 that Swift made its final observation on October 20. As its orbit lowered, atmospheric drag prevented steady telescope pointing, ending science operations. Swift rapidly located gamma-ray bursts and turned to catch fading afterglows, showing why response speed matters in astronomy. Nearly 22 years of public archival data remain available; replacement rapid-response capabilities are still being explored.",
+        "headline": "图像里的“噪声”，也可能是新彗星",
+        "headline_en": "An image streak becomes a new comet",
+        "summary": "ESA 10月19日宣布，欧几里得望远镜首次发现未知彗星。软件找出移动条纹，预测位置后在多组图像中追踪；地面追加观测后，小行星中心已于10月8日确认C/2026 S1。轨道周期仍待更多数据细化；不是肉眼观星预告。",
+        "summary_en": "ESA announced on October 19 that Euclid had discovered its first previously unknown comet. Software flagged moving streaks; predicted positions linked detections across images. Ground-based follow-up helped the Minor Planet Center confirm C/2026 S1 on October 8. Its orbital period awaits refinement with more data. This is a confirmed discovery, not a naked-eye viewing forecast.",
         "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/missions/swift/nasas-swift-mission-ends/",
-          "published": "2026-10-23"
-        },
-        "accent": "gold"
-      },
-      {
-        "id": "2026-10-26-dragonfly-simulation",
-        "category": "太空 / SPACE",
-        "headline": "先在地面模拟，练习土卫六自主着陆",
-        "headline_en": "Rehearsing an autonomous Titan landing on Earth",
-        "summary": "NASA 10月23日报道，Dragonfly在类飞行航电测试台上实时模拟首次飞行与着陆。模拟的相机、惯性测量和激光雷达输入，帮助软件选择安全地点，并让工程师核对系统协同。土卫六遥远，需自主决策；这仍是地面测试，实际飞行系统及故障应对还需验证。",
-        "summary_en": "NASA reported on October 23 that Dragonfly rehearsed its first flight and landing in real time on a flight-like avionics testbed. Simulated camera, inertial and lidar inputs helped software select safe terrain while engineers checked system interactions. Titan's distance makes autonomous decisions essential. This was a ground test; validation on the actual flight system and fault-response testing are still ahead.",
-        "source": {
-          "name": "美国航天局 / NASA",
-          "url": "https://science.nasa.gov/blogs/dragonfly/2026/10/23/nasas-dragonfly-completes-first-simulated-flight/",
-          "published": "2026-10-23"
+          "name": "ESA / Euclid",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet",
+          "published": "2026-10-19"
         },
         "accent": "coral"
       }
@@ -185,31 +185,34 @@
     ]
   },
   "editorial_notes": [
-    "2026-10-26 review v1：内容接受待定，具体版本及全部八屏发布批准待定，未发布；其他版本批准不适用于本稿。",
-    "当前批准基线2026-10-23 review v1，HEAD 815e8d29dea39995cd855cfcf93d7ab0fb3516c1，approved.json blob 0eba44c23ff8af719efa455d3cfce6edb0a7f8d6。Library及本地未发现同日电子屏稿。",
-    "10月26日为周一，ISO周2026-W44；真实上一周为2026-W43。三个揭晓的题面及英文逐字复制已批准W43题目，未沿用过期W42答案。W44三题为新拟教学题面，提示与答案仅在独立教师材料。",
-    "六条新闻均与10月23日不同，原始机构正文于10月25日直接核验。尼古丁奖励回路的背景解释另核对Stanford Medicine教学原文，不把背景材料日期当作新闻日期。",
-    "保留schema_version=2、demo=false及display；两屏新闻、三屏W43揭晓、三屏W44新题，每屏18秒，每5分钟刷新。",
-    "已读取AGENTS.md、docs/maintain-site.md、docs/maintain-content.md及skills/starlight-publish/SKILL.md。.agents目录无可用技能；仅采用适用构建与输出检查，不进入提交发布步骤。",
-    "仅在仓库外独立预览副本构建与排版，不修改正式approved.json或其他仓库文件，不提交、推送、部署；构建不等于实体屏验收。"
+    "2026-10-28 19:03北京时间每日任务触发；次日2026-10-29为周四，ISO周2026-W44。本具体版本内容接受与发布批准均待定，未发布。",
+    "当前默认分支只读核验最新提交a843be97d2035c8e6e5402566e39b7011e8fbd2a；approved.json Git blob37572b41b7bb088d30bc642105e78138783ee7ae，正式内容日期2026-10-26。公开现网浏览器也显示10/26周一和8屏。",
+    "本版拟更新全部八屏日期页头及版本，并替换两屏六条新闻正文；已批准W44三题和W43三份真实揭晓的完整weekly对象逐字沿用。",
+    "独立数学核查六题无误；W43揭晓的中英文题面已逐字匹配此前815e8d29dea39995cd855cfcf93d7ab0fb3516c1的实际批准W43周题。W44提示、新答案及完整证明仅在独立教师文件，不进入本JSON或学生审稿正文。",
+    "新闻均为实读的正常公开主来源机构页面，报道日期2026-10-19至27日；WMO2025观测数据、ESA9月影像及10月8日确认日均与报道日分开。NASA思韦茨论文发表于10月12日，10月20日机构报告不是论文新发表日；未来模拟为条件预测。",
+    "塑料条只称部分材料、质量损失，不称完全矿化或海洋清理系统；衣袖耐洗只指所测发光及触控指标；生态观察不扩为普遍因果。",
+    "Library两轮同日稿检索、仓库搜索和本地定向检查均未发现Oct29既有稿；索引无结果不证明全部位置不存在。Oct28待批准稿与独立海报任务未改动，也未重复海报下载。",
+    "已读取当前AGENTS.md、README.md、docs/maintain-site.md、docs/maintain-content.md、docs/decisions.md、skills/starlight-publish/SKILL.md；仅在仓库外scratch副本起草，未commit/push/deploy。",
+    "浏览器已读公开现网，不代表本草稿版式验收。本地预览在Cloud Browser访问127.0.0.1:8839时ERR_CONNECTION_REFUSED，未更换网络路径或提升权限；完整浏览器版式、实体屏和全站构建仍待验收。",
+    "未获本具体版本及发布范围明确批准，保持现网不变；其他日期的批准不适用于本版。学校海报及其他内容均不在此每日任务发布范围。"
   ],
   "review": {
-    "reviewer": "content owner",
-    "approved_at": "2026-10-25T13:00:15Z",
     "content_acceptance": {
       "accepted": true,
-      "accepted_at": "2026-10-25T13:00:15Z",
-      "edition": "2026-10-26 review v1",
-      "scope": "All eight reviewed bilingual student slides, unchanged."
+      "edition": "2026-10-29 review v1",
+      "scope": "All eight reviewed bilingual student slides for this exact edition.",
+      "accepted_at": "2026-10-28T14:59:58Z"
     },
     "publication_approval": {
       "approved": true,
-      "approved_at": "2026-10-25T13:00:15Z",
-      "edition": "2026-10-26 review v1",
-      "scope": "Publish all eight student slides through this repository GitHub Pages route. Electronic screen only; no other project Git synchronization."
+      "edition": "2026-10-29 review v1",
+      "scope": "Electronic screen only. Update date headers on all eight student slides and replace the two news-slide bodies (six news items). Preserve all six W43 reveal and W44 question bodies word-for-word. The poster is also authorized, but its separate addition is pending successful local file access. No other website content or other project Git synchronization.",
+      "approved_at": "2026-10-28T14:59:58Z"
     },
-    "reviewed_draft_sha256": "42fdfc03d3234e8ab5a8333a2dcb1422fb8e2671293977db8b50e454f9fbc8c1",
-    "reviewed_draft_bytes": 16734,
-    "note": "Content acceptance and publication approval are recorded separately for the exact 2026-10-26 review v1. All 48 bilingual student fields and the six primary source URLs were matched against the reviewed HTML student section, normalizing only whitespace, Unicode compatibility characters, HTML escaping and transport backticks. The independent teacher section is excluded from student playback. Only status and this review record differ from the reviewed JSON; historical draft notes remain as provenance. W43 reveals correspond to the actual approved W43 questions; W44 challenges contain no hints or answers. Physical display not inspected."
+    "reviewer": "content owner",
+    "approved_at": "2026-10-28T14:59:58Z",
+    "reviewed_draft_sha256": "40d83ded4e0ef93a09a47d11544efb01b34b39e79beaeeb080313f2191be5d49",
+    "reviewed_draft_bytes": 17296,
+    "note": "The owner explicitly accepted and authorized publication of 2026-10-29 review v1 at 2026-10-28 22:59:58 Asia/Shanghai. The complete original student JSON was matched byte-for-byte to the author-provided SHA256, and all 108 tagged fields were matched to Library review HTML v0. Only status and this review record differ from that approved source. The complete weekly and display objects remain identical to the existing approved feed. Historical pending-approval editorial notes describe the draft stage. The independent teacher file was not imported. The newly uploaded poster could not be downloaded by the official local transfer process, so no poster asset, placeholder, or playback change is included in this release. Public-page verification is unavailable in this execution environment; build and local browser checks do not establish physical-screen acceptance."
   }
 }
