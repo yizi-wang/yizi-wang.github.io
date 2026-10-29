@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-29",
-  "edition": "2026-10-29 review v1",
+  "content_date": "2026-10-30",
+  "edition": "2026-10-30 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,7 +12,7 @@
   },
   "daily": {
     "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月29日\n每日简报",
+    "headline": "10月30日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
@@ -30,72 +30,72 @@
         "accent": "aqua"
       },
       {
-        "id": "2026-10-29-touchscreen-fibre",
+        "id": "2026-10-30-mars-dust",
         "category": "工程 / ENGINEERING",
-        "headline": "让衣袖成为触摸屏",
-        "headline_en": "Turning a sleeve into a touchscreen",
-        "summary": "NUS 10月22日介绍可融入衣物的触控纤维，制成96×54像素衣袖屏。发光芯片呈现图像，按压感应层接通电路，信号定位触点。50次机洗后，发光强度与触控响应基本不变。这展示了“布料变界面”的路径，目前仍是研究原型。",
-        "summary_en": "NUS reported on October 22 a research prototype: a sleeve with a 96-by-54-pixel display. LEDs generate images; pressing a sensing layer completes a circuit to locate touch. Light output and touch response remained nearly unchanged after 50 machine washes. This shows how fabric can become an interface, while remaining a research prototype.",
+        "headline": "越小的火星尘埃，越难甩掉",
+        "headline_en": "Tiny Mars dust is hard to shake off",
+        "summary": "NASA 10月26日报道：毅力号在材料样片上测得细至约100纳米的火星尘埃；最细颗粒多年行驶与钻探后仍附着。静电似乎影响不同表面吸附的粒径。测量可帮助选择宇航服材料与除尘设计；这不是人体暴露试验。",
+        "summary_en": "NASA reported on October 26 that Perseverance measured Mars dust down to about 100 nanometres on material samples. The finest particles remained attached through years of driving and drilling. Static electricity appears to influence which sizes stick to different surfaces. These measurements may guide spacesuit materials and dust removal; they are not human exposure tests.",
         "source": {
-          "name": "NUS / Nature",
-          "url": "https://news.nus.edu.sg/worlds-first-touchscreen-in-garment/",
-          "published": "2026-10-22"
+          "name": "NASA / JPL",
+          "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/",
+          "published": "2026-10-26"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-29-food-web",
-        "category": "生态 / ECOLOGY",
-        "headline": "干旱与疾病，怎样重连食物网？",
-        "headline_en": "How drought and disease rewire a food web",
-        "summary": "10月21日CSIC介绍西班牙Doñana长期研究：疾病减少兔类后，干旱又削弱鸭等替代猎物供应，猞猁转而大量捕食黑鸢雏鸟。受影响成鸟更常迁离领地。多重压力能改变物种互动；这是一地的长期观察，不能直接外推为普遍规律。",
-        "summary_en": "CSIC reported on October 21 that disease and drought altered predator interactions in Spain’s Doñana. Disease reduced rabbits; drought reduced alternatives such as ducks. Lynx then heavily preyed on black-kite chicks, and affected adults more often left territories. Interacting pressures can reshape a food web, but one observational study does not establish a universal rule.",
+        "id": "2026-10-30-lucy",
+        "category": "天文 / ASTRONOMY",
+        "headline": "与木星“同行”的小行星",
+        "headline_en": "Asteroids that share Jupiter’s orbit",
+        "summary": "NASA 10月28日宣布，露西号进入木星特洛伊小行星区域。太阳和木星的共同引力，使这些小天体聚集在木星前后两个稳定区域。研究它们可检验太阳系形成理论；首次近距离飞掠特洛伊小行星仍定于2027年8月11日，并未已经抵达目标旁。",
+        "summary_en": "NASA announced on October 28 that Lucy had entered the Jupiter Trojan region. The combined gravity of the Sun and Jupiter keeps these small bodies clustered in two stable regions ahead of and behind Jupiter. Studying them can test solar-system formation theories. The first close Trojan-asteroid flyby remains scheduled for August 11, 2027; it has not happened yet.",
         "source": {
-          "name": "EBD-CSIC / Nature",
-          "url": "https://www.ebd.csic.es/en/outreach/news/droughts-and-shortage-preys-pushes-lynx-prey-black-kite-chicks-donana-national-park",
-          "published": "2026-10-21"
+          "name": "NASA / Lucy",
+          "url": "https://science.nasa.gov/blogs/lucy/2026/10/28/nasas-lucy-reaches-trojan-asteroid-region-5-years-after-launch/",
+          "published": "2026-10-28"
         },
         "accent": "coral"
       },
       {
-        "id": "2026-10-29-enzyme-plastics",
-        "category": "材料 / MATERIALS",
-        "headline": "给聚酯装上“酶剪刀”",
-        "headline_en": "Enzyme scissors help polyesters break down",
-        "summary": "东京大学10月22日介绍发表于《自然》的研究：部分内含分解酶的可生物降解聚酯薄膜，在757米深海五个月内质量损失近100%。酶切断分子链，生成可能被微生物利用的小分子。这是实海材料测试，不是海洋清理系统；成本与规模化仍待验证。",
-        "summary_en": "The University of Tokyo reported on October 22 that some enzyme-embedded biodegradable polyester films lost nearly all their mass after five months at 757 metres. Enzymes break polymer bonds, producing smaller molecules microbes may use. This was a marine materials test, not an ocean-cleanup system. Lower costs and scaling remain future work.",
+        "id": "2026-10-30-desert",
+        "category": "考古 / ARCHAEOLOGY",
+        "headline": "有水，为什么仍难定居？",
+        "headline_en": "Water alone was not enough",
+        "summary": "10月28日，研究者报告：阿拉伯沙漠约1500公里调查发现古湖泊，却未找到石器遗物。结合空间模型，结果提示：早期人类定居不仅需要水，也需要能打制工具的石材。迁徙地图因此不能只看气候；未发现遗物，也不等于证明无人到过。",
+        "summary_en": "On October 28, researchers reported ancient lake deposits but no stone artefacts along a roughly 1,500-kilometre Arabian desert survey. Spatial modelling suggests settlement depended on both water and toolmaking stone. Migration maps therefore need geology as well as climate. However, missing archaeological traces do not prove that nobody ever visited.",
         "source": {
-          "name": "University of Tokyo / Nature",
-          "url": "https://www.a.u-tokyo.ac.jp/topics/topics_20261022-1.html",
-          "published": "2026-10-22"
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/s41586-026-11180-5",
+          "published": "2026-10-28"
         },
         "accent": "aqua"
       },
       {
-        "id": "2026-10-29-thwaites-grounding-zone",
-        "category": "地球科学 / EARTH SCIENCE",
-        "headline": "一条“线”换成一片“带”，预测为何改变？",
-        "headline_en": "Why replacing a line with a zone changes a model",
-        "summary": "NASA 10月20日报道：新模型不再把冰川接地处视为一条“线”，而纳入海水随潮汐侵入冰底、加速融化的接地“带”，更贴合思韦茨冰川历史观测。部分模拟的2100年海平面贡献约为旧估计两倍；这是条件预测，非已发生结果。",
-        "summary_en": "NASA reported on October 20 that a Thwaites Glacier model represents the grounded-to-floating transition as a zone, not a line. Tidal seawater intrusions accelerate melting. The model better reproduces historical observations. Some simulations project roughly twice earlier estimates of its sea-level contribution by 2100. These are conditional projections, not observed future outcomes.",
+        "id": "2026-10-30-semiconductor",
+        "category": "材料 / MATERIALS",
+        "headline": "吸光之后，怎样留住电荷？",
+        "headline_en": "Keeping solar-generated charges alive",
+        "summary": "10月28日，研究发现硫化铋薄膜既能强烈吸光，又能延缓电子与空穴复合。邻近的低能态像临时“蓄水池”，让电荷不易迅速损失，为收集电荷留下更多时间。这提供了太阳能材料设计新思路，但验证的是物理机制，并非已造出更高效的太阳能电池。",
+        "summary_en": "On October 28, researchers showed that bismuth sulfide films combine strong light absorption with slower electron–hole recombination. Nearby lower-energy states act as a temporary reservoir, giving charges more time to be collected. This suggests a new design principle for solar-energy materials, but demonstrates a physical mechanism, not a finished, more efficient solar cell.",
         "source": {
-          "name": "NASA",
-          "url": "https://science.nasa.gov/blogs/science-news/2026/10/20/nasa-refines-thwaites-glacier-projections/",
-          "published": "2026-10-20"
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/s41586-026-11223-x",
+          "published": "2026-10-28"
         },
         "accent": "gold"
       },
       {
-        "id": "2026-10-29-euclid-comet",
-        "category": "天文 / ASTRONOMY",
-        "headline": "图像里的“噪声”，也可能是新彗星",
-        "headline_en": "An image streak becomes a new comet",
-        "summary": "ESA 10月19日宣布，欧几里得望远镜首次发现未知彗星。软件找出移动条纹，预测位置后在多组图像中追踪；地面追加观测后，小行星中心已于10月8日确认C/2026 S1。轨道周期仍待更多数据细化；不是肉眼观星预告。",
-        "summary_en": "ESA announced on October 19 that Euclid had discovered its first previously unknown comet. Software flagged moving streaks; predicted positions linked detections across images. Ground-based follow-up helped the Minor Planet Center confirm C/2026 S1 on October 8. Its orbital period awaits refinement with more data. This is a confirmed discovery, not a naked-eye viewing forecast.",
+        "id": "2026-10-30-fly-rhythm",
+        "category": "神经科学 / NEUROSCIENCE",
+        "headline": "神经回路如何自己打节拍？",
+        "headline_en": "How a neural circuit makes a rhythm",
+        "summary": "10月28日，果蝇神经连接图模拟锁定一个候选步行节律回路：两个兴奋性神经元与一个抑制性神经元形成反馈，将持续输入变成周期输出。另一条通路的运动预测获得光刺激实验支持。这展示了如何从“接线图”推测功能，但三细胞核心仍是候选机制。",
+        "summary_en": "On October 28, fly-connectome simulations identified a candidate walking rhythm circuit: two excitatory neurons and one inhibitory neuron form feedback that turns sustained input into rhythmic output. Light-stimulation experiments supported a movement prediction for another pathway. Wiring maps can suggest function, while the three-neuron core remains a candidate mechanism.",
         "source": {
-          "name": "ESA / Euclid",
-          "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet",
-          "published": "2026-10-19"
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/s41586-026-11195-y",
+          "published": "2026-10-28"
         },
         "accent": "coral"
       }
@@ -185,34 +185,38 @@
     ]
   },
   "editorial_notes": [
-    "2026-10-28 19:03北京时间每日任务触发；次日2026-10-29为周四，ISO周2026-W44。本具体版本内容接受与发布批准均待定，未发布。",
-    "当前默认分支只读核验最新提交a843be97d2035c8e6e5402566e39b7011e8fbd2a；approved.json Git blob37572b41b7bb088d30bc642105e78138783ee7ae，正式内容日期2026-10-26。公开现网浏览器也显示10/26周一和8屏。",
-    "本版拟更新全部八屏日期页头及版本，并替换两屏六条新闻正文；已批准W44三题和W43三份真实揭晓的完整weekly对象逐字沿用。",
-    "独立数学核查六题无误；W43揭晓的中英文题面已逐字匹配此前815e8d29dea39995cd855cfcf93d7ab0fb3516c1的实际批准W43周题。W44提示、新答案及完整证明仅在独立教师文件，不进入本JSON或学生审稿正文。",
-    "新闻均为实读的正常公开主来源机构页面，报道日期2026-10-19至27日；WMO2025观测数据、ESA9月影像及10月8日确认日均与报道日分开。NASA思韦茨论文发表于10月12日，10月20日机构报告不是论文新发表日；未来模拟为条件预测。",
-    "塑料条只称部分材料、质量损失，不称完全矿化或海洋清理系统；衣袖耐洗只指所测发光及触控指标；生态观察不扩为普遍因果。",
-    "Library两轮同日稿检索、仓库搜索和本地定向检查均未发现Oct29既有稿；索引无结果不证明全部位置不存在。Oct28待批准稿与独立海报任务未改动，也未重复海报下载。",
-    "已读取当前AGENTS.md、README.md、docs/maintain-site.md、docs/maintain-content.md、docs/decisions.md、skills/starlight-publish/SKILL.md；仅在仓库外scratch副本起草，未commit/push/deploy。",
-    "浏览器已读公开现网，不代表本草稿版式验收。本地预览在Cloud Browser访问127.0.0.1:8839时ERR_CONNECTION_REFUSED，未更换网络路径或提升权限；完整浏览器版式、实体屏和全站构建仍待验收。",
-    "未获本具体版本及发布范围明确批准，保持现网不变；其他日期的批准不适用于本版。学校海报及其他内容均不在此每日任务发布范围。"
+    "2026-10-29 19:43北京时间准备次日周五稿；本次执行为周四晚，符合排期。Oct30 v1 内容接受与本具体版本发布批准均待定。",
+    "默认分支master最新提交aa4df5678d596ddf141adfffe7484a6b1271cba5，现有正式内容日期2026-10-29。只读获取完整approved.json。",
+    "拟更新八屏日期页头；两屏新闻中保留WMO一条、替换五条。W43三份真实揭晓与W44三道已批准周题完整weekly对象逐字不变；普通屏18秒不变。",
+    "海报独立授权继续有效，但本稿不重复下载或更改网络设置；海报原图尚未入库，36秒固定位置及11月28日到期隐藏尚未上线，不包含于本次八屏JSON。",
+    "同日房间消息日期检索与本地定向查找未发现既有Oct30稿；不声称穷尽全部存储。",
+    "主来源仅使用机构公开页面或论文公开正文/摘要。区分论文/报道日期、观察和机制推断、模拟和实测、未来计划和已发生结果。",
+    "仅在仓库外scratch创建审稿文件，无提交、推送、部署，未改现网及其他内容。全站构建与实体屏验收未执行。",
+    "沙漠研究未发现石器不能等同无人到过；邻近边缘仍有可打制石材，未声称全线没有石材。半导体不写发电效率提高，验证为材料物理机制。果蝇三细胞核心为模拟候选，另一通路实验不能写成核心完整活体验证；正文订阅限制未绕过，依据公开摘要及扩展数据。",
+    "WMO条沿用前版并重新核对10月27日原始公报及机构说明。露西号进入区域不等于完成近距离飞掠；火星尘埃测量不是人体暴露试验。",
+    "本地Chromium启动因socket Operation not permitted失败，未重试或扩大权限；未完成浏览器视觉验收。纯JavaScript运行时检查确认八屏及10/30周五页头，并拒绝把draft当approved。中英新闻长度与现有版相近，不等于视觉验收。"
   ],
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-10-29 review v1",
-      "scope": "All eight reviewed bilingual student slides for this exact edition.",
-      "accepted_at": "2026-10-28T14:59:58Z"
+      "edition": "2026-10-30 review v1",
+      "scope": "All eight reviewed bilingual student slides for this exact edition."
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-10-29 review v1",
-      "scope": "Electronic screen only. Update date headers on all eight student slides and replace the two news-slide bodies (six news items). Preserve all six W43 reveal and W44 question bodies word-for-word. The poster is also authorized, but its separate addition is pending successful local file access. No other website content or other project Git synchronization.",
-      "approved_at": "2026-10-28T14:59:58Z"
+      "edition": "2026-10-30 review v1",
+      "scope": "Electronic screen only. Update date headers on all eight student slides and replace the two news-slide bodies (six news items). Preserve all six W43 reveal and W44 question bodies word-for-word. No poster or other website content, no other project Git synchronization."
     },
-    "reviewer": "content owner",
-    "approved_at": "2026-10-28T14:59:58Z",
-    "reviewed_draft_sha256": "40d83ded4e0ef93a09a47d11544efb01b34b39e79beaeeb080313f2191be5d49",
-    "reviewed_draft_bytes": 17296,
-    "note": "The owner explicitly accepted and authorized publication of 2026-10-29 review v1 at 2026-10-28 22:59:58 Asia/Shanghai. The complete original student JSON was matched byte-for-byte to the author-provided SHA256, and all 108 tagged fields were matched to Library review HTML v0. Only status and this review record differ from that approved source. The complete weekly and display objects remain identical to the existing approved feed. Historical pending-approval editorial notes describe the draft stage. The independent teacher file was not imported. The newly uploaded poster could not be downloaded by the official local transfer process, so no poster asset, placeholder, or playback change is included in this release. Public-page verification is unavailable in this execution environment; build and local browser checks do not establish physical-screen acceptance."
+    "publication_record": {
+      "recorded_at": "2026-10-29T20:23:37.395311+00:00",
+      "approval_evidence": "User approved this exact review v1 news/date release: 新闻也批准.",
+      "approved_library_file_id": "libfile_273f38282ad88191aff4c5c768b605b0",
+      "approved_filename": "screen-2026-10-30-review-v1.html",
+      "approved_version": 0,
+      "approved_html_sha256": "4f076f91c854c63bec8ae035e12139f2078b2086d639810717de3a5200e3b058",
+      "source_match": "All 108 tagged visible review fields and source links match the embedded review JSON. Student content is copied exactly from that JSON; only status and approval metadata change.",
+      "preserved": "The complete weekly and display objects match the existing approved feed. The separately approved poster manifest, original JPEG, position, 36-second duration and 2026-11-28T16:15:00+08:00 expiry remain unchanged.",
+      "historical_notes": "Earlier pending-approval and missing-poster statements in editorial_notes describe the draft stage and are superseded by this publication record."
+    }
   }
 }
