@@ -122,6 +122,23 @@ body.display-page {
   pointer-events: auto;
 }
 
+.poster-slide {
+  display: block;
+  background: #050d17;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.poster-slide .progress {
+  left: 0;
+}
+
 .slide[data-accent="gold"] {
   --accent: var(--gold);
   --accent-glow: rgba(199, 163, 90, 0.18);

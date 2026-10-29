@@ -10,6 +10,10 @@
   let refreshTimer = null;
   let activeIndex = Number.isFinite(requestedSlide) ? Math.max(0, requestedSlide) : 0;
   let contentFingerprint = "";
+  let currentData = null;
+  let posterData = { status: "approved", posters: [] };
+  let expiryTimer = null;
+  let defaultSlideSeconds = 18;
 
   const escapeHtml = (value = "") =>
     String(value)
@@ -138,7 +142,15 @@
     return "";
   };
 
-  const buildSlides = (data) => {
+  const activePosters = () => {
+    if (posterData.status !== "approved" || !Array.isArray(posterData.posters)) return [];
+    return posterData.posters.filter((poster) => {
+      const expiresAt = Date.parse(poster.expires_at);
+      return Number.isFinite(expiresAt) && Date.now() < expiresAt;
+    });
+  };
+
+  const buildSlides = (data, posters) => {
     const slides = [];
     const daily = data.daily;
     const weekly = data.weekly;
@@ -202,6 +214,15 @@
         </section>`));
     });
 
+    // Keep approved campaigns here even when the daily news feed is replaced.
+    posters.forEach((poster) => {
+      slides.push(`
+        <article class="slide poster-slide" data-accent="gold" data-poster-id="${escapeHtml(poster.id)}" data-slide-seconds="${escapeHtml(poster.slide_seconds)}">
+          <img class="poster-image" src="${escapeHtml(poster.image)}" alt="${escapeHtml(poster.alt)}" width="${escapeHtml(poster.width)}" height="${escapeHtml(poster.height)}" />
+          <div class="progress" aria-hidden="true"><div class="progress-bar"></div></div>
+        </article>`);
+    });
+
     previousAnswers.forEach((answer, index) => {
       slides.push(makeFrame(data, {
         rail: "ANSWER",
@@ -248,24 +269,28 @@
     return slides;
   };
 
-  const activateSlide = (index, slideSeconds) => {
+  const activateSlide = (index) => {
+    window.clearTimeout(timer);
     const slides = [...screen.querySelectorAll(".slide")];
     if (!slides.length) return;
     activeIndex = ((index % slides.length) + slides.length) % slides.length;
     slides.forEach((slide, slideIndex) => {
       slide.classList.toggle("is-active", slideIndex === activeIndex);
-      slide.style.setProperty("--slide-duration", `${slideSeconds}s`);
+      const seconds = Number(slide.dataset.slideSeconds) || defaultSlideSeconds;
+      slide.style.setProperty("--slide-duration", `${seconds}s`);
     });
     const active = slides[activeIndex];
     screen.style.setProperty("--accent", getComputedStyle(active).getPropertyValue("--accent"));
+    if (autoplay) {
+      const seconds = Number(active.dataset.slideSeconds) || defaultSlideSeconds;
+      timer = window.setTimeout(() => activateSlide(activeIndex + 1), seconds * 1000);
+    }
   };
 
   const beginPlayback = (slideSeconds) => {
-    window.clearInterval(timer);
+    defaultSlideSeconds = slideSeconds;
     screen.classList.toggle("is-playing", autoplay);
-    activateSlide(activeIndex, slideSeconds);
-    if (!autoplay) return;
-    timer = window.setInterval(() => activateSlide(activeIndex + 1, slideSeconds), slideSeconds * 1000);
+    activateSlide(activeIndex);
   };
 
   const showError = () => {
@@ -277,15 +302,47 @@
   };
 
   const render = (data) => {
-    const fingerprint = JSON.stringify(data);
+    currentData = data;
+    const posters = activePosters();
+    // Enforce expiry even offline, with autoplay paused, or between feed refreshes.
+    window.clearTimeout(expiryTimer);
+    if (posters.length) {
+      const nextExpiry = Math.min(...posters.map((poster) => Date.parse(poster.expires_at)));
+      expiryTimer = window.setTimeout(() => render(currentData), Math.min(nextExpiry - Date.now(), 2147483647));
+    }
+    const fingerprint = JSON.stringify([data, posters]);
     if (fingerprint === contentFingerprint) return;
     contentFingerprint = fingerprint;
-    screen.innerHTML = buildSlides(data).join("");
+    screen.innerHTML = buildSlides(data, posters).join("");
     activeIndex = Math.min(activeIndex, Math.max(0, screen.querySelectorAll(".slide").length - 1));
-    beginPlayback(Number(data.display.slide_seconds) || 8);
+    beginPlayback(Number(data.display.slide_seconds) || 18);
+  };
+
+  const loadPosters = async () => {
+    try {
+      const response = await fetch(`content/posters.json?ts=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      if (data.status !== "approved" || !Array.isArray(data.posters)) {
+        throw new Error("Approved posters have invalid status");
+      }
+      posterData = data;
+      window.localStorage.setItem("oxbridge:last-approved-posters", JSON.stringify(data));
+    } catch (error) {
+      const cached = window.localStorage.getItem("oxbridge:last-approved-posters");
+      if (cached) {
+        try {
+          posterData = JSON.parse(cached);
+        } catch {
+          window.localStorage.removeItem("oxbridge:last-approved-posters");
+        }
+      }
+      console.error("Poster load failed", error);
+    }
   };
 
   const loadContent = async () => {
+    await loadPosters();
     try {
       const response = await fetch(`content/${source}.json?ts=${Date.now()}`, { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -317,10 +374,10 @@
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight" || event.key === "PageDown") {
-      activateSlide(activeIndex + 1, 8);
+      activateSlide(activeIndex + 1);
     }
     if (event.key === "ArrowLeft" || event.key === "PageUp") {
-      activateSlide(activeIndex - 1, 8);
+      activateSlide(activeIndex - 1);
     }
   });
 

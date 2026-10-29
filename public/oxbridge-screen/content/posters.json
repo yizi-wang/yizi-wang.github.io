@@ -1,0 +1,14 @@
+{
+  "status": "approved",
+  "posters": [
+    {
+      "id": "2026-retro-show-recruitment",
+      "image": "assets/posters/2026-retro-show-recruitment.jpg",
+      "alt": "节目招募海报：歌唱、舞蹈、乐队、音乐剧、戏剧等，不限形式，自带复古氛围即可。报名时间2026年10月28日至11月28日，扫描海报右下方二维码填写报名表。",
+      "width": 1024,
+      "height": 1536,
+      "slide_seconds": 36,
+      "expires_at": "2026-11-28T16:15:00+08:00"
+    }
+  ]
+}
