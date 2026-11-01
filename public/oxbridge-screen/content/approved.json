@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-10-30",
-  "edition": "2026-10-30 review v1",
+  "content_date": "2026-11-02",
+  "edition": "2026-11-02 review v2",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -11,173 +11,173 @@
     "refresh_minutes": 5
   },
   "daily": {
-    "eyebrow": "DAILY BRIEF · 每日要闻",
-    "headline": "10月30日\n每日简报",
+    "eyebrow": "每日简报 / DAILY BRIEF",
+    "headline": "11月02日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "2026-10-29-co2-stock",
-        "category": "气候 / CLIMATE",
-        "headline": "年增幅放缓，为何仍创新高？",
-        "headline_en": "A smaller increase can still set a record",
-        "summary": "10月27日WMO公布：2025年全球地表CO₂平均浓度达426.8ppm，较工业化前高53%。浓度是大气“存量”，不是当年排放量；排放约一半留在大气，其余被陆地和海洋吸收。即使年增幅放缓，存量仍可创新高。",
-        "summary_en": "WMO reported on October 27 that global surface CO₂ concentration reached 426.8 ppm in 2025, 53% above pre-industrial levels. Concentration is an atmospheric stock, not annual emissions. About half of yearly CO₂ emissions remain airborne; land and oceans absorb the rest. A slower annual increase can still produce a record concentration.",
+        "id": "shell-math",
+        "category": "数学 · 仿生",
+        "headline": "贝壳生长，藏着简单规则",
+        "headline_en": "Simple Rules Shape Seashells",
+        "summary": "10月26日，加州理工公布贝壳生长模型：只用开口曲线、放大比例和旋转三个要素，让新材料沿边缘不断添加，重复简单规则便能形成多种贝壳。局部生长可以决定整体形状，也可能启发低耗能制造。",
+        "summary_en": "On October 26, Caltech reported a shell-growth model using an opening curve, scaling and rotation. Adding material only along the growing edge can generate many shell forms by repeating simple rules. The work shows how local growth can shape a whole structure and may inspire less energy-intensive manufacturing.",
         "source": {
-          "name": "WMO",
-          "url": "https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/no-22",
-          "published": "2026-10-27"
-        },
-        "accent": "aqua"
-      },
-      {
-        "id": "2026-10-30-mars-dust",
-        "category": "工程 / ENGINEERING",
-        "headline": "越小的火星尘埃，越难甩掉",
-        "headline_en": "Tiny Mars dust is hard to shake off",
-        "summary": "NASA 10月26日报道：毅力号在材料样片上测得细至约100纳米的火星尘埃；最细颗粒多年行驶与钻探后仍附着。静电似乎影响不同表面吸附的粒径。测量可帮助选择宇航服材料与除尘设计；这不是人体暴露试验。",
-        "summary_en": "NASA reported on October 26 that Perseverance measured Mars dust down to about 100 nanometres on material samples. The finest particles remained attached through years of driving and drilling. Static electricity appears to influence which sizes stick to different surfaces. These measurements may guide spacesuit materials and dust removal; they are not human exposure tests.",
-        "source": {
-          "name": "NASA / JPL",
-          "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/",
+          "name": "Caltech",
+          "url": "https://www.caltech.edu/about/news/the-mathematics-of-growing-a-shell",
           "published": "2026-10-26"
         },
-        "accent": "gold"
+        "accent": "#9A6C37"
       },
       {
-        "id": "2026-10-30-lucy",
-        "category": "天文 / ASTRONOMY",
-        "headline": "与木星“同行”的小行星",
-        "headline_en": "Asteroids that share Jupiter’s orbit",
-        "summary": "NASA 10月28日宣布，露西号进入木星特洛伊小行星区域。太阳和木星的共同引力，使这些小天体聚集在木星前后两个稳定区域。研究它们可检验太阳系形成理论；首次近距离飞掠特洛伊小行星仍定于2027年8月11日，并未已经抵达目标旁。",
-        "summary_en": "NASA announced on October 28 that Lucy had entered the Jupiter Trojan region. The combined gravity of the Sun and Jupiter keeps these small bodies clustered in two stable regions ahead of and behind Jupiter. Studying them can test solar-system formation theories. The first close Trojan-asteroid flyby remains scheduled for August 11, 2027; it has not happened yet.",
+        "id": "cell-archive",
+        "category": "生命科学",
+        "headline": "给细胞留一份分子档案",
+        "headline_en": "A Molecular Archive Inside Cells",
+        "summary": "10月26日，苏黎世联邦理工公布细胞“档案”技术：改造蛋白质在线粒体周围收集并保护容易分解的RNA，让培养的人体细胞保存数日前的基因活动记录。这能捕捉短暂免疫反应，帮助研究者追查细胞此前经历了什么。",
+        "summary_en": "On October 26, ETH Zurich reported a molecular archive in cultured human cells. Engineered proteins gather and protect short-lived RNA around mitochondria, preserving thousands of molecules for several days. This captures brief immune responses and helps researchers reconstruct what a cell experienced earlier.",
         "source": {
-          "name": "NASA / Lucy",
-          "url": "https://science.nasa.gov/blogs/lucy/2026/10/28/nasas-lucy-reaches-trojan-asteroid-region-5-years-after-launch/",
-          "published": "2026-10-28"
+          "name": "ETH Zurich",
+          "url": "https://ethz.ch/en/news-and-events/eth-news/news/2026/10/new-method-reveals-what-a-cell-did-days-ago.html",
+          "published": "2026-10-26"
         },
-        "accent": "coral"
+        "accent": "#427866"
       },
       {
-        "id": "2026-10-30-desert",
-        "category": "考古 / ARCHAEOLOGY",
-        "headline": "有水，为什么仍难定居？",
-        "headline_en": "Water alone was not enough",
-        "summary": "10月28日，研究者报告：阿拉伯沙漠约1500公里调查发现古湖泊，却未找到石器遗物。结合空间模型，结果提示：早期人类定居不仅需要水，也需要能打制工具的石材。迁徙地图因此不能只看气候；未发现遗物，也不等于证明无人到过。",
-        "summary_en": "On October 28, researchers reported ancient lake deposits but no stone artefacts along a roughly 1,500-kilometre Arabian desert survey. Spatial modelling suggests settlement depended on both water and toolmaking stone. Migration maps therefore need geology as well as climate. However, missing archaeological traces do not prove that nobody ever visited.",
+        "id": "silicon-springs",
+        "category": "材料 · 光学",
+        "headline": "微型弹簧，让硅伸展开",
+        "headline_en": "Tiny Springs Make Silicon Stretch",
+        "summary": "10月26日，日本团队公布可伸展硅材料：在硅片中刻出微型螺旋弹簧，拉伸时空气占比增加，改变太赫兹波通过材料的方式。实验中拉长约百分之十三，折射率下降约百分之六至八，可为可调光学器件提供新思路。",
+        "summary_en": "On October 26, researchers reported stretchable silicon made with microscopic spiral springs. Stretching widens air gaps, changing how terahertz waves travel through the material. At 12.6 percent elongation, the effective refractive index fell by about 6–8 percent, depending on polarization, suggesting a route to tunable optical components.",
         "source": {
-          "name": "Nature",
-          "url": "https://www.nature.com/articles/s41586-026-11180-5",
-          "published": "2026-10-28"
+          "name": "Tohoku University",
+          "url": "https://www.tohoku.ac.jp/en/press/microscopic_springs_transform_fragile_silicon_into_a_flexible_terahertz_metamaterial.html",
+          "published": "2026-10-26"
         },
-        "accent": "aqua"
+        "accent": "#466BA0"
       },
       {
-        "id": "2026-10-30-semiconductor",
-        "category": "材料 / MATERIALS",
-        "headline": "吸光之后，怎样留住电荷？",
-        "headline_en": "Keeping solar-generated charges alive",
-        "summary": "10月28日，研究发现硫化铋薄膜既能强烈吸光，又能延缓电子与空穴复合。邻近的低能态像临时“蓄水池”，让电荷不易迅速损失，为收集电荷留下更多时间。这提供了太阳能材料设计新思路，但验证的是物理机制，并非已造出更高效的太阳能电池。",
-        "summary_en": "On October 28, researchers showed that bismuth sulfide films combine strong light absorption with slower electron–hole recombination. Nearby lower-energy states act as a temporary reservoir, giving charges more time to be collected. This suggests a new design principle for solar-energy materials, but demonstrates a physical mechanism, not a finished, more efficient solar cell.",
+        "id": "comet-ice",
+        "category": "天文",
+        "headline": "星际冰尘，似曾相识",
+        "headline_en": "Familiar Ice in an Interstellar Visitor",
+        "summary": "10月26日公布的韦布观测研究显示，星际彗星3I/ATLAS的冰粒可能混有尘埃，大小约一微米或更小。光谱特征与部分海王星外天体相似，提示不同恒星周围的行星原料或有共同性质。",
+        "summary_en": "An October 26 study suggests that interstellar comet 3I/ATLAS carries grains mixing water ice with dust, about a micrometre or smaller. Their spectra resemble those of some objects beyond Neptune, hinting that planet-building materials around different stars may share properties.",
         "source": {
-          "name": "Nature",
-          "url": "https://www.nature.com/articles/s41586-026-11223-x",
-          "published": "2026-10-28"
+          "name": "Southwest Research Institute",
+          "url": "https://www.swri.org/newsroom/press-releases/swri-led-study-uses-webb-compare-interstellar-comet-3i-atlas-icy-bodies-our-solar-system",
+          "published": "2026-10-26"
         },
-        "accent": "gold"
+        "accent": "#6D619E"
       },
       {
-        "id": "2026-10-30-fly-rhythm",
-        "category": "神经科学 / NEUROSCIENCE",
-        "headline": "神经回路如何自己打节拍？",
-        "headline_en": "How a neural circuit makes a rhythm",
-        "summary": "10月28日，果蝇神经连接图模拟锁定一个候选步行节律回路：两个兴奋性神经元与一个抑制性神经元形成反馈，将持续输入变成周期输出。另一条通路的运动预测获得光刺激实验支持。这展示了如何从“接线图”推测功能，但三细胞核心仍是候选机制。",
-        "summary_en": "On October 28, fly-connectome simulations identified a candidate walking rhythm circuit: two excitatory neurons and one inhibitory neuron form feedback that turns sustained input into rhythmic output. Light-stimulation experiments supported a movement prediction for another pathway. Wiring maps can suggest function, while the three-neuron core remains a candidate mechanism.",
+        "id": "shell-buffer",
+        "category": "环境 · 化学",
+        "headline": "碎贝壳，给幼蛤一道缓冲",
+        "headline_en": "Crushed Shells Help Young Clams",
+        "summary": "10月29日公布的一项九十天实验发现，混入碎贝壳的沙子降低了孔隙水酸度，幼蛤平均长出更大的壳，相关基因活动也更接近正常海水中的个体。这种局部缓冲作用解释了传统海岸管理方法的部分机制。",
+        "summary_en": "An October 29 report describes a 90-day experiment in which crushed shells reduced acidity in sediment water. Young clams grew larger shells on average, while their gene activity became more similar to that of clams in non-acidified conditions. This local buffering effect helps explain a traditional coastal stewardship practice.",
         "source": {
-          "name": "Nature",
-          "url": "https://www.nature.com/articles/s41586-026-11195-y",
-          "published": "2026-10-28"
+          "name": "UC Davis",
+          "url": "https://www.ucdavis.edu/news/how-crushed-shells-protect-against-ocean-acidification",
+          "published": "2026-10-29"
         },
-        "accent": "coral"
+        "accent": "#397F88"
+      },
+      {
+        "id": "gamma-spectrum",
+        "category": "物理 · 数据科学",
+        "headline": "从模糊能谱里认出辐射源",
+        "headline_en": "Reading Radiation’s Blurred Fingerprint",
+        "summary": "10月26日，瑞士保罗谢勒研究所公布更快识别空中伽马能谱的新算法。空气和直升机散射会模糊放射性物质的“指纹”；团队分开计算两种影响，再用贝叶斯概率模型分析完整能谱，有望更快定位微弱辐射源。",
+        "summary_en": "On October 26, Switzerland’s PSI reported a faster way to interpret airborne gamma-ray measurements. Air and helicopter structures scatter radiation, blurring a radioactive material’s spectral fingerprint. Separating these effects speeds calculations; Bayesian modelling then analyses the full spectrum, potentially helping locate weak radiation sources more quickly.",
+        "source": {
+          "name": "Paul Scherrer Institute",
+          "url": "https://www.psi.ch/en/news/media-releases/detecting-radioactivity-from-the-air-more-accurately-than-ever",
+          "published": "2026-10-26"
+        },
+        "accent": "#A0644F"
       }
     ]
   },
   "weekly": {
-    "week": "2026-W44",
-    "previous_week": "2026-W43",
+    "week": "2026-W45",
+    "previous_week": "2026-W44",
     "previous_answers": [
       {
-        "id": "answer-reasoning-grid-flips-2026-w43",
+        "id": "answer-reasoning-nine-coins-2026-w44",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "5×5方格起初全白。每步可选一整行或一整列，把其中所有格子黑白互换。若最终至少有一个黑格，黑格最少能有几个？给出做法，并证明不能更少。",
-        "headline_en": "A 5×5 grid starts entirely white. Each move flips every cell in one whole row or column between black and white. If at least one cell ends black, what is the smallest possible number of black cells? Give a construction and prove it is minimal.",
-        "result": "最少5个黑格",
-        "result_en": "The minimum is 5 black cells",
-        "explanation": "任取两行两列的四角，每次翻0或2角，黑角数恒为偶数。若仅1—4个黑格，必有全白行和列；用任一黑格及它们围成四角，就只有1黑角，矛盾。故至少5；翻一整行恰得5。",
-        "explanation_en": "Every rectangle formed by two rows and columns keeps an even number of black corners: a move flips zero or two. With 1–4 black cells, an all-white row and column would exist; any black cell would then define a rectangle with one black corner, impossible. Flipping one whole row attains five.",
-        "subject": "W43 · 翻面逻辑解答",
-        "subject_en": "W43 · GRID LOGIC",
+        "headline": "9枚外观相同的硬币中，恰有1枚较重，其余等重。只用无砝码的双盘天平，最坏情况下至少称几次，才能确定较重硬币？设计方法，并说明为什么不能更少。",
+        "headline_en": "Among nine identical-looking coins, exactly one is heavier and the others have equal weight. Using only a two-pan balance without weights, what is the minimum number of weighings needed in the worst case to identify the heavier coin? Give a method and prove that fewer cannot suffice.",
+        "subject": "W44 · 称重决策解答",
+        "subject_en": "W44 · WEIGHING DECISIONS",
         "visual": "question",
-        "accent": "gold"
+        "accent": "gold",
+        "result": "最少两次",
+        "result_en": "The minimum is two weighings",
+        "explanation": "先取三枚对三枚称重：较重的一组含有重币；若平衡，重币就在没称的三枚中。再从嫌疑三枚中取两枚对称，即可找出重币。一次称重只有三种结果，无法区分九种可能，因此两次最少。",
+        "explanation_en": "Weigh three coins against three. The heavier side—or the three unweighed coins if balanced—contains the heavy coin. Weigh one of those three against another to identify it. One weighing has only three outcomes, so cannot distinguish nine possibilities."
       },
       {
-        "id": "answer-probability-pattern-race-2026-w43",
+        "id": "answer-probability-triangle-cards-2026-w44",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "不断独立投掷一枚公平硬币，直到连续三次的结果首次出现HHT或HTH便停止（H为正面，T为反面）。哪一种更可能先出现？求它的概率，并说明理由。",
-        "headline_en": "Keep tossing a fair coin independently until HHT or HTH first appears as three consecutive results (H=heads, T=tails). Which pattern is more likely to appear first? Find its probability and justify your answer.",
-        "result": "HHT先出概率2/3；HTH为1/3",
-        "result_en": "HHT wins with probability 2/3; HTH with 1/3",
-        "explanation": "设刚出现H后HHT先出的概率为p。下一次H，则等到T必由HHT胜；下一次T，再出H则HTH胜，再出T则重回起点。因此p=1/2+p/4，得2/3。开头的T只延迟首个H，不改变胜率。",
-        "explanation_en": "Let p be the chance that HHT wins just after H. A following H leads to an HHT win at the first T. A following T then H lets HTH win; a following T then T resets the process. Thus p=1/2+p/4, so p=2/3. Initial tails merely delay the first H.",
-        "subject": "W43 · 硬币图案解答",
-        "subject_en": "W43 · COIN PATTERN RACE",
+        "headline": "把1至10分别写在10张卡片上，随机、不放回抽出3张，抽取顺序不计。这3个数能作为一个非退化三角形的边长的概率是多少？请用有条理的计数说明理由。",
+        "headline_en": "Write 1 through 10 on ten cards and draw three uniformly at random without replacement, ignoring order. What is the probability that the three numbers can be side lengths of a non-degenerate triangle? Justify your answer with an organised count.",
+        "subject": "W44 · 三角形概率解答",
+        "subject_en": "W44 · TRIANGLE PROBABILITY",
         "visual": "question",
-        "accent": "aqua"
+        "accent": "aqua",
+        "result": "概率为5/12",
+        "result_en": "The probability is 5/12",
+        "explanation": "共有120组三元组。最大边分别为3、4、…、10时，满足“两短边之和大于最长边”的组合数依次为0、1、2、4、6、9、12、16，共50组。因此概率为50/120＝5/12。",
+        "explanation_en": "There are 120 triples. For largest side 3,4,…,10, the counts satisfying “two shorter sides sum to more than the longest” are 0,1,2,4,6,9,12,16: 50 in total. Thus 50/120 = 5/12."
       },
       {
-        "id": "answer-proof-divisibility-chains-2026-w43",
+        "id": "answer-proof-domino-two-holes-2026-w44",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "从1至60中选出一些不同的整数，要求选出的数中不存在a<b<c，使b是a的整数倍且c是b的整数倍。最多能选几个？给出一组选法，并证明无法选得更多。",
-        "headline_en": "Choose distinct integers from 1 to 60. Your set must not contain a<b<c with b a multiple of a and c a multiple of b. What is the largest possible number of selected integers? Give an example and prove optimality.",
-        "result": "最多45个",
-        "result_en": "The maximum is 45",
-        "explanation": "按奇数部分分链u、2u、4u……，链中任取三数都违例。15条长链各至多取2数，15条单元素链各至多取1数，故至多45。取16至60共45数；若a|b|c，则c≥4a≥64，矛盾。",
-        "explanation_en": "Group numbers into chains u,2u,4u,… for odd u. Any three from one chain are forbidden. Fifteen longer chains allow at most two selections each; fifteen singleton chains allow one, giving 45. Select 16–60. A divisibility triple would give c≥4a≥64, impossible.",
-        "subject": "W43 · 倍数链极值解答",
-        "subject_en": "W43 · DIVISIBILITY CHAINS",
+        "headline": "6×6棋盘按黑白相间染色，任意去掉一黑格与一白格。剩下34格是否总能用17块1×2骨牌无重叠铺满？允许旋转，不能越界。若能，给出适用于任意删格的办法；若不能，给出反例。",
+        "headline_en": "Colour a 6×6 board alternately black and white, then remove any one black square and any one white square. Can the remaining 34 squares always be tiled by seventeen 1×2 dominoes without overlap? Rotation is allowed; dominoes must stay inside the board. Give a method that works for every pair of removed squares, or a counterexample.",
+        "subject": "W44 · 骨牌构造解答",
+        "subject_en": "W44 · DOMINO CONSTRUCTION",
         "visual": "question",
-        "accent": "coral"
+        "accent": "coral",
+        "result": "一定能铺满",
+        "result_en": "Always tileable",
+        "explanation": "画一条经过全部36格、只走共边相邻格的闭合路线，沿途黑白交替。删掉一黑一白后，路线分成两段，每段剩余格数均为偶数，其中一段可能为空。把每段中连续两格依次配对，每对放一块骨牌即可。",
+        "explanation_en": "Draw a closed route through all 36 squares using edge-neighbour steps. Colours alternate. Removing one black and one white square leaves two paths, each with an even number of remaining squares; one may be empty. Pair consecutive squares on each path and place a domino on every pair."
       }
     ],
     "challenges": [
       {
-        "id": "reasoning-nine-coins-2026-w44",
+        "id": "reasoning-seven-cuts-2026-w45",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "9枚外观相同的硬币中，恰有1枚较重，其余等重。只用无砝码的双盘天平，最坏情况下至少称几次，才能确定较重硬币？设计方法，并说明为什么不能更少。",
-        "headline_en": "Among nine identical-looking coins, exactly one is heavier and the others have equal weight. Using only a two-pan balance without weights, what is the minimum number of weighings needed in the worst case to identify the heavier coin? Give a method and prove that fewer cannot suffice.",
-        "subject": "进阶 · 称重决策",
-        "subject_en": "DEVELOPING · WEIGHING DECISIONS",
+        "headline": "在一张平放的圆形薄饼上切七条直线。每刀都贯穿薄饼，切出的部分不能移动或叠放。最多能得到多少块？请说明为什么不可能更多，并说明怎样达到这个数量。",
+        "headline_en": "Cut a flat circular pancake with seven straight cuts. Each cut goes all the way across; you may not move or stack the pieces. What is the greatest number of pieces possible? Explain both why you cannot do better and how to attain your answer.",
+        "subject": "进阶 · 切割极值",
+        "subject_en": "DEVELOPING · CUTTING FOR A MAXIMUM",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "probability-triangle-cards-2026-w44",
+        "id": "counting-staircase-2026-w45",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "把1至10分别写在10张卡片上，随机、不放回抽出3张，抽取顺序不计。这3个数能作为一个非退化三角形的边长的概率是多少？请用有条理的计数说明理由。",
-        "headline_en": "Write 1 through 10 on ten cards and draw three uniformly at random without replacement, ignoring order. What is the probability that the three numbers can be side lengths of a non-degenerate triangle? Justify your answer with an organised count.",
-        "subject": "挑战 · 三角形概率",
-        "subject_en": "CHALLENGE · TRIANGLE PROBABILITY",
+        "headline": "一段楼梯共有10级，每次可以上1级或2级，但不能连续两次都上2级。从地面恰好到达第10级，共有多少种走法？只要步长顺序不同，就算不同走法。请用有条理的计数说明理由。",
+        "headline_en": "A staircase has 10 steps. Each move climbs one or two steps, but two two-step moves may not occur consecutively. How many ways are there to reach step 10 exactly from the ground? Different sequences of move lengths count as different ways. Justify your count systematically.",
+        "subject": "挑战 · 楼梯计数",
+        "subject_en": "CHALLENGE · STAIRCASE COUNTING",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "proof-domino-two-holes-2026-w44",
+        "id": "proof-four-differences-2026-w45",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "6×6棋盘按黑白相间染色，任意去掉一黑格与一白格。剩下34格是否总能用17块1×2骨牌无重叠铺满？允许旋转，不能越界。若能，给出适用于任意删格的办法；若不能，给出反例。",
-        "headline_en": "Colour a 6×6 board alternately black and white, then remove any one black square and any one white square. Can the remaining 34 squares always be tiled by seventeen 1×2 dominoes without overlap? Rotation is allowed; dominoes must stay inside the board. Give a method that works for every pair of removed squares, or a counterexample.",
-        "subject": "拓展 · 骨牌构造",
-        "subject_en": "STRETCH · DOMINO CONSTRUCTION",
+        "headline": "把四个非负整数按顺时针顺序写在一个圆周上。每轮同时更新四个数：用这个数与顺时针下一个数之差的绝对值替换它。计算时只能使用本轮更新前的数。先试试顺时针排列的1、3、7、12。无论开始时选哪四个非负整数，最后都会变成0、0、0、0吗？请证明。",
+        "headline_en": "Write four nonnegative integers around a circle. In each round, simultaneously replace every number by the absolute difference between it and its clockwise neighbour, using the numbers from the start of that round. Try 1, 3, 7, 12 in clockwise order. Must every starting choice eventually become 0, 0, 0, 0? Prove your answer.",
+        "subject": "拓展 · 差值与不变量",
+        "subject_en": "STRETCH · DIFFERENCES AND INVARIANTS",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "coral"
@@ -185,38 +185,37 @@
     ]
   },
   "editorial_notes": [
-    "2026-10-29 19:43北京时间准备次日周五稿；本次执行为周四晚，符合排期。Oct30 v1 内容接受与本具体版本发布批准均待定。",
-    "默认分支master最新提交aa4df5678d596ddf141adfffe7484a6b1271cba5，现有正式内容日期2026-10-29。只读获取完整approved.json。",
-    "拟更新八屏日期页头；两屏新闻中保留WMO一条、替换五条。W43三份真实揭晓与W44三道已批准周题完整weekly对象逐字不变；普通屏18秒不变。",
-    "海报独立授权继续有效，但本稿不重复下载或更改网络设置；海报原图尚未入库，36秒固定位置及11月28日到期隐藏尚未上线，不包含于本次八屏JSON。",
-    "同日房间消息日期检索与本地定向查找未发现既有Oct30稿；不声称穷尽全部存储。",
-    "主来源仅使用机构公开页面或论文公开正文/摘要。区分论文/报道日期、观察和机制推断、模拟和实测、未来计划和已发生结果。",
-    "仅在仓库外scratch创建审稿文件，无提交、推送、部署，未改现网及其他内容。全站构建与实体屏验收未执行。",
-    "沙漠研究未发现石器不能等同无人到过；邻近边缘仍有可打制石材，未声称全线没有石材。半导体不写发电效率提高，验证为材料物理机制。果蝇三细胞核心为模拟候选，另一通路实验不能写成核心完整活体验证；正文订阅限制未绕过，依据公开摘要及扩展数据。",
-    "WMO条沿用前版并重新核对10月27日原始公报及机构说明。露西号进入区域不等于完成近距离飞掠；火星尘埃测量不是人体暴露试验。",
-    "本地Chromium启动因socket Operation not permitted失败，未重试或扩大权限；未完成浏览器视觉验收。纯JavaScript运行时检查确认八屏及10/30周五页头，并拒绝把draft当approved。中英新闻长度与现有版相近，不等于视觉验收。"
+    "北京时间2026年11月2日按用户反馈修订为v2：替换已出过的第二题，精简六条新闻中英结尾。内容日期仍为11月2日。",
+    "周一由W44换为W45；揭晓严格对应现有W44三题。新题获批后整周沿用。",
+    "普通内容8屏，每屏18秒；既有海报位于新闻之后、揭晓之前，36秒，清单与图片均保留。",
+    "教师提示和新题答案仅在独立教师文件中，不含于学生JSON。",
+    "原始来源发表日期为10月26日至29日；正文保留研究阶段和限制。",
+    "结构检查已通过：六条新闻、三份揭晓、三道周题；W44题面中英与批准基线逐字匹配，学生JSON与审稿嵌入数据一致。",
+    "浏览器排版检查未完成：当前执行环境阻止Chromium启动；升级尝试亦因环境只读挂载失败。不能据此断言实际屏幕无溢出；发布前仍需完成浏览器审计。",
+    "尚未发布；未执行全站构建、部署或实体屏验收。"
   ],
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-10-30 review v1",
-      "scope": "All eight reviewed bilingual student slides for this exact edition."
+      "edition": "2026-11-02 review v2",
+      "scope": "Electronic screen only: update all eight student slide date headers, six news items, three actual W44 reveals and three new W45 questions. Preserve poster manifest, poster image and all other website content. No other project Git synchronization."
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-10-30 review v1",
-      "scope": "Electronic screen only. Update date headers on all eight student slides and replace the two news-slide bodies (six news items). Preserve all six W43 reveal and W44 question bodies word-for-word. No poster or other website content, no other project Git synchronization."
+      "edition": "2026-11-02 review v2",
+      "scope": "Electronic screen only: update all eight student slide date headers, six news items, three actual W44 reveals and three new W45 questions. Preserve poster manifest, poster image and all other website content. No other project Git synchronization."
     },
     "publication_record": {
-      "recorded_at": "2026-10-29T20:23:37.395311+00:00",
-      "approval_evidence": "User approved this exact review v1 news/date release: 新闻也批准.",
-      "approved_library_file_id": "libfile_273f38282ad88191aff4c5c768b605b0",
-      "approved_filename": "screen-2026-10-30-review-v1.html",
-      "approved_version": 0,
-      "approved_html_sha256": "4f076f91c854c63bec8ae035e12139f2078b2086d639810717de3a5200e3b058",
-      "source_match": "All 108 tagged visible review fields and source links match the embedded review JSON. Student content is copied exactly from that JSON; only status and approval metadata change.",
-      "preserved": "The complete weekly and display objects match the existing approved feed. The separately approved poster manifest, original JPEG, position, 36-second duration and 2026-11-28T16:15:00+08:00 expiry remain unchanged.",
-      "historical_notes": "Earlier pending-approval and missing-poster statements in editorial_notes describe the draft stage and are superseded by this publication record."
+      "recorded_at": "2026-11-01T23:38:50.879569+00:00",
+      "approval_evidence": "The content owner approved 2026-11-02 review v2 for publication at 2026-11-01T23:35:20Z.",
+      "approved_student_json_sha256": "f34a99172ef2cdfcb5a92bbb95e013ae2577acbc0de236aca5cb4460c4575924",
+      "approved_student_library_file_id": "libfile_7a35f79901b48191b93e6f229ca94222",
+      "approved_review_html_library_file_id": "libfile_0aec64a99e708191a3e9f4ef9528a48c",
+      "approved_library_version": 1,
+      "approved_review_html_sha256": "773fd07c61380ff6aaf279c8ba4c6fa0a0f1e1af87cf4c68ccbcdbf61f544bea",
+      "source_match": "The complete embedded review JSON matches the approved student JSON in every field. All visible student text and six primary-source links were checked. Only status and approval metadata differ from that approved student source.",
+      "preserved": "Existing poster manifest, original JPEG, fixed position after news and before answers, 36-second duration, 2026-11-28T16:15:00+08:00 expiry and 18-second ordinary slides are unchanged. Teacher-only notes were kept outside the repository.",
+      "historical_notes": "Pending-approval, unbuilt and unpublished statements in editorial_notes describe the review stage and are superseded by this publication record."
     }
   }
 }
