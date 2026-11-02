@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-02",
-  "edition": "2026-11-02 review v2",
+  "content_date": "2026-11-03",
+  "edition": "2026-11-03 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月02日\n每日简报",
+    "headline": "11月03日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "shell-math",
-        "category": "数学 · 仿生",
-        "headline": "贝壳生长，藏着简单规则",
-        "headline_en": "Simple Rules Shape Seashells",
-        "summary": "10月26日，加州理工公布贝壳生长模型：只用开口曲线、放大比例和旋转三个要素，让新材料沿边缘不断添加，重复简单规则便能形成多种贝壳。局部生长可以决定整体形状，也可能启发低耗能制造。",
-        "summary_en": "On October 26, Caltech reported a shell-growth model using an opening curve, scaling and rotation. Adding material only along the growing edge can generate many shell forms by repeating simple rules. The work shows how local growth can shape a whole structure and may inspire less energy-intensive manufacturing.",
+        "id": "origami-shell",
+        "category": "数学 · 工程",
+        "headline": "折一下，薄板也能撑起空间",
+        "headline_en": "Folded Sheets Become Strong Structures",
+        "summary": "10月27日，MIT介绍一种折纸式建造方法：平板折成小单元，连接后互相锁定，形成无需内部立柱的承重外壳。团队已制成房间大小的铝制装置。强度不仅取决于材料，也取决于几何结构；平板运输还可减少占用空间。",
+        "summary_en": "On October 27, MIT described a construction method that folds flat sheets into units which lock together, forming load-bearing shells without internal columns. The team built a room-sized aluminium installation. Strength comes from geometry as well as material, while shipping the components flat can save space.",
         "source": {
-          "name": "Caltech",
-          "url": "https://www.caltech.edu/about/news/the-mathematics-of-growing-a-shell",
-          "published": "2026-10-26"
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/origami-based-construction-method-yields-lightweight-load-bearing-structures-architecture-1027",
+          "published": "2026-10-27"
         },
         "accent": "#9A6C37"
       },
       {
-        "id": "cell-archive",
-        "category": "生命科学",
-        "headline": "给细胞留一份分子档案",
-        "headline_en": "A Molecular Archive Inside Cells",
-        "summary": "10月26日，苏黎世联邦理工公布细胞“档案”技术：改造蛋白质在线粒体周围收集并保护容易分解的RNA，让培养的人体细胞保存数日前的基因活动记录。这能捕捉短暂免疫反应，帮助研究者追查细胞此前经历了什么。",
-        "summary_en": "On October 26, ETH Zurich reported a molecular archive in cultured human cells. Engineered proteins gather and protect short-lived RNA around mitochondria, preserving thousands of molecules for several days. This captures brief immune responses and helps researchers reconstruct what a cell experienced earlier.",
+        "id": "muscle-magnets",
+        "category": "物理 · 仿生",
+        "headline": "用磁珠，读出肌肉的动作",
+        "headline_en": "Magnetic Beads Reveal Muscle Motion",
+        "summary": "10月29日，MIT公布三名膝下截肢者参与的实验：肌肉内两颗磁珠的距离随收缩改变，皮肤外传感器据此计算肌肉长度与速度。受试者用这些信号控制屏幕光标，表现更准确稳定，为假肢控制提供了直接测量机械运动的新方法。",
+        "summary_en": "On October 29, MIT reported tests with three people with below-knee amputations. As muscles contract, the distance between implanted magnetic beads changes; external sensors calculate muscle length and speed. Participants used these signals to control a screen cursor more accurately and consistently, offering a way to measure mechanical movement for future prosthetic control.",
         "source": {
-          "name": "ETH Zurich",
-          "url": "https://ethz.ch/en/news-and-events/eth-news/news/2026/10/new-method-reveals-what-a-cell-did-days-ago.html",
-          "published": "2026-10-26"
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/magnetic-sensors-track-muscle-movement-better-prosthetic-limb-control-1029",
+          "published": "2026-10-29"
         },
         "accent": "#427866"
       },
       {
-        "id": "silicon-springs",
-        "category": "材料 · 光学",
-        "headline": "微型弹簧，让硅伸展开",
-        "headline_en": "Tiny Springs Make Silicon Stretch",
-        "summary": "10月26日，日本团队公布可伸展硅材料：在硅片中刻出微型螺旋弹簧，拉伸时空气占比增加，改变太赫兹波通过材料的方式。实验中拉长约百分之十三，折射率下降约百分之六至八，可为可调光学器件提供新思路。",
-        "summary_en": "On October 26, researchers reported stretchable silicon made with microscopic spiral springs. Stretching widens air gaps, changing how terahertz waves travel through the material. At 12.6 percent elongation, the effective refractive index fell by about 6–8 percent, depending on polarization, suggesting a route to tunable optical components.",
+        "id": "mars-meteorite",
+        "category": "地学 · 天文",
+        "headline": "一块陨石，保存火星远古水迹",
+        "headline_en": "A Meteorite Preserves Ancient Martian Water",
+        "summary": "10月29日，NASA介绍火星陨石Teghaza 001的测年结果：它在约四十一亿年前已受到水的改造，形成时间更早。氧同位素帮助辨认火星来源，矿物中的放射性时钟记录年代。这块落在撒哈拉的岩石，为重建早期火星地壳与水的相互作用提供线索。",
+        "summary_en": "On October 29, NASA reported dating results for Martian meteorite Teghaza 001: water altered it around 4.1 billion years ago, so it formed earlier. Oxygen isotopes help identify its Martian origin, while radioactive clocks in minerals record its age. Found in the Sahara, the rock offers clues to interactions between water and early Martian crust.",
         "source": {
-          "name": "Tohoku University",
-          "url": "https://www.tohoku.ac.jp/en/press/microscopic_springs_transform_fragile_silicon_into_a_flexible_terahertz_metamaterial.html",
-          "published": "2026-10-26"
+          "name": "NASA / JPL",
+          "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found/",
+          "published": "2026-10-29"
         },
         "accent": "#466BA0"
       },
       {
-        "id": "comet-ice",
-        "category": "天文",
-        "headline": "星际冰尘，似曾相识",
-        "headline_en": "Familiar Ice in an Interstellar Visitor",
-        "summary": "10月26日公布的韦布观测研究显示，星际彗星3I/ATLAS的冰粒可能混有尘埃，大小约一微米或更小。光谱特征与部分海王星外天体相似，提示不同恒星周围的行星原料或有共同性质。",
-        "summary_en": "An October 26 study suggests that interstellar comet 3I/ATLAS carries grains mixing water ice with dust, about a micrometre or smaller. Their spectra resemble those of some objects beyond Neptune, hinting that planet-building materials around different stars may share properties.",
+        "id": "altermagnetism",
+        "category": "物理 · 材料",
+        "headline": "磁性不只看“吸不吸”",
+        "headline_en": "Magnetism Beyond Attraction",
+        "summary": "10月29日，SLAC团队公布交替磁性的新证据：碲化锰对左、右旋圆偏振X射线的散射不同。它的相反自旋抵消总体磁性，但周围晶格的排列仍赋予特殊响应。这为利用电子自旋传递和储存信息提供了材料方向。",
+        "summary_en": "On October 29, a SLAC-led team reported new evidence for altermagnetism: manganese telluride scatters left- and right-circularly polarized X-rays differently. Opposing spins cancel its overall magnetization, yet the surrounding crystal arrangement produces distinctive responses. Such materials offer a route to carrying and storing information using electron spin.",
         "source": {
-          "name": "Southwest Research Institute",
-          "url": "https://www.swri.org/newsroom/press-releases/swri-led-study-uses-webb-compare-interstellar-comet-3i-atlas-icy-bodies-our-solar-system",
-          "published": "2026-10-26"
+          "name": "SLAC",
+          "url": "https://www6.slac.stanford.edu/news/2026-10-29-slac-researchers-find-proof-altermagnetism-new-magnetic-phase",
+          "published": "2026-10-29"
         },
         "accent": "#6D619E"
       },
       {
-        "id": "shell-buffer",
-        "category": "环境 · 化学",
-        "headline": "碎贝壳，给幼蛤一道缓冲",
-        "headline_en": "Crushed Shells Help Young Clams",
-        "summary": "10月29日公布的一项九十天实验发现，混入碎贝壳的沙子降低了孔隙水酸度，幼蛤平均长出更大的壳，相关基因活动也更接近正常海水中的个体。这种局部缓冲作用解释了传统海岸管理方法的部分机制。",
-        "summary_en": "An October 29 report describes a 90-day experiment in which crushed shells reduced acidity in sediment water. Young clams grew larger shells on average, while their gene activity became more similar to that of clams in non-acidified conditions. This local buffering effect helps explain a traditional coastal stewardship practice.",
+        "id": "rubin-dwarf",
+        "category": "天文 · 数据",
+        "headline": "从星海中找出移动的世界",
+        "headline_en": "Finding a Moving World Among Stars",
+        "summary": "10月27日，鲁宾天文台公布矮行星候选天体2026 ED138。算法把不同夜晚的亮点连成同一天体的轨迹，又在旧影像中找回十年前的记录。其大小初估为600至1500公里，取决于表面反光程度；连续观测让遥远世界逐渐显形。",
+        "summary_en": "On October 27, Rubin Observatory announced dwarf-planet candidate 2026 ED138. Algorithms linked dots from different nights into one moving object, then archival images extended its record back ten years. Its estimated size is 600–1,500 kilometres, depending on surface reflectivity. Repeated observations are revealing worlds hidden among crowded background stars.",
         "source": {
-          "name": "UC Davis",
-          "url": "https://www.ucdavis.edu/news/how-crushed-shells-protect-against-ocean-acidification",
-          "published": "2026-10-29"
+          "name": "Rubin Observatory",
+          "url": "https://rubinobservatory.org/news/rubin-first-dwarf-planet-candidate",
+          "published": "2026-10-27"
         },
         "accent": "#397F88"
       },
       {
-        "id": "gamma-spectrum",
-        "category": "物理 · 数据科学",
-        "headline": "从模糊能谱里认出辐射源",
-        "headline_en": "Reading Radiation’s Blurred Fingerprint",
-        "summary": "10月26日，瑞士保罗谢勒研究所公布更快识别空中伽马能谱的新算法。空气和直升机散射会模糊放射性物质的“指纹”；团队分开计算两种影响，再用贝叶斯概率模型分析完整能谱，有望更快定位微弱辐射源。",
-        "summary_en": "On October 26, Switzerland’s PSI reported a faster way to interpret airborne gamma-ray measurements. Air and helicopter structures scatter radiation, blurring a radioactive material’s spectral fingerprint. Separating these effects speeds calculations; Bayesian modelling then analyses the full spectrum, potentially helping locate weak radiation sources more quickly.",
+        "id": "soft-enteroscope",
+        "category": "工程 · 仿生",
+        "headline": "学蛇行走，探索弯曲肠道",
+        "headline_en": "A Snake-Inspired Robot Explores the Gut",
+        "summary": "10月28日，MIT公布仿蛇软体肠镜：气腔充气使身体伸长、转弯，剪纸结构的表面展开后增加抓力。动物实验中，它沿小肠前进约两米，并演示拍摄、喷液和组织取样。柔软结构与表面设计共同解决狭窄湿滑空间中的移动难题。",
+        "summary_en": "On October 28, MIT reported a snake-inspired soft enteroscope. Inflatable chambers extend and bend its body, while kirigami-patterned surfaces unfold to improve grip. In animal studies, it travelled about two metres through the small intestine and demonstrated imaging, spraying and tissue sampling. Soft structures and surface design work together to navigate narrow, slippery passages.",
         "source": {
-          "name": "Paul Scherrer Institute",
-          "url": "https://www.psi.ch/en/news/media-releases/detecting-radioactivity-from-the-air-more-accurately-than-ever",
-          "published": "2026-10-26"
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/soft-robot-could-help-doctors-diagnose-treat-small-intestine-disorders-1028",
+          "published": "2026-10-28"
         },
         "accent": "#A0644F"
       }
@@ -184,38 +184,23 @@
       }
     ]
   },
-  "editorial_notes": [
-    "北京时间2026年11月2日按用户反馈修订为v2：替换已出过的第二题，精简六条新闻中英结尾。内容日期仍为11月2日。",
-    "周一由W44换为W45；揭晓严格对应现有W44三题。新题获批后整周沿用。",
-    "普通内容8屏，每屏18秒；既有海报位于新闻之后、揭晓之前，36秒，清单与图片均保留。",
-    "教师提示和新题答案仅在独立教师文件中，不含于学生JSON。",
-    "原始来源发表日期为10月26日至29日；正文保留研究阶段和限制。",
-    "结构检查已通过：六条新闻、三份揭晓、三道周题；W44题面中英与批准基线逐字匹配，学生JSON与审稿嵌入数据一致。",
-    "浏览器排版检查未完成：当前执行环境阻止Chromium启动；升级尝试亦因环境只读挂载失败。不能据此断言实际屏幕无溢出；发布前仍需完成浏览器审计。",
-    "尚未发布；未执行全站构建、部署或实体屏验收。"
-  ],
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-02 review v2",
-      "scope": "Electronic screen only: update all eight student slide date headers, six news items, three actual W44 reveals and three new W45 questions. Preserve poster manifest, poster image and all other website content. No other project Git synchronization."
+      "edition": "2026-11-03 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-02 review v2",
-      "scope": "Electronic screen only: update all eight student slide date headers, six news items, three actual W44 reveals and three new W45 questions. Preserve poster manifest, poster image and all other website content. No other project Git synchronization."
+      "edition": "2026-11-03 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-01T23:38:50.879569+00:00",
-      "approval_evidence": "The content owner approved 2026-11-02 review v2 for publication at 2026-11-01T23:35:20Z.",
-      "approved_student_json_sha256": "f34a99172ef2cdfcb5a92bbb95e013ae2577acbc0de236aca5cb4460c4575924",
-      "approved_student_library_file_id": "libfile_7a35f79901b48191b93e6f229ca94222",
-      "approved_review_html_library_file_id": "libfile_0aec64a99e708191a3e9f4ef9528a48c",
-      "approved_library_version": 1,
-      "approved_review_html_sha256": "773fd07c61380ff6aaf279c8ba4c6fa0a0f1e1af87cf4c68ccbcdbf61f544bea",
-      "source_match": "The complete embedded review JSON matches the approved student JSON in every field. All visible student text and six primary-source links were checked. Only status and approval metadata differ from that approved student source.",
-      "preserved": "Existing poster manifest, original JPEG, fixed position after news and before answers, 36-second duration, 2026-11-28T16:15:00+08:00 expiry and 18-second ordinary slides are unchanged. Teacher-only notes were kept outside the repository.",
-      "historical_notes": "Pending-approval, unbuilt and unpublished statements in editorial_notes describe the review stage and are superseded by this publication record."
+      "recorded_at": "2026-11-02T11:51:57.277013+00:00",
+      "approved_at_local": "2026-11-02 19:48 Asia/Shanghai",
+      "approved_edition": "2026-11-03 review v1",
+      "approved_source_sha256": "b9723b04941fe312fe0875be6620375bc5ad7e8f305b29a343b9e939717466f1",
+      "approved_source_bytes": 15365,
+      "scope": "Electronic screen only: update the date headers and six bilingual news items. Preserve the full W45 questions, W44 previous answers, ordinary 18-second slides and existing approved poster behavior.",
+      "source_match": "Student content is copied exactly from the approved source. Draft review notes are omitted; only status and necessary approval metadata are changed."
     }
   }
 }
