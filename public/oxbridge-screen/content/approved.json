@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-03",
-  "edition": "2026-11-03 review v1",
+  "content_date": "2026-11-04",
+  "edition": "2026-11-04 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月03日\n每日简报",
+    "headline": "11月04日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "origami-shell",
-        "category": "数学 · 工程",
-        "headline": "折一下，薄板也能撑起空间",
-        "headline_en": "Folded Sheets Become Strong Structures",
-        "summary": "10月27日，MIT介绍一种折纸式建造方法：平板折成小单元，连接后互相锁定，形成无需内部立柱的承重外壳。团队已制成房间大小的铝制装置。强度不仅取决于材料，也取决于几何结构；平板运输还可减少占用空间。",
-        "summary_en": "On October 27, MIT described a construction method that folds flat sheets into units which lock together, forming load-bearing shells without internal columns. The team built a room-sized aluminium installation. Strength comes from geometry as well as material, while shipping the components flat can save space.",
+        "id": "flexible-nanoparticles",
+        "category": "化学 · 材料",
+        "headline": "柔软的连接，也能搭出有序材料",
+        "headline_en": "Flexible Links Build Ordered Materials",
+        "summary": "11月2日，MIT团队在《自然·材料》报告：纳米颗粒表面柔软的分子链可弯曲，让带相反电荷的末端相连。改变颗粒大小和链长，就能调整每个颗粒连接的邻居数量，组装出新的晶体结构。设计材料，不只要选对成分，也要控制微观排列。",
+        "summary_en": "On November 2, an MIT team reported in Nature Materials that flexible molecular chains on nanoparticles can bend to join oppositely charged tips. Changing particle size and chain length controls how many neighbours each particle connects to, producing new crystal structures. Designing materials means controlling microscopic arrangement as well as composition.",
         "source": {
           "name": "MIT News",
-          "url": "https://news.mit.edu/2026/origami-based-construction-method-yields-lightweight-load-bearing-structures-architecture-1027",
-          "published": "2026-10-27"
+          "url": "https://news.mit.edu/2026/flexible-new-route-designer-materials-from-nanoparticles-1102",
+          "published": "2026-11-02"
         },
         "accent": "#9A6C37"
       },
       {
-        "id": "muscle-magnets",
-        "category": "物理 · 仿生",
-        "headline": "用磁珠，读出肌肉的动作",
-        "headline_en": "Magnetic Beads Reveal Muscle Motion",
-        "summary": "10月29日，MIT公布三名膝下截肢者参与的实验：肌肉内两颗磁珠的距离随收缩改变，皮肤外传感器据此计算肌肉长度与速度。受试者用这些信号控制屏幕光标，表现更准确稳定，为假肢控制提供了直接测量机械运动的新方法。",
-        "summary_en": "On October 29, MIT reported tests with three people with below-knee amputations. As muscles contract, the distance between implanted magnetic beads changes; external sensors calculate muscle length and speed. Participants used these signals to control a screen cursor more accurately and consistently, offering a way to measure mechanical movement for future prosthetic control.",
+        "id": "fish-microneedles",
+        "category": "生物 · 工程",
+        "headline": "给小鱼打针，先让针头不怕水",
+        "headline_en": "Water-Resistant Needles for Tiny Fish",
+        "summary": "11月2日，MIT与美国农业部介绍鱼用微针实验：用食品级树脂包覆丝蛋白针尖，防止它入水后过早软化。微针刺入湿润鱼皮后可附着并按设定速度释放疫苗，已在重约1至2克的虹鳟上测试。材料的防水与降解速度，影响药物何时、在哪里释放。",
+        "summary_en": "On November 2, MIT and USDA researchers described microneedle tests in rainbow trout weighing just 1–2 grams. A food-grade resin coating keeps silk tips from softening too soon underwater. The needles pierce wet skin, remain attached and release vaccine at a controlled rate. Water resistance and degradation rate help determine when and where a dose is delivered.",
         "source": {
           "name": "MIT News",
-          "url": "https://news.mit.edu/2026/magnetic-sensors-track-muscle-movement-better-prosthetic-limb-control-1029",
-          "published": "2026-10-29"
+          "url": "https://news.mit.edu/2026/mit-engineers-design-safer-more-efficient-vaccination-system-farmed-fish-1102",
+          "published": "2026-11-02"
         },
         "accent": "#427866"
       },
       {
-        "id": "mars-meteorite",
-        "category": "地学 · 天文",
-        "headline": "一块陨石，保存火星远古水迹",
-        "headline_en": "A Meteorite Preserves Ancient Martian Water",
-        "summary": "10月29日，NASA介绍火星陨石Teghaza 001的测年结果：它在约四十一亿年前已受到水的改造，形成时间更早。氧同位素帮助辨认火星来源，矿物中的放射性时钟记录年代。这块落在撒哈拉的岩石，为重建早期火星地壳与水的相互作用提供线索。",
-        "summary_en": "On October 29, NASA reported dating results for Martian meteorite Teghaza 001: water altered it around 4.1 billion years ago, so it formed earlier. Oxygen isotopes help identify its Martian origin, while radioactive clocks in minerals record its age. Found in the Sahara, the rock offers clues to interactions between water and early Martian crust.",
+        "id": "antigen-density",
+        "category": "生物 · 免疫",
+        "headline": "免疫识别，也受“排列密度”影响",
+        "headline_en": "Antigen Density Shapes Immune Recognition",
+        "summary": "10月30日，MIT公布小鼠疫苗研究：把肿瘤抗原排列在改造后的M13噬菌体表面。比较两种抗原密度时，较高密度版本引发更多针对目标的T细胞，并降低随后植入相应癌细胞后的成瘤概率。抗原是什么固然重要，如何呈现给免疫系统同样影响效果。",
+        "summary_en": "On October 30, MIT reported a mouse vaccine study placing tumour antigens on modified M13 bacteriophages. Of two antigen densities tested, the higher-density version generated more target-specific T cells and reduced tumour formation after exposure to matching cancer cells. Immune responses depend not only on the antigen, but also on how it is presented.",
         "source": {
-          "name": "NASA / JPL",
-          "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found/",
-          "published": "2026-10-29"
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/mit-engineers-create-nanoparticles-delivering-personalized-cancer-vaccines-1030",
+          "published": "2026-10-30"
         },
         "accent": "#466BA0"
       },
       {
-        "id": "altermagnetism",
-        "category": "物理 · 材料",
-        "headline": "磁性不只看“吸不吸”",
-        "headline_en": "Magnetism Beyond Attraction",
-        "summary": "10月29日，SLAC团队公布交替磁性的新证据：碲化锰对左、右旋圆偏振X射线的散射不同。它的相反自旋抵消总体磁性，但周围晶格的排列仍赋予特殊响应。这为利用电子自旋传递和储存信息提供了材料方向。",
-        "summary_en": "On October 29, a SLAC-led team reported new evidence for altermagnetism: manganese telluride scatters left- and right-circularly polarized X-rays differently. Opposing spins cancel its overall magnetization, yet the surrounding crystal arrangement produces distinctive responses. Such materials offer a route to carrying and storing information using electron spin.",
+        "id": "galaxy-oxygen",
+        "category": "天文 · 化学",
+        "headline": "小星系里的氧，去了哪里？",
+        "headline_en": "Where Did Small Galaxies’ Oxygen Go?",
+        "summary": "11月2日，NASA介绍对37个附近矮星系的研究：观测到的氧，比模型预期少得多。氧在恒星中形成，也较容易测量，因此可追踪元素的去向。结果支持一种解释：大质量恒星与超新星驱动的气流，把氧带出了星系，力度可能超过现有模型的估计。",
+        "summary_en": "On November 2, NASA described a study of 37 nearby dwarf galaxies containing much less oxygen than models predict. Stars produce oxygen, and it is relatively easy to measure, making it a useful tracer of elements. The findings support winds driven by massive stars and supernovae carrying oxygen out more effectively than current models estimate.",
         "source": {
-          "name": "SLAC",
-          "url": "https://www6.slac.stanford.edu/news/2026-10-29-slac-researchers-find-proof-altermagnetism-new-magnetic-phase",
-          "published": "2026-10-29"
+          "name": "NASA / Hubble",
+          "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-uncovers-case-of-missing-oxygen-in-nearby-dwarf-galaxies/",
+          "published": "2026-11-02"
         },
         "accent": "#6D619E"
       },
       {
-        "id": "rubin-dwarf",
-        "category": "天文 · 数据",
-        "headline": "从星海中找出移动的世界",
-        "headline_en": "Finding a Moving World Among Stars",
-        "summary": "10月27日，鲁宾天文台公布矮行星候选天体2026 ED138。算法把不同夜晚的亮点连成同一天体的轨迹，又在旧影像中找回十年前的记录。其大小初估为600至1500公里，取决于表面反光程度；连续观测让遥远世界逐渐显形。",
-        "summary_en": "On October 27, Rubin Observatory announced dwarf-planet candidate 2026 ED138. Algorithms linked dots from different nights into one moving object, then archival images extended its record back ten years. Its estimated size is 600–1,500 kilometres, depending on surface reflectivity. Repeated observations are revealing worlds hidden among crowded background stars.",
+        "id": "tracers-reconnection",
+        "category": "物理 · 太空",
+        "headline": "两颗卫星，分清“变化”还是“移动”",
+        "headline_en": "Two Satellites Separate Change from Motion",
+        "summary": "10月29日，NASA公布TRACERS双卫星首批研究：两星先后穿过极区入口，比较太阳风粒子数据。磁重联是磁场重新连接并释放能量的过程。初步分析表明，一些信号主要来自重联区域的位置移动，而非过程随时间改变。双星测量帮助区分空间差异与时间变化。",
+        "summary_en": "On October 29, NASA reported initial TRACERS results. Two satellites pass through Earth’s polar cusps in sequence, comparing solar-wind particles. Magnetic reconnection rearranges magnetic fields and releases energy. Early analysis suggests some signals mainly reflect a moving reconnection region rather than changes over time. Paired measurements help distinguish spatial differences from temporal change.",
         "source": {
-          "name": "Rubin Observatory",
-          "url": "https://rubinobservatory.org/news/rubin-first-dwarf-planet-candidate",
-          "published": "2026-10-27"
+          "name": "NASA / TRACERS",
+          "url": "https://science.nasa.gov/blogs/tracers/2026/10/29/nasas-tracers-first-results-offers-peek-into-violent-magnetic-process/",
+          "published": "2026-10-29"
         },
         "accent": "#397F88"
       },
       {
-        "id": "soft-enteroscope",
-        "category": "工程 · 仿生",
-        "headline": "学蛇行走，探索弯曲肠道",
-        "headline_en": "A Snake-Inspired Robot Explores the Gut",
-        "summary": "10月28日，MIT公布仿蛇软体肠镜：气腔充气使身体伸长、转弯，剪纸结构的表面展开后增加抓力。动物实验中，它沿小肠前进约两米，并演示拍摄、喷液和组织取样。柔软结构与表面设计共同解决狭窄湿滑空间中的移动难题。",
-        "summary_en": "On October 28, MIT reported a snake-inspired soft enteroscope. Inflatable chambers extend and bend its body, while kirigami-patterned surfaces unfold to improve grip. In animal studies, it travelled about two metres through the small intestine and demonstrated imaging, spraying and tissue sampling. Soft structures and surface design work together to navigate narrow, slippery passages.",
+        "id": "storm-transition",
+        "category": "地理 · 气象",
+        "headline": "台风北上，如何变成温带风暴？",
+        "headline_en": "How Does a Typhoon Become an Extratropical Storm?",
+        "summary": "11月3日，NASA展示10月底太平洋风暴影像：台风Champi的残余进入白令海，转化为温带风暴。热带气旋主要从暖海面的热量和水汽获取能量；温带气旋则利用冷暖气团的温差。能量来源改变后，风场可扩展到更大范围，不一定表现为中心风速更强。",
+        "summary_en": "On November 3, NASA presented late-October Pacific storm images showing the remnants of Typhoon Champi becoming an extratropical storm near the Bering Sea. Tropical cyclones draw energy from warm seas and moisture; extratropical cyclones use contrasts between warm and cold air masses. During this transition, winds can spread across a larger area without becoming stronger at the centre.",
         "source": {
-          "name": "MIT News",
-          "url": "https://news.mit.edu/2026/soft-robot-could-help-doctors-diagnose-treat-small-intestine-disorders-1028",
-          "published": "2026-10-28"
+          "name": "NASA Earth Observatory",
+          "url": "https://science.nasa.gov/earth/earth-observatory/the-pacifics-busy-storm-season/",
+          "published": "2026-11-03"
         },
         "accent": "#A0644F"
       }
@@ -187,20 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-03 review v1"
+      "edition": "2026-11-04 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-03 review v1"
+      "edition": "2026-11-04 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-02T11:51:57.277013+00:00",
-      "approved_at_local": "2026-11-02 19:48 Asia/Shanghai",
-      "approved_edition": "2026-11-03 review v1",
-      "approved_source_sha256": "b9723b04941fe312fe0875be6620375bc5ad7e8f305b29a343b9e939717466f1",
-      "approved_source_bytes": 15365,
-      "scope": "Electronic screen only: update the date headers and six bilingual news items. Preserve the full W45 questions, W44 previous answers, ordinary 18-second slides and existing approved poster behavior.",
-      "source_match": "Student content is copied exactly from the approved source. Draft review notes are omitted; only status and necessary approval metadata are changed."
+      "recorded_at": "2026-11-03T13:54:02.111775+00:00",
+      "approved_edition": "2026-11-04 review v1",
+      "approved_source_sha256": "d6193d0c79cf8d34d269ee2087d46286614ca9f4ce02880fb3853161c579a02b",
+      "approved_source_bytes": 15348
     }
   }
 }
