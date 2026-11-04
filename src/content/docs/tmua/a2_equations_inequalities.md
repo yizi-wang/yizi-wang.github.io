@@ -2,401 +2,401 @@
 title: "A2 Equations and Inequalities"
 ---
 
-## 模块 A2：方程与不等式
+## Module A2: Equations and Inequalities
 
-> **对应考纲 Section 1**: MM1.3, MM1.4, MM1.5, MM1.6
-> **对应 Paper**: P1 重点（判别式、因式定理），P2 涉及（逻辑推理型不等式）
-> **建议课时**: 2 课时 | **目标题量**: 15-20 题
-
----
-
-## 📋 模块概览
-
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
-|------|------|---------|-------------|------|
-| A2.1 | 二次方程与判别式 | MM1.3 | 8 年 12 次 | 0.5 |
-| A2.2 | 联立方程求解 | MM1.4 | 8 年 8 次 | 0.5 |
-| A2.3 | 不等式解法 | MM1.5 | 8 年 10 次 | 0.5 |
-| A2.4 | 因式定理与余数定理 | MM1.6 | 8 年 6 次 | 0.5 |
+> **Corresponding Syllabus Section 1**: MM1.3, MM1.4, MM1.5, MM1.6
+> **Corresponding Paper**: P1 Focus (Discriminant, Factor Theorem), P2 Included (Logic Reasoning Inequalities)
+> **Suggested Lessons**: 2 Lessons | **Target Number of Questions**: 15-20 Questions
 
 ---
 
-## A2.1 二次方程与判别式 [MM1.3]
+## 📋 Module Overview
 
-### 1.1 求根公式与判别式
+| Sub-section | Content | Corresponding Syllabus | Past Paper Frequency | Lessons |
+|-------------|---------|------------------------|----------------------|---------|
+| A2.1 | Quadratic Equations and Discriminant | MM1.3 | 12 times in 8 years | 0.5 |
+| A2.2 | Solving Simultaneous Equations | MM1.4 | 8 times in 8 years | 0.5 |
+| A2.3 | Solving Inequalities | MM1.5 | 10 times in 8 years | 0.5 |
+| A2.4 | Factor Theorem and Remainder Theorem | MM1.6 | 6 times in 8 years | 0.5 |
 
-对于二次方程 $ax^2 + bx + c = 0$（$a \neq 0$），求根公式为：
+---
+
+## A2.1 Quadratic Equations and Discriminant [MM1.3]
+
+### 1.1 Quadratic Formula and Discriminant
+
+For the quadratic equation $ax^2 + bx + c = 0$ ($a \neq 0$), the quadratic formula is:
 
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
-判别式 $\Delta = b^2 - 4ac$ 决定根的性质：
+The discriminant $\Delta = b^2 - 4ac$ determines the nature of the roots:
 
-| $\Delta$ | 根的性质 | 图像与 $x$ 轴交点 |
-|---------|---------|-----------------|
-| $\Delta > 0$ | 两个不等实根 | 两个交点 |
-| $\Delta = 0$ | 两个相等实根（重根） | 一个交点（切点） |
-| $\Delta < 0$ | 无实根（复根） | 无交点 |
+| $\Delta$ | Nature of Roots | Intersection with $x$-axis |
+|----------|-----------------|----------------------------|
+| $\Delta > 0$ | Two distinct real roots | Two intersections |
+| $\Delta = 0$ | Two equal real roots (Repeated root) | One intersection (Tangent point) |
+| $\Delta < 0$ | No real roots (Complex roots) | No intersections |
 
-**⚡ 快速判断根的数量**：不需求解，只需计算 $\Delta$ 的符号。
+**⚡ Quick Check for Number of Roots**: No need to solve the equation, just calculate the sign of $\Delta$.
 
-### 1.2 配方法
+### 1.2 Completing the Square
 
-配方法是处理二次函数的核心技巧，用于：
-- 找顶点坐标
-- 确定最值
-- 分析对称轴
+Completing the square is the core technique for dealing with quadratic functions, used to:
+- Find the coordinates of the vertex
+- Determine the maximum/minimum value
+- Analyse the axis of symmetry
 
-标准形式：$ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 + \left(c - \frac{b^2}{4a}\right)$
+Standard form: $ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 + \left(c - \frac{b^2}{4a}\right)$
 
-**配方步骤**：
-1. 提取 $a$：$a\left(x^2 + \frac{b}{a}x\right) + c$
-2. 加减平方项：$a\left(x^2 + \frac{b}{a}x + \frac{b^2}{4a^2} - \frac{b^2}{4a^2}\right) + c$
-3. 整理：$a\left(x + \frac{b}{2a}\right)^2 + \frac{4ac - b^2}{4a}$
+**Steps for Completing the Square**:
+1. Factor out $a$: $a\left(x^2 + \frac{b}{a}x\right) + c$
+2. Add and subtract the square term: $a\left(x^2 + \frac{b}{a}x + \frac{b^2}{4a^2} - \frac{b^2}{4a^2}\right) + c$
+3. Simplify: $a\left(x + \frac{b}{2a}\right)^2 + \frac{4ac - b^2}{4a}$
 
-**⚡ 配方口诀**：『半系数平方』——一次项系数的一半的平方。
+**⚡ Completing the Square Tip**: "Half the coefficient squared" — the square of half the coefficient of the linear term.
 
-### 1.3 根与系数的关系（韦达定理）
+### 1.3 Relationship between Roots and Coefficients (Vieta's Formulas)
 
-设方程 $ax^2 + bx + c = 0$ 的两根为 $x_1$ 和 $x_2$：
+Let the two roots of the equation $ax^2 + bx + c = 0$ be $x_1$ and $x_2$:
 
 $$x_1 + x_2 = -\frac{b}{a}, \quad x_1 \cdot x_2 = \frac{c}{a}$$
 
-**⚠️ 易错点**：韦达定理不需要解出根即可使用，但必须确认方程有实根（$\Delta \ge 0$）。
+**⚠️ Common Pitfall**: Vieta's formulas can be used without finding the roots, but you must confirm that the equation has real roots ($\Delta \ge 0$).
 
-### 1.4 两根之差的应用
+### 1.4 Application of the Difference of Two Roots
 
-两根之差 $|x_1 - x_2| = \frac{\sqrt{\Delta}}{a}$，常用于：
-- 判断根的分布范围
-- 构造约束条件求参数范围
+The difference of two roots $|x_1 - x_2| = \frac{\sqrt{\Delta}}{a}$, commonly used to:
+- Determine the distribution range of the roots
+- Construct constraints to find the range of parameters
 
 ---
 
-## A2.2 联立方程求解 [MM1.4]
+## A2.2 Solving Simultaneous Equations [MM1.4]
 
-### 2.1 线性与二次方程联立
+### 2.1 Simultaneous Linear and Quadratic Equations
 
-典型形式：
+Typical form:
 $$\begin{cases} y = mx + c \\ y = ax^2 + bx + d \end{cases}$$
 
-**消元法**：代入消去 $y$，化为关于 $x$ 的二次方程：
+**Elimination method**: Substitute to eliminate $y$, reducing it to a quadratic equation in $x$:
 $$ax^2 + (b - m)x + (d - c) = 0$$
 
-**几何意义**：联立方程的解对应直线与抛物线的交点。
+**Geometric meaning**: The solutions to the simultaneous equations correspond to the intersections of the line and the parabola.
 
-| 判别式 | 交点数量 | 几何含义 |
-|--------|---------|---------|
-| $\Delta > 0$ | 两个交点 | 直线穿过抛物线 |
-| $\Delta = 0$ | 一个交点（切点） | 直线为切线 |
-| $\Delta < 0$ | 无交点 | 直线与抛物线相离 |
+| Discriminant | Number of Intersections | Geometric Meaning |
+|--------------|-------------------------|-------------------|
+| $\Delta > 0$ | Two intersections | Line passes through the parabola |
+| $\Delta = 0$ | One intersection (Tangent point) | Line is a tangent |
+| $\Delta < 0$ | No intersections | Line and parabola do not intersect |
 
-### 2.2 两个二次方程联立
+### 2.2 Simultaneous Quadratic Equations
 
-当两个抛物线联立时，可能化为四次方程，但常见情况可降阶：
+When two parabolas are solved simultaneously, it may lead to a quartic equation, but common cases can be reduced in order:
 
-**技巧**：
-- 观察是否可利用对称性
-- 检查是否可直接消去 $x^2$ 或 $y^2$ 项
-- 利用韦达定理处理对称结构
-
----
-
-## A2.3 不等式解法 [MM1.5]
-
-### 3.1 二次不等式
-
-解二次不等式 $ax^2 + bx + c > 0$ 或 $ax^2 + bx + c < 0$ 的标准流程：
-
-1. 确定抛物线开口方向（$a$ 的符号）
-2. 求根（若 $\Delta \le 0$ 则无根或唯一根）
-3. 根据开口和根的位置画出简图
-4. 根据图像写出解集
-
-**口诀**：『大于取两边，小于取中间』（仅当 $a > 0$）
-
-| 条件 | $ax^2 + bx + c > 0$ 的解 | $ax^2 + bx + c < 0$ 的解 |
-|------|------------------------|------------------------|
-| $a > 0$, $\Delta > 0$ | $x < x_1$ 或 $x > x_2$ | $x_1 < x < x_2$ |
-| $a > 0$, $\Delta = 0$ | $x \neq x_0$（除重根外） | 无解 |
-| $a > 0$, $\Delta < 0$ | 全实数 | 无解 |
-| $a < 0$ | 解集与 $a > 0$ 相反 | 解集与 $a > 0$ 相反 |
-
-### 3.2 多个不等式的交集与并集
-
-**求交集**：分别解每个不等式，取解集重叠部分。
-
-**技巧**：不等式相乘可以构造新的二次不等式，但需注意符号变化。
-
-**⚠️ 易错警示**：
-- 不能直接将两个不等式『相乘』——负负得正会改变不等号方向
-- 解不等式组时，需验证交集是否存在
+**Techniques**:
+- Observe whether symmetry can be used
+- Check whether the $x^2$ or $y^2$ terms can be directly eliminated
+- Use Vieta's formulas to handle symmetric structures
 
 ---
 
-## A2.4 因式定理与余数定理 [MM1.6]
+## A2.3 Solving Inequalities [MM1.5]
 
-### 4.1 因式定理
+### 3.1 Quadratic Inequalities
 
-**核心结论**：若 $(x - a)$ 是多项式 $f(x)$ 的因式，则 $f(a) = 0$。
+Standard procedure for solving quadratic inequalities $ax^2 + bx + c > 0$ or $ax^2 + bx + c < 0$:
 
-反之，若 $f(a) = 0$，则 $(x - a)$ 是 $f(x)$ 的因式。
+1. Determine the opening direction of the parabola (sign of $a$)
+2. Find the roots (if $\Delta \le 0$, there are no real roots or a single repeated root)
+3. Sketch the graph based on the opening direction and the position of the roots
+4. Write the solution set based on the graph
 
-**应用**：
-- 快速检验某多项式是否有特定因式
-- 由已知根反推多项式系数
+**Tip**: "Greater than takes the outside, less than takes the inside" (only when $a > 0$)
 
-### 4.2 余数定理
+| Condition | Solution to $ax^2 + bx + c > 0$ | Solution to $ax^2 + bx + c < 0$ |
+|-----------|---------------------------------|---------------------------------|
+| $a > 0$, $\Delta > 0$ | $x < x_1$ or $x > x_2$ | $x_1 < x < x_2$ |
+| $a > 0$, $\Delta = 0$ | $x \neq x_0$ (except the repeated root) | No solution |
+| $a > 0$, $\Delta < 0$ | All real numbers | No solution |
+| $a < 0$ | Solution set is opposite to $a > 0$ | Solution set is opposite to $a > 0$ |
 
-多项式 $f(x)$ 除以 $(x - a)$ 的余数为 $f(a)$。
+### 3.2 Intersection and Union of Multiple Inequalities
 
-**推广**：$f(x)$ 除以 $(ax - b)$ 的余数为 $f\left(\frac{b}{a}\right)$。
+**Finding Intersection**: Solve each inequality separately, then take the overlapping part of their solution sets.
 
-**⚡ 快速技巧**：求余数无需做多项式除法，直接代入即可！
+**Technique**: Multiplying inequalities can construct new quadratic inequalities, but pay attention to sign changes.
 
-### 4.3 因式分解的综合应用
-
-已知一个因式后，剩余因式可通过：
-- 多项式除法（长除或综合除法）
-- 待定系数法设剩余因式为二次式，对比系数
-
-**典型流程**：
-1. 用因式定理检验是否有线性因式 $(x - a)$
-2. 用余数定理确定常数项
-3. 对剩余部分继续分解或直接验证选项
-
----
-
-## 📝 典型题型与解题策略
-
-### 题型 A：判别式与参数范围
-
-**特征**：含参数的二次方程，要求某条件下参数的范围。
-
-**策略**：
-1. 写出判别式 $\Delta$ 关于参数的表达式
-2. 根据条件转化为不等式（$\Delta > 0$ 等）
-3. 解不等式得参数范围
-
-**例**：方程 $x^2 - 2px + q = 0$ 有两实根且根之差在 $(2, 4)$ 内，求 $p^2 - q$ 的范围。
-
-**解法**：两根之差 $2\sqrt{p^2 - q} \in (2, 4)$，故 $p^2 - q \in (1, 4)$。
+**⚠️ Common Pitfalls**:
+- Do not "multiply" two inequalities directly — negative times negative equals positive, which can change the direction of the inequality sign.
+- When solving systems of inequalities, verify if the intersection exists.
 
 ---
 
-### 题型 B：不等式解集与系数关系
+## A2.4 Factor Theorem and Remainder Theorem [MM1.6]
 
-**特征**：已知不等式的解集，反推系数或构造新不等式。
+### 4.1 Factor Theorem
 
-**策略**：
-1. 从解集 $p < x < q$ 反推：二次式为 $(x - p)(x - q)$（设 $a = 1$）
-2. 根据系数关系 $b = -(p + q)$，$c = pq$
-3. 代入新不等式求解
+**Core Conclusion**: If $(x - a)$ is a factor of the polynomial $f(x)$, then $f(a) = 0$.
 
----
+Conversely, if $f(a) = 0$, then $(x - a)$ is a factor of $f(x)$.
 
-### 题型 C：因式定理与系数确定
+**Applications**:
+- Quickly check if a polynomial has a specific factor.
+- Deduce the coefficients of a polynomial from its known roots.
 
-**特征**：多项式含未知系数，已知某因式求系数值。
+### 4.2 Remainder Theorem
 
-**策略**：
-1. 设因式为 $(x - a)$，代入 $x = a$ 使多项式为零
-2. 解关于系数的方程
-3. 验证其他系数（如题目有多个条件）
+The remainder when the polynomial $f(x)$ is divided by $(x - a)$ is $f(a)$.
 
----
+**Extension**: The remainder when $f(x)$ is divided by $(ax - b)$ is $f\left(\frac{b}{a}\right)$.
 
-## ⚡ 速解技巧汇总
+**⚡ Quick Tip**: No need to perform polynomial division to find the remainder, simply substitute!
 
-| 场景 | 技巧 |
-|------|------|
-| 判断根是否存在 | 直接计算 $\Delta$，无需解方程 |
-| 两根之和/积 | 用韦达定理，不需求根 |
-| 两根之差 | $|x_1 - x_2| = \sqrt{\Delta}/a$ |
-| 求余数 | 代入即可，不用除法 |
-| 检验因式 | 代入看是否为零 |
-| 配方找顶点 | 『半系数平方』口诀 |
-| 二次不等式解集 | 『大于取两边，小于取中间』（$a > 0$） |
-| 联立方程交点数 | 化为二次方程，看 $\Delta$ |
+### 4.3 Comprehensive Application of Factorisation
+
+Once a factor is known, the remaining factors can be found by:
+- Polynomial division (long division or synthetic division)
+- The method of undetermined coefficients, assuming the remaining factor is a quadratic expression and comparing coefficients
+
+**Typical Workflow**:
+1. Use the Factor Theorem to check for a linear factor $(x - a)$.
+2. Use the Remainder Theorem to determine the constant term.
+3. Continue to factorise the remaining part or directly verify the given options.
 
 ---
 
-## ⚠️ 易错警示
+## 📝 Typical Question Types and Solving Strategies
 
-- ❌ 用韦达定理前必须确认 $\Delta \ge 0$
-- ❌ 不等式不能直接相乘——$(-3 < x)$ 和 $(-2 < x)$ 相乘不代表 $(x^2 < 6)$
-- ❌ 余数定理中除式为 $(ax - b)$ 时，代入的是 $x = b/a$，不是 $x = a$
-- ❌ 二次不等式解集的『取两边/取中间』口诀只适用于 $a > 0$，$a < 0$ 时需反转
-- ❌ 配方时不要忘记调整常数项——『加多少减多少』
+### Type A: Discriminant and Parameter Range
 
----
+**Features**: A quadratic equation with a parameter, asking for the range of the parameter under certain conditions.
 
-## 📝 精选例题
+**Strategies**:
+1. Write the expression for the discriminant $\Delta$ in terms of the parameter.
+2. Convert the conditions into inequalities (e.g., $\Delta > 0$).
+3. Solve the inequalities to find the parameter range.
 
-### 例题 1（2017 P1 Q5 · 二次不等式交集）
+**Example**: The equation $x^2 - 2px + q = 0$ has two real roots, and the difference between the roots is in the interval $(2, 4)$. Find the range of $p^2 - q$.
 
-**题目**：求同时满足 $x^2 - 8x + 12 < 0$ 和 $2x + 1 > 9$ 的解集 $S$，并用单一不等式表示。
-
-【题目分析】
-本题考查二次不等式与线性不等式的联立求解。需分别解出两个不等式，取交集后再反向构造为单一二次不等式形式。
-
-【解题步骤】
-第一步：解二次不等式 $x^2 - 8x + 12 < 0$。
-
-因式分解：$(x - 2)(x - 6) < 0$。
-
-抛物线开口向上，在两根之间取负值，解为 $2 < x < 6$。
-
-第二步：解线性不等式 $2x + 1 > 9$。
-
-$2x > 8$，得 $x > 4$。
-
-第三步：取交集。
-
-$S = (2, 6) \cap (4, \infty) = (4, 6)$，即 $4 < x < 6$。
-
-第四步：反向构造单一不等式。
-
-区间 $(4, 6)$ 对应二次式 $(x - 4)(x - 6) < 0$（开口向上，在两根之间为负）。
-
-展开得 $x^2 - 10x + 24 < 0$。
-
-【快捷思路】
-交集为 $(4, 6)$，直接写出两根为 $4$、$6$ 的二次不等式。『中间为负』要求开口向上，即 $a > 0$，取标准形式 $x^2 - 10x + 24 < 0$。
-
-【正确答案】C
-
-【知识点】Algebra | **考纲**: MM1.5
+**Solution**: The difference between the two roots is $2\sqrt{p^2 - q} \in (2, 4)$, hence $p^2 - q \in (1, 4)$.
 
 ---
 
-### 例题 2（2016 P1 Q2 · 因式定理）
+### Type B: Solution Sets of Inequalities and Coefficient Relationships
 
-**题目**：多项式 $3x^3 + 13x^2 + 8x + a$ 有因式 $(x + 2)$，求完全因式分解。
+**Features**: Given the solution set of an inequality, deduce the coefficients or construct a new inequality.
 
-【题目分析】
-本题考查因式定理与多项式因式分解。已知线性因式，先用因式定理求常数 $a$，再分解剩余部分。
+**Strategies**:
+1. Work backwards from the solution set $p < x < q$: the quadratic expression is $(x - p)(x - q)$ (assuming $a = 1$).
+2. Based on the coefficient relationships, $b = -(p + q)$, $c = pq$.
+3. Substitute into the new inequality to solve.
 
-【解题步骤】
-第一步：利用因式定理求 $a$。
+---
 
-设 $f(x) = 3x^3 + 13x^2 + 8x + a$。
+### Type C: Factor Theorem and Coefficient Determination
 
-因 $(x + 2)$ 是因式，故 $f(-2) = 0$：
+**Features**: A polynomial with unknown coefficients, given a factor to find the values of the coefficients.
+
+**Strategies**:
+1. Suppose the factor is $(x - a)$, substitute $x = a$ to set the polynomial to zero.
+2. Solve the equation for the coefficients.
+3. Verify other coefficients (if the question has multiple conditions).
+
+---
+
+## ⚡ Summary of Quick Solving Techniques
+
+| Scenario | Technique |
+|----------|-----------|
+| Determining the existence of roots | Calculate $\Delta$ directly, no need to solve the equation |
+| Sum/Product of two roots | Use Vieta's formulas, no need to find roots |
+| Difference of two roots | $|x_1 - x_2| = \sqrt{\Delta}/a$ |
+| Finding remainder | Simply substitute, no division needed |
+| Checking a factor | Substitute and check if it equals zero |
+| Finding vertex by completing the square | "Half the coefficient squared" tip |
+| Solution set of quadratic inequality | "Greater than takes outside, less than takes inside" ($a > 0$) |
+| Number of intersections of simultaneous equations | Convert to quadratic equation, check $\Delta$ |
+
+---
+
+## ⚠️ Common Pitfalls
+
+- ❌ You must confirm $\Delta \ge 0$ before using Vieta's formulas
+- ❌ Inequalities cannot be directly multiplied — multiplying $(-3 < x)$ and $(-2 < x)$ does not mean $(x^2 < 6)$
+- ❌ In the Remainder Theorem, when the divisor is $(ax - b)$, substitute $x = b/a$, not $x = a$
+- ❌ The "outside/inside" tip for quadratic inequality solution sets only applies when $a > 0$; when $a < 0$, it must be reversed
+- ❌ Do not forget to adjust the constant term when completing the square — "subtract what you add"
+
+---
+
+## 📝 Selected Examples
+
+### Example 1 (2017 P1 Q5 · Intersection of Quadratic Inequalities)
+
+**Question**: Find the solution set $S$ that satisfies both $x^2 - 8x + 12 < 0$ and $2x + 1 > 9$, and express it as a single inequality.
+
+【Analysis】
+This question tests solving simultaneous quadratic and linear inequalities. You need to solve both inequalities separately, take their intersection, and then work backwards to construct a single quadratic inequality.
+
+【Steps】
+Step 1: Solve the quadratic inequality $x^2 - 8x + 12 < 0$.
+
+Factorisation: $(x - 2)(x - 6) < 0$.
+
+The parabola opens upwards, taking negative values between the two roots. The solution is $2 < x < 6$.
+
+Step 2: Solve the linear inequality $2x + 1 > 9$.
+
+$2x > 8$, which gives $x > 4$.
+
+Step 3: Find the intersection.
+
+$S = (2, 6) \cap (4, \infty) = (4, 6)$, so $4 < x < 6$.
+
+Step 4: Construct a single inequality in reverse.
+
+The interval $(4, 6)$ corresponds to the quadratic expression $(x - 4)(x - 6) < 0$ (opens upwards, negative between the roots).
+
+Expanding gives $x^2 - 10x + 24 < 0$.
+
+【Quick Approach】
+The intersection is $(4, 6)$, so directly write the quadratic inequality with roots $4$ and $6$. "Negative in the middle" requires the parabola to open upwards, meaning $a > 0$, giving the standard form $x^2 - 10x + 24 < 0$.
+
+【Correct Answer】C
+
+【Knowledge Point】Algebra | **Syllabus**: MM1.5
+
+---
+
+### Example 2 (2016 P1 Q2 · Factor Theorem)
+
+**Question**: The polynomial $3x^3 + 13x^2 + 8x + a$ has a factor of $(x + 2)$. Find its complete factorisation.
+
+【Analysis】
+This question tests the Factor Theorem and polynomial factorisation. Given a linear factor, first use the Factor Theorem to find the constant $a$, then factorise the remaining part.
+
+【Steps】
+Step 1: Use the Factor Theorem to find $a$.
+
+Let $f(x) = 3x^3 + 13x^2 + 8x + a$.
+
+Since $(x + 2)$ is a factor, $f(-2) = 0$:
 
 $$f(-2) = 3(-8) + 13(4) + 8(-2) + a = -24 + 52 - 16 + a = 12 + a = 0$$
 
-得 $a = -12$。
+Giving $a = -12$.
 
-第二步：用 $(x + 2)$ 除多项式。
+Step 2: Divide the polynomial by $(x + 2)$.
 
-设 $f(x) = (x + 2)(3x^2 + bx + c)$，展开对比系数：
+Let $f(x) = (x + 2)(3x^2 + bx + c)$, expand and compare coefficients:
 
 $$3x^3 + (b + 6)x^2 + (c + 2b)x + 2c$$
 
-由 $x^2$ 系数：$b + 6 = 13$，得 $b = 7$。
+From the $x^2$ coefficient: $b + 6 = 13$, giving $b = 7$.
 
-由常数项：$2c = -12$，得 $c = -6$。
+From the constant term: $2c = -12$, giving $c = -6$.
 
-第三步：分解二次因式。
+Step 3: Factorise the quadratic factor.
 
-$3x^2 + 7x - 6 = (x + 3)(3x - 2)$（十字相乘法验证）。
+$3x^2 + 7x - 6 = (x + 3)(3x - 2)$ (verified using the cross-multiplication method).
 
-第四步：写出完全分解。
+Step 4: Write out the complete factorisation.
 
 $$f(x) = (x + 2)(x + 3)(3x - 2)$$
 
-【快捷思路】
-求出 $a = -12$ 后，各选项展开的常数项等于各因式常数之积。只有 D、E 的常数项为 $-12$。再检验 $x^2$ 系数：E 中 $(x+2)(x+3)(3x-2)$ 的 $x^2$ 系数为 $13$，吻合，直接选 E。
+【Quick Approach】
+After finding $a = -12$, the constant term of the expanded options equals the product of the constants of each factor. Only D and E have a constant term of $-12$. Check the $x^2$ coefficient: in E, the $x^2$ coefficient of $(x+2)(x+3)(3x-2)$ is $13$, which matches, so choose E.
 
-【正确答案】E
+【Correct Answer】E
 
-【知识点】Algebra | **考纲**: MM1.6
+【Knowledge Point】Algebra | **Syllabus**: MM1.6
 
 ---
 
-### 例题 3（2016 P2 Q15 · 判别式与两根之差）
+### Example 3 (2016 P2 Q15 · Discriminant and Difference of Roots)
 
-**题目**：二次方程 $f(x) = x^2 - 2px + q = 0$ 有两实根，且两根之差大于 $2$ 且小于 $4$。求与该条件等价的充要条件。
+**Question**: The quadratic equation $f(x) = x^2 - 2px + q = 0$ has two real roots, and the difference between the two roots is greater than $2$ and less than $4$. Find a necessary and sufficient condition equivalent to this.
 
-【题目分析】
-本题考查判别式应用与两根之差的表示。需将『两根之差在 $(2, 4)$』转化为关于 $p$、$q$ 的不等式。
+【Analysis】
+This question tests the application of the discriminant and the representation of the difference of roots. You need to convert "the difference of two roots is in $(2, 4)$" into an inequality involving $p$ and $q$.
 
-【解题步骤】
-第一步：表示两根。
+【Steps】
+Step 1: Represent the two roots.
 
 $$x_1 = p + \sqrt{p^2 - q}, \quad x_2 = p - \sqrt{p^2 - q}$$
 
-判别式 $\Delta = 4(p^2 - q) > 0$，即 $p^2 > q$。
+Discriminant $\Delta = 4(p^2 - q) > 0$, meaning $p^2 > q$.
 
-第二步：计算两根之差。
+Step 2: Calculate the difference of the two roots.
 
 $$|x_1 - x_2| = 2\sqrt{p^2 - q}$$
 
-第三步：代入条件。
+Step 3: Substitute into the condition.
 
-$2 < 2\sqrt{p^2 - q} < 4$，两边除以 $2$：
+$2 < 2\sqrt{p^2 - q} < 4$, divide both sides by $2$:
 
 $1 < \sqrt{p^2 - q} < 2$
 
-两边平方（各项为正）：
+Square both sides (all terms are positive):
 
 $1 < p^2 - q < 4$
 
-第四步：对照选项。
+Step 4: Compare with the options.
 
-条件『两根之差在 $(2, 4)$』等价于 $1 < p^2 - q < 4$。
+The condition "the difference of two roots is in $(2, 4)$" is equivalent to $1 < p^2 - q < 4$.
 
-选项 D：$q < p^2 - 1 < q + 3$
+Option D: $q < p^2 - 1 < q + 3$
 
-两边加 $1$：$q + 1 < p^2 < q + 4$
+Add $1$ to all parts: $q + 1 < p^2 < q + 4$
 
-即 $1 < p^2 - q < 4$，完全等价。
+Which is $1 < p^2 - q < 4$, completely equivalent.
 
-【快捷思路】
-直接写出两根之差公式 $|x_1 - x_2| = \sqrt{\Delta}/a = 2\sqrt{p^2 - q}$，代入不等式 $2 < d < 4$ 得 $1 < p^2 - q < 4$，再逐一验证选项哪个与此等价。
+【Quick Approach】
+Directly write the difference of roots formula $|x_1 - x_2| = \sqrt{\Delta}/a = 2\sqrt{p^2 - q}$, substitute into the inequality $2 < d < 4$ to get $1 < p^2 - q < 4$, and then verify which option is equivalent to this.
 
-【正确答案】D
+【Correct Answer】D
 
-【知识点】Algebra | **考纲**: MM1.3
-
----
-
-## 🏋️ 课后练习（限时 15 分钟）
-
-| # | 题号 | 考点 | 对应考纲 | 难度 |
-|---|------|------|---------|------|
-| 1 | 2017 P1 Q4 | 余数定理 | MM1.6 | ⭐⭐ |
-| 2 | 2017 P1 Q19 | 不等式解集与系数 | MM1.5 | ⭐⭐⭐ |
-| 3 | 2018 P1 Q2 | 二次方程系数匹配 | MM1.3 | ⭐⭐ |
-| 4 | 2018 P2 Q5 | 不等式区域 | MM1.5 | ⭐⭐⭐ |
-| 5 | 2019 P1 Q1 | 因式定理 | MM1.6 | ⭐⭐ |
-| 6 | 2019 P1 Q6 | 判别式应用 | MM1.3 | ⭐⭐⭐ |
-| 7 | 2020 P1 Q3 | 二次不等式 | MM1.5 | ⭐⭐ |
-| 8 | 2020 P2 Q8 | 联立方程交点 | MM1.4 | ⭐⭐⭐ |
+【Knowledge Point】Algebra | **Syllabus**: MM1.3
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+## 🏋️ Post-Lesson Practice (15 Minutes Time Limit)
+
+| # | Question Number | Topic | Syllabus | Difficulty |
+|---|-----------------|-------|----------|------------|
+| 1 | 2017 P1 Q4 | Remainder Theorem | MM1.6 | ⭐⭐ |
+| 2 | 2017 P1 Q19 | Inequality Solution Set and Coefficients | MM1.5 | ⭐⭐⭐ |
+| 3 | 2018 P1 Q2 | Quadratic Equation Coefficient Matching | MM1.3 | ⭐⭐ |
+| 4 | 2018 P2 Q5 | Inequality Regions | MM1.5 | ⭐⭐⭐ |
+| 5 | 2019 P1 Q1 | Factor Theorem | MM1.6 | ⭐⭐ |
+| 6 | 2019 P1 Q6 | Applications of Discriminant | MM1.3 | ⭐⭐⭐ |
+| 7 | 2020 P1 Q3 | Quadratic Inequalities | MM1.5 | ⭐⭐ |
+| 8 | 2020 P2 Q8 | Intersections of Simultaneous Equations | MM1.4 | ⭐⭐⭐ |
 
 ---
 
-## 📚 考纲要点回顾
-
-**MM1.3 二次方程**：熟练掌握求根公式、判别式、配方法、韦达定理。
-
-**MM1.4 联立方程**：掌握代入消元法，理解交点数与判别式的关系。
-
-**MM1.5 不等式**：能正确解二次不等式，理解解集与图像的关系，处理不等式组的交集。
-
-**MM1.6 因式定理**：理解因式定理与余数定理的本质，能快速检验因式、确定系数。
+*Full solutions are available in the question bank database, each including 【Steps】 and 【Quick Approach】.*
 
 ---
 
-## 🎯 配套练习
+## 📚 Syllabus Key Points Review
 
-学完本章？[→ 去做 Algebra 相关练习题](/practice/tmua/?topic=Algebra)
+**MM1.3 Quadratic Equations**: Master the quadratic formula, discriminant, completing the square, and Vieta's formulas.
+
+**MM1.4 Simultaneous Equations**: Master the substitution elimination method, understand the relationship between the number of intersections and the discriminant.
+
+**MM1.5 Inequalities**: Be able to correctly solve quadratic inequalities, understand the relationship between solution sets and graphs, and handle the intersection of inequality systems.
+
+**MM1.6 Factor Theorem**: Understand the essence of the Factor Theorem and the Remainder Theorem, be able to quickly check factors and determine coefficients.
 
 ---
 
-*创建时间: 2026-04-29*
-*模块编号: A2*
-*状态: ✅ 完成*
+## 🎯 Corresponding Practice
+
+Finished this chapter? [→ Go to Algebra related practice questions](/practice/tmua/?topic=Algebra)
+
+---
+
+*Created at: 2026-04-29*
+*Module Number: A2*
+*Status: ✅ Completed*

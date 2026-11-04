@@ -2,328 +2,328 @@
 title: "C Sequences and Series"
 ---
 
-## 模块 C：数列与级数
+## Module C: Sequences & Series
 
-> **对应考纲 Section 1**: MM2.1, MM2.2, MM2.3, MM2.4
-> **对应 Paper**: P1 重点（数列通项、求和公式），P2 综合（递推关系、收敛性分析）
-> **建议课时**: 2 课时 | **目标题量**: 21 题
-
----
-
-## 📋 模块概览
-
-| 小节 | 内容 | 对应考纲 | 历年真题频率 | 课时 |
-|------|------|---------|-------------|------|
-| C1 | 数列通项与递推 | MM2.1 | 8 年 12 次 | 0.5 |
-| C2 | 等差数列 | MM2.2 | 8 年 6 次 | 0.5 |
-| C3 | 等比数列与无穷和 | MM2.3 | 8 年 8 次 | 0.5 |
-| C4 | 二项式展开 | MM2.4 | 8 年 5 次 | 0.5 |
+> **Syllabus Mapping Section 1**: MM2.1, MM2.2, MM2.3, MM2.4
+> **Paper Focus**: P1 (nth term, summation formulas), P2 (recurrence relations, convergence analysis)
+> **Recommended Time**: 2 lessons | **Target Questions**: 21 questions
 
 ---
 
-## C1 数列通项与递推 [MM2.1]
+## 📋 Module Overview
 
-### 1.1 数列的定义方式
-
-**通项公式法**：给出 $a_n$ 的显式表达式，如 $a_n = 2n - 1$。
-
-**递推关系法**：给出前项与后项的关系，如 $x_{n+1} = f(x_n)$。
-
-TMUA 中常见的递推形式：
-- 线性递推：$x_{n+1} = ax_n + b$
-- 分式递推：$x_{n+1} = \dfrac{ax_n + p}{bx_n + q}$（需找不动点）
-- 导数递推：$f_{n+1}(x) = x \cdot f_n'(x)$
-
-### 1.2 递推数列找周期规律
-
-**核心技巧**：计算前若干项，观察是否出现重复或周期。
-
-**典型例**（2017 P1 Q11）：递推 $x_{n+1} = \dfrac{23x_n - 53}{5x_n + 1}$，前三项为 $7, 3, 1$，继续计算发现周期为 $7, 3, 1, -5, 7, \ldots$，四项循环。
-
-**判断周期的方法**：
-1. 计算前 5-10 项
-2. 若某项与首项相同，可能开始循环
-3. 验证周期长度
+| Section | Content | Syllabus Mapping | Exam Frequency | Lessons |
+|---------|---------|------------------|----------------|---------|
+| C1 | Sequences and Recurrence Relations | MM2.1 | 12 times in 8 years | 0.5 |
+| C2 | Arithmetic Progressions | MM2.2 | 6 times in 8 years | 0.5 |
+| C3 | Geometric Progressions and Infinite Series | MM2.3 | 8 times in 8 years | 0.5 |
+| C4 | Binomial Expansion | MM2.4 | 5 times in 8 years | 0.5 |
 
 ---
 
-## C2 等差数列 [MM2.2]
+## C1 Sequences and Recurrence Relations [MM2.1]
 
-### 2.1 基本公式
+### 1.1 Methods of Defining a Sequence
 
-| 公式 | 形式 | 说明 |
-|------|------|------|
-| 通项 | $a_n = a + (n-1)d$ | $a$ 为首项，$d$ 为公差 |
-| 前 $n$ 项和 | $S_n = \dfrac{n}{2}[2a + (n-1)d]$ | 需记住 |
-| 前 $n$ 项和（简化） | $S_n = \dfrac{n}{2}(a + a_n)$ | 首末项平均 |
-| 前 $n$ 个自然数和 | $1 + 2 + \cdots + n = \dfrac{n(n+1)}{2}$ | 常用特例 |
+**Explicit Formula**: An explicit expression for the $n$-th term, e.g., $a_n = 2n - 1$.
 
-### 2.2 等差数列的性质
+**Recurrence Relation**: A rule connecting terms of a sequence, e.g., $x_{n+1} = f(x_n)$.
 
-**性质一**：若 $m + n = p + q$，则 $a_m + a_n = a_p + a_q$。
+Common recurrence relations in TMUA:
+- Linear recurrence: $x_{n+1} = ax_n + b$
+- Fractional recurrence: $x_{n+1} = \dfrac{ax_n + p}{bx_n + q}$ (requires finding fixed points)
+- Derivative recurrence: $f_{n+1}(x) = x \cdot f_n'(x)$
 
-**性质二**：$S_n$ 是关于 $n$ 的二次函数（无常数项）。
+### 1.2 Finding Periodic Patterns in Recurrence Sequences
 
-**性质三**：$a, b, c$ 成等差 $\Leftrightarrow 2b = a + c$。
+**Core Strategy**: Calculate the first few terms and observe whether repetition or a period occurs.
 
-**⚠️ 易错**：$S_n$ 公式中是 $\dfrac{n}{2}$，不是 $\dfrac{n-1}{2}$。
+**Typical Example** (2017 P1 Q11): For the recurrence $x_{n+1} = \dfrac{23x_n - 53}{5x_n + 1}$, the first three terms are $7, 3, 1$. Continuing the calculation reveals the sequence is $7, 3, 1, -5, 7, \ldots$, which has a period of 4.
 
----
-
-## C3 等比数列与无穷和 [MM2.3]
-
-### 3.1 基本公式
-
-| 公式 | 形式 | 说明 |
-|------|------|------|
-| 通项 | $a_n = ar^{n-1}$ | $a$ 为首项，$r$ 为公比 |
-| 前 $n$ 项和 | $S_n = a\dfrac{1 - r^n}{1 - r}$（$r \neq 1$） | 或 $a\dfrac{r^n - 1}{r - 1}$ |
-| 无穷和 | $S_\infty = \dfrac{a}{1 - r}$ | 仅当 $|r| < 1$ |
-
-### 3.2 无穷和的收敛性
-
-**收敛条件**：$|r| < 1$，即 $-1 < r < 1$。
-
-**判定技巧**：
-- 若 $r$ 含 $\sqrt{3}$，需判断 $\dfrac{\sqrt{3}}{2} \approx 0.866 < 1$
-- 若题目给出无穷和存在，隐含 $|r| < 1$
-
-### 3.3 等比数列的幂次变形
-
-**平方数列**：原数列 $a, ar, ar^2, \ldots$ 的平方为 $a^2, a^2r^2, a^2r^4, \ldots$，仍是等比数列，公比为 $r^2$。
-
-**立方数列**：公比为 $r^3$。
-
-**性质**：$|r| < 1 \Rightarrow |r^k| < 1$（$k \geq 1$），故平方、立方数列仍收敛。
+**Methods for identifying periods**:
+1. Calculate the first 5-10 terms.
+2. If a term matches the first term, a cycle might have begun.
+3. Verify the length of the period.
 
 ---
 
-## C4 二项式展开 [MM2.4]
+## C2 Arithmetic Progressions [MM2.2]
 
-### 4.1 二项式定理
+### 2.1 Basic Formulas
+
+| Formula | Expression | Note |
+|---------|------------|------|
+| $n$-th Term | $a_n = a + (n-1)d$ | $a$ is the first term, $d$ is the common difference |
+| Sum of First $n$ Terms | $S_n = \dfrac{n}{2}[2a + (n-1)d]$ | Memorization required |
+| Sum of First $n$ Terms (Simplified) | $S_n = \dfrac{n}{2}(a + a_n)$ | Using the average of the first and last terms |
+| Sum of First $n$ Natural Numbers | $1 + 2 + \cdots + n = \dfrac{n(n+1)}{2}$ | Common special case |
+
+### 2.2 Properties of Arithmetic Progressions
+
+**Property 1**: If $m + n = p + q$, then $a_m + a_n = a_p + a_q$.
+
+**Property 2**: $S_n$ is a quadratic function of $n$ (with no constant term).
+
+**Property 3**: $a, b, c$ are in an arithmetic progression $\Leftrightarrow 2b = a + c$.
+
+**⚠️ Common Mistake**: In the formula for $S_n$, the multiplier is $\dfrac{n}{2}$, not $\dfrac{n-1}{2}$.
+
+---
+
+## C3 Geometric Progressions and Infinite Series [MM2.3]
+
+### 3.1 Basic Formulas
+
+| Formula | Expression | Note |
+|---------|------------|------|
+| $n$-th Term | $a_n = ar^{n-1}$ | $a$ is the first term, $r$ is the common ratio |
+| Sum of First $n$ Terms | $S_n = a\dfrac{1 - r^n}{1 - r}$ ($r \neq 1$) | Or $a\dfrac{r^n - 1}{r - 1}$ |
+| Sum to Infinity | $S_\infty = \dfrac{a}{1 - r}$ | Only valid when $|r| < 1$ |
+
+### 3.2 Convergence of Infinite Series
+
+**Convergence Condition**: $|r| < 1$, i.e., $-1 < r < 1$.
+
+**Determining Convergence**:
+- If $r$ involves $\sqrt{3}$, it may be necessary to recognize that $\dfrac{\sqrt{3}}{2} \approx 0.866 < 1$.
+- If a question states that the sum to infinity exists, it implies $|r| < 1$.
+
+### 3.3 Power Transformations of Geometric Progressions
+
+**Squared Sequence**: The squares of the original sequence $a, ar, ar^2, \ldots$ are $a^2, a^2r^2, a^2r^4, \ldots$, which form another geometric progression with a common ratio of $r^2$.
+
+**Cubed Sequence**: Forms a geometric progression with a common ratio of $r^3$.
+
+**Property**: $|r| < 1 \Rightarrow |r^k| < 1$ (for $k \geq 1$), meaning the squared or cubed sequences are still convergent.
+
+---
+
+## C4 Binomial Expansion [MM2.4]
+
+### 4.1 Binomial Theorem
 
 $$(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k$$
 
-其中 $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}$。
+where $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}$.
 
-### 4.2 常用特例
+### 4.2 Common Special Cases
 
 $$(1 + x)^n = \binom{n}{0} + \binom{n}{1}x + \binom{n}{2}x^2 + \cdots + \binom{n}{n}x^n$$
 
-**杨辉三角**：$\dbinom{n}{k} = \dbinom{n-1}{k-1} + \dbinom{n-1}{k}$。
+**Pascal's Triangle**: $\dbinom{n}{k} = \dbinom{n-1}{k-1} + \dbinom{n-1}{k}$.
 
-**常见组合数**：
-- $\dbinom{3}{0}=1$，$\dbinom{3}{1}=3$，$\dbinom{3}{2}=3$，$\dbinom{3}{3}=1$
-- $\dbinom{4}{2}=6$，$\dbinom{5}{2}=10$
+**Common Combinations**:
+- $\dbinom{3}{0}=1$, $\dbinom{3}{1}=3$, $\dbinom{3}{2}=3$, $\dbinom{3}{3}=1$
+- $\dbinom{4}{2}=6$, $\dbinom{5}{2}=10$
 
-### 4.3 多项式展开中特定项系数
+### 4.3 Coefficients of Specific Terms in Polynomial Expansions
 
-**方法**：将 $(a + bx + cx^2)^n$ 改写为 $(a + u)^n$，再展开 $u$ 的幂次。
+**Method**: Rewrite $(a + bx + cx^2)^n$ as $(a + u)^n$, then expand based on the powers of $u$.
 
-**技巧**：观察 $x$ 的指数约束，分类计数。
-
----
-
-## C5 典型题型与解题策略 [MM2.1-MM2.4]
-
-### 题型 A：等差与等比数列综合
-
-**特征**：给出两个数列的前几项，其中一个为等差、另一个为等比。
-
-**策略**：
-1. 由等比数列确定 $q$ 与 $p$ 的关系
-2. 由等差数列建立方程
-3. 联立求解
-
-**典型**：2017 P1 Q7（等差前三项 $p, q, p^2$，等比前三项 $p, p^2, q$）
-
-### 题型 B：无穷和的综合计算
-
-**特征**：给出原数列、平方数列、立方数列的无穷和，求解未知项。
-
-**策略**：
-1. 利用 $S_\infty = \dfrac{a}{1-r}$ 列方程
-2. 平方数列公比为 $r^2$
-3. 联立求解 $a$ 和 $r$
-
-**典型**：2018 P1 Q8（无穷和 6，平方和 12，求立方和）
-
-### 题型 C：含 $(-1)^n$ 的数列求和
-
-**特征**：通项含 $(-1)^n$，出现交替项。
-
-**策略**：
-1. 化简通项为 $C \cdot (-1)^n$ 形式
-2. 利用奇偶项对称性求和
-3. 若项数为偶数，可直接配对
-
-**典型**：2016 P1 Q4（$a_n = (-1)^n - (-1)^{n-1} + (-1)^{n+2}$）
+**Strategy**: Observe the constraints on the exponent of $x$ and count the combinations methodically.
 
 ---
 
-## ⚡ 速解技巧汇总
+## C5 Typical Question Types and Strategies [MM2.1-MM2.4]
 
-| 场景 | 技巧 |
-|------|------|
-| 递推找周期 | 计算 5-10 项，观察循环 |
-| 等差数列前 $n$ 项和 | 用 $S_n = \dfrac{n}{2}(a + a_n)$ 避免记忆复杂公式 |
-| 等比无穷和 | 先验证 $|r|<1$，再用 $\dfrac{a}{1-r}$ |
-| 含 $(-1)^n$ 的通项 | 化简为 $C \cdot (-1)^n$，奇偶项配对求和 |
-| 平方数列公比 | 原公比 $r$ 的平方 $r^2$ |
-| 二项式特定项系数 | 利用组合数公式 $\dbinom{n}{k}$ 直接计算 |
-| 等差与等比联立 | 等比给出变量关系，等差建立方程 |
+### Type A: Combining Arithmetic and Geometric Progressions
+
+**Features**: Given the first few terms of two sequences, one arithmetic and the other geometric.
+
+**Strategy**:
+1. Determine the relationship between $p$ and $q$ using the geometric progression.
+2. Set up an equation using the arithmetic progression.
+3. Solve the system of equations.
+
+**Typical Example**: 2017 P1 Q7 (The first three terms of an arithmetic progression are $p, q, p^2$, and the first three terms of a geometric progression are $p, p^2, q$).
+
+### Type B: Comprehensive Calculations Involving Sum to Infinity
+
+**Features**: Given the sum to infinity of the original sequence, squared sequence, or cubed sequence, and required to solve for unknown terms.
+
+**Strategy**:
+1. Set up equations using $S_\infty = \dfrac{a}{1-r}$.
+2. Keep in mind that the common ratio of a squared sequence is $r^2$.
+3. Solve simultaneously for $a$ and $r$.
+
+**Typical Example**: 2018 P1 Q8 (Sum to infinity is 6, sum of squares is 12, find the sum of cubes).
+
+### Type C: Summing Sequences with $(-1)^n$
+
+**Features**: The general term contains $(-1)^n$, leading to alternating signs.
+
+**Strategy**:
+1. Simplify the $n$-th term into the form $C \cdot (-1)^n$.
+2. Calculate the sum by considering the symmetry between odd and even terms.
+3. If the number of terms is even, you can pair them up directly.
+
+**Typical Example**: 2016 P1 Q4 ($a_n = (-1)^n - (-1)^{n-1} + (-1)^{n+2}$).
 
 ---
 
-## ⚠️ 易错警示
+## ⚡ Quick Solving Tips Summary
 
-- ❌ $(-1)^{n-1} = -(-1)^n$（负一次幂等于负号），**不是** $(-1)^n \cdot (-1)$
-- ❌ 等差数列前 $n$ 项和公式中的因子是 $\dfrac{n}{2}$，**不是** $\dfrac{n-1}{2}$
-- ❌ 等比数列无穷和仅在 $|r| < 1$ 时成立，忘记验证收敛性
-- ❌ 平方数列的首项是 $a^2$，**不是** $a$；公比是 $r^2$，**不是** $r$
-- ❌ 二项式展开中 $\dbinom{n}{k}$ 计算出错，尤其是 $n$ 较大时
-- ❌ 递推数列找周期时，计算项数不足，漏掉周期起点
+| Scenario | Technique |
+|----------|-----------|
+| Finding the period in recurrences | Calculate 5-10 terms, observe the cycle |
+| Sum of the first $n$ terms in AP | Use $S_n = \dfrac{n}{2}(a + a_n)$ to avoid memorizing the complex formula |
+| Sum to infinity in GP | Verify $|r|<1$ first, then use $\dfrac{a}{1-r}$ |
+| $n$-th term with $(-1)^n$ | Simplify to $C \cdot (-1)^n$, pair up odd and even terms |
+| Common ratio of a squared sequence | The square of the original ratio $r^2$ |
+| Specific term coefficients in binomial expansion | Use the combinations formula $\dbinom{n}{k}$ for direct calculation |
+| Combining AP and GP | Use the GP to find variable relationships, and the AP to set up equations |
 
 ---
 
-## 📝 精选例题
+## ⚠️ Common Pitfalls
 
-### 例题 1（2017 P1 Q7 · 等差与等比综合）
+- ❌ $(-1)^{n-1} = -(-1)^n$ (the negative first power evaluates to a negative sign), it is **not** $(-1)^n \cdot (-1)$
+- ❌ The factor in the sum formula for the first $n$ terms of an AP is $\dfrac{n}{2}$, **not** $\dfrac{n-1}{2}$
+- ❌ The sum to infinity of a geometric progression only exists when $|r| < 1$; forgetting to verify convergence
+- ❌ The first term of the squared sequence is $a^2$, **not** $a$; the common ratio is $r^2$, **not** $r$
+- ❌ Miscalculating $\dbinom{n}{k}$ in a binomial expansion, especially when $n$ is large
+- ❌ When looking for a period in a recurrence sequence, calculating too few terms and missing the start of the cycle
 
-**题目**：等差数列前三项为 $p, q, p^2$（$p < 0$），等比数列前三项为 $p, p^2, q$。求等差数列前 10 项和。
+---
 
-【题目分析】
-本题需要联立等差与等比数列的定义，通过已知前三项建立方程，解出 $p$ 和 $q$，再代入等差数列求和公式。
+## 📝 Selected Examples
 
-【解题步骤】
-第一步：利用等比数列确定 $q$ 与 $p$ 的关系
+### Example 1 (2017 P1 Q7 · AP & GP Integration)
+
+**Question**: The first three terms of an arithmetic progression are $p, q, p^2$ ($p < 0$), and the first three terms of a geometric progression are $p, p^2, q$. Find the sum of the first 10 terms of the arithmetic progression.
+
+[Analysis]
+This question requires integrating the definitions of arithmetic and geometric progressions. Set up equations using the known first three terms to solve for $p$ and $q$, then substitute them into the AP sum formula.
+
+[Steps]
+Step 1: Determine the relationship between $q$ and $p$ using the geometric progression.
 $$r = \dfrac{p^2}{p} = p, \quad q = p \cdot r = p^3$$
 
-第二步：利用等差数列建立方程
-公差 $d = q - p = p^3 - p$，第三项 $p + 2d = p^2$：
+Step 2: Set up an equation using the arithmetic progression.
+Common difference $d = q - p = p^3 - p$. The third term is $p + 2d = p^2$:
 $$p + 2(p^3 - p) = p^2 \quad \Rightarrow \quad 2p^3 - p^2 - p = 0$$
 
-第三步：因式分解求解
+Step 3: Solve by factorization.
 $$p(2p+1)(p-1) = 0$$
-由 $p < 0$ 且 $p \neq 0$，得 $p = -\dfrac{1}{2}$。
+Since $p < 0$ and $p \neq 0$, we get $p = -\dfrac{1}{2}$.
 
-第四步：计算等差数列参数
+Step 4: Calculate the AP parameters.
 $$q = p^3 = -\dfrac{1}{8}, \quad d = q - p = \dfrac{3}{8}$$
 
-第五步：求前 10 项和
+Step 5: Find the sum of the first 10 terms.
 $$S_{10} = \dfrac{10}{2}\left[2 \cdot \left(-\dfrac{1}{2}\right) + 9 \cdot \dfrac{3}{8}\right] = 5 \times \dfrac{19}{8} = \dfrac{95}{8}$$
 
-【快捷思路】
-等比数列直接给出 $q = p^3$，代入等差数列条件消去 $q$，一步到位建立 $p$ 的方程。$2p^3 - p^2 - p = 0$ 的因式分解是关键。
+[Shortcut]
+The geometric progression directly provides $q = p^3$. Substitute this into the arithmetic progression condition to eliminate $q$, immediately setting up an equation for $p$. Factoring $2p^3 - p^2 - p = 0$ is the key.
 
-【正确答案】B（$\dfrac{95}{8}$）
+[Correct Answer] B ($\dfrac{95}{8}$)
 
-【知识点】Sequences and Series | **考纲**: MM2.1, MM2.2, MM2.3
+[Knowledge Point] Sequences and Series | **Syllabus**: MM2.1, MM2.2, MM2.3
 
 ---
 
-### 例题 2（2017 P2 Q3 · 等比数列无穷和）
+### Example 2 (2017 P2 Q3 · GP Sum to Infinity)
 
-**题目**：等比数列首项为 $2\sqrt{3}$，第四项为 $\dfrac{9}{4}$。求无穷项之和。
+**Question**: The first term of a geometric progression is $2\sqrt{3}$, and the fourth term is $\dfrac{9}{4}$. Find the sum to infinity.
 
-【题目分析】
-已知首项和第四项，先求公比 $r$，再验证 $|r| < 1$ 确保收敛，最后用无穷和公式计算。
+[Analysis]
+Given the first and fourth terms, first find the common ratio $r$, then verify that $|r| < 1$ to ensure convergence, and finally compute the sum using the formula.
 
-【解题步骤】
-第一步：由第四项求公比
+[Steps]
+Step 1: Find the common ratio from the fourth term.
 $$ar^3 = 2\sqrt{3}\,r^3 = \dfrac{9}{4} \quad \Rightarrow \quad r^3 = \dfrac{9}{8\sqrt{3}} = \dfrac{9\sqrt{3}}{24} = \dfrac{3\sqrt{3}}{8}$$
 
-第二步：识别 $r^3$ 为完全立方数
+Step 2: Recognize $r^3$ as a perfect cube.
 $$\dfrac{3\sqrt{3}}{8} = \left(\dfrac{\sqrt{3}}{2}\right)^3 \quad \Rightarrow \quad r = \dfrac{\sqrt{3}}{2}$$
 
-第三步：验证收敛性
-$$|r| = \dfrac{\sqrt{3}}{2} \approx 0.866 < 1 \quad \text{收敛}$$
+Step 3: Verify convergence.
+$$|r| = \dfrac{\sqrt{3}}{2} \approx 0.866 < 1 \quad \text{Converges}$$
 
-第四步：求无穷和
+Step 4: Calculate the sum to infinity.
 $$S_\infty = \dfrac{2\sqrt{3}}{1 - \dfrac{\sqrt{3}}{2}} = \dfrac{4\sqrt{3}}{2 - \sqrt{3}}$$
 
-有理化分母：
+Rationalize the denominator:
 $$\dfrac{4\sqrt{3}(2 + \sqrt{3})}{(2 - \sqrt{3})(2 + \sqrt{3})} = 4\sqrt{3}(2 + \sqrt{3}) = 4(2\sqrt{3} + 3)$$
 
-【快捷思路】
-识别 $\dfrac{3\sqrt{3}}{8} = \left(\dfrac{\sqrt{3}}{2}\right)^3$ 是核心技巧，避免了开立方运算。有理化时注意 $(2-\sqrt{3})(2+\sqrt{3}) = 4 - 3 = 1$。
+[Shortcut]
+Recognizing $\dfrac{3\sqrt{3}}{8} = \left(\dfrac{\sqrt{3}}{2}\right)^3$ is the core technique, avoiding manual cube root extraction. Note that $(2-\sqrt{3})(2+\sqrt{3}) = 4 - 3 = 1$ during rationalization.
 
-【正确答案】G（$4(2\sqrt{3} + 3)$）
+[Correct Answer] G ($4(2\sqrt{3} + 3)$)
 
-【知识点】Sequences and Series | **考纲**: MM2.3
+[Knowledge Point] Sequences and Series | **Syllabus**: MM2.3
 
 ---
 
-### 例题 3（2018 P1 Q8 · 等比数列的幂次变形）
+### Example 3 (2018 P1 Q8 · Power Transformations of a GP)
 
-**题目**：等比数列的无穷和为 6，各项平方的无穷和为 12。求各项立方后的无穷和。
+**Question**: The sum to infinity of a geometric progression is 6, and the sum to infinity of the squares of its terms is 12. Find the sum to infinity of the cubes of its terms.
 
-【题目分析】
-设原数列首项 $a$、公比 $r$。平方数列首项 $a^2$、公比 $r^2$。立方数列首项 $a^3$、公比 $r^3$。联立方程求解。
+[Analysis]
+Let the first term of the original sequence be $a$ and the common ratio be $r$. The squared sequence has a first term of $a^2$ and a common ratio of $r^2$. The cubed sequence has a first term of $a^3$ and a common ratio of $r^3$. Set up a system of equations to solve.
 
-【解题步骤】
-第一步：列方程
+[Steps]
+Step 1: Set up the equations.
 $$\dfrac{a}{1-r} = 6 \quad \cdots (1)$$
 $$\dfrac{a^2}{1-r^2} = 12 \quad \cdots (2)$$
 
-第二步：利用式 (1) 化简式 (2)
+Step 2: Simplify equation (2) using equation (1).
 $$\dfrac{a^2}{(1+r)(1-r)} = 12 \quad \Rightarrow \quad \dfrac{a}{1+r} \cdot \dfrac{a}{1-r} = 12$$
 
-代入式 (1)：$\dfrac{a}{1+r} \cdot 6 = 12$，即 $\dfrac{a}{1+r} = 2$。
+Substitute equation (1): $\dfrac{a}{1+r} \cdot 6 = 12$, which gives $\dfrac{a}{1+r} = 2$.
 
-第三步：联立求解
-由式 (1)：$a = 6 - 6r$
-由式 (2)：$a = 2 + 2r$
+Step 3: Solve simultaneously.
+From equation (1): $a = 6 - 6r$
+From the simplified equation: $a = 2 + 2r$
 
-联立：$6 - 6r = 2 + 2r \quad \Rightarrow \quad r = \dfrac{1}{2}$，$a = 3$。
+Equating them: $6 - 6r = 2 + 2r \quad \Rightarrow \quad r = \dfrac{1}{2}$, $a = 3$.
 
-第四步：求立方数列的无穷和
+Step 4: Calculate the sum to infinity of the cubed sequence.
 $$\dfrac{a^3}{1-r^3} = \dfrac{27}{1 - \dfrac{1}{8}} = \dfrac{27}{\dfrac{7}{8}} = \dfrac{216}{7}$$
 
-【快捷思路】
-由 $\dfrac{a^2}{1-r^2} = 12$ 和 $\dfrac{a}{1-r} = 6$ 两式相除得 $\dfrac{a}{1+r} = 2$，与 $a = 6 - 6r$ 联立一步求解。立方数列公比为 $\dfrac{1}{8}$，首项为 $27$。
+[Shortcut]
+Dividing $\dfrac{a^2}{1-r^2} = 12$ by $\dfrac{a}{1-r} = 6$ yields $\dfrac{a}{1+r} = 2$. Combine this with $a = 6 - 6r$ to solve in one step. The cubed sequence has a common ratio of $\dfrac{1}{8}$ and a first term of $27$.
 
-【正确答案】D（$\dfrac{216}{7}$）
+[Correct Answer] D ($\dfrac{216}{7}$)
 
-【知识点】Sequences and Series | **考纲**: MM2.3
-
----
-
-## 🏋️ 课后练习（限时 15 分钟）
-
-| # | 题号 | 考点 | 对应考纲 | 难度 |
-|---|------|------|---------|------|
-| 1 | 2016 P1 Q4 | 含 $(-1)^n$ 的数列求和 | MM2.1 | ⭐⭐⭐ |
-| 2 | 2016 P1 Q14 | 两个等比数列相加的无穷和 | MM2.3 | ⭐⭐⭐ |
-| 3 | 2016 P2 Q12 | 等差数列前 $n$ 项和的符号判断 | MM2.2 | ⭐⭐⭐ |
-| 4 | 2017 P1 Q11 | 递推数列找周期规律 | MM2.1 | ⭐⭐⭐ |
-| 5 | 2018 P1 Q2 | 等差数列前 $n$ 项和的关系 | MM2.2 | ⭐⭐⭐ |
-| 6 | 2018 P2 Q7 | 两个等差数列的交集问题 | MM2.2 | ⭐⭐⭐ |
-| 7 | 2022 P1 Q8 | 等比数列前 $n$ 项和的性质 | MM2.3 | ⭐⭐⭐ |
-| 8 | 2023 P1 Q4 | 含三角函数的无穷级数 | MM2.3 | ⭐⭐⭐⭐ |
+[Knowledge Point] Sequences and Series | **Syllabus**: MM2.3
 
 ---
 
-*完整解析见题库数据库，每题均含【解题步骤】与【快捷思路】。*
+## 🏋️ Post-Lesson Practice (Time Limit: 15 minutes)
+
+| # | Question | Topic | Syllabus | Difficulty |
+|---|----------|-------|----------|------------|
+| 1 | 2016 P1 Q4 | Sum of a sequence involving $(-1)^n$ | MM2.1 | ⭐⭐⭐ |
+| 2 | 2016 P1 Q14 | Sum to infinity of two combined GPs | MM2.3 | ⭐⭐⭐ |
+| 3 | 2016 P2 Q12 | Sign determination of the AP sum to $n$ terms | MM2.2 | ⭐⭐⭐ |
+| 4 | 2017 P1 Q11 | Finding periodicity in a recurrence relation | MM2.1 | ⭐⭐⭐ |
+| 5 | 2018 P1 Q2 | Relationships in AP sums to $n$ terms | MM2.2 | ⭐⭐⭐ |
+| 6 | 2018 P2 Q7 | Intersection of two arithmetic progressions | MM2.2 | ⭐⭐⭐ |
+| 7 | 2022 P1 Q8 | Properties of the sum of the first $n$ terms in a GP | MM2.3 | ⭐⭐⭐ |
+| 8 | 2023 P1 Q4 | Infinite series involving trigonometric functions | MM2.3 | ⭐⭐⭐⭐ |
 
 ---
 
-## 🎯 配套练习
-
-学完本章？[→ 去做 Sequences and Series 相关练习题](/practice/tmua/?topic=Sequences%20and%20Series)
+*For full solutions, please refer to the question bank database. Every question includes [Steps] and [Shortcut].*
 
 ---
 
-## 📚 考纲速查
+## 🎯 Related Practice
 
-**MM2.1 数列定义**：通项公式、递推关系 $x_{n+1} = f(x_n)$
-
-**MM2.2 等差数列**：通项 $a_n = a + (n-1)d$，求和 $S_n = \dfrac{n}{2}[2a + (n-1)d]$
-
-**MM2.3 等比数列**：有限和 $S_n = a\dfrac{1-r^n}{1-r}$，无穷和 $S_\infty = \dfrac{a}{1-r}$（$|r|<1$）
-
-**MM2.4 二项式展开**：$(1+x)^n$ 展开式，组合数 $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}$
+Finished this chapter? [→ Go to Sequences and Series related practice](/practice/tmua/?topic=Sequences%20and%20Series)
 
 ---
 
-*讲义完成日期：2026-04-29*
+## 📚 Syllabus Quick Reference
+
+**MM2.1 Sequence Definitions**: $n$-th term formula, recurrence relations $x_{n+1} = f(x_n)$
+
+**MM2.2 Arithmetic Progressions**: $n$-th term $a_n = a + (n-1)d$, sum $S_n = \dfrac{n}{2}[2a + (n-1)d]$
+
+**MM2.3 Geometric Progressions**: Finite sum $S_n = a\dfrac{1-r^n}{1-r}$, sum to infinity $S_\infty = \dfrac{a}{1-r}$ ($|r|<1$)
+
+**MM2.4 Binomial Expansion**: Expansion of $(1+x)^n$, combinations $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}$
+
+---
+
+*Lecture Notes Completion Date: 2026-04-29*

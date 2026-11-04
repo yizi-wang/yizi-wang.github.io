@@ -1,8 +1,7 @@
 ---
 title: About
 ---
-
-Hi, I'm **Yizi Wang** (王逸孜), an international high school mathematics teacher at Guangdong Country Garden School (广东碧桂园学校).
+Hi, I'm **Yizi Wang** (王伊子), an international high school mathematics teacher at Guangdong Country Garden School (Guangdong Country Garden School).
 
 I hold a PhD in Mathematics from the Chinese University of Hong Kong (CUHK). My teaching focuses on A-Level Further Mathematics, AMC/AIME competition preparation, and Oxford/Cambridge entrance exams (TMUA/STEP).
 
