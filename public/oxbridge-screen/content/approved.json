@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-06",
-  "edition": "2026-11-06 review v1",
+  "content_date": "2026-11-09",
+  "edition": "2026-11-09 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,172 +12,172 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月06日\n每日简报",
+    "headline": "11月09日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "dial-paste-printing-20261106",
-        "category": "工程 · 材料",
-        "headline": "糊状墨水，让精细打印提速",
-        "headline_en": "Paste Inks Speed Up Detailed Printing",
-        "summary": "11月4日，西北大学介绍DIAL打印法：把糊状墨水铺成50微米薄层，再用图案光逐层固化。周围未固化的墨水托住悬空结构，无须另印支架。一种网格结构的打印耗时为30分钟，挤出式打印则需124分钟。这为兼顾速度、精度与功能材料提供了新路线。",
-        "summary_en": "Northwestern's DIAL method spreads paste-like inks into 50-micrometre layers, then hardens selected areas with patterned light. Uncured ink supports overhangs without separate scaffolds. In one test, a lattice took 30 minutes, compared with 124 minutes using conventional extrusion. The approach offers a new route to combining speed, fine detail and functional materials in 3D printing.",
+        "id": "robot-memory-20261109",
+        "category": "工程 · 人工智能",
+        "headline": "机器人学会纠正记忆",
+        "headline_en": "Robots Learn to Correct Their Memories",
+        "summary": "11月5日，麻省理工学院介绍一套能纠正机器人记忆的系统。它比较同一物体在不同视角下的描述，找出不确定之处，再融合补充信息更新记忆。测试中，这种方法消除了约92%物体的描述歧义。主动发现并修正错误，有助于机器人更可靠地寻找物品、完成多步骤任务。",
+        "summary_en": "On November 5, MIT introduced a system that helps robots correct uncertain memories. It compares descriptions of the same object from different viewpoints, then combines additional information into an improved description. In tests, it resolved ambiguities for about 92 percent of objects. Recognizing and correcting mistakes could help robots find objects more reliably and complete tasks involving several steps.",
         "source": {
-          "name": "Northwestern University",
-          "url": "https://news.northwestern.edu/stories/2026/11/new-method-dials-up-new-capabilities-for-3d-printing?fj=1",
-          "published": "2026-11-04"
+          "name": "MIT LIDS",
+          "url": "https://lids.mit.edu/news/clearing-up-a-robots-fuzzy-memory",
+          "published": "2026-11-05"
         },
         "accent": "gold"
       },
       {
-        "id": "polariton-stripes-20261106",
-        "category": "物理 · 量子",
-        "headline": "在室温中观察量子条纹",
-        "headline_en": "Quantum Stripes at Room Temperature",
-        "summary": "11月3日，华沙大学等团队介绍室温量子实验：在微小光学腔体内，让光与材料中的激发耦合，形成极化激元。激光脉冲后，短暂存在的凝聚体出现规则密度条纹，每次条纹位置却不同，显示体系自发选择排列。这为无需极低温的量子物态研究提供了平台。",
-        "summary_en": "A team including the University of Warsaw described a room-temperature experiment coupling light with material excitations inside an optical microcavity. After laser pulses, the short-lived polariton condensate formed regular density stripes at different positions each time, showing spontaneous ordering. The system provides a platform for studying quantum phases without extremely low temperatures.",
+        "id": "mini-lens-20261109",
+        "category": "生物 · 组织培养",
+        "headline": "实验室长出微型晶状体",
+        "headline_en": "Growing Miniature Eye Lenses",
+        "summary": "11月5日，英国安格利亚鲁斯金大学介绍国际合作成果：研究人员用经过重编程的人体细胞培养出微型晶状体。细胞自行组织，形成帮助保持透明的蛋白、保护囊样结构和排列整齐的纤维细胞。这种接近真实晶状体的实验室模型，可帮助观察眼组织发育，并测试未来针对白内障的新药。",
+        "summary_en": "On November 5, Anglia Ruskin University reported that an international team had grown miniature human eye lenses from reprogrammed human cells. The cells organized themselves into structures containing transparency-related proteins, a protective capsule-like layer and orderly fibre cells. These laboratory models resemble important features of natural lenses, giving researchers a way to study developing eye tissue and test potential cataract medicines.",
         "source": {
-          "name": "University of Warsaw",
-          "url": "https://m.fuw.edu.pl/informacja-prasowa/news10488.html",
-          "published": "2026-11-03"
+          "name": "Anglia Ruskin University",
+          "url": "https://www.aru.ac.uk/news/mini-lens-grown-in-lab-could-help-tackle-cataracts",
+          "published": "2026-11-05"
         },
         "accent": "aqua"
       },
       {
-        "id": "astrovirus-mucus-release-20261106",
-        "category": "生物 · 细胞",
-        "headline": "病毒借黏液，离开宿主细胞",
-        "headline_en": "A Virus Leaves Cells with Mucus",
-        "summary": "11月3日，加州大学圣克鲁兹分校介绍星状病毒研究：病毒可借肠道杯状细胞分泌黏液的过程释放，无须先撑破细胞。在小鼠实验和人细胞培养实验中，抑制黏液分泌会减少病毒释放，刺激分泌则增加释放。弄清病毒利用宿主的方式，有助于寻找未来的干预靶点。",
-        "summary_en": "UC Santa Cruz described how astroviruses can leave intestinal goblet cells through mucus secretion without bursting the cells. In mice and cultured human cells, blocking mucus secretion reduced virus release, while stimulating secretion increased it. Understanding how the virus uses its host's normal processes may help identify targets for future treatments.",
+        "id": "turtle-sex-20261109",
+        "category": "生态 · 温度",
+        "headline": "沙滩温度改变海龟性别比例",
+        "headline_en": "Warmer Nests Change Turtle Sex Ratios",
+        "summary": "11月6日，佛罗里达大西洋大学公布监测近况：实验室目前饲养研究的幼龟全部为雌性。海龟性别受卵孵化温度影响，较暖的巢更容易产生雌龟。团队把幼龟检查结果与原巢温度记录对照，追踪这一变化。由于海龟需多年才能成熟，今天的性别失衡可能影响未来的繁殖。",
+        "summary_en": "On November 6, Florida Atlantic University reported that all the young sea turtles currently being raised and studied in its laboratory were female. Nest temperature influences turtle sex, with warmer incubation favouring females. Researchers compare examinations of the turtles with temperature records from their original nests. Because sea turtles take many years to mature, today's imbalance could affect future reproduction.",
         "source": {
-          "name": "UC Santa Cruz",
-          "url": "https://news.ucsc.edu/2026/11/astrovirus-exit-strategy/",
-          "published": "2026-11-03"
+          "name": "Florida Atlantic University / Newswise",
+          "url": "https://www.newswise.com/articles/oh-boy-all-girls-again-fau-research-tracks-sea-turtle-sex-ratios",
+          "published": "2026-11-06"
         },
         "accent": "coral"
       },
       {
-        "id": "solar-flare-launch-alert-20261106",
-        "category": "天文 · 观测",
-        "headline": "抓住太阳耀斑的五分钟窗口",
-        "headline_en": "Catching a Solar Flare in Time",
-        "summary": "11月4日，NASA介绍一种耀斑预警系统：分析X射线与紫外线观测，定位已出现的太阳耀斑，并预测它还能持续多久。探空火箭只有约五分钟观测时间，及时发射很关键。今年5月的一次飞行观测到三次耀斑；这套方法也可能帮助未来的空间天气预报。",
-        "summary_en": "NASA described an alert system that analyses X-ray and ultraviolet observations to locate detected solar flares and predict how long they will last. Sounding rockets have only about five minutes to observe, making launch timing crucial. A May flight observed three flares. The approach could also support future space-weather forecasting.",
+        "id": "vent-heritage-20261109",
+        "category": "地球 · 深海",
+        "headline": "深海热泉获地质遗产认可",
+        "headline_en": "Deep-Sea Vents Earn Heritage Recognition",
+        "summary": "11月6日，伍兹霍尔海洋研究所宣布，加拉帕戈斯海底热泉入选国际地质科学联合会第三批百大地质遗产地。这处热泉于1977年被发现，附近生态系统依靠化学反应提供的能量维持。它拓宽了人们对生命生存条件的认识，也为探索其他天体冰层下海洋的宜居环境提供了思路。",
+        "summary_en": "On November 6, Woods Hole Oceanographic Institution announced that the Galápagos hydrothermal vents had joined the International Union of Geological Sciences' third list of 100 geological heritage sites. Discovered in 1977, these vents support ecosystems powered by chemical reactions. They broadened ideas about where life can thrive and help guide investigations of potentially habitable oceans beneath other worlds' icy surfaces.",
         "source": {
-          "name": "NASA",
-          "url": "https://science.nasa.gov/blogs/science-news/2026/11/04/solar-flare-alert-system-helps-nasa-rocket-team-decide-when-to-launch/",
-          "published": "2026-11-04"
+          "name": "Woods Hole Oceanographic Institution / Newswise",
+          "url": "https://www.newswise.com/articles/gal-pagos-hydrothermal-vents-included-in-the-third-100-iugs-geological-heritage-sites",
+          "published": "2026-11-06"
         },
         "accent": "gold"
       },
       {
-        "id": "splice-landing-navigation-20261106",
-        "category": "航天 · 导航",
-        "headline": "着陆前，先为地面画一张图",
-        "headline_en": "Map the Ground Before Landing",
-        "summary": "11月4日，NASA公布SPLICE导航系统的无人机试验：它利用激光探测和传感器数据生成高精度地形图，评估着陆区，遇到危险时改选更安全的位置。8月的试飞模拟了月球下降与着陆过程。这是在地球验证自主避险，为未来月球和火星任务作准备。",
-        "summary_en": "NASA reported a drone test of SPLICE, which builds detailed terrain maps from lidar and sensor data, assesses landing areas and redirects the vehicle when a target is unsafe. The August flight simulated lunar descent and landing. Testing autonomous hazard avoidance on Earth helps prepare the system for future Moon and Mars missions.",
+        "id": "m30-history-20261109",
+        "category": "天文 · 星系",
+        "headline": "从古老星团读银河历史",
+        "headline_en": "Reading Galactic History in Ancient Stars",
+        "summary": "11月5日，NASA发布哈勃望远镜拍摄的M30球状星团图像。这个距地球约2.75万光年的星团，绕银河运行的方向与银河自转相反，可能曾被银河从外部捕获。图像结合紫外、可见光和近红外观测。研究古老恒星的成分与运动，能帮助天文学家重建银河系的成长历史。",
+        "summary_en": "On November 5, NASA released a Hubble image of the globular star cluster M30, about 27,500 light-years away. The cluster orbits opposite to the Milky Way's rotation, suggesting our galaxy may have captured it from elsewhere. Combining ultraviolet, visible and near-infrared observations, the image helps scientists investigate ancient stars whose chemistry and movements preserve clues to the Milky Way's history.",
         "source": {
-          "name": "NASA",
-          "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-navigation-experiment-shows-promise-for-planetary-landings/",
-          "published": "2026-11-04"
+          "name": "NASA / ESA Hubble",
+          "url": "https://science.nasa.gov/missions/hubble/hubble-learns-galactic-history-from-stars/",
+          "published": "2026-11-05"
         },
         "accent": "aqua"
       },
       {
-        "id": "cryosphere-temperature-overshoot-20261106",
-        "category": "地球 · 气候",
-        "headline": "短暂升温，也可能留下长期影响",
-        "headline_en": "Temporary Warming, Lasting Ice Loss",
-        "summary": "11月2日，ICCI与联合国环境规划署合作发布报告：全球升温相对工业化前即使暂时超过1.5℃，也可能造成部分难以逆转的冰雪损失。冻土融化释放的碳又会加剧变暖。尽快减排、限制超标幅度和时间，仍能减缓海平面上升，并减少未来冰雪损失。",
-        "summary_en": "An ICCI report produced with UNEP warns that even temporarily exceeding 1.5°C of warming above preindustrial levels can cause partly irreversible ice loss. Thawing permafrost releases carbon, reinforcing warming. Rapid emissions cuts that limit the extent and duration of overshoot can still slow sea-level rise and reduce future losses of ice and snow.",
+        "id": "iss-solar-20261109",
+        "category": "航天 · 能源",
+        "headline": "空间站完成太阳能升级",
+        "headline_en": "Space Station Completes Solar-Power Upgrade",
+        "summary": "11月5日，两名宇航员经过近七小时太空行走，为国际空间站安装并展开第八套、也是最后一套卷展式太阳能电池阵列，完成本轮供电升级。这八套新增阵列把阳光转化为电能，使空间站发电能力由160千瓦提高至约215千瓦。自2021年启动的工程，为在轨设备和科学研究提供了更多电力。",
+        "summary_en": "On November 5, two astronauts installed and deployed the eighth and final roll-out solar array during a nearly seven-hour spacewalk, completing the International Space Station's power upgrade. Together, the eight new arrays convert sunlight into electricity and raise generating capacity from 160 to about 215 kilowatts. The project, begun in 2021, provides more power for equipment and scientific work in orbit.",
         "source": {
-          "name": "ICCI / UNEP",
-          "url": "https://iccinet.org/overshoot/",
-          "published": "2026-11-02"
+          "name": "NASA",
+          "url": "https://www.nasa.gov/blogs/spacestation/2026/11/05/spacewalkers-install-final-roll-out-solar-array/",
+          "published": "2026-11-05"
         },
         "accent": "coral"
       }
     ]
   },
   "weekly": {
-    "week": "2026-W45",
-    "previous_week": "2026-W44",
+    "week": "2026-W46",
+    "previous_week": "2026-W45",
     "previous_answers": [
       {
-        "id": "answer-reasoning-nine-coins-2026-w44",
+        "id": "answer-reasoning-seven-cuts-2026-w45",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "9枚外观相同的硬币中，恰有1枚较重，其余等重。只用无砝码的双盘天平，最坏情况下至少称几次，才能确定较重硬币？设计方法，并说明为什么不能更少。",
-        "headline_en": "Among nine identical-looking coins, exactly one is heavier and the others have equal weight. Using only a two-pan balance without weights, what is the minimum number of weighings needed in the worst case to identify the heavier coin? Give a method and prove that fewer cannot suffice.",
-        "subject": "W44 · 称重决策解答",
-        "subject_en": "W44 · WEIGHING DECISIONS",
+        "headline": "在一张平放的圆形薄饼上切七条直线。每刀都贯穿薄饼，切出的部分不能移动或叠放。最多能得到多少块？请说明为什么不可能更多，并说明怎样达到这个数量。",
+        "headline_en": "Cut a flat circular pancake with seven straight cuts. Each cut goes all the way across; you may not move or stack the pieces. What is the greatest number of pieces possible? Explain both why you cannot do better and how to attain your answer.",
         "visual": "question",
         "accent": "gold",
-        "result": "最少两次",
-        "result_en": "The minimum is two weighings",
-        "explanation": "先取三枚对三枚称重：较重的一组含有重币；若平衡，重币就在没称的三枚中。再从嫌疑三枚中取两枚对称，即可找出重币。一次称重只有三种结果，无法区分九种可能，因此两次最少。",
-        "explanation_en": "Weigh three coins against three. The heavier side—or the three unweighed coins if balanced—contains the heavy coin. Weigh one of those three against another to identify it. One weighing has only three outcomes, so cannot distinguish nine possibilities."
+        "result": "最多29块",
+        "result_en": "At most 29 pieces",
+        "explanation": "第k刀至多与前面k−1刀相交，因而至多增加k块。总数至多为1＋1＋2＋…＋7＝29。让各刀互不平行、任意两刀的交点都在饼内，且没有三刀交于同一点，即可达到上限。",
+        "explanation_en": "Cut k meets at most k−1 earlier cuts, so it adds at most k pieces. Thus the maximum is 1+1+2+…+7=29. Make the cuts nonparallel, with every pairwise intersection inside the pancake and no three cuts meeting at one point, to attain it.",
+        "subject": "W45 · 切割极值解答",
+        "subject_en": "W45 · CUTTING FOR A MAXIMUM"
       },
       {
-        "id": "answer-probability-triangle-cards-2026-w44",
+        "id": "answer-counting-staircase-2026-w45",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "把1至10分别写在10张卡片上，随机、不放回抽出3张，抽取顺序不计。这3个数能作为一个非退化三角形的边长的概率是多少？请用有条理的计数说明理由。",
-        "headline_en": "Write 1 through 10 on ten cards and draw three uniformly at random without replacement, ignoring order. What is the probability that the three numbers can be side lengths of a non-degenerate triangle? Justify your answer with an organised count.",
-        "subject": "W44 · 三角形概率解答",
-        "subject_en": "W44 · TRIANGLE PROBABILITY",
+        "headline": "一段楼梯共有10级，每次可以上1级或2级，但不能连续两次都上2级。从地面恰好到达第10级，共有多少种走法？只要步长顺序不同，就算不同走法。请用有条理的计数说明理由。",
+        "headline_en": "A staircase has 10 steps. Each move climbs one or two steps, but two two-step moves may not occur consecutively. How many ways are there to reach step 10 exactly from the ground? Different sequences of move lengths count as different ways. Justify your count systematically.",
         "visual": "question",
         "accent": "aqua",
-        "result": "概率为5/12",
-        "result_en": "The probability is 5/12",
-        "explanation": "共有120组三元组。最大边分别为3、4、…、10时，满足“两短边之和大于最长边”的组合数依次为0、1、2、4、6、9、12、16，共50组。因此概率为50/120＝5/12。",
-        "explanation_en": "There are 120 triples. For largest side 3,4,…,10, the counts satisfying “two shorter sides sum to more than the longest” are 0,1,2,4,6,9,12,16: 50 in total. Thus 50/120 = 5/12."
+        "result": "共有41种走法",
+        "result_en": "There are 41 ways",
+        "explanation": "按跨两级的次数分类：0、1、2、3次时，分别有1、9、21、10种走法。先排好跨一级的动作，再把跨两级的动作放进不同空位（包括两端），就不会连续跨两级。总计1＋9＋21＋10＝41。",
+        "explanation_en": "With 0, 1, 2 or 3 two-step moves, there are respectively 1, 9, 21 or 10 routes. Arrange the one-step moves first, then place two-step moves into distinct gaps, including both ends, so none are consecutive. Total: 1+9+21+10=41.",
+        "subject": "W45 · 楼梯计数解答",
+        "subject_en": "W45 · STAIRCASE COUNTING"
       },
       {
-        "id": "answer-proof-domino-two-holes-2026-w44",
+        "id": "answer-proof-four-differences-2026-w45",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "6×6棋盘按黑白相间染色，任意去掉一黑格与一白格。剩下34格是否总能用17块1×2骨牌无重叠铺满？允许旋转，不能越界。若能，给出适用于任意删格的办法；若不能，给出反例。",
-        "headline_en": "Colour a 6×6 board alternately black and white, then remove any one black square and any one white square. Can the remaining 34 squares always be tiled by seventeen 1×2 dominoes without overlap? Rotation is allowed; dominoes must stay inside the board. Give a method that works for every pair of removed squares, or a counterexample.",
-        "subject": "W44 · 骨牌构造解答",
-        "subject_en": "W44 · DOMINO CONSTRUCTION",
+        "headline": "把四个非负整数按顺时针顺序写在一个圆周上。每轮同时更新四个数：用这个数与顺时针下一个数之差的绝对值替换它。计算时只能使用本轮更新前的数。先试试顺时针排列的1、3、7、12。无论开始时选哪四个非负整数，最后都会变成0、0、0、0吗？请证明。",
+        "headline_en": "Write four nonnegative integers around a circle. In each round, simultaneously replace every number by the absolute difference between it and its clockwise neighbour, using the numbers from the start of that round. Try 1, 3, 7, 12 in clockwise order. Must every starting choice eventually become 0, 0, 0, 0? Prove your answer.",
         "visual": "question",
         "accent": "coral",
-        "result": "一定能铺满",
-        "result_en": "Always tileable",
-        "explanation": "画一条经过全部36格、只走共边相邻格的闭合路线，沿途黑白交替。删掉一黑一白后，路线分成两段，每段剩余格数均为偶数，其中一段可能为空。把每段中连续两格依次配对，每对放一块骨牌即可。",
-        "explanation_en": "Draw a closed route through all 36 squares using edge-neighbour steps. Colours alternate. Removing one black and one white square leaves two paths, each with an even number of remaining squares; one may be empty. Pair consecutive squares on each path and place a domino on every pair."
+        "result": "任意起点都会归零",
+        "result_en": "Every starting quadruple reaches zero",
+        "explanation": "示例6轮归零。只看奇偶，每轮差的奇偶与两数之和相同；连续算4轮，四数全偶。因此每4轮所有数都多一个因子2。同时最大值从不增加。若起初最大值为M，取2的某个幂大于M；经过足够多轮，四数只能全为0。",
+        "explanation_en": "The example reaches zero in six rounds. Modulo 2, differences act like sums; after four rounds every entry is even. Thus each block of four rounds adds a factor of 2 to all entries, while their maximum never increases. Once that power of 2 exceeds the original maximum, all four entries must be zero.",
+        "subject": "W45 · 四数差值解答",
+        "subject_en": "W45 · FOUR-NUMBER DIFFERENCES"
       }
     ],
     "challenges": [
       {
-        "id": "reasoning-seven-cuts-2026-w45",
+        "id": "reasoning-reverse-2026-w46",
+        "headline": "选一个三位数，要求百位与个位相差至少2。把它的数字顺序倒过来，用较大的数减去较小的数。再把所得差的数字顺序倒过来，将这两个数相加。不必知道最初选的数，你能预测最后的结果吗？说明理由。（倒序后开头的0可以略去。）",
+        "headline_en": "Choose a three-digit number whose first and last digits differ by at least 2. Reverse its digits, then subtract the smaller number from the larger. Reverse the digits of the difference and add these two numbers. Can you predict the final total without knowing the starting number? Explain why. Any leading zero in a reversed number may be omitted.",
+        "subject": "入门 · 倒序数之谜",
+        "subject_en": "STARTER · A NUMBER-REVERSAL MYSTERY",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "在一张平放的圆形薄饼上切七条直线。每刀都贯穿薄饼，切出的部分不能移动或叠放。最多能得到多少块？请说明为什么不可能更多，并说明怎样达到这个数量。",
-        "headline_en": "Cut a flat circular pancake with seven straight cuts. Each cut goes all the way across; you may not move or stack the pieces. What is the greatest number of pieces possible? Explain both why you cannot do better and how to attain your answer.",
-        "subject": "进阶 · 切割极值",
-        "subject_en": "DEVELOPING · CUTTING FOR A MAXIMUM",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "counting-staircase-2026-w45",
+        "id": "probability-remainders-2026-w46",
+        "headline": "12张卡片分别写着1至12。充分洗匀后，随机抽出3张，不放回。三张卡片上的数之和能被3整除的概率是多少？请用清楚的分类计数说明答案，而不是只靠模拟。",
+        "headline_en": "Twelve cards are numbered 1 to 12. Shuffle them thoroughly and draw three without replacement. What is the probability that their sum is divisible by 3? Explain your answer by counting cases, rather than relying only on a simulation.",
+        "subject": "挑战 · 余数与概率",
+        "subject_en": "CHALLENGE · REMAINDERS AND PROBABILITY",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "一段楼梯共有10级，每次可以上1级或2级，但不能连续两次都上2级。从地面恰好到达第10级，共有多少种走法？只要步长顺序不同，就算不同走法。请用有条理的计数说明理由。",
-        "headline_en": "A staircase has 10 steps. Each move climbs one or two steps, but two two-step moves may not occur consecutively. How many ways are there to reach step 10 exactly from the ground? Different sequences of move lengths count as different ways. Justify your count systematically.",
-        "subject": "挑战 · 楼梯计数",
-        "subject_en": "CHALLENGE · STAIRCASE COUNTING",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "proof-four-differences-2026-w45",
+        "id": "proof-tournament-line-2026-w46",
+        "headline": "7名选手进行单循环比赛：每两人恰好比赛一场，每场都有一名胜者，没有平局。证明：无论比赛结果如何，总能把7人排成一列，使每个人都赢过紧挨在自己后面的人。注意：不要求一个人赢过自己后面的所有人。",
+        "headline_en": "Seven players compete in a round-robin tournament: every pair plays exactly once, and every match has one winner, with no draws. Prove that, whatever the results, the players can always be arranged in a line so that each player beat the person immediately after them. A player need not have beaten everyone farther down the line.",
+        "subject": "拓展 · 胜者队列",
+        "subject_en": "STRETCH · A WINNING LINEUP",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
-        "headline": "把四个非负整数按顺时针顺序写在一个圆周上。每轮同时更新四个数：用这个数与顺时针下一个数之差的绝对值替换它。计算时只能使用本轮更新前的数。先试试顺时针排列的1、3、7、12。无论开始时选哪四个非负整数，最后都会变成0、0、0、0吗？请证明。",
-        "headline_en": "Write four nonnegative integers around a circle. In each round, simultaneously replace every number by the absolute difference between it and its clockwise neighbour, using the numbers from the start of that round. Try 1, 3, 7, 12 in clockwise order. Must every starting choice eventually become 0, 0, 0, 0? Prove your answer.",
-        "subject": "拓展 · 差值与不变量",
-        "subject_en": "STRETCH · DIFFERENCES AND INVARIANTS",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "coral"
@@ -187,18 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-06 review v1"
+      "edition": "2026-11-09 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-06 review v1"
+      "edition": "2026-11-09 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-05T14:11:30.567977+00:00",
-      "approved_at": "2026-11-05T14:00:43.685465+00:00",
-      "approved_edition": "2026-11-06 review v1",
-      "approved_source_sha256": "5961ace144fe1f910424e919a088b4f8c519f9d13dc63efeb57da7fce31f85ae",
-      "approved_source_bytes": 15212
+      "recorded_at": "2026-11-08T23:44:48.706745+00:00",
+      "approved_edition": "2026-11-09 review v1",
+      "approved_source_sha256": "22e1076c925e74ca05993693af4bb5ee2c2f50139cd56111005bcbcd812a7ffc",
+      "approved_source_bytes": 15882
     }
   }
 }
