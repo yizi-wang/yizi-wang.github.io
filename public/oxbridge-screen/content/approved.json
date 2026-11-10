@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-09",
-  "edition": "2026-11-09 review v1",
+  "content_date": "2026-11-10",
+  "edition": "2026-11-10 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月09日\n每日简报",
+    "headline": "11月10日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "robot-memory-20261109",
-        "category": "工程 · 人工智能",
-        "headline": "机器人学会纠正记忆",
-        "headline_en": "Robots Learn to Correct Their Memories",
-        "summary": "11月5日，麻省理工学院介绍一套能纠正机器人记忆的系统。它比较同一物体在不同视角下的描述，找出不确定之处，再融合补充信息更新记忆。测试中，这种方法消除了约92%物体的描述歧义。主动发现并修正错误，有助于机器人更可靠地寻找物品、完成多步骤任务。",
-        "summary_en": "On November 5, MIT introduced a system that helps robots correct uncertain memories. It compares descriptions of the same object from different viewpoints, then combines additional information into an improved description. In tests, it resolved ambiguities for about 92 percent of objects. Recognizing and correcting mistakes could help robots find objects more reliably and complete tasks involving several steps.",
+        "id": "worldparticle-simulation-20261110",
+        "category": "物理 · 人工智能",
+        "headline": "一种模型，模拟多种物质运动",
+        "headline_en": "One Model for Many Kinds of Motion",
+        "summary": "11月9日，MIT介绍WorldParticle模拟框架：把砂粒、液体、弹性物体和蛋白质等表示为粒子，由神经网络预测粒子下一步的位置与运动。团队在六类物理系统中测试了同一种模型架构。统一表示不同物质，有助于研究流体与柔软物体相互作用，减少为每类问题另写模拟程序的工作。",
+        "summary_en": "On November 9, MIT described WorldParticle, which represents materials such as sand, liquids, elastic objects and proteins as particles. A neural network predicts how those particles move next. The team tested the same model architecture across six types of physical system. Representing different materials in a common way could help researchers study interactions between fluids and soft objects while reducing the need to design separate simulators for each problem.",
         "source": {
-          "name": "MIT LIDS",
-          "url": "https://lids.mit.edu/news/clearing-up-a-robots-fuzzy-memory",
-          "published": "2026-11-05"
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
+          "published": "2026-11-09"
         },
         "accent": "gold"
       },
       {
-        "id": "mini-lens-20261109",
-        "category": "生物 · 组织培养",
-        "headline": "实验室长出微型晶状体",
-        "headline_en": "Growing Miniature Eye Lenses",
-        "summary": "11月5日，英国安格利亚鲁斯金大学介绍国际合作成果：研究人员用经过重编程的人体细胞培养出微型晶状体。细胞自行组织，形成帮助保持透明的蛋白、保护囊样结构和排列整齐的纤维细胞。这种接近真实晶状体的实验室模型，可帮助观察眼组织发育，并测试未来针对白内障的新药。",
-        "summary_en": "On November 5, Anglia Ruskin University reported that an international team had grown miniature human eye lenses from reprogrammed human cells. The cells organized themselves into structures containing transparency-related proteins, a protective capsule-like layer and orderly fibre cells. These laboratory models resemble important features of natural lenses, giving researchers a way to study developing eye tissue and test potential cataract medicines.",
+        "id": "fabric-concrete-beam-20261110",
+        "category": "工程 · 结构",
+        "headline": "把混凝土梁的模具缝出来",
+        "headline_en": "Sewing a Mould for a Concrete Beam",
+        "summary": "11月6日，MIT介绍用缝制布模浇筑的3米概念验证梁。混凝土抗压，钢筋抗拉；优化传力路径后，同设计承载目标下，混凝土用量约为传统梁的三分之一，钢筋约为一半。加载至设计荷载30%的试验中，中点挠度与预测相差约2%。把复杂形状变成可缝制裁片，为节材结构提供了制造方法。",
+        "summary_en": "On November 6, MIT described a three-metre proof-of-concept beam cast in a sewn fabric mould. Concrete resists compression; steel carries tension. Optimising load paths cut material use to about one-third the concrete and half the steel of a conventional beam with the same design load. Tests reached 30 percent of design load, with central deflection within about 2 percent of predictions. Fabric patterns make complex material-saving shapes easier to manufacture.",
         "source": {
-          "name": "Anglia Ruskin University",
-          "url": "https://www.aru.ac.uk/news/mini-lens-grown-in-lab-could-help-tackle-cataracts",
-          "published": "2026-11-05"
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/fabric-molds-could-bring-material-saving-concrete-beams-within-reach-1106",
+          "published": "2026-11-06"
         },
         "accent": "aqua"
       },
       {
-        "id": "turtle-sex-20261109",
-        "category": "生态 · 温度",
-        "headline": "沙滩温度改变海龟性别比例",
-        "headline_en": "Warmer Nests Change Turtle Sex Ratios",
-        "summary": "11月6日，佛罗里达大西洋大学公布监测近况：实验室目前饲养研究的幼龟全部为雌性。海龟性别受卵孵化温度影响，较暖的巢更容易产生雌龟。团队把幼龟检查结果与原巢温度记录对照，追踪这一变化。由于海龟需多年才能成熟，今天的性别失衡可能影响未来的繁殖。",
-        "summary_en": "On November 6, Florida Atlantic University reported that all the young sea turtles currently being raised and studied in its laboratory were female. Nest temperature influences turtle sex, with warmer incubation favouring females. Researchers compare examinations of the turtles with temperature records from their original nests. Because sea turtles take many years to mature, today's imbalance could affect future reproduction.",
+        "id": "chemeleon-molecules-20261110",
+        "category": "化学 · 数据",
+        "headline": "少量实验，也能预测分子性质",
+        "headline_en": "Predicting Molecular Properties from Less Data",
+        "summary": "11月6日，MIT介绍CheMeleon分子预测法。模型先学习约100万个分子的结构与约1600种可计算特征，再用少量实验数据调整，预测溶解度等目标性质。这像先掌握化学中的通用关系，再学习一道新题。在实验样本稀少时，已有知识可帮助筛选值得合成、测试的候选分子。",
+        "summary_en": "On November 6, MIT described CheMeleon, a method for predicting molecular properties. It first learns relationships between the structures of about a million molecules and roughly 1,600 computable descriptors. Researchers then fine-tune it with small experimental datasets to predict properties such as solubility. Like learning general chemistry before tackling a new problem, this prior knowledge helps select promising molecules to synthesise and test when experimental data are scarce.",
         "source": {
-          "name": "Florida Atlantic University / Newswise",
-          "url": "https://www.newswise.com/articles/oh-boy-all-girls-again-fau-research-tracks-sea-turtle-sex-ratios",
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/how-to-predict-molecule-behavior-with-scant-data-1106",
           "published": "2026-11-06"
         },
         "accent": "coral"
       },
       {
-        "id": "vent-heritage-20261109",
-        "category": "地球 · 深海",
-        "headline": "深海热泉获地质遗产认可",
-        "headline_en": "Deep-Sea Vents Earn Heritage Recognition",
-        "summary": "11月6日，伍兹霍尔海洋研究所宣布，加拉帕戈斯海底热泉入选国际地质科学联合会第三批百大地质遗产地。这处热泉于1977年被发现，附近生态系统依靠化学反应提供的能量维持。它拓宽了人们对生命生存条件的认识，也为探索其他天体冰层下海洋的宜居环境提供了思路。",
-        "summary_en": "On November 6, Woods Hole Oceanographic Institution announced that the Galápagos hydrothermal vents had joined the International Union of Geological Sciences' third list of 100 geological heritage sites. Discovered in 1977, these vents support ecosystems powered by chemical reactions. They broadened ideas about where life can thrive and help guide investigations of potentially habitable oceans beneath other worlds' icy surfaces.",
+        "id": "blood-stem-cell-culture-20261110",
+        "category": "生物 · 干细胞",
+        "headline": "让造血干细胞增多，也保留本领",
+        "headline_en": "Growing Blood Stem Cells Without Losing Their Abilities",
+        "summary": "11月6日，Stowers研究所介绍脐带血干细胞培养研究。三维支架与多种信号模拟骨髓环境，帮助细胞增殖，同时避免过早成熟。培养后的细胞先后移植到两批小鼠中，仍能持续重建血液与免疫系统。研究既数细胞数量，也检验长期功能，为扩大未来移植用细胞的来源提供依据。",
+        "summary_en": "On November 6, the Stowers Institute described research growing human cord-blood stem cells. A three-dimensional scaffold and several signals mimic bone marrow, supporting multiplication while preventing premature maturation. After transfer into one group of mice and then a second, the cultured cells could still rebuild blood and immune systems. Testing long-term function alongside cell numbers helps researchers develop ways to expand the supply of cells for future transplants.",
         "source": {
-          "name": "Woods Hole Oceanographic Institution / Newswise",
-          "url": "https://www.newswise.com/articles/gal-pagos-hydrothermal-vents-included-in-the-third-100-iugs-geological-heritage-sites",
+          "name": "Stowers Institute",
+          "url": "https://www.stowers.org/gradschool/news/stowers-scientists-overcome-key-barrier-to-growing-blood-stem-cells-for-potential-transplantation-in-leukemia-patients",
           "published": "2026-11-06"
         },
         "accent": "gold"
       },
       {
-        "id": "m30-history-20261109",
-        "category": "天文 · 星系",
-        "headline": "从古老星团读银河历史",
-        "headline_en": "Reading Galactic History in Ancient Stars",
-        "summary": "11月5日，NASA发布哈勃望远镜拍摄的M30球状星团图像。这个距地球约2.75万光年的星团，绕银河运行的方向与银河自转相反，可能曾被银河从外部捕获。图像结合紫外、可见光和近红外观测。研究古老恒星的成分与运动，能帮助天文学家重建银河系的成长历史。",
-        "summary_en": "On November 5, NASA released a Hubble image of the globular star cluster M30, about 27,500 light-years away. The cluster orbits opposite to the Milky Way's rotation, suggesting our galaxy may have captured it from elsewhere. Combining ultraviolet, visible and near-infrared observations, the image helps scientists investigate ancient stars whose chemistry and movements preserve clues to the Milky Way's history.",
+        "id": "lofar-deep-radio-sky-20261110",
+        "category": "天文 · 射电",
+        "headline": "用射电波，看清遥远星系",
+        "headline_en": "Radio Waves Bring Distant Galaxies into Focus",
+        "summary": "11月5日，莱顿大学团队公布LOFAR射电图像：在约25个满月大小的天区中，辨认出近6.3万个射电源。团队结合200小时观测，并改进校准与数据处理。更清晰的图像能区分恒星形成区和黑洞驱动的喷流；射电波还能穿过遮挡星光的尘埃，补充可见光望远镜看到的宇宙。",
+        "summary_en": "On November 5, a Leiden-led team reported a LOFAR radio image revealing nearly 63,000 sources across an area about 25 times the full Moon. Combining 200 hours of observations with improved calibration and processing sharpened the view. Researchers can better distinguish star-forming regions from jets powered by black holes. Radio waves also penetrate dust that hides starlight, complementing the picture of the Universe provided by visible-light telescopes.",
         "source": {
-          "name": "NASA / ESA Hubble",
-          "url": "https://science.nasa.gov/missions/hubble/hubble-learns-galactic-history-from-stars/",
+          "name": "NOVA / Leiden University",
+          "url": "https://www.astronomie.nl/nieuws/en/astronomers-deliver-the-sharpest-and-deepest-view-yet-of-the-low-frequency-radio-sky-4852",
           "published": "2026-11-05"
         },
         "accent": "aqua"
       },
       {
-        "id": "iss-solar-20261109",
-        "category": "航天 · 能源",
-        "headline": "空间站完成太阳能升级",
-        "headline_en": "Space Station Completes Solar-Power Upgrade",
-        "summary": "11月5日，两名宇航员经过近七小时太空行走，为国际空间站安装并展开第八套、也是最后一套卷展式太阳能电池阵列，完成本轮供电升级。这八套新增阵列把阳光转化为电能，使空间站发电能力由160千瓦提高至约215千瓦。自2021年启动的工程，为在轨设备和科学研究提供了更多电力。",
-        "summary_en": "On November 5, two astronauts installed and deployed the eighth and final roll-out solar array during a nearly seven-hour spacewalk, completing the International Space Station's power upgrade. Together, the eight new arrays convert sunlight into electricity and raise generating capacity from 160 to about 215 kilowatts. The project, begun in 2021, provides more power for equipment and scientific work in orbit.",
+        "id": "ozone-area-depth-20261110",
+        "category": "地球 · 大气",
+        "headline": "臭氧洞的面积和深度，是两回事",
+        "headline_en": "Ozone-Hole Area and Depth Tell Different Stories",
+        "summary": "11月4日，NASA与NOAA报告：南极臭氧洞9月7日至10月13日平均面积约2500万平方公里，居48年监测第七。强极涡维持寒冷环境，有利于氯、溴破坏臭氧。面积衡量低臭氧区有多广，浓度衡量损耗有多深；今年面积大，损耗却未达以往最严重水平。年际天气波动与臭氧层长期恢复可以并存。",
+        "summary_en": "On November 4, NASA and NOAA reported an average Antarctic ozone-hole area of about 25 million square kilometres from September 7 to October 13, seventh largest in 48 years. A strong polar vortex maintained cold conditions that favour ozone destruction by chlorine and bromine. Area measures the extent of low ozone; concentration indicates depletion depth. This year's large hole was less deeply depleted than earlier extremes. Year-to-year weather fluctuations can coexist with long-term recovery.",
         "source": {
-          "name": "NASA",
-          "url": "https://www.nasa.gov/blogs/spacestation/2026/11/05/spacewalkers-install-final-roll-out-solar-array/",
-          "published": "2026-11-05"
+          "name": "NASA / NOAA",
+          "url": "https://science.nasa.gov/earth/2026-ozone-hole/",
+          "published": "2026-11-04"
         },
         "accent": "coral"
       }
@@ -187,17 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-09 review v1"
+      "edition": "2026-11-10 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-09 review v1"
+      "edition": "2026-11-10 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-08T23:44:48.706745+00:00",
-      "approved_edition": "2026-11-09 review v1",
-      "approved_source_sha256": "22e1076c925e74ca05993693af4bb5ee2c2f50139cd56111005bcbcd812a7ffc",
-      "approved_source_bytes": 15882
+      "recorded_at": "2026-11-10T01:33:36.508269+00:00",
+      "approved_edition": "2026-11-10 review v1",
+      "approved_source_sha256": "b007d67f9bb3e1e4b5c2c2702d8cf180eb76dc18cb9607cd8d98bac59f32483e",
+      "approved_source_bytes": 16541
     }
   }
 }
