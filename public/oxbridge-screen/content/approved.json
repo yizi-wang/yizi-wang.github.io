@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-10",
-  "edition": "2026-11-10 review v1",
+  "content_date": "2026-11-13",
+  "edition": "2026-11-13 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月10日\n每日简报",
+    "headline": "11月13日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "worldparticle-simulation-20261110",
-        "category": "物理 · 人工智能",
-        "headline": "一种模型，模拟多种物质运动",
-        "headline_en": "One Model for Many Kinds of Motion",
-        "summary": "11月9日，MIT介绍WorldParticle模拟框架：把砂粒、液体、弹性物体和蛋白质等表示为粒子，由神经网络预测粒子下一步的位置与运动。团队在六类物理系统中测试了同一种模型架构。统一表示不同物质，有助于研究流体与柔软物体相互作用，减少为每类问题另写模拟程序的工作。",
-        "summary_en": "On November 9, MIT described WorldParticle, which represents materials such as sand, liquids, elastic objects and proteins as particles. A neural network predicts how those particles move next. The team tested the same model architecture across six types of physical system. Representing different materials in a common way could help researchers study interactions between fluids and soft objects while reducing the need to design separate simulators for each problem.",
+        "id": "network-metamaterials-20261113",
+        "category": "物理 · 材料设计",
+        "headline": "结构不整齐，反而更抗冲击",
+        "headline_en": "Less Regular, More Resilient",
+        "summary": "11月11日，MIT团队报道一种模仿叶脉网络的材料：用长短、粗细不同的细梁连接成网，而非重复同一格子。研究者3D打印聚合物样品，测试发现它们比传统格构更耐压、抗冲击。一处损坏时，周围不同尺度的结构能分散损伤、吸收能量。这说明材料性能不仅取决于成分，也取决于内部连接方式，可为缓冲包装提供新思路。",
+        "summary_en": "On November 11, MIT researchers reported materials inspired by networks such as leaf veins. Instead of repeating identical cells, they connected beams of different lengths and thicknesses. Tests of 3D-printed polymer samples showed greater resilience to compression and impacts than conventional lattices. When one region fails, surrounding structures at different scales help distribute damage and absorb energy. The work shows how internal connections, not just chemical ingredients, can shape performance and inform designs for protective packaging.",
         "source": {
           "name": "MIT News",
-          "url": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
-          "published": "2026-11-09"
+          "url": "https://news.mit.edu/2026/engineers-design-stronger-resilient-nature-inspired-metamaterials-1111",
+          "published": "2026-11-11"
         },
         "accent": "gold"
       },
       {
-        "id": "fabric-concrete-beam-20261110",
-        "category": "工程 · 结构",
-        "headline": "把混凝土梁的模具缝出来",
-        "headline_en": "Sewing a Mould for a Concrete Beam",
-        "summary": "11月6日，MIT介绍用缝制布模浇筑的3米概念验证梁。混凝土抗压，钢筋抗拉；优化传力路径后，同设计承载目标下，混凝土用量约为传统梁的三分之一，钢筋约为一半。加载至设计荷载30%的试验中，中点挠度与预测相差约2%。把复杂形状变成可缝制裁片，为节材结构提供了制造方法。",
-        "summary_en": "On November 6, MIT described a three-metre proof-of-concept beam cast in a sewn fabric mould. Concrete resists compression; steel carries tension. Optimising load paths cut material use to about one-third the concrete and half the steel of a conventional beam with the same design load. Tests reached 30 percent of design load, with central deflection within about 2 percent of predictions. Fabric patterns make complex material-saving shapes easier to manufacture.",
+        "id": "bennu-isotopes-20261113",
+        "category": "化学 · 太阳系",
+        "headline": "分子里的同位素指纹",
+        "headline_en": "Isotope Fingerprints Inside Molecules",
+        "summary": "宾州州立大学11月10日报道：贝努小行星与默奇森陨石中的β-丙氨酸，碳同位素平均值接近，但分子内各位置的具体数值明显不同。两者却都有一个碳位置富集重同位素、另两个较少的模式。这提示相似化学过程可能在太阳系不同区域发生；比起只看平均值，分子内部的“指纹”能提供更细的来源线索。",
+        "summary_en": "Penn State reported on November 10 that beta-alanine from asteroid Bennu and the Murchison meteorite has similar average carbon isotope values but markedly different values at individual positions. Both samples share a pattern: one carbon position is enriched in heavy isotopes while two are depleted. This suggests related chemical processes operating in different regions of the solar system. Looking inside molecules, rather than only at averages, provides finer clues to the origins of organic compounds.",
         "source": {
-          "name": "MIT News",
-          "url": "https://news.mit.edu/2026/fabric-molds-could-bring-material-saving-concrete-beams-within-reach-1106",
-          "published": "2026-11-06"
+          "name": "Penn State",
+          "url": "https://www.psu.edu/news/earth-and-mineral-sciences/story/bennu-asteroid-analysis-suggests-unexpected-origins-organics-space",
+          "published": "2026-11-10"
         },
         "accent": "aqua"
       },
       {
-        "id": "chemeleon-molecules-20261110",
-        "category": "化学 · 数据",
-        "headline": "少量实验，也能预测分子性质",
-        "headline_en": "Predicting Molecular Properties from Less Data",
-        "summary": "11月6日，MIT介绍CheMeleon分子预测法。模型先学习约100万个分子的结构与约1600种可计算特征，再用少量实验数据调整，预测溶解度等目标性质。这像先掌握化学中的通用关系，再学习一道新题。在实验样本稀少时，已有知识可帮助筛选值得合成、测试的候选分子。",
-        "summary_en": "On November 6, MIT described CheMeleon, a method for predicting molecular properties. It first learns relationships between the structures of about a million molecules and roughly 1,600 computable descriptors. Researchers then fine-tune it with small experimental datasets to predict properties such as solubility. Like learning general chemistry before tackling a new problem, this prior knowledge helps select promising molecules to synthesise and test when experimental data are scarce.",
+        "id": "whale-shark-routing-20261113",
+        "category": "生态 · 航运",
+        "headline": "航线绕一点，鲸鲨更安全",
+        "headline_en": "Safer Routes for Whale Sharks",
+        "summary": "11月11日，南安普顿大学公布航线模拟：把鲸鲨聚集区地图加入规划软件，比较八条从波斯湾和墨西哥湾出发的航程。超过六天的航程绕开聚集区，额外耗油最多约1%；较短航程则以减速更省油。鲸鲨常在表层海水活动，容易遭遇船撞；把栖息地数据用于导航，有望以较小成本减少碰撞。",
+        "summary_en": "On November 11, the University of Southampton reported simulations adding whale shark gathering sites to voyage-planning software. The team compared eight crossings from the Persian Gulf and Gulf of Mexico. Rerouting journeys longer than six days increased fuel use by at most one percent; on shorter trips, slowing down was more fuel-efficient. Whale sharks often swim near the surface, where ships can strike them. Incorporating habitat data into navigation could reduce collision risks at relatively low cost.",
         "source": {
-          "name": "MIT News",
-          "url": "https://news.mit.edu/2026/how-to-predict-molecule-behavior-with-scant-data-1106",
-          "published": "2026-11-06"
+          "name": "University of Southampton",
+          "url": "https://www.southampton.ac.uk/news/2026/11/rerouting-ships-to-avoid-killing-whale-sharks-has-little-cost-study-finds.page",
+          "published": "2026-11-11"
         },
         "accent": "coral"
       },
       {
-        "id": "blood-stem-cell-culture-20261110",
-        "category": "生物 · 干细胞",
-        "headline": "让造血干细胞增多，也保留本领",
-        "headline_en": "Growing Blood Stem Cells Without Losing Their Abilities",
-        "summary": "11月6日，Stowers研究所介绍脐带血干细胞培养研究。三维支架与多种信号模拟骨髓环境，帮助细胞增殖，同时避免过早成熟。培养后的细胞先后移植到两批小鼠中，仍能持续重建血液与免疫系统。研究既数细胞数量，也检验长期功能，为扩大未来移植用细胞的来源提供依据。",
-        "summary_en": "On November 6, the Stowers Institute described research growing human cord-blood stem cells. A three-dimensional scaffold and several signals mimic bone marrow, supporting multiplication while preventing premature maturation. After transfer into one group of mice and then a second, the cultured cells could still rebuild blood and immune systems. Testing long-term function alongside cell numbers helps researchers develop ways to expand the supply of cells for future transplants.",
+        "id": "lisa-planets-20261113",
+        "category": "天文 · 引力波",
+        "headline": "从引力波里寻找行星",
+        "headline_en": "Searching for Planets in Gravitational Waves",
+        "summary": "11月10日，NASA介绍两项理论研究：行星绕紧密双白矮星运行时，会牵动双星，使其引力波信号出现周期性频率变化。这类似声音随声源运动产生的多普勒效应。建设中的LISA有望读取这种变化，韦布望远镜则可寻找额外红外辐射来核验。两种信号互相补充，为探测难以直接看见的行星提供新思路。",
+        "summary_en": "On November 10, NASA described two theoretical studies of planets orbiting close pairs of white dwarfs. A planet's gravity makes the pair wobble, producing periodic frequency changes in its gravitational waves, similar to the Doppler effect in sound. The LISA observatory, now in development, could detect these changes. Webb could check nearby candidates through excess infrared emission. Combining two different signals offers a new approach to finding planets that are difficult to observe directly.",
         "source": {
-          "name": "Stowers Institute",
-          "url": "https://www.stowers.org/gradschool/news/stowers-scientists-overcome-key-barrier-to-growing-blood-stem-cells-for-potential-transplantation-in-leukemia-patients",
-          "published": "2026-11-06"
+          "name": "NASA",
+          "url": "https://science.nasa.gov/missions/lisa/gravitational-waves-can-reveal-new-worlds/",
+          "published": "2026-11-10"
         },
         "accent": "gold"
       },
       {
-        "id": "lofar-deep-radio-sky-20261110",
-        "category": "天文 · 射电",
-        "headline": "用射电波，看清遥远星系",
-        "headline_en": "Radio Waves Bring Distant Galaxies into Focus",
-        "summary": "11月5日，莱顿大学团队公布LOFAR射电图像：在约25个满月大小的天区中，辨认出近6.3万个射电源。团队结合200小时观测，并改进校准与数据处理。更清晰的图像能区分恒星形成区和黑洞驱动的喷流；射电波还能穿过遮挡星光的尘埃，补充可见光望远镜看到的宇宙。",
-        "summary_en": "On November 5, a Leiden-led team reported a LOFAR radio image revealing nearly 63,000 sources across an area about 25 times the full Moon. Combining 200 hours of observations with improved calibration and processing sharpened the view. Researchers can better distinguish star-forming regions from jets powered by black holes. Radio waves also penetrate dust that hides starlight, complementing the picture of the Universe provided by visible-light telescopes.",
+        "id": "climate-training-20261113",
+        "category": "人工智能 · 气候科学",
+        "headline": "训练数据，不一定越真实越好",
+        "headline_en": "Better Training from Unusual Scenarios",
+        "summary": "MIT于11月12日介绍一种训练气候模拟器的方法：让排放量快速起伏，帮助模型分辨不同污染物的影响，而非只学习平滑的未来曲线。在简化气候模型测试中，一条优化情景的训练效果超过六条常规情景；方法也在中等复杂度模型中得到验证。完整地球系统模型测试仍待开展；精心设计数据有望降低计算成本，更快比较减排方案。",
+        "summary_en": "On November 12, MIT described a way to train climate emulators using emissions scenarios with rapid fluctuations rather than only smooth future pathways. These variations help models distinguish the effects of different pollutants. In tests using a simple climate model, one optimised scenario outperformed six standard training scenarios; the approach also worked with an intermediate-complexity model. Carefully designed data could lower computational costs and help researchers compare more emissions policies, with full-scale climate-model testing still ahead.",
         "source": {
-          "name": "NOVA / Leiden University",
-          "url": "https://www.astronomie.nl/nieuws/en/astronomers-deliver-the-sharpest-and-deepest-view-yet-of-the-low-frequency-radio-sky-4852",
-          "published": "2026-11-05"
+          "name": "MIT News / PNAS",
+          "url": "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112",
+          "published": "2026-11-12"
         },
         "accent": "aqua"
       },
       {
-        "id": "ozone-area-depth-20261110",
-        "category": "地球 · 大气",
-        "headline": "臭氧洞的面积和深度，是两回事",
-        "headline_en": "Ozone-Hole Area and Depth Tell Different Stories",
-        "summary": "11月4日，NASA与NOAA报告：南极臭氧洞9月7日至10月13日平均面积约2500万平方公里，居48年监测第七。强极涡维持寒冷环境，有利于氯、溴破坏臭氧。面积衡量低臭氧区有多广，浓度衡量损耗有多深；今年面积大，损耗却未达以往最严重水平。年际天气波动与臭氧层长期恢复可以并存。",
-        "summary_en": "On November 4, NASA and NOAA reported an average Antarctic ozone-hole area of about 25 million square kilometres from September 7 to October 13, seventh largest in 48 years. A strong polar vortex maintained cold conditions that favour ozone destruction by chlorine and bromine. Area measures the extent of low ozone; concentration indicates depletion depth. This year's large hole was less deeply depleted than earlier extremes. Year-to-year weather fluctuations can coexist with long-term recovery.",
+        "id": "autumn-valley-fog-20261113",
+        "category": "地理 · 气象",
+        "headline": "秋晨的雾，为什么沿着山谷铺开",
+        "headline_en": "Why Autumn Fog Follows the Valleys",
+        "summary": "11月10日，NASA展示两张11月8日拍摄的卫星图：阿巴拉契亚高原的谷地清晨被低云覆盖，下午已散去。秋夜变长，地面有更多时间辐射散热，近地空气冷却到露点后，水汽凝成小水滴。较冷、较密的空气沿坡下沉，在谷底积聚，河流又提供水汽；地形、温度与湿度共同塑造了雾的分布。",
+        "summary_en": "On November 10, NASA released satellite views taken on November 8: low clouds filled Appalachian Plateau valleys in the morning and had dispersed by afternoon. Longer autumn nights allow more heat to radiate from the ground. Air near the surface cools to its dew point, and water vapour condenses into droplets. Colder, denser air flows downhill and collects in valleys, while rivers supply moisture. Terrain, temperature and humidity together explain where the fog appears.",
         "source": {
-          "name": "NASA / NOAA",
-          "url": "https://science.nasa.gov/earth/2026-ozone-hole/",
-          "published": "2026-11-04"
+          "name": "NASA Earth Observatory",
+          "url": "https://science.nasa.gov/earth/earth-observatory/autumn-mornings-bring-valley-fog/",
+          "published": "2026-11-10"
         },
         "accent": "coral"
       }
@@ -187,17 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-10 review v1"
+      "edition": "2026-11-13 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-10 review v1"
+      "edition": "2026-11-13 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-10T01:33:36.508269+00:00",
-      "approved_edition": "2026-11-10 review v1",
-      "approved_source_sha256": "b007d67f9bb3e1e4b5c2c2702d8cf180eb76dc18cb9607cd8d98bac59f32483e",
-      "approved_source_bytes": 16541
+      "recorded_at": "2026-11-12T14:55:02.677352+00:00",
+      "approved_edition": "2026-11-13 review v1",
+      "approved_source_sha256": "25a5e9cf271084b9c9dd6beb8a5fce02d958be3ce2262ff4632d3e01ab76a22a",
+      "approved_source_bytes": 16968
     }
   }
 }
