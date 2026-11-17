@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-16",
-  "edition": "2026-11-16 review v1",
+  "content_date": "2026-11-18",
+  "edition": "2026-11-18 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月16日\n每日简报",
+    "headline": "11月18日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "euclid-dr1-20261116",
-        "category": "天文 · 宇宙地图",
-        "headline": "9 亿多个星系，怎样画成立体地图？",
-        "headline_en": "Turning 900 Million Galaxies into a 3D Map",
-        "summary": "11 月 12 日，欧洲航天局公开欧几里得望远镜首批大型数据，汇集约 13 个月观测，收录 9 亿多个星系。照片给出星系在天空中的方向；星光的红移提供距离线索。把方向和距离结合起来，便能描出星系在三维空间的分布，研究宇宙结构如何长成。",
-        "summary_en": "On November 12, ESA released Euclid’s first major batch of data, covering about 13 months of observations and more than 900 million galaxies. Images show where galaxies lie on the sky; the redshift of their light gives clues to their distance. Combining direction and distance helps map galaxies in three dimensions and study how cosmic structure grew.",
+        "id": "voyager-light-day-20261118",
+        "category": "航天 · 信号延迟",
+        "headline": "今天，旅行者 1 号将距地球一光日",
+        "headline_en": "Voyager 1 Reaches the One-Light-Day Mark",
+        "summary": "NASA 预计，北京时间 11 月 18 日 18:16 左右，旅行者 1 号将距地球约 259 亿公里。一光日是光走 24 小时的距离。在这里，无线电指令约一天才能抵达；即使探测器立即回复，地球也要约两天才能收到回信。",
+        "summary_en": "NASA expects Voyager 1 to be about 25.9 billion kilometres from Earth at around 18:16 Beijing time on 18 November. A light-day is the distance light travels in 24 hours. A radio command takes about a day to arrive; even an immediate reply would reach Earth about two days after the command was sent.",
         "source": {
-          "name": "ESA",
-          "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
+          "name": "NASA",
+          "url": "https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/",
           "published": "2026-11-12"
         },
         "accent": "gold"
       },
       {
-        "id": "enso-pacific-20261116",
-        "category": "地球 · 气候",
-        "headline": "厄尔尼诺增强，太平洋雨带随之改变",
-        "headline_en": "A Stronger El Niño Shifts Pacific Rainfall",
-        "summary": "11 月 12 日，美国气候预测中心报告，赤道东太平洋部分海面比常年暖逾 4°C。暖海面利于湿空气上升；赤道中、东太平洋的对流和降雨偏强，印度尼西亚一带对流偏弱。该中心估计，强至很强的厄尔尼诺延续到 2027 年 1 至 3 月的概率超过 79%。",
-        "summary_en": "On November 12, the US Climate Prediction Center reported that parts of the eastern equatorial Pacific were more than 4°C warmer than usual. Warm seas favour rising moist air: convection and rainfall were above normal over the central and eastern equatorial Pacific, while convection stayed weak around Indonesia. The centre puts the chance of a strong to very strong El Niño persisting through January–March 2027 above 79%.",
+        "id": "hebei-early-crust-20261118",
+        "category": "地质 · 早期地球",
+        "headline": "冀东一块 39.5 亿年前的岩石，记录了什么？",
+        "headline_en": "What Does a 3.95-Billion-Year-Old Rock Tell Us?",
+        "summary": "11 月 11 日，《自然》发表了对冀东一块古老片麻岩的研究。研究者用锆石测定岩石年龄，又从岩石成分推断，形成它的岩浆来自曾在地表附近被改造、后来沉入深处的玄武质地壳。这可能是早期地球曾短暂发生俯冲的线索。",
+        "summary_en": "On 11 November, Nature published a study of ancient gneiss from eastern Hebei. Researchers used zircon to date the rock. Its chemistry suggests that the magma came from basaltic crust altered near the surface and later buried deep underground. This may be evidence of a brief episode of subduction on early Earth.",
         "source": {
-          "name": "NOAA Climate Prediction Center",
-          "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_nov2026/ensodisc.pdf",
-          "published": "2026-11-12"
+          "name": "Nature / PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/43015479/",
+          "published": "2026-11-11"
         },
         "accent": "aqua"
       },
       {
-        "id": "dryland-fairy-circles-20261116",
-        "category": "生态 · 水分竞争",
-        "headline": "旱地为什么长出「精灵圈」？",
-        "headline_en": "Why Do “Fairy Circles” Form in Drylands?",
-        "summary": "11 月 11 日发表的研究首次记录中国北方旱区的「精灵圈」：植被围成一圈，中央却裸露。研究者结合野外调查和电脑模型，发现草本植物与灌木竞争水分，可以使灌丛中央先变稀，留下环形边缘。地表的花纹由此成为理解旱地植物如何争夺水分的线索。",
-        "summary_en": "A study published on November 11 documented the first known fairy circles in northern China’s drylands: rings of vegetation with bare centres. Combining field surveys with computer modelling, researchers showed how competition for water between grasses and shrubs could thin the centre of a shrub patch, leaving a ring. The pattern offers a clue to how dryland plants compete for water.",
+        "id": "deep-sea-nodule-habitat-20261118",
+        "category": "生态 · 深海栖息地",
+        "headline": "一块深海结核里，藏着 245 只小动物",
+        "headline_en": "245 Tiny Animals in One Deep-Sea Nodule",
+        "summary": "11 月 11 日发表的研究检查了太平洋深海的 244 块富金属结核，平均每块发现 17 只小动物，最多的一块有 245 只。结核里的细小裂缝给不足一毫米的动物提供了栖身处。开采这些结核，带走的不只是矿石，还有它们的栖息地。",
+        "summary_en": "A study published on 11 November examined 244 metal-rich nodules from the deep Pacific. They contained an average of 17 tiny animals, with 245 in the most crowded one. Cracks inside the nodules give animals smaller than a millimetre a place to live. Mining the nodules would remove their habitat along with the minerals.",
         "source": {
-          "name": "PNAS",
-          "url": "https://doi.org/10.1073/pnas.2618656123",
+          "name": "Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-026-76737-w",
           "published": "2026-11-11"
         },
         "accent": "coral"
       },
       {
-        "id": "graphene-strain-20261116",
-        "category": "物理 · 材料",
-        "headline": "轻轻拉伸，石墨烯的电阻就变了",
-        "headline_en": "A Small Stretch Changes Graphene’s Resistance",
-        "summary": "11 月 12 日，华盛顿大学团队报告：两片各只有一个原子厚的石墨烯稍微错转，原子网格就会叠出更大的图案，像两层纱网。在低温实验里，轻微拉伸或压缩样品，电阻便明显改变。除了换成别的材料，改变材料的形状也能调节它的导电特性。",
-        "summary_en": "On November 12, a University of Washington team reported that slightly twisting two sheets of graphene, each one atom thick, creates a larger pattern like two overlapping screens. At low temperatures, gently stretching or compressing the sample markedly changed its resistance. Changing a material’s shape, rather than its ingredients, offers another way to tune how it conducts electricity.",
+        "id": "hera-didymos-ridge-20261118",
+        "category": "航天 · 小行星",
+        "headline": "一颗小行星为何有一道赤道山脊？",
+        "headline_en": "Why Does an Asteroid Have an Equatorial Ridge?",
+        "summary": "11 月 12 日，欧洲航天局公开赫拉探测器从 56 公里外拍到的照片：直径约 780 米的迪迪莫斯小行星有一道明显的赤道山脊。它每 2.2 小时自转一圈。模型显示，快速自转可能让表面的松散物质从较高纬度滑向赤道，在那里堆积。",
+        "summary_en": "On 12 November, ESA released a photograph taken by Hera from 56 kilometres away. Didymos, an asteroid about 780 metres across, has a distinct equatorial ridge and rotates once every 2.2 hours. Models suggest rapid rotation may drive loose material from higher latitudes towards the equator, where it can build up.",
         "source": {
-          "name": "University of Washington / Science",
-          "url": "https://www.washington.edu/news/2026/11/12/magic-angle-graphene-strain/",
+          "name": "ESA",
+          "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
           "published": "2026-11-12"
         },
         "accent": "gold"
       },
       {
-        "id": "maize-nickel-20261116",
-        "category": "生物 · 植物营养",
-        "headline": "玉米怎样把微量的镍送进籽粒？",
-        "headline_en": "How Does Maize Get Nickel into Its Kernels?",
-        "summary": "北京时间 11 月 11 日发表的研究发现，玉米用转运蛋白把一种叫烟胺的小分子送出细胞。烟胺与镍结合，帮助镍从茎叶运往籽粒。镍能让脲酶正常工作，帮助植物利用尿素中的氮。这解释了为什么只需微量的镍，也会影响种子活力和产量。",
-        "summary_en": "In a study published on November 11 Beijing time, researchers found that maize uses a transporter to export a small molecule called nicotianamine. It binds nickel, helping move the metal from stems and leaves to kernels. Nickel enables urease to work, helping the plant use nitrogen from urea. This explains why even a trace amount of nickel can matter for seed vigour and yield.",
+        "id": "kilauea-radar-lava-20261118",
+        "category": "遥感 · 火山",
+        "headline": "隔着云，卫星怎样追踪熔岩？",
+        "headline_en": "How Can Satellites Track Lava Through Clouds?",
+        "summary": "11 月 7 日发表的研究重新分析了夏威夷基拉韦厄火山的卫星雷达记录。雷达发出微波，夜间或有云时也能接收回波；地表的粗糙程度和坡度会改变回波强弱。比较不同时刻的影像，可以画出熔岩扩展的范围，并估算火山口深度的变化。",
+        "summary_en": "A study published on 7 November re-examined satellite radar records of Hawai‘i’s Kīlauea volcano. Radar sends out microwaves and can receive echoes at night and through clouds. Surface roughness and slope affect the strength of those echoes. Comparing images over time can map spreading lava and estimate changes in crater depth.",
         "source": {
-          "name": "Cell / Chinese Academy of Sciences",
-          "url": "https://doi.org/10.1016/j.cell.2026.10.035",
-          "published": "2026-11-11"
+          "name": "JGR: Solid Earth",
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026JB034913",
+          "published": "2026-11-07"
         },
         "accent": "aqua"
       },
       {
-        "id": "submarine-landslides-20261116",
-        "category": "地质 · 海洋",
-        "headline": "海底滑坡，也会慢慢垮",
-        "headline_en": "An Underwater Landslide Can Fail Slowly",
-        "summary": "11 月 12 日发表的研究用声呐和传感器记录了加拿大霍马斯科河三角洲的天然海底滑坡。砂粒分开时，孔隙水压先下降，暂时稳住斜坡；水压恢复后，沉积物逐步崩落，混着水沿海底流出数公里。这意味着海底电缆不能只防瞬间冲击，也要考虑持续较久的滑坡作用。",
-        "summary_en": "A study published on November 12 used sonar and sensors to record natural underwater landslides at Canada’s Homathko Delta. As sand grains moved apart, water pressure between them dropped, briefly stabilising the slope. As pressure recovered, sediment gradually collapsed and flowed kilometres along the seabed mixed with water. Seabed cables therefore need protection against prolonged forces as well as sudden impacts.",
+        "id": "reef-heatwave-depth-20261118",
+        "category": "海洋 · 热浪",
+        "headline": "海洋热浪也能下潜到 150 米",
+        "headline_en": "Marine Heatwaves Can Reach 150 Metres Deep",
+        "summary": "11 月 10 日发表的研究分析了 31 年的海洋资料。在珊瑚礁海域，越往深处，热浪天数通常越少，但热浪的累积强度可能更高。强厄尔尼诺或持续多年的拉尼娜期间，强热浪曾延伸到约 150 米深。只看海面温度，可能低估珊瑚礁承受的热压力。",
+        "summary_en": "A study published on 10 November analysed 31 years of ocean data. In coral reef regions, deeper waters typically see fewer heatwave days, but deep heatwaves can have greater cumulative intensity. During strong El Niño or multi-year La Niña events, severe heatwaves reached about 150 metres down. Surface temperatures alone can miss some of the heat stress on reefs.",
         "source": {
-          "name": "Newcastle University / Science",
-          "url": "https://www.ncl.ac.uk/press/articles/latest/2026/11/submarinelandslides/",
-          "published": "2026-11-12"
+          "name": "Geophysical Research Letters",
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026GL123865",
+          "published": "2026-11-10"
         },
         "accent": "coral"
       }
@@ -187,17 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-16 review v1"
+      "edition": "2026-11-18 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-16 review v1"
+      "edition": "2026-11-18 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-15T11:45:08.618628+00:00",
-      "approved_edition": "2026-11-16 review v1",
-      "approved_source_sha256": "4d0ad38f225bb620c64355a7e4734b22371dbe3515d000e1c6d2d3af026f6192",
-      "approved_source_bytes": 15478
+      "recorded_at": "2026-11-17T13:02:47.856689+00:00",
+      "approved_edition": "2026-11-18 review v1",
+      "approved_source_sha256": "9016641de1c703a2c2497533b290da1a7c92a88ae294a2d27349f401371db262",
+      "approved_source_bytes": 5447
     }
   }
 }
