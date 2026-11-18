@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-18",
-  "edition": "2026-11-18 review v1",
+  "content_date": "2026-11-19",
+  "edition": "2026-11-19 review v2",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,90 +12,90 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月18日\n每日简报",
+    "headline": "11月19日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "voyager-light-day-20261118",
-        "category": "航天 · 信号延迟",
-        "headline": "今天，旅行者 1 号将距地球一光日",
-        "headline_en": "Voyager 1 Reaches the One-Light-Day Mark",
-        "summary": "NASA 预计，北京时间 11 月 18 日 18:16 左右，旅行者 1 号将距地球约 259 亿公里。一光日是光走 24 小时的距离。在这里，无线电指令约一天才能抵达；即使探测器立即回复，地球也要约两天才能收到回信。",
-        "summary_en": "NASA expects Voyager 1 to be about 25.9 billion kilometres from Earth at around 18:16 Beijing time on 18 November. A light-day is the distance light travels in 24 hours. A radio command takes about a day to arrive; even an immediate reply would reach Earth about two days after the command was sent.",
+        "id": "artemis-lunar-impact-flashes-20261119",
+        "category": "航天 · 月面撞击",
+        "headline": "宇航员为何能看见月背的五次闪光？",
+        "headline_en": "Five Tiny Flashes on the Moon’s Far Side",
+        "summary": "NASA 11 月 17 日公布初步报告：阿耳忒弥斯二号在约 7.4 万公里外看到月背五次微弱闪光。当时月球挡住了太阳，暗背景让小岩块高速撞击月面的光更容易看见。这些观测有助于估计未来月面设施遭遇小撞击的频率。",
+        "summary_en": "NASA’s 17 November report describes five faint flashes seen by Artemis II from about 74,000 km away. The Moon blocked the Sun, making light from small, fast-moving rocks striking the surface easier to see. The observations help estimate impact risks for future lunar facilities.",
         "source": {
           "name": "NASA",
-          "url": "https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/",
-          "published": "2026-11-12"
+          "url": "https://science.nasa.gov/feature/artemis-ii-preliminary-lunar-science-report/",
+          "published": "2026-11-17"
         },
         "accent": "gold"
       },
       {
-        "id": "hebei-early-crust-20261118",
-        "category": "地质 · 早期地球",
-        "headline": "冀东一块 39.5 亿年前的岩石，记录了什么？",
-        "headline_en": "What Does a 3.95-Billion-Year-Old Rock Tell Us?",
-        "summary": "11 月 11 日，《自然》发表了对冀东一块古老片麻岩的研究。研究者用锆石测定岩石年龄，又从岩石成分推断，形成它的岩浆来自曾在地表附近被改造、后来沉入深处的玄武质地壳。这可能是早期地球曾短暂发生俯冲的线索。",
-        "summary_en": "On 11 November, Nature published a study of ancient gneiss from eastern Hebei. Researchers used zircon to date the rock. Its chemistry suggests that the magma came from basaltic crust altered near the surface and later buried deep underground. This may be evidence of a brief episode of subduction on early Earth.",
+        "id": "graphene-moire-strain-20261119",
+        "category": "材料 · 莫尔条纹",
+        "headline": "拉一拉，双层石墨烯的电阻就变了",
+        "headline_en": "Stretching Graphene Changes Its Resistance",
+        "summary": "11 月 12 日发表的研究把两层只有一个原子厚的碳片错开一个小角度，叠出莫尔条纹。研究者再用可伸缩的装置改变两层之间的相对形变，测到电阻明显变化。这让他们除了调温度和磁场，还能用拉伸来研究材料中的电子。",
+        "summary_en": "In a study published on 12 November, two atom-thin carbon sheets were twisted to form a moiré pattern. A device changed how much one sheet stretched relative to the other, markedly changing the electrical resistance. Strain gives researchers another way to probe how electrons behave in the material.",
         "source": {
-          "name": "Nature / PubMed",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/43015479/",
-          "published": "2026-11-11"
+          "name": "University of Washington / Science",
+          "url": "https://www.washington.edu/news/2026/11/12/magic-angle-graphene-strain/",
+          "published": "2026-11-12"
         },
         "accent": "aqua"
       },
       {
-        "id": "deep-sea-nodule-habitat-20261118",
-        "category": "生态 · 深海栖息地",
-        "headline": "一块深海结核里，藏着 245 只小动物",
-        "headline_en": "245 Tiny Animals in One Deep-Sea Nodule",
-        "summary": "11 月 11 日发表的研究检查了太平洋深海的 244 块富金属结核，平均每块发现 17 只小动物，最多的一块有 245 只。结核里的细小裂缝给不足一毫米的动物提供了栖身处。开采这些结核，带走的不只是矿石，还有它们的栖息地。",
-        "summary_en": "A study published on 11 November examined 244 metal-rich nodules from the deep Pacific. They contained an average of 17 tiny animals, with 245 in the most crowded one. Cracks inside the nodules give animals smaller than a millimetre a place to live. Mining the nodules would remove their habitat along with the minerals.",
+        "id": "humpback-whale-breath-genome-20261119",
+        "category": "生物 · 基因组",
+        "headline": "无人机从座头鲸呼出的水雾里读出 DNA",
+        "headline_en": "Drones Collect DNA from a Whale’s Breath",
+        "summary": "11 月 17 日发表的研究用无人机收集座头鲸呼出的水雾，从 26 头鲸取得 58 份样本，提取的 DNA 约 84% 来自鲸本身。同一头鲸的呼气样本和组织样本给出了吻合的结果。研究人员因此可以在不接触鲸的情况下研究种群的遗传多样性。",
+        "summary_en": "A study published on 17 November collected 58 breath samples from 26 humpbacks using drones. About 84% of the extracted DNA came from whales. Breath and tissue samples from the same whale gave matching results, opening a way to study genetic diversity without touching the animals.",
         "source": {
-          "name": "Scientific Reports",
-          "url": "https://www.nature.com/articles/s41598-026-76737-w",
-          "published": "2026-11-11"
+          "name": "University of St Andrews",
+          "url": "https://news.st-andrews.ac.uk/archive/whole-genome-sequencing-using-whale-snot/",
+          "published": "2026-11-17"
         },
         "accent": "coral"
       },
       {
-        "id": "hera-didymos-ridge-20261118",
-        "category": "航天 · 小行星",
-        "headline": "一颗小行星为何有一道赤道山脊？",
-        "headline_en": "Why Does an Asteroid Have an Equatorial Ridge?",
-        "summary": "11 月 12 日，欧洲航天局公开赫拉探测器从 56 公里外拍到的照片：直径约 780 米的迪迪莫斯小行星有一道明显的赤道山脊。它每 2.2 小时自转一圈。模型显示，快速自转可能让表面的松散物质从较高纬度滑向赤道，在那里堆积。",
-        "summary_en": "On 12 November, ESA released a photograph taken by Hera from 56 kilometres away. Didymos, an asteroid about 780 metres across, has a distinct equatorial ridge and rotates once every 2.2 hours. Models suggest rapid rotation may drive loose material from higher latitudes towards the equator, where it can build up.",
+        "id": "fault-slow-slip-20261119",
+        "category": "地质 · 断层滑移",
+        "headline": "为什么有的断层在破裂前会缓慢滑动？",
+        "headline_en": "Why Do Some Faults Creep Before Rupture?",
+        "summary": "11 月 14 日发表的实验用两块亚克力板模拟断层。研究人员给板施压，观察接触面怎样滑动。接触面较光滑时，压力较小，破裂前的缓慢滑动信号更明显；压力增大，信号就变弱。这说明能否测到前兆，也取决于断层承受的压力。",
+        "summary_en": "In experiments published on 14 November, researchers pressed two acrylic plates together to model a fault and measured slip along their contact. On smoother surfaces, the slow-slip signal before rupture was clearer at lower pressure and weaker at higher pressure. Roughness is only part of the story.",
         "source": {
-          "name": "ESA",
-          "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-spies-a-half-hidden-asteroid-moonlet",
-          "published": "2026-11-12"
+          "name": "Nature Communications",
+          "url": "https://www.nature.com/articles/s41467-026-79533-2_reference.pdf",
+          "published": "2026-11-14"
         },
         "accent": "gold"
       },
       {
-        "id": "kilauea-radar-lava-20261118",
-        "category": "遥感 · 火山",
-        "headline": "隔着云，卫星怎样追踪熔岩？",
-        "headline_en": "How Can Satellites Track Lava Through Clouds?",
-        "summary": "11 月 7 日发表的研究重新分析了夏威夷基拉韦厄火山的卫星雷达记录。雷达发出微波，夜间或有云时也能接收回波；地表的粗糙程度和坡度会改变回波强弱。比较不同时刻的影像，可以画出熔岩扩展的范围，并估算火山口深度的变化。",
-        "summary_en": "A study published on 7 November re-examined satellite radar records of Hawai‘i’s Kīlauea volcano. Radar sends out microwaves and can receive echoes at night and through clouds. Surface roughness and slope affect the strength of those echoes. Comparing images over time can map spreading lava and estimate changes in crater depth.",
+        "id": "el-nino-rainfall-redistribution-20261119",
+        "category": "气候 · 海洋与降雨",
+        "headline": "太平洋变暖，为什么两侧的雨反着变？",
+        "headline_en": "Why El Niño Shifts Rain Across the Pacific",
+        "summary": "美国气候预测中心 11 月 12 日报告，赤道太平洋中东部已比常年明显偏暖。暖水上方的湿空气更容易上升，云和雨随之集中到太平洋中东部；印度尼西亚一带的降雨反而偏少。海温变化可以把降雨带推向别处。",
+        "summary_en": "On 12 November, the US Climate Prediction Center reported unusually warm water in the central and eastern equatorial Pacific. Moist air rises more readily over warmer water, favouring clouds and rain farther east, while rainfall around Indonesia is suppressed. A shift in ocean temperature can move whole rain belts.",
         "source": {
-          "name": "JGR: Solid Earth",
-          "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026JB034913",
-          "published": "2026-11-07"
+          "name": "NOAA Climate Prediction Center",
+          "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_nov2026/ensodisc.pdf",
+          "published": "2026-11-12"
         },
         "accent": "aqua"
       },
       {
-        "id": "reef-heatwave-depth-20261118",
-        "category": "海洋 · 热浪",
-        "headline": "海洋热浪也能下潜到 150 米",
-        "headline_en": "Marine Heatwaves Can Reach 150 Metres Deep",
-        "summary": "11 月 10 日发表的研究分析了 31 年的海洋资料。在珊瑚礁海域，越往深处，热浪天数通常越少，但热浪的累积强度可能更高。强厄尔尼诺或持续多年的拉尼娜期间，强热浪曾延伸到约 150 米深。只看海面温度，可能低估珊瑚礁承受的热压力。",
-        "summary_en": "A study published on 10 November analysed 31 years of ocean data. In coral reef regions, deeper waters typically see fewer heatwave days, but deep heatwaves can have greater cumulative intensity. During strong El Niño or multi-year La Niña events, severe heatwaves reached about 150 metres down. Surface temperatures alone can miss some of the heat stress on reefs.",
+        "id": "landsat-invasive-spurge-20261119",
+        "category": "生态 · 卫星识别",
+        "headline": "卫星追踪入侵植物，为什么要等它开花？",
+        "headline_en": "Why Flowers Help Satellites Spot an Invasive Plant",
+        "summary": "11 月 16 日，明尼苏达大学介绍了一项用地面记录训练模型的研究：这种入侵大戟成片开黄花时，卫星图像更容易认出它。研究者用约二十年的影像追踪扩散；干旱年开花较少，地图上的空白不一定表示植物少了。",
+        "summary_en": "On 16 November, the University of Minnesota described a model trained with ground observations. It spotted invasive leafy spurge more easily when dense patches showed yellow flowers in satellite images. The team mapped its spread using two decades of imagery; in drought years, fewer blooms can leave gaps even where plants remain.",
         "source": {
-          "name": "Geophysical Research Letters",
-          "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026GL123865",
-          "published": "2026-11-10"
+          "name": "University of Minnesota",
+          "url": "https://twin-cities.umn.edu/news-events/400-miles-above-earth-ai-tracks-invasive-leafy-spurge",
+          "published": "2026-11-16"
         },
         "accent": "coral"
       }
@@ -187,17 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-18 review v1"
+      "edition": "2026-11-19 review v2"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-18 review v1"
+      "edition": "2026-11-19 review v2"
     },
     "publication_record": {
-      "recorded_at": "2026-11-17T13:02:47.856689+00:00",
-      "approved_edition": "2026-11-18 review v1",
-      "approved_source_sha256": "9016641de1c703a2c2497533b290da1a7c92a88ae294a2d27349f401371db262",
-      "approved_source_bytes": 5447
+      "recorded_at": "2026-11-18T15:01:53.259735+00:00",
+      "approved_edition": "2026-11-19 review v2",
+      "approved_source_sha256": "9f0e6bb25bb2a43ca079e9c825581599067d8a8affee982c7984743bb798bfed",
+      "approved_source_bytes": 5322
     }
   }
 }
