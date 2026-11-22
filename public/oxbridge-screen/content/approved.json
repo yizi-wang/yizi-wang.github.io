@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-20",
-  "edition": "2026-11-20 review v1",
+  "content_date": "2026-11-23",
+  "edition": "2026-11-23 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,89 +12,89 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月20日\n每日简报",
+    "headline": "11月23日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "guangxi-homo-erectus-enamel-20261120",
-        "category": "考古 · 牙齿里的线索",
-        "headline": "广西洞穴里的牙齿，为什么指向雨林？",
-        "headline_en": "Fossil Teeth Point to an Ancient Rainforest",
-        "summary": "11 月 18 日发表的两项研究分析了广西两座洞穴出土的化石。牙釉质保留了食物和饮水留下的化学线索，直立人与同地动物的牙齿都指向热带雨林。测年结果表明，约 32 万至 18 万年前，直立人已能在这里的密林中生活。",
-        "summary_en": "Two studies published on 18 November examined fossils from two caves in Guangxi. Tooth enamel preserves chemical clues from food and water. Teeth from Homo erectus and local animals both point to a rainforest, where these ancient humans were able to live roughly 320,000 to 180,000 years ago.",
+        "id": "xylophone-air-slots-20261123",
+        "category": "物理",
+        "headline": "同样大小的琴块，为什么音高不同？",
+        "headline_en": "Same-sized xylophone blocks, different notes?",
+        "summary": "11 月 19 日发表的研究把空气槽藏在 3D 打印琴块的振动板下方。改变槽的形状，板更容易弯曲，振动频率就会降低。同一组琴块不用改外形就能做出不同音高；两组样品合起来覆盖一个八度，最高频率是最低的两倍。",
+        "summary_en": "In a study published on 19 November, researchers used hidden air slots beneath the vibrating plate of 3D-printed blocks. Changing the slots made the plate bend more easily and vibrate more slowly. Blocks of the same size could play different notes; across two size groups, the highest frequency was twice the lowest.",
         "source": {
-          "name": "Max Planck Institute / Nature",
-          "url": "https://www.gea.mpg.de/253111/last-chapter-of-homo-erectus-in-china",
-          "published": "2026-11-18"
+          "name": "Physical Review Applied",
+          "url": "https://journals.aps.org/prapplied/abstract/10.1103/vnl2-6twc",
+          "published": "2026-11-19"
         },
         "accent": "gold"
       },
       {
-        "id": "bogong-moth-magnetic-compass-20261120",
-        "category": "生物 · 动物导航",
-        "headline": "没有星空，迁徙的飞蛾怎么找方向？",
-        "headline_en": "How Do Moths Navigate Without Stars?",
-        "summary": "11 月 18 日发表的实验发现，澳洲博贡蛾不仅靠星空辨向，也能感知地磁。研究人员用线圈改变磁场，飞蛾随之改变飞行方向。它感知的线索之一是磁场与地面的夹角，这不同于普通指南针指向磁北的方式。",
-        "summary_en": "In a study published on 18 November, Australian Bogong moths changed their heading when researchers altered the magnetic field with coils. The moths use stars as well as a magnetic cue: the tilt of Earth’s field relative to the ground. That is different from a compass needle pointing towards magnetic north.",
+        "id": "aye-aye-brushing-20261123",
+        "category": "生物",
+        "headline": "指猴找虫，为什么先擦一下树皮？",
+        "headline_en": "Why do aye-ayes brush the wood before tapping?",
+        "summary": "指猴会敲木头，靠声音探查木头里的空洞。11 月 20 日发表的研究用高速热成像和同步录音观察了两只指猴，发现大多数敲击前，细长的中指会先贴着木头划一下。这一步也产生声音，频率落在指猴听觉较敏感的范围内。",
+        "summary_en": "Aye-ayes listen for clues to hidden cavities as they tap wood. In a study published on 20 November, thermal video and audio from two animals showed that their long middle finger slid along the wood before most taps. The slide made sounds in a frequency range their ears are sensitive to.",
         "source": {
-          "name": "Lund University / Nature",
-          "url": "https://www.lunduniversity.lu.se/article/migrating-moth-uses-earths-magnetic-field-compass",
-          "published": "2026-11-18"
+          "name": "Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-026-80083-2_reference.pdf",
+          "published": "2026-11-20"
         },
         "accent": "aqua"
       },
       {
-        "id": "andromeda-stellar-merger-20261120",
-        "category": "天文 · 恒星合并",
-        "headline": "一颗恒星怎样落进另一颗恒星？",
-        "headline_en": "How Does One Star Spiral Into Another?",
-        "summary": "NASA 11 月 18 日介绍了仙女座星系的一次恒星合并。伴星进入巨星的外层气体后，阻力使它失去轨道能量，向内越绕越近。研究者把爆发前后的观测拼在一起，发现这两颗恒星从接触到合并只绕了约七圈。",
-        "summary_en": "On 18 November, NASA reported on a stellar merger in Andromeda. Once the smaller star entered the giant’s outer gas, drag drained its orbital energy and sent it spiralling inward. Observations before and after the eruption show that the stars completed only about seven orbits between contact and merger.",
+        "id": "four-colour-algorithm-20261123",
+        "category": "计算机",
+        "headline": "给地图配四色，怎样更快？",
+        "headline_en": "How fast can we colour a map?",
+        "summary": "平面地图只需四种颜色，就能让共用一段边界的区域颜色不同。11 月 13 日，日本国立信息学研究所公布，一种近线性配色算法获 FOCS 最佳论文奖。同一团队在另一篇预印本中让多次换色共用一次准备，把算法的计算量降到随区域数线性增长。",
+        "summary_en": "Four colours suffice if regions sharing a stretch of border must differ. On 13 November, Japan’s National Institute of Informatics announced a FOCS Best Paper Award for a near-linear colouring algorithm. In a separate preprint, the team reuses the same setup for several colour swaps so that the work grows at most in proportion to the number of regions.",
         "source": {
-          "name": "NASA Webb",
-          "url": "https://science.nasa.gov/missions/webb/nasa-data-clinches-first-of-its-kind-stellar-merger/",
-          "published": "2026-11-18"
+          "name": "NII / arXiv",
+          "url": "https://www.nii.ac.jp/en/news/release/2026/1113.html",
+          "published": "2026-11-13"
         },
         "accent": "coral"
       },
       {
-        "id": "coffee-carbon-adsorption-20261120",
-        "category": "化学 · 吸附",
-        "headline": "咖啡渣做成的炭，能抓住水里的什么？",
-        "headline_en": "What Can Carbon Made from Coffee Grounds Trap?",
-        "summary": "11 月 15 日发表的实验把废咖啡渣制成多孔活性炭，用两种处理方法改变它的表面。水中的头孢氨苄分子可以附着在孔壁上；在同一测试条件下，两种材料分别去除了约 88% 和 70%。吸附是把分子留在炭表面，不是把它分解。",
-        "summary_en": "A study published on 15 November turned used coffee grounds into porous activated carbon using two treatments. Molecules of the antibiotic cephalexin adhered to the pore walls. Under the same test conditions, the two materials removed about 88% and 70%, respectively. Adsorption traps the molecules on a surface rather than breaking them down.",
+        "id": "earthcare-rain-clouds-20261123",
+        "category": "地球科学",
+        "headline": "下雨怎样拆开海上的“遮阳棚”？",
+        "headline_en": "How can rain break up the ocean’s sunshade?",
+        "summary": "海上的大片低云会把阳光反射回太空。欧洲航天局 11 月 19 日介绍，EarthCARE 的观测支持这样一个解释：雨滴会带走空气中帮助形成云滴的微粒。剩下的云滴更容易长大成雨滴，雨于是下得更多。连续云层变得破碎，更多阳光就能照到海面。",
+        "summary_en": "Bright sheets of low cloud reflect sunlight back into space. On 19 November, ESA reported EarthCARE observations supporting an explanation: rain removes particles that help cloud droplets form. The remaining droplets can grow larger and produce more rain. As the cloud sheet breaks up, more sunlight reaches the ocean.",
         "source": {
-          "name": "Scientific Reports",
-          "url": "https://www.nature.com/articles/s41598-026-80476-3_reference.pdf",
-          "published": "2026-11-15"
+          "name": "ESA / EarthCARE",
+          "url": "https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/earthcare/rain-breaks-up-earth-s-natural-sunshades",
+          "published": "2026-11-19"
         },
         "accent": "gold"
       },
       {
-        "id": "california-lidar-canopy-fire-20261120",
-        "category": "地理 · 激光测距",
-        "headline": "哪片灌木可能把火带上树冠？",
-        "headline_en": "Where Can Shrubs Carry a Fire Into the Canopy?",
-        "summary": "NASA 11 月 18 日介绍了加州的激光雷达地图。飞机发出的激光脉冲从树冠、灌木和地面反射回来，往返时间能换算成距离。用这些数据画出植被的高度和层次，就能找出哪些地方的灌木可能把地面火带上树冠。",
-        "summary_en": "On 18 November, NASA highlighted California’s lidar maps. Laser pulses from an aircraft bounce off treetops, shrubs and the ground. Their travel times give distances. Mapping these layers helps identify where shrubs could carry a ground fire up into the canopy.",
+        "id": "mixed-plastic-polar-groups-20261123",
+        "category": "化学",
+        "headline": "不拆掉分子长链，也能改造混合塑料吗？",
+        "headline_en": "Can we upgrade mixed plastics without breaking their chains?",
+        "summary": "11 月 20 日发表的研究给多种聚烯烃的分子链加上少量带极性的化学基团，同时大体保留原有链长。处理后的材料更容易黏合；研究者用它制成的一种材料，拉断前每单位体积吸收的能量约是原混合塑料的 23 倍。",
+        "summary_en": "In a study published on 20 November, researchers added a small number of polar groups to several plastics while largely preserving their chain lengths. The treated plastics adhered better. One material made from them absorbed about 23 times as much energy per unit volume before breaking as the original mixture.",
         "source": {
-          "name": "NASA Earth Science",
-          "url": "https://science.nasa.gov/blogs/science-news/2026/11/18/california-wildfire-risk-3d-maps/",
-          "published": "2026-11-18"
+          "name": "Nature Communications",
+          "url": "https://www.nature.com/articles/s41467-026-79649-5",
+          "published": "2026-11-20"
         },
         "accent": "aqua"
       },
       {
-        "id": "amazon-leaf-seasonality-20261120",
-        "category": "生态 · 森林季节",
-        "headline": "看起来四季常绿的雨林，也会成片落叶吗？",
-        "headline_en": "Can an Evergreen-Looking Rainforest Lose Its Leaves?",
-        "summary": "11 月 18 日发表的研究用 10 米分辨率的卫星影像追踪亚马孙森林。大片森林从远处看终年是绿的，细看却能发现，不少斑块会在一年中的某段时间落叶，时间和程度各不相同。把整片雨林当成全年不变的绿盖，会漏掉这些变化。",
-        "summary_en": "A study published on 18 November tracked Amazon forest cover using satellite images at 10-metre resolution. The forest can look green year-round from afar, yet many patches shed leaves seasonally, with different timing and intensity. Treating the whole forest as uniformly evergreen misses those changes.",
+        "id": "kuiper-dust-ancient-ice-20261123",
+        "category": "天文",
+        "headline": "地球上空的尘埃，怎样留下海王星外的线索？",
+        "headline_en": "How can dust above Earth tell us about ice beyond Neptune?",
+        "summary": "NASA 11 月 18 日介绍，研究人员分析了从平流层收集的 12 粒太空尘埃。尘埃上的粒子痕迹指向海王星外的柯伊伯带；其中矿物的氧同位素则显示，早期与这些尘埃反应的水含有较多较重的氧。这为太阳系外围曾有富含重氧的古老冰提供了线索。",
+        "summary_en": "On 18 November, NASA reported on 12 grains of space dust collected in the stratosphere. Particle tracks point to the Kuiper Belt. Oxygen isotopes in the grains’ minerals suggest that the ancient water that reacted with them was rich in heavier oxygen, a clue to ice in the early outer solar system.",
         "source": {
-          "name": "Nature",
-          "url": "https://www.nature.com/articles/s41586-026-11284-y",
+          "name": "NASA",
+          "url": "https://science.nasa.gov/blogs/science-news/2026/11/18/nasa-scientists-find-clues-to-ancient-ice-beyond-neptune/",
           "published": "2026-11-18"
         },
         "accent": "coral"
@@ -102,81 +102,81 @@
     ]
   },
   "weekly": {
-    "week": "2026-W47",
-    "previous_week": "2026-W46",
+    "week": "2026-W48",
+    "previous_week": "2026-W47",
     "previous_answers": [
       {
-        "id": "answer-reasoning-reverse-2026-w46",
+        "id": "answer-reasoning-wrong-labels-2026-w47",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "选一个三位数，要求百位与个位相差至少2。把它的数字顺序倒过来，用较大的数减去较小的数。再把所得差的数字顺序倒过来，将这两个数相加。不必知道最初选的数，你能预测最后的结果吗？说明理由。（倒序后开头的0可以略去。）",
-        "headline_en": "Choose a three-digit number whose first and last digits differ by at least 2. Reverse its digits, then subtract the smaller number from the larger. Reverse the digits of the difference and add these two numbers. Can you predict the final total without knowing the starting number? Explain why. Any leading zero in a reversed number may be omitted.",
+        "headline": "三个不透明盒子分别装着两个红球、两个蓝球、一红一蓝。写着「两红」「两蓝」「一红一蓝」的三个标签都贴错了。你只能选一个盒子、不看里面摸出一个球。怎样确定三个盒子里各装了什么？",
+        "headline_en": "Three opaque boxes contain two red balls, two blue balls, and one of each, respectively. The three labels, “two red”, “two blue” and “one of each”, are all wrong. You may choose one box and draw one ball without looking inside. How can you identify the contents of all three boxes?",
         "visual": "question",
         "accent": "gold",
-        "result": "最后是 1089。",
-        "result_en": "The total is 1,089.",
-        "explanation": "设首尾数字之差为 d，则减出的数是 99d，三位数字依次为 d−1、9、10−d。倒序相加时，两端各凑成 9，中间相加得 18；进位后就是 1089。",
-        "explanation_en": "Let d be the difference between the first and last digits. Subtracting gives 99d, whose digits are d−1, 9 and 10−d. Adding its reversal gives 9 at both ends and 18 in the middle before carrying, which gives 1,089.",
-        "subject": "W46 · 倒序数之谜解答",
-        "subject_en": "W46 · A NUMBER-REVERSAL MYSTERY"
+        "result": "盒子标签全错了。",
+        "result_en": "Wrong labels.",
+        "explanation": "从贴着「一红一蓝」的盒子摸一个球。这盒不可能是混装，摸到什么颜色，整盒就是什么颜色。剩下两盒再按「标签都错」排除即可。",
+        "explanation_en": "Draw from the box labelled “one of each”. It cannot be mixed, so the colour drawn identifies both balls. Use the other two wrong labels to place the remaining contents.",
+        "subject": "W47 · 盒子标签全错了。",
+        "subject_en": "W47 · Wrong labels."
       },
       {
-        "id": "answer-probability-remainders-2026-w46",
+        "id": "answer-data-weighted-hit-rates-2026-w47",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "12张卡片分别写着1至12。充分洗匀后，随机抽出3张，不放回。三张卡片上的数之和能被3整除的概率是多少？请用清楚的分类计数说明答案，而不是只靠模拟。",
-        "headline_en": "Twelve cards are numbered 1 to 12. Shuffle them thoroughly and draw three without replacement. What is the probability that their sum is divisible by 3? Explain your answer by counting cases, rather than relying only on a simulation.",
+        "headline": "近投时，甲投 10 中 9，乙投 100 中 80；远投时，甲投 100 中 20，乙投 10 中 1。每个距离分别看，谁的命中率更高？把每人的近投和远投合起来算，又是谁更高？为什么排名会变？",
+        "headline_en": "At short range, A makes 9 of 10 shots and B makes 80 of 100. At long range, A makes 20 of 100 and B makes 1 of 10. Who has the higher hit rate at each distance? Who leads when each player’s shots are combined, and why does the ranking change?",
         "visual": "question",
         "accent": "aqua",
-        "result": "概率是 19/55。",
-        "result_en": "The probability is 19/55.",
-        "explanation": "按除以 3 的余数分三类，每类 4 张。要使和整除，三张的余数要么全相同，要么各不相同。符合的组合有 3×4＋4³＝76 种；一共 220 种，所以是 76/220＝19/55。",
-        "explanation_en": "There are four cards in each remainder class modulo 3. For the sum to be divisible by 3, the remainders must be all equal or all different. This gives 3×4 + 4³ = 76 valid triples out of 220, so the probability is 19/55.",
-        "subject": "W46 · 余数与概率解答",
-        "subject_en": "W46 · REMAINDERS AND PROBABILITY"
+        "result": "谁的命中率更高？",
+        "result_en": "Who has the higher hit rate?",
+        "explanation": "甲近投 90% 对 80%，远投 20% 对 10%，两个距离都领先。合并后，乙是 81/110，甲是 29/110。乙的大多数球是较容易的近投，甲的大多数球是较难的远投，所以总排名反转。",
+        "explanation_en": "A leads at both distances: 90% versus 80%, then 20% versus 10%. Combined, B leads 81/110 to 29/110. B took mostly easier short shots, while A took mostly harder long shots, reversing the overall ranking.",
+        "subject": "W47 · 谁的命中率更高？",
+        "subject_en": "W47 · Who has the higher hit rate?"
       },
       {
-        "id": "answer-proof-tournament-line-2026-w46",
+        "id": "answer-geometry-four-corners-2026-w47",
         "eyebrow": "上期思考题参考解答 / PREVIOUS ANSWER",
-        "headline": "7名选手进行单循环比赛：每两人恰好比赛一场，每场都有一名胜者，没有平局。证明：无论比赛结果如何，总能把7人排成一列，使每个人都赢过紧挨在自己后面的人。注意：不要求一个人赢过自己后面的所有人。",
-        "headline_en": "Seven players compete in a round-robin tournament: every pair plays exactly once, and every match has one winner, with no draws. Prove that, whatever the results, the players can always be arranged in a line so that each player beat the person immediately after them. A player need not have beaten everyone farther down the line.",
+        "headline": "校园里有一块长 8 米、宽 6 米的长方形空地。要在空地内选一点作为补给站，使它到四个角的直线距离之和尽可能小。最小值是多少？能达到最小值的位置只有一个吗？请证明。",
+        "headline_en": "A rectangular school courtyard is 8 m by 6 m. Place a supply station inside it so that the sum of its straight-line distances to the four corners is as small as possible. What is the minimum, and is the location unique? Prove it.",
         "visual": "question",
         "accent": "coral",
-        "result": "总能排成。",
-        "result_en": "A lineup always exists.",
-        "explanation": "先排一人，再逐个加入。新选手若谁也没赢过，就放在末尾；否则把他插到队中第一位被他打败的人前面。若前面还有一人，那人一定赢过新选手，所以两个新的相邻关系都成立。",
-        "explanation_en": "Start with one player and add the rest one at a time. If the newcomer beat nobody in the line, put them at the end. Otherwise, insert them just before the first player they beat. Any player immediately before that position must have beaten the newcomer, so both new links work.",
-        "subject": "W46 · 胜者队列解答",
-        "subject_en": "W46 · A WINNING LINEUP"
+        "result": "到四个角的路。",
+        "result_en": "To the four corners.",
+        "explanation": "到一对对角的距离之和，至少是对角线长 10 米。两对加起来至少 20 米。只有选点同时落在两条对角线上才能同时取等，所以中心是唯一最优点。",
+        "explanation_en": "The distances to a pair of opposite corners add to at least the 10 m diagonal. Both pairs give a lower bound of 20 m. Equality requires the station to lie on both diagonals, so the centre is the unique optimum.",
+        "subject": "W47 · 到四个角的路。",
+        "subject_en": "W47 · To the four corners."
       }
     ],
     "challenges": [
       {
-        "id": "reasoning-wrong-labels-2026-w47",
-        "headline": "三个不透明盒子分别装着两个红球、两个蓝球、一红一蓝。写着「两红」「两蓝」「一红一蓝」的三个标签都贴错了。你只能选一个盒子、不看里面摸出一个球。怎样确定三个盒子里各装了什么？",
-        "headline_en": "Three opaque boxes contain two red balls, two blue balls, and one of each, respectively. The three labels, “two red”, “two blue” and “one of each”, are all wrong. You may choose one box and draw one ball without looking inside. How can you identify the contents of all three boxes?",
-        "subject": "入门 · 盒子标签全错了",
-        "subject_en": "STARTER · WRONG LABELS",
+        "id": "reasoning-moving-hour-hand-2026-w48",
+        "headline": "下午 3:30，钟面上时针和分针之间较小的夹角是多少？请说明理由。",
+        "headline_en": "At 3:30 p.m., what is the smaller angle between the hour and minute hands? Explain your reasoning.",
+        "subject": "入门 · 时针走了多远？",
+        "subject_en": "Starter · The moving hour hand.",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "gold"
       },
       {
-        "id": "data-weighted-hit-rates-2026-w47",
-        "headline": "近投时，甲投 10 中 9，乙投 100 中 80；远投时，甲投 100 中 20，乙投 10 中 1。每个距离分别看，谁的命中率更高？把每人的近投和远投合起来算，又是谁更高？为什么排名会变？",
-        "headline_en": "At short range, A makes 9 of 10 shots and B makes 80 of 100. At long range, A makes 20 of 100 and B makes 1 of 10. Who has the higher hit rate at each distance? Who leads when each player’s shots are combined, and why does the ranking change?",
-        "subject": "挑战 · 谁的命中率更高？",
-        "subject_en": "CHALLENGE · WHO HAS THE HIGHER HIT RATE?",
+        "id": "strategy-22-counters-2026-w48",
+        "headline": "两人轮流从桌上的 22 枚筹码中拿走 1、2 或 3 枚。拿走最后一枚的人获胜。先手第一步该拿几枚，才能保证获胜？接下来该怎么拿？",
+        "headline_en": "Two players take turns removing 1, 2 or 3 of the 22 counters on a table. Whoever takes the last counter wins. How many should the first player take to guarantee a win, and what should they do on later turns?",
+        "subject": "挑战 · 22 枚筹码。",
+        "subject_en": "Challenge · 22 counters.",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
         "accent": "aqua"
       },
       {
-        "id": "geometry-four-corners-2026-w47",
-        "headline": "校园里有一块长 8 米、宽 6 米的长方形空地。要在空地内选一点作为补给站，使它到四个角的直线距离之和尽可能小。最小值是多少？能达到最小值的位置只有一个吗？请证明。",
-        "headline_en": "A rectangular school courtyard is 8 m by 6 m. Place a supply station inside it so that the sum of its straight-line distances to the four corners is as small as possible. What is the minimum, and is the location unique? Prove it.",
-        "subject": "拓展 · 到四个角的路",
-        "subject_en": "STRETCH · TO THE FOUR CORNERS",
+        "id": "geometry-two-lines-grid-2026-w48",
+        "headline": "在 7×7 的方格中画两条直线。只数被直线穿过内部的小格，同一格最多数一次。最多能数到几格？请给出一种画法，并证明不能更多。",
+        "headline_en": "Draw two straight lines across a 7 × 7 grid. Count only cells whose interiors are crossed, and count each cell once. What is the largest possible total? Show how to achieve it and prove it cannot be beaten.",
+        "subject": "拓展 · 两条直线穿过几格？",
+        "subject_en": "Stretch · Two lines through a grid.",
         "eyebrow": "每周思考题 / WEEKLY CHALLENGE",
         "origin": "教学自编题面 · 经典方法，非试卷摘录",
         "visual": "question",
@@ -187,17 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-20 review v1"
+      "edition": "2026-11-23 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-20 review v1"
+      "edition": "2026-11-23 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-20T01:09:00.193027+00:00",
-      "approved_edition": "2026-11-20 review v1",
-      "approved_source_sha256": "8545426ac4ebc3811fbd17502a9ed92c75143959ffee1c9715181fd395d58477",
-      "approved_source_bytes": 5206
+      "recorded_at": "2026-11-22T12:15:40.878946+00:00",
+      "approved_edition": "2026-11-23 review v1",
+      "approved_source_sha256": "102782bbfbe388a5e03f65176d25ce3c1ce86f7c7dc9a811683107bba2eb2a65",
+      "approved_source_bytes": 11549
     }
   }
 }
