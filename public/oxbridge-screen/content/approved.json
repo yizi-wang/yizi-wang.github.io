@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-23",
-  "edition": "2026-11-23 review v1",
+  "content_date": "2026-11-24",
+  "edition": "2026-11-24 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,7 +12,7 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月23日\n每日简报",
+    "headline": "11月24日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
@@ -30,16 +30,16 @@
         "accent": "gold"
       },
       {
-        "id": "aye-aye-brushing-20261123",
+        "id": "white-throated-egg-eater-20261124",
         "category": "生物",
-        "headline": "指猴找虫，为什么先擦一下树皮？",
-        "headline_en": "Why do aye-ayes brush the wood before tapping?",
-        "summary": "指猴会敲木头，靠声音探查木头里的空洞。11 月 20 日发表的研究用高速热成像和同步录音观察了两只指猴，发现大多数敲击前，细长的中指会先贴着木头划一下。这一步也产生声音，频率落在指猴听觉较敏感的范围内。",
-        "summary_en": "Aye-ayes listen for clues to hidden cavities as they tap wood. In a study published on 20 November, thermal video and audio from two animals showed that their long middle finger slid along the wood before most taps. The slide made sounds in a frequency range their ears are sensitive to.",
+        "headline": "食卵蛇怎样剥掉吞下的蛋壳？",
+        "headline_en": "How does an egg-eating snake crack a swallowed egg?",
+        "summary": "11 月 17 日，德国埃尔朗根-纽伦堡大学介绍了在埃塞俄比亚确认的新种白喉食卵蛇。食卵蛇吞下整颗蛋后，用伸入食道的椎骨突起压破蛋壳，再挤出蛋液，最后把空壳吐出。",
+        "summary_en": "On 17 November, FAU reported a newly identified white-throated egg-eater from Ethiopia. Egg-eating snakes swallow eggs whole. Bony projections from the spine break the shell in the throat; the snake squeezes out the contents and spits out the empty shell.",
         "source": {
-          "name": "Scientific Reports",
-          "url": "https://www.nature.com/articles/s41598-026-80083-2_reference.pdf",
-          "published": "2026-11-20"
+          "name": "FAU",
+          "url": "https://www.fau.eu/2026/11/news/eierschaeler-im-hals/",
+          "published": "2026-11-17"
         },
         "accent": "aqua"
       },
@@ -72,30 +72,30 @@
         "accent": "gold"
       },
       {
-        "id": "mixed-plastic-polar-groups-20261123",
-        "category": "化学",
-        "headline": "不拆掉分子长链，也能改造混合塑料吗？",
-        "headline_en": "Can we upgrade mixed plastics without breaking their chains?",
-        "summary": "11 月 20 日发表的研究给多种聚烯烃的分子链加上少量带极性的化学基团，同时大体保留原有链长。处理后的材料更容易黏合；研究者用它制成的一种材料，拉断前每单位体积吸收的能量约是原混合塑料的 23 倍。",
-        "summary_en": "In a study published on 20 November, researchers added a small number of polar groups to several plastics while largely preserving their chain lengths. The treated plastics adhered better. One material made from them absorbed about 23 times as much energy per unit volume before breaking as the original mixture.",
+        "id": "curved-battery-drone-leg-20261124",
+        "category": "材料",
+        "headline": "无人机的支架里也能装电池吗？",
+        "headline_en": "Could a drone store energy in its landing gear?",
+        "summary": "11 月 18 日，韩国科学技术院介绍了一种能弯曲的锂硫电池电极。研究团队把纳米线直接长在柔软、导电的碳布上，再把做成的电池装进弯曲的无人机支架部件，成功点亮了一盏 LED。",
+        "summary_en": "On 18 November, KAIST described a bendable lithium–sulfur battery electrode. The team grew nanowires directly on flexible, conductive carbon cloth. They fitted a cell made with the electrode into a curved drone-leg component and used it to light an LED.",
         "source": {
-          "name": "Nature Communications",
-          "url": "https://www.nature.com/articles/s41467-026-79649-5",
-          "published": "2026-11-20"
+          "name": "KAIST",
+          "url": "https://kaist.ac.kr/site/newsen/html/news/?GotoPage=1&amp;mng_no=69670&amp;mode=V&amp;skey=college&amp;sval=college+of+e",
+          "published": "2026-11-18"
         },
         "accent": "aqua"
       },
       {
-        "id": "kuiper-dust-ancient-ice-20261123",
+        "id": "fermi-pulsar-lattice-20261124",
         "category": "天文",
-        "headline": "地球上空的尘埃，怎样留下海王星外的线索？",
-        "headline_en": "How can dust above Earth tell us about ice beyond Neptune?",
-        "summary": "NASA 11 月 18 日介绍，研究人员分析了从平流层收集的 12 粒太空尘埃。尘埃上的粒子痕迹指向海王星外的柯伊伯带；其中矿物的氧同位素则显示，早期与这些尘埃反应的水含有较多较重的氧。这为太阳系外围曾有富含重氧的古老冰提供了线索。",
-        "summary_en": "On 18 November, NASA reported on 12 grains of space dust collected in the stratosphere. Particle tracks point to the Kuiper Belt. Oxygen isotopes in the grains’ minerals suggest that the ancient water that reacted with them was rich in heavier oxygen, a clue to ice in the early outer solar system.",
+        "headline": "破解密码的数学，怎样找到一颗脉冲星？",
+        "headline_en": "How did code-breaking maths help find a pulsar?",
+        "summary": "11 月 19 日，NASA 介绍，研究人员把寻找微弱伽马射线脉冲的难题，转成在高维点阵里寻找最短向量的问题。他们借用密码学的算法分析了费米望远镜 15 年的数据，找到一颗每秒自转 261 圈的中子星。",
+        "summary_en": "On 19 November, NASA reported that researchers turned the hunt for faint gamma-ray pulses into a geometry problem: finding the shortest vector in a high-dimensional grid of points. With an algorithm borrowed from cryptography and 15 years of Fermi data, they found a neutron star spinning 261 times a second.",
         "source": {
-          "name": "NASA",
-          "url": "https://science.nasa.gov/blogs/science-news/2026/11/18/nasa-scientists-find-clues-to-ancient-ice-beyond-neptune/",
-          "published": "2026-11-18"
+          "name": "NASA / Fermi",
+          "url": "https://science.nasa.gov/open-science/fermi-data-pulsar-discovery/",
+          "published": "2026-11-19"
         },
         "accent": "coral"
       }
@@ -187,17 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-23 review v1"
+      "edition": "2026-11-24 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-23 review v1"
+      "edition": "2026-11-24 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-22T12:15:40.878946+00:00",
-      "approved_edition": "2026-11-23 review v1",
-      "approved_source_sha256": "102782bbfbe388a5e03f65176d25ce3c1ce86f7c7dc9a811683107bba2eb2a65",
-      "approved_source_bytes": 11549
+      "recorded_at": "2026-11-23T14:36:16.702235+00:00",
+      "approved_edition": "2026-11-24 review v1",
+      "approved_source_sha256": "2510d79984814933d3b565c0d5a993df4ca186fa8921f2b529a3e50038b68d0b",
+      "approved_source_bytes": 6202
     }
   }
 }
