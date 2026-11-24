@@ -2,8 +2,8 @@
   "schema_version": 2,
   "status": "approved",
   "demo": false,
-  "content_date": "2026-11-24",
-  "edition": "2026-11-24 review v1",
+  "content_date": "2026-11-25",
+  "edition": "2026-11-25 review v1",
   "display": {
     "brand_cn": "牛剑学院",
     "brand_en": "OXBRIDGE ACADEMY",
@@ -12,34 +12,34 @@
   },
   "daily": {
     "eyebrow": "每日简报 / DAILY BRIEF",
-    "headline": "11月24日\n每日简报",
+    "headline": "11月25日\n每日简报",
     "headline_en": "DAILY BRIEF",
     "items": [
       {
-        "id": "xylophone-air-slots-20261123",
-        "category": "物理",
-        "headline": "同样大小的琴块，为什么音高不同？",
-        "headline_en": "Same-sized xylophone blocks, different notes?",
-        "summary": "11 月 19 日发表的研究把空气槽藏在 3D 打印琴块的振动板下方。改变槽的形状，板更容易弯曲，振动频率就会降低。同一组琴块不用改外形就能做出不同音高；两组样品合起来覆盖一个八度，最高频率是最低的两倍。",
-        "summary_en": "In a study published on 19 November, researchers used hidden air slots beneath the vibrating plate of 3D-printed blocks. Changing the slots made the plate bend more easily and vibrate more slowly. Blocks of the same size could play different notes; across two size groups, the highest frequency was twice the lowest.",
+        "id": "dry-ultrasound-interface-20261125",
+        "category": "物理 · 声学",
+        "headline": "不用湿凝胶，怎样把超声波送进皮肤？",
+        "headline_en": "How can a dry layer carry ultrasound into the skin?",
+        "summary": "MIT 11月19日介绍一种干燥、可拉伸的聚合物材料。像瓶刷的侧链减少分子纠缠，让超声波穿过时少损失能量。仿组织模型连续成像约9天，志愿者骑行测试约30分钟。这是在改进探头与皮肤的连接层，仍是研究原型。",
+        "summary_en": "On 19 November, MIT described a dry, stretchable polymer layer for ultrasound. Bottlebrush-shaped molecules reduce chain entanglement and the energy lost as sound passes through. A tissue-mimicking model was imaged continuously for about nine days, and a volunteer was tested during a 30-minute bike ride. The work targets the link between probe and skin; it remains a research prototype.",
         "source": {
-          "name": "Physical Review Applied",
-          "url": "https://journals.aps.org/prapplied/abstract/10.1103/vnl2-6twc",
+          "name": "MIT / Science",
+          "url": "https://news.mit.edu/2026/ultrasound-imaging-without-gel-1119",
           "published": "2026-11-19"
         },
         "accent": "gold"
       },
       {
-        "id": "white-throated-egg-eater-20261124",
-        "category": "生物",
-        "headline": "食卵蛇怎样剥掉吞下的蛋壳？",
-        "headline_en": "How does an egg-eating snake crack a swallowed egg?",
-        "summary": "11 月 17 日，德国埃尔朗根-纽伦堡大学介绍了在埃塞俄比亚确认的新种白喉食卵蛇。食卵蛇吞下整颗蛋后，用伸入食道的椎骨突起压破蛋壳，再挤出蛋液，最后把空壳吐出。",
-        "summary_en": "On 17 November, FAU reported a newly identified white-throated egg-eater from Ethiopia. Egg-eating snakes swallow eggs whole. Bony projections from the spine break the shell in the throat; the snake squeezes out the contents and spits out the empty shell.",
+        "id": "shared-meaning-brain-20261125",
+        "category": "生物 · 语言与大脑",
+        "headline": "听不同语言，大脑怎样表达相近的意思？",
+        "headline_en": "How does the brain represent meaning across languages?",
+        "summary": "11月23日，MIT介绍了涉及21种语言的脑成像研究。研究者把句子转成多语言模型的数字表示，再预测脑活动；用一种语言训练的模型，也能预测另一种语言的部分反应。这支持不同语言共享某些意义处理方式，不表示所有语言或大脑完全相同。",
+        "summary_en": "MIT reported on 23 November a brain-imaging study covering 21 languages. Researchers used numerical representations from a multilingual language model to predict brain activity. A model trained on one language also predicted responses in another. The result supports some shared processing of meaning across languages; it does not show that all languages or brains work identically.",
         "source": {
-          "name": "FAU",
-          "url": "https://www.fau.eu/2026/11/news/eierschaeler-im-hals/",
-          "published": "2026-11-17"
+          "name": "MIT / Nature Neuroscience",
+          "url": "https://news.mit.edu/2026/many-languages-one-common-neural-code-1123",
+          "published": "2026-11-23"
         },
         "accent": "aqua"
       },
@@ -80,22 +80,22 @@
         "summary_en": "On 18 November, KAIST described a bendable lithium–sulfur battery electrode. The team grew nanowires directly on flexible, conductive carbon cloth. They fitted a cell made with the electrode into a curved drone-leg component and used it to light an LED.",
         "source": {
           "name": "KAIST",
-          "url": "https://kaist.ac.kr/site/newsen/html/news/?GotoPage=1&amp;mng_no=69670&amp;mode=V&amp;skey=college&amp;sval=college+of+e",
+          "url": "https://kaist.ac.kr/site/newsen/html/news/?GotoPage=1&mng_no=69670&mode=V&skey=college&sval=college+of+e",
           "published": "2026-11-18"
         },
         "accent": "aqua"
       },
       {
-        "id": "fermi-pulsar-lattice-20261124",
-        "category": "天文",
-        "headline": "破解密码的数学，怎样找到一颗脉冲星？",
-        "headline_en": "How did code-breaking maths help find a pulsar?",
-        "summary": "11 月 19 日，NASA 介绍，研究人员把寻找微弱伽马射线脉冲的难题，转成在高维点阵里寻找最短向量的问题。他们借用密码学的算法分析了费米望远镜 15 年的数据，找到一颗每秒自转 261 圈的中子星。",
-        "summary_en": "On 19 November, NASA reported that researchers turned the hunt for faint gamma-ray pulses into a geometry problem: finding the shortest vector in a high-dimensional grid of points. With an algorithm borrowed from cryptography and 15 years of Fermi data, they found a neutron star spinning 261 times a second.",
+        "id": "webb-casa-dust-shells-20261125",
+        "category": "天文 · 恒星演化",
+        "headline": "爆炸后的尘埃，能记录恒星生前的变化吗？",
+        "headline_en": "Can dust record changes inside a star before it exploded?",
+        "summary": "NASA 11月23日介绍韦布对仙后座A的观测：不同区域分别以二氧化硅或碳尘为主。爆炸前，恒星不同燃烧层若发生混合，会改变抛出物的成分；尘埃因此能检验恒星演化模型。观测支持这种“层合并”解释，并非直接看见爆炸前的过程。",
+        "summary_en": "On 23 November, NASA reported Webb observations of Cassiopeia A, with silica-rich and carbon-rich dust in different regions. Mixing between a star’s burning layers before its explosion would change the material thrown out. Dust composition can therefore test models of stellar evolution. The observations support this shell-merger explanation; they do not directly show the star’s interior before the explosion.",
         "source": {
-          "name": "NASA / Fermi",
-          "url": "https://science.nasa.gov/open-science/fermi-data-pulsar-discovery/",
-          "published": "2026-11-19"
+          "name": "NASA / Webb",
+          "url": "https://science.nasa.gov/missions/webb/nasas-webb-shows-how-supernova-dust-chronicles-star-evolution/",
+          "published": "2026-11-23"
         },
         "accent": "coral"
       }
@@ -187,17 +187,17 @@
   "review": {
     "content_acceptance": {
       "accepted": true,
-      "edition": "2026-11-24 review v1"
+      "edition": "2026-11-25 review v1"
     },
     "publication_approval": {
       "approved": true,
-      "edition": "2026-11-24 review v1"
+      "edition": "2026-11-25 review v1"
     },
     "publication_record": {
-      "recorded_at": "2026-11-23T14:36:16.702235+00:00",
-      "approved_edition": "2026-11-24 review v1",
-      "approved_source_sha256": "2510d79984814933d3b565c0d5a993df4ca186fa8921f2b529a3e50038b68d0b",
-      "approved_source_bytes": 6202
+      "recorded_at": "2026-11-24T14:49:41.020853+00:00",
+      "approved_edition": "2026-11-25 review v1",
+      "approved_source_sha256": "dd200c8f3480df4e89232b0f207aa6d2a0b8a0d874ff2bc5c191fe1df3013f39",
+      "approved_source_bytes": 14253
     }
   }
 }
